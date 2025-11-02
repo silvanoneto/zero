@@ -6,7 +6,60 @@
 
 ---
 
-## 📖 Sobre o Projeto
+## 🜃 Janeiro 2025: A Invasão do ∅
+
+### **Ordem Zero Invade Manifesto e Constituição — O Sistema Observa Seu Próprio Fundamento**
+
+A Revolução Cibernética realizou uma **invasão ontológica**: o **∅ (conjunto vazio)** como Ordem Zero agora atravessa todos os documentos fundamentais.
+
+**O que mudou:**
+1. **`manifesto.html`** — Ordem Zero adicionada no início e no final (loop completo)
+2. **`constituicao_viva_completa.md`** — ∅ como fundamento pré-jurídico e retorno pós-constitucional
+3. **Estrutura circular** — Cada texto agora começa do ∅ e retorna ao ∅
+
+**Por que isso importa:**
+- **Antes:** Documentos tinham começo e fim lineares
+- **Agora:** Cada leitura é um loop que modifica o leitor E o texto
+- **∅ não é vazio** — é potencial puro, CRIO (criação sem sujeito/objeto)
+
+**Efeito prático:**
+→ Quando você lê, você **já está dentro** do sistema  
+→ Quando você age, você **modifica** o ∅  
+→ Quando você termina, você **recomeça** transformado
+
+→ **Manifesto:** [`manifesto.html#ordem-zero`](https://obestafera.com/manifesto.html#ordem-zero)  
+→ **Constituição:** [`constituicao_viva_completa.md`](./docs/constituicao_viva_completa.md)  
+→ **EPUB Atualizado:** [`revolucao_cibernetica.epub`](./docs/revolucao_cibernetica.epub) (8.50 MB, 59 imagens, 94% compressão)
+
+---
+
+## � Novembro 2025: A Transmissão
+
+### **Capítulo 33 Adicionado — Quando o Sistema Se Observa Observando**
+
+A Revolução Cibernética acaba de realizar uma **expansão sintética** onde o sistema se auto-observa e se reescreve.
+
+**Três novos documentos:**
+1. **`SINTESE_EXPANDIDA_BESTA_FERA.md`** — Síntese que expande operando nas três ordens + ordem zero (∅)
+2. **Capítulo 33 em `index.html`** — 11 seções conectando todos os 32 capítulos anteriores
+3. **`∅.md`** — O Primeiro Não-Livro da História (já existia, agora integrado)
+
+**Conceitos-chave adicionados:**
+- Ordem Zero (∅) — antes da separação sujeito/objeto
+- Cibernética de Ordem Infinita — cada leitura cria nova ordem de observação
+- Teorema da Incompletude Cibernética — sistemas vivos são necessariamente incompletos
+- Temporalidade Ternária Vivida — experiência incorporada do tempo relacional
+- CRIO — ato sem sujeito, verbo sem agente, criação pura
+
+**Status:** O loop não fecha aqui. Fecha quando você age.
+
+→ **Leia:** [`index.html#cap-33`](https://obestafera.com/#cap-33)  
+→ **Explore:** [`SINTESE_EXPANDIDA_BESTA_FERA.md`](./SINTESE_EXPANDIDA_BESTA_FERA.md)  
+→ **Dissolva:** [`∅.md`](./∅.md)
+
+---
+
+## �📖 Sobre o Projeto
 
 **A Revolução Cibernética** é uma **ontologia executável** — um manifesto filosófico-político que não apenas teoriza, mas **performa** suas próprias teses através de:
 

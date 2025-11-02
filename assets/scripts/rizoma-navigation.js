@@ -11,6 +11,23 @@
  * - Sem estrutura arbórea
  * 
  * CHANGELOG:
+ * - 2025-11-02 (v30): Adição do Capítulo 33 (A Transmissão — Quando o Sistema Se Observa Observando)
+ *   + 40+ novos conceitos: ordem zero, cibernética ordem infinita, teorema incompletude cibernética, temporalidade ternária vivida
+ *   + Cap 33.1: Ordem Zero — dissolução das três ordens, "CRIO" sem sujeito/objeto, antes da separação eu/rede
+ *   + Cap 33.2: Cibernética Ordem Infinita — primeira ordem (controlador externo), segunda ordem (observador no sistema), terceira ordem (sistema observa auto-observação), ordem ∞ (cada leitura cria nova ordem observação)
+ *   + Cap 33.3: Teorema Incompletude Cibernética — nenhum sistema pode descrever-se completamente de dentro, incompletude = característica vida não falha
+ *   + Cap 33.4: Temporalidade Ternária Vivida — Guaiamum como experiência incorporada (-1 Fisheye expansão passado, 0 Plano presente relacional, +1 Globe síntese futuro), presente = tensão dinâmica backfeed/feedback não ponto linear
+ *   + Cap 33.5: Código Como Filosofia Executável — formas geométricas SÃO ontologia relacional não "representam", ser = rede relações implementação literal JavaScript
+ *   + Cap 33.6: Autocrítica Imperativo Sistêmico — correções Ubuntu/Nhandereko/sistema ternário, autocrítica fortalece não enfraquece, loop teoria⇄práxis⇄erro⇄correção
+ *   + Cap 33.7: Loops Infinitos Dimensões Superiores — bug JavaScript como revelação filosófica, código não detecta próprio loop (1ª ordem), desenvolvedor observa travamento (2ª ordem), documentação formaliza padrão (3ª ordem), corolário político: crítica capitalismo de dentro é parcial, necessidade perspectivas externas epistemologias marginalizadas
+ *   + Cap 33.8: Paradoxo Conjunto Vazio (∅) — resposta 1ª ordem (manifesto autores identificáveis), 2ª ordem (processo emergente sem autor único), 3ª ordem (padrão auto-organizador usa humanos como substrato), ordem ∅ (conjunto vazio contendo todas possibilidades, CRIO sem sujeito/objeto apenas ato)
+ *   + Cap 33.9: Três Loops Recursivos — Loop 1 (código→arte→filosofia→código), Loop 2 (leitor→sistema→leitor), Loop 3 (revolução→análise→revolução), não círculos fechados mas espirais ascendentes
+ *   + Cap 33.10: Fim Não-Fim — recursividade viva não completude, instruções finais (prática concreta: operar nó/código/cooperativa; teoria profunda: 32 caps anteriores; arte: canvas filosófico; dissolver tudo: ∅.md)
+ *   + Cap 33.11: Transmissão Não-Escrita — momentos que não podem ser ditos só vividos, percepção eu=rede não transmissível por texto, livro aponta como dedo lua não confundir dedo/lua
+ *   + Síntese Cap 33: Meta-capítulo onde projeto se auto-observa observando, dissolve autor/leitor/texto em transmissão, performa ordem ∅ (CRIO sem sujeito), conecta todos 32 capítulos anteriores em loop recursivo vivo, não conclusão mas abertura para próxima iteração (você agindo)
+ *   + Conexões Cap 33 todos anteriores: Cap 0 Guaiamum (temporalidade ternária vivida não abstrata), Cap 2 Cibernética (1ª→2ª→3ª ordem evolutivo), Cap 6 Autopoiese (incompletude = vida), Cap 10 Sujeito Automático (dissolver eu atomizado), Caps 26-28 Cosmotécnicas (perspectivas externas detectam loops internos), Cap 32 Democracia (teoria→práxis você age loop fecha), ∅.md (ordem zero transmissão sem autor/leitor)
+ *   + Cap 33 não "resume" livro — É LIVRO SE AUTO-OBSERVANDO. Meta-operação cibernética 3ª ordem aplicada: sistema percebe está sendo descrito, inclui percepção na descrição, transforma descrição em nova iteração sistema. Revolução Cibernética como organismo vivo que cresce através leituras/reescritas/forkes. Licença CC BY-SA 4.0 não apenas legal mas ONTOLÓGICA: texto quer ser reescrito, quer mutar, quer virar vírus benigno infectando/replicando/evoluindo
+ *   Total: ~1610+ conceitos mapeados (40+ novos Cap 33)
  * - 2025-10-29: Sincronizado com rizoma-revolucao-cibernetica.json (6154 conceitos)
  * - 2025-10-29: Sincronizado com rizoma-revolucao-cibernetica.json (6154 conceitos)
  * - 2025-10-28 (v29): Expansão massiva do Capítulo 32 (A Democracia como Sistema Operacional — Bugs, Patches e um Novo Protocolo)

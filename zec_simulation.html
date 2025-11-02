@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador ZEC — Zona Experimental Cibernética</title>
+    <style>
+      :root {
+        --bg: #0a0a0f;
+        --card: #1a1a2e;
+        --border: #2d2d44;
+        --text: #e0e0e0;
+        --primary: #06b6d4;
+        --success: #10b981;
+        --warning: #f59e0b;
+        --danger: #ef4444;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        padding: 2rem;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        background: linear-gradient(135deg, var(--primary), var(--success));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        opacity: 0.8;
+      }
+
+      .controls {
+        background: var(--card);
+        padding: 2rem;
+        border-radius: 12px;
+        margin-bottom: 2rem;
+        border: 1px solid var(--border);
+      }
+
+      .slider-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .slider-group label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: var(--primary);
+      }
+
+      .slider-value {
+        float: right;
+        color: var(--success);
+        font-weight: bold;
+      }
+
+      input[type="range"] {
+        width: 100%;
+        height: 8px;
+        background: var(--border);
+        outline: none;
+        border-radius: 4px;
+        -webkit-appearance: none;
+      }
+
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background: var(--primary);
+        cursor: pointer;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+      }
+
+      .comparison {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .region {
+        background: var(--card);
+        padding: 2rem;
+        border-radius: 12px;
+        border: 2px solid var(--border);
+        position: relative;
+      }
+
+      .region.control {
+        border-color: var(--warning);
+      }
+
+      .region.experimental {
+        border-color: var(--success);
+        box-shadow: 0 0 30px rgba(16, 185, 129, 0.2);
+      }
+
+      .region h2 {
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+      }
+
+      .metric {
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+      }
+
+      .metric-name {
+        font-size: 0.9rem;
+        opacity: 0.7;
+        margin-bottom: 0.5rem;
+      }
+
+      .metric-value {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .progress-bar {
+        height: 12px;
+        background: var(--border);
+        border-radius: 6px;
+        overflow: hidden;
+        margin-top: 0.5rem;
+      }
+
+      .progress-fill {
+        height: 100%;
+        transition:
+          width 0.5s ease,
+          background 0.5s ease;
+        border-radius: 6px;
+      }
+
+      .events {
+        background: var(--card);
+        padding: 2rem;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        margin-bottom: 2rem;
+        max-height: 300px;
+        overflow-y: auto;
+      }
+
+      .event {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-left: 4px solid var(--primary);
+        background: rgba(6, 182, 212, 0.1);
+        border-radius: 4px;
+      }
+
+      .event.positive {
+        border-color: var(--success);
+        background: rgba(16, 185, 129, 0.1);
+      }
+
+      .event.negative {
+        border-color: var(--danger);
+        background: rgba(239, 68, 68, 0.1);
+      }
+
+      .results {
+        background: var(--card);
+        padding: 2rem;
+        border-radius: 12px;
+        border: 2px solid var(--border);
+        text-align: center;
+      }
+
+      .verdict {
+        font-size: 2.5rem;
+        margin: 2rem 0;
+        font-weight: bold;
+      }
+
+      .verdict.success {
+        color: var(--success);
+        text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+      }
+
+      .verdict.failure {
+        color: var(--danger);
+        text-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+      }
+
+      button {
+        background: linear-gradient(135deg, var(--primary), var(--success));
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.2s;
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      button:hover {
+        transform: scale(1.05);
+      }
+
+      button:active {
+        transform: scale(0.98);
+      }
+
+      .info {
+        background: rgba(6, 182, 212, 0.1);
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 4px solid var(--primary);
+        margin-bottom: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        .comparison {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🧪 Simulador de Zona Experimental Cibernética (ZEC)</h1>
+        <p class="subtitle">
+          Art. 9º-G da Constituição 2.0 — Teste evolutivo de políticas
+        </p>
+      </header>
+
+      <div class="info">
+        <strong>🌿 Princípio Biomimético:</strong> Ilhas de Galápagos —
+        ambientes isolados permitem evolução acelerada. <br /><br />
+        Esta simulação compara uma <strong>região controle</strong> (leis
+        atuais) com uma <strong>ZEC experimental</strong>
+        onde novas políticas são testadas. Se a ZEC superar em 20%+ em 3 anos, a
+        lei é promovida nacionalmente.
+      </div>
+
+      <div class="controls">
+        <h3 style="margin-bottom: 1.5rem; color: var(--primary)">
+          ⚙️ Configuração do Experimento
+        </h3>
+
+        <div class="slider-group">
+          <label>
+            Duração da Simulação (meses)
+            <span class="slider-value" id="durationValue">36</span>
+          </label>
+          <input
+            type="range"
+            id="duration"
+            min="12"
+            max="60"
+            value="36"
+            step="6"
+          />
+        </div>
+
+        <div class="slider-group">
+          <label>
+            Política Experimental: Renda Básica Universal (% do salário mínimo)
+            <span class="slider-value" id="rbuValue">60</span>
+          </label>
+          <input type="range" id="rbu" min="0" max="100" value="60" step="10" />
+        </div>
+
+        <div class="slider-group">
+          <label>
+            Volatilidade Econômica (eventos aleatórios)
+            <span class="slider-value" id="volatilityValue">Média</span>
+          </label>
+          <input
+            type="range"
+            id="volatility"
+            min="1"
+            max="3"
+            value="2"
+            step="1"
+          />
+        </div>
+
+        <button onclick="runSimulation()">▶️ Executar Simulação</button>
+      </div>
+
+      <div class="comparison" id="comparison" style="display: none">
+        <div class="region control">
+          <h2>📊 Região Controle</h2>
+          <p style="opacity: 0.7; margin-bottom: 1rem">
+            Políticas tradicionais vigentes
+          </p>
+
+          <div class="metric">
+            <div class="metric-name">IDH (Índice Desenvolvimento Humano)</div>
+            <div class="metric-value" id="controlIDH">0.732</div>
+            <div class="progress-bar">
+              <div
+                class="progress-fill"
+                id="controlIDHBar"
+                style="width: 73.2%; background: var(--warning)"
+              ></div>
+            </div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-name">Coeficiente de Gini (desigualdade)</div>
+            <div class="metric-value" id="controlGini">0.529</div>
+            <div class="progress-bar">
+              <div
+                class="progress-fill"
+                id="controlGiniBar"
+                style="width: 52.9%; background: var(--danger)"
+              ></div>
+            </div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-name">Satisfação Média (0-10)</div>
+            <div class="metric-value" id="controlHappiness">6.2</div>
+            <div class="progress-bar">
+              <div
+                class="progress-fill"
+                id="controlHappinessBar"
+                style="width: 62%; background: var(--primary)"
+              ></div>
+            </div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-name">Taxa de Emprego (%)</div>
+            <div class="metric-value" id="controlEmployment">88.5%</div>
+            <div class="progress-bar">
+              <div
+                class="progress-fill"
+                id="controlEmploymentBar"
+                style="width: 88.5%; background: var(--success)"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="region experimental">
+          <h2>🧪 ZEC Experimental</h2>
+          <p style="opacity: 0.7; margin-bottom: 1rem">
+            Testando novas políticas
+          </p>
+
+          <div class="metric">
+            <div class="metric-name">IDH (Índice Desenvolvimento Humano)</div>
+            <div class="metric-value" id="expIDH">0.732</div>
+            <div class="progress-bar">
+              <div
+                class="progress-fill"
+                id="expIDHBar"
+                style="width: 73.2%; background: var(--success)"
+              ></div>
+            </div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-name">Coeficiente de Gini (desigualdade)</div>
+            <div class="metric-value" id="expGini">0.529</div>
+            <div class="progress-bar">
+              <div
+                class="progress-fill"
+                id="expGiniBar"
+                style="width: 52.9%; background: var(--warning)"
+              ></div>
+            </div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-name">Satisfação Média (0-10)</div>
+            <div class="metric-value" id="expHappiness">6.2</div>
+            <div class="progress-bar">
+              <div
+                class="progress-fill"
+                id="expHappinessBar"
+                style="width: 62%; background: var(--primary)"
+              ></div>
+            </div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-name">Taxa de Emprego (%)</div>
+            <div class="metric-value" id="expEmployment">88.5%</div>
+            <div class="progress-bar">
+              <div
+                class="progress-fill"
+                id="expEmploymentBar"
+                style="width: 88.5%; background: var(--success)"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="events" id="events" style="display: none">
+        <h3 style="margin-bottom: 1rem; color: var(--primary)">
+          📋 Log de Eventos
+        </h3>
+        <div id="eventLog"></div>
+      </div>
+
+      <div class="results" id="results" style="display: none">
+        <h2>📊 Resultado Final</h2>
+        <div class="verdict" id="verdict"></div>
+        <p id="resultText" style="font-size: 1.2rem; margin-bottom: 2rem"></p>
+        <button onclick="location.reload()">🔄 Nova Simulação</button>
+      </div>
+    </div>
+
+    <script>
+      // Update slider values
+      document.getElementById("duration").oninput = function () {
+        document.getElementById("durationValue").textContent = this.value;
+      };
+
+      document.getElementById("rbu").oninput = function () {
+        document.getElementById("rbuValue").textContent = this.value + "%";
+      };
+
+      document.getElementById("volatility").oninput = function () {
+        const labels = ["Baixa", "Média", "Alta"];
+        document.getElementById("volatilityValue").textContent =
+          labels[this.value - 1];
+      };
+
+      function runSimulation() {
+        // Get parameters
+        const duration = parseInt(document.getElementById("duration").value);
+        const rbuPercent = parseInt(document.getElementById("rbu").value);
+        const volatility = parseInt(
+          document.getElementById("volatility").value,
+        );
+
+        // Show comparison
+        document.getElementById("comparison").style.display = "grid";
+        document.getElementById("events").style.display = "block";
+
+        // Initialize values
+        let controlData = {
+          idh: 0.732,
+          gini: 0.529,
+          happiness: 6.2,
+          employment: 88.5,
+        };
+
+        let expData = {
+          idh: 0.732,
+          gini: 0.529,
+          happiness: 6.2,
+          employment: 88.5,
+        };
+
+        const eventLog = document.getElementById("eventLog");
+        eventLog.innerHTML = "";
+
+        // Simulate month by month
+        let month = 0;
+        const interval = setInterval(() => {
+          month++;
+
+          // Control region: slow natural growth
+          controlData.idh += Math.random() * 0.002 - 0.0005;
+          controlData.gini += Math.random() * 0.003 - 0.0015;
+          controlData.happiness += Math.random() * 0.05 - 0.02;
+          controlData.employment += Math.random() * 0.2 - 0.1;
+
+          // Experimental region: RBU effects
+          const rbuFactor = rbuPercent / 100;
+          expData.idh += (Math.random() * 0.003 + 0.001) * rbuFactor;
+          expData.gini -= (Math.random() * 0.005 + 0.002) * rbuFactor; // Gini decreases (good!)
+          expData.happiness += (Math.random() * 0.08 + 0.03) * rbuFactor;
+          expData.employment +=
+            (Math.random() * 0.15 - 0.05) * (1 - rbuFactor * 0.3); // Small employment trade-off
+
+          // Random events
+          if (Math.random() < volatility * 0.03) {
+            const eventType = Math.random();
+            let event;
+
+            if (eventType < 0.3) {
+              event = {
+                type: "negative",
+                text: `Mês ${month}: 🌪️ Crise econômica regional (-2% PIB)`,
+                effect: {
+                  idh: -0.01,
+                  gini: 0.02,
+                  happiness: -0.3,
+                  employment: -1.5,
+                },
+              };
+            } else if (eventType < 0.6) {
+              event = {
+                type: "positive",
+                text: `Mês ${month}: 🌱 Investimento em educação (+3% graduados)`,
+                effect: {
+                  idh: 0.015,
+                  gini: -0.01,
+                  happiness: 0.2,
+                  employment: 0.5,
+                },
+              };
+            } else {
+              event = {
+                type: "neutral",
+                text: `Mês ${month}: 📊 Censo populacional realizado`,
+                effect: { idh: 0, gini: 0, happiness: 0, employment: 0 },
+              };
+            }
+
+            // Apply to both regions
+            controlData.idh += event.effect.idh;
+            controlData.gini += event.effect.gini;
+            controlData.happiness += event.effect.happiness;
+            controlData.employment += event.effect.employment;
+
+            expData.idh += event.effect.idh * 0.7; // ZEC more resilient
+            expData.gini += event.effect.gini * 0.7;
+            expData.happiness += event.effect.happiness * 0.9;
+            expData.employment += event.effect.employment * 0.8;
+
+            // Log event
+            const eventEl = document.createElement("div");
+            eventEl.className = `event ${event.type}`;
+            eventEl.textContent = event.text;
+            eventLog.insertBefore(eventEl, eventLog.firstChild);
+          }
+
+          // Update UI
+          updateMetrics("control", controlData);
+          updateMetrics("exp", expData);
+
+          // Check if done
+          if (month >= duration) {
+            clearInterval(interval);
+            showResults(controlData, expData, rbuPercent);
+          }
+        }, 100); // 100ms per month
+      }
+
+      function updateMetrics(prefix, data) {
+        // Clamp values
+        data.idh = Math.max(0.5, Math.min(1.0, data.idh));
+        data.gini = Math.max(0.2, Math.min(0.7, data.gini));
+        data.happiness = Math.max(3, Math.min(10, data.happiness));
+        data.employment = Math.max(70, Math.min(100, data.employment));
+
+        document.getElementById(`${prefix}IDH`).textContent =
+          data.idh.toFixed(3);
+        document.getElementById(`${prefix}IDHBar`).style.width =
+          data.idh * 100 + "%";
+
+        document.getElementById(`${prefix}Gini`).textContent =
+          data.gini.toFixed(3);
+        document.getElementById(`${prefix}GiniBar`).style.width =
+          data.gini * 100 + "%";
+
+        document.getElementById(`${prefix}Happiness`).textContent =
+          data.happiness.toFixed(1);
+        document.getElementById(`${prefix}HappinessBar`).style.width =
+          data.happiness * 10 + "%";
+
+        document.getElementById(`${prefix}Employment`).textContent =
+          data.employment.toFixed(1) + "%";
+        document.getElementById(`${prefix}EmploymentBar`).style.width =
+          data.employment + "%";
+      }
+
+      function showResults(control, exp, rbuPercent) {
+        document.getElementById("results").style.display = "block";
+
+        // Calculate improvements
+        const idhImprovement = ((exp.idh - control.idh) / control.idh) * 100;
+        const giniImprovement =
+          ((control.gini - exp.gini) / control.gini) * 100; // Lower is better
+        const happinessImprovement =
+          ((exp.happiness - control.happiness) / control.happiness) * 100;
+        const employmentImprovement =
+          ((exp.employment - control.employment) / control.employment) * 100;
+
+        const avgImprovement =
+          (idhImprovement +
+            giniImprovement +
+            happinessImprovement +
+            employmentImprovement) /
+          4;
+
+        const verdictEl = document.getElementById("verdict");
+        const resultTextEl = document.getElementById("resultText");
+
+        if (avgImprovement >= 20) {
+          verdictEl.textContent = "✅ SUCESSO — Promover Nacionalmente";
+          verdictEl.className = "verdict success";
+          resultTextEl.innerHTML = `
+                    A ZEC superou a região controle em <strong>${avgImprovement.toFixed(1)}%</strong> (média das 4 métricas).
+                    <br><br>
+                    <strong>Recomendação:</strong> Expandir RBU de ${rbuPercent}% para todo território nacional.
+                    <br><br>
+                    <em>🌿 "Evolução comprovada em ambiente isolado, pronta para escalar." — Art. 9º-G</em>
+                `;
+        } else if (avgImprovement >= 10) {
+          verdictEl.textContent = "⚠️ PROMISSOR — Estender Experimento";
+          verdictEl.className = "verdict";
+          verdictEl.style.color = "var(--warning)";
+          resultTextEl.innerHTML = `
+                    A ZEC apresentou melhoria de <strong>${avgImprovement.toFixed(1)}%</strong>, abaixo dos 20% requeridos.
+                    <br><br>
+                    <strong>Recomendação:</strong> Estender experimento por mais 12-24 meses ou ajustar parâmetros.
+                `;
+        } else {
+          verdictEl.textContent = "❌ FALHA — Descartar Política";
+          verdictEl.className = "verdict failure";
+          resultTextEl.innerHTML = `
+                    A ZEC teve desempenho apenas <strong>${avgImprovement.toFixed(1)}%</strong> superior.
+                    <br><br>
+                    <strong>Recomendação:</strong> Arquivar esta versão de RBU. Testar variação diferente em nova ZEC.
+                    <br><br>
+                    <em>🧬 "Falhas são dados. Iterar." — Princípio Evolutivo</em>
+                `;
+        }
+
+        // Scroll to results
+        document
+          .getElementById("results")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>
