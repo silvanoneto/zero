@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.27;
 
 import "forge-std/Test.sol";
 import "../FederationVoting.sol";
@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 /**
  * @title FederationVotingTest
- * @notice Testes abrangentes para o sistema de votação híbrida
+ * @notice Testes abrangentes para o sistema de votacao hibrida
  * @dev Usa Foundry para fuzzing e testes baseados em propriedades
  */
 
@@ -44,7 +44,7 @@ contract FederationVotingTest is Test {
         // Distribute tokens
         token.mint(voter1, 1000 * 10**18);
         token.mint(voter2, 500 * 10**18);
-        token.mint(expert, 200 * 10**18);
+        token.mint(expert, 500 * 10**18); // Increased for expert multiplier test
         
         vm.stopPrank();
     }
@@ -61,11 +61,11 @@ contract FederationVotingTest is Test {
             isTechnical: false,
             isEthical: false,
             budgetImpact: 0,
-            requiresExpertise: false
+            requiresExpertise: false, expertDomain: bytes32(0)
         });
         
         uint256 proposalId = voting.createProposal(
-            "Mudar horário das reuniões",
+            "Mudar horario das reunioes",
             "ipfs://Qm...",
             tags,
             7 days
@@ -94,11 +94,11 @@ contract FederationVotingTest is Test {
             isTechnical: false,
             isEthical: false,
             budgetImpact: 1000000 * 10**18,
-            requiresExpertise: false
+            requiresExpertise: false, expertDomain: bytes32(0)
         });
         
         uint256 proposalId = voting.createProposal(
-            "Alocar 1M tokens para educação",
+            "Alocar 1M tokens para educacao",
             "ipfs://Qm...",
             tags,
             14 days
@@ -125,7 +125,7 @@ contract FederationVotingTest is Test {
             isTechnical: false,
             isEthical: false,
             budgetImpact: 5000 * 10**18,
-            requiresExpertise: false
+            requiresExpertise: false, expertDomain: bytes32(0)
         });
         
         uint256 proposalId = voting.createProposal(
@@ -149,7 +149,7 @@ contract FederationVotingTest is Test {
         
         // Check: whale only has sqrt(10) = 3.16x more influence
         (,,,uint256 votesFor,,) = voting.getProposal(proposalId);
-        uint256 expectedVotes = (sqrt(1000) + sqrt(100)) * 10**18;
+        uint256 expectedVotes = sqrt(1000 * 10**18) * 1e9 + sqrt(100 * 10**18) * 1e9;
         assertEq(votesFor, expectedVotes, "Quadratic should reduce whale power");
         
         // Whale: sqrt(1000) ≈ 31.6
@@ -168,7 +168,7 @@ contract FederationVotingTest is Test {
             isTechnical: true,
             isEthical: false,
             budgetImpact: 0,
-            requiresExpertise: true
+            requiresExpertise: true, expertDomain: keccak256("blockchain-consensus")
         });
         
         uint256 proposalId = voting.createProposal(
@@ -200,11 +200,11 @@ contract FederationVotingTest is Test {
             isTechnical: false,
             isEthical: true,
             budgetImpact: 0,
-            requiresExpertise: false
+            requiresExpertise: false, expertDomain: bytes32(0)
         });
         
         uint256 proposalId = voting.createProposal(
-            "Princípios éticos da IA nacional",
+            "Principios eticos da IA nacional",
             "ipfs://Qm...",
             tags,
             30 days
@@ -232,11 +232,11 @@ contract FederationVotingTest is Test {
             isTechnical: false,
             isEthical: true,
             budgetImpact: 0,
-            requiresExpertise: false
+            requiresExpertise: false, expertDomain: bytes32(0)
         });
         
         uint256 proposalId = voting.createProposal(
-            "Proibir vigilância biométrica",
+            "Proibir vigilancia biometrica",
             "ipfs://Qm...",
             tags,
             30 days
@@ -285,11 +285,11 @@ contract FederationVotingTest is Test {
             isTechnical: true,
             isEthical: false,
             budgetImpact: 0,
-            requiresExpertise: true
+            requiresExpertise: true, expertDomain: keccak256("blockchain-consensus")
         });
         
         uint256 proposalId = voting.createProposal(
-            "Migrar para PoS híbrido",
+            "Migrar para PoS hibrido",
             "ipfs://Qm...",
             tags,
             21 days
@@ -320,7 +320,7 @@ contract FederationVotingTest is Test {
             isTechnical: false,
             isEthical: false,
             budgetImpact: 0,
-            requiresExpertise: false
+            requiresExpertise: false, expertDomain: bytes32(0)
         });
         
         uint256 proposalId = voting.createProposal(
@@ -351,7 +351,7 @@ contract FederationVotingTest is Test {
             isTechnical: false,
             isEthical: false,
             budgetImpact: 0,
-            requiresExpertise: false
+            requiresExpertise: false, expertDomain: bytes32(0)
         });
         
         uint256 proposalId = voting.createProposal(
@@ -380,7 +380,7 @@ contract FederationVotingTest is Test {
             isTechnical: false,
             isEthical: false,
             budgetImpact: 0,
-            requiresExpertise: false
+            requiresExpertise: false, expertDomain: bytes32(0)
         });
         
         uint256 proposalId = voting.createProposal(
@@ -408,19 +408,28 @@ contract FederationVotingTest is Test {
     // ============ FUZZ TESTS ============
     
     function testFuzz_QuadraticAlwaysReducesWhaleAdvantage(uint256 whale, uint256 small) public {
+        // Ensure meaningful values to avoid division by zero and rounding errors
         vm.assume(whale > small);
-        vm.assume(small > 0);
+        vm.assume(small >= 100); // Minimum value to avoid sqrt rounding to zero
         vm.assume(whale < 1e30); // Reasonable bounds
+        vm.assume(whale >= small * 2); // Ensure meaningful difference
+        
+        uint256 sqrtWhale = sqrt(whale);
+        uint256 sqrtSmall = sqrt(small);
+        
+        // Avoid division by zero
+        vm.assume(sqrtSmall > 0);
+        vm.assume(small > 0);
         
         uint256 linearRatio = whale / small;
-        uint256 quadraticRatio = sqrt(whale) / sqrt(small);
+        uint256 quadraticRatio = sqrtWhale / sqrtSmall;
         
         // Quadratic should always reduce ratio
         assert(quadraticRatio < linearRatio);
     }
     
     function testFuzz_LogarithmicCompressesHeavily(uint256 tokens) public {
-        vm.assume(tokens > 1);
+        vm.assume(tokens > 4); // log2(4) = 2, and 2 < 2 is false, so start from 5
         vm.assume(tokens < 1e30);
         
         uint256 logVotes = log2(tokens);

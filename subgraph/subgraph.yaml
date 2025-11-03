@@ -1,0 +1,36 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: FederationVoting
+    network: sepolia
+    source:
+      address: "0x0000000000000000000000000000000000000000"
+      abi: FederationVoting
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Proposal
+        - Vote
+        - Expert
+        - Voter
+        - GovernanceStats
+      abis:
+        - name: FederationVoting
+          file: ../contracts/out/FederationVoting.sol/FederationVoting.json
+      eventHandlers:
+        - event: ProposalCreated(indexed uint256,indexed address,string,uint8)
+          handler: handleProposalCreated
+        - event: VoteCast(indexed uint256,indexed address,bool,uint256,uint8)
+          handler: handleVoteCast
+        - event: ProposalExecuted(indexed uint256,uint8)
+          handler: handleProposalExecuted
+        - event: ExpertVerified(indexed address,indexed bytes32)
+          handler: handleExpertVerified
+      file: ./src/mapping.ts

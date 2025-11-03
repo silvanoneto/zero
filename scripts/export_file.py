@@ -1,6 +1,19 @@
 #!/usr/bin/env python3
 """
 Script para exportar o conteúdo do site "A Revolução Cibernética" para EPUB, PDF e XML.
+
+Exporta os seguintes arquivos HTML:
+- index.html (Teoria Principal)
+- manifesto.html (Manifesto Político)
+- constituicao_2.0.html (Constituição 2.0 - Visão Geral)
+- constituicao_2.0_completa.html (Constituição 2.0 - Texto Completo)
+- ∅.html (Ordem Zero)
+
+Formatos de saída:
+- EPUB: docs/revolucao_cibernetica.epub
+- PDF: docs/revolucao_cibernetica.pdf
+- XML: docs/revolucao_cibernetica.xml
+- XML Minificado: docs/revolucao_cibernetica.min.xml
 """
 
 import os
@@ -361,6 +374,81 @@ def create_epub():
         print("✓ manifesto.html processado")
     except Exception as e:
         print(f"✗ Erro ao processar manifesto.html: {e}")
+
+    # Capítulo 3: Constituição 2.0 (constituicao_2.0.html)
+    print("\nProcessando constituicao_2.0.html...")
+    try:
+        content = extract_main_content("constituicao_2.0.html")
+
+        # Contar imagens no conteúdo
+        soup = BeautifulSoup(content, "html.parser")
+        images_in_content = soup.find_all("img")
+        print(f"  → Encontradas {len(images_in_content)} imagens no conteúdo")
+
+        c3 = epub.EpubHtml(
+            title="Constituição 2.0 — Protocolo Biomimético-Cibernético",
+            file_name="constituicao_2.0.xhtml",
+            lang="pt-BR",
+        )
+        c3.content = content
+        c3.add_item(nav_css)
+
+        book.add_item(c3)
+        chapters.append(c3)
+        spine.append(c3)  # type: ignore
+        print("✓ constituicao_2.0.html processado")
+    except Exception as e:
+        print(f"✗ Erro ao processar constituicao_2.0.html: {e}")
+
+    # Capítulo 4: Constituição 2.0 Completa (constituicao_2.0_completa.html)
+    print("\nProcessando constituicao_2.0_completa.html...")
+    try:
+        content = extract_main_content("constituicao_2.0_completa.html")
+
+        # Contar imagens no conteúdo
+        soup = BeautifulSoup(content, "html.parser")
+        images_in_content = soup.find_all("img")
+        print(f"  → Encontradas {len(images_in_content)} imagens no conteúdo")
+
+        c4 = epub.EpubHtml(
+            title="Constituição 2.0 — Texto Completo",
+            file_name="constituicao_2.0_completa.xhtml",
+            lang="pt-BR",
+        )
+        c4.content = content
+        c4.add_item(nav_css)
+
+        book.add_item(c4)
+        chapters.append(c4)
+        spine.append(c4)  # type: ignore
+        print("✓ constituicao_2.0_completa.html processado")
+    except Exception as e:
+        print(f"✗ Erro ao processar constituicao_2.0_completa.html: {e}")
+
+    # Capítulo 5: Ordem Zero (∅.html)
+    print("\nProcessando ∅.html...")
+    try:
+        content = extract_main_content("∅.html")
+
+        # Contar imagens no conteúdo
+        soup = BeautifulSoup(content, "html.parser")
+        images_in_content = soup.find_all("img")
+        print(f"  → Encontradas {len(images_in_content)} imagens no conteúdo")
+
+        c5 = epub.EpubHtml(
+            title="∅ — Ordem Zero: A Möbius Primitiva",
+            file_name="ordem_zero.xhtml",
+            lang="pt-BR",
+        )
+        c5.content = content
+        c5.add_item(nav_css)
+
+        book.add_item(c5)
+        chapters.append(c5)
+        spine.append(c5)  # type: ignore
+        print("✓ ∅.html processado")
+    except Exception as e:
+        print(f"✗ Erro ao processar ∅.html: {e}")
 
     # Adicionar imagem de capa
     print("Processando imagem de capa...")
@@ -873,6 +961,106 @@ def create_pdf() -> str:
     except Exception as e:
         print(f"✗ Erro ao processar manifesto.html: {e}")
 
+    # Adicionar quebra de página
+    html_parts.append('<div class="page-break"></div>')
+
+    # Processar constituicao_2.0.html
+    print("Processando constituicao_2.0.html...")
+    try:
+        with open("constituicao_2.0.html", "r", encoding="utf-8") as f:
+            content = f.read()
+
+        soup = BeautifulSoup(content, "html.parser")
+        main_content = soup.find("main") or soup.find("article") or soup.find("body")
+
+        if main_content:
+            # Limpar elementos desnecessários
+            for element in main_content.find_all(
+                ["script", "style", "nav", "header", "footer", "button", "noscript"]
+            ):
+                element.decompose()
+
+            # Remover estilos inline que usam variáveis CSS
+            for element in main_content.find_all(style=True):
+                del element["style"]
+
+            # Remover classes e atributos que podem causar problemas
+            for element in main_content.find_all(True):
+                if element.name not in [
+                    "img",
+                    "a",
+                    "h1",
+                    "h2",
+                    "h3",
+                    "p",
+                    "ul",
+                    "ol",
+                    "li",
+                    "blockquote",
+                    "code",
+                    "pre",
+                ]:
+                    element.attrs = {
+                        k: v
+                        for k, v in element.attrs.items()
+                        if k in ["href", "src", "alt"]
+                    }
+
+            html_parts.append(str(main_content))
+            print("✓ constituicao_2.0.html processado")
+    except Exception as e:
+        print(f"✗ Erro ao processar constituicao_2.0.html: {e}")
+
+    # Adicionar quebra de página
+    html_parts.append('<div class="page-break"></div>')
+
+    # Processar ∅.html
+    print("Processando ∅.html...")
+    try:
+        with open("∅.html", "r", encoding="utf-8") as f:
+            content = f.read()
+
+        soup = BeautifulSoup(content, "html.parser")
+        main_content = soup.find("main") or soup.find("article") or soup.find("body")
+
+        if main_content:
+            # Limpar elementos desnecessários
+            for element in main_content.find_all(
+                ["script", "style", "nav", "header", "footer", "button", "noscript"]
+            ):
+                element.decompose()
+
+            # Remover estilos inline que usam variáveis CSS
+            for element in main_content.find_all(style=True):
+                del element["style"]
+
+            # Remover classes e atributos que podem causar problemas
+            for element in main_content.find_all(True):
+                if element.name not in [
+                    "img",
+                    "a",
+                    "h1",
+                    "h2",
+                    "h3",
+                    "p",
+                    "ul",
+                    "ol",
+                    "li",
+                    "blockquote",
+                    "code",
+                    "pre",
+                ]:
+                    element.attrs = {
+                        k: v
+                        for k, v in element.attrs.items()
+                        if k in ["href", "src", "alt"]
+                    }
+
+            html_parts.append(str(main_content))
+            print("✓ ∅.html processado")
+    except Exception as e:
+        print(f"✗ Erro ao processar ∅.html: {e}")
+
     # Rodapé do documento
     html_parts.append(
         """
@@ -1004,7 +1192,13 @@ def create_xml(minify: bool = False) -> str:
         ET.SubElement(tags_elem, "tag").text = tag
 
     # Processando arquivos HTML
-    html_files = ["index.html", "manifesto.html"]
+    html_files = [
+        "index.html",
+        "manifesto.html",
+        "constituicao_2.0.html",
+        "constituicao_2.0_completa.html",
+        "∅.html",
+    ]
 
     for html_file in html_files:
         print(f"Processando {html_file}...")
@@ -1019,7 +1213,19 @@ def create_xml(minify: bool = False) -> str:
             continue
 
         # Determinar tipo de documento
-        doc_type = "teoria" if html_file == "index.html" else "manifesto"
+        if html_file == "index.html":
+            doc_type = "teoria"
+        elif html_file == "manifesto.html":
+            doc_type = "manifesto"
+        elif html_file == "constituicao_2.0.html":
+            doc_type = "constituicao_visao_geral"
+        elif html_file == "constituicao_2.0_completa.html":
+            doc_type = "constituicao_completa"
+        elif html_file == "∅.html":
+            doc_type = "ordem_zero"
+        else:
+            doc_type = "documento"
+
         document = ET.SubElement(root, "document")
         document.set("type", doc_type)
         document.set("source", html_file)

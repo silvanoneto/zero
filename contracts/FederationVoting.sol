@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.27;
 
 /**
  * @title FederationVoting
@@ -12,7 +12,7 @@ pragma solidity ^0.8.20;
  */
 
 import "@openzeppelin/contracts/access/AccessControl.sol";
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 contract FederationVoting is AccessControl, ReentrancyGuard {
@@ -45,8 +45,10 @@ contract FederationVoting is AccessControl, ReentrancyGuard {
         VoteType voteType;        // Função de votação usada
         uint256 startTime;
         uint256 endTime;
-        uint256 votesFor;         // Votos a favor
-        uint256 votesAgainst;     // Votos contra
+        uint256 votesFor;         // Peso dos votos a favor
+        uint256 votesAgainst;     // Peso dos votos contra
+        uint256 votersFor;        // Contagem de votantes a favor (para consenso)
+        uint256 votersAgainst;    // Contagem de votantes contra (para consenso)
         uint256 totalVoters;      // Número de votantes
         uint256 quorumRequired;   // Quórum necessário (%)
         ProposalState state;
@@ -62,6 +64,7 @@ contract FederationVoting is AccessControl, ReentrancyGuard {
         bool isEthical;      // Consenso
         uint256 budgetImpact; // Em tokens
         bool requiresExpertise; // Epistemocracia?
+        bytes32 expertDomain; // Domínio de expertise necessário
     }
     
     // ============ STATE VARIABLES ============
@@ -116,8 +119,8 @@ contract FederationVoting is AccessControl, ReentrancyGuard {
     
     constructor(address _governanceToken) {
         governanceToken = IERC20(_governanceToken);
-        _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
-        _setupRole(EXPERT_VERIFIER_ROLE, msg.sender);
+        _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
+        _grantRole(EXPERT_VERIFIER_ROLE, msg.sender);
     }
     
     // ============ VOTING FUNCTIONS ============
@@ -234,8 +237,10 @@ contract FederationVoting is AccessControl, ReentrancyGuard {
         
         if (support) {
             proposal.votesFor += weight;
+            proposal.votersFor++;
         } else {
             proposal.votesAgainst += weight;
+            proposal.votersAgainst++;
         }
         
         emit VoteCast(proposalId, msg.sender, support, weight, proposal.voteType);
@@ -256,24 +261,33 @@ contract FederationVoting is AccessControl, ReentrancyGuard {
         returns (uint256) 
     {
         uint256 baseWeight;
+        uint256 DECIMALS = 1e18;
         
         // Aplica função matemática apropriada
         if (voteType == VoteType.LINEAR) {
             baseWeight = tokens;
         } 
         else if (voteType == VoteType.QUADRATIC) {
-            baseWeight = sqrt(tokens);
+            // sqrt(tokens) preservando 18 decimais
+            // Para tokens = x * 10^18, queremos sqrt(x) * 10^18
+            // Então: sqrt(x * 10^18) = sqrt(x) * 10^9, mas queremos sqrt(x) * 10^18
+            // Solução: sqrt(tokens) * sqrt(10^18) / 10^9 = sqrt(tokens) * 10^9
+            baseWeight = sqrt(tokens) * 1e9;
         } 
         else if (voteType == VoteType.LOGARITHMIC) {
-            baseWeight = log2(tokens);
+            // log2(tokens/10^18) * 10^18
+            // Calcula log2 do valor normalizado e reaplica decimais
+            uint256 normalized = tokens / DECIMALS;
+            if (normalized == 0) normalized = 1;
+            baseWeight = log2(normalized) * DECIMALS;
         } 
         else if (voteType == VoteType.CONSENSUS) {
-            baseWeight = 1; // Todos iguais
+            baseWeight = 1 * DECIMALS; // Todos iguais, mantém 18 decimais
         }
         
         // Aplica multiplicador de especialista (Art. 7º-E)
         if (proposalTags[proposalId].requiresExpertise) {
-            bytes32 domain = keccak256(abi.encodePacked(proposalId));
+            bytes32 domain = proposalTags[proposalId].expertDomain;
             if (verifiedExperts[voter][domain]) {
                 baseWeight = (baseWeight * MAX_EXPERT_MULTIPLIER);
             }
@@ -293,11 +307,23 @@ contract FederationVoting is AccessControl, ReentrancyGuard {
         require(block.timestamp > proposal.endTime, "Voting ongoing");
         
         // Verifica quórum
-        uint256 totalSupply = governanceToken.totalSupply();
-        uint256 quorumVotes = (totalSupply * proposal.quorumRequired) / 100;
-        uint256 totalVotes = proposal.votesFor + proposal.votesAgainst;
+        bool quorumReached;
         
-        if (totalVotes < quorumVotes) {
+        if (proposal.voteType == VoteType.CONSENSUS) {
+            // Para consenso, verificamos participação mínima absoluta
+            // Pelo menos X pessoas devem votar (configurável)
+            uint256 minParticipants = 5; // Mínimo de 5 participantes
+            uint256 totalParticipants = proposal.votersFor + proposal.votersAgainst;
+            quorumReached = totalParticipants >= minParticipants;
+        } else {
+            // Para outros tipos, verificamos % do total supply
+            uint256 totalSupply = governanceToken.totalSupply();
+            uint256 quorumVotes = (totalSupply * proposal.quorumRequired) / 100;
+            uint256 totalVotes = proposal.votesFor + proposal.votesAgainst;
+            quorumReached = totalVotes >= quorumVotes;
+        }
+        
+        if (!quorumReached) {
             proposal.state = ProposalState.DEFEATED;
             emit ProposalExecuted(proposalId, ProposalState.DEFEATED);
             return;
@@ -307,10 +333,15 @@ contract FederationVoting is AccessControl, ReentrancyGuard {
         bool approved;
         
         if (proposal.voteType == VoteType.CONSENSUS) {
-            // Consenso: requer 80%+ de aprovação
-            approved = (proposal.votesFor * 100) / totalVotes >= 80;
+            // Consenso: requer 80%+ de aprovação (baseado em número de pessoas)
+            uint256 totalPeople = proposal.votersFor + proposal.votersAgainst;
+            if (totalPeople == 0) {
+                approved = false;
+            } else {
+                approved = (proposal.votersFor * 100) / totalPeople >= 80;
+            }
         } else {
-            // Outros: maioria simples dos votos
+            // Outros: maioria simples dos votos (baseado em peso)
             approved = proposal.votesFor > proposal.votesAgainst;
         }
         

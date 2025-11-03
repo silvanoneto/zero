@@ -1,0 +1,8 @@
+# Ignorar arquivos de teste da certora no OpenZeppelin
+lib/openzeppelin-contracts/certora/**
+lib/openzeppelin-contracts/certora/harnesses/**
+lib/openzeppelin-contracts/certora/patched/**
+lib/openzeppelin-contracts/test/**
+lib/openzeppelin-contracts/contracts/mocks/**
+lib/openzeppelin-contracts/contracts/utils/draft-*.sol
+lib/openzeppelin-contracts/contracts/utils/RLP.sol

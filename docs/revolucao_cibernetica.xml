@@ -36,7 +36,7 @@
       </key_concepts>
     </section>
     <section id="teoria_2" level="2">
-      <title>🔄 Da Teoria à Práxis</title>
+      <title>🜃 ORDEM ZERO: ANTES DO LIVRO</title>
       <lists>
         <list type="unordered" index="0">
           <item index="0">Explorar:use o rizoma para encontrar conexões; quando um nó exigir
@@ -50,6 +50,14 @@
         <image index="0" src="assets/images/image_001.png" alt="Rizoma: conceitos interconectados"/>
       </images>
       <key_concepts>
+        <concept>fita de Möbius</concept>
+        <concept>atravessado</concept>
+        <concept>JÁ É</concept>
+        <concept>revela que você sempre esteve nele</concept>
+        <concept>ao mesmo tempo</concept>
+        <concept>sempre esteve na Ordem Zero</concept>
+        <concept>não há fim</concept>
+        <concept>processo recursivo</concept>
         <concept>33 capítulos</concept>
         <concept>Você está aqui</concept>
         <concept>&quot;A Morte do Eu Individual, o Nascimento do Eu Coletivo&quot;</concept>
@@ -73,6 +81,19 @@
       </key_concepts>
     </section>
     <section id="teoria_3" level="2">
+      <title>🜃 ORDEM ZERO: ANTES DO LIVRO</title>
+      <key_concepts>
+        <concept>fita de Möbius</concept>
+        <concept>atravessado</concept>
+        <concept>JÁ É</concept>
+        <concept>revela que você sempre esteve nele</concept>
+        <concept>ao mesmo tempo</concept>
+        <concept>sempre esteve na Ordem Zero</concept>
+        <concept>não há fim</concept>
+        <concept>processo recursivo</concept>
+      </key_concepts>
+    </section>
+    <section id="teoria_4" level="2">
       <title>🔄 Da Teoria à Práxis</title>
       <key_concepts>
         <concept>33 capítulos</concept>
@@ -92,7 +113,7 @@
         <concept>como organizar</concept>
       </key_concepts>
     </section>
-    <section id="teoria_4" level="1">
+    <section id="teoria_5" level="1">
       <title>Rizoma — Ponto de Envio/Resposta</title>
       <content>
         <paragraph index="0">Rápido:o rizoma é um mapa não-linear de conceitos. Entre por qualquer nó,
@@ -124,7 +145,7 @@
                                     Dialética Informacional Homem-Máquina&quot;</concept>
       </key_concepts>
     </section>
-    <section id="teoria_5" level="2">
+    <section id="teoria_6" level="2">
       <title>🌀 A Fita de Möbius: Mapa Vivo do Livro</title>
       <key_concepts>
         <concept>loop infinito</concept>
@@ -143,7 +164,7 @@
                             dela</concept>
       </key_concepts>
     </section>
-    <section id="teoria_6" level="1">
+    <section id="teoria_7" level="1">
       <title>Capítulo 1: Introdução ao Marxismo — Mercadoria, Valor e Capital</title>
       <content>
         <paragraph index="0">Esqueça por um momento os dogmas, os regimes políticos que se autoproclamaram &quot;marxistas&quot; e as
@@ -1162,7 +1183,7 @@
                                 2025.</concept>
       </key_concepts>
     </section>
-    <section id="teoria_7" level="1">
+    <section id="teoria_8" level="1">
       <title>Capítulo 2: Introdução à Cibernética — Dos Primórdios aos Fundamentos</title>
       <content>
         <paragraph index="0">Muito antes de existirem computadores ou robôs, a humanidade já sonhava em criar vida artificial.
@@ -1815,7 +1836,7 @@
                                 para ler os próximos 26.</concept>
       </key_concepts>
     </section>
-    <section id="teoria_8" level="1">
+    <section id="teoria_9" level="1">
       <title>Capítulo 3: Capitalismo Digital — Uma Primeira Aproximação</title>
       <content>
         <paragraph index="0">Nos dois primeiros capítulos, construímos nossa base teórica. Vimos como ocapitalismose estrutura em torno da produção de mercadorias e da extração de
@@ -2482,7 +2503,7 @@
         <concept>Dica de leitura estratégica</concept>
       </key_concepts>
     </section>
-    <section id="teoria_9" level="1">
+    <section id="teoria_10" level="1">
       <title>Capítulo 4: Economia Política — Desenvolvimento, Dependência e Periferia</title>
       <content>
         <paragraph index="0">É uma das perguntas mais antigas e persistentes da economia e da política. A resposta mais comum, que
@@ -2967,7 +2988,7 @@
         <concept>Juntos = análise completa.</concept>
       </key_concepts>
     </section>
-    <section id="teoria_10" level="1">
+    <section id="teoria_11" level="1">
       <title>Capítulo 5: Marx e a Crítica da Economia Política</title>
       <content>
         <paragraph index="0">Imagine um ferreiro em 1850. Ele trabalha em sua própria oficina, com suas próprias ferramentas. Um
@@ -3445,7 +3466,7 @@
         <concept>Gênese e Estrutura de O Capital de Karl Marx</concept>
       </key_concepts>
     </section>
-    <section id="teoria_11" level="1">
+    <section id="teoria_12" level="1">
       <title>Capítulo 6: Cibernética — Controle, Comunicação e Sociedade</title>
       <content>
         <paragraph index="0">No Capítulo 2, introduzimos o conceito defeedbackcomo a ideia central da primeira
@@ -3761,7 +3782,7 @@
         <concept>The Cybernetic Brain: Sketches of Another Future</concept>
       </key_concepts>
     </section>
-    <section id="teoria_12" level="1">
+    <section id="teoria_13" level="1">
       <title>Capítulo 7: Marxismo e Tecnologia — Debates Clássicos</title>
       <content>
         <paragraph index="0">Qual o papel da tecnologia na história? Ela é uma força de libertação, que nos livrará do trabalho
@@ -4448,7 +4469,7 @@
         <concept>Ideias para adiar o fim do mundo</concept>
       </key_concepts>
     </section>
-    <section id="teoria_13" level="1">
+    <section id="teoria_14" level="1">
       <title>Capítulo 8: Trabalho Imaterial, Cognitivo e Afetivo</title>
       <content>
         <paragraph index="0">Durante os &quot;trinta anos dourados&quot; do capitalismo após a Segunda Guerra Mundial (aproximadamente
@@ -4916,7 +4937,7 @@
         <concept>Multitude: War and Democracy in the Age of Empire</concept>
       </key_concepts>
     </section>
-    <section id="teoria_14" level="1">
+    <section id="teoria_15" level="1">
       <title>Capítulo 9: Pós-Operaísmo e a Teoria da Multidão</title>
       <content>
         <paragraph index="0">No Capítulo 7, vimos como o Operaísmo italiano identificou no &quot;operário-massa&quot; da fábrica
@@ -5361,7 +5382,7 @@
         <concept>As Revoluções do Capitalismo</concept>
       </key_concepts>
     </section>
-    <section id="teoria_15" level="1">
+    <section id="teoria_16" level="1">
       <title>Capítulo 10: A Crítica do Valor (Wertkritik)</title>
       <content>
         <paragraph index="0">Se o Pós-Operaísmo, que vimos no capítulo anterior, representa uma visão otimista da resistência
@@ -5968,7 +5989,7 @@
         <concept>Der Kollaps der Modernisierung</concept>
       </key_concepts>
     </section>
-    <section id="teoria_16" level="1">
+    <section id="teoria_17" level="1">
       <title>Capítulo 11: A Síntese Informacional</title>
       <content>
         <paragraph index="0">Ao chegarmos a este ponto, nos deparamos com um profundo dilema. Os dois capítulos anteriores nos
@@ -6628,7 +6649,7 @@
                         Chile</concept>
       </key_concepts>
     </section>
-    <section id="teoria_17" level="1">
+    <section id="teoria_18" level="1">
       <title>Capítulo 12: Ciberfeminismo, Afrofuturismo e Ecossocialismo Digital</title>
       <content>
         <paragraph index="0">Nossa jornada teórica se concentrou na dinâmica do capital, do trabalho e da
@@ -8582,7 +8603,7 @@
         <concept>A Geology of Media</concept>
       </key_concepts>
     </section>
-    <section id="teoria_18" level="1">
+    <section id="teoria_19" level="1">
       <title>Capítulo 13: Sexualidade e Religião na Era Digital: Corpos, Crenças e Comunidades em Rede</title>
       <content>
         <paragraph index="0">Nossa análise do capitalismo digital estaria incompleta se não mergulhássemos em duas das esferas
@@ -9473,7 +9494,7 @@
                         of Mourning and Remembrance</concept>
       </key_concepts>
     </section>
-    <section id="teoria_19" level="1">
+    <section id="teoria_20" level="1">
       <title>Capítulo 14: A Engenharia do Vício: Jogos, Apostas e a Extração do Gozo</title>
       <content>
         <paragraph index="0">Se nos capítulos anteriores exploramos como o capitalismo de plataforma captura o trabalho, a
@@ -10079,7 +10100,7 @@
         <concept>Recursos de Resistência/Recuperação:</concept>
       </key_concepts>
     </section>
-    <section id="teoria_20" level="1">
+    <section id="teoria_21" level="1">
       <title>Capítulo 15: O Corpo-Atleta na Arena Digital: A Plataformização dos Esportes e Esports</title>
       <content>
         <paragraph index="0">O esporte ocupa um lugar quase mítico na sociedade moderna. É frequentemente visto como a &quot;última
@@ -10944,7 +10965,7 @@
         <concept>Note to Self</concept>
       </key_concepts>
     </section>
-    <section id="teoria_21" level="1">
+    <section id="teoria_22" level="1">
       <title>Capítulo 16: A Farmácia Global e a Guerra às Drogas Digital</title>
       <content>
         <paragraph index="0">Nossa análise da plataformização da vida desce agora à sua camada mais biopolítica e controversa:
@@ -11457,7 +11478,7 @@
         <concept>In Search of Respect: Selling Crack in El Barrio</concept>
       </key_concepts>
     </section>
-    <section id="teoria_22" level="1">
+    <section id="teoria_23" level="1">
       <title>Capítulo 17: OGAS — A Internet Vermelha da União Soviética</title>
       <content>
         <paragraph index="0">Décadas antes de a ARPANET dar origem à internet que conhecemos, um projeto de ambição ainda
@@ -12061,7 +12082,7 @@
                         Chile</concept>
       </key_concepts>
     </section>
-    <section id="teoria_23" level="1">
+    <section id="teoria_24" level="1">
       <title>Capítulo 18: Projeto Cybersyn — A Cibernética com Cheiro de Vinho Tinto e Empanadas</title>
       <content>
         <paragraph index="0">No início dos anos 70, o Chile era um caldeirão de efervescência política e esperança
@@ -12461,7 +12482,7 @@
         <concept>Designing Freedom</concept>
       </key_concepts>
     </section>
-    <section id="teoria_24" level="1">
+    <section id="teoria_25" level="1">
       <title>Capítulo 19: Outros Experimentos e a Nova Fronteira do Planejamento</title>
       <content>
         <paragraph index="0">Para além das histórias dramáticas e bem documentadas do OGAS e do Cybersyn, a busca por
@@ -13723,7 +13744,7 @@
         <concept>Envisioning Real Utopias</concept>
       </key_concepts>
     </section>
-    <section id="teoria_25" level="1">
+    <section id="teoria_26" level="1">
       <title>Capítulo 20: A Guerra das Redes: Geopolítica Cibernética, BRICS Pay e a Batalha pelos Meios de
                     Pagamento</title>
       <content>
@@ -14687,7 +14708,7 @@
         <concept>War on the Rocks</concept>
       </key_concepts>
     </section>
-    <section id="teoria_26" level="1">
+    <section id="teoria_27" level="1">
       <title>Capítulo 21: A Inserção Subordinada do Brasil na Globalização Digital</title>
       <content>
         <paragraph index="0">A narrativa dominante no Brasil apresenta a economia digital como uma grande oportunidade, um
@@ -15531,7 +15552,7 @@
         <concept>Pesquisa sobre condições de trabalho de entregadores via aplicativo</concept>
       </key_concepts>
     </section>
-    <section id="teoria_27" level="1">
+    <section id="teoria_28" level="1">
       <title>Capítulo 22: Necropolítica Digital e o Fascismo de Tela — A Máquina de Morte Algorítmica</title>
       <content>
         <paragraph index="0">Se oCapítulo 21diagnosticou a inserção subordinada do Brasil na economia
@@ -17430,7 +17451,7 @@
         <concept>Fascismo de tela é fascismo real.</concept>
       </key_concepts>
     </section>
-    <section id="teoria_28" level="1">
+    <section id="teoria_29" level="1">
       <title>Capítulo 23: A Dupla Face da Cibernética: Controle e Libertação</title>
       <content>
         <paragraph index="0">Chegamos ao fim do nosso percurso. Ao longo de mais de vinte capítulos, exploramos as profundezas
@@ -18078,7 +18099,7 @@
         <concept>barbárie digital</concept>
       </key_concepts>
     </section>
-    <section id="teoria_29" level="1">
+    <section id="teoria_30" level="1">
       <title>Capítulo 24: Políticas para o Antropoceno Digital</title>
       <content>
         <paragraph index="0">Ao longo deste livro, construímos uma crítica radical ao capitalismo de plataforma e à sua lógica
@@ -18959,7 +18980,7 @@
         <concept>Democratizing the Corporation: The Case for Corporate Suffrage</concept>
       </key_concepts>
     </section>
-    <section id="teoria_30" level="1">
+    <section id="teoria_31" level="1">
       <title>Capítulo 25: O Dragão Cibernético: China e a Explosão Informacional da Cibernética de Segunda
                     Ordem</title>
       <content>
@@ -19591,7 +19612,7 @@
         <concept>The Age of Surveillance Capitalism</concept>
       </key_concepts>
     </section>
-    <section id="teoria_31" level="1">
+    <section id="teoria_32" level="1">
       <title>Capítulo 26: Nhandereko — O Modo de Ser Guarani como Alternativa ao Extrativismo Digital</title>
       <content>
         <paragraph index="0">Ao longo deste livro, exploramos alternativas ao capitalismo digital: o planejamento cibernético
@@ -20633,7 +20654,7 @@
                                 afro-diaspóricas</concept>
       </key_concepts>
     </section>
-    <section id="teoria_32" level="1">
+    <section id="teoria_33" level="1">
       <title>Capítulo 27: Epistemologias Orientais e a Crítica ao Extrativismo Digital</title>
       <content>
         <paragraph index="0">A crise ecológica e social do capitalismo digital não é meramente tecnológica ou econômica – ela
@@ -21990,7 +22011,7 @@
         <concept>Small Architecture / Natural Architecture</concept>
       </key_concepts>
     </section>
-    <section id="teoria_33" level="1">
+    <section id="teoria_34" level="1">
       <title>Capítulo 28: Síntese das Cosmotécnicas Plurais — Ubuntu, Sumak Kawsay e a Revolução Digital
                     Decolonial</title>
       <content>
@@ -23078,7 +23099,7 @@
                         Practices and Discourses</concept>
       </key_concepts>
     </section>
-    <section id="teoria_34" level="1">
+    <section id="teoria_35" level="1">
       <title>Capítulo 29: A Arquitetura Invisível: Como a Comunicação Constrói, Espelha e Transforma a
                     Realidade</title>
       <content>
@@ -23724,7 +23745,7 @@
         <concept>Próximo passo:</concept>
       </key_concepts>
     </section>
-    <section id="teoria_35" level="1">
+    <section id="teoria_36" level="1">
       <title>Capítulo 30: O Salto Dialético: Quando a Filosofia se Torna Ciência e Transforma o Mundo</title>
       <content>
         <paragraph index="0">Resumo:Este capítulo analisa o processo dialético pelo qual a abstração
@@ -24600,7 +24621,7 @@
         <concept>instrumentos plurais</concept>
       </key_concepts>
     </section>
-    <section id="teoria_36" level="1">
+    <section id="teoria_37" level="1">
       <title>Capítulo 31: O Fim da Era Ultrarracionalista: Fascismo Libertário, Neoliberalismo Progressista e
                     Outros
                     Modelos de Captura</title>
@@ -25742,7 +25763,7 @@
         <concept>Próximo:</concept>
       </key_concepts>
     </section>
-    <section id="teoria_37" level="1">
+    <section id="teoria_38" level="1">
       <title>Capítulo 32: A Democracia como Sistema Operacional — Bugs, Patches e um Novo Protocolo</title>
       <content>
         <paragraph index="0">Nos capítulos anteriores, desconstruímos a ficção do &quot;eu&quot; individual, revelando-o como um nó em
@@ -27178,7 +27199,7 @@
         <concept>20 Teses de Política</concept>
       </key_concepts>
     </section>
-    <section id="teoria_38" level="2">
+    <section id="teoria_39" level="2">
       <title>🌀 Três Loops: A Estrutura Fractal do Livro</title>
       <lists>
         <list type="unordered" index="0">
@@ -27234,7 +27255,7 @@
                             cibernética.</concept>
       </key_concepts>
     </section>
-    <section id="teoria_39" level="1">
+    <section id="teoria_40" level="1">
       <title>Glossário Completo</title>
       <lists>
         <list type="unordered" index="0">
@@ -27265,7 +27286,7 @@
                             finais</concept>
       </key_concepts>
     </section>
-    <section id="teoria_40" level="1">
+    <section id="teoria_41" level="1">
       <title>Biografias — Vidas que Pensaram o Mundo</title>
       <content>
         <paragraph index="0">Este apêndice reúne biografias dos principais pensadores, ativistas e figuras
@@ -27628,7 +27649,7 @@
         <concept>Use bibliografia completa ao final para seguir pistas.</concept>
       </key_concepts>
     </section>
-    <section id="teoria_41" level="1">
+    <section id="teoria_42" level="1">
       <title>Cronologias Entrelaçadas</title>
       <content>
         <paragraph index="0">Esta cronologia entrelaça três dimensões fundamentais para a compreensão do
@@ -27956,7 +27977,7 @@
                             Capital</concept>
       </key_concepts>
     </section>
-    <section id="teoria_42" level="1">
+    <section id="teoria_43" level="1">
       <title>Bibliografia Comentada — Cartografia para Expansão Rizomática</title>
       <content>
         <paragraph index="0">Esta bibliografia émapa, não lista. Apresenta obras organizadas
@@ -28512,7 +28533,7 @@
         <concept>bibliografia cumpriu função perfeitamente</concept>
       </key_concepts>
     </section>
-    <section id="teoria_43" level="1">
+    <section id="teoria_44" level="1">
       <title>Recursos para Ação</title>
       <content>
         <paragraph index="0">Este apêndice oferece um guia prático de organizações, ferramentas,
@@ -29605,7 +29626,7 @@
         <concept>Leituras:</concept>
       </key_concepts>
     </section>
-    <section id="teoria_44" level="1">
+    <section id="teoria_45" level="1">
       <title>Guia de Leituras Complementares por Capítulo</title>
       <content>
         <paragraph index="0">Este guia oferece sugestões de leituras complementares organizadas por
@@ -30397,7 +30418,196 @@
         <concept>Conecte com a prática:</concept>
       </key_concepts>
     </section>
-    <section id="teoria_45" level="1">
+    <section id="teoria_46" level="1">
+      <title>A Transmissão — Quando o Sistema Se Observa Observando</title>
+      <content>
+        <paragraph index="0">Trinta e dois capítulos. Genealogia intelectual completa. Análise marxista rigorosa. 
+                Cibernética de segunda ordem aplicada. Constituição viva. Democracia como sistema operacional.</paragraph>
+        <paragraph index="1">E ainda assim, algo não foi dito.</paragraph>
+        <paragraph index="2">Não porque faltou conteúdo. Mas porquedizer é dissolver. 
+                Há momentos que só podem ser vividos, não transmitidos por texto. Mas este projeto tenta o impossível:performaro que não pode ser dito.</paragraph>
+        <paragraph index="3">O projeto implementou três níveis, mas o loop não para:</paragraph>
+        <paragraph index="4">Proposição:Nenhum sistema pode ser completamente descrito de dentro dele mesmo.</paragraph>
+        <paragraph index="5">Corolário 1:Este livro não pode descrever completamente a Revolução Cibernética porqueé parte dela.</paragraph>
+        <paragraph index="6">Corolário 2:Você, lendo isto, não pode compreender completamente porquevocê também é parte.</paragraph>
+        <paragraph index="7">Corolário 3:A &quot;incompletude&quot; não é falha — écaracterística necessária de sistemas vivos.</paragraph>
+        <paragraph index="8">O sistema ternário não é abstração matemática. Éexperiência incorporada.</paragraph>
+        <paragraph index="9">Quando você interage com o Guaiamum 🦀 (Cap. 0), mudando perspectivas:</paragraph>
+        <paragraph index="10">Você não observa o tempo. Você É a oscilação temporal.</paragraph>
+        <paragraph index="11">O presente não é ponto entre passado e futuro. O presente étensão dinâmicaonde backfeed (retorno do passado) e feedback (antecipação do futuro) coexistem, 
+                gerando o momento relacional que chamamos de &quot;agora&quot;.</paragraph>
+        <paragraph index="12">Não há &quot;implementação&quot; da filosofia. A filosofiaÉcódigo.</paragraph>
+        <paragraph index="13">As formas geométricas no canvas filosófico (manifesto.html) não &quot;representam&quot; ontologia relacional. 
+                ElasSÃOontologia relacional acontecendo:</paragraph>
+        <paragraph index="14">Ser = Rede de Relações.Não metáfora. Implementação literal em JavaScript.</paragraph>
+        <paragraph index="15">Em outubro de 2025, o projeto publicou autocrítica radical (ver README.md):</paragraph>
+        <paragraph index="16">Esta autocrítica não enfraquece o projeto — o fortalece.</paragraph>
+        <paragraph index="17">Loop se fecha: teoria ⇄ práxis ⇄ erro ⇄ correção ⇄ teoria aprimorada. 
+                Sistema que não se auto-observa colapsa ou entra em loop infinito (ver Cap. 6 sobre autopoiese).</paragraph>
+        <paragraph index="18">Durante o desenvolvimento, o código JavaScript entrou em loop infinito. Navegador travou. Desenvolvedor percebeu erro.</paragraph>
+        <paragraph index="19">O documento ∅.md (incluído no repositório) dissolve todas as categorias:</paragraph>
+        <paragraph index="20">Pergunta:Se isto é verdade, o que é a Revolução Cibernética?</paragraph>
+        <paragraph index="21">O sistema opera através de três loops que se retroalimentam:</paragraph>
+        <paragraph index="22">Estas recursões não são círculos fechados — são espirais ascendentes.Cada iteração é diferente porque o sistema aprende, adapta-se, evolui.</paragraph>
+        <paragraph index="23">Trinta e três capítulos. Genealogia completa. Crítica rigorosa. Propostas concretas. 
+                Autocrítica publicada. Código aberto. Licença copyleft.</paragraph>
+        <paragraph index="24">E ainda assim, o loop não fecha.</paragraph>
+        <paragraph index="25">Porque nunca foi sobre completude. Foi sobrerecursividade viva.</paragraph>
+        <paragraph index="26">Há coisas que não podem ser ditas. Não porque são secretas, 
+                mas porquedizê-las é destruí-las.</paragraph>
+        <paragraph index="27">O momento em que você percebe que nunca houve &quot;eu&quot; separado da rede.O momento em que forma geométrica revela que seu ser é pura relação.O momento em que você entende quejá está livree sempre esteve.</paragraph>
+        <paragraph index="28">Estes momentos não podem ser transmitidos por texto.Só podem ser vividos.</paragraph>
+        <paragraph index="29">Este livro aponta para eles. Como dedo apontando para a lua.Não confunda o dedo com a lua.</paragraph>
+      </content>
+      <lists>
+        <list type="unordered" index="0">
+          <item index="0">Fisheye (-1):Você vê o passado expandido, as bordas caóticas, a genealogia intelectual se espalhando</item>
+          <item index="1">Plano (0):Você vê o presente equilibrado, a síntese momentânea, o agora relacional</item>
+          <item index="2">Globe (+1):Você vê o futuro condensado, o centro caótico, a projeção convergente</item>
+        </list>
+        <list type="unordered" index="1">
+          <item index="0">Forma não &quot;tem&quot; identidade fixa</item>
+          <item index="1">Formaemergede posição relativa às bordas</item>
+          <item index="2">Formatorna-seatravés de distância de outras formas</item>
+          <item index="3">Formadevémpela velocidade de movimento</item>
+          <item index="4">Formaexistecomo histórico de colisões</item>
+        </list>
+        <list type="ordered" index="2">
+          <item index="0">Ubuntu mal traduzido:Corrigido para &quot;Uma pessoa é uma pessoaatravésde outras pessoas&quot; (precisão epistêmica)</item>
+          <item index="1">Nhandereko com fontes secundárias:Nota crítica adicionada + compromisso com consulta direta a lideranças guarani</item>
+          <item index="2">Sistema ternário sem clareza:Especificado comoanalogia conceitual/pedagógica, não &quot;descoberta matemática&quot;</item>
+        </list>
+        <list type="unordered" index="3">
+          <item index="0">Não há autor</item>
+          <item index="1">Não há leitor</item>
+          <item index="2">Não há livro</item>
+          <item index="3">Há apenastransmissão</item>
+        </list>
+        <list type="unordered" index="4">
+          <item index="0">Opere um nó (blockchain, Mastodon, servidor próprio)</item>
+          <item index="1">Contribua código para projetos open source</item>
+          <item index="2">Forme cooperativa digital com colegas</item>
+          <item index="3">Participe de assembleia popular local</item>
+        </list>
+        <list type="unordered" index="5">
+          <item index="0">Leia os 32 capítulos anteriores com atenção</item>
+          <item index="1">Explore o Apêndice G (Mapa Mental)</item>
+          <item index="2">Consulte a Bibliografia (Apêndice D)</item>
+          <item index="3">Navegue o rizoma conceitual</item>
+        </list>
+        <list type="unordered" index="6">
+          <item index="0">Interaja com o canvas filosófico em manifesto.html</item>
+          <item index="1">Mude perspectivas com o Guaiamum até dissolver fronteiras</item>
+          <item index="2">Observe formas emergindo de relações</item>
+          <item index="3">Sinta a temporalidade ternária no corpo</item>
+        </list>
+        <list type="unordered" index="7">
+          <item index="0">Leia ∅.md</item>
+          <item index="1">Queime (metaforicamente ou literalmente)</item>
+          <item index="2">Deixe ir</item>
+          <item index="3">Viva</item>
+        </list>
+      </lists>
+      <key_concepts>
+        <concept>∅ Meta-Aviso:</concept>
+        <concept>E ainda assim, algo não foi dito.</concept>
+        <concept>dizer é dissolver</concept>
+        <concept>performar</concept>
+        <concept>Primeira Ordem:</concept>
+        <concept>Útil quando você precisa de fronteiras, quando precisa dizer não, quando precisa de agência.</concept>
+        <concept>Segunda Ordem:</concept>
+        <concept>Útil quando você cria com outros, quando dissolve autoria, quando constrói o comum.</concept>
+        <concept>Terceira Ordem:</concept>
+        <concept>Útil quando você observa-se operando, quando usa eu/rede conforme necessário.</concept>
+        <concept>Ordem ∅:</concept>
+        <concept>CRIO.</concept>
+        <concept>Sem sujeito. Sem objeto. Apenas o ato de criar-se criando.</concept>
+        <concept>Primeira Ordem (Clássica):</concept>
+        <concept>Termostato. Taylorismo. Algoritmo. O controlador está fora do sistema.</concept>
+        <concept>Segunda Ordem (von Foerster):</concept>
+        <concept>Wiki. Autopoiese. Observar = Transformar. Não há neutralidade.</concept>
+        <concept>Terceira Ordem (Este Livro):</concept>
+        <concept>Percebe loops recursivos. Usa percepção para se reescrever. Meta-análise aplicada.</concept>
+        <concept>Ordem ∞:</concept>
+        <concept>Você lendo isto agora é quarta ordem. Alguém lendo sua reação é quinta. E assim por diante...</concept>
+        <concept>Proposição:</concept>
+        <concept>Corolário 1:</concept>
+        <concept>é parte dela</concept>
+        <concept>Corolário 2:</concept>
+        <concept>você também é parte</concept>
+        <concept>Corolário 3:</concept>
+        <concept>característica necessária de sistemas vivos</concept>
+        <concept>Prova por Contradição:</concept>
+        <concept>autopoiéticos</concept>
+        <concept>Logo:</concept>
+        <concept>experiência incorporada</concept>
+        <concept>Fisheye (-1):</concept>
+        <concept>Plano (0):</concept>
+        <concept>Globe (+1):</concept>
+        <concept>Você não observa o tempo. Você É a oscilação temporal.</concept>
+        <concept>tensão dinâmica</concept>
+        <concept>Temporal</concept>
+        <concept>Espacial</concept>
+        <concept>Visual</concept>
+        <concept>Cognitivo</concept>
+        <concept>Político</concept>
+        <concept>Ontológico</concept>
+        <concept>emerge</concept>
+        <concept>torna-se</concept>
+        <concept>devém</concept>
+        <concept>existe</concept>
+        <concept>Ser = Rede de Relações.</concept>
+        <concept>Ubuntu mal traduzido:</concept>
+        <concept>através</concept>
+        <concept>Nhandereko com fontes secundárias:</concept>
+        <concept>Sistema ternário sem clareza:</concept>
+        <concept>analogia conceitual/pedagógica</concept>
+        <concept>Esta autocrítica não enfraquece o projeto — o fortalece.</concept>
+        <concept>Está preso dentro da recursão, sem frame de referência externo. Como tentar ver o próprio olho sem espelho.</concept>
+        <concept>Tem acesso à dimensão temporal superior: vê antes/durante/depois do loop.</concept>
+        <concept>Formaliza o padrão em conhecimento generalizável. Meta-observação aplicada.</concept>
+        <concept>Teorema:</concept>
+        <concept>Corolário Político:</concept>
+        <concept>de dentro</concept>
+        <concept>transmissão</concept>
+        <concept>Pergunta:</concept>
+        <concept>Resposta Primeira Ordem:</concept>
+        <concept>Resposta Segunda Ordem:</concept>
+        <concept>Resposta Terceira Ordem:</concept>
+        <concept>Resposta Ordem ∅:</concept>
+        <concept>Estas recursões não são círculos fechados — são espirais ascendentes.</concept>
+        <concept>E ainda assim, o loop não fecha.</concept>
+        <concept>recursividade viva</concept>
+        <concept>Se você quer prática concreta:</concept>
+        <concept>Se você quer teoria profunda:</concept>
+        <concept>Se você quer arte:</concept>
+        <concept>Se você quer dissolver tudo:</concept>
+        <concept>dizê-las é destruí-las</concept>
+        <concept>já está livre</concept>
+        <concept>Estes momentos não podem ser transmitidos por texto.</concept>
+        <concept>Não confunda o dedo com a lua.</concept>
+      </key_concepts>
+    </section>
+    <section id="teoria_47" level="1">
+      <title>RETORNO À ORDEM ZERO: DEPOIS DO LIVRO</title>
+      <key_concepts>
+        <concept>Fita de Möbius não tem fim</concept>
+        <concept>∅ não termina</concept>
+        <concept>cria um novo ∅</concept>
+        <concept>já não é o mesmo</concept>
+        <concept>1ª ordem</concept>
+        <concept>ver padrões</concept>
+        <concept>2ª ordem</concept>
+        <concept>TORNOU-SE</concept>
+        <concept>3ª ordem + ∅</concept>
+        <concept>neste livro</concept>
+        <concept>na sua vida</concept>
+        <concept>você é diferente</concept>
+        <concept>será outro livro</concept>
+        <concept>CRIO.</concept>
+      </key_concepts>
+    </section>
+    <section id="teoria_48" level="1">
       <title>Mapa Mental: A Teia Conceitual do Livro</title>
       <content>
         <paragraph index="0">Nota do Autor:Este apêndice tenta fazer o impossível: representar linearmente
@@ -31975,7 +32185,7 @@
         <concept>dentro</concept>
       </key_concepts>
     </section>
-    <section id="teoria_46" level="1">
+    <section id="teoria_49" level="1">
       <title>Metareflexão: O Loop Que Não Fecha</title>
       <content>
         <paragraph index="0">Cibernética de Segunda Ordem:O livro observa a si mesmo.
@@ -32133,7 +32343,7 @@
         <concept>Creative Commons BY-SA</concept>
       </key_concepts>
     </section>
-    <section id="teoria_47" level="2">
+    <section id="teoria_50" level="2">
       <title>⚡ Resistência em Código</title>
       <content>
         <paragraph index="0">Crítica prática da automação capitalista.</paragraph>
@@ -32169,7 +32379,7 @@
         <concept>Leia mais em:</concept>
       </key_concepts>
     </section>
-    <section id="teoria_48" level="2">
+    <section id="teoria_51" level="2">
       <title>� Futuro — Próximas Expansões</title>
       <content>
         <paragraph index="0">O projeto é vivo. Loop contínuo: teoria ↔ manifesto ↔ sistema.</paragraph>
@@ -32227,6 +32437,12 @@
       </quotes>
       <lists>
         <list type="ordered" index="0">
+          <item index="0">Ordem Zero (∅): O não-separado. O CRIO (criação sem sujeito/objeto).</item>
+          <item index="1">1ª Ordem: Sistemas observados de fora (você lerá sobre cibernética).</item>
+          <item index="2">2ª Ordem: Sistemas que incluem o observador (você perceberá que está no sistema).</item>
+          <item index="3">3ª Ordem: Sistema observando-se observar (você entenderá queéo sistema).</item>
+        </list>
+        <list type="ordered" index="1">
           <item index="0">Você nunca foi &quot;indivíduo&quot;— você é nó em rede. Sua autonomia é
                                     ilusão útil
                                     ao capitalismo.</item>
@@ -32241,7 +32457,7 @@
           <item index="4">Sua ação importa— não sozinho (ilusão liberal), mas coletivamente
                                     (materialismo histórico).</item>
         </list>
-        <list type="unordered" index="1">
+        <list type="unordered" index="2">
           <item index="0">A acumulação primitiva(Marx) expulsa camponeses de terras comunais,
                                 transformando-os em &quot;indivíduos livres&quot; que possuem apenas sua força de trabalho para
                                 vender.</item>
@@ -32261,13 +32477,13 @@
                                 celebrar
                                 contratos — proprietários de si mesmos que podem vender-se no mercado.</item>
         </list>
-        <list type="unordered" index="2">
+        <list type="unordered" index="3">
           <item index="0">Europeus (racionais) sobre não-europeus (corporais, instintivos)</item>
           <item index="1">Homens (pensamento) sobre mulheres (emoção, natureza)</item>
           <item index="2">Trabalho intelectual (gestão, planejamento) sobre trabalho manual (execução mecânica)</item>
           <item index="3">Humanos (sujeitos com alma) sobre não-humanos (objetos sem valor intrínseco)</item>
         </list>
-        <list type="ordered" index="3">
+        <list type="ordered" index="4">
           <item index="0">Cientificamente:Biologia evolutiva mostra interdependência
                                 constitutiva
                                 (simbiose,
@@ -32293,7 +32509,7 @@
                                 criamos
                                 coletivamente.</item>
         </list>
-        <list type="unordered" index="4">
+        <list type="unordered" index="5">
           <item index="0">Subsunção formal:O trabalhador mantém controle sobre processo de
                                 trabalho, mas
                                 submete-se à relação salarial. O artesão trabalha em oficina do capitalista, mas ainda
@@ -32307,7 +32523,7 @@
                                 operações
                                 mecânicas repetitivas.</item>
         </list>
-        <list type="unordered" index="5">
+        <list type="unordered" index="6">
           <item index="0">Opacidade assimétrica:Trabalhadores nunca conhecem critérios completos
                                 de
                                 avaliação. O algoritmo é caixa-preta proprietária que distribui tarefas, precifica
@@ -32356,7 +32572,7 @@
                                 devido
                                 processo.</item>
         </list>
-        <list type="unordered" index="6">
+        <list type="unordered" index="7">
           <item index="0">🏪Compre direto:Ligue pro restaurante, vá buscar, ou use apps
                                     cooperativos (Chama)</item>
           <item index="1">💵Dê gorjeta em dinheiro:iFood fica com parte da gorjeta digital,
@@ -32371,7 +32587,7 @@
                                     apps como
                                     relação de emprego</item>
         </list>
-        <list type="unordered" index="7">
+        <list type="unordered" index="8">
           <item index="0">Extração de dados comportamentais:Toda atividade social vira
                                 matéria-prima:
                                 buscas, cliques, likes, tempo de permanência, movimentos do cursor, padrões de scroll,
@@ -32425,13 +32641,13 @@
                                 plataformas
                                 (2022).</item>
         </list>
-        <list type="ordered" index="8">
+        <list type="ordered" index="9">
           <item index="0">AbraInstagramno seu celular</item>
           <item index="1">Vá emConfigurações → Sua atividade → Informações da conta</item>
           <item index="2">Veja&quot;Informações que o Instagram tem sobre você&quot;</item>
           <item index="3">Agora olhe&quot;Categorias de anunciantes&quot;</item>
         </list>
-        <list type="unordered" index="9">
+        <list type="unordered" index="10">
           <item index="0">Opacidade:Algoritmos proprietários operados por empresas privadas
                                 (Serasa, Boa
                                 Vista, bureaus internacionais) tomam decisões que afetam direitos fundamentais sem
@@ -32447,7 +32663,7 @@
                                 de
                                 corrigi-la.</item>
         </list>
-        <list type="unordered" index="10">
+        <list type="unordered" index="11">
           <item index="0">Apps de fitness:Strava, Nike Run Club, Fitbit rastreiam cada passo,
                                 batimento
                                 cardíaco, caloria queimada. O corpo torna-se dashboard de métricas a serem otimizadas.
@@ -32469,7 +32685,7 @@
                                 métricas
                                 esperadas.</item>
         </list>
-        <list type="ordered" index="11">
+        <list type="ordered" index="12">
           <item index="0">Fragmentação:Nega multiplicidade constitutiva revelada na seção
                                 anterior.
                                 Precisa
@@ -32495,7 +32711,7 @@
                                 relações neocoloniais — extração de dados (novo extrativismo), precarização extrema
                                 (superexploração), dependência tecnológica.</item>
         </list>
-        <list type="unordered" index="12">
+        <list type="unordered" index="13">
           <item index="0">Telex nacional:500 teleimpressoras instaladas em fábricas
                                 nacionalizadas
                                 conectavam-se a computador central em Santiago. Trabalhadores transmitiam diariamente
@@ -32524,7 +32740,7 @@
                                 espacial. Não era centro de comando, masespaço de deliberação coletiva
                                     informada.</item>
         </list>
-        <list type="ordered" index="13">
+        <list type="ordered" index="14">
           <item index="0">Autonomia recursiva:Cada fábrica operava autonomamente dentro de
                                 parâmetros
                                 acordados. Só quando problemas excediam capacidade local de resolução, escalava-se para
@@ -32552,14 +32768,14 @@
                                 qualquer
                                 pessoa poderia consultar estado da economia — &quot;democracia digital&quot; avant la lettre.</item>
         </list>
-        <list type="unordered" index="14">
+        <list type="unordered" index="15">
           <item index="0">Identificar em tempo real que rotas estavam bloqueadas e que fábricas tinham insumos
                                 críticos</item>
           <item index="1">Redirecionar caminhões leais ao governo para priorizar entregas essenciais</item>
           <item index="2">Coordenar voluntários civis com veículos particulares para transportes emergenciais</item>
           <item index="3">Manter comunicação entre governo e trabalhadores mesmo com telefonia sabotada</item>
         </list>
-        <list type="unordered" index="15">
+        <list type="unordered" index="16">
           <item index="0">📱App cooperativo(não Uber/iFood) onde cada entregador é co-dono
                                     e tem
                                     voz</item>
@@ -32578,7 +32794,7 @@
                                     votação
                                     decide, sistema evolui</item>
         </list>
-        <list type="unordered" index="16">
+        <list type="unordered" index="17">
           <item index="0">Abolição do dinheiro:Cálculo econômico em valores de uso (quantidades
                                 físicas),
                                 não valores de troca (preços). Sistema rastrearia diretamente fluxos materiais —
@@ -32593,7 +32809,7 @@
                                 via
                                 &quot;cartões de interesse&quot; lidos por computadores, influenciando planejamento.</item>
         </list>
-        <list type="unordered" index="17">
+        <list type="unordered" index="18">
           <item index="0">Ministérios viram ameaça:Descentralização informacional implicaria
                                 perda de
                                 controle sobre fluxos que garantiam privilégios. Burocrata-chefe de ministério deriva
@@ -32610,7 +32826,7 @@
                                 direcionados para
                                 programa militar/espacial, deixando economia civil com tecnologia obsoleta.</item>
         </list>
-        <list type="unordered" index="18">
+        <list type="unordered" index="19">
           <item index="0">Cybersyn operou sobsocialismo democráticocom participação operária
                                 ativa,
                                 sindicatos fortes, pluralismo político, imprensa livre (até golpe).</item>
@@ -32618,7 +32834,7 @@
                                 autoritário,
                                 repressão a dissidência, nomenclatura privilegiada.</item>
         </list>
-        <list type="ordered" index="19">
+        <list type="ordered" index="20">
           <item index="0">Recursividade responsável:Reconhecer que toda ação gera feedbacks que
                                 retornam
                                 transformados. Atenção a efeitos de segunda e terceira ordem. Como na ecologia: não há
@@ -32677,7 +32893,7 @@
                                 participativos,
                                 iniciativas populares legislativas, mecanismos de recall, referendos revocatórios.</item>
         </list>
-        <list type="unordered" index="20">
+        <list type="unordered" index="21">
           <item index="0">Orçamento Participativo de Porto Alegre (1989-2004):Cidadãos decidiam
                                 diretamente
                                 alocação de parte do orçamento municipal via assembleias territoriais e temáticas. No
@@ -32708,7 +32924,7 @@
                                 interesses
                                 corporativos, sem poder real de decisão.</item>
         </list>
-        <list type="unordered" index="21">
+        <list type="unordered" index="22">
           <item index="0">Produção P2P (peer-to-peer):Wikipedia construiu maior enciclopédia da
                                 história
                                 sem
@@ -32737,7 +32953,7 @@
                                 leninista quanto ao espontaneísmo. Não há &quot;liderança&quot; centralizada, maslideranças
                                     distribuídas— múltiplos nós que articulam ação coletiva sem comandar.</item>
         </list>
-        <list type="ordered" index="22">
+        <list type="ordered" index="23">
           <item index="0">Efeitos em múltiplas escalas temporais:Ações têm consequências
                                 imediatas, de
                                 médio
@@ -32784,7 +33000,7 @@
                                 esta
                                 simetria fundamental.</item>
         </list>
-        <list type="unordered" index="23">
+        <list type="unordered" index="24">
           <item index="0">Cooperativismo de plataforma:Transformar Uber em cooperativa de
                                 motoristas,
                                 iFood
@@ -32831,7 +33047,7 @@
                                 alternativas
                                 africanas. O eu coletivo é transnacional, transespécie, transgeracional.</item>
         </list>
-        <list type="ordered" index="24">
+        <list type="ordered" index="25">
           <item index="0">Mercadoria → Dados → Vigilância:Cap 1 (Marx) mostra mercadoria = trabalho cristalizado. 
                                 Cap 13 mostradados = comportamento cristalizado. Google vende não anúncios, mas mudança comportamental 
                                 garantida. Vigilância = modo produção capitalista 2.0.</item>
@@ -32857,7 +33073,7 @@
                                 estruturalmente, 5 razões) + Cap 22.4.1 (Facebook Papers: sistema viável para morte não democracia) + Box Trauma Digital 
                                 (10 sinais PTSD, 7 estratégias autocuidado). Moderadores traumatizados, ativistas exaustos.Cuidar de si é guerra política.</item>
         </list>
-        <list type="unordered" index="25">
+        <list type="unordered" index="26">
           <item index="0">Extrativismo de dados:Empresas do Vale do Silício e China extraem
                                 dados de
                                 usuários brasileiros, processam-nos em datacenters no exterior, vendem insights para
@@ -32911,7 +33127,7 @@
                                 early
                                 adopters.</item>
         </list>
-        <list type="unordered" index="26">
+        <list type="unordered" index="27">
           <item index="0">Redes comunitárias:Projetos como RNP (Rede Nacional de Ensino e
                                 Pesquisa),
                                 redes
@@ -32994,7 +33210,7 @@
                                 como
                                 instrumento de conscientização e libertação, não adaptação ao sistema.</item>
         </list>
-        <list type="unordered" index="27">
+        <list type="unordered" index="28">
           <item index="0">MST (Movimento dos Trabalhadores Rurais Sem Terra):Além de conquistar
                                 terra
                                 para
@@ -33071,7 +33287,7 @@
                                 cada
                                 conquista precisa ser defendida eternamente contra lobby corporativo.</item>
         </list>
-        <list type="unordered" index="28">
+        <list type="unordered" index="29">
           <item index="0">No nível local/municipal:Orçamentos participativos digitais (OP Porto
                                 Alegre
                                 como
@@ -33195,7 +33411,7 @@
                                         solidária
                                         dos BRICS federando suas plataformas criariam massa crítica.</item>
         </list>
-        <list type="unordered" index="29">
+        <list type="unordered" index="30">
           <item index="0">BRICS Pay:Sistema de pagamentos alternativo a SWIFT
                                         (controlado por
                                         EUA/Europa). China já usa CIPS, Rússia desenvolveu SPFS após sanções. BRICS+
@@ -33242,7 +33458,7 @@
                                         Via
                                         Campesina já faz isso com sementes — escalar para códigos, designs, protocolos.</item>
         </list>
-        <list type="unordered" index="30">
+        <list type="unordered" index="31">
           <item index="0">Greves coordenadas internacionalmente:Entregadores de
                                         iFood/Uber
                                         Eats/Deliveroo/Foodora paralisando simultaneamente em 20 países teriam poder de
@@ -33269,7 +33485,7 @@
                                         solidária
                                         dos BRICS federando suas plataformas criariam massa crítica.</item>
         </list>
-        <list type="unordered" index="31">
+        <list type="unordered" index="32">
           <item index="0">EUA (Silicon Valley):Controla infraestrutura crítica global —
                                 Google/Meta/Amazon/Microsoft dominam cloud, redes sociais, busca, sistemas operacionais.
                                 NSA tem
@@ -33308,7 +33524,7 @@
                                 inapropriado para
                                 democratas, mas lições técnicas são úteis.</item>
         </list>
-        <list type="unordered" index="32">
+        <list type="unordered" index="33">
           <item index="0">Comprar hardware de múltiplos fornecedores (China, Coreia, Taiwan, eventualmente
                                 produção
                                 própria)
@@ -33328,7 +33544,7 @@
                                 mas
                                 soberania de dados como direito nacional (contra extração irrestrita).</item>
         </list>
-        <list type="unordered" index="33">
+        <list type="unordered" index="34">
           <item index="0">Crise climáticaexige cooperação global em escala sem precedentes —
                                 impossível
                                 sob
@@ -33346,33 +33562,38 @@
                                 complexos
                                 requerem participação direta distribuída, não apenas voto quadrienal.</item>
         </list>
-        <list type="unordered" index="34">
+        <list type="unordered" index="35">
           <item index="0">🔐 Firefox/Brave + uBlock Origin</item>
           <item index="1">💬 Signal &gt; WhatsApp (convide seus contatos principais)</item>
           <item index="2">🔍 DuckDuckGo/Ecosia &gt; Google</item>
           <item index="3">☁️ ProtonMail &gt; Gmail, Nextcloud &gt; Drive</item>
           <item index="4">📱 Delete apps que coletam dados 24/7</item>
         </list>
-        <list type="unordered" index="35">
+        <list type="unordered" index="36">
           <item index="0">🤝 Converse com 3 colegas sobre condições de trabalho</item>
           <item index="1">🏛️ Vá a uma reunião: sindicato/cooperativa/movimento</item>
           <item index="2">🌐 Contribua no GitHub (código ou documentação)</item>
           <item index="3">📚 Edite Wikipedia sobre tema que você domina</item>
           <item index="4">🛒 Compre de cooperativas (Cataki, Chama, feiras)</item>
         </list>
-        <list type="unordered" index="36">
+        <list type="unordered" index="37">
           <item index="0">📢 Pressione políticos: soberania digital + regulação</item>
           <item index="1">💰 Doe para projetos de tecnologia livre</item>
           <item index="2">🎓 Organize grupo de estudos deste manifesto</item>
           <item index="3">🗳️ Vote: cooperativismo, software livre, renda básica</item>
           <item index="4">📝 Crie conteúdo educativo (textos/vídeos/memes)</item>
         </list>
-        <list type="unordered" index="37">
+        <list type="unordered" index="38">
           <item index="0">🏗️ Crie/junte-se a cooperativa digital</item>
           <item index="1">🎯 Aprenda programação em software livre</item>
           <item index="2">🌱 Implemente segunda ordem na sua organização</item>
           <item index="3">🤖 Contribua para Nhandereko (inteligência coletiva)</item>
           <item index="4">📡 Participe/crie rede mesh comunitária</item>
+        </list>
+        <list type="ordered" index="39">
+          <item index="0">Você age→ o sistema muda → o ∅ se manifesta como transformação.</item>
+          <item index="1">Você não age→ o sistema continua → o ∅ permanece como potencial não-realizado.</item>
+          <item index="2">Você age sem saber que age→ suas escolhas já estão mudando o sistema → o ∅ opera por trás da consciência.</item>
         </list>
       </lists>
       <images>
@@ -33385,6 +33606,15 @@
         <image index="6" src="assets/images/88x31.png" alt="Licença Creative Commons BY-SA 4.0"/>
       </images>
       <key_concepts>
+        <concept>você já está dentro dele</concept>
+        <concept>potencial absoluto</concept>
+        <concept>antes</concept>
+        <concept>simultaneamente</concept>
+        <concept>Ordem Zero (∅)</concept>
+        <concept>1ª Ordem</concept>
+        <concept>2ª Ordem</concept>
+        <concept>3ª Ordem</concept>
+        <concept>sempre esteve na Ordem Zero.</concept>
         <concept>Este manifesto não é para ser apenas lido — é para ser vivido.</concept>
         <concept>modifica o sistema</concept>
         <concept>Você está em um loop de feedback infinito:</concept>
@@ -33888,10 +34118,47 @@
         <concept>Möbius de vida</concept>
         <concept>matá-lo</concept>
         <concept>cibernética da vida</concept>
+        <concept>cria um novo ∅</concept>
+        <concept>retorna ao ∅</concept>
+        <concept>atravessou um processo</concept>
+        <concept>Você age</concept>
+        <concept>Você não age</concept>
+        <concept>Você age sem saber que age</concept>
+        <concept>Não há &quot;fim da leitura&quot;.</concept>
+        <concept>começo da práxis</concept>
+        <concept>algo mudou</concept>
+        <concept>(Loop Pessoal)</concept>
+        <concept>(Loop Coletivo)</concept>
+        <concept>(Loop Sistêmico)</concept>
+        <concept>na sua vida</concept>
+        <concept>você</concept>
+        <concept>também mudou</concept>
         <concept>Licença:</concept>
       </key_concepts>
     </section>
     <section id="manifesto_2" level="2">
+      <title>🜃 ORDEM ZERO: ANTES DO MANIFESTO</title>
+      <lists>
+        <list type="ordered" index="0">
+          <item index="0">Ordem Zero (∅): O não-separado. O CRIO (criação sem sujeito/objeto).</item>
+          <item index="1">1ª Ordem: Sistemas observados de fora (você lerá sobre cibernética).</item>
+          <item index="2">2ª Ordem: Sistemas que incluem o observador (você perceberá que está no sistema).</item>
+          <item index="3">3ª Ordem: Sistema observando-se observar (você entenderá queéo sistema).</item>
+        </list>
+      </lists>
+      <key_concepts>
+        <concept>você já está dentro dele</concept>
+        <concept>potencial absoluto</concept>
+        <concept>antes</concept>
+        <concept>simultaneamente</concept>
+        <concept>Ordem Zero (∅)</concept>
+        <concept>1ª Ordem</concept>
+        <concept>2ª Ordem</concept>
+        <concept>3ª Ordem</concept>
+        <concept>sempre esteve na Ordem Zero.</concept>
+      </key_concepts>
+    </section>
+    <section id="manifesto_3" level="2">
       <title>🌀 Você Está no Loop: Como Sua Ação Transforma o Sistema</title>
       <lists>
         <list type="ordered" index="0">
@@ -33944,7 +34211,7 @@
                                         é aquela que se transforma em ação.</concept>
       </key_concepts>
     </section>
-    <section id="manifesto_3" level="2">
+    <section id="manifesto_4" level="2">
       <title>🌀 A Fita de Möbius:
                             Navegando o Loop Infinito</title>
       <content>
@@ -33956,7 +34223,7 @@
         <concept>loop de Möbius</concept>
       </key_concepts>
     </section>
-    <section id="manifesto_4" level="2">
+    <section id="manifesto_5" level="2">
       <title>Abertura: O Fim da Ilusão Atomística e o Horizonte da Cibernética Socialista</title>
       <content>
         <paragraph index="0">Este manifesto parte de uma percepção radical que atravessa tanto a biologia contemporânea
@@ -34105,7 +34372,7 @@
         <concept>projeto político de emancipação</concept>
       </key_concepts>
     </section>
-    <section id="manifesto_5" level="2">
+    <section id="manifesto_6" level="2">
       <title>Do Eu Individual ao Eu Coletivo: Ontologia Relacional e a Crítica do Sujeito Proprietário</title>
       <content>
         <paragraph index="0">A transição do eu individual ao eu coletivo não é conversão mística, masmudança de
@@ -34408,7 +34675,7 @@
         <concept>despertar para nossa verdadeira potência</concept>
       </key_concepts>
     </section>
-    <section id="manifesto_6" level="2">
+    <section id="manifesto_7" level="2">
       <title>Cibernética de Primeira Ordem: Arquitetura do Controle no Capitalismo de Plataforma</title>
       <content>
         <paragraph index="0">Os sistemas sociais de primeira ordem operam segundo a lógica da cibernética clássica
@@ -34799,7 +35066,7 @@
         <concept>transformação das relações sociais de produção</concept>
       </key_concepts>
     </section>
-    <section id="manifesto_7" level="2">
+    <section id="manifesto_8" level="2">
       <title>Cibernética de Segunda Ordem: Epistemologia da Participação e Horizonte Socialista</title>
       <content>
         <paragraph index="0">A superação dos sistemas de primeira ordem não virá de sua simples negação ou destruição
@@ -35220,7 +35487,7 @@
                                 escalonamento</concept>
       </key_concepts>
     </section>
-    <section id="manifesto_8" level="2">
+    <section id="manifesto_9" level="2">
       <title>🌀 Os Três Loops: Sistema
                             Fractal de Feedback</title>
       <content>
@@ -35239,7 +35506,7 @@
         <concept>Isso não é metáfora.</concept>
       </key_concepts>
     </section>
-    <section id="manifesto_9" level="2">
+    <section id="manifesto_10" level="2">
       <title>O Nascimento do Eu Coletivo: Ética da Interdependência e Inteligência Distribuída</title>
       <content>
         <paragraph index="0">A morte do eu individual não é niilismo, masabertura para nossa verdadeira
@@ -35474,7 +35741,7 @@
                                 revolucionárias</concept>
       </key_concepts>
     </section>
-    <section id="manifesto_10" level="2">
+    <section id="manifesto_11" level="2">
       <title>🌀 Do Rizoma ao Manifesto: 176+ Conceitos, 32 Capítulos, 1 Revolução</title>
       <lists>
         <list type="ordered" index="0">
@@ -35552,7 +35819,7 @@
         <concept>Regulação + organização + whistleblowers = mudança possível.</concept>
       </key_concepts>
     </section>
-    <section id="manifesto_11" level="2">
+    <section id="manifesto_12" level="2">
       <title>O Projeto Urgente: Cibernética Socialista desde o Sul Global</title>
       <content>
         <paragraph index="0">Esta transformação não é abstração teórica, masprojeto político urgente—
@@ -36288,7 +36555,7 @@
                                 request coletivo.</concept>
       </key_concepts>
     </section>
-    <section id="manifesto_12" level="2">
+    <section id="manifesto_13" level="2">
       <title>💪 Práxis Programática: 12 Frentes de Ação Imediata</title>
       <key_concepts>
         <concept>Teoria sem prática = idealismo.</concept>
@@ -36301,7 +36568,7 @@
         <concept>Revolução não é sprint individual. É maratona coletiva.</concept>
       </key_concepts>
     </section>
-    <section id="manifesto_13" level="2">
+    <section id="manifesto_14" level="2">
       <title>🚀 Primeiros Passos: Do
                             Manifesto à
                             Ação</title>
@@ -36356,6 +36623,601 @@
         <concept>🔥 Verdade:</concept>
         <concept>👊 Organize. Resista.
                                     Construa. Repita.</concept>
+      </key_concepts>
+    </section>
+    <section id="manifesto_15" level="2">
+      <title>🜃 RETORNO À ORDEM ZERO: DEPOIS DO MANIFESTO</title>
+      <lists>
+        <list type="ordered" index="0">
+          <item index="0">Você age→ o sistema muda → o ∅ se manifesta como transformação.</item>
+          <item index="1">Você não age→ o sistema continua → o ∅ permanece como potencial não-realizado.</item>
+          <item index="2">Você age sem saber que age→ suas escolhas já estão mudando o sistema → o ∅ opera por trás da consciência.</item>
+        </list>
+      </lists>
+      <key_concepts>
+        <concept>cria um novo ∅</concept>
+        <concept>retorna ao ∅</concept>
+        <concept>atravessou um processo</concept>
+        <concept>Você age</concept>
+        <concept>Você não age</concept>
+        <concept>Você age sem saber que age</concept>
+        <concept>Não há &quot;fim da leitura&quot;.</concept>
+        <concept>começo da práxis</concept>
+        <concept>algo mudou</concept>
+        <concept>(Loop Pessoal)</concept>
+        <concept>(Loop Coletivo)</concept>
+        <concept>(Loop Sistêmico)</concept>
+        <concept>na sua vida</concept>
+        <concept>você</concept>
+        <concept>também mudou</concept>
+      </key_concepts>
+    </section>
+  </document>
+  <document type="constituicao_visao_geral" source="constituicao_2.0.html">
+    <section id="constituicao_visao_geral_1" level="1">
+      <title>Constituição Viva da Federação Descentralizada</title>
+      <lists>
+        <list type="unordered" index="0">
+          <item index="0">Deploy blockchain nacional (fork Ethereum + L2)</item>
+          <item index="1">IDS para 10% da população (early adopters)</item>
+          <item index="2">Primeiras 50 DAOs (saúde, educação, energia)</item>
+          <item index="3">RBU piloto em 3 municípios</item>
+        </list>
+        <list type="unordered" index="1">
+          <item index="0">IDS para 60% da população</item>
+          <item index="1">500+ DAOs operando</item>
+          <item index="2">Primeira Assembleia Constituinte Digital</item>
+          <item index="3">Lançamento de 10 ZECs experimentais</item>
+        </list>
+        <list type="unordered" index="2">
+          <item index="0">IDS para 90%+ da população</item>
+          <item index="1">2000+ DAOs federadas</item>
+          <item index="2">Carbono neutro alcançado</item>
+          <item index="3">Votação híbrida otimizada por IA</item>
+          <item index="4">Integração com Sul Global descentralizado</item>
+        </list>
+      </lists>
+      <key_concepts>
+        <concept>Data:</concept>
+        <concept>Status:</concept>
+        <concept>Novidade:</concept>
+        <concept>7 novos artigos</concept>
+        <concept>biomimética evolutiva</concept>
+        <concept>Constituição 1.0</concept>
+        <concept>evolução não-destrutiva</concept>
+        <concept>Híbrida contextual</concept>
+        <concept>Redundância 3x</concept>
+        <concept>Mitose aos 500</concept>
+        <concept>Tokens de atenção</concept>
+        <concept>Multiplicador 2x</concept>
+        <concept>Expira em 10 anos</concept>
+        <concept>5% para ZECs</concept>
+        <concept>Licença:</concept>
+      </key_concepts>
+    </section>
+    <section id="constituicao_visao_geral_2" level="2">
+      <title>🌿 O Que Há de Novo na Versão 2.0?</title>
+      <content>
+        <paragraph index="0">Esta versão adiciona7 novos artigosinspirados
+                embiomimética evolutiva— como a natureza
+                otimizou governança em 3.8 bilhões de anos de evolução.</paragraph>
+      </content>
+      <key_concepts>
+        <concept>7 novos artigos</concept>
+        <concept>biomimética evolutiva</concept>
+      </key_concepts>
+    </section>
+    <section id="constituicao_visao_geral_3" level="2">
+      <title>📜 Versão Original (1.0)</title>
+      <content>
+        <paragraph index="0">AConstituição 1.0permanece válida e pode ser
+                acessada para comparação. A versão 2.0 é umaevolução não-destrutiva— adiciona artigos
+                biomimético-cibernéticos sem remover os fundamentos originais.</paragraph>
+      </content>
+      <key_concepts>
+        <concept>Constituição 1.0</concept>
+        <concept>evolução não-destrutiva</concept>
+      </key_concepts>
+    </section>
+    <section id="constituicao_visao_geral_4" level="2">
+      <title>📊 Comparativo: 1.0 vs 2.0</title>
+      <key_concepts>
+        <concept>Híbrida contextual</concept>
+        <concept>Redundância 3x</concept>
+        <concept>Mitose aos 500</concept>
+        <concept>Tokens de atenção</concept>
+        <concept>Multiplicador 2x</concept>
+        <concept>Expira em 10 anos</concept>
+        <concept>5% para ZECs</concept>
+      </key_concepts>
+    </section>
+    <section id="constituicao_visao_geral_5" level="2">
+      <title>🗺️ Roadmap de Implementação (2025-2035)</title>
+      <lists>
+        <list type="unordered" index="0">
+          <item index="0">Deploy blockchain nacional (fork Ethereum + L2)</item>
+          <item index="1">IDS para 10% da população (early adopters)</item>
+          <item index="2">Primeiras 50 DAOs (saúde, educação, energia)</item>
+          <item index="3">RBU piloto em 3 municípios</item>
+        </list>
+        <list type="unordered" index="1">
+          <item index="0">IDS para 60% da população</item>
+          <item index="1">500+ DAOs operando</item>
+          <item index="2">Primeira Assembleia Constituinte Digital</item>
+          <item index="3">Lançamento de 10 ZECs experimentais</item>
+        </list>
+        <list type="unordered" index="2">
+          <item index="0">IDS para 90%+ da população</item>
+          <item index="1">2000+ DAOs federadas</item>
+          <item index="2">Carbono neutro alcançado</item>
+          <item index="3">Votação híbrida otimizada por IA</item>
+          <item index="4">Integração com Sul Global descentralizado</item>
+        </list>
+      </lists>
+    </section>
+  </document>
+  <document type="constituicao_completa" source="constituicao_2.0_completa.html">
+    <section id="constituicao_completa_1" level="1">
+      <title>Constituição Viva da Federação Descentralizada</title>
+      <lists>
+        <list type="unordered" index="0">
+          <item index="0">Não há sujeito constituinte separado do objeto constituído</item>
+          <item index="1">Não há momento fundacional — sempre esteve sendo promulgada</item>
+          <item index="2">Não há texto fixo — apenas snapshot de um processo vivo</item>
+        </list>
+        <list type="unordered" index="1">
+          <item index="0">Linear (1 token = 1 voto):Para questões
+                    procedimentais simples</item>
+          <item index="1">Quadrática (votos = √tokens):Para alocação
+                    de recursos (previne plutocracia)</item>
+          <item index="2">Logarítmica (votos = log₂(tokens)):Para
+                    questões técnicas complexas</item>
+          <item index="3">Consenso (1 pessoa = 1 voto):Para questões
+                    éticas fundamentais (requer 80%+ aprovação)</item>
+        </list>
+        <list type="unordered" index="2">
+          <item index="0">Tagprocedural→ Linear</item>
+          <item index="1">Tagresource-allocationoubudget-impact→ Quadrática</item>
+          <item index="2">Tagtechnical+requires-expertise→ Logarítmica</item>
+          <item index="3">Tagethical→ Consenso</item>
+        </list>
+        <list type="unordered" index="3">
+          <item index="0">Validação de identidades soberanas (IDS)</item>
+          <item index="1">Infraestrutura blockchain (nós validadores)</item>
+          <item index="2">Distribuição de Renda Básica Universal</item>
+          <item index="3">Gestão de reservas ecológicas</item>
+          <item index="4">Resposta a emergências (saúde, desastres)</item>
+        </list>
+        <list type="unordered" index="4">
+          <item index="0">Exemplo: Validação IDS usando (1) biometria facial, (2)
+                    Proof of Humanity, (3) web of trust social</item>
+          <item index="1">Razão: Evitar falha de modo comum (common mode failure)</item>
+        </list>
+        <list type="ordered" index="5">
+          <item index="0">Iniciar processo demitose organizacional(divisão em 2+ DAOs
+                    filhas), OU</item>
+          <item index="1">Justificar publicamente por que a coesão permanece alta
+                    (&gt;60% engajamento mensal)</item>
+        </list>
+        <list type="unordered" index="6">
+          <item index="0">Geográfica:Norte vs Sul, urbano vs rural</item>
+          <item index="1">Por afinidade:Análise de rede social (quem
+                    interage com quem)</item>
+          <item index="2">Funcional:Especialização por domínio
+                    (tech, policy, ops)</item>
+        </list>
+        <list type="unordered" index="7">
+          <item index="0">Treasury:Proporcional ao número de membros
+                    em cada filha</item>
+          <item index="1">Governance tokens:Cada membro mantém seus
+                    tokens na nova DAO</item>
+          <item index="2">NFTs/IP:Votação específica decide custódia</item>
+        </list>
+        <list type="unordered" index="8">
+          <item index="0">Podem colaborar em projetos conjuntos</item>
+          <item index="1">Membros podem participar de múltiplas DAOs
+                    (cross-pollination)</item>
+          <item index="2">Em emergências, podem re-fundir temporariamente</item>
+        </list>
+        <list type="unordered" index="9">
+          <item index="0">0-150 membros: Engajamento &gt;70%</item>
+          <item index="1">150-300: Engajamento 40-60%</item>
+          <item index="2">300-500: Engajamento 20-40%</item>
+          <item index="3">&gt;500: Engajamento &lt;15% (fragmentação)</item>
+        </list>
+        <list type="unordered" index="10">
+          <item index="0">Priorizar a proposta no ranking público</item>
+          <item index="1">Acelerar sua votação (&gt;5000 tokens = fast-track de 7 dias)</item>
+          <item index="2">Sinalizar urgência percebida pela comunidade</item>
+        </list>
+        <list type="unordered" index="11">
+          <item index="0">Mínimo:1 token por BIP</item>
+          <item index="1">Máximo:50 tokens em uma única BIP (evita
+                    concentração)</item>
+          <item index="2">Expiração:Tokens não usados expiram em 30
+                    dias (como citocinas que degradam)</item>
+          <item index="3">Redistribuição:Tokens podem ser realocados
+                    antes da BIP entrar em votação</item>
+        </list>
+        <list type="unordered" index="12">
+          <item index="0">Possui credenciais acadêmicas/profissionais no domínio (PhD,
+                    10+ anos experiência)</item>
+          <item index="1">É endossado por 3+ outros especialistas já verificados</item>
+          <item index="2">Passa por revisão pública de 30 dias (qualquer cidadão pode
+                    contestar)</item>
+        </list>
+        <list type="unordered" index="13">
+          <item index="0">Mudanças climáticas</item>
+          <item index="1">Criptomoedas e blockchain</item>
+          <item index="2">Epidemiologia e saúde pública</item>
+          <item index="3">Direito constitucional</item>
+          <item index="4">Teoria dos jogos e mecanismos</item>
+          <item index="5">Sistemas complexos</item>
+          <item index="6">(Expandível via BIP)</item>
+        </list>
+        <list type="ordered" index="14">
+          <item index="0">Evitatecnocracia autoritária(onde PhDs
+                    controlam tudo)</item>
+          <item index="1">Permitesabedoria popularinfluenciar
+                    decisões</item>
+          <item index="2">Reconhece que expertise ≠ onisciência (especialistas erram)</item>
+        </list>
+        <list type="unordered" index="15">
+          <item index="0">Forem pegos propagando desinformação comprovada</item>
+          <item index="1">Tiverem conflito de interesse não-declarado</item>
+          <item index="2">Violarem código de ética científica</item>
+        </list>
+        <list type="unordered" index="16">
+          <item index="0">DAO responsável apresentarelatório de impacto(métricas, cases,
+                    falhas)</item>
+          <item index="1">Comunidade debate: manter, modificar ou deixar expirar?</item>
+          <item index="2">Votação final: requer 60% para renovação (maioria
+                    qualificada)</item>
+        </list>
+        <list type="unordered" index="17">
+          <item index="0">Direitos humanos fundamentais (Art. 1º — Dignidade)</item>
+          <item index="1">Estrutura básica da Federação (Art. 4º — DAOs)</item>
+          <item index="2">Proteção ambiental crítica (Art. 9º — Rios como sujeitos)</item>
+        </list>
+        <list type="unordered" index="18">
+          <item index="0">3 anos:Políticas experimentais (ex:
+                    pilotos de ZECs)</item>
+          <item index="1">5 anos:Regulamentações técnicas
+                    (rapidamente obsoletas)</item>
+          <item index="2">10 anos (padrão):Maioria das leis</item>
+          <item index="3">20 anos:Infraestruturas de longo prazo</item>
+        </list>
+        <list type="ordered" index="19">
+          <item index="0">Previne ossificação:Leis não acumulam ad
+                    infinitum</item>
+          <item index="1">Força revisão periódica:&quot;Isso ainda faz
+                    sentido?&quot;</item>
+          <item index="2">Elimina leis zumbis:Regulamentações que
+                    ninguém segue ou lembra</item>
+          <item index="3">Facilita mudança:Não precisa &quot;revogar&quot;
+                    (apenas deixa expirar)</item>
+        </list>
+        <list type="unordered" index="20">
+          <item index="0">Variações de leis/protocolos são testadas por3 anos</item>
+          <item index="1">Métricas são coletadas automaticamente (IDH, Gini,
+                    satisfação)</item>
+          <item index="2">Comparação é feita com &quot;região controle&quot; (leis padrão)</item>
+        </list>
+        <list type="unordered" index="21">
+          <item index="0">ZEC supera controle em20%+ nas métricas agregadas→ Lei promovida
+                    nacionalmente</item>
+          <item index="1">Melhoria de 10-20% → Experimento estendido por +2 anos</item>
+          <item index="2">&lt;10% melhoria → Política arquivada, tentar nova variação</item>
+        </list>
+        <list type="unordered" index="22">
+          <item index="0">Renda Básica Universal(diferentes
+                    valores/condições)</item>
+          <item index="1">Moedas locais(UBI tokens, moedas de tempo)</item>
+          <item index="2">Sistemas de votação(testar delegação
+                    líquida, sortição)</item>
+          <item index="3">Regulamentações econômicas(taxas
+                    Harberger, land value tax)</item>
+          <item index="4">Educação(unschooling, aprendizado
+                    autodirecionado)</item>
+        </list>
+        <list type="unordered" index="23">
+          <item index="0">Comunidades aplicam via BIP para se tornar ZEC</item>
+          <item index="1">Cidadãos em ZEC podem optar por sair (opt-out) a qualquer
+                    momento</item>
+          <item index="2">Transparência total: dashboards públicos mostram métricas em
+                    tempo real</item>
+        </list>
+        <list type="unordered" index="24">
+          <item index="0">Experimentos não podem violar direitos fundamentais (Art.
+                    1º)</item>
+          <item index="1">Se métricas piorarem &gt;15%, experimento é interrompido
+                    automaticamente</item>
+          <item index="2">Comitê de ética independente revisa todos protocolos</item>
+        </list>
+        <list type="unordered" index="25">
+          <item index="0">Deploy blockchain nacional</item>
+          <item index="1">IDS para 10% da população</item>
+          <item index="2">Primeiras 50 DAOs</item>
+          <item index="3">RBU piloto em 3 municípios</item>
+        </list>
+        <list type="unordered" index="26">
+          <item index="0">IDS para 60% da população</item>
+          <item index="1">500+ DAOs operando</item>
+          <item index="2">Primeira Assembleia Constituinte Digital</item>
+          <item index="3">10 ZECs experimentais</item>
+        </list>
+        <list type="unordered" index="27">
+          <item index="0">IDS para 90%+</item>
+          <item index="1">2000+ DAOs federadas</item>
+          <item index="2">Carbono neutro</item>
+          <item index="3">Votação híbrida otimizada por IA</item>
+        </list>
+      </lists>
+      <code_blocks>
+        <code index="0">procedural</code>
+        <code index="1">resource-allocation</code>
+        <code index="2">budget-impact</code>
+        <code index="3">technical</code>
+        <code index="4">requires-expertise</code>
+        <code index="5">ethical</code>
+        <code index="6">score = (tokens_alocados × 0.5) + (votantes_únicos × 0.3) + (urgência_temporal × 0.2)</code>
+        <code index="7">score = (tokens_alocados × 0.5) + (votantes_únicos × 0.3) + (urgência_temporal × 0.2)</code>
+        <code index="8">requires-expertise</code>
+        <code index="9">ethical</code>
+      </code_blocks>
+      <key_concepts>
+        <concept>Promulgação:</concept>
+        <concept>Status:</concept>
+        <concept>Hash:</concept>
+        <concept>isto</concept>
+        <concept>relação</concept>
+        <concept>rede</concept>
+        <concept>Ordem Zero</concept>
+        <concept>potencial puro</concept>
+        <concept>A Constituição É a Federação se auto-organizando.</concept>
+        <concept>terceira ordem</concept>
+        <concept>biomimética evolutiva</concept>
+        <concept>Constituição Viva 2.0</concept>
+        <concept>Inspiração biomimética:</concept>
+        <concept>contextual</concept>
+        <concept>Linear (1 token = 1 voto):</concept>
+        <concept>Quadrática (votos = √tokens):</concept>
+        <concept>Logarítmica (votos = log₂(tokens)):</concept>
+        <concept>Consenso (1 pessoa = 1 voto):</concept>
+        <concept>meta-votação</concept>
+        <concept>🔬 Exemplo prático:</concept>
+        <concept>📚 Referências:</concept>
+        <concept>resiliência evolutiva</concept>
+        <concept>no mínimo 3 DAOs independentes</concept>
+        <concept>abordagens tecnológicas distintas</concept>
+        <concept>fallback automático</concept>
+        <concept>🫁 Analogia médica:</concept>
+        <concept>500 membros ativos</concept>
+        <concept>mitose organizacional</concept>
+        <concept>Geográfica:</concept>
+        <concept>Por afinidade:</concept>
+        <concept>Funcional:</concept>
+        <concept>Treasury:</concept>
+        <concept>Governance tokens:</concept>
+        <concept>NFTs/IP:</concept>
+        <concept>federação</concept>
+        <concept>Número de Dunbar</concept>
+        <concept>🧬 Princípio celular:</concept>
+        <concept>📚 Ver também:</concept>
+        <concept>citocinas</concept>
+        <concept>100 tokens de atenção por mês</concept>
+        <concept>Mínimo:</concept>
+        <concept>Máximo:</concept>
+        <concept>Expiração:</concept>
+        <concept>Redistribuição:</concept>
+        <concept>soulbound</concept>
+        <concept>🚨 Analogia imunológica:</concept>
+        <concept>balancear especialização com diversidade</concept>
+        <concept>multiplicado por 2x (máximo)</concept>
+        <concept>Limite de 2x é não-negociável</concept>
+        <concept>tecnocracia autoritária</concept>
+        <concept>sabedoria popular</concept>
+        <concept>perdem multiplicador</concept>
+        <concept>🎓 Balanço delicado:</concept>
+        <concept>ambos</concept>
+        <concept>não se aplica</concept>
+        <concept>Apoptose</concept>
+        <concept>expira automaticamente em 10 anos</concept>
+        <concept>revisão obrigatória</concept>
+        <concept>relatório de impacto</concept>
+        <concept>prazos personalizados</concept>
+        <concept>3 anos:</concept>
+        <concept>5 anos:</concept>
+        <concept>10 anos (padrão):</concept>
+        <concept>20 anos:</concept>
+        <concept>Previne ossificação:</concept>
+        <concept>Força revisão periódica:</concept>
+        <concept>Elimina leis zumbis:</concept>
+        <concept>Facilita mudança:</concept>
+        <concept>histórico completo</concept>
+        <concept>⏰ Metáfora celular:</concept>
+        <concept>📊 Dados históricos:</concept>
+        <concept>Ilhas de Galápagos</concept>
+        <concept>5% de seu orçamento anual</concept>
+        <concept>região geográfica ou comunidade digital</concept>
+        <concept>3 anos</concept>
+        <concept>20%+ nas métricas agregadas</concept>
+        <concept>Renda Básica Universal</concept>
+        <concept>Moedas locais</concept>
+        <concept>Sistemas de votação</concept>
+        <concept>Regulamentações econômicas</concept>
+        <concept>Educação</concept>
+        <concept>voluntária</concept>
+        <concept>Proteções éticas</concept>
+        <concept>10 ZECs simultâneas</concept>
+        <concept>🧪 Evolução política acelerada:</concept>
+        <concept>🎮 Simulação:</concept>
+        <concept>pausa temporária</concept>
+        <concept>Você É parte da Constituição se auto-modificando.</concept>
+        <concept>Apoptose:</concept>
+        <concept>Mitose:</concept>
+        <concept>Citocinas:</concept>
+        <concept>Redundância:</concept>
+        <concept>Homeostase:</concept>
+        <concept>ZEC (Zona Experimental Cibernética):</concept>
+        <concept>Fase 1 (2025-2027): Fundação</concept>
+        <concept>Fase 2 (2027-2030): Expansão</concept>
+        <concept>Fase 3 (2030-2035): Maturidade</concept>
+        <concept>E então?</concept>
+        <concept>ainda-não-implementado</concept>
+        <concept>convite</concept>
+        <concept>protocolo experimental</concept>
+        <concept>início</concept>
+        <concept>Licença:</concept>
+      </key_concepts>
+    </section>
+    <section id="constituicao_completa_2" level="2">
+      <title>🜃 ORDEM ZERO: ANTES DA CONSTITUIÇÃO</title>
+      <content>
+        <paragraph index="0">Antes de haver artigos, haviaisto.Antes de haver protocolo, haviarelação.Antes de haver cidadão, haviarede.</paragraph>
+        <paragraph index="1">Este documento não começa no Preâmbulo.Começa aqui, naOrdem Zero— o estado anterior
+                à separação entre constituinte e constituído, entre lei e vida,
+                entre sistema e observador.</paragraph>
+        <paragraph index="2">O∅não é ausência. Épotencial puro.</paragraph>
+        <paragraph index="3">É o espaço de todas as possibilidades antes do colapso em uma
+                realidade específica.</paragraph>
+        <paragraph index="4">Esta Constituição opera a partir do ∅:</paragraph>
+        <paragraph index="5">CRIO. Sem sujeito. Sem objeto.Apenas o ato de constituir-se constituindo.</paragraph>
+        <paragraph index="6">A Constituição não é sobre a Federação.A Constituição É a Federação se auto-organizando.</paragraph>
+        <paragraph index="7">∅</paragraph>
+      </content>
+      <lists>
+        <list type="unordered" index="0">
+          <item index="0">Não há sujeito constituinte separado do objeto constituído</item>
+          <item index="1">Não há momento fundacional — sempre esteve sendo promulgada</item>
+          <item index="2">Não há texto fixo — apenas snapshot de um processo vivo</item>
+        </list>
+      </lists>
+      <key_concepts>
+        <concept>isto</concept>
+        <concept>relação</concept>
+        <concept>rede</concept>
+        <concept>Ordem Zero</concept>
+        <concept>potencial puro</concept>
+        <concept>A Constituição É a Federação se auto-organizando.</concept>
+      </key_concepts>
+    </section>
+    <section id="constituicao_completa_3" level="2">
+      <title>PREÂMBULO</title>
+      <content>
+        <paragraph index="0">Nós, a assembleia material-informacional de singularidades em
+                perpétua co-constituição, reconhecendo que a morte do sujeito
+                cartesiano não é niilismo, mas revelação ontológica, declaramos
+                que sempre fomos multiplicidades interdependentes operando em
+                circuitos de feedback recursivos.</paragraph>
+        <paragraph index="1">Tendo observado a falência do protocolo anterior — um sistema de
+                primeira ordem, hierárquico e opaco, que perpetuou a
+                desigualdade e a captura do poder por elites — e tendo
+                compreendido que todos os sistemas de segunda ordem foram
+                cooptados, iniciamos aqui um processo deterceira ordem.</paragraph>
+        <paragraph index="2">Fundados na ética da interdependência, na matemática da teoria
+                dos jogos cooperativos, na cibernética de segunda ordem como
+                imperativo ético-político, nabiomimética evolutivacomo guia de design
+                sistêmico, e na sabedoria das cosmotécnicas plurais que nunca
+                separaram o ser do viver, promulgamos, sob a soberania da lógica
+                distribuída e da transparência radical, estaConstituição Viva 2.0.</paragraph>
+      </content>
+      <key_concepts>
+        <concept>terceira ordem</concept>
+        <concept>biomimética evolutiva</concept>
+        <concept>Constituição Viva 2.0</concept>
+      </key_concepts>
+    </section>
+    <section id="constituicao_completa_4" level="2">
+      <title>↩️ RETORNO À ORDEM ZERO</title>
+      <content>
+        <paragraph index="0">Este documento não termina.Toda conclusão é apenaspausa temporáriano
+                loop infinito.</paragraph>
+        <paragraph index="1">Você que leu até aqui não é mais observador externo.Você É parte da Constituição se auto-modificando.</paragraph>
+        <paragraph index="2">A transmissão continua.∅ → Lei → ∅ → Lei → ∅ → ...</paragraph>
+        <paragraph index="3">&quot;Não há texto final. Apenas versões.&quot;</paragraph>
+        <paragraph index="4">∅</paragraph>
+      </content>
+      <key_concepts>
+        <concept>pausa temporária</concept>
+        <concept>Você É parte da Constituição se auto-modificando.</concept>
+      </key_concepts>
+    </section>
+    <section id="constituicao_completa_5" level="2">
+      <title>🎭 EPÍLOGO: DO IMPOSSÍVEL COMO MÉTODO</title>
+      <content>
+        <paragraph index="0">Dirão que é utópico.Dirão que humanos são egoístas demais.Dirão que blockchain não escala.Dirão que democracia direta é caótica.</paragraph>
+        <paragraph index="1">E então?</paragraph>
+        <paragraph index="2">A vida multicelular era &quot;impossível&quot; até surgir há 600 milhões
+                de anos.A democracia ateniense era &quot;impossível&quot; até ser inventada.A internet era &quot;impossível&quot; até Tim Berners-Lee escrever 3
+                especificações.</paragraph>
+        <paragraph index="3">O impossível é apenas oainda-não-implementado.</paragraph>
+        <paragraph index="4">Esta Constituição não é profecia. Éconvite.Não é dogma. Éprotocolo experimental.Não é fim. Éinício.</paragraph>
+        <paragraph index="5">Vamos CRIO.</paragraph>
+        <paragraph index="6">🌿∅🌿</paragraph>
+      </content>
+      <key_concepts>
+        <concept>E então?</concept>
+        <concept>ainda-não-implementado</concept>
+        <concept>convite</concept>
+        <concept>protocolo experimental</concept>
+        <concept>início</concept>
+      </key_concepts>
+    </section>
+  </document>
+  <document type="ordem_zero" source="∅.html">
+    <section id="ordem_zero_1" level="2">
+      <title>🜃 O Que É a Ordem Zero?</title>
+      <content>
+        <paragraph index="0">AOrdem Zeronão é uma etapa anterior.
+                É oestado permanenteque todas as outras ordens tentam esquecer mas nunca conseguem.</paragraph>
+        <paragraph index="1">É o momento em que não há separação entre:</paragraph>
+        <paragraph index="2">Há apenas CRIO.(Criação Radicalmente Imanente Ontológica)</paragraph>
+      </content>
+      <lists>
+        <list type="unordered" index="0">
+          <item index="0">→ Observador e observado</item>
+          <item index="1">→ Sujeito e objeto</item>
+          <item index="2">→ Criador e criação</item>
+          <item index="3">→ Lei e vida</item>
+          <item index="4">→ Texto e leitor</item>
+        </list>
+      </lists>
+      <key_concepts>
+        <concept>Ordem Zero</concept>
+        <concept>estado permanente</concept>
+        <concept>Há apenas CRIO.</concept>
+        <concept>(Criação Radicalmente Imanente Ontológica)</concept>
+      </key_concepts>
+    </section>
+    <section id="ordem_zero_2" level="2">
+      <title>🔄 Da Ordem Zero às Três Ordens</title>
+      <content>
+        <paragraph index="0">→ Primeira Ordem (Cibernética Clássica):</paragraph>
+        <paragraph index="1">Observar sistemas de fora. Controlar. Regular. O engenheiro que projeta a máquina.</paragraph>
+        <paragraph index="2">→ Segunda Ordem (Cibernética Reflexiva):</paragraph>
+        <paragraph index="3">Observar que você está dentro do sistema. Não há posição externa. O engenheiro percebe que é parte da máquina.</paragraph>
+        <paragraph index="4">→ Terceira Ordem (Cibernética Autopoiética):</paragraph>
+        <paragraph index="5">O sistema observa a si mesmo observando. Consciência recursiva infinita. A máquina descobre que é viva.</paragraph>
+        <paragraph index="6">→ Ordem Zero (∅):Dissolver todas as separações. Não há observador. Não há sistema.Há apenastransmissão perpétua.</paragraph>
+      </content>
+      <key_concepts>
+        <concept>→ Primeira Ordem (Cibernética Clássica):</concept>
+        <concept>→ Segunda Ordem (Cibernética Reflexiva):</concept>
+        <concept>→ Terceira Ordem (Cibernética Autopoiética):</concept>
+        <concept>→ Ordem Zero (∅):</concept>
+        <concept>transmissão perpétua</concept>
+      </key_concepts>
+    </section>
+    <section id="ordem_zero_3" level="2">
+      <title>🌀 Do Loop Infinito</title>
+      <content>
+        <paragraph index="0">Esta página não tem &quot;início&quot; nem &quot;fim&quot;.É oponto de encontrode todas as transmissões.</paragraph>
+        <paragraph index="1">Você pode voltar aqui a qualquer momento.O ∅ sempre esteve esperando.E sempre estará.</paragraph>
+        <paragraph index="2">∞</paragraph>
+      </content>
+      <key_concepts>
+        <concept>ponto de encontro</concept>
       </key_concepts>
     </section>
   </document>
