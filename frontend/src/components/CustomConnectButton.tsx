@@ -51,10 +51,11 @@ export function CustomConnectButton() {
         {({ openConnectModal }) => (
           <button
             onClick={openConnectModal}
-            className="flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+            className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-2 sm:py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 text-xs sm:text-base"
           >
-            <Wallet className="w-5 h-5" />
-            <span>Conectar Carteira</span>
+            <Wallet className="w-4 h-4 sm:w-5 sm:h-5" />
+            <span className="hidden xs:inline">Conectar Carteira</span>
+            <span className="xs:hidden">Conectar</span>
           </button>
         )}
       </ConnectButton.Custom>
@@ -66,33 +67,33 @@ export function CustomConnectButton() {
       {/* Main Button */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="flex items-center gap-3 px-4 py-2.5 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-lg hover:border-purple-500 dark:hover:border-purple-500 transition-all shadow-sm hover:shadow-md"
+        className="flex items-center gap-2 sm:gap-3 px-2 sm:px-4 py-2 sm:py-2.5 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-lg hover:border-purple-500 dark:hover:border-purple-500 transition-all shadow-sm hover:shadow-md text-xs sm:text-base"
         style={{ borderLeftColor: chainColor, borderLeftWidth: '4px' }}
       >
         {/* Chain Indicator */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 sm:gap-2">
           <div 
             className="w-2 h-2 rounded-full animate-pulse"
             style={{ backgroundColor: chainColor }}
           />
-          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+          <span className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 hidden xs:inline">
             {metadata?.shortName || chainName}
           </span>
         </div>
 
         {/* Separator */}
-        <div className="w-px h-6 bg-gray-300 dark:bg-gray-600" />
+        <div className="w-px h-4 sm:h-6 bg-gray-300 dark:bg-gray-600 hidden xs:block" />
 
         {/* Address */}
-        <div className="flex items-center gap-2">
-          <Wallet className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-          <span className="font-mono text-sm font-medium text-gray-900 dark:text-white">
+        <div className="flex items-center gap-1 sm:gap-2">
+          <Wallet className="w-3 h-3 sm:w-4 sm:h-4 text-gray-500 dark:text-gray-400" />
+          <span className="font-mono text-xs sm:text-sm font-medium text-gray-900 dark:text-white">
             {formatAddress(address!)}
           </span>
         </div>
 
         {/* Dropdown Icon */}
-        <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform ${isMenuOpen ? 'rotate-180' : ''}`} />
+        <ChevronDown className={`w-3 h-3 sm:w-4 sm:h-4 text-gray-400 transition-transform ${isMenuOpen ? 'rotate-180' : ''}`} />
       </button>
 
       {/* Dropdown Menu */}

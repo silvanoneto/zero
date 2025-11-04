@@ -75,7 +75,12 @@ const productionChains = [
 const chains = isDevelopment ? developmentChains : productionChains;
 
 // Configuração expandida de carteiras
-const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || 'YOUR_PROJECT_ID';
+const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || 'e4f3b0d8c3a2b1d9e6f5c4a3b2d1e0f9';
+
+// Aviso se o projectId padrão estiver sendo usado
+if (projectId === 'e4f3b0d8c3a2b1d9e6f5c4a3b2d1e0f9') {
+  console.warn('⚠️  Using default WalletConnect Project ID. Get your own at https://cloud.walletconnect.com');
+}
 
 const connectors = connectorsForWallets(
   [
@@ -83,10 +88,10 @@ const connectors = connectorsForWallets(
       groupName: 'Populares',
       wallets: [
         metaMaskWallet,
-        rainbowWallet,
-        coinbaseWallet,
         walletConnectWallet,
+        coinbaseWallet,
         trustWallet,
+        rainbowWallet,
         rabbyWallet,
         zerionWallet,
       ],
@@ -148,7 +153,20 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
-        <RainbowKitProvider>{children}</RainbowKitProvider>
+        <RainbowKitProvider 
+          modalSize="compact"
+          showRecentTransactions={true}
+          appInfo={{
+            appName: 'Revolução Cibernética',
+            disclaimer: () => (
+              <div className="text-xs text-gray-600 dark:text-gray-400 p-4">
+                Conectando-se à governança descentralizada.
+              </div>
+            ),
+          }}
+        >
+          {children}
+        </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
   );
