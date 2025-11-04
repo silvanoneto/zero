@@ -19,27 +19,25 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-blue-50/30 dark:from-gray-950 dark:via-gray-900 dark:to-blue-950/20">
       {/* Header */}
-      <header className="border-b border-gray-200/50 dark:border-gray-800/50 glass-effect sticky top-0 z-50 shadow-sm">
-        <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4">
-          <div className="flex items-center justify-between animate-fadeIn">
-            <div className="flex items-center space-x-2 sm:space-x-3">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-600 via-green-600 to-red-600 rounded-xl flex items-center justify-center shadow-lg transform hover:scale-105 transition-transform duration-300">
-                <Vote className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
+      <header className="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-gray-900/80 border-b border-gray-200/50 dark:border-gray-800/50 shadow-sm supports-[backdrop-filter]:bg-white/60 supports-[backdrop-filter]:dark:bg-gray-900/60">
+        <div className="container mx-auto px-3 sm:px-4 lg:px-6 py-3 sm:py-4">
+          <div className="flex items-center justify-between gap-2 sm:gap-4">
+            <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-600 via-green-600 to-red-600 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex-shrink-0">
+                <Vote className="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 text-white" />
               </div>
-              <div className="min-w-0">
-                <h1 className="text-base sm:text-xl md:text-2xl font-bold gradient-rgb truncate">
+              <div className="min-w-0 flex-1">
+                <h1 className="text-sm sm:text-base md:text-xl lg:text-2xl font-bold gradient-rgb truncate leading-tight">
                   Revolução Cibernética
                 </h1>
-                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 font-medium hidden sm:block">
+                <p className="text-[10px] sm:text-xs md:text-sm text-gray-600 dark:text-gray-400 font-medium hidden sm:block truncate">
                   Governança Descentralizada Multi-Chain
                 </p>
               </div>
             </div>
-            <div className="flex items-center space-x-2 sm:space-x-3">
+            <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 flex-shrink-0">
               <ThemeToggle />
-              <div className="transform hover:scale-105 transition-transform duration-200">
-                <CustomConnectButton />
-              </div>
+              <CustomConnectButton />
             </div>
           </div>
         </div>

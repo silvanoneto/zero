@@ -247,6 +247,34 @@ code, pre {
   .container {
     max-width: 100%;
   }
+  
+  /* Ensure header blur works on mobile */
+  header {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+}
+
+/* Ensure backdrop-filter support for all browsers */
+@supports (backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px)) {
+  header {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+  }
+  
+  .dark header {
+    background-color: rgba(17, 24, 39, 0.8) !important;
+  }
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not ((backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px))) {
+  header {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+  }
+  
+  .dark header {
+    background-color: rgba(17, 24, 39, 0.95) !important;
+  }
 }
 
 /* Prevent horizontal scroll on mobile */
