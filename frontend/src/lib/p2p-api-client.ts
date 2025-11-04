@@ -53,9 +53,12 @@ export class P2PAPIClient {
   private statsInterval: NodeJS.Timeout | null = null
 
   constructor(apiUrl?: string) {
-    // Usa caminho relativo para aproveitar o proxy do Next.js (next.config.mjs)
-    // Em desenvolvimento: /api/p2p/* → http://localhost:8080/api/p2p/*
-    this.apiUrl = apiUrl || ''
+    // Usa URL completa do gateway como fallback se proxy não funcionar
+    // Em desenvolvimento: http://localhost:8080 direto
+    // Em produção: usar proxy reverso via Nginx/Caddy
+    this.apiUrl = apiUrl || (typeof window !== 'undefined' && window.location.hostname === 'localhost' 
+      ? 'http://localhost:8080' 
+      : '')
   }
 
   /**

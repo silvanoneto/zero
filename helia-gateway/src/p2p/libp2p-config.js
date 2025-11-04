@@ -1,5 +1,5 @@
 /**
- * @fileoverview Configuração libp2p para rede P2P da Constituição 2.0
+ * @fileoverview Configuração libp2p para rede P2P da Cybersyn 2.0
  * @module p2p/libp2p-config
  * 
  * Este módulo configura o stack completo de networking P2P:
@@ -23,7 +23,7 @@ import { identify } from '@libp2p/identify'
 import { ping } from '@libp2p/ping'
 
 /**
- * Bootstrap nodes da rede Constituição 2.0
+ * Bootstrap nodes da rede Cybersyn 2.0
  * Estes são nós sempre-online que ajudam novos peers a descobrir a rede
  * 
  * Em produção, estes seriam múltiplos VPS geograficamente distribuídos

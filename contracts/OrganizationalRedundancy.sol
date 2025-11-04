@@ -7,7 +7,7 @@ import "./interfaces/ISovereignCurrencyFunding.sol";
 
 /**
  * @title OrganizationalRedundancy
- * @notice Implementa Artigo 4º-B da Constituição 2.0 - Redundância Organizacional Obrigatória
+ * @notice Implementa Artigo 4º-B da Cybersyn 2.0 - Redundância Organizacional Obrigatória
  * @dev Sistema biomimético inspirado em órgãos redundantes (Princípio dos Dois Rins)
  * 
  * IMPORTANTE: Opera com MOEDA SOBERANA (SOB), não ETH

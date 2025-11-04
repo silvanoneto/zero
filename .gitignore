@@ -62,3 +62,10 @@ __pycache__/
 *.pyd
 .pytest_cache/
 .coverage
+
+# Next.js build cache
+frontend/.next/cache/
+frontend/.next/standalone/
+frontend/.next/trace
+frontend/.next/trace-build
+frontend/.next/turbopack/

@@ -467,7 +467,7 @@ R: Zero-knowledge proofs. Prova que você é humano único sem revelar quem é.
 2. **Proof of Participation** — ETHDenver 2023
 3. **Harberger Taxes** — Radical Markets (Weyl & Posner)
 4. **Decay Functions in Economics** — Silvio Gesell (Freigeld)
-5. **Biomimetic Governance** — Constituição 2.0, Art. 1º-3º
+5. **Biomimetic Governance** — Cybersyn 2.0, Art. 1º-3º
 6. **Zero-Knowledge Identity** — zk-SNARK research
 
 ---

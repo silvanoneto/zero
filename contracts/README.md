@@ -1,4 +1,4 @@
-# 🏛️ Smart Contracts - Constituição 2.0
+# 🏛️ Smart Contracts - Cybersyn 2.0
 
 Sistema de Votação Híbrida Biomimético-Cibernético implementado em Solidity.
 

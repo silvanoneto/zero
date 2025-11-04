@@ -1,0 +1,53 @@
+# Docker Compose - Logging Configuration
+# Adicione esta seção ao serviço que deseja configurar logging
+
+# Exemplo de uso no docker-compose.yml:
+# services:
+#   frontend:
+#     logging:
+#       driver: "json-file"
+#       options:
+#         max-size: "10m"
+#         max-file: "3"
+
+version: '3.9'
+
+# Configuração padrão de logging para todos os serviços
+x-logging: &default-logging
+  driver: "json-file"
+  options:
+    max-size: "10m"
+    max-file: "3"
+    compress: "true"
+    labels: "service,environment"
+
+# Para serviços com mais logs
+x-logging-verbose: &verbose-logging
+  driver: "json-file"
+  options:
+    max-size: "20m"
+    max-file: "5"
+    compress: "true"
+    labels: "service,environment"
+
+# Para produção com logging mínimo
+x-logging-minimal: &minimal-logging
+  driver: "json-file"
+  options:
+    max-size: "5m"
+    max-file: "2"
+    compress: "true"
+    labels: "service,environment"
+
+# Exemplo de configuração para usar com Loki/Grafana (futuro)
+x-logging-loki: &loki-logging
+  driver: "loki"
+  options:
+    loki-url: "http://localhost:3100/loki/api/v1/push"
+    loki-external-labels: "job=constituicao,environment=dev"
+    loki-pipeline-stages: |
+      - json:
+          expressions:
+            output: log
+            stream: stream
+            timestamp: time

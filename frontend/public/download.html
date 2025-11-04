@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download - A Revolução Cibernética</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Baixe A Revolução Cibernética em formato EPUB. Livro completo com teoria, manifesto e 58 imagens.">
+    <meta name="author" content="O Besta Fera">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Download - A Revolução Cibernética">
+    <meta property="og:description" content="Baixe o livro completo em formato EPUB (119 MB)">
+    <meta property="og:image" content="https://obestafera.com/assets/images/01_capa_revolucao_cibernetica.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .download-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(236, 72, 153, 0.05) 50%, rgba(16, 185, 129, 0.05) 100%);
+        }
+
+        .download-card {
+            max-width: 600px;
+            width: 100%;
+            background: var(--card);
+            border: none;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .download-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .download-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .download-subtitle {
+            font-size: 1.1rem;
+            color: var(--muted-foreground);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .download-button {
+            background: linear-gradient(90deg, rgba(139, 92, 246, 0.4), rgba(236, 72, 153, 0.4));
+            backdrop-filter: blur(12px) saturate(180%);
+            -webkit-backdrop-filter: blur(12px) saturate(180%);
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 8px 32px 0 rgba(139, 92, 246, 0.3);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .download-button:hover {
+            transform: translateY(-4px);
+            background: linear-gradient(90deg, rgba(139, 92, 246, 0.6), rgba(236, 72, 153, 0.6));
+            box-shadow: 0 12px 40px 0 rgba(139, 92, 246, 0.5);
+        }
+
+        .download-button:active {
+            transform: translateY(-2px);
+        }
+
+        .download-info {
+            background: rgba(139, 92, 246, 0.1);
+            border: none;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            text-align: left;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .info-value {
+            color: var(--foreground);
+        }
+
+        .back-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .back-link:hover {
+            opacity: 0.8;
+            gap: 0.75rem;
+        }
+
+        .features-list {
+            text-align: left;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(16, 185, 129, 0.1);
+            border: none;
+            border-radius: 12px;
+        }
+
+        .features-list h3 {
+            color: #10b981;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .features-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 640px) {
+            .download-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .download-title {
+                font-size: 1.5rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Captcha Modal */
+        .captcha-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .captcha-overlay.active {
+            display: flex;
+        }
+
+        .captcha-modal {
+            background: var(--card);
+            border: none;
+            border-radius: 16px;
+            padding: 2rem;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+            animation: scaleIn 0.3s ease;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .captcha-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: var(--foreground);
+        }
+
+        .captcha-question {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(139, 92, 246, 0.1);
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            color: #8b5cf6;
+        }
+
+        .captcha-canvas-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            background: var(--background);
+            border: none;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .captcha-canvas {
+            border-radius: 4px;
+            cursor: crosshair;
+        }
+
+        .captcha-instruction {
+            text-align: center;
+            color: var(--muted-foreground);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            transition: opacity 0.2s ease;
+        }
+
+        .captcha-refresh {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .captcha-refresh-btn {
+            background: var(--muted);
+            color: var(--foreground);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .captcha-refresh-btn:hover {
+            background: var(--border);
+        }
+
+        .captcha-input {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            background: var(--background);
+            color: var(--foreground);
+            text-align: center;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            display: none;
+        }
+
+        .captcha-input:focus {
+            outline: none;
+            border-color: #8b5cf6;
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+        }
+
+        .captcha-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .captcha-btn {
+            flex: 1;
+            padding: 0.875rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .captcha-btn-submit {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+        }
+
+        .captcha-btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+        }
+
+        .captcha-btn-cancel {
+            background: var(--muted);
+            color: var(--muted-foreground);
+        }
+
+        .captcha-btn-cancel:hover {
+            background: var(--border);
+        }
+
+        .captcha-error {
+            color: #ef4444;
+            text-align: center;
+            margin-top: 0.5rem;
+            font-weight: 500;
+            display: none;
+        }
+
+        .captcha-error.active {
+            display: block;
+            animation: shake 0.4s ease;
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-10px);
+            }
+
+            75% {
+                transform: translateX(10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="download-container">
+        <div class="download-card">
+            <div class="download-icon">📚</div>
+
+            <h1 class="download-title">A Revolução Cibernética</h1>
+            <p class="download-subtitle" style="text-align: center;">
+                Baixe o livro completo em formato EPUB para ler offline em qualquer dispositivo
+            </p>
+
+            <button class="download-button" onclick="downloadEPUB()">
+                <span>▽</span>
+                <span>Baixar EPUB</span>
+            </button>
+
+            <div class="download-info">
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">📦 Tamanho:</span>
+                        <span class="info-value">119 MB</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">🖼️ Imagens:</span>
+                        <span class="info-value">58 incluídas</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">📖 Capítulos:</span>
+                        <span class="info-value">Teoria + Manifesto</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">📱 Formato:</span>
+                        <span class="info-value">EPUB 3.0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-list">
+                <h3>✨ O que está incluído:</h3>
+                <ul>
+                    <li>Ensaio teórico completo (31 capítulos)</li>
+                    <li>Manifesto político: A Morte do Eu Individual</li>
+                    <li>58 imagens ilustrativas em alta qualidade</li>
+                    <li>Sumário navegável e índice completo</li>
+                    <li>Glossário, biografias e cronologia</li>
+                    <li>Compatível com Kindle, Apple Books, Calibre</li>
+                    <li>Licença Creative Commons BY-SA 4.0</li>
+                </ul>
+            </div>
+
+            <a href="index.html" class="back-link">
+                <span>←</span>
+                <span>Voltar para o site</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Captcha Modal -->
+    <div class="captcha-overlay" id="captchaOverlay">
+        <div class="captcha-modal">
+            <h2 class="captcha-title">🤖 Verificação Humana</h2>
+            <p class="captcha-instruction">
+                Clique nos <strong>círculos roxos</strong> em ordem crescente de tamanho.<br>
+                (do menor para o maior)
+            </p>
+
+            <div class="captcha-canvas-container">
+                <canvas id="captchaCanvas" class="captcha-canvas" width="350" height="250"></canvas>
+            </div>
+
+            <div class="captcha-refresh">
+                <button class="captcha-refresh-btn" onclick="regenerateCaptcha()">
+                    🔄 Gerar novo desafio
+                </button>
+            </div>
+
+            <input type="number" class="captcha-input" id="captchaInput" placeholder="Digite a resposta">
+            <div class="captcha-error" id="captchaError">❌ Ordem incorreta. Tente novamente!</div>
+            <div class="captcha-buttons">
+                <button class="captcha-btn captcha-btn-cancel" onclick="closeCaptcha()">Cancelar</button>
+                <button class="captcha-btn captcha-btn-submit" onclick="verifyCaptcha()" style="display: none;"
+                    id="verifyBtn">Verificar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configurações de formatos
+        const formatos = {
+            epub: {
+                arquivo: 'docs/revolucao_cibernetica.epub',
+                tamanho: '119 MB',
+                icone: '📚',
+                nome: 'EPUB',
+                descricao: 'Formato universal para e-books'
+            },
+            pdf: {
+                arquivo: 'docs/revolucao_cibernetica.pdf',
+                tamanho: '165 MB',
+                icone: '📄',
+                nome: 'PDF',
+                descricao: 'Documento PDF completo com imagens'
+            },
+            xml: {
+                arquivo: 'docs/revolucao_cibernetica.min.xml',
+                tamanho: '1.9 MB',
+                icone: '🤖',
+                nome: 'XML',
+                descricao: 'Dados estruturados para agentes de IA'
+            },
+            jsonl: {
+                arquivo: 'docs/revolucao_cibernetica.jsonl',
+                tamanho: '3.2 MB',
+                icone: '⚡',
+                nome: 'JSONL',
+                descricao: 'JSON Lines otimizado para LLMs e streaming'
+            }
+        };
+
+        // Detectar formato do parâmetro GET
+        const urlParams = new URLSearchParams(window.location.search);
+        const formatoParam = urlParams.get('formato') || 'epub';
+        const formato = formatos[formatoParam] || formatos.epub;
+
+        // Atualizar página com informações do formato
+        window.addEventListener('DOMContentLoaded', function () {
+            // Atualizar título da página
+            const titleElement = document.querySelector('.download-title');
+            if (titleElement) {
+                titleElement.textContent = `A Revolução Cibernética`;
+            }
+
+            // Atualizar subtítulo
+            const subtitleElement = document.querySelector('.download-subtitle');
+            if (subtitleElement) {
+                if (formatoParam === 'pdf') {
+                    subtitleElement.textContent = 'Baixe o livro completo em formato PDF com todos os estilos e imagens preservados';
+                } else if (formatoParam === 'xml') {
+                    subtitleElement.textContent = 'Baixe o conteúdo estruturado em XML para processamento por IA, RAG, embeddings e análise semântica';
+                } else if (formatoParam === 'jsonl') {
+                    subtitleElement.textContent = 'Baixe em formato JSONL (JSON Lines) otimizado para streaming, embeddings, RAG e fine-tuning de LLMs';
+                } else {
+                    subtitleElement.textContent = 'Baixe o livro completo em formato EPUB para ler offline em qualquer dispositivo';
+                }
+            }
+
+            // Atualizar ícone
+            document.querySelector('.download-icon').textContent = formato.icone;
+
+            // Atualizar botão
+            const btnText = document.querySelector('.download-button span:last-child');
+            if (btnText) {
+                btnText.textContent = `Baixar ${formato.nome}`;
+            }
+
+            // Atualizar info de tamanho (primeiro .info-value)
+            const tamanhoElements = document.querySelectorAll('.info-value');
+            if (tamanhoElements[0]) {
+                tamanhoElements[0].textContent = formato.tamanho;
+            }
+
+            // Atualizar info de formato (último .info-value)
+            if (tamanhoElements[3]) {
+                if (formatoParam === 'pdf') {
+                    tamanhoElements[3].textContent = 'PDF';
+                } else if (formatoParam === 'xml') {
+                    tamanhoElements[3].textContent = 'XML';
+                } else if (formatoParam === 'jsonl') {
+                    tamanhoElements[3].textContent = 'JSONL';
+                } else {
+                    tamanhoElements[3].textContent = 'EPUB 3.0';
+                }
+            }
+
+            // Atualizar meta description
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) {
+                metaDesc.content = `Baixe A Revolução Cibernética em formato ${formato.nome}. ${formato.descricao}.`;
+            }
+
+            // Atualizar features list conforme formato
+            const featuresList = document.querySelector('.features-list ul');
+            if (featuresList && formatoParam === 'xml') {
+                featuresList.innerHTML = `
+                    <li>Estrutura hierárquica completa (50 seções)</li>
+                    <li>1.907 parágrafos indexados e numerados</li>
+                    <li>~500 conceitos-chave extraídos automaticamente</li>
+                    <li>Glossário com 8 conceitos fundamentais</li>
+                    <li>8 orientações para processamento por IA</li>
+                    <li>4 temas principais com palavras-chave</li>
+                    <li>Ideal para RAG, embeddings e análise semântica</li>
+                    <li>Compatível com todos os parsers XML padrão</li>
+                `;
+
+                // Atualizar título da features list
+                const featuresTitle = document.querySelector('.features-list h3');
+                if (featuresTitle) {
+                    featuresTitle.textContent = '🤖 Dados Estruturados:';
+                }
+
+                // Atualizar info de imagens
+                if (tamanhoElements[1]) {
+                    tamanhoElements[1].textContent = 'Não incluídas';
+                }
+            } else if (featuresList && formatoParam === 'jsonl') {
+                featuresList.innerHTML = `
+                    <li>5.122 parágrafos como chunks individuais</li>
+                    <li>Streaming-friendly: processa linha a linha</li>
+                    <li>Cada linha = 1 objeto JSON completo e independente</li>
+                    <li>~40% menos tokens que XML (otimizado)</li>
+                    <li>Metadados: section_id, concepts, word_count</li>
+                    <li>Compatível: OpenAI, LangChain, Pinecone, Weaviate</li>
+                    <li>Ideal para: Embeddings, RAG, Fine-tuning</li>
+                    <li>Parsing ultra-rápido e baixo uso de memória</li>
+                `;
+
+                // Atualizar título da features list
+                const featuresTitle = document.querySelector('.features-list h3');
+                if (featuresTitle) {
+                    featuresTitle.textContent = '⚡ JSON Lines (JSONL):';
+                }
+
+                // Atualizar info de imagens
+                if (tamanhoElements[1]) {
+                    tamanhoElements[1].textContent = 'Não incluídas';
+                }
+            } else if (featuresList && formatoParam !== 'xml' && formatoParam !== 'jsonl') {
+                // Restaurar lista original para EPUB e PDF (se necessário)
+                const featuresTitle = document.querySelector('.features-list h3');
+                if (featuresTitle && featuresTitle.textContent !== '✨ O que está incluído:') {
+                    featuresTitle.textContent = '✨ O que está incluído:';
+                }
+            }
+        });
+
+        // Variáveis do captcha visual
+        let captchaCircles = [];
+        let clickedOrder = [];
+        let canvas, ctx;
+        let currentChallengeType = '';
+
+        function initCanvas() {
+            canvas = document.getElementById('captchaCanvas');
+            if (!canvas) return;
+            ctx = canvas.getContext('2d');
+
+            // Event listener para cliques no canvas
+            canvas.removeEventListener('click', handleCanvasClick); // Remover listener antigo
+            canvas.addEventListener('click', handleCanvasClick);
+        }
+
+        function getRandomChallengeType() {
+            const challenges = [
+                'size-ascending',    // Menor para maior
+                'size-descending',   // Maior para menor
+                'color-sequence',    // Sequência de cores
+                'position-left',     // Da esquerda para direita
+                'odd-circles'        // Apenas círculos em posições ímpares
+            ];
+            return challenges[Math.floor(Math.random() * challenges.length)];
+        }
+
+        function getChallengeInstruction(type) {
+            const instructions = {
+                'size-ascending': 'Clique nos <strong>círculos roxos</strong> em ordem crescente de tamanho.<br>(do menor para o maior)',
+                'size-descending': 'Clique nos <strong>círculos roxos</strong> em ordem decrescente de tamanho.<br>(do maior para o menor)',
+                'color-sequence': 'Clique nos círculos seguindo esta ordem de cores:<br><strong>Roxo → Rosa → Verde → Laranja → Azul</strong>',
+                'position-left': 'Clique nos <strong>círculos roxos</strong> da esquerda para a direita.<br>(ordem horizontal)',
+                'odd-circles': 'Clique apenas nos <strong>círculos roxos</strong> que têm bordas tracejadas.'
+            };
+            return instructions[type];
+        }
+
+        function generateVisualCaptcha() {
+            console.log('🎲 generateVisualCaptcha() iniciado');
+            if (!ctx) initCanvas();
+
+            // Limpar canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            console.log('🧹 Canvas limpo');
+
+            // Reset
+            captchaCircles = [];
+            clickedOrder = [];
+
+            // Se não foi definido externamente, escolher tipo aleatório
+            if (!currentChallengeType) {
+                currentChallengeType = getRandomChallengeType();
+                console.log('🎯 Tipo de desafio escolhido:', currentChallengeType);
+
+                // Atualizar instrução
+                const instruction = document.querySelector('.captcha-instruction');
+                if (instruction) {
+                    instruction.innerHTML = getChallengeInstruction(currentChallengeType);
+                }
+            } else {
+                console.log('🎯 Usando tipo já definido:', currentChallengeType);
+            }
+
+            // Gerar desafio específico
+            switch (currentChallengeType) {
+                case 'size-ascending':
+                case 'size-descending':
+                    generateSizeChallenge();
+                    break;
+                case 'color-sequence':
+                    generateColorChallenge();
+                    break;
+                case 'position-left':
+                    generatePositionChallenge();
+                    break;
+                case 'odd-circles':
+                    generateOddCirclesChallenge();
+                    break;
+            }
+
+            console.log('🎨 Total de círculos gerados:', captchaCircles.length);
+            drawCircles();
+            console.log('✅ generateVisualCaptcha() completo');
+        }
+
+        function generateSizeChallenge() {
+            const sizes = [15, 22, 30, 38, 46];
+            const usedPositions = [];
+
+            // Embaralhar tamanhos
+            sizes.sort(() => Math.random() - 0.5);
+
+            for (let i = 0; i < 5; i++) {
+                let x, y, tooClose;
+
+                do {
+                    tooClose = false;
+                    x = Math.random() * (canvas.width - 100) + 50;
+                    y = Math.random() * (canvas.height - 100) + 50;
+
+                    for (let pos of usedPositions) {
+                        const distance = Math.sqrt((x - pos.x) ** 2 + (y - pos.y) ** 2);
+                        if (distance < pos.radius + sizes[i] + 15) {
+                            tooClose = true;
+                            break;
+                        }
+                    }
+                } while (tooClose);
+
+                usedPositions.push({ x, y, radius: sizes[i] });
+
+                captchaCircles.push({
+                    x: x,
+                    y: y,
+                    radius: sizes[i],
+                    color: '#8b5cf6',
+                    clicked: false,
+                    clickOrder: -1
+                });
+            }
+
+            // Adicionar distratores
+            addDistractors(usedPositions, 3);
+        }
+
+        function generateColorChallenge() {
+            const colors = [
+                { color: '#8b5cf6', name: 'Roxo' },      // 0
+                { color: '#ec4899', name: 'Rosa' },      // 1
+                { color: '#10b981', name: 'Verde' },     // 2
+                { color: '#f97316', name: 'Laranja' },   // 3
+                { color: '#3b82f6', name: 'Azul' }       // 4
+            ];
+
+            const usedPositions = [];
+            const radius = 28;
+
+            for (let i = 0; i < 5; i++) {
+                let x, y, tooClose;
+
+                do {
+                    tooClose = false;
+                    x = Math.random() * (canvas.width - 100) + 50;
+                    y = Math.random() * (canvas.height - 100) + 50;
+
+                    for (let pos of usedPositions) {
+                        const distance = Math.sqrt((x - pos.x) ** 2 + (y - pos.y) ** 2);
+                        if (distance < radius * 2 + 15) {
+                            tooClose = true;
+                            break;
+                        }
+                    }
+                } while (tooClose);
+
+                usedPositions.push({ x, y, radius });
+
+                captchaCircles.push({
+                    x: x,
+                    y: y,
+                    radius: radius,
+                    color: colors[i].color,
+                    colorIndex: i,
+                    clicked: false,
+                    clickOrder: -1
+                });
+            }
+
+            // Adicionar distratores cinzas
+            addDistractors(usedPositions, 2);
+        }
+
+        function generatePositionChallenge() {
+            const sizes = [20, 25, 30, 35, 28];
+            const usedPositions = [];
+
+            sizes.sort(() => Math.random() - 0.5);
+
+            for (let i = 0; i < 5; i++) {
+                let x, y, tooClose;
+
+                do {
+                    tooClose = false;
+                    x = Math.random() * (canvas.width - 100) + 50;
+                    y = Math.random() * (canvas.height - 100) + 50;
+
+                    for (let pos of usedPositions) {
+                        const distance = Math.sqrt((x - pos.x) ** 2 + (y - pos.y) ** 2);
+                        if (distance < pos.radius + sizes[i] + 15) {
+                            tooClose = true;
+                            break;
+                        }
+                    }
+                } while (tooClose);
+
+                usedPositions.push({ x, y, radius: sizes[i] });
+
+                captchaCircles.push({
+                    x: x,
+                    y: y,
+                    radius: sizes[i],
+                    color: '#8b5cf6',
+                    clicked: false,
+                    clickOrder: -1
+                });
+            }
+
+            addDistractors(usedPositions, 3);
+        }
+
+        function generateOddCirclesChallenge() {
+            const usedPositions = [];
+            const radius = 28;
+
+            // 3 círculos com borda tracejada (corretos)
+            for (let i = 0; i < 3; i++) {
+                let x, y, tooClose;
+
+                do {
+                    tooClose = false;
+                    x = Math.random() * (canvas.width - 100) + 50;
+                    y = Math.random() * (canvas.height - 100) + 50;
+
+                    for (let pos of usedPositions) {
+                        const distance = Math.sqrt((x - pos.x) ** 2 + (y - pos.y) ** 2);
+                        if (distance < radius * 2 + 15) {
+                            tooClose = true;
+                            break;
+                        }
+                    }
+                } while (tooClose);
+
+                usedPositions.push({ x, y, radius });
+
+                captchaCircles.push({
+                    x: x,
+                    y: y,
+                    radius: radius,
+                    color: '#8b5cf6',
+                    dashed: true,
+                    clicked: false,
+                    clickOrder: -1
+                });
+            }
+
+            // 3 círculos roxos sólidos (incorretos - são distratores especiais)
+            for (let i = 0; i < 3; i++) {
+                let x, y, tooClose;
+
+                do {
+                    tooClose = false;
+                    x = Math.random() * (canvas.width - 100) + 50;
+                    y = Math.random() * (canvas.height - 100) + 50;
+
+                    for (let pos of usedPositions) {
+                        const distance = Math.sqrt((x - pos.x) ** 2 + (y - pos.y) ** 2);
+                        if (distance < radius * 2 + 15) {
+                            tooClose = true;
+                            break;
+                        }
+                    }
+                } while (tooClose);
+
+                usedPositions.push({ x, y, radius });
+
+                captchaCircles.push({
+                    x: x,
+                    y: y,
+                    radius: radius,
+                    color: '#8b5cf6',
+                    dashed: false,
+                    isDistractor: true,
+                    clicked: false
+                });
+            }
+
+            // Adicionar distratores normais
+            addDistractors(usedPositions, 2);
+        }
+
+        function addDistractors(usedPositions, count) {
+            for (let i = 0; i < count; i++) {
+                let x, y, tooClose;
+                const radius = Math.random() * 25 + 15;
+
+                do {
+                    tooClose = false;
+                    x = Math.random() * (canvas.width - 100) + 50;
+                    y = Math.random() * (canvas.height - 100) + 50;
+
+                    for (let pos of usedPositions) {
+                        const distance = Math.sqrt((x - pos.x) ** 2 + (y - pos.y) ** 2);
+                        if (distance < pos.radius + radius + 15) {
+                            tooClose = true;
+                            break;
+                        }
+                    }
+                } while (tooClose);
+
+                usedPositions.push({ x, y, radius });
+
+                captchaCircles.push({
+                    x: x,
+                    y: y,
+                    radius: radius,
+                    color: '#9ca3af',
+                    isDistractor: true,
+                    clicked: false
+                });
+            }
+        }
+
+        function drawCircles() {
+            console.log('🎨 drawCircles() chamado, círculos:', captchaCircles.length);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Desenhar todos os círculos
+            captchaCircles.forEach((circle, idx) => {
+                ctx.beginPath();
+                ctx.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);
+
+                // Definir cores
+                if (circle.clicked) {
+                    ctx.fillStyle = '#10b981'; // Verde quando clicado
+                    ctx.strokeStyle = '#059669';
+                } else {
+                    ctx.fillStyle = circle.color || '#8b5cf6';
+                    ctx.strokeStyle = circle.color === '#9ca3af' ? '#6b7280' :
+                        (circle.color ? getDarkerShade(circle.color) : '#7c3aed');
+                }
+
+                // Configurar borda
+                if (circle.dashed) {
+                    ctx.setLineDash([5, 5]);
+                } else {
+                    ctx.setLineDash([]);
+                }
+
+                ctx.lineWidth = 3;
+                ctx.fill();
+                ctx.stroke();
+
+                // Resetar dash
+                ctx.setLineDash([]);
+
+                // Mostrar número da ordem se clicado
+                if (circle.clicked && circle.clickOrder >= 0) {
+                    ctx.fillStyle = 'white';
+                    ctx.font = 'bold 16px Inter';
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText(circle.clickOrder + 1, circle.x, circle.y);
+                }
+            });
+        }
+
+        function getDarkerShade(color) {
+            const shades = {
+                '#8b5cf6': '#7c3aed',
+                '#ec4899': '#db2777',
+                '#10b981': '#059669',
+                '#f97316': '#ea580c',
+                '#3b82f6': '#2563eb'
+            };
+            return shades[color] || color;
+        }
+
+        function handleCanvasClick(event) {
+            const rect = canvas.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            // Verificar qual círculo foi clicado
+            for (let i = captchaCircles.length - 1; i >= 0; i--) {
+                const circle = captchaCircles[i];
+                const distance = Math.sqrt((x - circle.x) ** 2 + (y - circle.y) ** 2);
+
+                if (distance <= circle.radius) {
+                    // Verificar se é distrator
+                    if (circle.isDistractor && circle.color === '#9ca3af') {
+                        showCaptchaError('❌ Não clique nos círculos cinzas!');
+                        return;
+                    }
+
+                    // Para desafio odd-circles, verificar se clicou em círculo sólido
+                    if (currentChallengeType === 'odd-circles' && circle.isDistractor) {
+                        showCaptchaError('❌ Clique apenas nos círculos com bordas tracejadas!');
+                        setTimeout(() => regenerateCaptcha(), 1500);
+                        return;
+                    }
+
+                    if (!circle.clicked) {
+                        circle.clicked = true;
+                        circle.clickOrder = clickedOrder.length;
+                        clickedOrder.push(i);
+                        drawCircles();
+
+                        // Verificar quantos círculos devem ser clicados
+                        const targetCount = getTargetClickCount();
+                        const validCircles = captchaCircles.filter(c => !c.isDistractor || (c.isDistractor && c.color !== '#9ca3af'));
+                        const clickedValidCircles = validCircles.filter(c => c.clicked);
+
+                        if (clickedValidCircles.length === targetCount) {
+                            // Verificar automaticamente
+                            setTimeout(() => verifyCaptcha(), 300);
+                        }
+                    }
+                    break;
+                }
+            }
+        }
+
+        function getTargetClickCount() {
+            switch (currentChallengeType) {
+                case 'odd-circles':
+                    return 3;
+                default:
+                    return 5;
+            }
+        }
+
+        function verifyCaptcha() {
+            let isCorrect = false;
+
+            switch (currentChallengeType) {
+                case 'size-ascending':
+                    isCorrect = verifySizeAscending();
+                    break;
+                case 'size-descending':
+                    isCorrect = verifySizeDescending();
+                    break;
+                case 'color-sequence':
+                    isCorrect = verifyColorSequence();
+                    break;
+                case 'position-left':
+                    isCorrect = verifyPositionLeft();
+                    break;
+                case 'odd-circles':
+                    isCorrect = verifyOddCircles();
+                    break;
+            }
+
+            if (isCorrect) {
+                closeCaptcha();
+                performDownload();
+            } else {
+                // Resetar após 1.5s
+                setTimeout(() => {
+                    regenerateCaptcha();
+                }, 1500);
+            }
+        }
+
+        function verifySizeAscending() {
+            const validCircles = captchaCircles.filter(c => !c.isDistractor || c.color !== '#9ca3af');
+            const clickedCircles = validCircles
+                .filter(c => c.clicked)
+                .sort((a, b) => a.clickOrder - b.clickOrder);
+
+            if (clickedCircles.length !== 5) {
+                showCaptchaError('❌ Clique em todos os 5 círculos roxos!');
+                return false;
+            }
+
+            for (let i = 0; i < clickedCircles.length - 1; i++) {
+                if (clickedCircles[i].radius > clickedCircles[i + 1].radius) {
+                    showCaptchaError('❌ Ordem incorreta! Do menor para o maior.');
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        function verifySizeDescending() {
+            const validCircles = captchaCircles.filter(c => !c.isDistractor || c.color !== '#9ca3af');
+            const clickedCircles = validCircles
+                .filter(c => c.clicked)
+                .sort((a, b) => a.clickOrder - b.clickOrder);
+
+            if (clickedCircles.length !== 5) {
+                showCaptchaError('❌ Clique em todos os 5 círculos roxos!');
+                return false;
+            }
+
+            for (let i = 0; i < clickedCircles.length - 1; i++) {
+                if (clickedCircles[i].radius < clickedCircles[i + 1].radius) {
+                    showCaptchaError('❌ Ordem incorreta! Do maior para o menor.');
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        function verifyColorSequence() {
+            const clickedCircles = captchaCircles
+                .filter(c => c.clicked && c.colorIndex !== undefined)
+                .sort((a, b) => a.clickOrder - b.clickOrder);
+
+            if (clickedCircles.length !== 5) {
+                showCaptchaError('❌ Clique em todos os 5 círculos coloridos!');
+                return false;
+            }
+
+            // Verificar se a ordem está correta: 0, 1, 2, 3, 4
+            for (let i = 0; i < 5; i++) {
+                if (clickedCircles[i].colorIndex !== i) {
+                    showCaptchaError('❌ Sequência incorreta! Siga: Roxo → Rosa → Verde → Laranja → Azul');
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        function verifyPositionLeft() {
+            const validCircles = captchaCircles.filter(c => !c.isDistractor || c.color !== '#9ca3af');
+            const clickedCircles = validCircles
+                .filter(c => c.clicked)
+                .sort((a, b) => a.clickOrder - b.clickOrder);
+
+            if (clickedCircles.length !== 5) {
+                showCaptchaError('❌ Clique em todos os 5 círculos roxos!');
+                return false;
+            }
+
+            // Verificar se clicou da esquerda para direita (ordem crescente de x)
+            for (let i = 0; i < clickedCircles.length - 1; i++) {
+                if (clickedCircles[i].x > clickedCircles[i + 1].x) {
+                    showCaptchaError('❌ Ordem incorreta! Clique da esquerda para a direita.');
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        function verifyOddCircles() {
+            const dashedCircles = captchaCircles.filter(c => c.dashed);
+            const clickedDashed = dashedCircles.filter(c => c.clicked);
+
+            if (clickedDashed.length !== 3) {
+                showCaptchaError('❌ Clique nos 3 círculos com bordas tracejadas!');
+                return false;
+            }
+
+            return true;
+        }
+
+        function showCaptchaError(message) {
+            const error = document.getElementById('captchaError');
+            error.textContent = message;
+            error.classList.add('active');
+
+            setTimeout(() => {
+                error.classList.remove('active');
+            }, 2000);
+        }
+
+        function regenerateCaptcha() {
+            console.log('🔄 ========== REGENERATE CAPTCHA INICIADO ==========');
+            const error = document.getElementById('captchaError');
+            if (error) {
+                error.classList.remove('active');
+            }
+
+            // Limpar completamente
+            captchaCircles = [];
+            clickedOrder = [];
+            console.log('🧹 Arrays limpos');
+
+            // Limpar canvas imediatamente e com força
+            if (ctx && canvas) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = 'white';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                console.log('🧹 Canvas limpo com força bruta');
+            }
+
+            // Forçar mudança de tipo de desafio (garantir que seja diferente)
+            const oldType = currentChallengeType;
+            const challenges = [
+                'size-ascending',
+                'size-descending',
+                'color-sequence',
+                'position-left',
+                'odd-circles'
+            ];
+
+            // Filtrar para pegar apenas tipos diferentes do atual
+            const availableTypes = challenges.filter(t => t !== oldType);
+            currentChallengeType = availableTypes[Math.floor(Math.random() * availableTypes.length)];
+
+            console.log('🎯 Forçando mudança:', oldType, '→', currentChallengeType);
+
+            // Atualizar instrução IMEDIATAMENTE (sem setTimeout)
+            const instruction = document.querySelector('.captcha-instruction');
+            if (instruction) {
+                const newInstruction = getChallengeInstruction(currentChallengeType);
+                instruction.innerHTML = newInstruction;
+                // Forçar reflow
+                void instruction.offsetHeight;
+                console.log('✅ Instrução atualizada IMEDIATAMENTE');
+            }
+
+            // Gerar novo desafio
+            generateVisualCaptcha();
+            console.log('✅ Novo desafio gerado');
+            console.log('🔄 ========== REGENERATE CAPTCHA COMPLETO ==========');
+        }
+
+        function showCaptcha() {
+            const overlay = document.getElementById('captchaOverlay');
+
+            // Inicializar canvas se necessário
+            if (!ctx) initCanvas();
+
+            // Limpar estado
+            captchaCircles = [];
+            clickedOrder = [];
+
+            // Gerar novo captcha
+            generateVisualCaptcha();
+
+            // Limpar erro
+            const error = document.getElementById('captchaError');
+            error.classList.remove('active');
+
+            // Mostrar modal
+            overlay.classList.add('active');
+        }
+
+        function closeCaptcha() {
+            const overlay = document.getElementById('captchaOverlay');
+            overlay.classList.remove('active');
+
+            // Limpar estado
+            captchaCircles = [];
+            clickedOrder = [];
+        }
+
+        function performDownload() {
+            console.log('Iniciando download:', formato.nome, '→', formato.arquivo);
+
+            // Download direto para todos os formatos
+            const link = document.createElement('a');
+            link.href = formato.arquivo;
+            link.download = formato.arquivo.split('/').pop();
+            link.style.display = 'none';
+
+            // Para forçar download no navegador
+            link.setAttribute('download', formato.arquivo.split('/').pop());
+
+            document.body.appendChild(link);
+            console.log('Download iniciado:', link.download);
+
+            try {
+                link.click();
+                // Mostrar notificação de sucesso
+                showDownloadNotification();
+            } catch (error) {
+                console.error('Erro ao iniciar download:', error);
+                alert(`Erro ao baixar o arquivo ${formato.nome}.\nPor favor, tente novamente ou acesse diretamente: ${formato.arquivo}`);
+            } finally {
+                // Limpar após um pequeno delay
+                setTimeout(() => {
+                    document.body.removeChild(link);
+                }, 100);
+            }
+        }
+
+        function showDownloadNotification() {
+            // Notificação de download
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 12px;
+                box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+                z-index: 10000;
+                animation: slideIn 0.3s ease;
+                max-width: 350px;
+            `;
+            notification.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="font-size: 1.5rem;">${formato.icone}</span>
+                    <div>
+                        <div style="font-weight: 600; margin-bottom: 0.25rem;">Download iniciado!</div>
+                        <div style="font-size: 0.85rem; opacity: 0.9;">
+                            ${formato.nome} • ${formato.tamanho}
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 4000);
+        }
+
+        function downloadEPUB() {
+            // Verificar se já passou pelo CAPTCHA no entry.html
+            const entryCaptchaPassed = sessionStorage.getItem('entry_captcha_passed');
+
+            if (entryCaptchaPassed === 'true') {
+                // Já passou - fazer download direto
+                console.log('✅ CAPTCHA verificado - iniciando download');
+                performDownloadDirect();
+            } else {
+                // Redirecionar para entry.html
+                console.log('🔒 Redirecionando para verificação CAPTCHA');
+                const formatoParam = urlParams.get('formato') || 'epub';
+                window.location.href = `entry.html?return=download.html?formato=${formatoParam}`;
+            }
+        }
+
+        // Função para fazer download direto
+        function performDownloadDirect() {
+            console.log('Iniciando download:', formato.nome, '→', formato.arquivo);
+
+            const link = document.createElement('a');
+            link.href = formato.arquivo;
+            link.download = formato.arquivo.split('/').pop();
+            link.style.display = 'none';
+            link.setAttribute('download', formato.arquivo.split('/').pop());
+
+            document.body.appendChild(link);
+
+            try {
+                link.click();
+                showDownloadNotification();
+            } catch (error) {
+                console.error('Erro ao iniciar download:', error);
+                alert(`Erro ao baixar o arquivo ${formato.nome}.\nPor favor, tente novamente.`);
+            } finally {
+                setTimeout(() => {
+                    if (document.body.contains(link)) {
+                        document.body.removeChild(link);
+                    }
+                }, 500);
+            }
+        }
+
+        // Inicializar quando página carregar
+        document.addEventListener('DOMContentLoaded', () => {
+            // Inicializar canvas
+            initCanvas();
+
+            // Fechar captcha ao clicar fora do modal
+            const overlay = document.getElementById('captchaOverlay');
+            if (overlay) {
+                overlay.addEventListener('click', (e) => {
+                    if (e.target === overlay) {
+                        closeCaptcha();
+                    }
+                });
+            }
+        });
+
+        // Animações CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from {
+                    transform: translateX(400px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes slideOut {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(400px);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+
+</html>

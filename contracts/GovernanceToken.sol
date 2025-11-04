@@ -10,7 +10,7 @@ import "@openzeppelin/contracts/utils/cryptography/EIP712.sol";
 
 /**
  * @title GovernanceToken (IDS - Identidade Soberana)
- * @notice Token de governança da Constituição 2.0
+ * @notice Token de governança da Cybersyn 2.0
  * @dev Implementa identidade soberana com checkpoints para votação
  * 
  * Características:

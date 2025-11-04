@@ -1,7 +1,7 @@
 {
   "name": "helia-gateway",
   "version": "1.0.0",
-  "description": "Helia Gateway for Constituição 2.0 governance",
+  "description": "Helia Gateway for Cybersyn 2.0 governance",
   "main": "src/index.js",
   "type": "module",
   "scripts": {

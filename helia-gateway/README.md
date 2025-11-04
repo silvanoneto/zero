@@ -1,4 +1,4 @@
-# Helia Gateway - Constituição 2.0
+# Helia Gateway - Cybersyn 2.0
 
 Serviço de gateway Helia para armazenamento descentralizado de propostas e documentos da governança.
 

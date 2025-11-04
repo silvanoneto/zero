@@ -1,4 +1,8 @@
 {
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/dao-mitosis/page": "app/dao-mitosis/page.js",
+  "/federation-voting/page": "app/federation-voting/page.js",
   "/page": "app/page.js",
   "/test-p2p/page": "app/test-p2p/page.js"
 }

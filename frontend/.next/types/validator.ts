@@ -36,6 +36,24 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
 }
 
 
+// Validate ../../src/app/dao-mitosis/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/dao-mitosis">> = Specific
+  const handler = {} as typeof import("../../src/app/dao-mitosis/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/federation-voting/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/federation-voting">> = Specific
+  const handler = {} as typeof import("../../src/app/federation-voting/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../src/app/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/">> = Specific

@@ -1,0 +1,181 @@
+# Docker Compose para serviços de monitoramento
+# Prometheus, Grafana, Loki, Promtail
+
+x-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+networks:
+  default:
+    name: revolucao-cibernetica_constituicao-network
+    external: true
+
+volumes:
+  prometheus-data:
+  grafana-data:
+  loki-data:
+
+services:
+  # Prometheus - Métricas
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: constituicao-prometheus
+    profiles:
+      - monitoring
+      - all
+    volumes:
+      - prometheus-data:/prometheus
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./monitoring/alerts.yml:/etc/prometheus/alerts.yml:ro
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+      - '--storage.tsdb.retention.time=30d'
+    ports:
+      - "${PROMETHEUS_PORT:-9090}:9090"
+    labels:
+      # Enable Traefik
+      - "traefik.enable=true"
+      
+      # HTTP Router
+      - "traefik.http.routers.prometheus.rule=Host(`prometheus.revolucao-cibernetica.local`)"
+      - "traefik.http.routers.prometheus.entrypoints=websecure"
+      - "traefik.http.routers.prometheus.tls.certresolver=letsencrypt"
+      
+      # Service
+      - "traefik.http.services.prometheus.loadbalancer.server.port=9090"
+      
+      # Middlewares (with auth)
+      - "traefik.http.routers.prometheus.middlewares=auth@file,security-headers@file"
+    logging: *default-logging
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:9090/-/healthy"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+
+  # Grafana - Visualização
+  grafana:
+    image: grafana/grafana:latest
+    container_name: constituicao-grafana
+    profiles:
+      - monitoring
+      - all
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    environment:
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_USER:-admin}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-admin}
+      - GF_SERVER_ROOT_URL=http://localhost:${GRAFANA_PORT:-3001}
+      - GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-simple-json-datasource
+    ports:
+      - "${GRAFANA_PORT:-3001}:3000"
+    depends_on:
+      - prometheus
+      - loki
+    labels:
+      # Enable Traefik
+      - "traefik.enable=true"
+      
+      # HTTP Router
+      - "traefik.http.routers.grafana.rule=Host(`grafana.revolucao-cibernetica.local`)"
+      - "traefik.http.routers.grafana.entrypoints=websecure"
+      - "traefik.http.routers.grafana.tls.certresolver=letsencrypt"
+      
+      # Service
+      - "traefik.http.services.grafana.loadbalancer.server.port=3000"
+      
+      # Middlewares
+      - "traefik.http.routers.grafana.middlewares=security-headers@file"
+    logging: *default-logging
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    restart: unless-stopped
+
+  # Loki - Agregação de logs
+  loki:
+    image: grafana/loki:latest
+    container_name: constituicao-loki
+    profiles:
+      - monitoring
+      - all
+    volumes:
+      - loki-data:/loki
+      - ./monitoring/loki-config.yml:/etc/loki/local-config.yaml:ro
+    command: -config.file=/etc/loki/local-config.yaml
+    ports:
+      - "${LOKI_PORT:-3100}:3100"
+    logging: *default-logging
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3100/ready"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+
+  # Promtail - Coleta de logs
+  promtail:
+    image: grafana/promtail:latest
+    container_name: constituicao-promtail
+    profiles:
+      - monitoring
+      - all
+    volumes:
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./monitoring/promtail-config.yml:/etc/promtail/config.yml:ro
+    command: -config.file=/etc/promtail/config.yml
+    depends_on:
+      - loki
+    logging: *default-logging
+    restart: unless-stopped
+
+  # Node Exporter - Métricas do sistema
+  node-exporter:
+    image: prom/node-exporter:latest
+    container_name: constituicao-node-exporter
+    profiles:
+      - monitoring
+      - all
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    ports:
+      - "${NODE_EXPORTER_PORT:-9100}:9100"
+    logging: *default-logging
+    restart: unless-stopped
+
+  # cAdvisor - Métricas de containers
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:latest
+    container_name: constituicao-cadvisor
+    profiles:
+      - monitoring
+      - all
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker:/var/lib/docker:ro
+    ports:
+      - "${CADVISOR_PORT:-8888}:8080"
+    logging: *default-logging
+    restart: unless-stopped

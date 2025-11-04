@@ -11,7 +11,7 @@
 
 ## 📋 Resumo Executivo
 
-Implementar sistema automático de **divisão celular (mitose)** para DAOs que ultrapassem 500 membros, conforme Art. 5º-C da Constituição 2.0.
+Implementar sistema automático de **divisão celular (mitose)** para DAOs que ultrapassem 500 membros, conforme Art. 5º-C da Cybersyn 2.0.
 
 Inspirado no princípio biológico de relação superfície/volume ótima, esta BIP garante que organizações mantenham eficiência comunicacional respeitando o **Número de Dunbar** (~150 conexões significativas).
 
@@ -391,7 +391,7 @@ $ bip vote --id 0002 --support yes --tokens 50
 **🧬 Crescer não é inchar. É multiplicar. 🧬**
 
 *"Na natureza, a escala não é linear. É celular."*  
-— Constituição 2.0, Art. 5º-C
+— Cybersyn 2.0, Art. 5º-C
 
 **∅**
 

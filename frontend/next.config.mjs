@@ -1,57 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'standalone',
+  // Use 'export' for GitHub Pages, 'standalone' for Docker
+  output: process.env.NEXT_PUBLIC_DEMO_MODE === 'true' ? 'export' : 'standalone',
   
-  // GitHub Pages configuration - desabilitado para Docker
-  // basePath: process.env.NEXT_PUBLIC_DEMO_MODE === 'true' ? '/cybersyn' : '',
+  // GitHub Pages configuration
+  basePath: '',
   images: {
     unoptimized: true, // Necessário para export estático
   },
   
-  // Next.js 15 - Configurações otimizadas
-  eslint: {
-    ignoreDuringBuilds: false,
-  },
+  // Next.js 16 - Configurações otimizadas
   typescript: {
     ignoreBuildErrors: false,
   },
   
-  webpack: (config, { isServer }) => {
-    // Fallbacks para módulos Node.js no browser
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      fs: false,
-      net: false,
-      tls: false,
-      crypto: false,
-      stream: false,
-      http: false,
-      https: false,
-      zlib: false,
-      path: false,
-      os: false,
-      'node:stream': false,
-      'node:crypto': false,
-      'node:buffer': false,
-      // React Native fallbacks (MetaMask SDK)
-      '@react-native-async-storage/async-storage': false,
-      'react-native': false,
-      'react-native-crypto': false,
-      'react-native-randombytes': false,
-    };
-    
-    // Externals
-    config.externals.push('pino-pretty', 'lokijs', 'encoding');
-    
-    // Ignora warnings de módulos React Native
-    config.ignoreWarnings = [
-      { module: /node_modules\/@metamask\/sdk/ },
-      { module: /node_modules\/react-native/ },
-    ];
-    
-    return config;
-  },
+  // Turbopack configuration (Next.js 16 default)
+  turbopack: {},
   
   // Otimizações de performance
   experimental: {

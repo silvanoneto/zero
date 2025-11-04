@@ -5,8 +5,8 @@ Script para exportar o conteúdo do site "A Revolução Cibernética" para EPUB,
 Exporta os seguintes arquivos HTML:
 - index.html (Teoria Principal)
 - manifesto.html (Manifesto Político)
-- constituicao_2.0.html (Constituição 2.0 - Visão Geral)
-- constituicao_2.0_completa.html (Constituição 2.0 - Texto Completo)
+- constituicao_2.0.html (Cybersyn 2.0 - Visão Geral)
+- constituicao_2.0_completa.html (Cybersyn 2.0 - Texto Completo)
 - ∅.html (Ordem Zero)
 
 Formatos de saída:
@@ -375,7 +375,7 @@ def create_epub():
     except Exception as e:
         print(f"✗ Erro ao processar manifesto.html: {e}")
 
-    # Capítulo 3: Constituição 2.0 (constituicao_2.0.html)
+    # Capítulo 3: Cybersyn 2.0 (constituicao_2.0.html)
     print("\nProcessando constituicao_2.0.html...")
     try:
         content = extract_main_content("constituicao_2.0.html")
@@ -386,7 +386,7 @@ def create_epub():
         print(f"  → Encontradas {len(images_in_content)} imagens no conteúdo")
 
         c3 = epub.EpubHtml(
-            title="Constituição 2.0 — Protocolo Biomimético-Cibernético",
+            title="Cybersyn 2.0 — Protocolo Biomimético-Cibernético",
             file_name="constituicao_2.0.xhtml",
             lang="pt-BR",
         )
@@ -400,7 +400,7 @@ def create_epub():
     except Exception as e:
         print(f"✗ Erro ao processar constituicao_2.0.html: {e}")
 
-    # Capítulo 4: Constituição 2.0 Completa (constituicao_2.0_completa.html)
+    # Capítulo 4: Cybersyn 2.0 Completa (constituicao_2.0_completa.html)
     print("\nProcessando constituicao_2.0_completa.html...")
     try:
         content = extract_main_content("constituicao_2.0_completa.html")
@@ -411,7 +411,7 @@ def create_epub():
         print(f"  → Encontradas {len(images_in_content)} imagens no conteúdo")
 
         c4 = epub.EpubHtml(
-            title="Constituição 2.0 — Texto Completo",
+            title="Cybersyn 2.0 — Texto Completo",
             file_name="constituicao_2.0_completa.xhtml",
             lang="pt-BR",
         )

@@ -7,7 +7,6 @@
 
 import React, { useState, useEffect } from 'react'
 import { useP2P } from '@/hooks/useP2P'
-import Link from 'next/link'
 
 const P2PStatus: React.FC = () => {
   const { 
@@ -182,17 +181,6 @@ const P2PStatus: React.FC = () => {
             {stats.metrics.votesReceived}
           </div>
         </div>
-      </div>
-
-      {/* E2E Test Link */}
-      <div className="mb-4">
-        <Link 
-          href="/test-p2p"
-          className="flex items-center justify-center gap-2 w-full py-2 px-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium rounded-lg transition-all shadow-md hover:shadow-lg"
-        >
-          <span>🧪</span>
-          <span>Executar Testes E2E</span>
-        </Link>
       </div>
 
       {/* Detalhes Expandidos */}

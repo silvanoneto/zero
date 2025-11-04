@@ -3,7 +3,7 @@ pragma solidity ^0.8.27;
 
 /**
  * @title FederationVoting
- * @notice Sistema de Votação Híbrida Contextual inspirado na Constituição 2.0
+ * @notice Sistema de Votação Híbrida Contextual inspirado na Cybersyn 2.0
  * @dev Implementa 4 funções de votação biomimético-cibernéticas
  * 
  * Baseado em Art. 3º-A da Constituição Viva 2.0
@@ -14,6 +14,13 @@ pragma solidity ^0.8.27;
 import "@openzeppelin/contracts/access/AccessControl.sol";
 import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+
+/**
+ * @notice Interface para integração com DAOMitosis (Art. 5º-C)
+ */
+interface IDAOMitosis {
+    function recordActivity(uint256 _daoId, address _member) external;
+}
 
 contract FederationVoting is AccessControl, ReentrancyGuard {
     
@@ -72,6 +79,12 @@ contract FederationVoting is AccessControl, ReentrancyGuard {
     /// @notice Token de governança (IDS - Identidade Soberana)
     IERC20 public governanceToken;
     
+    /// @notice Contrato DAOMitosis para rastreamento de atividade (Art. 5º-C)
+    IDAOMitosis public daoMitosis;
+    
+    /// @notice ID da DAO principal (se aplicável)
+    uint256 public daoId;
+    
     /// @notice Contador de propostas
     uint256 public proposalCount;
     
@@ -115,12 +128,31 @@ contract FederationVoting is AccessControl, ReentrancyGuard {
     
     event ExpertVerified(address indexed expert, bytes32 indexed domain);
     
+    event DAOMitosisIntegrationEnabled(address indexed mitosisContract, uint256 daoId);
+    
     // ============ CONSTRUCTOR ============
     
     constructor(address _governanceToken) {
         governanceToken = IERC20(_governanceToken);
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(EXPERT_VERIFIER_ROLE, msg.sender);
+    }
+    
+    // ============ CONFIGURATION ============
+    
+    /**
+     * @notice Habilita integração com DAOMitosis para rastreamento de atividade
+     * @param _daoMitosis Endereço do contrato DAOMitosis
+     * @param _daoId ID da DAO no sistema de mitose
+     */
+    function setDAOMitosisIntegration(
+        address _daoMitosis,
+        uint256 _daoId
+    ) external onlyRole(DEFAULT_ADMIN_ROLE) {
+        require(_daoMitosis != address(0), "Invalid mitosis address");
+        daoMitosis = IDAOMitosis(_daoMitosis);
+        daoId = _daoId;
+        emit DAOMitosisIntegrationEnabled(_daoMitosis, _daoId);
     }
     
     // ============ VOTING FUNCTIONS ============
@@ -241,6 +273,15 @@ contract FederationVoting is AccessControl, ReentrancyGuard {
         } else {
             proposal.votesAgainst += weight;
             proposal.votersAgainst++;
+        }
+        
+        // Registra atividade no sistema de mitose (Art. 5º-C)
+        if (address(daoMitosis) != address(0)) {
+            try daoMitosis.recordActivity(daoId, msg.sender) {
+                // Atividade registrada com sucesso
+            } catch {
+                // Falha silenciosa - não bloqueia votação
+            }
         }
         
         emit VoteCast(proposalId, msg.sender, support, weight, proposal.voteType);

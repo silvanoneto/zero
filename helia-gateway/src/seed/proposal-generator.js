@@ -12,7 +12,7 @@ export class ProposalGenerator {
     this.logAnalyzer = new LogAnalyzer();
     this.contentLoader = new ContentLoader();
     
-    // Temas das DAOs baseados na Constituição 2.0
+    // Temas das DAOs baseados na Cybersyn 2.0
     this.daoThemes = {
       biomimetica: {
         name: 'Biomimética',
@@ -93,7 +93,7 @@ export class ProposalGenerator {
     const gapProposals = this.generateGapProposals();
     proposals.push(...gapProposals);
 
-    // 4. Propostas de governança da Constituição 2.0
+    // 4. Propostas de governança da Cybersyn 2.0
     const govProposals = this.generateGovernanceProposals();
     proposals.push(...govProposals);
 
@@ -240,7 +240,7 @@ export class ProposalGenerator {
   }
 
   /**
-   * Gera propostas de governança da Constituição 2.0
+   * Gera propostas de governança da Cybersyn 2.0
    */
   generateGovernanceProposals() {
     const proposals = [];

@@ -1,6 +1,6 @@
 # 🚀 Quick Start Guide
 
-Guia rápido para começar a trabalhar com os contratos da Constituição 2.0.
+Guia rápido para começar a trabalhar com os contratos da Cybersyn 2.0.
 
 ## ⚡ Setup em 5 Minutos
 

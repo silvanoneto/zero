@@ -11,7 +11,7 @@
 
 ## 📋 Resumo Executivo
 
-Implementar o sistema de **Tokens de Atenção** conforme Art. 6º-D da Constituição 2.0, inspirado no sistema imunológico humano que usa inflamação para sinalizar urgências.
+Implementar o sistema de **Tokens de Atenção** conforme Art. 6º-D da Cybersyn 2.0, inspirado no sistema imunológico humano que usa inflamação para sinalizar urgências.
 
 Cada cidadão recebe **100 tokens/mês** para priorizar propostas. Tokens não utilizados **não acumulam** (como citocinas que degradam).
 

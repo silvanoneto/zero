@@ -1,0 +1,210 @@
+/* 🌀 Loading Overlay - Revolução Cibernética */
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #0a0a0a;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.8s ease-out;
+}
+
+.loading-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loading-overlay.removed {
+    display: none;
+}
+
+/* Container do conteúdo */
+.loading-content {
+    position: relative;
+    text-align: center;
+    max-width: 90vw;
+    max-height: 90vh;
+    animation: fadeInScale 1s ease-out;
+}
+
+/* Imagem da capa */
+.loading-cover {
+    position: relative;
+    width: auto;
+    height: auto;
+    max-width: min(600px, 80vw);
+    max-height: 70vh;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 40px rgba(138, 43, 226, 0.6)) drop-shadow(0 0 80px rgba(138, 43, 226, 0.3));
+    animation: pulse 3s ease-in-out infinite;
+}
+
+/* Fundo desfocado da imagem */
+.loading-backdrop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    filter: blur(60px);
+    z-index: -1;
+}
+
+/* Título */
+.loading-title {
+    font-family: 'Orbitron', monospace, sans-serif;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: #fff;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(138, 43, 226, 0.8),
+        0 0 40px rgba(138, 43, 226, 0.4);
+    letter-spacing: 0.1em;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Subtítulo */
+.loading-subtitle {
+    font-family: 'Courier New', monospace;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: #8a2be2;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Barra de progresso */
+.loading-progress {
+    width: min(400px, 80vw);
+    height: 4px;
+    background: rgba(138, 43, 226, 0.2);
+    border-radius: 2px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.loading-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg,
+            #8a2be2 0%,
+            #00bfff 50%,
+            #8a2be2 100%);
+    background-size: 200% 100%;
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.3s ease-out;
+    animation: shimmer 2s linear infinite;
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.8),
+        0 0 20px rgba(138, 43, 226, 0.4);
+}
+
+/* Texto de status */
+.loading-status {
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: #8a2be2;
+    margin-top: 1rem;
+    opacity: 0.7;
+    min-height: 1.5em;
+}
+
+/* Animações */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 40px rgba(138, 43, 226, 0.6)) drop-shadow(0 0 80px rgba(138, 43, 226, 0.3));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 50px rgba(138, 43, 226, 0.8)) drop-shadow(0 0 100px rgba(138, 43, 226, 0.5));
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 20px rgba(138, 43, 226, 0.8),
+            0 0 40px rgba(138, 43, 226, 0.4);
+    }
+
+    to {
+        text-shadow: 0 0 30px rgba(138, 43, 226, 1),
+            0 0 60px rgba(138, 43, 226, 0.6),
+            0 0 90px rgba(138, 43, 226, 0.3);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .loading-cover {
+        max-width: 90vw;
+        max-height: 50vh;
+    }
+
+    .loading-title {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .loading-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .loading-progress {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .loading-cover {
+        max-height: 40vh;
+    }
+
+    .loading-title {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .loading-subtitle {
+        font-size: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Preload de fontes */
+@font-face {
+    font-family: 'Orbitron';
+    font-display: swap;
+    src: local('Orbitron');
+}

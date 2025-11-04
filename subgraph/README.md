@@ -1,6 +1,6 @@
-# The Graph Subgraph - Constituição 2.0
+# The Graph Subgraph - Cybersyn 2.0
 
-Subgraph para indexação de dados da governança on-chain da Constituição 2.0.
+Subgraph para indexação de dados da governança on-chain da Cybersyn 2.0.
 
 ## 🎯 Funcionalidades
 

@@ -9,7 +9,7 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ### 🎉 Lançamento Inicial
 
-Primeira versão do sistema de votação híbrida da Constituição 2.0.
+Primeira versão do sistema de votação híbrida da Cybersyn 2.0.
 
 ### ✨ Adicionado
 

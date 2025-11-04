@@ -1,7 +1,7 @@
 {
   "name": "constituicao-2.0-subgraph",
   "version": "0.1.0",
-  "description": "The Graph subgraph for Constituição 2.0 governance system",
+  "description": "The Graph subgraph for Cybersyn 2.0 governance system",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",

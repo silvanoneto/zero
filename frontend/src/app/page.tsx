@@ -92,6 +92,99 @@ export default function Home() {
               </p>
             </div>
 
+            {/* Federation Systems Cards */}
+            <div className="mb-12 grid md:grid-cols-3 gap-6">
+              {/* Book Card - NOVO */}
+              <a 
+                href="/book"
+                className="group glass-effect rounded-2xl p-6 border-2 border-purple-200/50 dark:border-purple-700/50 hover:border-purple-400 dark:hover:border-purple-500 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 transform hover:-translate-y-1"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 rounded-xl group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-4xl">📖</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent mb-2">
+                      A Revolução Cibernética
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-400 mb-3 leading-relaxed">
+                      Livro completo: <strong>Teoria + Manifesto + Conceito Nhandereko</strong>. 
+                      Ontologia executável em 33 capítulos.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-xs font-semibold">
+                        Cibernética Segunda Ordem
+                      </span>
+                      <span className="px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 rounded-full text-xs font-semibold">
+                        Loop Möbius
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              {/* Mitosis System Card */}
+              <a 
+                href="/dao-mitosis"
+                className="group glass-effect rounded-2xl p-6 border-2 border-orange-200/50 dark:border-orange-700/50 hover:border-orange-400 dark:hover:border-orange-500 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/20 transform hover:-translate-y-1"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 bg-gradient-to-br from-orange-100 to-red-100 dark:from-orange-900/30 dark:to-red-900/30 rounded-xl group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-4xl">🧬</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-red-600 dark:from-orange-400 dark:to-red-400 bg-clip-text text-transparent mb-2">
+                      Sistema de Mitose
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-400 mb-3 leading-relaxed">
+                      Divisão orgânica de DAOs quando atingem o limite de Dunbar (150 membros). 
+                      Implementação do <strong>Artigo 5º-C</strong> da Constituição.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full text-xs font-semibold">
+                        Governança Escalável
+                      </span>
+                      <span className="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 rounded-full text-xs font-semibold">
+                        Árvore Genealógica
+                      </span>
+                      <span className="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded-full text-xs font-semibold">
+                        Limite de Dunbar
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              {/* Federation Voting Card */}
+              <a 
+                href="/federation-voting"
+                className="group glass-effect rounded-2xl p-6 border-2 border-blue-200/50 dark:border-blue-700/50 hover:border-blue-400 dark:hover:border-blue-500 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 transform hover:-translate-y-1"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 rounded-xl group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-4xl">🗳️</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent mb-2">
+                      Sistema de Votação Federal
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-400 mb-3 leading-relaxed">
+                      Votação descentralizada em propostas federais. Cada voto registra atividade 
+                      no sistema de mitose. <strong>Governança transparente</strong> e democrática.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-xs font-semibold">
+                        A Favor • Contra • Abstenção
+                      </span>
+                      <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-xs font-semibold">
+                        Quorum • Transparência
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
             {/* Stats Grid */}
             <div className="mb-8">
               <VotingStats />

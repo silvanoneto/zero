@@ -94,16 +94,14 @@ jobs:
           mkdir -p _site
           # Adiciona .nojekyll para evitar processamento Jekyll
           touch _site/.nojekyll
-          # Manter os arquivos HTML do root
-          cp -r *.html _site/ 2>/dev/null || true
-          cp -r assets _site/ 2>/dev/null || true
-          cp -r docs _site/ 2>/dev/null || true
+          # Copia o output do Next.js para a raiz
+          cp -r frontend/out/* _site/
+          # Sobrescreve com arquivos estáticos importantes da raiz (se existirem)
           cp CNAME _site/ 2>/dev/null || true
           cp robots.txt _site/ 2>/dev/null || true
           cp sitemap.xml _site/ 2>/dev/null || true
-          # Frontend vai para /cybersyn
-          mkdir -p _site/cybersyn
-          cp -r frontend/out/* _site/cybersyn/
+          # Copia assets da raiz para serem acessíveis
+          cp -r assets _site/ 2>/dev/null || true
 
       - name: Publish to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3

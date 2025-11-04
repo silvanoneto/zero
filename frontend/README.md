@@ -1,16 +1,48 @@
-# Constituição 2.0 - Frontend
+# Cybersyn 2.0 - Frontend
 
-Interface Web3 para o sistema de governança on-chain da Constituição 2.0.
+Interface Web3 para o sistema de governança on-chain da Cybersyn 2.0.
+
+## 🚀 Quick Start
+
+**Novo no projeto?** Veja o [**QUICKSTART.md**](./QUICKSTART.md) para rodar em 5 minutos! ⚡
+
+## 📚 Documentação
+
+- **[QUICKSTART.md](./QUICKSTART.md)** - Guia rápido para começar
+- **[Componentes DAOMitosis](./src/components/DAOMitosis/README.md)** - Documentação dos componentes de mitose
+- **[Componentes FederationVoting](./src/components/FederationVoting/README.md)** - Documentação dos componentes de votação
+- **[Contratos](../contracts/README.md)** - Smart contracts e testes
+- **[Artigo 5º-C](../contracts/ARTIGO_4B_IMPLEMENTATION.md)** - Implementação completa do sistema de mitose
 
 ## 🚀 Funcionalidades
 
+### Governança & Votação
 - ✅ Conexão de carteira via RainbowKit
 - ✅ Visualização de propostas ativas
 - ✅ Criação de novas propostas (BIPs)
 - ✅ Votação com 4 funções diferentes
 - ✅ Dashboard com estatísticas em tempo real
+
+### Sistema de Mitose (Artigo 5º-C) 🆕
+
+- ✅ **DAOStatusCard** - Monitor de status e limite de Dunbar
+- ✅ **MitosisVoting** - Interface de votação para divisão
+- ✅ **DAOGenealogyTree** - Visualização da árvore de DAOs
+- ✅ Proteções de segurança (rate limiting, cooldowns)
+- ✅ Integração automática com FederationVoting e GovernanceToken
+
+### Sistema de Votação Federal 🆕
+
+- ✅ **ProposalCard** - Exibição de propostas com resultados em tempo real
+- ✅ **VoteModal** - Interface de votação com 3 opções (A Favor/Contra/Abstenção)
+- ✅ **VotingStats** - Dashboard de estatísticas do sistema
+- ✅ Registro automático de atividade no sistema de mitose
+- ✅ Página completa: `/federation-voting`
+
+### Infraestrutura
 - ✅ Integração com IPFS para armazenamento
 - ✅ Suporte a The Graph para queries rápidas
+- ✅ P2P para distribuição descentralizada
 
 ## 📦 Instalação
 
@@ -68,9 +100,25 @@ frontend/
 │   ├── app/                 # Next.js App Router
 │   │   ├── layout.tsx       # Layout raiz
 │   │   ├── page.tsx         # Página principal
+│   │   ├── dao-mitosis/     # Sistema de Mitose
+│   │   │   └── page.tsx
+│   │   ├── federation-voting/ # Sistema de Votação
+│   │   │   └── page.tsx
 │   │   ├── globals.css      # Estilos globais
 │   │   └── providers.tsx    # Providers (Wagmi, RainbowKit)
 │   ├── components/          # Componentes React
+│   │   ├── DAOMitosis/      # Componentes de Mitose
+│   │   │   ├── DAOStatusCard.tsx
+│   │   │   ├── MitosisVoting.tsx
+│   │   │   ├── DAOGenealogyTree.tsx
+│   │   │   ├── index.ts
+│   │   │   └── README.md
+│   │   ├── FederationVoting/ # Componentes de Votação
+│   │   │   ├── ProposalCard.tsx
+│   │   │   ├── VoteModal.tsx
+│   │   │   ├── VotingStats.tsx
+│   │   │   ├── index.ts
+│   │   │   └── README.md
 │   │   ├── ProposalsList.tsx
 │   │   ├── ProposalCard.tsx
 │   │   ├── CreateProposal.tsx

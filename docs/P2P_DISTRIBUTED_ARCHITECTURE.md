@@ -1,4 +1,4 @@
-# 🌐 Arquitetura P2P Distribuída - Constituição 2.0
+# 🌐 Arquitetura P2P Distribuída - Cybersyn 2.0
 
 **Status:** Design Document  
 **Versão:** 1.0  
@@ -9,7 +9,7 @@
 
 ## 🎯 Visão Geral
 
-Reimaginar o sistema **Cybersyn 2.0** como uma **rede P2P completamente descentralizada**, eliminando pontos únicos de falha e alinhando com os princípios fundamentais da Constituição 2.0:
+Reimaginar o sistema **Cybersyn 2.0** como uma **rede P2P completamente descentralizada**, eliminando pontos únicos de falha e alinhando com os princípios fundamentais da Cybersyn 2.0:
 
 - ✅ **Artigo 0º**: Poder descentralizado → Sem servidores centrais
 - ✅ **Artigo 4º-B**: Redundância organizacional → N nós competindo
@@ -659,7 +659,7 @@ class ExperimentalZone {
 ## 🔧 Exemplo de Nó Completo
 
 ```javascript
-// sovereign-node.js - Nó completo da Constituição 2.0
+// sovereign-node.js - Nó completo da Cybersyn 2.0
 
 import { createHelia } from 'helia'
 import { createLibp2p } from 'libp2p'
@@ -898,7 +898,7 @@ async function validateCRDT(entry) {
 
 ## 🎯 Conclusão
 
-A arquitetura P2P é **superior** em todos os aspectos alinhados com a Constituição 2.0:
+A arquitetura P2P é **superior** em todos os aspectos alinhados com a Cybersyn 2.0:
 
 | Princípio                | Cliente-Servidor | P2P Distribuído |
 |-------------------------|------------------|-----------------|

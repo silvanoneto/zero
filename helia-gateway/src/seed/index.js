@@ -30,7 +30,7 @@ function log(message, color = 'reset') {
 function banner() {
   log('\n' + '='.repeat(70), 'cyan');
   log('  🌀 REVOLUÇÃO CIBERNÉTICA - SISTEMA DE SEED  ', 'bright');
-  log('  Constituição 2.0 | Governança Biomimética', 'cyan');
+  log('  Cybersyn 2.0 | Governança Biomimética', 'cyan');
   log('='.repeat(70) + '\n', 'cyan');
 }
 
@@ -134,7 +134,7 @@ function displaySummary(stats, logAnalysis) {
   log(`      • Análise de Logs: ${stats.bySource.log_analysis}`);
   log(`      • Análise do Rizoma: ${stats.bySource.rizoma_analysis}`);
   log(`      • Análise de Lacunas: ${stats.bySource.gap_analysis}`);
-  log(`      • Constituição 2.0: ${stats.bySource.constitution_2_0}`);
+  log(`      • Cybersyn 2.0: ${stats.bySource.constitution_2_0}`);
   
   log('\n   Por Tipo de Votação:', 'yellow');
   log(`      • Linear: ${stats.byVoteType.LINEAR}`);
