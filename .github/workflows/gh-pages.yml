@@ -84,6 +84,7 @@ jobs:
         run: |
           rm -rf src/app/api
           rm -f src/proxy.ts src/middleware.ts
+          rm -rf .next
 
       - name: Build Next.js frontend
         working-directory: ./frontend
