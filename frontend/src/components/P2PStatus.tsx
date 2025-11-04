@@ -96,24 +96,24 @@ const P2PStatus: React.FC = () => {
   }
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 sm:p-6 border border-gray-200 dark:border-gray-700">
       {/* Header */}
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-3">
-          <div className={`w-3 h-3 rounded-full ${getStatusColor()} animate-pulse`} />
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0 mb-4">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <div className={`w-3 h-3 rounded-full ${getStatusColor()} animate-pulse flex-shrink-0`} />
+          <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white">
             Rede P2P
           </h3>
-                    <span className="text-sm text-gray-700 dark:text-gray-400">
+          <span className="text-xs sm:text-sm text-gray-700 dark:text-gray-400">
             {isConnected ? 'Conectado' : 'Desconectado'}
           </span>
         </div>
         
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap">
           {!isConnected && !isConnecting && (
             <button
               onClick={connect}
-              className="px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+              className="px-3 py-1.5 text-xs sm:text-sm bg-blue-500 text-white rounded hover:bg-blue-600 transition whitespace-nowrap"
             >
               Conectar
             </button>
@@ -121,16 +121,19 @@ const P2PStatus: React.FC = () => {
           {isConnected && (
             <button
               onClick={disconnect}
-              className="px-3 py-1 text-sm bg-red-500 text-white rounded hover:bg-red-600 transition"
+              className="px-3 py-1.5 text-xs sm:text-sm bg-red-500 text-white rounded hover:bg-red-600 transition whitespace-nowrap"
             >
               Desconectar
             </button>
           )}
           <button
             onClick={() => setShowDetails(!showDetails)}
-            className="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition"
+            className="px-3 py-1.5 text-xs sm:text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition whitespace-nowrap"
           >
-            {showDetails ? '▼' : '▶'} Detalhes
+            <span className="inline-flex items-center gap-1">
+              <span>{showDetails ? '▼' : '▶'}</span>
+              <span className="hidden xs:inline">Detalhes</span>
+            </span>
           </button>
         </div>
       </div>
@@ -138,46 +141,46 @@ const P2PStatus: React.FC = () => {
       {/* Erro */}
       {error && (
         <div className="mb-4 p-3 bg-red-100 dark:bg-red-900/30 border border-red-300 dark:border-red-700 rounded">
-          <p className="text-sm text-red-700 dark:text-red-300">
+          <p className="text-xs sm:text-sm text-red-700 dark:text-red-300 break-words">
             ⚠️ {error.message}
           </p>
         </div>
       )}
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-        <div className="bg-gray-50 dark:bg-gray-700/50 p-3 rounded">
-          <div className="text-xs text-gray-700 dark:text-gray-400 mb-1">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-4 sm:mb-6">
+        <div className="bg-gray-50 dark:bg-gray-700/50 p-2 sm:p-3 rounded">
+          <div className="text-[10px] sm:text-xs text-gray-700 dark:text-gray-400 mb-1">
             Peers
           </div>
-          <div className="text-2xl font-bold text-gray-900 dark:text-white">
+          <div className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
             {stats.peers}
           </div>
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-700/50 p-3 rounded">
-          <div className="text-xs text-gray-700 dark:text-gray-400 mb-1">
+        <div className="bg-gray-50 dark:bg-gray-700/50 p-2 sm:p-3 rounded">
+          <div className="text-[10px] sm:text-xs text-gray-700 dark:text-gray-400 mb-1">
             Mensagens
           </div>
-          <div className="text-2xl font-bold text-gray-900 dark:text-white">
+          <div className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
             {stats.metrics.messagesReceived}
           </div>
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-700/50 p-3 rounded">
-          <div className="text-xs text-gray-700 dark:text-gray-400 mb-1">
+        <div className="bg-gray-50 dark:bg-gray-700/50 p-2 sm:p-3 rounded">
+          <div className="text-[10px] sm:text-xs text-gray-700 dark:text-gray-400 mb-1">
             Propostas
           </div>
-          <div className="text-2xl font-bold text-gray-900 dark:text-white">
+          <div className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
             {stats.metrics.proposalsReceived}
           </div>
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-700/50 p-3 rounded">
-          <div className="text-xs text-gray-700 dark:text-gray-400 mb-1">
+        <div className="bg-gray-50 dark:bg-gray-700/50 p-2 sm:p-3 rounded">
+          <div className="text-[10px] sm:text-xs text-gray-700 dark:text-gray-400 mb-1">
             Votos
           </div>
-          <div className="text-2xl font-bold text-gray-900 dark:text-white">
+          <div className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
             {stats.metrics.votesReceived}
           </div>
         </div>
@@ -188,18 +191,18 @@ const P2PStatus: React.FC = () => {
         <div className="space-y-4">
           {/* Peer ID */}
           <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
-            <div className="flex items-center justify-between mb-2">
+            <div className="flex flex-col xs:flex-row xs:items-center xs:justify-between gap-2 mb-2">
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                 Seu Peer ID
               </span>
               <button
                 onClick={() => navigator.clipboard.writeText(stats.peerId || '')}
-                className="text-xs text-blue-500 hover:text-blue-600"
+                className="text-xs text-blue-500 hover:text-blue-600 self-start xs:self-auto"
               >
                 📋 Copiar
               </button>
             </div>
-            <code className="block w-full p-2 bg-gray-100 dark:bg-gray-900 rounded text-xs font-mono text-gray-800 dark:text-gray-200 overflow-x-auto">
+            <code className="block w-full p-2 bg-gray-100 dark:bg-gray-900 rounded text-xs font-mono text-gray-800 dark:text-gray-200 overflow-x-auto break-all">
               {stats.peerId || 'N/A'}
             </code>
           </div>
@@ -214,18 +217,18 @@ const P2PStatus: React.FC = () => {
                 {recentMessages.map((msg, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center gap-3 p-2 bg-gray-50 dark:bg-gray-700/50 rounded text-sm"
+                    className="flex items-center gap-2 sm:gap-3 p-2 bg-gray-50 dark:bg-gray-700/50 rounded text-sm"
                   >
-                    <span className="text-lg">{getMessageIcon(msg.type)}</span>
+                    <span className="text-base sm:text-lg flex-shrink-0">{getMessageIcon(msg.type)}</span>
                     <div className="flex-1 min-w-0">
-                      <div className="text-gray-900 dark:text-white font-medium capitalize truncate">
+                      <div className="text-gray-900 dark:text-white font-medium capitalize truncate text-xs sm:text-sm">
                         {msg.type}
                       </div>
-                      <div className="text-xs text-gray-600 dark:text-gray-400">
+                      <div className="text-[10px] sm:text-xs text-gray-600 dark:text-gray-400 truncate">
                         {msg.data.id || msg.data.proposalId || 'N/A'}
                       </div>
                     </div>
-                    <span className="text-xs text-gray-500 dark:text-gray-500 whitespace-nowrap">
+                    <span className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-500 whitespace-nowrap flex-shrink-0">
                       {formatTimestamp(msg.timestamp)}
                     </span>
                   </div>
@@ -239,7 +242,7 @@ const P2PStatus: React.FC = () => {
             <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
               Métricas de Rede
             </h4>
-            <div className="grid grid-cols-2 gap-3 text-sm">
+            <div className="grid grid-cols-1 xs:grid-cols-2 gap-2 sm:gap-3 text-xs sm:text-sm">
               <div className="flex justify-between">
                 <span className="text-gray-700 dark:text-gray-400">Recebidas:</span>
                 <span className="font-mono text-gray-900 dark:text-white">
