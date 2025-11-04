@@ -23,13 +23,17 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react', 'recharts'],
   },
 
-  // Proxy para backend P2P
-  async rewrites() {
-    return [
-      {
-        source: '/api/p2p/:path*',
-        destination: 'http://localhost:8080/api/p2p/:path*',
-      },
-    ];
-  },
-};export default nextConfig;
+  // Proxy para backend P2P (only for standalone mode)
+  ...((process.env.NEXT_PUBLIC_DEMO_MODE !== 'true') && {
+    async rewrites() {
+      return [
+        {
+          source: '/api/p2p/:path*',
+          destination: 'http://localhost:8080/api/p2p/:path*',
+        },
+      ];
+    },
+  }),
+};
+
+export default nextConfig;
