@@ -10,6 +10,12 @@ export const metadata = {
   title: "Cybersyn 2.0 - Governança On-Chain",
   description:
     "Sistema de votação híbrida biomimético-cibernética para a Revolução Cibernética",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+  },
 };
 
 export default function RootLayout({

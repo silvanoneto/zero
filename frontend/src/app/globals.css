@@ -194,3 +194,45 @@ code, pre {
 .animate-slideIn {
   animation: slideIn 0.5s ease-out !important;
 }
+
+/* Mobile-specific optimizations */
+@media (max-width: 640px) {
+  /* Reduce motion for better performance on mobile */
+  .glass-effect {
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+  }
+  
+  /* Improve touch targets */
+  button, a {
+    min-height: 44px;
+  }
+  
+  /* Optimize text rendering */
+  body {
+    text-rendering: optimizeSpeed;
+    font-size: 14px;
+  }
+  
+  /* Reduce spacing for compact mobile view */
+  .container {
+    max-width: 100%;
+  }
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Custom breakpoint for extra small devices */
+@media (min-width: 475px) {
+  .xs\:inline {
+    display: inline;
+  }
+  .xs\:hidden {
+    display: none;
+  }
+}
+
