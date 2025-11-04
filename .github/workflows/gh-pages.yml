@@ -79,9 +79,11 @@ jobs:
         working-directory: ./frontend
         run: npm install
 
-      - name: Remove API routes (not supported in static export)
+      - name: Remove API routes and proxy (not supported in static export)
         working-directory: ./frontend
-        run: rm -rf src/app/api
+        run: |
+          rm -rf src/app/api
+          rm -f src/proxy.ts src/middleware.ts
 
       - name: Build Next.js frontend
         working-directory: ./frontend
