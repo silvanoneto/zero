@@ -1,6 +1,4 @@
 # Traefik Reverse Proxy with SSL/TLS
-version: '3.8'
-
 services:
   traefik:
     image: traefik:v3.2

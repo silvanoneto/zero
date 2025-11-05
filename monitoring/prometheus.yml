@@ -42,9 +42,9 @@ scrape_configs:
           service: 'cadvisor'
 
   # Next.js Frontend
-  - job_name: 'frontend'
+  - job_name: 'nextjs'
     static_configs:
-      - targets: ['constituicao-frontend:3000']
+      - targets: ['revolucao-cibernetica-app:3000']
         labels:
           service: 'frontend'
           app: 'nextjs'
@@ -62,7 +62,7 @@ scrape_configs:
   # Helia Gateway
   - job_name: 'helia-gateway'
     static_configs:
-      - targets: ['constituicao-helia-gateway:3002']
+      - targets: ['constituicao-helia-gateway:8080']
         labels:
           service: 'helia-gateway'
           app: 'nodejs'

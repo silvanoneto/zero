@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from './providers';
 import { WebVitals } from '@/components/WebVitals';
+import { WalletPersistence } from '@/components/WalletPersistence';
+import { MetricsReporter } from '@/components/MetricsReporter';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +28,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <WalletPersistence />
+          <MetricsReporter />
+          {children}
+        </Providers>
         <WebVitals />
       </body>
     </html>

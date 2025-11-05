@@ -66,6 +66,53 @@
     <meta property="article:tag" content="segunda ordem">
     <meta property="article:tag" content="inteligência coletiva">
 
+    <!-- Anti-Loop Protection -->
+    <script>
+        (function() {
+            // Detectar loops infinitos de recarregamento
+            const RELOAD_KEY = 'manifesto_reload_count';
+            const RELOAD_TIME_KEY = 'manifesto_reload_time';
+            const MAX_RELOADS = 3; // Máximo de reloads em 10 segundos
+            const TIME_WINDOW = 10000; // 10 segundos
+
+            try {
+                const now = Date.now();
+                const lastReloadTime = parseInt(localStorage.getItem(RELOAD_TIME_KEY) || '0', 10);
+                const reloadCount = parseInt(localStorage.getItem(RELOAD_KEY) || '0', 10);
+
+                // Se passou mais de 10 segundos, resetar contador
+                if (now - lastReloadTime > TIME_WINDOW) {
+                    localStorage.setItem(RELOAD_KEY, '1');
+                    localStorage.setItem(RELOAD_TIME_KEY, now.toString());
+                } else {
+                    // Dentro da janela de tempo, incrementar contador
+                    const newCount = reloadCount + 1;
+                    
+                    if (newCount > MAX_RELOADS) {
+                        // Loop detectado! Redirecionar para página de limpeza
+                        console.error('🚨 Loop infinito detectado! Redirecionando para limpeza de cache...');
+                        localStorage.setItem(RELOAD_KEY, '0');
+                        window.location.href = '/clear-cache.html?auto=true';
+                        throw new Error('Loop prevention');
+                    }
+                    
+                    localStorage.setItem(RELOAD_KEY, newCount.toString());
+                    localStorage.setItem(RELOAD_TIME_KEY, now.toString());
+                }
+
+                // Limpar contador após 2 minutos de navegação bem-sucedida
+                setTimeout(function() {
+                    try {
+                        localStorage.setItem(RELOAD_KEY, '0');
+                    } catch(e) {}
+                }, 120000);
+
+            } catch (e) {
+                console.warn('⚠️ Erro no sistema anti-loop:', e);
+            }
+        })();
+    </script>
+
     <!-- Loading Overlay - DEVE CARREGAR PRIMEIRO -->
     <script src="./assets/scripts/loading-overlay.js"></script>
 

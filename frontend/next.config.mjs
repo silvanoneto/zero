@@ -18,8 +18,9 @@ const nextConfig = {
   // Turbopack configuration (Next.js 16 default)
   turbopack: {},
   
-  // Otimizações de performance
+  // Habilitar instrumentação para métricas
   experimental: {
+    instrumentationHook: true,
     optimizePackageImports: ['lucide-react', 'recharts'],
   },
 

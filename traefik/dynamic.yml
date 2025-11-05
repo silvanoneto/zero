@@ -4,7 +4,7 @@
 http:
   # Routers
   routers:
-    # Dashboard Router
+    # Dashboard Router (mantém autenticação - ferramenta administrativa)
     dashboard:
       rule: "Host(`traefik.revolucao-cibernetica.local`)"
       service: api@internal
@@ -17,7 +17,7 @@ http:
       tls:
         # certResolver: letsencrypt  # Usando certificados mkcert locais
 
-    # Frontend Router
+    # Frontend Router (SEM autenticação - site público)
     frontend:
       rule: "Host(`revolucao-cibernetica.local`) || Host(`www.revolucao-cibernetica.local`)"
       service: frontend
@@ -30,7 +30,7 @@ http:
       tls:
         # certResolver: letsencrypt  # Usando certificados mkcert locais
 
-    # Prometheus Router
+    # Prometheus Router (mantém autenticação - ferramenta administrativa)
     prometheus:
       rule: "Host(`prometheus.revolucao-cibernetica.local`)"
       service: prometheus
@@ -42,7 +42,7 @@ http:
       tls:
         # certResolver: letsencrypt  # Usando certificados mkcert locais
 
-    # Grafana Router
+    # Grafana Router (SEM autenticação - Grafana tem seu próprio login)
     grafana:
       rule: "Host(`grafana.revolucao-cibernetica.local`)"
       service: grafana
@@ -53,7 +53,7 @@ http:
       tls:
         # certResolver: letsencrypt  # Usando certificados mkcert locais
 
-    # IPFS Gateway Router
+    # IPFS Gateway Router (SEM autenticação - gateway público)
     ipfs-gateway:
       rule: "Host(`ipfs.revolucao-cibernetica.local`)"
       service: ipfs-gateway
@@ -71,10 +71,11 @@ http:
       loadBalancer:
         servers:
           - url: "http://revolucao-cibernetica-app:3000"
-        healthCheck:
-          path: /api/health
-          interval: "10s"
-          timeout: "3s"
+        # Health check desabilitado - Next.js não tem /api/health por padrão
+        # healthCheck:
+        #   path: /api/health
+        #   interval: "10s"
+        #   timeout: "3s"
 
     prometheus:
       loadBalancer:
