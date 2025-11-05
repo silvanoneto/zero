@@ -10,9 +10,10 @@ import {
   Settings,
   CheckCircle2,
   AlertTriangle,
-  Network
+  Network,
+  Loader2
 } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChainSelector } from './ChainSelector';
 import { 
   getChainMetadata, 
@@ -25,9 +26,29 @@ import {
 export function CustomConnectButton() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showChainSelector, setShowChainSelector] = useState(false);
-  const { address, isConnected } = useAccount();
+  const [isReconnecting, setIsReconnecting] = useState(true);
+  const { address, isConnected, isConnecting, isReconnecting: wagmiIsReconnecting } = useAccount();
   const { disconnect } = useDisconnect();
   const chainId = useChainId();
+
+  // Detecta quando a reconexão termina
+  useEffect(() => {
+    // Se não está mais reconectando e não está conectando, considera pronto
+    if (!wagmiIsReconnecting && !isConnecting) {
+      setIsReconnecting(false);
+    }
+    
+    // Debug
+    if (process.env.NODE_ENV === 'development') {
+      console.log('🔘 CustomConnectButton state:', {
+        isConnected,
+        isConnecting,
+        wagmiIsReconnecting,
+        isReconnecting,
+        hasAddress: !!address,
+      });
+    }
+  }, [wagmiIsReconnecting, isConnecting, isConnected, address]);
 
   const metadata = getChainMetadata(chainId);
   const chainColor = getChainColor(chainId);
@@ -44,6 +65,17 @@ export function CustomConnectButton() {
   const formatAddress = (addr: string) => {
     return `${addr.slice(0, 6)}...${addr.slice(-4)}`;
   };
+
+  // Mostra loading durante reconexão inicial
+  if (isReconnecting && !isConnected) {
+    return (
+      <div className="flex items-center gap-2 px-4 py-2.5 bg-gray-100 dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-lg text-xs sm:text-base">
+        <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 animate-spin text-blue-600" />
+        <span className="text-gray-600 dark:text-gray-400 hidden xs:inline">Reconectando...</span>
+        <span className="text-gray-600 dark:text-gray-400 xs:hidden">...</span>
+      </div>
+    );
+  }
 
   if (!isConnected) {
     return (

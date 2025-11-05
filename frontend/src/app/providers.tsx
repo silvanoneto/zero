@@ -147,7 +147,10 @@ const config = createConfig({
   ssr: true,
   storage: createStorage({
     storage: typeof window !== 'undefined' ? window.localStorage : cookieStorage,
+    key: 'revolucao-cibernetica.wallet.store', // Key específica para evitar conflitos
   }),
+  // Habilita reconexão automática
+  multiInjectedProviderDiscovery: true,
 });
 
 const queryClient = new QueryClient({
@@ -172,6 +175,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
           modalSize="compact"
           showRecentTransactions={true}
           initialChain={hardhat}
+          coolMode={false}
           appInfo={{
             appName: 'Revolução Cibernética',
             disclaimer: () => (

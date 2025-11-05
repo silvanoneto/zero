@@ -1,8 +1,17 @@
 {
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
+  "/api/metrics/route": "/api/metrics",
+  "/book/page": "/book",
+  "/constituicao-2-0/page": "/constituicao-2-0",
+  "/constituicao/page": "/constituicao",
+  "/contracts/page": "/contracts",
   "/dao-mitosis/page": "/dao-mitosis",
+  "/download/page": "/download",
+  "/entry/page": "/entry",
   "/federation-voting/page": "/federation-voting",
+  "/manifesto/page": "/manifesto",
   "/page": "/",
-  "/test-p2p/page": "/test-p2p"
+  "/test-p2p/page": "/test-p2p",
+  "/zec-simulator/page": "/zec-simulator"
 }

@@ -46,10 +46,52 @@
       "namedRegex": "^/_not\\-found(?:/)?$"
     },
     {
+      "page": "/api/metrics",
+      "regex": "^/api/metrics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/metrics(?:/)?$"
+    },
+    {
+      "page": "/book",
+      "regex": "^/book(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/book(?:/)?$"
+    },
+    {
+      "page": "/constituicao",
+      "regex": "^/constituicao(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/constituicao(?:/)?$"
+    },
+    {
+      "page": "/constituicao-2-0",
+      "regex": "^/constituicao\\-2\\-0(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/constituicao\\-2\\-0(?:/)?$"
+    },
+    {
+      "page": "/contracts",
+      "regex": "^/contracts(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contracts(?:/)?$"
+    },
+    {
       "page": "/dao-mitosis",
       "regex": "^/dao\\-mitosis(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/dao\\-mitosis(?:/)?$"
+    },
+    {
+      "page": "/download",
+      "regex": "^/download(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/download(?:/)?$"
+    },
+    {
+      "page": "/entry",
+      "regex": "^/entry(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/entry(?:/)?$"
     },
     {
       "page": "/federation-voting",
@@ -58,10 +100,22 @@
       "namedRegex": "^/federation\\-voting(?:/)?$"
     },
     {
+      "page": "/manifesto",
+      "regex": "^/manifesto(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/manifesto(?:/)?$"
+    },
+    {
       "page": "/test-p2p",
       "regex": "^/test\\-p2p(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/test\\-p2p(?:/)?$"
+    },
+    {
+      "page": "/zec-simulator",
+      "regex": "^/zec\\-simulator(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/zec\\-simulator(?:/)?$"
     }
   ],
   "dataRoutes": [],

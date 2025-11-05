@@ -1,0 +1,3 @@
+module.exports=[397998,e=>{"use strict";async function r(){{let{register:r}=await e.A(994807);if(console.log("📊 Prometheus instrumentation registered"),"function"==typeof e.g.fetch){let r=e.g.fetch;e.g.fetch=async(...e)=>{let t=Date.now();try{let o=await r(...e),s=(Date.now()-t)/1e3;return console.log(`Fetch: ${e[0]} - ${o.status} (${s}s)`),o}catch(r){throw console.error(`Fetch error: ${e[0]}`,r),r}}}}}async function t(e,r){console.error(`❌ Request error: ${r.method} ${r.path}`,e)}e.s(["onRequestError",()=>t,"register",()=>r])},994807,e=>{e.v(r=>Promise.all(["server/chunks/[root-of-the-server]__3ed7c2e6._.js","server/chunks/node_modules_50786bef._.js"].map(r=>e.l(r))).then(()=>r(703141)))}];
+
+//# sourceMappingURL=_df380818._.js.map

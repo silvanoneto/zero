@@ -5,6 +5,7 @@
 
 # Variáveis
 COMPOSE = docker-compose
+COMPOSE_FILES = -f docker-compose.yml -f docker-compose.traefik.yml -f docker-compose.monitoring.yml
 COMPOSE_MONITORING = docker-compose -f docker-compose.monitoring.yml
 PROFILE_DEV = --profile dev
 PROFILE_PROD = --profile prod
@@ -22,6 +23,7 @@ help:
 	@echo "  make dev          - Iniciar ambiente de desenvolvimento"
 	@echo "  make prod         - Iniciar ambiente de produção"
 	@echo "  make all          - Iniciar todos os serviços (incluindo peer2)"
+	@echo "  make all-services - Iniciar TODOS os serviços (app + traefik + monitoring)"
 	@echo ""
 	@echo "  🔍 MONITORAMENTO:"
 	@echo "  make monitoring       - Iniciar stack de observabilidade"
@@ -89,6 +91,30 @@ all:
 	@echo "📈 Graph Node: http://localhost:8000"
 	@echo "🗄️  PostgreSQL: localhost:5432"
 
+# Todos os serviços incluindo Traefik e Monitoring
+all-services:
+	@echo "🚀 Iniciando TODOS os serviços (app + traefik + monitoring)..."
+	$(COMPOSE) $(COMPOSE_FILES) $(PROFILE_ALL) up -d --remove-orphans
+	@echo ""
+	@echo "✅ Todos os serviços iniciados!"
+	@echo ""
+	@echo "📱 APLICAÇÃO:"
+	@echo "   Frontend: https://revolucao-cibernetica.local"
+	@echo "   IPFS Gateway: https://ipfs.revolucao-cibernetica.local"
+	@echo ""
+	@echo "🔐 REVERSE PROXY:"
+	@echo "   Traefik Dashboard: https://traefik.revolucao-cibernetica.local"
+	@echo "   Credenciais: admin / revolucao"
+	@echo ""
+	@echo "📊 MONITORAMENTO:"
+	@echo "   Grafana: https://grafana.revolucao-cibernetica.local (admin/admin)"
+	@echo "   Prometheus: https://prometheus.revolucao-cibernetica.local (admin/revolucao)"
+	@echo ""
+	@echo "💡 DICA: Adicione no /etc/hosts:"
+	@echo "   127.0.0.1 revolucao-cibernetica.local ipfs.revolucao-cibernetica.local"
+	@echo "   127.0.0.1 traefik.revolucao-cibernetica.local grafana.revolucao-cibernetica.local"
+	@echo "   127.0.0.1 prometheus.revolucao-cibernetica.local"
+
 # Build
 build:
 	@echo "🔨 Building todas as imagens..."
@@ -108,8 +134,13 @@ up:
 
 down:
 	@echo "⏹️  Parando todos os serviços..."
-	$(COMPOSE) down
+	$(COMPOSE) $(COMPOSE_FILES) down --remove-orphans
 	@echo "✅ Serviços parados!"
+
+down-all:
+	@echo "⏹️  Parando TODOS os serviços (incluindo órfãos)..."
+	$(COMPOSE) $(COMPOSE_FILES) down --remove-orphans
+	@echo "✅ Todos os serviços parados!"
 
 restart:
 	@echo "🔄 Reiniciando serviços..."
@@ -351,34 +382,3 @@ traefik-hosts:
 	@echo "127.0.0.1 whoami.revolucao-cibernetica.local" | sudo tee -a /etc/hosts
 	@echo ""
 	@echo "✅ Domínios adicionados!"
-
-# Iniciar tudo incluindo Traefik
-all-services: dev monitoring traefik
-	@echo ""
-	@echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-	@echo "  🎉 TODOS OS SERVIÇOS INICIADOS!"
-	@echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-	@echo ""
-	@echo "📱 Aplicação (HTTP - Porta Direta):"
-	@echo "   Frontend: http://localhost:3000"
-	@echo "   IPFS Gateway: http://localhost:8080"
-	@echo "   Helia Peer 2: http://localhost:8082"
-	@echo ""
-	@echo "🔍 Monitoramento (HTTP - Porta Direta):"
-	@echo "   Grafana: http://localhost:3001 (admin/admin)"
-	@echo "   Prometheus: http://localhost:9090"
-	@echo "   Loki: http://localhost:3100"
-	@echo ""
-	@echo "🔒 Via Traefik (HTTPS - Domínios):"
-	@echo "   Dashboard (HTTP): http://localhost:8090"
-	@echo "   Dashboard (HTTPS): https://traefik.revolucao-cibernetica.local"
-	@echo "   Frontend: https://revolucao-cibernetica.local"
-	@echo "   Grafana: https://grafana.revolucao-cibernetica.local"
-	@echo "   Prometheus: https://prometheus.revolucao-cibernetica.local"
-	@echo "   IPFS Gateway: https://ipfs.revolucao-cibernetica.local"
-	@echo ""
-	@echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-
-# Parar tudo incluindo Traefik
-all-services-down: down monitoring-down traefik-down
-	@echo "✅ Todos os serviços parados!"

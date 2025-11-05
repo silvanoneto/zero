@@ -177,6 +177,9 @@ contract FraudDetection is AccessControl, Pausable {
     /// @notice Total de incidentes detectados
     uint256 public totalIncidents;
     
+    /// @notice Contrato de Justiça Restaurativa (opcional)
+    address public restorativeJusticeContract;
+    
     // ============ EVENTS ============
     
     event ActionRecorded(
@@ -221,6 +224,12 @@ contract FraudDetection is AccessControl, Pausable {
         address resolver
     );
     
+    event DisputeCreatedForFraud(
+        address indexed wallet,
+        uint256 disputeId,
+        FraudType fraudType
+    );
+    
     event RuleAdded(
         uint256 indexed ruleId,
         string name,
@@ -252,6 +261,54 @@ contract FraudDetection is AccessControl, Pausable {
         _grantRole(PAUSER_ROLE, msg.sender);
         
         _initializeDefaultRules();
+    }
+    
+    // ============ ADMIN FUNCTIONS ============
+    
+    /**
+     * @notice Configura contrato de Justiça Restaurativa
+     * @param _restorativeJustice Endereço do contrato
+     */
+    function setRestorativeJusticeContract(address _restorativeJustice) 
+        external 
+        onlyRole(DEFAULT_ADMIN_ROLE) 
+    {
+        require(_restorativeJustice != address(0), "Invalid address");
+        restorativeJusticeContract = _restorativeJustice;
+    }
+    
+    /**
+     * @notice Cria disputa no sistema de justiça para fraude detectada
+     * @param wallet Carteira fraudulenta
+     * @param evidenceIPFS Hash IPFS com evidências
+     * @return disputeId ID da disputa criada
+     */
+    function createDisputeForFraud(
+        address wallet,
+        string memory evidenceIPFS
+    )
+        external
+        onlyRole(VALIDATOR_ROLE)
+        returns (uint256 disputeId)
+    {
+        require(restorativeJusticeContract != address(0), "Justice contract not set");
+        require(walletSecurity[wallet].status == WalletStatus.Blocked, "Wallet not blocked");
+        
+        // Cria disputa no contrato de justiça
+        (bool success, bytes memory data) = restorativeJusticeContract.call(
+            abi.encodeWithSignature(
+                "createDispute(address,string)",
+                wallet,
+                evidenceIPFS
+            )
+        );
+        
+        require(success, "Failed to create dispute");
+        disputeId = abi.decode(data, (uint256));
+        
+        emit DisputeCreatedForFraud(wallet, disputeId, FraudType.PatternDeviation);
+        
+        return disputeId;
     }
     
     // ============ CORE FUNCTIONS ============

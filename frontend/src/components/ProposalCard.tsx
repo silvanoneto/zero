@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { Clock, Users, TrendingUp, CheckCircle2, XCircle } from 'lucide-react';
+import { Clock, Users, TrendingUp, CheckCircle2, XCircle, Sparkles } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { VoteModal } from './VoteModal';
+import { ProposalAttentionBadge, AllocateAttentionModal } from './AttentionTokens';
 
 interface Proposal {
   id: number;
@@ -25,6 +26,7 @@ interface ProposalCardProps {
 
 export function ProposalCard({ proposal }: ProposalCardProps) {
   const [isVoteModalOpen, setIsVoteModalOpen] = useState(false);
+  const [isAttentionModalOpen, setIsAttentionModalOpen] = useState(false);
   
   const totalVotes = proposal.votesFor + proposal.votesAgainst;
   const forPercentage = totalVotes > 0n 
@@ -56,9 +58,12 @@ export function ProposalCard({ proposal }: ProposalCardProps) {
       {/* Header */}
       <div className="flex items-start justify-between mb-4">
         <div className="flex-1">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-            {proposal.title}
-          </h3>
+          <div className="flex items-center gap-2 mb-2">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+              {proposal.title}
+            </h3>
+            <ProposalAttentionBadge proposalId={BigInt(proposal.id)} variant="compact" />
+          </div>
           <p className="text-gray-600 dark:text-gray-300 text-sm">
             {proposal.description}
           </p>
@@ -127,14 +132,23 @@ export function ProposalCard({ proposal }: ProposalCardProps) {
         Proposta por: <code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">{proposal.proposer.slice(0, 6)}...{proposal.proposer.slice(-4)}</code>
       </div>
 
-      {/* Action Button */}
-      <button 
-        onClick={() => setIsVoteModalOpen(true)}
-        className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
-      >
-        <TrendingUp className="w-4 h-4" />
-        Votar nesta Proposta
-      </button>
+      {/* Action Buttons */}
+      <div className="grid grid-cols-2 gap-3">
+        <button 
+          onClick={() => setIsVoteModalOpen(true)}
+          className="bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+        >
+          <TrendingUp className="w-4 h-4" />
+          Votar
+        </button>
+        <button 
+          onClick={() => setIsAttentionModalOpen(true)}
+          className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+        >
+          <Sparkles className="w-4 h-4" />
+          Atenção
+        </button>
+      </div>
 
       {/* Vote Modal */}
       <VoteModal
@@ -142,6 +156,13 @@ export function ProposalCard({ proposal }: ProposalCardProps) {
         proposalTitle={proposal.title}
         isOpen={isVoteModalOpen}
         onClose={() => setIsVoteModalOpen(false)}
+      />
+
+      {/* Attention Modal */}
+      <AllocateAttentionModal
+        proposalId={BigInt(proposal.id)}
+        isOpen={isAttentionModalOpen}
+        onClose={() => setIsAttentionModalOpen(false)}
       />
     </div>
   );

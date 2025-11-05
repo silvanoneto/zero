@@ -1,6 +1,10 @@
 import { NextResponse } from 'next/server'
 import { register, collectDefaultMetrics, Counter, Histogram } from 'prom-client'
 
+// Configuração para export estático (desabilita em modo demo)
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 // Coletar métricas padrão do Node.js (CPU, memória, etc)
 collectDefaultMetrics({ register })
 

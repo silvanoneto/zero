@@ -4,6 +4,9 @@ import "./globals.css";
 import { Providers } from './providers';
 import { WebVitals } from '@/components/WebVitals';
 import { WalletPersistence } from '@/components/WalletPersistence';
+import { WalletAutoReconnect } from '@/components/WalletAutoReconnect';
+import { WalletDebug } from '@/components/WalletDebug';
+import { UnregisterServiceWorker } from '@/components/UnregisterServiceWorker';
 import { MetricsReporter } from '@/components/MetricsReporter';
 
 const inter = Inter({ subsets: ["latin"] });
@@ -29,7 +32,10 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={inter.className}>
         <Providers>
+          <UnregisterServiceWorker />
           <WalletPersistence />
+          <WalletAutoReconnect />
+          <WalletDebug />
           <MetricsReporter />
           {children}
         </Providers>

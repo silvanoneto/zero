@@ -22,6 +22,23 @@ interface IDAOMitosis {
     function recordActivity(uint256 _daoId, address _member) external;
 }
 
+/**
+ * @notice Interface para integração com RestorativeJustice (Art. 6º)
+ */
+interface IRestorativeJustice {
+    function hasActivePenalty(address account) external view returns (bool);
+}
+
+/**
+ * @notice Interface para integração com AttentionTokens (Art. 6º-D)
+ */
+interface IAttentionTokens {
+    function getCitizenAttention(address citizen) external view returns (uint256 balance, uint256 expirationDate, uint256 lifetimeAllocated);
+    function getProposalAttention(uint256 proposalId) external view returns (uint256 totalTokens, uint256 uniqueAllocators, bool isFastTrack, bool isSpam);
+    function awardCashback(uint256 proposalId, address[] calldata voters) external;
+    function recordLosingVote(uint256 proposalId, address[] calldata voters) external;
+}
+
 contract FederationVoting is AccessControl, ReentrancyGuard {
     
     // ============ TYPES ============
@@ -82,6 +99,12 @@ contract FederationVoting is AccessControl, ReentrancyGuard {
     /// @notice Contrato DAOMitosis para rastreamento de atividade (Art. 5º-C)
     IDAOMitosis public daoMitosis;
     
+    /// @notice Contrato RestorativeJustice para verificação de penalidades (Art. 6º)
+    IRestorativeJustice public restorativeJustice;
+    
+    /// @notice Contrato AttentionTokens para priorização (Art. 6º-D)
+    IAttentionTokens public attentionTokens;
+    
     /// @notice ID da DAO principal (se aplicável)
     uint256 public daoId;
     
@@ -130,6 +153,8 @@ contract FederationVoting is AccessControl, ReentrancyGuard {
     
     event DAOMitosisIntegrationEnabled(address indexed mitosisContract, uint256 daoId);
     
+    event AttentionTokensIntegrationEnabled(address indexed attentionContract);
+    
     // ============ CONSTRUCTOR ============
     
     constructor(address _governanceToken) {
@@ -153,6 +178,29 @@ contract FederationVoting is AccessControl, ReentrancyGuard {
         daoMitosis = IDAOMitosis(_daoMitosis);
         daoId = _daoId;
         emit DAOMitosisIntegrationEnabled(_daoMitosis, _daoId);
+    }
+    
+    /**
+     * @notice Configura integração com RestorativeJustice
+     * @param _restorativeJustice Endereço do contrato de justiça
+     */
+    function setRestorativeJusticeIntegration(
+        address _restorativeJustice
+    ) external onlyRole(DEFAULT_ADMIN_ROLE) {
+        require(_restorativeJustice != address(0), "Invalid justice address");
+        restorativeJustice = IRestorativeJustice(_restorativeJustice);
+    }
+    
+    /**
+     * @notice Configura integração com AttentionTokens (Art. 6º-D)
+     * @param _attentionTokens Endereço do contrato de tokens de atenção
+     */
+    function setAttentionTokensIntegration(
+        address _attentionTokens
+    ) external onlyRole(DEFAULT_ADMIN_ROLE) {
+        require(_attentionTokens != address(0), "Invalid attention address");
+        attentionTokens = IAttentionTokens(_attentionTokens);
+        emit AttentionTokensIntegrationEnabled(_attentionTokens);
     }
     
     // ============ VOTING FUNCTIONS ============
@@ -255,6 +303,14 @@ contract FederationVoting is AccessControl, ReentrancyGuard {
             governanceToken.balanceOf(msg.sender) >= tokens,
             "Insufficient tokens"
         );
+        
+        // Art. 6º - Verifica se votante tem penalidade ativa
+        if (address(restorativeJustice) != address(0)) {
+            require(
+                !restorativeJustice.hasActivePenalty(msg.sender),
+                "Cannot vote: active reputation penalty"
+            );
+        }
         
         uint256 weight = calculateVoteWeight(
             proposal.voteType,
@@ -388,7 +444,61 @@ contract FederationVoting is AccessControl, ReentrancyGuard {
         
         proposal.state = approved ? ProposalState.SUCCEEDED : ProposalState.DEFEATED;
         
+        // Art. 6º-D: Concede cashback de reputação para vencedores
+        if (address(attentionTokens) != address(0)) {
+            _processCashback(proposalId, approved);
+        }
+        
         emit ProposalExecuted(proposalId, proposal.state);
+    }
+    
+    /**
+     * @notice Processa cashback de tokens de atenção para vencedores
+     * @param proposalId ID da proposta
+     * @param approved Se a proposta foi aprovada
+     */
+    function _processCashback(uint256 proposalId, bool approved) internal {
+        Proposal storage proposal = proposals[proposalId];
+        
+        // Coleta endereços de vencedores e perdedores
+        address[] memory winners = new address[](proposal.totalVoters);
+        address[] memory losers = new address[](proposal.totalVoters);
+        uint256 winnerCount = 0;
+        uint256 loserCount = 0;
+        
+        // Note: Esta é uma implementação simplificada
+        // Em produção, seria melhor manter arrays de votantes
+        // Por ora, isso requer integração externa para passar os arrays
+        
+        // Admin ou sistema externo deve chamar awardCashback com a lista correta
+    }
+    
+    /**
+     * @notice Concede cashback manualmente (chamado por admin após execução)
+     * @param proposalId ID da proposta
+     * @param winners Lista de endereços que votaram no lado vencedor
+     * @param losers Lista de endereços que votaram no lado perdedor
+     */
+    function processCashbackManual(
+        uint256 proposalId,
+        address[] calldata winners,
+        address[] calldata losers
+    ) external onlyRole(DEFAULT_ADMIN_ROLE) {
+        require(address(attentionTokens) != address(0), "Attention tokens not set");
+        
+        Proposal storage proposal = proposals[proposalId];
+        require(
+            proposal.state == ProposalState.SUCCEEDED || proposal.state == ProposalState.DEFEATED,
+            "Proposal not finalized"
+        );
+        
+        if (winners.length > 0) {
+            attentionTokens.awardCashback(proposalId, winners);
+        }
+        
+        if (losers.length > 0) {
+            attentionTokens.recordLosingVote(proposalId, losers);
+        }
     }
     
     // ============ EXPERT MANAGEMENT ============
@@ -429,6 +539,59 @@ contract FederationVoting is AccessControl, ReentrancyGuard {
             p.votesAgainst,
             p.state
         );
+    }
+    
+    /**
+     * @notice Retorna dados de atenção de uma proposta (Art. 6º-D)
+     * @param proposalId ID da proposta
+     * @return totalTokens Total de tokens alocados
+     * @return uniqueAllocators Número de cidadãos únicos
+     * @return isFastTrack Se está em fast-track
+     * @return isSpam Se foi marcada como spam
+     */
+    function getProposalAttention(uint256 proposalId)
+        external
+        view
+        returns (
+            uint256 totalTokens,
+            uint256 uniqueAllocators,
+            bool isFastTrack,
+            bool isSpam
+        )
+    {
+        if (address(attentionTokens) == address(0)) {
+            return (0, 0, false, false);
+        }
+        
+        return attentionTokens.getProposalAttention(proposalId);
+    }
+    
+    /**
+     * @notice Verifica se proposta deve estar em fast-track
+     * @param proposalId ID da proposta
+     * @return Se atingiu threshold de fast-track (>5000 tokens)
+     */
+    function isFastTrackProposal(uint256 proposalId) external view returns (bool) {
+        if (address(attentionTokens) == address(0)) {
+            return false;
+        }
+        
+        (,, bool isFastTrack,) = attentionTokens.getProposalAttention(proposalId);
+        return isFastTrack;
+    }
+    
+    /**
+     * @notice Verifica se proposta é spam
+     * @param proposalId ID da proposta
+     * @return Se foi marcada como spam (<100 tokens em 48h)
+     */
+    function isSpamProposal(uint256 proposalId) external view returns (bool) {
+        if (address(attentionTokens) == address(0)) {
+            return false;
+        }
+        
+        (,,, bool isSpam) = attentionTokens.getProposalAttention(proposalId);
+        return isSpam;
     }
     
     // ============ MATH HELPERS ============

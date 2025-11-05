@@ -4,13 +4,15 @@ import { ProposalsList } from '@/components/ProposalsList';
 import { CreateProposal } from '@/components/CreateProposal';
 import { VotingStats } from '@/components/VotingStats';
 import { PlutonimiaMetrics } from '@/components/PlutonimiaMetrics';
+import { TopProposalsList } from '@/components/AttentionTokens';
 import SovereignWalletHub from '@/components/SovereignWallet/SovereignWalletHub';
 import P2PStatus from '@/components/P2PStatus';
 import ThemeToggle from '@/components/ThemeToggle';
 import { CustomConnectButton } from '@/components/CustomConnectButton';
-import { FileText, Vote, TrendingUp, Shield } from 'lucide-react';
+import { FileText, Vote, TrendingUp, Shield, Sparkles } from 'lucide-react';
 import { useState } from 'react';
 import { useProposals } from '@/hooks/useProposals';
+import Link from 'next/link';
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<'governance' | 'wallet'>('governance');
@@ -36,6 +38,13 @@ export default function Home() {
               </div>
             </div>
             <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 flex-shrink-0">
+              <Link
+                href="/dashboard"
+                className="hidden sm:flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-lg transition-all text-sm font-medium shadow-md hover:shadow-lg"
+              >
+                <Sparkles className="w-4 h-4" />
+                <span className="hidden md:inline">Dashboard</span>
+              </Link>
               <ThemeToggle />
               <CustomConnectButton />
             </div>
@@ -197,6 +206,11 @@ export default function Home() {
             {/* Plutonomia Metrics */}
             <div className="mb-6 sm:mb-8">
               <PlutonimiaMetrics proposals={proposals as any} />
+            </div>
+
+            {/* Top Proposals by Attention */}
+            <div className="mb-6 sm:mb-8">
+              <TopProposalsList limit={5} />
             </div>
 
             {/* Two Column Layout */}

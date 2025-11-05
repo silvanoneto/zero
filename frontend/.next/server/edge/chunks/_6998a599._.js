@@ -1,0 +1,3 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["chunks/_6998a599._.js",532714,e=>{"use strict";async function t(){}async function n(e,t){console.error(`❌ Request error: ${t.method} ${t.path}`,e)}e.s(["onRequestError",()=>n,"register",()=>t])},589540,(e,t,n)=>{self._ENTRIES||={};let r=Promise.resolve().then(()=>e.i(532714));r.catch(()=>{}),self._ENTRIES.middleware_instrumentation=new Proxy(r,{get(e,t){if("then"===t)return(t,n)=>e.then(t,n);let n=(...n)=>e.then(e=>(0,e[t])(...n));return n.then=(n,r)=>e.then(e=>e[t]).then(n,r),n}})}]);
+
+//# sourceMappingURL=_6998a599._.js.map
