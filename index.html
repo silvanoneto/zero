@@ -814,7 +814,7 @@
     <audio id="bg-audio" src="CRIO.mp3" loop preload="none"></audio>
 
     <!-- Controles de áudio minimalistas -->
-    <div class="audio-ui" role="region" aria-label="Controles de áudio">
+    <div class="audio-ui" role="region" aria-label="Controles de áudio" style="display: none;">
         <button id="mute-btn" title="Mudo por 33 segundos">Mute</button>
         <div class="label" id="mute-label" style="display: none;">—</div>
     </div>
@@ -852,16 +852,22 @@
             const audio = document.getElementById('bg-audio');
             const muteBtn = document.getElementById('mute-btn');
             const muteLabel = document.getElementById('mute-label');
+            const audioUI = document.querySelector('.audio-ui');
 
             let muteTimer = null;
             let muteRemaining = 0;
             let _mcc = 0;
 
+            // Show UI when audio is playing
+            function showUI() {
+                audioUI.style.display = 'flex';
+            }
+
             // Try to play (returns promise). If autoplay blocked, user must click.
             function tryPlay() {
                 const p = audio.play();
                 if (p && typeof p.then === 'function') {
-                    p.catch(() => {
+                    p.then(() => showUI()).catch(() => {
                         // Autoplay blocked; silently fail
                     });
                 }
@@ -925,9 +931,19 @@
 
             // If the audio file is missing, provide a gentle visual hint
             audio.addEventListener('error', () => {
+                audioUI.style.display = 'flex';
                 muteLabel.textContent = 'sem áudio';
                 muteLabel.style.display = 'block';
                 muteBtn.style.display = 'none';
+            });
+
+            // Listen for play/pause events to show/hide UI
+            audio.addEventListener('play', showUI);
+            audio.addEventListener('pause', () => {
+                // Only hide if not in mute countdown
+                if (!muteTimer) {
+                    audioUI.style.display = 'none';
+                }
             });
 
             // Auto-play after 33 seconds from page load
