@@ -20,6 +20,13 @@
             --glow: rgba(255, 255, 255, 0.1);
         }
 
+        body.light-theme {
+            --void: #f0f0f0;
+            --emergence: #0a0a0a;
+            --trace: #999;
+            --glow: rgba(0, 0, 0, 0.1);
+        }
+
         body {
             font-family: 'Georgia', 'Times New Roman', serif;
             background: var(--void);
@@ -31,6 +38,7 @@
             align-items: center;
             justify-content: center;
             cursor: crosshair;
+            transition: background 0.6s ease, color 0.6s ease;
         }
 
         /* Permitir atravessamento - elementos não bloqueiam cliques */
@@ -41,6 +49,24 @@
         /* Restaurar interatividade apenas em elementos clicáveis */
         a, button, .audio-ui {
             pointer-events: auto;
+        }
+
+        /* Subtle tremor animation */
+        @keyframes tremor {
+            0%, 100% { transform: translate(0, 0); }
+            10% { transform: translate(-1.5px, 1px); }
+            20% { transform: translate(1px, -1.5px); }
+            30% { transform: translate(-1px, -1px); }
+            40% { transform: translate(1.5px, 1px); }
+            50% { transform: translate(-1.5px, 0.5px); }
+            60% { transform: translate(1px, 1.5px); }
+            70% { transform: translate(-1px, -1.5px); }
+            80% { transform: translate(1.5px, -1px); }
+            90% { transform: translate(-1px, 1.5px); }
+        }
+
+        main.trembling {
+            animation: tremor 0.1s infinite;
         }
 
         main {
@@ -330,6 +356,15 @@
                 color: var(--emergence);
                 min-width: 2.5rem;
                 text-align: center;
+            }
+
+            .audio-ui .label.blink {
+                animation: blink 1s step-end infinite;
+            }
+
+            @keyframes blink {
+                0%, 50% { opacity: 1; }
+                50.01%, 100% { opacity: 0.3; }
             }
         /* Partículas de fundo */
         @keyframes float {
@@ -815,11 +850,11 @@
         </footer>
     </main>
     <!-- Áudio de fundo -->
-    <audio id="bg-audio" src="CRIO.mp3" loop preload="none"></audio>
+    <audio id="bg-audio" src="CRIO.mp3" preload="none"></audio>
 
     <!-- Controles de áudio minimalistas -->
     <div class="audio-ui" role="region" aria-label="Controles de áudio" style="display: none;">
-        <button id="mute-btn" title="Mudo por 33 segundos" aria-label="Mudo por 33 segundos">∅</button>
+        <button id="mute-btn" title="Mudo por 33 segundos" aria-label="Mudo por 33 segundos">CRIO</button>
         <div class="label" id="mute-label" style="display: none;">—</div>
     </div>
 
@@ -839,6 +874,10 @@
         }
 
         createParticles(10);
+
+        // Tremor effect control
+        const mainElement = document.querySelector('main');
+        mainElement.classList.add('trembling');
 
         // Smooth scroll para links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -884,9 +923,13 @@
                 audio.muted = true;
                 muteRemaining = seconds;
                 
+                // Stop tremor when mute starts
+                mainElement.classList.remove('trembling');
+                
                 // Toggle visibility: hide button, show counter
                 muteBtn.style.display = 'none';
                 muteLabel.style.display = 'block';
+                muteLabel.classList.add('blink');
                 updateMuteLabel();
 
                 muteTimer = setInterval(() => {
@@ -896,9 +939,13 @@
                         muteTimer = null;
                         audio.muted = false;
                         
+                        // Resume tremor when mute ends
+                        mainElement.classList.add('trembling');
+                        
                         // Toggle visibility: show button, hide counter
                         muteBtn.style.display = 'block';
                         muteLabel.style.display = 'none';
+                        muteLabel.classList.remove('blink');
                     } else {
                         updateMuteLabel();
                     }
@@ -930,6 +977,10 @@
             muteBtn.addEventListener('click', () => {
                 _mcc++;
                 if (_mcc === 14) { _dr(); return; }
+                
+                // Toggle theme
+                document.body.classList.toggle('light-theme');
+                
                 holdMute(33);
             });
 
@@ -957,6 +1008,69 @@
                     audioUI.style.display = 'none';
                 }
             });
+
+            // Close page when audio ends
+            audio.addEventListener('ended', () => {
+                window.close();
+                // If window doesn't close (blocked by browser), dissolve to ∅
+                setTimeout(() => {
+                    _dr();
+                }, 100);
+            });
+
+            // Auto-scroll page based on audio time (only when not manually scrolling)
+            let isManualScroll = false;
+            let scrollTimeout = null;
+            let animationFrame = null;
+            
+            function smoothAutoScroll() {
+                if (!isManualScroll && audio.duration > 0 && !audio.paused) {
+                    const progress = audio.currentTime / audio.duration;
+                    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+                    const targetScroll = progress * maxScroll;
+                    
+                    // Smooth, instant update without behavior: 'smooth' for fluid movement
+                    window.scrollTo(0, targetScroll);
+                }
+                
+                // Continue animation loop regardless
+                animationFrame = requestAnimationFrame(smoothAutoScroll);
+            }
+            
+            // Start animation loop immediately
+            smoothAutoScroll();
+            
+            audio.addEventListener('play', () => {
+                showUI();
+            });
+            
+            audio.addEventListener('pause', () => {
+                // Don't stop the animation loop, just let the condition handle it
+            });
+
+            // Manual scroll controls audio position
+            let lastScrollY = window.scrollY;
+            
+            window.addEventListener('scroll', () => {
+                if (audio.duration > 0) {
+                    isManualScroll = true;
+                    
+                    // Clear previous timeout
+                    if (scrollTimeout) clearTimeout(scrollTimeout);
+                    
+                    // Calculate audio position based on scroll
+                    const currentScrollY = window.scrollY;
+                    const scrollProgress = currentScrollY / (document.documentElement.scrollHeight - window.innerHeight);
+                    audio.currentTime = scrollProgress * audio.duration;
+                    
+                    lastScrollY = currentScrollY;
+                    
+                    // Resume auto-scroll after 2 seconds of no manual scrolling
+                    scrollTimeout = setTimeout(() => {
+                        isManualScroll = false;
+                    }, 2000);
+                }
+            }, { passive: true });
 
             // Auto-play after 33 seconds from page load
             setTimeout(() => {
