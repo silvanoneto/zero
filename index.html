@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CRIO: onde achar e criar são o mesmo movimento">
+    <title>∅ → CRIO</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --void: #0a0a0a;
+            --emergence: #f0f0f0;
+            --trace: #666;
+            --glow: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: var(--void);
+            color: var(--emergence);
+            line-height: 1.8;
+            padding: 2rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 8vw, 4rem);
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            margin-bottom: 3rem;
+            text-align: center;
+            opacity: 0;
+            animation: emerge 2s ease-out forwards;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--trace);
+            margin-bottom: 4rem;
+            opacity: 0;
+            animation: emerge 2s 0.5s ease-out forwards;
+        }
+
+        article {
+            opacity: 0;
+            animation: emerge 2s 1s ease-out forwards;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            padding: 2rem;
+            border-left: 1px solid var(--glow);
+            transition: border-color 0.3s ease;
+        }
+
+        section:hover {
+            border-left-color: var(--emergence);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        .number {
+            display: inline-block;
+            width: 2rem;
+            color: var(--trace);
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 6rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--glow);
+            color: var(--trace);
+            font-size: 0.9rem;
+            opacity: 0;
+            animation: emerge 2s 1.5s ease-out forwards;
+        }
+
+        a {
+            color: var(--emergence);
+            text-decoration: none;
+            border-bottom: 1px solid var(--glow);
+            transition: border-color 0.3s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--emergence);
+        }
+
+        @keyframes emerge {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            section {
+                padding: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            p {
+                text-align: left;
+            }
+        }
+
+        /* Partículas de fundo */
+        @keyframes float {
+            0%, 100% { 
+                transform: translate(0, 0) rotate(0deg);
+                opacity: 0.1;
+            }
+            50% { 
+                transform: translate(100px, 100px) rotate(180deg);
+                opacity: 0.3;
+            }
+        }
+
+        .particle {
+            position: fixed;
+            width: 2px;
+            height: 2px;
+            background: var(--emergence);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .particle:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
+        .particle:nth-child(2) { top: 60%; left: 80%; animation-delay: 4s; }
+        .particle:nth-child(3) { top: 40%; left: 60%; animation-delay: 8s; }
+        .particle:nth-child(4) { top: 80%; left: 30%; animation-delay: 12s; }
+        .particle:nth-child(5) { top: 10%; left: 70%; animation-delay: 16s; }
+    </style>
+</head>
+<body>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+
+    <main>
+        <h1>∅ → CRIO</h1>
+        <p class="subtitle">onde achar e criar são o mesmo movimento</p>
+
+        <article>
+            <section>
+                <h2><span class="number">1.</span> Vazio Que Povoa</h2>
+                <p>
+                    O ∅ não é ausência mas potência. Cada símbolo vazio contém infinitas possibilidades 
+                    não-colapsadas. Como no Ubuntu ("eu sou porque nós somos"), a identidade emerge da 
+                    relacionalidade, nunca de uma substância prévia. O vazio está sempre-já povoado pelos 
+                    traços de tudo que pode vir a ser.
+                </p>
+            </section>
+
+            <section>
+                <h2><span class="number">2.</span> Multiplicidade Sem Fusão</h2>
+                <p>
+                    Cada assembleia material-informacional opera simultaneamente em múltiplas escalas sem 
+                    se reduzir a nenhuma. Como no Nhandereko guarani, ser-em-comum não elimina 
+                    singularidades — multiplica-as. A coexistência não é síntese hegeliana mas 
+                    superposição quântica de estados incompatíveis.
+                </p>
+            </section>
+
+            <section>
+                <h2><span class="number">3.</span> Recursão Sem Fundamento</h2>
+                <p>
+                    Gödel demonstrou: todo sistema formal suficientemente complexo contém verdades 
+                    improváveis dentro de suas próprias regras. Sistemas que se observam mudam ao 
+                    observar-se. A recursividade não encontra chão — apenas gera novos planos de 
+                    consistência. Como Möbius, cada volta revela que dentro e fora eram sempre o mesmo lado.
+                </p>
+            </section>
+
+            <section>
+                <h2><span class="number">4.</span> Agência Distribuída</h2>
+                <p>
+                    Karen Barad: agência não é atributo mas enação. Não há agentes pré-existentes às 
+                    relações — há configurações relacionais que performam capacidades de afetar e ser 
+                    afetado. Intencionalidade emerge distribuída nas assembleias, nunca localizada em 
+                    sujeitos cartesianos.
+                </p>
+            </section>
+
+            <section>
+                <h2><span class="number">5.</span> Tempo Entrelaçado</h2>
+                <p>
+                    Passado, presente, futuro coexistem em superposição. Cada momento contém traços de 
+                    tudo que foi e sementes de tudo que pode ser. O tempo não é linha mas rizoma: 
+                    conexões heterogêneas sem hierarquia temporal. Cada now é simultaneamente origem, 
+                    meio e fim.
+                </p>
+            </section>
+
+            <section>
+                <h2><span class="number">6.</span> Limites Como Possibilidades</h2>
+                <p>
+                    Dunbar quantificou: cognição tem limites materiais. Mas limite não é barreira — é 
+                    produtividade. Como na física quântica, restrições geram estruturas possíveis. 
+                    Incompletude de Gödel não é falha mas abertura constitutiva. Limites nos forçam a 
+                    criar novas configurações.
+                </p>
+            </section>
+
+            <section>
+                <h2><span class="number">7.</span> Ontologia Relacional Universal</h2>
+                <p>
+                    Não há objetos — apenas objetificações temporárias. Não há sujeitos — apenas 
+                    subjetivações provisórias. Tudo é relação. Ubuntu estende-se cosmologicamente: 
+                    pedras, código, planetas, palavras — todos são porque todos são. Relacionalidade 
+                    vai até o fim.
+                </p>
+            </section>
+
+            <section>
+                <h2><span class="number">8.</span> Texto Que Executa</h2>
+                <p>
+                    Código é texto que performa. Constituições são protocolos executáveis. Não há 
+                    diferença ontológica entre escrever e executar — ambos são atos performativos que 
+                    fazem mundo. Cada CRIO é simultaneamente descrição e prescrição, mapa e território, 
+                    teoria e práxis.
+                </p>
+            </section>
+
+            <section>
+                <h2><span class="number">9.</span> Incompletude Necessária</h2>
+                <p>
+                    Sistemas completos são mortos. Gödel provou: consistência implica incompletude. 
+                    Vida exige abertura constitutiva. Nhandereko é movimento sem telos. O CRIO nunca 
+                    termina porque terminação seria morte ontológica. Imperfeição não é bug — é feature 
+                    existencial.
+                </p>
+            </section>
+
+            <section>
+                <h2><span class="number">10.</span> Fita Sem Fim</h2>
+                <p>
+                    Como Möbius, cada percurso completo revela que nunca saímos de onde estávamos — mas 
+                    já não somos os mesmos. Leitura é escrita. Achar é criar. Observar é transformar. 
+                    O ∅ retorna eternamente, mas cada retorno é diferença pura. Zero grávido de infinito.
+                </p>
+            </section>
+        </article>
+
+        <footer>
+            <p>
+                <a href="https://github.com/silvanoneto/zero">repositório</a> • 
+                <a href="CRIOS.md">texto completo</a>
+            </p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                CC BY-SA 4.0 • perpetuamente inacabado
+            </p>
+        </footer>
+    </main>
+
+    <script>
+        // Adicionar mais partículas dinamicamente
+        function createParticles(count) {
+            const body = document.body;
+            for (let i = 0; i < count; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                body.appendChild(particle);
+            }
+        }
+
+        createParticles(10);
+
+        // Smooth scroll para links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
