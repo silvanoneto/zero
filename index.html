@@ -22,6 +22,7 @@
             --emergence: #f0f0f0;
             --trace: #666;
             --glow: rgba(255, 255, 255, 0.1);
+            --particle-glow: rgba(255, 255, 255, 0.4);
         }
 
         body.light-theme {
@@ -29,6 +30,7 @@
             --emergence: #0a0a0a;
             --trace: #999;
             --glow: rgba(0, 0, 0, 0.1);
+            --particle-glow: rgba(0, 0, 0, 0.4);
         }
 
         body {
@@ -270,23 +272,23 @@
         @keyframes float {
             0% { 
                 transform: translate(0, 0) rotate(0deg);
-                opacity: 0.1;
+                opacity: 0.3;
             }
             25% { 
                 transform: translate(var(--tx1), var(--ty1)) rotate(90deg);
-                opacity: 0.3;
+                opacity: 0.6;
             }
             50% { 
                 transform: translate(var(--tx2), var(--ty2)) rotate(180deg);
-                opacity: 0.2;
+                opacity: 0.4;
             }
             75% { 
                 transform: translate(var(--tx3), var(--ty3)) rotate(270deg);
-                opacity: 0.3;
+                opacity: 0.6;
             }
             100% { 
                 transform: translate(0, 0) rotate(360deg);
-                opacity: 0.1;
+                opacity: 0.3;
             }
         }
 
@@ -305,14 +307,15 @@
 
         .particle {
             position: fixed;
-            width: 2px;
-            height: 2px;
+            width: 4px;
+            height: 4px;
             background: var(--emergence);
             border-radius: 50%;
             pointer-events: none;
             z-index: -1;
-            transition: opacity 3s ease-out;
+            transition: opacity 3s ease-out, box-shadow 0.6s ease;
             --chaos-intensity: 1;
+            box-shadow: 0 0 6px var(--particle-glow), 0 0 12px var(--particle-glow);
         }
 
         .particle.floating {
