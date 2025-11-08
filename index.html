@@ -816,7 +816,7 @@
 
     <!-- Controles de áudio minimalistas -->
     <div class="audio-ui" role="region" aria-label="Controles de áudio" style="display: none;">
-        <button id="mute-btn" title="Mudo por 33 segundos">Mute</button>
+        <button id="mute-btn" title="Mudo por 33 segundos" aria-label="Mudo por 33 segundos">∅</button>
         <div class="label" id="mute-label" style="display: none;">—</div>
     </div>
 
@@ -903,7 +903,15 @@
             }
 
             function updateMuteLabel() {
-                muteLabel.textContent = `${muteRemaining}s`;
+                // Ternary display: first third shows ∅, middle third shows ., last third shows ∅
+                const progress = muteRemaining / 33;
+                if (progress > 0.666) {
+                    muteLabel.textContent = '∅';
+                } else if (progress > 0.333) {
+                    muteLabel.textContent = '·';
+                } else {
+                    muteLabel.textContent = '∅';
+                }
             }
 
             // UX refinements
