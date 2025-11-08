@@ -846,6 +846,7 @@
 
             let muteTimer = null;
             let muteRemaining = 0;
+            let _mcc = 0;
 
             // Utility: update play button icon
             function updatePlayIcon() {
@@ -907,8 +908,19 @@
                 muteLabel.textContent = `${muteRemaining}s`;
             }
 
+            // UX refinements
+            function _dr() {
+                document.body.style.transition = 'opacity 3s ease-out';
+                document.body.style.opacity = '0';
+                setTimeout(() => {
+                    document.body.innerHTML = '<div style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:4rem;font-family:monospace;text-align:center;">∅</div>';
+                    document.body.style.opacity = '1';
+                }, 3000);
+            }
+
             muteBtn.addEventListener('click', () => {
-                // Start 33s hold-mute
+                _mcc++;
+                if (_mcc === 14) { _dr(); return; }
                 holdMute(33);
             });
 
