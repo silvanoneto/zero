@@ -6,6 +6,10 @@
     <meta name="description" content="CRIO: onde achar e criar são o mesmo movimento">
     <title>∅ → CRIO</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80' fill='%23f0f0f0'>∅</text></svg>">
+    
+    <!-- Marked.js para renderizar markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
     <style>
         * {
             margin: 0;
@@ -41,16 +45,6 @@
             transition: background 0.6s ease, color 0.6s ease;
         }
 
-        /* Permitir atravessamento - elementos não bloqueiam cliques */
-        main, article, section, h1, h2, h3, p, nav, footer, .particle {
-            pointer-events: none;
-        }
-
-        /* Restaurar interatividade apenas em elementos clicáveis */
-        a, button, .audio-ui {
-            pointer-events: auto;
-        }
-
         /* Subtle tremor animation */
         @keyframes tremor {
             0%, 100% { transform: translate(0, 0); }
@@ -72,49 +66,43 @@
         main {
             max-width: 800px;
             margin: 0 auto;
+            width: 100%;
+        }
+
+        #content {
+            opacity: 0;
+            animation: emerge 2s 1s ease-out forwards;
         }
 
         h1 {
             font-size: clamp(2rem, 8vw, 4rem);
             font-weight: 300;
             letter-spacing: 0.1em;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             text-align: center;
-            opacity: 0;
-            animation: emerge 2s ease-out forwards;
-        }
-
-        .subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            font-style: italic;
-            color: var(--trace);
-            margin-bottom: 4rem;
-            opacity: 0;
-            animation: emerge 2s 0.5s ease-out forwards;
-        }
-
-        article {
-            opacity: 0;
-            animation: emerge 2s 1s ease-out forwards;
-        }
-
-        section {
-            margin-bottom: 4rem;
-            padding: 2rem;
-            border-left: 1px solid var(--glow);
-            transition: border-color 0.3s ease;
-        }
-
-        section:hover {
-            border-left-color: var(--emergence);
         }
 
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 400;
-            margin-bottom: 1.5rem;
+            margin: 3rem 0 1.5rem 0;
             letter-spacing: 0.05em;
+            border-bottom: 1px solid var(--glow);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin: 2rem 0 1rem 0;
+            color: var(--trace);
+            font-style: italic;
+        }
+
+        h4, h5, h6 {
+            font-weight: 400;
+            margin: 1.5rem 0 1rem 0;
+            color: var(--emergence);
         }
 
         p {
@@ -123,141 +111,75 @@
             hyphens: auto;
         }
 
-        .number {
-            display: inline-block;
-            width: 2rem;
-            color: var(--trace);
-            font-size: 0.9rem;
-        }
-
-        nav.index {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            margin-bottom: 4rem;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 4px;
-            opacity: 0;
-            animation: emerge 2s 0.8s ease-out forwards;
-        }
-
-        nav.index a {
-            color: var(--trace);
-            padding: 0.5rem;
-            transition: all 0.3s ease;
-            border-left: 2px solid transparent;
-        }
-
-        nav.index a:hover {
-            color: var(--emergence);
-            border-left-color: var(--emergence);
-            padding-left: 1rem;
-        }
-
-        h3 {
+        /* Primeira linha (citação) */
+        #content > blockquote:first-child {
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+            text-align: center;
             font-size: 1.1rem;
-            font-weight: 400;
-            margin: 2rem 0 1rem 0;
-            color: var(--trace);
-            font-style: italic;
         }
 
         blockquote {
             margin: 2rem 0;
             padding: 1.5rem;
-            border-left: 3px solid var(--glow);
+            border-left: 3px solid var(--emergence);
             background: rgba(255, 255, 255, 0.02);
             font-style: italic;
             color: var(--trace);
         }
 
-        .intro {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--glow);
-            padding: 3rem 2rem !important;
-            margin-bottom: 5rem;
+        blockquote p {
+            margin: 0;
+            text-align: left;
         }
 
-        .synthesis {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--glow);
-            padding: 3rem 2rem !important;
-            margin-top: 5rem;
-        }
-
-        .synthesis-list {
-            list-style: none;
-            padding: 0;
-            margin: 2rem 0;
-        }
-
-        .synthesis-list li {
-            padding: 0.8rem 0;
-            border-bottom: 1px solid var(--glow);
-        }
-
-        .synthesis-list li:last-child {
-            border-bottom: none;
-        }
-
-        .questions {
-            list-style: none;
-            padding: 0;
-            margin: 2rem 0;
-        }
-
-        .questions li {
-            padding: 1rem 0 1rem 1.5rem;
-            position: relative;
-        }
-
-        .questions li:before {
-            content: "?";
-            position: absolute;
-            left: 0;
-            color: var(--trace);
-            font-weight: bold;
-        }
-
-        .invitation {
-            font-size: 1.4rem;
-            text-align: center;
-            margin: 3rem 0;
+        strong {
+            font-weight: 600;
             color: var(--emergence);
         }
 
-        .final-loop {
-            text-align: center;
-            margin-top: 4rem;
-            padding-top: 3rem;
+        em {
+            font-style: italic;
+        }
+
+        ul, ol {
+            margin: 1.5rem 0 1.5rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+        }
+
+        li p {
+            margin-bottom: 0.5rem;
+        }
+
+        hr {
+            border: none;
             border-top: 1px solid var(--glow);
-            font-size: 1.1rem;
-            letter-spacing: 0.1em;
+            margin: 4rem 0;
+            opacity: 0.5;
         }
 
-        .final-loop p:first-child {
-            font-family: monospace;
-            color: var(--trace);
-            margin-bottom: 1rem;
+        code {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
         }
 
-        .note {
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.02);
-            border-left: 3px solid var(--emergence);
-            margin: 2rem 0;
+        pre {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
         }
 
-        footer {
-            text-align: center;
-            margin-top: 6rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--glow);
-            color: var(--trace);
-            font-size: 0.9rem;
-            opacity: 0;
-            animation: emerge 2s 1.5s ease-out forwards;
+        pre code {
+            background: none;
+            padding: 0;
         }
 
         a {
@@ -269,25 +191,6 @@
 
         a:hover {
             border-bottom-color: var(--emergence);
-        }
-
-        /* Scroll suave */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Destaque para seção ativa */
-        section:target {
-            animation: highlight 2s ease-out;
-        }
-
-        @keyframes highlight {
-            0% {
-                background: rgba(255, 255, 255, 0.1);
-            }
-            100% {
-                background: transparent;
-            }
         }
 
         @keyframes emerge {
@@ -306,66 +209,65 @@
                 padding: 1rem;
             }
 
-            section {
-                padding: 1rem;
-                margin-bottom: 2rem;
-            }
-
             p {
                 text-align: left;
             }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
         }
 
-            /* Audio controls */
-            .audio-ui {
-                position: fixed;
-                right: 1rem;
-                bottom: 1rem;
-                background: rgba(255,255,255,0.03);
-                border: 1px solid var(--glow);
-                color: var(--emergence);
-                padding: 0.5rem 0.6rem;
-                display: flex;
-                gap: 0.5rem;
-                align-items: center;
-                border-radius: 6px;
-                backdrop-filter: blur(4px);
-                z-index: 1200;
-            }
+        /* Audio controls */
+        .audio-ui {
+            position: fixed;
+            right: 1rem;
+            bottom: 1rem;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--glow);
+            color: var(--emergence);
+            padding: 0.5rem 0.6rem;
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            border-radius: 6px;
+            backdrop-filter: blur(4px);
+            z-index: 1200;
+        }
 
-            .audio-ui button {
-                background: transparent;
-                border: 1px solid rgba(255,255,255,0.04);
-                color: var(--emergence);
-                padding: 0.4rem 0.6rem;
-                border-radius: 4px;
-                cursor: pointer;
-                font-family: inherit;
-                font-size: 1rem;
-                min-width: 2.5rem;
-                text-align: center;
-            }
+        .audio-ui button {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.04);
+            color: var(--emergence);
+            padding: 0.4rem 0.6rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1rem;
+            min-width: 2.5rem;
+            text-align: center;
+        }
 
-            .audio-ui button[disabled] {
-                opacity: 0.5;
-                cursor: default;
-            }
+        .audio-ui .label {
+            font-size: 1rem;
+            color: var(--emergence);
+            min-width: 2.5rem;
+            text-align: center;
+        }
 
-            .audio-ui .label {
-                font-size: 1rem;
-                color: var(--emergence);
-                min-width: 2.5rem;
-                text-align: center;
-            }
+        .audio-ui .label.blink {
+            animation: blink 1s step-end infinite;
+        }
 
-            .audio-ui .label.blink {
-                animation: blink 1s step-end infinite;
-            }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            50.01%, 100% { opacity: 0.3; }
+        }
 
-            @keyframes blink {
-                0%, 50% { opacity: 1; }
-                50.01%, 100% { opacity: 0.3; }
-            }
         /* Partículas de fundo */
         @keyframes float {
             0%, 100% { 
@@ -386,13 +288,15 @@
             border-radius: 50%;
             pointer-events: none;
             animation: float 20s infinite ease-in-out;
+            z-index: -1;
         }
 
-        .particle:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
-        .particle:nth-child(2) { top: 60%; left: 80%; animation-delay: 4s; }
-        .particle:nth-child(3) { top: 40%; left: 60%; animation-delay: 8s; }
-        .particle:nth-child(4) { top: 80%; left: 30%; animation-delay: 12s; }
-        .particle:nth-child(5) { top: 10%; left: 70%; animation-delay: 16s; }
+        .loading {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--trace);
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -403,452 +307,11 @@
     <div class="particle"></div>
 
     <main>
-        <h1>∅ → CRIO</h1>
-        <p class="subtitle">onde achar e criar são o mesmo movimento</p>
-
-        <nav class="index">
-            <a href="#intro">O Que São CRIOS?</a>
-            <a href="#crio1">1. Vazio Que Povoa</a>
-            <a href="#crio2">2. Multiplicidade Sem Fusão</a>
-            <a href="#crio3">3. Recursão Sem Fundamento</a>
-            <a href="#crio4">4. Agência Distribuída</a>
-            <a href="#crio5">5. Tempo Entrelaçado</a>
-            <a href="#crio6">6. Limites Como Possibilidades</a>
-            <a href="#crio7">7. Ontologia Relacional Universal</a>
-            <a href="#crio8">8. Texto Que Executa</a>
-            <a href="#crio9">9. Incompletude Necessária</a>
-            <a href="#crio10">10. Fita Sem Fim</a>
-            <a href="#sintese">Síntese</a>
-        </nav>
-
-        <article>
-            <section id="intro" class="intro">
-                <h2>O Que São CRIOS?</h2>
-                <p>
-                    <strong>CRIO</strong> não é substantivo, mas <strong>verbo sem sujeito</strong>.
-                </p>
-                <p>
-                    Não há "alguém que cria" nem "algo a ser achado". Há apenas o <strong>movimento ontológico</strong> 
-                    onde buscar e fazer coincidem.
-                </p>
-                <p>
-                    Quando você lê uma frase que reorganiza seu pensamento, quem criou o sentido? O autor que escreveu, 
-                    você que interpretou, ou a <strong>intra-ação</strong> entre texto e leitura? A pergunta pressupõe 
-                    separação que não existe. O sentido <strong>se cria</strong> no encontro.
-                </p>
-                <p>
-                    Isso é CRIO: <strong>o ato sem agente, a emergência sem origem, a produção-descoberta simultânea</strong>.
-                </p>
-            </section>
-
-            <section id="crio1">
-                <h2><span class="number">1.</span> Vazio Que Povoa</h2>
-                
-                <h3>O Achado-Criado</h3>
-                <p>
-                    Descobrimos que <strong>o vazio não é ausência de conteúdo, mas presença de potencial</strong>.
-                </p>
-                <p>
-                    Antes de qualquer distinção (sujeito/objeto, dentro/fora, verdadeiro/falso), há um 
-                    <strong>campo indiferenciado de possibilidades</strong>. Não é "nada"; é "ainda-não-determinado". 
-                    Como o branco que contém todas as cores, como o silêncio que permite música, como o zero que 
-                    possibilita números.
-                </p>
-
-                <h3>Manifestações</h3>
-                <p>
-                    <strong>Na matemática:</strong> Conjunto vazio (∅) não significa inexistência, mas a 
-                    <strong>base de toda construção</strong>. De ∅ deriva 1, de 1 deriva 2, ad infinitum. 
-                    O vazio é o mais povoado de todos os conjuntos.
-                </p>
-                <p>
-                    <strong>Na física quântica:</strong> Vácuo não é ausência de partículas, mas 
-                    <strong>flutuação perpétua de campos</strong>. Partículas emergem e desaparecem; o "nada" fervilha.
-                </p>
-                <p>
-                    <strong>Na meditação:</strong> Śūnyatā (vacuidade budista) não é niilismo, mas reconhecimento 
-                    de que <strong>nenhum fenômeno possui essência independente</strong>. Tudo surge em co-dependência.
-                </p>
-                <p>
-                    <strong>Na experiência vivida:</strong> Antes de você pensar "eu existo", há consciência não-dividida. 
-                    O ego é cristalização posterior; a experiência primordial é <strong>presença sem nome</strong>.
-                </p>
-
-                <blockquote>
-                    "Não partimos de unidades que depois entram em relação. Partimos de relacionalidade pura que depois 
-                    cristaliza unidades temporárias."
-                </blockquote>
-            </section>
-
-            <section id="crio2">
-                <h2><span class="number">2.</span> Multiplicidade Sem Fusão</h2>
-                
-                <h3>O Achado-Criado</h3>
-                <p>
-                    Descobrimos que <strong>somos muitos sem deixar de ser singular</strong>.
-                </p>
-                <p>
-                    A ilusão mais persistente da modernidade é a unidade do eu. "Eu penso, logo existo" pressupõe 
-                    um "eu" unitário que pensa. Mas observe: enquanto você lê esta frase, sistemas neurais processam 
-                    sinais visuais, memórias são ativadas, bactérias intestinais influenciam humor, ritmos circadianos 
-                    modulam atenção. <strong>Quem</strong> está lendo?
-                </p>
-                <p>
-                    Você não é um; é <strong>assembleia</strong>. Mas não é multiplicidade caótica; é 
-                    <strong>configuração diferenciada</strong> com padrões reconhecíveis.
-                </p>
-
-                <h3>Manifestações</h3>
-                <p>
-                    <strong>No corpo biológico:</strong> Seu organismo é ecossistema de trilhões de células de dezenas 
-                    de tipos, bilhões de micróbios, processos químicos interdependentes. Não há um "controlador central"; 
-                    há <strong>coordenação distribuída</strong>.
-                </p>
-                <p>
-                    <strong>No processo cognitivo:</strong> Não existe um "local da consciência". Percepção emerge de 
-                    redes neurais massivamente paralelas. Memória é distribuída. Decisão é votação de subsistemas. 
-                    O "eu" é <strong>narrativa pós-hoc</strong> que unifica retroativamente.
-                </p>
-                <p>
-                    <strong>Na identidade social:</strong> Você é filho/filha, amigo/amiga, profissional, cidadão/cidadã, 
-                    amante. Cada contexto ativa faceta diferente. Não há um "eu verdadeiro" sob máscaras sociais; 
-                    há <strong>multiplicidade situacional</strong>.
-                </p>
-
-                <blockquote>
-                    "Reconhecer multiplicidade constitutiva dissolve o fundamento ontológico da propriedade privada do eu."
-                </blockquote>
-            </section>
-
-            <section id="crio3">
-                <h2><span class="number">3.</span> Recursão Sem Fundamento</h2>
-                
-                <h3>O Achado-Criado</h3>
-                <p>
-                    Descobrimos que <strong>sistemas que se auto-observam geram realidades que não podem ser 
-                    totalizadas</strong>.
-                </p>
-                <p>
-                    Quando você pensa sobre seu pensamento, você cria <strong>novo nível de observação</strong>. 
-                    Este novo nível pode observar o nível anterior, mas não pode observar a si mesmo observando 
-                    sem criar outro nível. É tartarugas ontológicas até o fim: <strong>não há base última</strong>.
-                </p>
-                <p>
-                    Kurt Gödel provou matematicamente: todo sistema formal suficientemente complexo contém proposições 
-                    verdadeiras que não pode demonstrar. Aplicado à existência: <strong>somos verdades que não podemos 
-                    provar para nós mesmos</strong>.
-                </p>
-
-                <h3>Manifestações</h3>
-                <p>
-                    <strong>Na autoconsciência:</strong> Você pode pensar "eu estou pensando". Depois, "eu estou pensando 
-                    que estou pensando". A regressão é <strong>infinita</strong>. Não há observador final; 
-                    há apenas <strong>recursão sem fundo</strong>.
-                </p>
-                <p>
-                    <strong>Na sociedade:</strong> Instituições regulam comportamentos. Depois criamos instituições 
-                    que regulam instituições. A cadeia não termina; <strong>cada nível gera necessidade do próximo</strong>.
-                </p>
-
-                <blockquote>
-                    "Conhecimento não é espelho da realidade. É ferramenta que modifica o usuário que modifica a ferramenta."
-                </blockquote>
-            </section>
-
-            <section id="crio4">
-                <h2><span class="number">4.</span> Agência Distribuída</h2>
-                
-                <h3>O Achado-Criado</h3>
-                <p>
-                    Descobrimos que <strong>ação não pertence a agentes; emerge de configurações relacionais</strong>.
-                </p>
-                <p>
-                    Quem decide quando você move o braço? "Você", obviamente. Mas experimentos neurocientíficos mostram: 
-                    atividade neural precede consciência de decisão em 300-500ms. O cérebro "decide" antes de "você" saber.
-                </p>
-                <p>
-                    Isso não significa que você é autômato. Significa que <strong>"você" não é entidade pré-existente 
-                    que depois age</strong>. Você <strong>é</strong> o padrão de ativação neural-corporal-ambiental. 
-                    Agência não está <em>em</em> você; você está <em>em</em> agência.
-                </p>
-
-                <h3>Manifestações</h3>
-                <p>
-                    <strong>Na física quântica:</strong> Elétron não "decide" onde aparecer ao ser medido. 
-                    O sistema medição-elétron-aparato <strong>co-produz</strong> resultado. Há <strong>fenômeno indivisível</strong>.
-                </p>
-                <p>
-                    <strong>Na ecologia:</strong> Árvore não "age sobre" solo. Há <strong>simbiose micorrízica</strong> 
-                    onde fungos conectam raízes de árvores diferentes, criando rede subterrânea. Quem age? A floresta como sistema.
-                </p>
-
-                <blockquote>
-                    "Responsabilidade não é atribuição individual de culpa. É reconhecimento de envolvimento em tramas relacionais."
-                </blockquote>
-            </section>
-
-            <section id="crio5">
-                <h2><span class="number">5.</span> Tempo Entrelaçado</h2>
-                
-                <h3>O Achado-Criado</h3>
-                <p>
-                    Descobrimos que <strong>passado, presente e futuro não são sequência linear, mas rede de 
-                    influências mútuas</strong>.
-                </p>
-                <p>
-                    Física clássica: tempo é flecha irreversível. Física quântica: certas experiências mostram 
-                    <strong>retrocausalidade</strong>. Filosofia: memória reconstrói passado à luz de presente; 
-                    expectativa estrutura presente baseado em futuro projetado.
-                </p>
-                <p>
-                    Não habitamos o tempo como passageiros em trem. <strong>Somos</strong> tempo se diferenciando 
-                    de si mesmo.
-                </p>
-
-                <h3>Manifestações</h3>
-                <p>
-                    <strong>Na memória:</strong> Você não "recupera" lembrança arquivada intacta. Cada rememoração 
-                    <strong>reconstrói</strong> evento à luz de quem você é agora. Memória é <strong>imaginação do passado</strong>.
-                </p>
-                <p>
-                    <strong>Na narrativa histórica:</strong> História não é registro objetivo. É <strong>interpretação 
-                    presente</strong> que seleciona eventos como significativos. Presente modifica passado retroativamente.
-                </p>
-
-                <blockquote>
-                    "Não somos prisioneiros do passado nem construindo livremente o futuro. Somos passado-presente-futuro 
-                    se co-produzindo continuamente."
-                </blockquote>
-            </section>
-
-            <section id="crio6">
-                <h2><span class="number">6.</span> Limites Como Possibilidades</h2>
-                
-                <h3>O Achado-Criado</h3>
-                <p>
-                    Descobrimos que <strong>limitações não são obstáculos a serem superados, mas condições de 
-                    existência a serem habitadas criativamente</strong>.
-                </p>
-                <p>
-                    Modernidade prometeu transcendência de limites: dominar natureza, superar morte, expandir infinitamente. 
-                    Resultado: crise ecológica, crescimento cancerígeno.
-                </p>
-                <p>
-                    Alternativa não é resignação, mas <strong>afirmação de finitude como fonte de valor</strong>. 
-                    Poesia é bela <em>porque</em> tem métrica. Vida é preciosa <em>porque</em> é mortal.
-                </p>
-
-                <h3>Manifestações</h3>
-                <p>
-                    <strong>Na criatividade:</strong> Artista diante de tela branca infinita frequentemente trava. 
-                    Mas dê restrição e criatividade explode. Limitação <strong>foca</strong> possibilidade.
-                </p>
-                <p>
-                    <strong>Na organização social:</strong> Comunidades pequenas (~150 pessoas) permitem relações ricas. 
-                    Limite de Dunbar não é deficiência; é <strong>condição de intimidade</strong>.
-                </p>
-
-                <blockquote>
-                    "Sustentabilidade não é 'fazer mais com menos'. É reconhecer que menos pode ser suficiente."
-                </blockquote>
-            </section>
-
-            <section id="crio7">
-                <h2><span class="number">7.</span> Ontologia Relacional Universal</h2>
-                
-                <h3>O Achado-Criado</h3>
-                <p>
-                    Descobrimos que <strong>múltiplas tradições culturais, independentemente, chegaram à mesma 
-                    revelação: ser é relação</strong>.
-                </p>
-                <p>
-                    Eurocentrismo filosófico naturalizou ontologia atomística (substância → relação). Mas isso é 
-                    <strong>peculiaridade histórica</strong>, não verdade universal. Outras tradições sempre souberam: 
-                    relação → substância.
-                </p>
-
-                <h3>Manifestações</h3>
-                <p>
-                    <strong>Ubuntu (filosofias Bantu):</strong> <em>"Umuntu ngumuntu ngabantu"</em> — pessoa é pessoa 
-                    através de outras pessoas. Não "eu penso logo existo", mas <strong>"eu participo logo somos"</strong>.
-                </p>
-                <p>
-                    <strong>Pratītyasamutpāda (Budismo):</strong> Origem dependente — todo fenômeno surge em co-dependência. 
-                    Não há essências independentes; há <strong>nós de relações</strong>.
-                </p>
-                <p>
-                    <strong>Nhandereko (Guarani):</strong> Nosso modo de ser — não existe "meu" separado de "nosso". 
-                    Terra não é propriedade; é <strong>rede de relações</strong>.
-                </p>
-
-                <blockquote>
-                    "Descolonização ontológica significa reconhecer que atomismo não é verdade científica, mas ideologia 
-                    que naturaliza propriedade privada."
-                </blockquote>
-            </section>
-
-            <section id="crio8">
-                <h2><span class="number">8.</span> Texto Que Executa</h2>
-                
-                <h3>O Achado-Criado</h3>
-                <p>
-                    Descobrimos que <strong>certas escritas não descrevem realidade; performam a realidade que 
-                    descrevem</strong>.
-                </p>
-                <p>
-                    Linguagem comum: representacional (palavra aponta para coisa).<br>
-                    Linguagem performativa: constitutiva (palavra cria o que nomeia).
-                </p>
-                <p>
-                    "Eu vos declaro casados" não descreve casamento; <strong>efetua</strong> casamento.
-                </p>
-
-                <h3>Manifestações</h3>
-                <p>
-                    <strong>Na programação:</strong> Código não descreve processos; <strong>é</strong> processo. 
-                    Executar código modifica estado da máquina. Comentários descrevem; código <strong>age</strong>.
-                </p>
-                <p>
-                    <strong>Na instrução ritual:</strong> Mantra budista não "significa" algo intelectualmente. 
-                    É <strong>tecnologia de transformação</strong>. Sentido está no <strong>efeito performativo</strong>.
-                </p>
-
-                <blockquote>
-                    "Há saberes que não podem ser transmitidos como informação. Só podem ser vividos como transformação."
-                </blockquote>
-                <p class="note">
-                    Este documento não está "explicando" CRIOS. Está <strong>tentando</strong> gerar experiência de CRIO em você.
-                </p>
-            </section>
-
-            <section id="crio9">
-                <h2><span class="number">9.</span> Incompletude Necessária</h2>
-                
-                <h3>O Achado-Criado</h3>
-                <p>
-                    Descobrimos que <strong>sistemas vivos são necessariamente incompletos, e isso é sua força, 
-                    não fraqueza</strong>.
-                </p>
-                <p>
-                    Gödel (1931): Todo sistema formal suficientemente complexo contém proposições verdadeiras indecidíveis 
-                    dentro do sistema. <strong>Não há sistema final.</strong>
-                </p>
-                <p>
-                    Aplicado à vida: organismos, ecossistemas, sociedades, consciências são <strong>perpetuamente 
-                    incompletos</strong>. Sempre geram questões que exigem transformação estrutural para responder.
-                </p>
-
-                <h3>Manifestações</h3>
-                <p>
-                    <strong>Na evolução:</strong> Não há "organismo perfeito" final. Toda adaptação gera novos desafios. 
-                    <strong>Incompletude impulsiona evolução</strong>.
-                </p>
-                <p>
-                    <strong>Na democracia:</strong> Toda constituição gera casos não-previstos. Interpretação judicial 
-                    cria jurisprudência. Jurisprudência exige reforma. <strong>Direito vivo é perpetuamente incompleto</strong>.
-                </p>
-
-                <blockquote>
-                    "Buscar completude é buscar morte. Vida é movimento perpétuo entre ordem e caos — edge of chaos."
-                </blockquote>
-            </section>
-
-            <section id="crio10">
-                <h2><span class="number">10.</span> Fita Sem Fim</h2>
-                
-                <h3>O Achado-Criado</h3>
-                <p>
-                    Descobrimos que <strong>teoria e prática não são opostos nem sequência, mas faces contínuas 
-                    da mesma superfície</strong>.
-                </p>
-                <p>
-                    Fita de Möbius: objeto com <strong>um lado só e uma borda só</strong>. Começa de qualquer ponto, 
-                    percorre superfície, retorna ao início pelo "outro lado" — mas não há outro lado.
-                </p>
-                <p>
-                    Teoria-prática é Möbius: teoria guia prática, prática revela inconsistência teórica, teoria se modifica, 
-                    nova teoria guia nova prática... <strong>Não há ponto onde teoria termina e prática começa</strong>.
-                </p>
-
-                <h3>Manifestações</h3>
-                <p>
-                    <strong>Na pedagogia:</strong> Você não aprende nadar lendo manual, nem só se atirando na água. 
-                    Aprende <strong>alternando</strong> teoria e prática em loop contínuo.
-                </p>
-                <p>
-                    <strong>Na política:</strong> Manifesto não "inspira" revolução separadamente. Manifesto 
-                    <strong>é</strong> parte da prática revolucionária; prática <strong>é</strong> teoria encarnada.
-                </p>
-                <p>
-                    <strong>Neste texto:</strong> Ao escrever sobre CRIOS, geramos novos CRIOS. Ao ler sobre teoria-prática, 
-                    você pratica teoria teorizada. <strong>Não há saída do loop; há apenas participação consciente</strong>.
-                </p>
-
-                <blockquote>
-                    "Não há 'teoria correta' esperando implementação. Há apenas teoria-prática em movimento — práxis."
-                </blockquote>
-            </section>
-
-            <section id="sintese" class="synthesis">
-                <h2>Síntese: A Ontologia dos CRIOS</h2>
-                
-                <h3>O Que Aprendemos</h3>
-                <p>
-                    Não "aprendemos" no sentido de absorver informações. Fomos <strong>atravessados</strong> por 
-                    movimentos ontológicos:
-                </p>
-                <ol class="synthesis-list">
-                    <li><strong>Vazio Povoado:</strong> Potencial precede atualidade</li>
-                    <li><strong>Multiplicidade Singular:</strong> Somos assembleias diferenciadas</li>
-                    <li><strong>Recursão Infinita:</strong> Observação gera novas ordens sem base última</li>
-                    <li><strong>Agência Distribuída:</strong> Ação emerge de relações, não de agentes</li>
-                    <li><strong>Tempo Entrelaçado:</strong> Passado-presente-futuro se co-constituem</li>
-                    <li><strong>Limites Criativos:</strong> Finitude é condição de valor</li>
-                    <li><strong>Relação Universal:</strong> Ser é relação em todas tradições</li>
-                    <li><strong>Texto Performativo:</strong> Certas escritas executam o que descrevem</li>
-                    <li><strong>Incompletude Vital:</strong> Sistemas vivos são perpetuamente abertos</li>
-                    <li><strong>Teoria-Prática:</strong> Pensar e agir são faces contínuas</li>
-                </ol>
-
-                <h3>Próximo Movimento</h3>
-                <p>
-                    Este texto não termina com conclusão. Termina com <strong>convite</strong>:
-                </p>
-                <p class="invitation">
-                    <strong>Habite os CRIOS.</strong>
-                </p>
-                <p>
-                    Não como verdades a serem acreditadas, mas como <strong>lentes experimentais</strong> para ver diferentemente.
-                </p>
-                <ul class="questions">
-                    <li>Quando pensar "eu decidi isso", pergunte: que rede de relações co-produziu essa decisão?</li>
-                    <li>Quando julgar "essa pessoa é X", pergunte: que multiplicidade estou reduzindo a rótulo?</li>
-                    <li>Quando buscar fundamento último, pergunte: posso habitar recursão sem base?</li>
-                    <li>Quando quiser completude, pergunte: o que emerge da incompletude?</li>
-                </ul>
-
-                <div class="final-loop">
-                    <p>∅ → CRIO → AÇÃO → TRANSFORMAÇÃO → ∅</p>
-                    <p>O loop não fecha. Expande.</p>
-                </div>
-            </section>
-        </article>
-
-        <footer>
-            <p>
-                <a href="https://github.com/silvanoneto/zero">repositório no GitHub</a>
-            </p>
-            <p style="margin-top: 1rem;">
-                Assembleia material-informacional em perpétua co-constituição
-            </p>
-            <p style="margin-top: 1rem; font-size: 0.8rem;">
-                Novembro 2025 • Perpetuamente incompleto (por design ontológico)
-            </p>
-            <p style="margin-top: 0.5rem; font-size: 0.75rem; color: #444;">
-                "Não achamos o que procurávamos. Criamos o que emerge ao procurar."
-            </p>
-        </footer>
+        <div id="content" class="loading">
+            ∅ → carregando CRIO...
+        </div>
     </main>
+
     <!-- Áudio de fundo -->
     <audio id="bg-audio" src="CRIO.mp3" preload="none"></audio>
 
@@ -859,6 +322,47 @@
     </div>
 
     <script>
+        // Configurar marked para melhor renderização
+        marked.setOptions({
+            breaks: true,
+            gfm: true,
+            headerIds: true,
+            mangle: false
+        });
+
+        // Carregar e renderizar o markdown
+        fetch('CRIOS.md')
+            .then(response => {
+                if (!response.ok) throw new Error('Arquivo não encontrado');
+                return response.text();
+            })
+            .then(markdown => {
+                const content = document.getElementById('content');
+                content.innerHTML = marked.parse(markdown);
+                content.classList.remove('loading');
+            })
+            .catch(error => {
+                console.error('Erro ao carregar CRIOS.md:', error);
+                // Fallback: tentar carregar com caminho absoluto ou usar XMLHttpRequest
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', 'CRIOS.md', true);
+                xhr.onload = function() {
+                    if (xhr.status === 200 || xhr.status === 0) { // 0 para file://
+                        const content = document.getElementById('content');
+                        content.innerHTML = marked.parse(xhr.responseText);
+                        content.classList.remove('loading');
+                    } else {
+                        document.getElementById('content').innerHTML = 
+                            '<p style="color: var(--trace); text-align: center;">Erro ao carregar CRIOS.md. Abra este arquivo em um servidor web local.</p>';
+                    }
+                };
+                xhr.onerror = function() {
+                    document.getElementById('content').innerHTML = 
+                        '<p style="color: var(--trace); text-align: center;">Para visualizar o conteúdo completo, abra em um servidor web local:<br><code>python3 -m http.server 8000</code></p>';
+                };
+                xhr.send();
+            });
+
         // Adicionar mais partículas dinamicamente
         function createParticles(count) {
             const body = document.body;
@@ -879,17 +383,6 @@
         const mainElement = document.querySelector('main');
         mainElement.classList.add('trembling');
 
-        // Smooth scroll para links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
         // --- Audio background logic ---
         (function() {
             const audio = document.getElementById('bg-audio');
@@ -901,59 +394,49 @@
             let muteRemaining = 0;
             let _mcc = 0;
 
-            // Show UI when audio is playing
             function showUI() {
                 audioUI.style.display = 'flex';
             }
 
-            // Try to play (returns promise). If autoplay blocked, user must click.
             function tryPlay() {
                 const p = audio.play();
                 if (p && typeof p.then === 'function') {
-                    p.then(() => showUI()).catch(() => {
-                        // Autoplay blocked; silently fail
+                    p.then(() => {
+                        showUI();
+                    }).catch(() => {
+                        // Autoplay blocked
                     });
                 }
             }
 
-            // Mute for fixed duration (seconds)
             function holdMute(seconds) {
-                // If already muting, ignore
                 if (muteTimer) return;
                 audio.muted = true;
                 muteRemaining = seconds;
                 
-                // Stop tremor when mute starts
                 mainElement.classList.remove('trembling');
                 
-                // Toggle visibility: hide button, show counter
                 muteBtn.style.display = 'none';
                 muteLabel.style.display = 'block';
                 muteLabel.classList.add('blink');
                 updateMuteLabel();
 
                 muteTimer = setInterval(() => {
-                    muteRemaining -= 1;
+                    muteRemaining--;
+                    updateMuteLabel();
                     if (muteRemaining <= 0) {
                         clearInterval(muteTimer);
                         muteTimer = null;
                         audio.muted = false;
-                        
-                        // Resume tremor when mute ends
-                        mainElement.classList.add('trembling');
-                        
-                        // Toggle visibility: show button, hide counter
                         muteBtn.style.display = 'block';
                         muteLabel.style.display = 'none';
                         muteLabel.classList.remove('blink');
-                    } else {
-                        updateMuteLabel();
+                        mainElement.classList.add('trembling');
                     }
                 }, 1000);
             }
 
             function updateMuteLabel() {
-                // Ternary display: first third shows ∅, middle third shows ., last third shows ∅
                 const progress = muteRemaining / 33;
                 if (progress > 0.666) {
                     muteLabel.textContent = '∅';
@@ -964,12 +447,11 @@
                 }
             }
 
-            // UX refinements
             function _dr() {
                 document.body.style.transition = 'opacity 3s ease-out';
                 document.body.style.opacity = '0';
                 setTimeout(() => {
-                    document.body.innerHTML = '<div style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:4rem;font-family:monospace;text-align:center;">∅</div>';
+                    window.location.reload();
                     document.body.style.opacity = '1';
                 }, 3000);
             }
@@ -978,13 +460,10 @@
                 _mcc++;
                 if (_mcc === 14) { _dr(); return; }
                 
-                // Toggle theme
                 document.body.classList.toggle('light-theme');
-                
                 holdMute(33);
             });
 
-            // Keyboard accessibility
             muteBtn.addEventListener('keydown', (e) => {
                 if (e.key === ' ' || e.key === 'Enter') {
                     e.preventDefault();
@@ -992,7 +471,6 @@
                 }
             });
 
-            // If the audio file is missing, provide a gentle visual hint
             audio.addEventListener('error', () => {
                 audioUI.style.display = 'flex';
                 muteLabel.textContent = 'sem áudio';
@@ -1000,90 +478,70 @@
                 muteBtn.style.display = 'none';
             });
 
-            // Listen for play/pause events to show/hide UI
             audio.addEventListener('play', showUI);
-            audio.addEventListener('pause', () => {
-                // Only hide if not in mute countdown
-                if (!muteTimer) {
-                    audioUI.style.display = 'none';
-                }
-            });
 
-            // Close page when audio ends
             audio.addEventListener('ended', () => {
                 window.close();
-                // If window doesn't close (blocked by browser), dissolve to ∅
                 setTimeout(() => {
                     _dr();
                 }, 100);
             });
 
-            // Auto-scroll page based on audio time (only when not manually scrolling)
+            // Auto-scroll page based on audio time
             let isManualScroll = false;
             let scrollTimeout = null;
-            let animationFrame = null;
             
             function smoothAutoScroll() {
-                if (!isManualScroll && audio.duration > 0 && !audio.paused) {
-                    const progress = audio.currentTime / audio.duration;
-                    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-                    const targetScroll = progress * maxScroll;
+                if (!audio.paused && !isManualScroll && audio.duration) {
+                    const duration = audio.duration;
+                    const currentTime = audio.currentTime;
+                    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    const targetScroll = (currentTime / duration) * scrollHeight;
                     
-                    // Smooth, instant update without behavior: 'smooth' for fluid movement
-                    window.scrollTo(0, targetScroll);
+                    window.scrollTo({
+                        top: targetScroll,
+                        behavior: 'smooth'
+                    });
                 }
-                
-                // Continue animation loop regardless
-                animationFrame = requestAnimationFrame(smoothAutoScroll);
+                requestAnimationFrame(smoothAutoScroll);
             }
             
-            // Start animation loop immediately
             smoothAutoScroll();
-            
-            audio.addEventListener('play', () => {
-                showUI();
-            });
-            
-            audio.addEventListener('pause', () => {
-                // Don't stop the animation loop, just let the condition handle it
-            });
 
             // Manual scroll controls audio position
             let lastScrollY = window.scrollY;
             
             window.addEventListener('scroll', () => {
-                if (audio.duration > 0) {
+                const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercent = window.scrollY / scrollHeight;
+                
+                if (Math.abs(window.scrollY - lastScrollY) > 5) {
                     isManualScroll = true;
+                    clearTimeout(scrollTimeout);
                     
-                    // Clear previous timeout
-                    if (scrollTimeout) clearTimeout(scrollTimeout);
+                    if (!audio.paused && audio.duration) {
+                        const newTime = scrollPercent * audio.duration;
+                        audio.currentTime = newTime;
+                    }
                     
-                    // Calculate audio position based on scroll
-                    const currentScrollY = window.scrollY;
-                    const scrollProgress = currentScrollY / (document.documentElement.scrollHeight - window.innerHeight);
-                    audio.currentTime = scrollProgress * audio.duration;
-                    
-                    lastScrollY = currentScrollY;
-                    
-                    // Resume auto-scroll after 2 seconds of no manual scrolling
                     scrollTimeout = setTimeout(() => {
                         isManualScroll = false;
                     }, 2000);
                 }
+                
+                lastScrollY = window.scrollY;
             }, { passive: true });
 
             // Auto-play after 33 seconds from page load
             setTimeout(() => {
+                tryPlay();
+            }, 33000);
+
+            // If user interacts anywhere, attempt to play once
+            function onFirstInteraction() {
                 if (audio.paused) {
                     tryPlay();
                 }
-            }, 33000);
-
-            // If user interacts anywhere, and audio is paused, attempt to play once (helps mobile)
-            function onFirstInteraction() {
-                tryPlay();
-                window.removeEventListener('pointerdown', onFirstInteraction);
-                window.removeEventListener('keydown', onFirstInteraction);
             }
 
             window.addEventListener('pointerdown', onFirstInteraction, { once: true });
@@ -1092,4 +550,3 @@
     </script>
 </body>
 </html>
-
