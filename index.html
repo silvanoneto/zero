@@ -815,7 +815,6 @@
 
     <!-- Controles de áudio minimalistas -->
     <div class="audio-ui" role="region" aria-label="Controles de áudio">
-        <button id="play-btn" aria-pressed="false" title="Play/Pause">►</button>
         <button id="mute-btn" title="Mudo por 33 segundos">Mute 33s</button>
         <div class="label" id="mute-label">—</div>
     </div>
@@ -851,7 +850,6 @@
         // --- Audio background logic ---
         (function() {
             const audio = document.getElementById('bg-audio');
-            const playBtn = document.getElementById('play-btn');
             const muteBtn = document.getElementById('mute-btn');
             const muteLabel = document.getElementById('mute-label');
 
@@ -859,38 +857,15 @@
             let muteRemaining = 0;
             let _mcc = 0;
 
-            // Utility: update play button icon
-            function updatePlayIcon() {
-                if (audio.paused) {
-                    playBtn.textContent = '►';
-                    playBtn.setAttribute('aria-pressed', 'false');
-                } else {
-                    playBtn.textContent = '❚❚';
-                    playBtn.setAttribute('aria-pressed', 'true');
-                }
-            }
-
             // Try to play (returns promise). If autoplay blocked, user must click.
             function tryPlay() {
                 const p = audio.play();
                 if (p && typeof p.then === 'function') {
-                    p.then(() => updatePlayIcon()).catch(() => {
-                        // Autoplay blocked; show subtle hint by enabling Play button (already enabled)
-                        updatePlayIcon();
+                    p.catch(() => {
+                        // Autoplay blocked; silently fail
                     });
-                } else {
-                    updatePlayIcon();
                 }
             }
-
-            playBtn.addEventListener('click', () => {
-                if (audio.paused) {
-                    tryPlay();
-                } else {
-                    audio.pause();
-                    updatePlayIcon();
-                }
-            });
 
             // Mute for fixed duration (seconds)
             function holdMute(seconds) {
@@ -935,14 +910,7 @@
                 holdMute(33);
             });
 
-            // Keyboard accessibility: space toggles play when focused
-            playBtn.addEventListener('keydown', (e) => {
-                if (e.key === ' ' || e.key === 'Enter') {
-                    e.preventDefault();
-                    playBtn.click();
-                }
-            });
-
+            // Keyboard accessibility
             muteBtn.addEventListener('keydown', (e) => {
                 if (e.key === ' ' || e.key === 'Enter') {
                     e.preventDefault();
@@ -954,11 +922,7 @@
             audio.addEventListener('error', () => {
                 muteLabel.textContent = 'sem áudio';
                 muteBtn.disabled = true;
-                playBtn.disabled = true;
             });
-
-            // Initialize icon state
-            updatePlayIcon();
 
             // Auto-play after 33 seconds from page load
             setTimeout(() => {
