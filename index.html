@@ -292,15 +292,15 @@
 
         @keyframes tremor-particle {
             0%, 100% { transform: translate(0, 0); }
-            10% { transform: translate(var(--shake-x1), var(--shake-y1)); }
-            20% { transform: translate(var(--shake-x2), var(--shake-y2)); }
-            30% { transform: translate(var(--shake-x3), var(--shake-y3)); }
-            40% { transform: translate(var(--shake-x4), var(--shake-y4)); }
-            50% { transform: translate(var(--shake-x5), var(--shake-y5)); }
-            60% { transform: translate(var(--shake-x6), var(--shake-y6)); }
-            70% { transform: translate(var(--shake-x7), var(--shake-y7)); }
-            80% { transform: translate(var(--shake-x8), var(--shake-y8)); }
-            90% { transform: translate(var(--shake-x9), var(--shake-y9)); }
+            10% { transform: translate(calc(var(--shake-x1) * var(--chaos-intensity, 1)), calc(var(--shake-y1) * var(--chaos-intensity, 1))); }
+            20% { transform: translate(calc(var(--shake-x2) * var(--chaos-intensity, 1)), calc(var(--shake-y2) * var(--chaos-intensity, 1))); }
+            30% { transform: translate(calc(var(--shake-x3) * var(--chaos-intensity, 1)), calc(var(--shake-y3) * var(--chaos-intensity, 1))); }
+            40% { transform: translate(calc(var(--shake-x4) * var(--chaos-intensity, 1)), calc(var(--shake-y4) * var(--chaos-intensity, 1))); }
+            50% { transform: translate(calc(var(--shake-x5) * var(--chaos-intensity, 1)), calc(var(--shake-y5) * var(--chaos-intensity, 1))); }
+            60% { transform: translate(calc(var(--shake-x6) * var(--chaos-intensity, 1)), calc(var(--shake-y6) * var(--chaos-intensity, 1))); }
+            70% { transform: translate(calc(var(--shake-x7) * var(--chaos-intensity, 1)), calc(var(--shake-y7) * var(--chaos-intensity, 1))); }
+            80% { transform: translate(calc(var(--shake-x8) * var(--chaos-intensity, 1)), calc(var(--shake-y8) * var(--chaos-intensity, 1))); }
+            90% { transform: translate(calc(var(--shake-x9) * var(--chaos-intensity, 1)), calc(var(--shake-y9) * var(--chaos-intensity, 1))); }
         }
 
         .particle {
@@ -312,6 +312,7 @@
             pointer-events: none;
             z-index: -1;
             transition: opacity 3s ease-out;
+            --chaos-intensity: 1;
         }
 
         .particle.floating {
@@ -470,6 +471,13 @@
                 if (mainElement) {
                     mainElement.style.setProperty('--tremor-intensity', scrollPercent);
                 }
+                
+                // Atualizar intensidade do caos das partículas (1 a 5x)
+                const chaosIntensity = 1 + (scrollPercent * 4); // 1 no topo, 5 no final
+                const particles = document.querySelectorAll('.particle');
+                particles.forEach(particle => {
+                    particle.style.setProperty('--chaos-intensity', chaosIntensity);
+                });
             }
 
             function showUI() {
