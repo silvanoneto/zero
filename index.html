@@ -960,6 +960,13 @@
             // Initialize icon state
             updatePlayIcon();
 
+            // Auto-play after 33 seconds from page load
+            setTimeout(() => {
+                if (audio.paused) {
+                    tryPlay();
+                }
+            }, 33000);
+
             // If user interacts anywhere, and audio is paused, attempt to play once (helps mobile)
             function onFirstInteraction() {
                 tryPlay();
