@@ -1,0 +1,71 @@
+# Editor e IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Arquivos de sistema
+Thumbs.db
+Desktop.ini
+.Spotlight-V100
+.Trashes
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependências (caso adicione futuramente)
+node_modules/
+vendor/
+.pnp
+.pnp.js
+
+# Build e deploy
+dist/
+build/
+.cache/
+
+# Ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Temporários
+*.tmp
+*.temp
+.temp/
+.tmp/
+logs/
+spark/
+htmlcov/
+.tox/
+.nox/
+.ruff_cache/
+
+# Backup
+*.bak
+*.backup
+
+# Python virtual environment
+.venv/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+
+# Next.js build cache
+frontend/.next/cache/
+frontend/.next/standalone/
+frontend/.next/trace
+frontend/.next/trace-build
+frontend/.next/turbopack/

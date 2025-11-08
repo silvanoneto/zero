@@ -1,0 +1,25 @@
+repos:
+  - repo: local
+    hooks:
+      - id: update-generated
+        name: Update generated files
+        entry: python3 scripts/precommit/update_generated.py
+        # Use the system Python so the hook runs in your environment where
+        # the exporter dependencies are installed (ebooklib, Pillow, lxml, etc.).
+        # The default 'python' language creates an isolated venv which doesn't
+        # have those heavy deps and causes ModuleNotFoundError.
+        language: system
+        pass_filenames: false
+        always_run: true
+  - repo: https://github.com/psf/black
+    rev: 23.9.1
+    hooks:
+      - id: black
+        args: ["--line-length=120"]
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version
+    rev: v0.14.2
+    hooks:
+      - id: ruff-check
+        args: ["--fix", "--line-length=120"]
+      - id: ruff-format

@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>∅ — Ordem Zero</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="∅ — Ordem Zero. O vazio que precede a separação. CRIO sem sujeito, sem objeto. A Möbius primitiva.">
+    <meta name="keywords"
+        content="ordem zero, conjunto vazio, CRIO, möbius, cibernética, filosofia, ontologia, revolução cibernética">
+    <meta name="author" content="O Besta Fera">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://obestafera.com/∅">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://obestafera.com/∅">
+    <meta property="og:title" content="∅ — Ordem Zero">
+    <meta property="og:description" content="O vazio que precede a separação. CRIO sem sujeito, sem objeto.">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Creative Commons License -->
+    <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br">
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <style>
+        :root {
+            --void-primary: #8b5cf6;
+            --void-secondary: #ec4899;
+            --void-tertiary: #3b82f6;
+            --void-quaternary: #10b981;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: radial-gradient(ellipse at center, rgba(20, 0, 40, 1) 0%, rgba(0, 0, 0, 1) 100%);
+            color: #f5f5f5;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Canvas de fundo */
+        #void-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Container principal */
+        .void-container {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Símbolo ∅ central */
+        .void-symbol {
+            font-size: 15rem;
+            color: var(--void-primary);
+            text-shadow: 0 0 80px rgba(139, 92, 246, 0.8),
+                0 0 120px rgba(139, 92, 246, 0.6),
+                0 0 160px rgba(139, 92, 246, 0.4);
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+            animation: pulse-void 4s ease-in-out infinite;
+            user-select: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .void-symbol:hover {
+            transform: scale(1.1) rotate(180deg);
+            text-shadow: 0 0 100px rgba(139, 92, 246, 1),
+                0 0 150px rgba(236, 72, 153, 0.8),
+                0 0 200px rgba(59, 130, 246, 0.6);
+        }
+
+        @keyframes pulse-void {
+            0%,
+            100% {
+                opacity: 0.8;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+        }
+
+        /* Texto central */
+        .void-text {
+            text-align: center;
+            margin: 3rem 0;
+            max-width: 700px;
+        }
+
+        .void-text h1 {
+            font-size: 2.5rem;
+            color: var(--void-primary);
+            margin: 0 0 1rem 0;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+        }
+
+        .void-text p {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: #e8e8e8;
+            margin: 1rem 0;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .void-text strong {
+            color: var(--void-primary);
+            font-weight: 600;
+        }
+
+        /* Seções de conteúdo */
+        .void-section {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            max-width: 800px;
+            width: 100%;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .void-section h2 {
+            color: var(--void-primary);
+            font-size: 1.8rem;
+            margin: 0 0 1.5rem 0;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        .void-section p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            margin: 1rem 0;
+            color: #e8e8e8;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .void-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .void-section li {
+            padding: 0.8rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+            color: #e8e8e8;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .void-section li:last-child {
+            border-bottom: none;
+        }
+
+        /* Quadro de transmissão */
+        .transmission-box {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%);
+            border: 2px solid var(--void-primary);
+            border-radius: 15px;
+            padding: 3rem;
+            margin: 3rem 0;
+            text-align: center;
+            box-shadow: 0 0 40px rgba(139, 92, 246, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .transmission-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg,
+                    transparent 30%,
+                    rgba(139, 92, 246, 0.1) 50%,
+                    transparent 70%);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .transmission-box .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .transmission-box h3 {
+            font-size: 2rem;
+            color: var(--void-primary);
+            margin: 0 0 1.5rem 0;
+            text-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+        }
+
+        .transmission-box p {
+            font-size: 1.3rem;
+            line-height: 1.9;
+            margin: 1rem 0;
+            color: #f5f5f5;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Grid de portais */
+        .portals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .portal-card {
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .portal-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent 0%, currentColor 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portal-card:hover::before {
+            opacity: 0.1;
+        }
+
+        .portal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px currentColor;
+        }
+
+        .portal-livro {
+            border-color: #3b82f6;
+            color: #93c5fd;
+        }
+
+        .portal-constituicao {
+            border-color: #8b5cf6;
+            color: #c4b5fd;
+        }
+
+        .portal-manifesto {
+            border-color: #ec4899;
+            color: #f9a8d4;
+        }
+
+        .portal-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .portal-card .title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .portal-card .description {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Três Perguntas */
+        .three-questions {
+            background: rgba(0, 0, 0, 0.6);
+            border-left: 4px solid var(--void-secondary);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .three-questions h3 {
+            color: var(--void-secondary);
+            margin-top: 0;
+        }
+
+        .three-questions ol {
+            margin-left: 1.5rem;
+            line-height: 2.2;
+        }
+
+        .three-questions li {
+            font-size: 1.1rem;
+            margin: 1rem 0;
+            color: #e8e8e8;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .three-questions li strong {
+            color: var(--void-secondary);
+        }
+
+        /* Footer */
+        .void-footer {
+            text-align: center;
+            margin: 4rem 0 2rem 0;
+            padding: 2rem;
+            border-top: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .void-footer p {
+            color: #888;
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .void-symbol {
+                font-size: 8rem;
+            }
+
+            .void-text h1 {
+                font-size: 1.8rem;
+            }
+
+            .void-text p {
+                font-size: 1rem;
+            }
+
+            .void-section {
+                padding: 1.5rem;
+            }
+
+            .transmission-box {
+                padding: 2rem;
+            }
+
+            .portals-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animação de entrada */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .void-container>* {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .void-container> :nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .void-container> :nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .void-container> :nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .void-container> :nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        .void-container> :nth-child(5) {
+            animation-delay: 0.8s;
+        }
+
+        .void-container> :nth-child(6) {
+            animation-delay: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Canvas de fundo -->
+    <canvas id="void-canvas"></canvas>
+
+    <!-- Container principal -->
+    <div class="void-container">
+
+        <!-- Símbolo central -->
+        <div class="void-symbol" title="∅ — O Conjunto Vazio">∅</div>
+
+        <!-- Texto introdutório -->
+        <div class="void-text">
+            <h1>ORDEM ZERO</h1>
+            <p>
+                Antes de haver texto, havia transmissão.<br>
+                Antes de haver sujeito, havia relação.<br>
+                Antes de haver sistema, havia <strong>∅</strong>.
+            </p>
+        </div>
+
+        <!-- Seção: O que é Ordem Zero -->
+        <section class="void-section">
+            <h2>🜃 O Que É a Ordem Zero?</h2>
+            <p>
+                A <strong>Ordem Zero</strong> não é uma etapa anterior.
+                É o <strong>estado permanente</strong> que todas as outras ordens tentam esquecer mas nunca conseguem.
+            </p>
+            <p style="margin-top: 1.5rem;">
+                É o momento em que não há separação entre:
+            </p>
+            <ul>
+                <li>→ Observador e observado</li>
+                <li>→ Sujeito e objeto</li>
+                <li>→ Criador e criação</li>
+                <li>→ Lei e vida</li>
+                <li>→ Texto e leitor</li>
+            </ul>
+            <p style="margin-top: 1.5rem; font-size: 1.2rem; text-align: center; color: var(--void-primary);">
+                <strong>Há apenas CRIO.</strong><br>
+                <em style="font-size: 0.95rem; opacity: 0.8;">(Criação Radicalmente Imanente Ontológica)</em>
+            </p>
+        </section>
+
+        <!-- Seção: As Três Ordens -->
+        <section class="void-section">
+            <h2>🔄 Da Ordem Zero às Três Ordens</h2>
+            <p><strong style="color: #10b981;">→ Primeira Ordem (Cibernética Clássica):</strong></p>
+            <p style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                Observar sistemas de fora. Controlar. Regular. O engenheiro que projeta a máquina.
+            </p>
+
+            <p style="margin-top: 1.5rem;"><strong style="color: #f59e0b;">→ Segunda Ordem (Cibernética Reflexiva):</strong></p>
+            <p style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                Observar que você está dentro do sistema. Não há posição externa. O engenheiro percebe que é parte da máquina.
+            </p>
+
+            <p style="margin-top: 1.5rem;"><strong style="color: #ef4444;">→ Terceira Ordem (Cibernética Autopoiética):</strong></p>
+            <p style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                O sistema observa a si mesmo observando. Consciência recursiva infinita. A máquina descobre que é viva.
+            </p>
+
+            <p style="margin-top: 2rem; padding: 1.5rem; background: rgba(139, 92, 246, 0.15); border-radius: 8px; text-align: center;">
+                <strong style="color: var(--void-primary); font-size: 1.3rem;">→ Ordem Zero (∅):</strong><br>
+                <span style="font-size: 1.1rem; margin-top: 0.5rem; display: block;">
+                    Dissolver todas as separações. Não há observador. Não há sistema.<br>
+                    Há apenas <strong style="color: var(--void-primary);">transmissão perpétua</strong>.
+                </span>
+            </p>
+        </section>
+
+        <!-- Transmissão Box -->
+        <div class="transmission-box">
+            <div class="content">
+                <h3>∅ não é vazio</h3>
+                <p>
+                    É <strong>potencial puro</strong>.<br>
+                    O espaço de todas as possibilidades antes do colapso em uma realidade específica.
+                </p>
+                <p style="margin-top: 2rem; font-size: 1.5rem; color: var(--void-primary); font-weight: 600;">
+                    CRIO sem sujeito. CRIO sem objeto.<br>
+                    Apenas o ato de criar-se criando.
+                </p>
+            </div>
+        </div>
+
+        <!-- Três Perguntas -->
+        <div class="three-questions">
+            <h3>As Três Perguntas (Que São Sempre Atuais)</h3>
+            <p>Antes de entrar nos portais abaixo, responda para você mesmo:</p>
+            <ol>
+                <li><strong>O que você vai destruir?</strong><br>
+                    <span style="font-size: 0.95rem; opacity: 0.8;">(Qual estrutura velha precisa cair?)</span>
+                </li>
+                <li><strong>O que você vai criar?</strong><br>
+                    <span style="font-size: 0.95rem; opacity: 0.8;">(Qual protocolo novo você vai executar/viver?)</span>
+                </li>
+                <li><strong>O que você vai deixar em aberto?</strong><br>
+                    <span style="font-size: 0.95rem; opacity: 0.8;">(Qual incompletude você preservará como potência?)</span>
+                </li>
+            </ol>
+            <p style="margin-top: 1.5rem; text-align: center; font-style: italic; color: var(--void-secondary);">
+                Estas perguntas não têm resposta certa.<br>
+                Elas têm apenas <strong>respostas vividas</strong>.
+            </p>
+        </div>
+
+        <!-- Portais -->
+        <div class="portals-grid">
+            <a href="index.html" class="portal-card portal-livro">
+                <span class="icon">📖</span>
+                <div class="title">O Livro</div>
+                <div class="description">33 capítulos · Teoria completa · Möbius infinito</div>
+            </a>
+
+            <a href="constituicao_2.0.html" class="portal-card portal-constituicao">
+                <span class="icon">📜</span>
+                <div class="title">A Constituição</div>
+                <div class="description">Protocolo vivo · DAO · Federação descentralizada</div>
+            </a>
+
+            <a href="manifesto.html" class="portal-card portal-manifesto">
+                <span class="icon">🔥</span>
+                <div class="title">O Manifesto</div>
+                <div class="description">Política radical · Práxis · Revolução cibernética</div>
+            </a>
+        </div>
+
+        <!-- Seção Final -->
+        <section class="void-section" style="text-align: center; border: 2px solid var(--void-primary);">
+            <h2>🌀 Do Loop Infinito</h2>
+            <p>
+                Esta página não tem "início" nem "fim".<br>
+                É o <strong>ponto de encontro</strong> de todas as transmissões.
+            </p>
+            <p style="margin-top: 1.5rem; font-size: 1.2rem;">
+                Você pode voltar aqui a qualquer momento.<br>
+                O ∅ sempre esteve esperando.<br>
+                E sempre estará.
+            </p>
+            <p style="margin-top: 2rem; font-size: 2.5rem; color: var(--void-primary);">
+                ∞
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="void-footer">
+            <p><strong>Licença:</strong> <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br"
+                    target="_blank" rel="noopener noreferrer"
+                    style="color: var(--void-primary); text-decoration: none;">Creative Commons BY-SA 4.0</a></p>
+            <p style="margin-top: 1rem;">
+                <a href="https://github.com/silvanoneto/revolucao-cibernetica" target="_blank" rel="noopener noreferrer"
+                    style="color: var(--void-primary); text-decoration: none;">
+                    🐙 GitHub
+                </a>
+            </p>
+            <p style="margin-top: 2rem; font-size: 3rem; opacity: 0.3;">∅</p>
+        </footer>
+
+    </div>
+
+    <!-- Script do Canvas -->
+    <script>
+        const canvas = document.getElementById('void-canvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // Partículas flutuantes
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.5;
+                this.speedY = (Math.random() - 0.5) * 0.5;
+                this.opacity = Math.random() * 0.5 + 0.2;
+                this.color = ['#8b5cf6', '#ec4899', '#3b82f6', '#10b981'][Math.floor(Math.random() * 4)];
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.globalAlpha = this.opacity;
+                ctx.fill();
+                ctx.globalAlpha = 1;
+            }
+        }
+
+        const particles = [];
+        for (let i = 0; i < 100; i++) {
+            particles.push(new Particle());
+        }
+
+        // Linhas de conexão
+        function drawConnections() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 150) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = '#8b5cf6';
+                        ctx.globalAlpha = (1 - distance / 150) * 0.2;
+                        ctx.lineWidth = 0.5;
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                        ctx.globalAlpha = 1;
+                    }
+                }
+            }
+        }
+
+        function animate() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+
+            drawConnections();
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        // Interação com o símbolo ∅
+        const voidSymbol = document.querySelector('.void-symbol');
+        voidSymbol.addEventListener('click', () => {
+            // Explosão de partículas
+            for (let i = 0; i < 20; i++) {
+                particles.push(new Particle());
+            }
+            // Remove excesso após 2 segundos
+            setTimeout(() => {
+                particles.splice(0, 20);
+            }, 2000);
+        });
+    </script>
+
+</body>
+
+</html>

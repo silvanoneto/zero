@@ -1,0 +1,17 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/metrics/route": "app/api/metrics/route.js",
+  "/book/page": "app/book/page.js",
+  "/constituicao-2-0/page": "app/constituicao-2-0/page.js",
+  "/constituicao/page": "app/constituicao/page.js",
+  "/contracts/page": "app/contracts/page.js",
+  "/dao-mitosis/page": "app/dao-mitosis/page.js",
+  "/download/page": "app/download/page.js",
+  "/entry/page": "app/entry/page.js",
+  "/federation-voting/page": "app/federation-voting/page.js",
+  "/manifesto/page": "app/manifesto/page.js",
+  "/page": "app/page.js",
+  "/test-p2p/page": "app/test-p2p/page.js",
+  "/zec-simulator/page": "app/zec-simulator/page.js"
+}

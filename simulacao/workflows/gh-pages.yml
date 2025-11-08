@@ -1,0 +1,140 @@
+name: Deploy to GitHub Pages (gh-pages)
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  validate-generated:
+    name: Validate generated files are up-to-date
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('scripts/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      # (removed) Cache apt archives step: caching system apt archives can fail
+      # on runners due to permissions and causes '/usr/bin/tar' failures. Removed
+      # to ensure CI stability. If caching is desired, implement a copy-then-cache
+      # approach that runs under the runner user.
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies (if present)
+        run: |
+          python -m pip install --upgrade pip
+          # Install system packages needed to build C extensions (pycairo, etc.)
+          if [ "$(uname -s)" = "Linux" ]; then
+            sudo apt-get update && sudo apt-get install -y --no-install-recommends \
+              pkg-config libcairo2-dev python3-dev build-essential
+          fi
+          if [ -f scripts/requirements.txt ]; then
+            pip install -r scripts/requirements.txt
+          fi
+
+      - name: Run exporter
+        run: python3 scripts/export_file.py all
+
+  deploy:
+    runs-on: ubuntu-latest
+    name: Build and publish to gh-pages
+    needs: validate-generated
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # allow the workflow to push back to the repo using the provided token
+          persist-credentials: true
+          # fetch full history so tags/branches can be pushed reliably
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install frontend dependencies
+        working-directory: ./frontend
+        run: npm install
+
+      - name: Remove API routes and proxy (not supported in static export)
+        working-directory: ./frontend
+        run: |
+          rm -rf src/app/api
+          rm -f src/proxy.ts src/middleware.ts
+          rm -rf .next
+
+      - name: Build Next.js frontend
+        working-directory: ./frontend
+        run: npm run build
+        env:
+          NEXT_PUBLIC_DEMO_MODE: 'true'
+
+      - name: Export Next.js static site
+        working-directory: ./frontend
+        run: npm run export
+
+      - name: Copy frontend to root
+        run: |
+          mkdir -p _site
+          # Adiciona .nojekyll para evitar processamento Jekyll
+          touch _site/.nojekyll
+          # Copia o output do Next.js para a raiz
+          cp -r frontend/out/* _site/
+          # Sobrescreve com arquivos estáticos importantes da raiz (se existirem)
+          cp CNAME _site/ 2>/dev/null || true
+          cp robots.txt _site/ 2>/dev/null || true
+          cp sitemap.xml _site/ 2>/dev/null || true
+          # Copia assets da raiz para serem acessíveis
+          cp -r assets _site/ 2>/dev/null || true
+
+      - name: Publish to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          # publish_branch: gh-pages (default)
+          user_name: silvanoneto
+          user_email: dev@silvanoneto.com
+
+      - name: Ensure GitHub Pages source is set to gh-pages (API)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          api="https://api.github.com/repos/${{ github.repository }}/pages"
+          echo "PUT $api -> set source to gh-pages"
+          curl -sS -X PUT \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            -d '{"source":{"branch":"master","path":"/"}}' \
+            "$api" | jq -r '.url, .status, .cname' || true
+
+      - name: Show Pages status
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          api="https://api.github.com/repos/${{ github.repository }}/pages"
+          echo "GET $api -> pages info"
+          curl -sS -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github+json" "$api" | jq || true

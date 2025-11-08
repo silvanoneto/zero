@@ -1,0 +1,210 @@
+# Prometheus Alert Rules
+# https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/
+
+groups:
+  - name: system_alerts
+    interval: 30s
+    rules:
+      # CPU Alerts
+      - alert: HighCPUUsage
+        expr: 100 - (avg(rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
+        for: 5m
+        labels:
+          severity: warning
+          component: system
+        annotations:
+          summary: "High CPU usage detected"
+          description: "CPU usage is above 80% (current value: {{ $value | humanize }}%)"
+          dashboard: "https://grafana.revolucao-cibernetica.local/d/system-overview"
+
+      - alert: CriticalCPUUsage
+        expr: 100 - (avg(rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 95
+        for: 2m
+        labels:
+          severity: critical
+          component: system
+        annotations:
+          summary: "Critical CPU usage detected"
+          description: "CPU usage is above 95% (current value: {{ $value | humanize }}%)"
+          dashboard: "https://grafana.revolucao-cibernetica.local/d/system-overview"
+
+      # Memory Alerts
+      - alert: HighMemoryUsage
+        expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100 > 85
+        for: 5m
+        labels:
+          severity: warning
+          component: system
+        annotations:
+          summary: "High memory usage detected"
+          description: "Memory usage is above 85% (current value: {{ $value | humanize }}%)"
+          dashboard: "https://grafana.revolucao-cibernetica.local/d/system-overview"
+
+      - alert: CriticalMemoryUsage
+        expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100 > 95
+        for: 2m
+        labels:
+          severity: critical
+          component: system
+        annotations:
+          summary: "Critical memory usage detected"
+          description: "Memory usage is above 95% (current value: {{ $value | humanize }}%)"
+          dashboard: "https://grafana.revolucao-cibernetica.local/d/system-overview"
+
+      # Disk Alerts
+      - alert: HighDiskUsage
+        expr: (1 - (node_filesystem_avail_bytes{mountpoint="/",fstype!="rootfs"} / node_filesystem_size_bytes{mountpoint="/",fstype!="rootfs"})) * 100 > 85
+        for: 5m
+        labels:
+          severity: warning
+          component: system
+        annotations:
+          summary: "High disk usage detected"
+          description: "Disk usage is above 85% (current value: {{ $value | humanize }}%)"
+          dashboard: "https://grafana.revolucao-cibernetica.local/d/system-overview"
+
+      - alert: CriticalDiskUsage
+        expr: (1 - (node_filesystem_avail_bytes{mountpoint="/",fstype!="rootfs"} / node_filesystem_size_bytes{mountpoint="/",fstype!="rootfs"})) * 100 > 95
+        for: 2m
+        labels:
+          severity: critical
+          component: system
+        annotations:
+          summary: "Critical disk usage detected"
+          description: "Disk usage is above 95% (current value: {{ $value | humanize }}%)"
+          dashboard: "https://grafana.revolucao-cibernetica.local/d/system-overview"
+
+  - name: application_alerts
+    interval: 30s
+    rules:
+      # HTTP Error Rate
+      - alert: HighHTTPErrorRate
+        expr: rate(http_requests_total{status_code=~"5.."}[5m]) > 0.1
+        for: 5m
+        labels:
+          severity: warning
+          component: application
+        annotations:
+          summary: "High HTTP 5xx error rate"
+          description: "More than 10 HTTP 5xx errors per minute on {{ $labels.route }}"
+          dashboard: "https://grafana.revolucao-cibernetica.local/d/nextjs-perf"
+
+      - alert: CriticalHTTPErrorRate
+        expr: rate(http_requests_total{status_code=~"5.."}[5m]) > 0.5
+        for: 2m
+        labels:
+          severity: critical
+          component: application
+        annotations:
+          summary: "Critical HTTP 5xx error rate"
+          description: "More than 50 HTTP 5xx errors per minute on {{ $labels.route }}"
+          dashboard: "https://grafana.revolucao-cibernetica.local/d/nextjs-perf"
+
+      # Response Time
+      - alert: HighResponseTime
+        expr: histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m])) > 1
+        for: 5m
+        labels:
+          severity: warning
+          component: application
+        annotations:
+          summary: "High response time detected"
+          description: "95th percentile response time is above 1s (current: {{ $value | humanize }}s)"
+          dashboard: "https://grafana.revolucao-cibernetica.local/d/nextjs-perf"
+
+      - alert: CriticalResponseTime
+        expr: histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m])) > 3
+        for: 2m
+        labels:
+          severity: critical
+          component: application
+        annotations:
+          summary: "Critical response time detected"
+          description: "95th percentile response time is above 3s (current: {{ $value | humanize }}s)"
+          dashboard: "https://grafana.revolucao-cibernetica.local/d/nextjs-perf"
+
+      # Web Vitals
+      - alert: PoorLCP
+        expr: web_vitals_lcp > 4
+        for: 5m
+        labels:
+          severity: warning
+          component: web-vitals
+        annotations:
+          summary: "Poor Largest Contentful Paint"
+          description: "LCP is above 4s, affecting user experience (current: {{ $value | humanize }}s)"
+          dashboard: "https://grafana.revolucao-cibernetica.local/d/nextjs-perf"
+
+      - alert: PoorCLS
+        expr: web_vitals_cls > 0.25
+        for: 5m
+        labels:
+          severity: warning
+          component: web-vitals
+        annotations:
+          summary: "Poor Cumulative Layout Shift"
+          description: "CLS is above 0.25, affecting user experience (current: {{ $value | humanize }})"
+          dashboard: "https://grafana.revolucao-cibernetica.local/d/nextjs-perf"
+
+  - name: service_alerts
+    interval: 30s
+    rules:
+      # Service Down
+      - alert: ServiceDown
+        expr: up == 0
+        for: 1m
+        labels:
+          severity: critical
+          component: infrastructure
+        annotations:
+          summary: "Service {{ $labels.job }} is down"
+          description: "Service {{ $labels.job }} has been down for more than 1 minute"
+          dashboard: "https://grafana.revolucao-cibernetica.local/d/system-overview"
+
+      # Container Restart
+      - alert: ContainerRestarting
+        expr: rate(container_restart_count[15m]) > 0
+        for: 5m
+        labels:
+          severity: warning
+          component: docker
+        annotations:
+          summary: "Container {{ $labels.name }} is restarting"
+          description: "Container {{ $labels.name }} has restarted {{ $value | humanize }} times in the last 15 minutes"
+          dashboard: "https://grafana.revolucao-cibernetica.local/d/system-overview"
+
+      # High Container Memory
+      - alert: ContainerHighMemory
+        expr: (container_memory_usage_bytes / container_spec_memory_limit_bytes) * 100 > 90
+        for: 5m
+        labels:
+          severity: warning
+          component: docker
+        annotations:
+          summary: "Container {{ $labels.name }} high memory usage"
+          description: "Container {{ $labels.name }} is using more than 90% of its memory limit (current: {{ $value | humanize }}%)"
+          dashboard: "https://grafana.revolucao-cibernetica.local/d/system-overview"
+
+  - name: ssl_certificate_alerts
+    interval: 1h
+    rules:
+      # SSL Certificate Expiring
+      - alert: SSLCertificateExpiringSoon
+        expr: (probe_ssl_earliest_cert_expiry - time()) / 86400 < 30
+        for: 1h
+        labels:
+          severity: warning
+          component: ssl
+        annotations:
+          summary: "SSL certificate expiring soon"
+          description: "SSL certificate for {{ $labels.instance }} will expire in {{ $value | humanize }} days"
+
+      - alert: SSLCertificateExpiring
+        expr: (probe_ssl_earliest_cert_expiry - time()) / 86400 < 7
+        for: 1h
+        labels:
+          severity: critical
+          component: ssl
+        annotations:
+          summary: "SSL certificate expiring very soon!"
+          description: "SSL certificate for {{ $labels.instance }} will expire in {{ $value | humanize }} days"

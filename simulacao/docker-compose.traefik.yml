@@ -1,0 +1,84 @@
+# Traefik Reverse Proxy with SSL/TLS
+services:
+  traefik:
+    image: traefik:v3.2
+    container_name: traefik
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - revolucao-cibernetica_constituicao-network
+    ports:
+      - "80:80"      # HTTP
+      - "443:443"    # HTTPS
+      - "8090:8080"  # Dashboard (8090 externa, 8080 interna)
+    environment:
+      - TZ=America/Sao_Paulo
+      # For DNS Challenge (Cloudflare example)
+      # - CF_API_EMAIL=${CF_API_EMAIL}
+      # - CF_DNS_API_TOKEN=${CF_DNS_API_TOKEN}
+    volumes:
+      # Docker socket (read-only for security)
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      
+      # Configuration files
+      - ./traefik/traefik.yml:/etc/traefik/traefik.yml:ro
+      - ./traefik/dynamic.yml:/etc/traefik/dynamic.yml:ro
+      
+      # Local SSL certificates (mkcert)
+      - ./traefik/certs:/certs:ro
+      
+      # Certificates storage (Let's Encrypt for production)
+      - ./traefik/letsencrypt:/letsencrypt
+      
+      # Logs
+      - ./traefik/logs:/var/log/traefik
+    labels:
+      # Enable Traefik for this container
+      - "traefik.enable=true"
+      
+      # Dashboard
+      - "traefik.http.routers.dashboard.rule=Host(`traefik.revolucao-cibernetica.local`)"
+      - "traefik.http.routers.dashboard.entrypoints=websecure"
+      - "traefik.http.routers.dashboard.service=api@internal"
+      - "traefik.http.routers.dashboard.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.dashboard.middlewares=auth@file,security-headers@file"
+      
+      # Prometheus metrics
+      - "prometheus.io/scrape=true"
+      - "prometheus.io/port=8090"
+      - "prometheus.io/path=/metrics"
+    healthcheck:
+      test: ["CMD", "traefik", "healthcheck", "--ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # Whoami service for testing
+  whoami:
+    image: traefik/whoami:v1.10
+    container_name: whoami
+    restart: unless-stopped
+    networks:
+      - revolucao-cibernetica_constituicao-network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.whoami.rule=Host(`whoami.revolucao-cibernetica.local`)"
+      - "traefik.http.routers.whoami.entrypoints=websecure"
+      - "traefik.http.routers.whoami.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.whoami.middlewares=security-headers@file"
+      - "traefik.http.services.whoami.loadbalancer.server.port=80"
+
+networks:
+  revolucao-cibernetica_constituicao-network:
+    external: true
+
+volumes:
+  letsencrypt:
+    driver: local

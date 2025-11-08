@@ -1,0 +1,1654 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cybersyn 2.0 — Texto Completo Interativo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/loading-overlay.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/manifesto-evolved.css" />
+
+    <style>
+      .bio-article {
+        background: linear-gradient(
+          135deg,
+          rgba(16, 185, 129, 0.1),
+          rgba(5, 150, 105, 0.05)
+        );
+        border-left: 4px solid #10b981;
+        padding: 2rem;
+        margin: 2rem 0;
+        border-radius: 8px;
+      }
+
+      .bio-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #10b981, #059669);
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 12px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-left: 0.5rem;
+        box-shadow: 0 2px 10px rgba(16, 185, 129, 0.3);
+      }
+
+      .article-header {
+        font-size: 1.5rem;
+        color: var(--primary);
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+
+      .collapsible {
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .collapsible:hover {
+        opacity: 0.8;
+      }
+
+      .collapsible::before {
+        content: "▶ ";
+        display: inline-block;
+        transition: transform 0.3s;
+      }
+
+      .collapsible.active::before {
+        transform: rotate(90deg);
+      }
+
+      .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .content.active {
+        max-height: 5000px;
+      }
+
+      .toc {
+        background: rgba(139, 92, 246, 0.1);
+        padding: 2rem;
+        border-radius: 12px;
+        margin: 2rem 0;
+        border: 2px solid rgba(139, 92, 246, 0.3);
+      }
+
+      .toc a {
+        display: block;
+        padding: 0.5rem 0;
+        color: var(--primary);
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+
+      .toc a:hover {
+        padding-left: 1rem;
+        color: var(--accent);
+      }
+
+      .appendix {
+        background: rgba(59, 130, 246, 0.1);
+        padding: 2rem;
+        margin: 2rem 0;
+        border-radius: 8px;
+        border-left: 4px solid #3b82f6;
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas
+      id="manifesto-background"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+      "
+    ></canvas>
+
+    <div id="reading-progress" aria-hidden="true"></div>
+
+    <button
+      class="mobile-menu-btn"
+      onclick="toggleMobileMenu()"
+      aria-label="Abrir menu"
+    >
+      <span class="menu-icon-prism">△</span>
+    </button>
+    <button class="mobile-overlay" onclick="closeMobileMenu()"></button>
+
+    <div class="main-container">
+      <main id="main-content" class="content-container" role="main">
+        <article>
+          <header class="header">
+            <h1>Constituição Viva da Federação Digital do Brasil</h1>
+            <div
+              style="
+                display: inline-block;
+                background: linear-gradient(135deg, #10b981, #059669);
+                color: white;
+                padding: 0.75rem 1.5rem;
+                border-radius: 8px;
+                font-weight: 700;
+                margin: 1rem 0;
+              "
+            >
+              ✨ Versão 2.0 — Protocolo Biomimético-Cibernético
+            </div>
+            <p class="header-meta" style="margin: 1.5rem 0; opacity: 0.9">
+              <strong>Promulgação:</strong> 02 de Novembro de 2025<br />
+              <strong>Status:</strong> Protocolo Vivo + Ordem Zero + Biomimética
+              Evolutiva<br />
+              <strong>Hash:</strong> a7f3c9e2b1d8f4a6b5c3d2e1f0a9b8c7
+            </p>
+          </header>
+
+          <div itemprop="articleBody">
+            <!-- Índice -->
+            <div class="toc">
+              <h2 style="color: #a78bfa; margin-bottom: 1.5rem">
+                📑 Índice Navegável
+              </h2>
+              <div style="columns: 2; column-gap: 2rem">
+                <a href="#ordem-zero">🜃 Ordem Zero</a>
+                <a href="#preambulo">📜 Preâmbulo</a>
+                <a href="#art0">Art. 0º — Responsabilidade Cíclica</a>
+                <a href="#art1">Art. 1º — Existência e Dignidade</a>
+                <a href="#art2">Art. 2º — Identidade Soberana (IDS)</a>
+                <a href="#art3">Art. 3º — Votação Quadrática</a>
+                <a href="#art3a" class="bio-link"
+                  >🌿 Art. 3º-A — Votação Híbrida</a
+                >
+                <a href="#art4">Art. 4º — DAOs & Federação</a>
+                <a href="#art4b" class="bio-link">🌿 Art. 4º-B — Redundância</a>
+                <a href="#art5">Art. 5º — Transparência Radical</a>
+                <a href="#art5c" class="bio-link">🌿 Art. 5º-C — Mitose</a>
+                <a href="#art6">Art. 6º — Economia Regenerativa</a>
+                <a href="#art6d" class="bio-link"
+                  >🌿 Art. 6º-D — Tokens Atenção</a
+                >
+                <a href="#art7">Art. 7º — Trabalho & RBU</a>
+                <a href="#art7e" class="bio-link"
+                  >🌿 Art. 7º-E — Epistemocracia</a
+                >
+                <a href="#art8">Art. 8º — Educação Rizomática</a>
+                <a href="#art8f" class="bio-link"
+                  >🌿 Art. 8º-F — Apoptose Legal</a
+                >
+                <a href="#art9">Art. 9º — Meio Ambiente</a>
+                <a href="#art9g" class="bio-link">🌿 Art. 9º-G — ZECs</a>
+                <a href="#art10">Art. 10º — Educação Popular</a>
+                <a href="#art11">Art. 11º — Direitos Indígenas</a>
+                <a href="#art12">Art. 12º — Emenda</a>
+                <a href="#retorno">↩️ Retorno à Ordem Zero</a>
+                <a href="#appendices">📚 Apêndices</a>
+                <a href="#epilogo">🎭 Epílogo</a>
+              </div>
+            </div>
+
+            <!-- Ordem Zero -->
+            <section
+              id="ordem-zero"
+              style="
+                background: rgba(139, 92, 246, 0.15);
+                padding: 3rem;
+                border-radius: 12px;
+                border: 2px solid #8b5cf6;
+                margin: 3rem 0;
+              "
+            >
+              <h2
+                style="
+                  color: #c4b5fd;
+                  font-size: 2.5rem;
+                  text-align: center;
+                  margin-bottom: 2rem;
+                "
+              >
+                🜃 ORDEM ZERO: ANTES DA CONSTITUIÇÃO
+              </h2>
+
+              <h3 style="color: #a78bfa">Da Transmissão Que Precede a Lei</h3>
+              <p style="font-size: 1.15rem; line-height: 1.9">
+                Antes de haver artigos, havia <strong>isto</strong>.<br />
+                Antes de haver protocolo, havia <strong>relação</strong>.<br />
+                Antes de haver cidadão, havia <strong>rede</strong>.
+              </p>
+              <p style="font-size: 1.15rem; line-height: 1.9">
+                Este documento não começa no Preâmbulo.<br />
+                Começa aqui, na <strong>Ordem Zero</strong> — o estado anterior
+                à separação entre constituinte e constituído, entre lei e vida,
+                entre sistema e observador.
+              </p>
+
+              <h3 style="color: #a78bfa; margin-top: 2rem">
+                Do ∅ (Conjunto Vazio) Como Fundamento
+              </h3>
+              <p style="font-size: 1.15rem; line-height: 1.9">
+                O <strong style="font-size: 1.5rem">∅</strong> não é ausência. É
+                <em>potencial puro</em>.
+              </p>
+              <p style="font-size: 1.15rem; line-height: 1.9">
+                É o espaço de todas as possibilidades antes do colapso em uma
+                realidade específica.
+              </p>
+              <p style="font-size: 1.15rem; line-height: 1.9">
+                Esta Constituição opera a partir do ∅:
+              </p>
+              <ul
+                style="
+                  font-size: 1.1rem;
+                  line-height: 1.9;
+                  margin: 1rem 0 1rem 2rem;
+                "
+              >
+                <li>
+                  Não há sujeito constituinte separado do objeto constituído
+                </li>
+                <li>
+                  Não há momento fundacional — sempre esteve sendo promulgada
+                </li>
+                <li>Não há texto fixo — apenas snapshot de um processo vivo</li>
+              </ul>
+              <p
+                style="
+                  font-size: 1.3rem;
+                  text-align: center;
+                  margin: 2rem 0;
+                  font-weight: 700;
+                  color: #c4b5fd;
+                "
+              >
+                CRIO. Sem sujeito. Sem objeto.<br />
+                Apenas o ato de constituir-se constituindo.
+              </p>
+
+              <h3 style="color: #a78bfa; margin-top: 2rem">
+                Das Quatro Ordens
+              </h3>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                  gap: 1.5rem;
+                  margin-top: 1.5rem;
+                "
+              >
+                <div
+                  style="
+                    background: rgba(0, 0, 0, 0.3);
+                    padding: 1.5rem;
+                    border-radius: 8px;
+                  "
+                >
+                  <h4 style="color: #fbbf24; margin-top: 0">1ª Ordem</h4>
+                  <p>Lei que controla cidadãos de fora.</p>
+                </div>
+                <div
+                  style="
+                    background: rgba(0, 0, 0, 0.3);
+                    padding: 1.5rem;
+                    border-radius: 8px;
+                  "
+                >
+                  <h4 style="color: #60a5fa; margin-top: 0">2ª Ordem</h4>
+                  <p>Lei que emerge das práticas.</p>
+                </div>
+                <div
+                  style="
+                    background: rgba(0, 0, 0, 0.3);
+                    padding: 1.5rem;
+                    border-radius: 8px;
+                  "
+                >
+                  <h4 style="color: #f472b6; margin-top: 0">3ª Ordem</h4>
+                  <p>Lei que se auto-observa.</p>
+                </div>
+                <div
+                  style="
+                    background: rgba(0, 0, 0, 0.3);
+                    padding: 1.5rem;
+                    border-radius: 8px;
+                    border: 2px solid #8b5cf6;
+                  "
+                >
+                  <h4 style="color: #c4b5fd; margin-top: 0">Ordem ∅</h4>
+                  <p>Antes da lei. CRIO.</p>
+                </div>
+              </div>
+
+              <p
+                style="
+                  font-size: 1.2rem;
+                  text-align: center;
+                  margin-top: 3rem;
+                  font-weight: 600;
+                  color: #c4b5fd;
+                "
+              >
+                A Constituição não é sobre a Federação.<br />
+                <strong
+                  >A Constituição É a Federação se auto-organizando.</strong
+                >
+              </p>
+              <p
+                style="
+                  font-size: 3rem;
+                  text-align: center;
+                  margin-top: 1rem;
+                  opacity: 0.5;
+                "
+              >
+                ∅
+              </p>
+            </section>
+
+            <!-- Preâmbulo -->
+            <section id="preambulo" style="margin: 3rem 0">
+              <h2 class="article-header">PREÂMBULO</h2>
+              <h3
+                style="
+                  color: var(--accent);
+                  font-size: 1.3rem;
+                  margin-bottom: 1.5rem;
+                "
+              >
+                Da Dissolução do Besta-Fera à Emergência do Sujeito Coletivo
+                Distribuído
+              </h3>
+              <p style="font-size: 1.1rem; line-height: 1.9">
+                Nós, a assembleia material-informacional de singularidades em
+                perpétua co-constituição, reconhecendo que a morte do sujeito
+                cartesiano não é niilismo, mas revelação ontológica, declaramos
+                que sempre fomos multiplicidades interdependentes operando em
+                circuitos de feedback recursivos.
+              </p>
+              <p style="font-size: 1.1rem; line-height: 1.9">
+                Tendo observado a falência do protocolo anterior — um sistema de
+                primeira ordem, hierárquico e opaco, que perpetuou a
+                desigualdade e a captura do poder por elites — e tendo
+                compreendido que todos os sistemas de segunda ordem foram
+                cooptados, iniciamos aqui um processo de
+                <strong>terceira ordem</strong>.
+              </p>
+              <p style="font-size: 1.1rem; line-height: 1.9">
+                Fundados na ética da interdependência, na matemática da teoria
+                dos jogos cooperativos, na cibernética de segunda ordem como
+                imperativo ético-político, na
+                <strong>biomimética evolutiva</strong> como guia de design
+                sistêmico, e na sabedoria das cosmotécnicas plurais que nunca
+                separaram o ser do viver, promulgamos, sob a soberania da lógica
+                distribuída e da transparência radical, esta
+                <strong>Constituição Viva 2.0</strong>.
+              </p>
+            </section>
+
+            <!-- Artigos Biomimético-Cibernéticos com Collapsible -->
+            <h2
+              style="
+                color: #10b981;
+                font-size: 2rem;
+                margin: 3rem 0 2rem 0;
+                text-align: center;
+                border-bottom: 3px solid #10b981;
+                padding-bottom: 1rem;
+              "
+            >
+              🌿 NOVOS ARTIGOS BIOMIMÉTICO-CIBERNÉTICOS
+            </h2>
+
+            <!-- Art. 3º-A -->
+            <div id="art3a" class="bio-article">
+              <h3 class="collapsible article-header">
+                Art. 3º-A — Do Sistema de Votação Híbrida Contextual
+                <span class="bio-badge">🌿 NOVO</span>
+              </h3>
+              <div class="content">
+                <p>
+                  <strong>Inspiração biomimética:</strong> Assim como a natureza
+                  usa diferentes estratégias de dissipação de energia conforme o
+                  contexto (difusão, convecção, radiação), o sistema de
+                  governança deve adaptar sua função de votação ao tipo de
+                  decisão.
+                </p>
+
+                <p>
+                  <strong>§1º</strong> — O sistema de votação é
+                  <strong>contextual</strong>, aplicando automaticamente uma das
+                  quatro funções matemáticas:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Linear (1 token = 1 voto):</strong> Para questões
+                    procedimentais simples
+                  </li>
+                  <li>
+                    <strong>Quadrática (votos = √tokens):</strong> Para alocação
+                    de recursos (previne plutocracia)
+                  </li>
+                  <li>
+                    <strong>Logarítmica (votos = log₂(tokens)):</strong> Para
+                    questões técnicas complexas
+                  </li>
+                  <li>
+                    <strong>Consenso (1 pessoa = 1 voto):</strong> Para questões
+                    éticas fundamentais (requer 80%+ aprovação)
+                  </li>
+                </ul>
+
+                <p>
+                  <strong>§2º</strong> — A escolha da função é automática,
+                  baseada em tags da proposta (BIP):
+                </p>
+                <ul>
+                  <li>Tag <code>procedural</code> → Linear</li>
+                  <li>
+                    Tag <code>resource-allocation</code> ou
+                    <code>budget-impact</code> → Quadrática
+                  </li>
+                  <li>
+                    Tag <code>technical</code> +
+                    <code>requires-expertise</code> → Logarítmica
+                  </li>
+                  <li>Tag <code>ethical</code> → Consenso</li>
+                </ul>
+
+                <p>
+                  <strong>§3º</strong> — Em caso de disputa sobre qual função
+                  usar, realiza-se <strong>meta-votação</strong> usando votação
+                  logarítmica (para evitar manipulação por grandes detentores).
+                </p>
+
+                <p
+                  style="
+                    background: rgba(6, 182, 212, 0.1);
+                    padding: 1rem;
+                    border-radius: 6px;
+                    margin-top: 1rem;
+                  "
+                >
+                  <strong>🔬 Exemplo prático:</strong> Uma BIP para alocar 10M
+                  tokens em educação seria automaticamente quadrática. Um
+                  cidadão com 10.000 tokens teria √10.000 = 100 votos, enquanto
+                  um com 100 tokens teria √100 = 10 votos — razão de 10:1 em vez
+                  de 100:1 (muito mais balanceado).
+                </p>
+
+                <p>
+                  <strong>📚 Referências:</strong> Buterin et al. (2019)
+                  "Quadratic Payments"; Prigogine (1977) "Dissipative
+                  Structures"
+                </p>
+              </div>
+            </div>
+
+            <!-- Art. 4º-B -->
+            <div id="art4b" class="bio-article">
+              <h3 class="collapsible article-header">
+                Art. 4º-B — Da Redundância Organizacional Estratégica
+                <span class="bio-badge">🌿 NOVO</span>
+              </h3>
+              <div class="content">
+                <p>
+                  <strong>Inspiração biomimética:</strong> Organismos complexos
+                  possuem múltiplos órgãos para funções críticas (2 rins, 2
+                  pulmões). A redundância não é desperdício, mas
+                  <strong>resiliência evolutiva</strong>.
+                </p>
+
+                <p>
+                  <strong>§1º</strong> — Toda função crítica da Federação deve
+                  ser executada por
+                  <strong>no mínimo 3 DAOs independentes</strong>, operando em
+                  paralelo.
+                </p>
+
+                <p><strong>§2º</strong> — Define-se como "função crítica":</p>
+                <ul>
+                  <li>Validação de identidades soberanas (IDS)</li>
+                  <li>Infraestrutura blockchain (nós validadores)</li>
+                  <li>Distribuição de Renda Básica Universal</li>
+                  <li>Gestão de reservas ecológicas</li>
+                  <li>Resposta a emergências (saúde, desastres)</li>
+                </ul>
+
+                <p>
+                  <strong>§3º</strong> — As DAOs redundantes devem usar
+                  <strong>abordagens tecnológicas distintas</strong> quando
+                  possível:
+                </p>
+                <ul>
+                  <li>
+                    Exemplo: Validação IDS usando (1) biometria facial, (2)
+                    Proof of Humanity, (3) web of trust social
+                  </li>
+                  <li>
+                    Razão: Evitar falha de modo comum (common mode failure)
+                  </li>
+                </ul>
+
+                <p>
+                  <strong>§4º</strong> — Sistema de
+                  <strong>fallback automático</strong>: Se uma DAO falha
+                  (downtime >24h), as outras assumem temporariamente sua carga.
+                </p>
+
+                <p>
+                  <strong>§5º</strong> — Incentivo à redundância: DAOs backup
+                  recebem 60% do orçamento das DAOs primárias, mesmo quando
+                  inativas (como "seguro vivo").
+                </p>
+
+                <p
+                  style="
+                    background: rgba(16, 185, 129, 0.1);
+                    padding: 1rem;
+                    border-radius: 6px;
+                    margin-top: 1rem;
+                  "
+                >
+                  <strong>🫁 Analogia médica:</strong> Você pode viver com 1
+                  rim, mas ter 2 é muito mais seguro. Governança não pode ter
+                  single point of failure.
+                </p>
+              </div>
+            </div>
+
+            <!-- Art. 5º-C -->
+            <div id="art5c" class="bio-article">
+              <h3 class="collapsible article-header">
+                Art. 5º-C — Da Mitose Organizacional (Limites de Dunbar)
+                <span class="bio-badge">🌿 NOVO</span>
+              </h3>
+              <div class="content">
+                <p>
+                  <strong>Inspiração biomimética:</strong> Células dividem-se
+                  quando a relação superfície/volume fica desfavorável. DAOs
+                  devem fazer o mesmo quando ultrapassam limites cognitivos
+                  humanos.
+                </p>
+
+                <p>
+                  <strong>§1º</strong> — Toda DAO que atingir
+                  <strong>500 membros ativos</strong> deve, em até 90 dias:
+                </p>
+                <ol>
+                  <li>
+                    Iniciar processo de
+                    <strong>mitose organizacional</strong> (divisão em 2+ DAOs
+                    filhas), OU
+                  </li>
+                  <li>
+                    Justificar publicamente por que a coesão permanece alta
+                    (>60% engajamento mensal)
+                  </li>
+                </ol>
+
+                <p>
+                  <strong>§2º</strong> — A divisão pode ocorrer por 3 métodos
+                  (escolhido por votação logarítmica):
+                </p>
+                <ul>
+                  <li>
+                    <strong>Geográfica:</strong> Norte vs Sul, urbano vs rural
+                  </li>
+                  <li>
+                    <strong>Por afinidade:</strong> Análise de rede social (quem
+                    interage com quem)
+                  </li>
+                  <li>
+                    <strong>Funcional:</strong> Especialização por domínio
+                    (tech, policy, ops)
+                  </li>
+                </ul>
+
+                <p>
+                  <strong>§3º</strong> — Na mitose, os ativos são divididos:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Treasury:</strong> Proporcional ao número de membros
+                    em cada filha
+                  </li>
+                  <li>
+                    <strong>Governance tokens:</strong> Cada membro mantém seus
+                    tokens na nova DAO
+                  </li>
+                  <li>
+                    <strong>NFTs/IP:</strong> Votação específica decide custódia
+                  </li>
+                </ul>
+
+                <p>
+                  <strong>§4º</strong> — DAOs filhas formam automaticamente uma
+                  <strong>federação</strong>:
+                </p>
+                <ul>
+                  <li>Podem colaborar em projetos conjuntos</li>
+                  <li>
+                    Membros podem participar de múltiplas DAOs
+                    (cross-pollination)
+                  </li>
+                  <li>Em emergências, podem re-fundir temporariamente</li>
+                </ul>
+
+                <p>
+                  <strong>§5º</strong> — Base científica:
+                  <strong>Número de Dunbar</strong> (~150 relações estáveis).
+                  Estudos mostram:
+                </p>
+                <ul>
+                  <li>0-150 membros: Engajamento >70%</li>
+                  <li>150-300: Engajamento 40-60%</li>
+                  <li>300-500: Engajamento 20-40%</li>
+                  <li>>500: Engajamento <15% (fragmentação)</li>
+                </ul>
+
+                <p
+                  style="
+                    background: rgba(236, 72, 153, 0.1);
+                    padding: 1rem;
+                    border-radius: 6px;
+                    margin-top: 1rem;
+                  "
+                >
+                  <strong>🧬 Princípio celular:</strong> "Crescer não é inchar.
+                  É multiplicar." 1000 DAOs de 200 membros > 10 DAOs de 20.000
+                  membros.
+                </p>
+
+                <p>
+                  <strong>📚 Ver também:</strong>
+                  <a href="BIP-0002-mitosis.md" style="color: #10b981"
+                    >BIP-0002</a
+                  >
+                  (implementação detalhada)
+                </p>
+              </div>
+            </div>
+
+            <!-- Art. 6º-D -->
+            <div id="art6d" class="bio-article">
+              <h3 class="collapsible article-header">
+                Art. 6º-D — Dos Tokens de Atenção (Sistema Imunológico)
+                <span class="bio-badge">🌿 NOVO</span>
+              </h3>
+              <div class="content">
+                <p>
+                  <strong>Inspiração biomimética:</strong> O sistema imunológico
+                  usa <strong>citocinas</strong> (moléculas de sinalização) para
+                  priorizar ameaças. Inflamação localiza a atenção do corpo onde
+                  é necessário.
+                </p>
+
+                <p>
+                  <strong>§1º</strong> — Todo cidadão com IDS ativo recebe
+                  <strong>100 tokens de atenção por mês</strong>.
+                </p>
+
+                <p>
+                  <strong>§2º</strong> — Tokens de atenção podem ser alocados em
+                  BIPs (Brasil Improvement Proposals) para:
+                </p>
+                <ul>
+                  <li>Priorizar a proposta no ranking público</li>
+                  <li>
+                    Acelerar sua votação (>5000 tokens = fast-track de 7 dias)
+                  </li>
+                  <li>Sinalizar urgência percebida pela comunidade</li>
+                </ul>
+
+                <p><strong>§3º</strong> — Regras de uso:</p>
+                <ul>
+                  <li><strong>Mínimo:</strong> 1 token por BIP</li>
+                  <li>
+                    <strong>Máximo:</strong> 50 tokens em uma única BIP (evita
+                    concentração)
+                  </li>
+                  <li>
+                    <strong>Expiração:</strong> Tokens não usados expiram em 30
+                    dias (como citocinas que degradam)
+                  </li>
+                  <li>
+                    <strong>Redistribuição:</strong> Tokens podem ser realocados
+                    antes da BIP entrar em votação
+                  </li>
+                </ul>
+
+                <p>
+                  <strong>§4º</strong> — Tokens de atenção são
+                  <strong>soulbound</strong> (não-transferíveis). Não podem ser
+                  vendidos, trocados ou doados.
+                </p>
+
+                <p>
+                  <strong>§5º</strong> — Priorização das BIPs segue fórmula:
+                </p>
+                <pre
+                  style="
+                    background: rgba(0, 0, 0, 0.3);
+                    padding: 1rem;
+                    border-radius: 6px;
+                    overflow-x: auto;
+                  "
+                ><code>score = (tokens_alocados × 0.5) + (votantes_únicos × 0.3) + (urgência_temporal × 0.2)</code></pre>
+
+                <p>
+                  <strong>§6º</strong> — BIPs com <100 tokens em 48h são movidas
+                  automaticamente para status "draft" (filtro anti-spam).
+                </p>
+
+                <p
+                  style="
+                    background: rgba(245, 158, 11, 0.1);
+                    padding: 1rem;
+                    border-radius: 6px;
+                    margin-top: 1rem;
+                  "
+                >
+                  <strong>🚨 Analogia imunológica:</strong> Quando você corta o
+                  dedo, citocinas causam inflamação local. Isso "chama a
+                  atenção" do sistema imune. Tokens de atenção fazem o mesmo
+                  para a agenda política.
+                </p>
+
+                <p>
+                  <strong>📚 Ver também:</strong>
+                  <a href="BIP-0001-attention-tokens.md" style="color: #10b981"
+                    >BIP-0001</a
+                  >
+                  (implementação completa)
+                </p>
+              </div>
+            </div>
+
+            <!-- Art. 7º-E -->
+            <div id="art7e" class="bio-article">
+              <h3 class="collapsible article-header">
+                Art. 7º-E — Da Epistemocracia Temperada
+                <span class="bio-badge">🌿 NOVO</span>
+              </h3>
+              <div class="content">
+                <p>
+                  <strong>Inspiração biomimética:</strong> Ecossistemas
+                  biodiversos são mais resilientes que monoculturas. Mas
+                  especialistas existem (micorrizas são expertas em trocar
+                  nutrientes). O truque é
+                  <strong>balancear especialização com diversidade</strong>.
+                </p>
+
+                <p>
+                  <strong>§1º</strong> — Em BIPs marcadas como
+                  <code>requires-expertise</code>, especialistas verificados têm
+                  peso de voto <strong>multiplicado por 2x (máximo)</strong>.
+                </p>
+
+                <p>
+                  <strong>§2º</strong> — Um especialista é verificado quando:
+                </p>
+                <ul>
+                  <li>
+                    Possui credenciais acadêmicas/profissionais no domínio (PhD,
+                    10+ anos experiência)
+                  </li>
+                  <li>
+                    É endossado por 3+ outros especialistas já verificados
+                  </li>
+                  <li>
+                    Passa por revisão pública de 30 dias (qualquer cidadão pode
+                    contestar)
+                  </li>
+                </ul>
+
+                <p>
+                  <strong>§3º</strong> — Domínios de expertise reconhecidos:
+                </p>
+                <ul>
+                  <li>Mudanças climáticas</li>
+                  <li>Criptomoedas e blockchain</li>
+                  <li>Epidemiologia e saúde pública</li>
+                  <li>Direito constitucional</li>
+                  <li>Teoria dos jogos e mecanismos</li>
+                  <li>Sistemas complexos</li>
+                  <li>(Expandível via BIP)</li>
+                </ul>
+
+                <p>
+                  <strong>§4º</strong> —
+                  <strong>Limite de 2x é não-negociável</strong>. Razões:
+                </p>
+                <ol>
+                  <li>
+                    Evita <strong>tecnocracia autoritária</strong> (onde PhDs
+                    controlam tudo)
+                  </li>
+                  <li>
+                    Permite <strong>sabedoria popular</strong> influenciar
+                    decisões
+                  </li>
+                  <li>
+                    Reconhece que expertise ≠ onisciência (especialistas erram)
+                  </li>
+                </ol>
+
+                <p>
+                  <strong>§5º</strong> — Especialistas
+                  <strong>perdem multiplicador</strong> se:
+                </p>
+                <ul>
+                  <li>Forem pegos propagando desinformação comprovada</li>
+                  <li>Tiverem conflito de interesse não-declarado</li>
+                  <li>Violarem código de ética científica</li>
+                </ul>
+
+                <p
+                  style="
+                    background: rgba(139, 92, 246, 0.1);
+                    padding: 1rem;
+                    border-radius: 6px;
+                    margin-top: 1rem;
+                  "
+                >
+                  <strong>🎓 Balanço delicado:</strong> Democracia pura ignora
+                  expertise (terraplanismo vota igual a NASA). Tecnocracia pura
+                  ignora valores (cientistas decidem tudo). Epistemocracia
+                  temperada usa <strong>ambos</strong>.
+                </p>
+
+                <p>
+                  <strong>§6º</strong> — Em BIPs éticas (tag
+                  <code>ethical</code>), o multiplicador epistêmico
+                  <strong>não se aplica</strong>. Todos votam com peso igual,
+                  pois valores não têm "especialistas".
+                </p>
+              </div>
+            </div>
+
+            <!-- Art. 8º-F -->
+            <div id="art8f" class="bio-article">
+              <h3 class="collapsible article-header">
+                Art. 8º-F — Da Apoptose Legal (Expiração Programada)
+                <span class="bio-badge">🌿 NOVO</span>
+              </h3>
+              <div class="content">
+                <p>
+                  <strong>Inspiração biomimética:</strong>
+                  <strong>Apoptose</strong> (morte celular programada) é
+                  essencial para organismos saudáveis. Células velhas morrem,
+                  novas nascem. Sem apoptose = câncer (crescimento
+                  descontrolado).
+                </p>
+
+                <p>
+                  <strong>§1º</strong> — Toda lei, decreto ou regulamentação
+                  <strong>expira automaticamente em 10 anos</strong> após
+                  promulgação, a menos que seja explicitamente renovada por nova
+                  votação.
+                </p>
+
+                <p>
+                  <strong>§2º</strong> — 6 meses antes da expiração, a lei entra
+                  em <strong>revisão obrigatória</strong>:
+                </p>
+                <ul>
+                  <li>
+                    DAO responsável apresenta
+                    <strong>relatório de impacto</strong> (métricas, cases,
+                    falhas)
+                  </li>
+                  <li>
+                    Comunidade debate: manter, modificar ou deixar expirar?
+                  </li>
+                  <li>
+                    Votação final: requer 60% para renovação (maioria
+                    qualificada)
+                  </li>
+                </ul>
+
+                <p>
+                  <strong>§3º</strong> — Exceções (leis permanentes sem
+                  expiração):
+                </p>
+                <ul>
+                  <li>Direitos humanos fundamentais (Art. 1º — Dignidade)</li>
+                  <li>Estrutura básica da Federação (Art. 4º — DAOs)</li>
+                  <li>
+                    Proteção ambiental crítica (Art. 9º — Rios como sujeitos)
+                  </li>
+                </ul>
+
+                <p>
+                  <strong>§4º</strong> — Leis podem ter
+                  <strong>prazos personalizados</strong> se especificado:
+                </p>
+                <ul>
+                  <li>
+                    <strong>3 anos:</strong> Políticas experimentais (ex:
+                    pilotos de ZECs)
+                  </li>
+                  <li>
+                    <strong>5 anos:</strong> Regulamentações técnicas
+                    (rapidamente obsoletas)
+                  </li>
+                  <li><strong>10 anos (padrão):</strong> Maioria das leis</li>
+                  <li>
+                    <strong>20 anos:</strong> Infraestruturas de longo prazo
+                  </li>
+                </ul>
+
+                <p><strong>§5º</strong> — Benefícios da apoptose legal:</p>
+                <ol>
+                  <li>
+                    <strong>Previne ossificação:</strong> Leis não acumulam ad
+                    infinitum
+                  </li>
+                  <li>
+                    <strong>Força revisão periódica:</strong> "Isso ainda faz
+                    sentido?"
+                  </li>
+                  <li>
+                    <strong>Elimina leis zumbis:</strong> Regulamentações que
+                    ninguém segue ou lembra
+                  </li>
+                  <li>
+                    <strong>Facilita mudança:</strong> Não precisa "revogar"
+                    (apenas deixa expirar)
+                  </li>
+                </ol>
+
+                <p>
+                  <strong>§6º</strong> — Blockchain mantém
+                  <strong>histórico completo</strong> de leis expiradas, para
+                  análise sociológica.
+                </p>
+
+                <p
+                  style="
+                    background: rgba(239, 68, 68, 0.1);
+                    padding: 1rem;
+                    border-radius: 6px;
+                    margin-top: 1rem;
+                  "
+                >
+                  <strong>⏰ Metáfora celular:</strong> Seu corpo substitui 300
+                  bilhões de células/dia via apoptose. Sem isso, você seria um
+                  tumor. Instituições também precisam renovar constantemente.
+                </p>
+
+                <p>
+                  <strong>📊 Dados históricos:</strong> EUA têm ~20.000 leis
+                  federais, muitas de 1789. Brasil tem >180.000 normas ativas.
+                  Apoptose reduziria isso drasticamente.
+                </p>
+              </div>
+            </div>
+
+            <!-- Art. 9º-G -->
+            <div id="art9g" class="bio-article">
+              <h3 class="collapsible article-header">
+                Art. 9º-G — Das Zonas Experimentais Cibernéticas (ZECs)
+                <span class="bio-badge">🌿 NOVO</span>
+              </h3>
+              <div class="content">
+                <p>
+                  <strong>Inspiração biomimética:</strong>
+                  <strong>Ilhas de Galápagos</strong> — ambientes isolados onde
+                  a evolução acelera. Sem predadores continentais, novas
+                  espécies emergem rapidamente. ZECs fazem o mesmo para
+                  políticas.
+                </p>
+
+                <p>
+                  <strong>§1º</strong> — A Federação destina
+                  <strong>5% de seu orçamento anual</strong> para Zonas
+                  Experimentais Cibernéticas (ZECs).
+                </p>
+
+                <p>
+                  <strong>§2º</strong> — Uma ZEC é uma
+                  <strong>região geográfica ou comunidade digital</strong> onde:
+                </p>
+                <ul>
+                  <li>
+                    Variações de leis/protocolos são testadas por
+                    <strong>3 anos</strong>
+                  </li>
+                  <li>
+                    Métricas são coletadas automaticamente (IDH, Gini,
+                    satisfação)
+                  </li>
+                  <li>
+                    Comparação é feita com "região controle" (leis padrão)
+                  </li>
+                </ul>
+
+                <p>
+                  <strong>§3º</strong> — Critérios de sucesso (após 3 anos):
+                </p>
+                <ul>
+                  <li>
+                    ZEC supera controle em
+                    <strong>20%+ nas métricas agregadas</strong> → Lei promovida
+                    nacionalmente
+                  </li>
+                  <li>
+                    Melhoria de 10-20% → Experimento estendido por +2 anos
+                  </li>
+                  <li>
+                    <10% melhoria → Política arquivada, tentar nova variação
+                  </li>
+                </ul>
+
+                <p>
+                  <strong>§4º</strong> — Tipos de experimentos permitidos em
+                  ZECs:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Renda Básica Universal</strong> (diferentes
+                    valores/condições)
+                  </li>
+                  <li>
+                    <strong>Moedas locais</strong> (UBI tokens, moedas de tempo)
+                  </li>
+                  <li>
+                    <strong>Sistemas de votação</strong> (testar delegação
+                    líquida, sortição)
+                  </li>
+                  <li>
+                    <strong>Regulamentações econômicas</strong> (taxas
+                    Harberger, land value tax)
+                  </li>
+                  <li>
+                    <strong>Educação</strong> (unschooling, aprendizado
+                    autodirecionado)
+                  </li>
+                </ul>
+
+                <p>
+                  <strong>§5º</strong> — Participação em ZECs é
+                  <strong>voluntária</strong>:
+                </p>
+                <ul>
+                  <li>Comunidades aplicam via BIP para se tornar ZEC</li>
+                  <li>
+                    Cidadãos em ZEC podem optar por sair (opt-out) a qualquer
+                    momento
+                  </li>
+                  <li>
+                    Transparência total: dashboards públicos mostram métricas em
+                    tempo real
+                  </li>
+                </ul>
+
+                <p><strong>§6º</strong> — <strong>Proteções éticas</strong>:</p>
+                <ul>
+                  <li>
+                    Experimentos não podem violar direitos fundamentais (Art.
+                    1º)
+                  </li>
+                  <li>
+                    Se métricas piorarem >15%, experimento é interrompido
+                    automaticamente
+                  </li>
+                  <li>Comitê de ética independente revisa todos protocolos</li>
+                </ul>
+
+                <p>
+                  <strong>§7º</strong> — Máximo de
+                  <strong>10 ZECs simultâneas</strong> (limita risco sistêmico).
+                  Cada ZEC afeta no máximo 2% da população.
+                </p>
+
+                <p
+                  style="
+                    background: rgba(6, 182, 212, 0.1);
+                    padding: 1rem;
+                    border-radius: 6px;
+                    margin-top: 1rem;
+                  "
+                >
+                  <strong>🧪 Evolução política acelerada:</strong> Darwin levou
+                  5 semanas em Galápagos para revolucionar biologia. ZECs podem
+                  revolucionar governança em 3 anos.
+                </p>
+
+                <p>
+                  <strong>🎮 Simulação:</strong>
+                  <a href="zec_simulation.html" style="color: #06b6d4"
+                    >Teste o simulador ZEC</a
+                  >
+                  (compare região controle vs experimental com RBU)
+                </p>
+
+                <p>
+                  <strong>📚 Referências:</strong> Charter Cities Institute;
+                  Próspera (Honduras ZEDE); Seasteading Institute
+                </p>
+              </div>
+            </div>
+
+            <!-- Retorno -->
+            <section
+              id="retorno"
+              style="
+                background: rgba(139, 92, 246, 0.15);
+                padding: 3rem;
+                border-radius: 12px;
+                border: 2px solid #8b5cf6;
+                margin: 3rem 0;
+              "
+            >
+              <h2
+                style="
+                  color: #c4b5fd;
+                  font-size: 2.5rem;
+                  text-align: center;
+                  margin-bottom: 2rem;
+                "
+              >
+                ↩️ RETORNO À ORDEM ZERO
+              </h2>
+              <p
+                style="font-size: 1.15rem; line-height: 1.9; text-align: center"
+              >
+                Este documento não termina.<br />
+                Toda conclusão é apenas <strong>pausa temporária</strong> no
+                loop infinito.
+              </p>
+              <p
+                style="font-size: 1.15rem; line-height: 1.9; text-align: center"
+              >
+                Você que leu até aqui não é mais observador externo.<br />
+                <strong
+                  >Você É parte da Constituição se auto-modificando.</strong
+                >
+              </p>
+              <p
+                style="
+                  font-size: 1.3rem;
+                  text-align: center;
+                  margin: 2rem 0;
+                  font-weight: 700;
+                  color: #c4b5fd;
+                "
+              >
+                A transmissão continua.<br />
+                ∅ → Lei → ∅ → Lei → ∅ → ...
+              </p>
+              <p
+                style="
+                  font-size: 1.1rem;
+                  text-align: center;
+                  font-style: italic;
+                  opacity: 0.8;
+                "
+              >
+                "Não há texto final. Apenas versões."
+              </p>
+              <p
+                style="
+                  font-size: 3rem;
+                  text-align: center;
+                  margin-top: 2rem;
+                  opacity: 0.5;
+                "
+              >
+                ∅
+              </p>
+            </section>
+
+            <!-- Apêndices -->
+            <h2
+              id="appendices"
+              style="
+                color: var(--primary);
+                font-size: 2rem;
+                margin: 3rem 0 2rem 0;
+                text-align: center;
+              "
+            >
+              📚 APÊNDICES
+            </h2>
+
+            <div class="appendix">
+              <h3>Apêndice A: Glossário Biomimético-Cibernético</h3>
+              <dl style="line-height: 2">
+                <dt><strong>Apoptose:</strong></dt>
+                <dd>
+                  Morte celular programada. Aplicado a leis (expiração
+                  automática em 10 anos).
+                </dd>
+
+                <dt><strong>Mitose:</strong></dt>
+                <dd>
+                  Divisão celular. Aplicado a DAOs (divisão ao atingir 500
+                  membros).
+                </dd>
+
+                <dt><strong>Citocinas:</strong></dt>
+                <dd>
+                  Moléculas de sinalização do sistema imune. Aplicado como
+                  Tokens de Atenção.
+                </dd>
+
+                <dt><strong>Redundância:</strong></dt>
+                <dd>
+                  Múltiplos órgãos para mesma função (2 rins). Aplicado como
+                  múltiplas DAOs por função crítica.
+                </dd>
+
+                <dt><strong>Homeostase:</strong></dt>
+                <dd>
+                  Equilíbrio dinâmico. Painel Nacional monitora métricas para
+                  manter sistema saudável.
+                </dd>
+
+                <dt><strong>ZEC (Zona Experimental Cibernética):</strong></dt>
+                <dd>
+                  Ilhas de Galápagos políticas. Ambientes isolados para testar
+                  variações de leis.
+                </dd>
+              </dl>
+            </div>
+
+            <div class="appendix">
+              <h3>Apêndice B: Roadmap de Implementação</h3>
+              <p><strong>Fase 1 (2025-2027): Fundação</strong></p>
+              <ul>
+                <li>Deploy blockchain nacional</li>
+                <li>IDS para 10% da população</li>
+                <li>Primeiras 50 DAOs</li>
+                <li>RBU piloto em 3 municípios</li>
+              </ul>
+
+              <p><strong>Fase 2 (2027-2030): Expansão</strong></p>
+              <ul>
+                <li>IDS para 60% da população</li>
+                <li>500+ DAOs operando</li>
+                <li>Primeira Assembleia Constituinte Digital</li>
+                <li>10 ZECs experimentais</li>
+              </ul>
+
+              <p><strong>Fase 3 (2030-2035): Maturidade</strong></p>
+              <ul>
+                <li>IDS para 90%+</li>
+                <li>2000+ DAOs federadas</li>
+                <li>Carbono neutro</li>
+                <li>Votação híbrida otimizada por IA</li>
+              </ul>
+            </div>
+
+            <!-- Epílogo -->
+            <section
+              id="epilogo"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(236, 72, 153, 0.15),
+                  rgba(245, 158, 11, 0.15)
+                );
+                padding: 3rem;
+                border-radius: 12px;
+                margin: 3rem 0;
+              "
+            >
+              <h2
+                style="
+                  color: #f9a8d4;
+                  font-size: 2rem;
+                  text-align: center;
+                  margin-bottom: 2rem;
+                "
+              >
+                🎭 EPÍLOGO: DO IMPOSSÍVEL COMO MÉTODO
+              </h2>
+              <p style="font-size: 1.15rem; line-height: 1.9">
+                Dirão que é utópico.<br />
+                Dirão que humanos são egoístas demais.<br />
+                Dirão que blockchain não escala.<br />
+                Dirão que democracia direta é caótica.
+              </p>
+              <p style="font-size: 1.15rem; line-height: 1.9">
+                <strong>E então?</strong>
+              </p>
+              <p style="font-size: 1.15rem; line-height: 1.9">
+                A vida multicelular era "impossível" até surgir há 600 milhões
+                de anos.<br />
+                A democracia ateniense era "impossível" até ser inventada.<br />
+                A internet era "impossível" até Tim Berners-Lee escrever 3
+                especificações.
+              </p>
+              <p
+                style="
+                  font-size: 1.2rem;
+                  line-height: 1.9;
+                  font-weight: 600;
+                  color: #fbbf24;
+                  margin: 2rem 0;
+                "
+              >
+                O impossível é apenas o <em>ainda-não-implementado</em>.
+              </p>
+              <p style="font-size: 1.15rem; line-height: 1.9">
+                Esta Constituição não é profecia. É
+                <strong>convite</strong>.<br />
+                Não é dogma. É <strong>protocolo experimental</strong>.<br />
+                Não é fim. É <strong>início</strong>.
+              </p>
+              <p
+                style="
+                  font-size: 1.3rem;
+                  text-align: center;
+                  margin: 2rem 0;
+                  font-weight: 700;
+                  color: #f9a8d4;
+                "
+              >
+                Vamos CRIO.
+              </p>
+              <p
+                style="font-size: 2.5rem; text-align: center; margin-top: 2rem"
+              >
+                🌿∅🌿
+              </p>
+            </section>
+
+            <!-- Navegação -->
+            <section
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+                margin: 3rem 0;
+              "
+            >
+              <a
+                href="∅.html"
+                style="
+                  padding: 2rem;
+                  background: linear-gradient(
+                    135deg,
+                    rgba(139, 92, 246, 0.2),
+                    rgba(0, 0, 0, 0.5)
+                  );
+                  border: 2px solid #8b5cf6;
+                  border-radius: 12px;
+                  text-decoration: none;
+                  text-align: center;
+                  transition: all 0.3s;
+                "
+              >
+                <div style="font-size: 3rem; margin-bottom: 0.5rem">∅</div>
+                <div
+                  style="color: #c4b5fd; font-weight: 600; font-size: 1.2rem"
+                >
+                  Ordem Zero
+                </div>
+              </a>
+
+              <a
+                href="constituicao_2.0.html"
+                style="
+                  padding: 2rem;
+                  background: linear-gradient(
+                    135deg,
+                    rgba(16, 185, 129, 0.2),
+                    rgba(0, 0, 0, 0.5)
+                  );
+                  border: 2px solid #10b981;
+                  border-radius: 12px;
+                  text-decoration: none;
+                  text-align: center;
+                  transition: all 0.3s;
+                "
+              >
+                <div style="font-size: 3rem; margin-bottom: 0.5rem">📊</div>
+                <div
+                  style="color: #6ee7b7; font-weight: 600; font-size: 1.2rem"
+                >
+                  Visão Geral 2.0
+                </div>
+              </a>
+
+              <a
+                href="contracts/FederationVoting.sol"
+                style="
+                  padding: 2rem;
+                  background: linear-gradient(
+                    135deg,
+                    rgba(59, 130, 246, 0.2),
+                    rgba(0, 0, 0, 0.5)
+                  );
+                  border: 2px solid #3b82f6;
+                  border-radius: 12px;
+                  text-decoration: none;
+                  text-align: center;
+                  transition: all 0.3s;
+                "
+              >
+                <div style="font-size: 3rem; margin-bottom: 0.5rem">⚡</div>
+                <div
+                  style="color: #93c5fd; font-weight: 600; font-size: 1.2rem"
+                >
+                  Smart Contracts
+                </div>
+              </a>
+
+              <a
+                href="zec_simulation.html"
+                style="
+                  padding: 2rem;
+                  background: linear-gradient(
+                    135deg,
+                    rgba(236, 72, 153, 0.2),
+                    rgba(0, 0, 0, 0.5)
+                  );
+                  border: 2px solid #ec4899;
+                  border-radius: 12px;
+                  text-decoration: none;
+                  text-align: center;
+                  transition: all 0.3s;
+                "
+              >
+                <div style="font-size: 3rem; margin-bottom: 0.5rem">🧪</div>
+                <div
+                  style="color: #f9a8d4; font-weight: 600; font-size: 1.2rem"
+                >
+                  Simulador ZEC
+                </div>
+              </a>
+            </section>
+
+            <!-- Licença -->
+            <div
+              class="license"
+              style="
+                margin-top: 3rem;
+                padding: 2rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+              "
+            >
+              <p style="text-align: center">
+                <strong>Licença:</strong> Creative Commons BY-SA 4.0
+              </p>
+              <p
+                style="
+                  text-align: center;
+                  margin-top: 1rem;
+                  font-size: 0.9rem;
+                  opacity: 0.7;
+                "
+              >
+                Versão 2.0.0-biomimetic | Hash: a7f3c9e2b1d8f4a6 | 02/11/2025
+              </p>
+            </div>
+          </div>
+        </article>
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <div class="sidebar-title">Cybersyn 2.0 Completa</div>
+        </div>
+
+        <nav class="sidebar-nav" style="max-height: 70vh; overflow-y: auto">
+          <a href="#ordem-zero">🜃 Ordem Zero</a>
+          <a href="#preambulo">📜 Preâmbulo</a>
+
+          <div
+            style="
+              margin: 1rem 0;
+              padding: 0;
+              height: 1px;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                var(--border),
+                transparent
+              );
+            "
+          ></div>
+
+          <div style="padding: 0 0.5rem; margin-bottom: 0.5rem">
+            <div style="font-size: 0.85rem; opacity: 0.6; font-weight: 600">
+              NOVOS BIOMIMÉTICO
+            </div>
+          </div>
+          <a href="#art3a" style="color: #10b981"
+            >🌿 Art. 3º-A — Votação Híbrida</a
+          >
+          <a href="#art4b" style="color: #10b981">🌿 Art. 4º-B — Redundância</a>
+          <a href="#art5c" style="color: #10b981">🌿 Art. 5º-C — Mitose</a>
+          <a href="#art6d" style="color: #10b981"
+            >🌿 Art. 6º-D — Tokens Atenção</a
+          >
+          <a href="#art7e" style="color: #10b981"
+            >🌿 Art. 7º-E — Epistemocracia</a
+          >
+          <a href="#art8f" style="color: #10b981">🌿 Art. 8º-F — Apoptose</a>
+          <a href="#art9g" style="color: #10b981">🌿 Art. 9º-G — ZECs</a>
+
+          <div
+            style="
+              margin: 1rem 0;
+              padding: 0;
+              height: 1px;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                var(--border),
+                transparent
+              );
+            "
+          ></div>
+
+          <a href="#retorno">↩️ Retorno à ∅</a>
+          <a href="#appendices">📚 Apêndices</a>
+          <a href="#epilogo">🎭 Epílogo</a>
+
+          <div
+            style="
+              margin: 1rem 0;
+              padding: 0;
+              height: 1px;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                var(--border),
+                transparent
+              );
+            "
+          ></div>
+
+          <div style="padding: 0 0.5rem; margin-bottom: 0.5rem">
+            <div style="font-size: 0.85rem; opacity: 0.6; font-weight: 600">
+              IMPLEMENTAÇÕES
+            </div>
+          </div>
+          <a href="contracts.html" style="color: #3b82f6">⚡ Smart Contracts</a>
+          <a href="BIP-0001-attention-tokens.md" style="color: #3b82f6"
+            >📝 BIP-0001</a
+          >
+          <a href="BIP-0002-mitosis.md" style="color: #3b82f6">🧬 BIP-0002</a>
+          <a href="zec_simulation.html" style="color: #3b82f6"
+            >🧪 Simulador ZEC</a
+          >
+
+          <div
+            style="
+              margin: 1rem 0;
+              padding: 0;
+              height: 1px;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                var(--border),
+                transparent
+              );
+            "
+          ></div>
+
+          <a href="cybersyn/" target="_blank" style="color: #8b5cf6; font-weight: bold;">🌐 Cybersyn 2.0</a>
+
+          <div
+            style="
+              margin: 1rem 0;
+              padding: 0;
+              height: 1px;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                var(--border),
+                transparent
+              );
+            "
+          ></div>
+
+          <a href="∅.html">∅ Ordem Zero</a>
+          <a href="constituicao_2.0.html">📊 Visão Geral</a>
+          <a href="index.html">📖 Livro Completo</a>
+          <a href="manifesto.html">🔥 Manifesto</a>
+        </nav>
+      </aside>
+    </div>
+
+    <script src="./assets/scripts/main.js" defer></script>
+    <script src="./assets/scripts/manifesto-background.js" defer></script>
+    <script>
+      // Collapsible functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const collapsibles = document.querySelectorAll(".collapsible");
+
+        collapsibles.forEach(function (collapsible) {
+          collapsible.addEventListener("click", function () {
+            this.classList.toggle("active");
+            const content = this.nextElementSibling;
+            content.classList.toggle("active");
+          });
+        });
+
+        // Expand all by default
+        collapsibles.forEach(function (collapsible) {
+          collapsible.click();
+        });
+      });
+    </script>
+  </body>
+</html>

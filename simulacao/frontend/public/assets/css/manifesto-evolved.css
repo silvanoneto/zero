@@ -1,0 +1,127 @@
+/**
+ * 🌀 MANIFESTO EVOLUÍDO - Estilos Adicionais
+ * 
+ * Estilos para elementos integrados:
+ * - Canvas background
+ * - Fita de Möbius
+ * - Três Loops Nhandereko
+ * - Navegação visual aprimorada
+ */
+
+/* Canvas Background Filosófico */
+#manifesto-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.25;
+    /* Reduzida de 0.4 para melhor contraste */
+}
+
+/* Seções Visuais Interativas */
+#mobius-navigation,
+#tres-loops {
+    position: relative;
+    z-index: 1;
+}
+
+#mobius-canvas,
+#tres-loops-container canvas {
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 2px solid rgba(37, 99, 235, 0.5);
+    /* Aumentado de 0.3 para melhor visibilidade */
+    background: rgba(0, 0, 0, 0.3);
+    /* Aumentado de 0.2 para melhor contraste */
+    backdrop-filter: blur(10px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    #mobius-navigation,
+    #tres-loops {
+        padding: 2rem 1rem;
+    }
+
+    #mobius-canvas {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #tres-loops-container {
+        max-width: 100%;
+    }
+
+    #mobius-navigation>div[style*="grid"],
+    #tres-loops>div[style*="grid"] {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Efeitos de hover para cards informativos */
+[style*="border-left: 4px solid"] {
+    transition: all 0.3s ease;
+}
+
+[style*="border-left: 4px solid"]:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(37, 99, 235, 0.4);
+    /* Aumentado de 0.3 */
+}
+
+/* Animações suaves para elementos visuais */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#mobius-navigation,
+#tres-loops {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Melhorias de acessibilidade */
+#mobius-canvas:focus,
+#tres-loops-container canvas:focus {
+    outline: 2px solid var(--azul);
+    outline-offset: 4px;
+}
+
+/* Estilos para modo escuro/claro */
+:root[data-theme="light"] #manifesto-background {
+    opacity: 0.3;
+}
+
+:root[data-theme="dark"] #manifesto-background {
+    opacity: 0.5;
+}
+
+/* Performance: usar GPU para animações */
+#manifesto-background,
+#mobius-canvas,
+#tres-loops-container canvas {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Ajustes para impressão */
+@media print {
+
+    #manifesto-background,
+    #mobius-canvas,
+    #tres-loops-container {
+        display: none;
+    }
+}

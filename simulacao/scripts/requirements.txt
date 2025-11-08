@@ -1,0 +1,18 @@
+# Dependências para expansão de conteúdo
+# A Revolução Cibernética - Scripts de Expansão
+
+# EPUB generation
+ebooklib
+
+# HTML parsing
+beautifulsoup4
+lxml
+
+# PDF generation
+xhtml2pdf
+
+# Image compression
+Pillow
+
+# Code quality and formatting
+pre-commit

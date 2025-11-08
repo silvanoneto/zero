@@ -1,0 +1,267 @@
+# Docker Compose Principal - Cybersyn 2.0
+# Orquestra todos os serviços do ecossistema
+# 
+# Usage:
+#   Development: docker-compose --profile dev up -d
+#   Production:  docker-compose --profile prod up -d
+#   All:         docker-compose --profile all up -d
+
+# Configurações reutilizáveis
+x-logging: &default-logging
+  driver: "json-file"
+  options:
+    max-size: "10m"
+    max-file: "3"
+    compress: "true"
+
+x-logging-verbose: &verbose-logging
+  driver: "json-file"
+  options:
+    max-size: "20m"
+    max-file: "5"
+    compress: "true"
+
+services:
+  # IPFS Node
+  ipfs:
+    image: ipfs/kubo:latest
+    container_name: constituicao-ipfs
+    profiles: ["dev", "prod", "all"]
+    ports:
+      - "4001:4001"    # P2P
+      - "5001:5001"    # API
+      - "8081:8080"    # Gateway (evitar conflito)
+    volumes:
+      - ipfs-data:/data/ipfs
+    environment:
+      - IPFS_PROFILE=${IPFS_PROFILE:-server}
+    restart: unless-stopped
+    networks:
+      - constituicao-network
+    healthcheck:
+      test: ["CMD", "ipfs", "id"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    logging: *default-logging
+
+  # Helia Gateway Service (P2P Backend)
+  helia-gateway:
+    build: ./helia-gateway
+    container_name: constituicao-helia-gateway
+    profiles: ["dev", "prod", "all"]
+    ports:
+      - "8080:8080"    # HTTP API
+      - "4002:4002"    # P2P libp2p TCP
+      - "4003:4003"    # P2P libp2p WebSocket
+    environment:
+      - HELIA_GATEWAY_URL=http://localhost:${HELIA_PORT:-8080}
+      - PORT=${HELIA_PORT:-8080}
+      - NODE_ENV=${NODE_ENV:-development}
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - RATE_LIMIT_WINDOW_MS=${HELIA_RATE_LIMIT_WINDOW_MS:-900000}
+      - RATE_LIMIT_MAX_REQUESTS=${HELIA_RATE_LIMIT_MAX_REQUESTS:-1000}
+      - P2P_ENABLED=${P2P_ENABLED:-true}
+      - P2P_TCP_PORT=${P2P_TCP_PORT:-4002}
+      - P2P_WS_PORT=${P2P_WS_PORT:-4003}
+      - DEBUG=${DEBUG:-libp2p:*,-libp2p:websockets:*,-libp2p:mplex:*}
+    depends_on:
+      ipfs:
+        condition: service_healthy
+    volumes:
+      - ./helia-gateway/logs:/app/logs
+      - helia-p2p-data:/app/data
+    restart: unless-stopped
+    networks:
+      - constituicao-network
+    labels:
+      # Enable Traefik
+      - "traefik.enable=true"
+      
+      # HTTP Router
+      - "traefik.http.routers.ipfs-gateway.rule=Host(`ipfs.revolucao-cibernetica.local`)"
+      - "traefik.http.routers.ipfs-gateway.entrypoints=websecure"
+      - "traefik.http.routers.ipfs-gateway.tls.certresolver=letsencrypt"
+      
+      # Service
+      - "traefik.http.services.ipfs-gateway.loadbalancer.server.port=8080"
+      
+      # Middlewares
+      - "traefik.http.routers.ipfs-gateway.middlewares=security-headers@file,rate-limit@file"
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    logging: *verbose-logging
+
+  # Helia Gateway Peer 2 (Segundo nó P2P para testes)
+  helia-gateway-peer2:
+    build: ./helia-gateway
+    container_name: constituicao-helia-gateway-peer2
+    profiles: ["dev", "all"]
+    ports:
+      - "8082:8080"    # HTTP API na porta 8082
+      - "4004:4004"    # P2P libp2p TCP (porta interna também é 4004)
+      - "4005:4005"    # P2P libp2p WebSocket (porta interna também é 4005)
+    environment:
+      - HELIA_GATEWAY_URL=http://localhost:8082
+      - PORT=8080
+      - NODE_ENV=${NODE_ENV:-development}
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - RATE_LIMIT_WINDOW_MS=${HELIA_RATE_LIMIT_WINDOW_MS:-900000}
+      - RATE_LIMIT_MAX_REQUESTS=${HELIA_RATE_LIMIT_MAX_REQUESTS:-1000}
+      - P2P_ENABLED=${P2P_ENABLED:-true}
+      - P2P_TCP_PORT=4004
+      - P2P_WS_PORT=4005
+    depends_on:
+      ipfs:
+        condition: service_healthy
+      helia-gateway:
+        condition: service_healthy
+    volumes:
+      - ./helia-gateway/logs-peer2:/app/logs
+      - helia-p2p-data-peer2:/app/data
+    restart: unless-stopped
+    networks:
+      - constituicao-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    logging: *verbose-logging
+
+  # PostgreSQL for Graph Node
+  postgres:
+    image: postgres:16-alpine
+    container_name: constituicao-postgres
+    profiles: ["prod", "all"]
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-graph-node}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-let-me-in}
+      POSTGRES_DB: ${POSTGRES_DB:-graph-node}
+      POSTGRES_INITDB_ARGS: "-E UTF8 --locale=C"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - constituicao-network
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "${POSTGRES_USER:-graph-node}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    logging: *default-logging
+
+  # The Graph Node
+  graph-node:
+    image: graphprotocol/graph-node:latest
+    platform: linux/amd64
+    container_name: constituicao-graph-node
+    profiles: ["prod", "all"]
+    ports:
+      - "8000:8000"    # HTTP
+      - "8001:8001"    # WebSocket
+      - "8020:8020"    # JSON-RPC admin
+      - "8030:8030"    # Indexing status
+      - "8040:8040"    # Metrics
+    environment:
+      postgres_host: postgres
+      postgres_user: ${POSTGRES_USER:-graph-node}
+      postgres_pass: ${POSTGRES_PASSWORD:-let-me-in}
+      postgres_db: ${POSTGRES_DB:-graph-node}
+      ipfs: 'ipfs:5001'
+      ethereum: '${ETHEREUM_NETWORK:-localhost}:${ETHEREUM_RPC:-http://host.docker.internal:8545}'
+      GRAPH_LOG: ${GRAPH_LOG:-info}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      ipfs:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - constituicao-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8000"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 90s
+    logging: *verbose-logging
+
+  # Frontend (Next.js)
+  frontend:
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: revolucao-cibernetica-app
+    profiles: ["dev", "prod", "all"]
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=${NODE_ENV:-production}
+      - NEXT_PUBLIC_CHAIN_ID=${NEXT_PUBLIC_CHAIN_ID:-31337}
+      - NEXT_PUBLIC_RPC_URL=${NEXT_PUBLIC_RPC_URL:-http://localhost:8545}
+      - NEXT_PUBLIC_SUBGRAPH_URL=${NEXT_PUBLIC_SUBGRAPH_URL:-http://localhost:8000/subgraphs/name/constituicao-2-0}
+      - NEXT_PUBLIC_HELIA_GATEWAY=${NEXT_PUBLIC_HELIA_GATEWAY:-http://localhost:8080}
+      - NEXT_PUBLIC_P2P_GATEWAY=${NEXT_PUBLIC_P2P_GATEWAY:-http://localhost:8080}
+    depends_on:
+      helia-gateway:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - constituicao-network
+    labels:
+      # Enable Traefik
+      - "traefik.enable=true"
+      
+      # HTTP Router
+      - "traefik.http.routers.frontend.rule=Host(`revolucao-cibernetica.local`) || Host(`www.revolucao-cibernetica.local`)"
+      - "traefik.http.routers.frontend.entrypoints=websecure"
+      - "traefik.http.routers.frontend.tls.certresolver=letsencrypt"
+      
+      # Service
+      - "traefik.http.services.frontend.loadbalancer.server.port=3000"
+      
+      # Middlewares (comentado temporariamente - troubleshooting)
+      # - "traefik.http.routers.frontend.middlewares=security-headers@file,compression@file,rate-limit@file"
+      
+      # Prometheus metrics
+      - "prometheus.io/scrape=true"
+      - "prometheus.io/port=3000"
+      - "prometheus.io/path=/api/metrics"
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    logging: *default-logging
+
+volumes:
+  ipfs-data:
+    driver: local
+  postgres-data:
+    driver: local
+  helia-p2p-data:
+    driver: local
+  helia-p2p-data-peer2:
+    driver: local
+
+networks:
+  constituicao-network:
+    driver: bridge
+
+# Usage:
+# docker-compose up -d          # Start all services
+# docker-compose logs -f        # Follow logs
+# docker-compose down           # Stop all services
+# docker-compose down -v        # Stop and remove volumes (reset)

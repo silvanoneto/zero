@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Entrada - A Revolução Cibernética</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/download.css">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Verificação humana para acessar A Revolução Cibernética">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* 🌈 CANVAS FULLSCREEN COM ELEMENTOS FLUTUANTES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #ffffff !important;
+            /* Sempre branco */
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Canvas ocupa toda a tela */
+        .fullscreen-canvas-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+        }
+
+        #captchaCanvas {
+            width: 100% !important;
+            height: 100% !important;
+            display: block;
+        }
+
+        /* 📦 CAIXA DE DESAFIO - CENTRO INFERIOR (COMPACTA) */
+        .challenge-box {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 400px;
+            width: auto;
+            min-width: 300px;
+            background: rgba(0, 0, 0, 0.88);
+            border: 2px solid;
+            border-radius: 12px;
+            padding: 12px 16px;
+            z-index: 100;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            animation: rainbowGlow 8s linear infinite;
+            /* Transições suaves para propriedades controladas pelo JS */
+            transition: background 0.4s ease, color 0.4s ease;
+        }
+
+        /* 🌈 ANIMAÇÃO ARCO-ÍRIS */
+        @keyframes rainbowGlow {
+            0% {
+                border-color: #8b5cf6;
+                box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+            }
+
+            14.28% {
+                border-color: #3b82f6;
+                box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+            }
+
+            28.56% {
+                border-color: #10b981;
+                box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+            }
+
+            42.84% {
+                border-color: #f59e0b;
+                box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+            }
+
+            57.12% {
+                border-color: #f97316;
+                box-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+            }
+
+            71.4% {
+                border-color: #ec4899;
+                box-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
+            }
+
+            85.68% {
+                border-color: #ef4444;
+                box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+            }
+
+            100% {
+                border-color: #8b5cf6;
+                box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+            }
+        }
+
+        .challenge-box h2 {
+            color: var(--primary);
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+            font-weight: 600;
+            transition: color 0.4s ease;
+        }
+
+        .challenge-box p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.35;
+            transition: color 0.4s ease;
+        }
+
+        .challenge-box strong {
+            color: var(--primary);
+            transition: color 0.4s ease;
+        }
+
+        /* Botão de regenerar dentro da caixa */
+        .challenge-regenerate {
+            margin-top: 10px;
+        }
+
+        .challenge-regenerate button {
+            width: 100%;
+            padding: 8px 12px;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            color: var(--primary);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .challenge-regenerate button:hover {
+            background: rgba(139, 92, 246, 0.2);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Botão de estatísticas dentro da caixa */
+        .challenge-stats {
+            margin-top: 8px;
+        }
+
+        .challenge-stats button {
+            width: 100%;
+            padding: 8px 12px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #10b981;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .challenge-stats button:hover {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: #10b981;
+            transform: translateY(-2px);
+        }
+
+        /* Feedback de erro */
+        .challenge-error {
+            margin-top: 8px;
+            padding: 8px 10px;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 6px;
+            color: #ef4444;
+            font-size: 0.8rem;
+            display: none;
+            /* Transição suave para cores */
+            transition: background 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+        }
+
+        .challenge-error.active,
+        .challenge-error.show {
+            display: block;
+            animation: shake 0.5s ease;
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-10px);
+            }
+
+            75% {
+                transform: translateX(10px);
+            }
+        }
+
+        /* 🎯 BOTÕES DE AÇÃO - CENTRO DO TOPO */
+        .action-buttons {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 100;
+        }
+
+        .action-btn {
+            width: 50px;
+            height: 50px;
+            border: 2px solid rgba(139, 92, 246, 0.5);
+            background: rgba(0, 0, 0, 0.7);
+
+            font-size: 24px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .action-btn:hover {
+            background: rgba(139, 92, 246, 0.2);
+            transform: scale(1.1);
+            border-color: var(--primary);
+        }
+
+        /* 📱 RESPONSIVIDADE */
+        @media (max-width: 768px) {
+            .challenge-box {
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                max-width: 380px;
+                min-width: 280px;
+                width: calc(100% - 30px);
+                padding: 10px 14px;
+            }
+
+            .challenge-box h2 {
+                font-size: 0.95rem;
+                margin-bottom: 5px;
+            }
+
+            .challenge-box p {
+                font-size: 0.8rem;
+                line-height: 1.3;
+            }
+
+            .challenge-regenerate button {
+                padding: 7px 10px;
+                font-size: 0.75rem;
+            }
+
+            .challenge-stats button {
+                padding: 7px 10px;
+                font-size: 0.75rem;
+            }
+
+            .challenge-error {
+                margin-top: 6px;
+                padding: 6px 8px;
+                font-size: 0.75rem;
+            }
+
+            .action-buttons {
+                top: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+                gap: 8px;
+            }
+
+            .action-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+        }
+
+        /* Ocultar elementos do captcha antigo */
+        .captcha-overlay,
+        .captcha-modal,
+        #captchaOverlay {
+            display: none !important;
+        }
+
+        /* 🔒 ESTILOS DO OVERLAY DE BLOQUEIO */
+        .captcha-modal-block-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+            z-index: 9998;
+            display: none;
+            pointer-events: none;
+        }
+
+        .captcha-modal-block-overlay.active {
+            display: block;
+            pointer-events: all;
+        }
+
+        .captcha-block-overlay {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: 2px solid #8b5cf6;
+            border-radius: 16px;
+            padding: 2rem;
+            z-index: 9999;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+            display: none;
+            text-align: center;
+            min-width: 300px;
+        }
+
+        .captcha-block-overlay.active {
+            display: block;
+        }
+
+        .captcha-block-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .captcha-block-icon {
+            font-size: 3rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
+
+        .captcha-block-message {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .captcha-binary-counter {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.5rem;
+            color: #10b981;
+            letter-spacing: 0.2em;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+        }
+
+        .captcha-block-submessage {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 🖼️ CANVAS FULLSCREEN -->
+    <div class="fullscreen-canvas-container">
+        <canvas id="captchaCanvas"></canvas>
+    </div>
+
+    <!-- 📦 CAIXA DE DESAFIO COM BORDA ARCO-ÍRIS -->
+    <div class="challenge-box">
+        <h2>🔐 Verificação de Entrada</h2>
+        <p id="captchaInstruction">
+            Clique nos <strong>círculos roxos</strong> em ordem crescente de tamanho.<br>
+            (do menor para o maior)
+        </p>
+
+        <!-- Feedback de erro -->
+        <div class="challenge-error" id="captchaError">
+            ❌ Ordem incorreta. Tente novamente!
+        </div>
+
+        <!-- Botão regenerar dentro da caixa -->
+        <div class="challenge-regenerate">
+            <button onclick="regenerateCaptcha()">🔄 Gerar novo desafio</button>
+        </div>
+
+        <!-- Botão de estatísticas dentro da caixa -->
+        <div class="challenge-stats">
+            <button id="metricsButtonInBox" onclick="toggleMetrics()">📊 Estatísticas</button>
+        </div>
+    </div>
+
+    <!-- 🎯 BOTÕES DE AÇÃO (DIREITA INFERIOR) -->
+    <div class="action-buttons">
+        <!-- Botão de métricas será criado pelo JS do captcha.js -->
+    </div>
+
+    <!-- 🔒 OVERLAY DE BLOQUEIO DO CAPTCHA -->
+    <div id="entryModalBlockOverlay" class="captcha-modal-block-overlay"></div>
+    <div id="entryCaptchaBlockOverlay" class="captcha-block-overlay">
+        <div class="captcha-block-content">
+            <div class="captcha-block-icon">🔒</div>
+            <div class="captcha-block-message">Aguarde...</div>
+            <div id="entryBinaryCounter" class="captcha-binary-counter">--------</div>
+            <div class="captcha-block-submessage">Sistema Ternário Balanceado</div>
+        </div>
+    </div>
+
+    <!-- Elementos ocultos do sistema antigo -->
+    <input type="number" class="captcha-input" id="captchaInput" placeholder="Digite a resposta" style="display: none;">
+    <!-- ⚛️ Overlay de bloqueio com contador ternário (-1→0→+1) -->
+    <!-- Feedback/Backfeed: - (passado), 0 (presente), + (futuro) -->
+    <div class="captcha-block-overlay" id="captchaBlockOverlay" style="display: none;">
+        <div class="binary-counter" id="binaryCounter">--------</div>
+    </div>
+    <div class="modal-block-overlay" id="modalBlockOverlay" style="display: none;"></div>
+    <button class="captcha-btn captcha-btn-submit" onclick="verifyCaptcha()" style="display: none;"
+        id="verifyBtn">Verificar</button>
+
+    <!-- JavaScript externo -->
+    <script src="./assets/scripts/captcha.js"></script>
+    <script>
+        // 🚀 INICIALIZAÇÃO FULLSCREEN
+
+        // Substituir performDownload para redirecionar ao site
+        window.performDownload = function () {
+            console.log('✅ Captcha verificado - redirecionando...');
+
+            // Salvar flag de verificação
+            sessionStorage.setItem('entry_captcha_passed', 'true');
+
+            // Feedback visual
+            const challengeBox = document.querySelector('.challenge-box');
+            challengeBox.style.borderColor = '#10b981';
+            challengeBox.style.animation = 'none';
+
+            const instruction = document.getElementById('captchaInstruction');
+            instruction.innerHTML = '<strong style="color: #10b981;">✅ Verificação completa!</strong><br>Redirecionando...';
+
+            // Obter URL de destino (padrão: index.html)
+            const returnUrl = sessionStorage.getItem('entry_return_url') || 'index.html';
+
+            // Limpar URL de retorno
+            sessionStorage.removeItem('entry_return_url');
+
+            // Redirecionar para página de destino
+            setTimeout(() => {
+                window.location.href = returnUrl;
+            }, 1500);
+        };
+
+        // Bloquear fechamento do modal (não pode sair sem completar)
+        window.closeCaptcha = function () {
+            console.warn('⚠️ Complete o captcha para continuar');
+            // Não faz nada - não pode sair sem completar
+        };
+
+        // Auto-inicializar quando carregar
+        window.addEventListener('DOMContentLoaded', () => {
+            // Capturar URL de retorno da query string (se existir)
+            const urlParams = new URLSearchParams(window.location.search);
+            const returnTo = urlParams.get('return');
+            if (returnTo) {
+                sessionStorage.setItem('entry_return_url', returnTo);
+            }
+
+            // Verificar se já passou
+            const passed = sessionStorage.getItem('entry_captcha_passed');
+            if (passed === 'true') {
+                // Já passou, redirecionar para onde estava indo
+                const returnUrl = sessionStorage.getItem('entry_return_url') || 'index.html';
+                sessionStorage.removeItem('entry_return_url');
+                window.location.href = returnUrl;
+                return;
+            }
+
+            // Ajustar canvas para tela inteira
+            const canvas = document.getElementById('captchaCanvas');
+
+            function resizeCanvas() {
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+
+                // Define resolução do canvas
+                canvas.width = width;
+                canvas.height = height;
+
+                // Reinicializa captcha se já estiver carregado
+                if (typeof initCanvas === 'function' && typeof generateVisualCaptcha === 'function') {
+                    initCanvas();
+                    generateVisualCaptcha();
+                }
+            }
+
+            // Redimensiona ao carregar e quando mudar tamanho
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+
+            // Inicializar captcha automaticamente após breve delay
+            console.log('🎯 Inicializando captcha fullscreen...');
+            setTimeout(() => {
+                if (typeof initCanvas === 'function') {
+                    initCanvas();
+                    generateVisualCaptcha();
+                }
+            }, 100);
+        });
+
+        // 🔄 FUNÇÃO DE REGENERAR DESAFIO
+        function regenerateCaptcha() {
+            // Verificar se há transição em andamento
+            if (typeof entryIsCanvasBlocked !== 'undefined' && entryIsCanvasBlocked) {
+                console.warn('⏸️ Aguarde a transição do captcha concluir');
+                return;
+            }
+
+            // Oculta erro se estiver visível
+            const errorBox = document.getElementById('captchaError');
+            if (errorBox) {
+                errorBox.classList.remove('show');
+            }
+
+            // Chamar função correta de regeneração do entry
+            // Esta função já tem bloqueio interno e animação ternária
+            if (typeof window.regenerateEntryCaptcha === 'function') {
+                window.regenerateEntryCaptcha();
+            } else if (typeof generateVisualCaptcha === 'function') {
+                // Fallback para compatibilidade
+                generateVisualCaptcha();
+            } else {
+                console.error('❌ Função de regeneração não encontrada');
+            }
+        }
+    </script>
+</body>
+
+</html>
+```

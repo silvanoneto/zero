@@ -1,0 +1,140 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [
+      {
+        "source": "/api/p2p/:path*",
+        "destination": "http://localhost:8080/api/p2p/:path*",
+        "regex": "^/api/p2p(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))?(?:/)?$"
+      }
+    ],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/api/metrics",
+      "regex": "^/api/metrics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/metrics(?:/)?$"
+    },
+    {
+      "page": "/book",
+      "regex": "^/book(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/book(?:/)?$"
+    },
+    {
+      "page": "/constituicao",
+      "regex": "^/constituicao(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/constituicao(?:/)?$"
+    },
+    {
+      "page": "/constituicao-2-0",
+      "regex": "^/constituicao\\-2\\-0(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/constituicao\\-2\\-0(?:/)?$"
+    },
+    {
+      "page": "/contracts",
+      "regex": "^/contracts(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contracts(?:/)?$"
+    },
+    {
+      "page": "/dao-mitosis",
+      "regex": "^/dao\\-mitosis(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dao\\-mitosis(?:/)?$"
+    },
+    {
+      "page": "/download",
+      "regex": "^/download(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/download(?:/)?$"
+    },
+    {
+      "page": "/entry",
+      "regex": "^/entry(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/entry(?:/)?$"
+    },
+    {
+      "page": "/federation-voting",
+      "regex": "^/federation\\-voting(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/federation\\-voting(?:/)?$"
+    },
+    {
+      "page": "/manifesto",
+      "regex": "^/manifesto(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/manifesto(?:/)?$"
+    },
+    {
+      "page": "/test-p2p",
+      "regex": "^/test\\-p2p(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/test\\-p2p(?:/)?$"
+    },
+    {
+      "page": "/zec-simulator",
+      "regex": "^/zec\\-simulator(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/zec\\-simulator(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
