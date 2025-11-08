@@ -11,21 +11,24 @@ Este projeto contém uma experiência interativa que combina filosofia, design e
 O projeto carrega dinamicamente o conteúdo do arquivo `CRIOS.md`. Por questões de segurança, navegadores bloqueiam o carregamento de arquivos locais via JavaScript, então você precisa usar um servidor web local.
 
 **Opção 1 - Usar o script helper:**
+
 ```bash
 ./servir.sh
 ```
 
 **Opção 2 - Python (recomendado):**
+
 ```bash
 python3 -m http.server 8000
 ```
 
 **Opção 3 - Node.js:**
+
 ```bash
 npx http-server -p 8000
 ```
 
-Depois abra no navegador: **http://localhost:8000**
+Depois abra no navegador: **<http://localhost:8000>**
 
 ## 📁 Estrutura
 
