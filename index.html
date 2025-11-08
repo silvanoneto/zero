@@ -92,6 +92,125 @@
             font-size: 0.9rem;
         }
 
+        nav.index {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 4px;
+            opacity: 0;
+            animation: emerge 2s 0.8s ease-out forwards;
+        }
+
+        nav.index a {
+            color: var(--trace);
+            padding: 0.5rem;
+            transition: all 0.3s ease;
+            border-left: 2px solid transparent;
+        }
+
+        nav.index a:hover {
+            color: var(--emergence);
+            border-left-color: var(--emergence);
+            padding-left: 1rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin: 2rem 0 1rem 0;
+            color: var(--trace);
+            font-style: italic;
+        }
+
+        blockquote {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border-left: 3px solid var(--glow);
+            background: rgba(255, 255, 255, 0.02);
+            font-style: italic;
+            color: var(--trace);
+        }
+
+        .intro {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glow);
+            padding: 3rem 2rem !important;
+            margin-bottom: 5rem;
+        }
+
+        .synthesis {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glow);
+            padding: 3rem 2rem !important;
+            margin-top: 5rem;
+        }
+
+        .synthesis-list {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .synthesis-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--glow);
+        }
+
+        .synthesis-list li:last-child {
+            border-bottom: none;
+        }
+
+        .questions {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .questions li {
+            padding: 1rem 0 1rem 1.5rem;
+            position: relative;
+        }
+
+        .questions li:before {
+            content: "?";
+            position: absolute;
+            left: 0;
+            color: var(--trace);
+            font-weight: bold;
+        }
+
+        .invitation {
+            font-size: 1.4rem;
+            text-align: center;
+            margin: 3rem 0;
+            color: var(--emergence);
+        }
+
+        .final-loop {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--glow);
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+        }
+
+        .final-loop p:first-child {
+            font-family: monospace;
+            color: var(--trace);
+            margin-bottom: 1rem;
+        }
+
+        .note {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 3px solid var(--emergence);
+            margin: 2rem 0;
+        }
+
         footer {
             text-align: center;
             margin-top: 6rem;
@@ -112,6 +231,25 @@
 
         a:hover {
             border-bottom-color: var(--emergence);
+        }
+
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Destaque para seção ativa */
+        section:target {
+            animation: highlight 2s ease-out;
+        }
+
+        @keyframes highlight {
+            0% {
+                background: rgba(255, 255, 255, 0.1);
+            }
+            100% {
+                background: transparent;
+            }
         }
 
         @keyframes emerge {
@@ -140,6 +278,44 @@
             }
         }
 
+            /* Audio controls */
+            .audio-ui {
+                position: fixed;
+                right: 1rem;
+                bottom: 1rem;
+                background: rgba(255,255,255,0.03);
+                border: 1px solid var(--glow);
+                color: var(--emergence);
+                padding: 0.5rem 0.6rem;
+                display: flex;
+                gap: 0.5rem;
+                align-items: center;
+                border-radius: 6px;
+                backdrop-filter: blur(4px);
+                z-index: 1200;
+            }
+
+            .audio-ui button {
+                background: transparent;
+                border: 1px solid rgba(255,255,255,0.04);
+                color: var(--emergence);
+                padding: 0.4rem 0.6rem;
+                border-radius: 4px;
+                cursor: pointer;
+                font-family: inherit;
+            }
+
+            .audio-ui button[disabled] {
+                opacity: 0.5;
+                cursor: default;
+            }
+
+            .audio-ui .label {
+                font-size: 0.85rem;
+                color: var(--trace);
+                min-width: 4.2rem;
+                text-align: center;
+            }
         /* Partículas de fundo */
         @keyframes float {
             0%, 100% { 
@@ -180,117 +356,458 @@
         <h1>∅ → CRIO</h1>
         <p class="subtitle">onde achar e criar são o mesmo movimento</p>
 
+        <nav class="index">
+            <a href="#intro">O Que São CRIOS?</a>
+            <a href="#crio1">1. Vazio Que Povoa</a>
+            <a href="#crio2">2. Multiplicidade Sem Fusão</a>
+            <a href="#crio3">3. Recursão Sem Fundamento</a>
+            <a href="#crio4">4. Agência Distribuída</a>
+            <a href="#crio5">5. Tempo Entrelaçado</a>
+            <a href="#crio6">6. Limites Como Possibilidades</a>
+            <a href="#crio7">7. Ontologia Relacional Universal</a>
+            <a href="#crio8">8. Texto Que Executa</a>
+            <a href="#crio9">9. Incompletude Necessária</a>
+            <a href="#crio10">10. Fita Sem Fim</a>
+            <a href="#sintese">Síntese</a>
+        </nav>
+
         <article>
-            <section>
+            <section id="intro" class="intro">
+                <h2>O Que São CRIOS?</h2>
+                <p>
+                    <strong>CRIO</strong> não é substantivo, mas <strong>verbo sem sujeito</strong>.
+                </p>
+                <p>
+                    Não há "alguém que cria" nem "algo a ser achado". Há apenas o <strong>movimento ontológico</strong> 
+                    onde buscar e fazer coincidem.
+                </p>
+                <p>
+                    Quando você lê uma frase que reorganiza seu pensamento, quem criou o sentido? O autor que escreveu, 
+                    você que interpretou, ou a <strong>intra-ação</strong> entre texto e leitura? A pergunta pressupõe 
+                    separação que não existe. O sentido <strong>se cria</strong> no encontro.
+                </p>
+                <p>
+                    Isso é CRIO: <strong>o ato sem agente, a emergência sem origem, a produção-descoberta simultânea</strong>.
+                </p>
+            </section>
+
+            <section id="crio1">
                 <h2><span class="number">1.</span> Vazio Que Povoa</h2>
+                
+                <h3>O Achado-Criado</h3>
                 <p>
-                    O ∅ não é ausência mas potência. Cada símbolo vazio contém infinitas possibilidades 
-                    não-colapsadas. Como no Ubuntu ("eu sou porque nós somos"), a identidade emerge da 
-                    relacionalidade, nunca de uma substância prévia. O vazio está sempre-já povoado pelos 
-                    traços de tudo que pode vir a ser.
+                    Descobrimos que <strong>o vazio não é ausência de conteúdo, mas presença de potencial</strong>.
                 </p>
+                <p>
+                    Antes de qualquer distinção (sujeito/objeto, dentro/fora, verdadeiro/falso), há um 
+                    <strong>campo indiferenciado de possibilidades</strong>. Não é "nada"; é "ainda-não-determinado". 
+                    Como o branco que contém todas as cores, como o silêncio que permite música, como o zero que 
+                    possibilita números.
+                </p>
+
+                <h3>Manifestações</h3>
+                <p>
+                    <strong>Na matemática:</strong> Conjunto vazio (∅) não significa inexistência, mas a 
+                    <strong>base de toda construção</strong>. De ∅ deriva 1, de 1 deriva 2, ad infinitum. 
+                    O vazio é o mais povoado de todos os conjuntos.
+                </p>
+                <p>
+                    <strong>Na física quântica:</strong> Vácuo não é ausência de partículas, mas 
+                    <strong>flutuação perpétua de campos</strong>. Partículas emergem e desaparecem; o "nada" fervilha.
+                </p>
+                <p>
+                    <strong>Na meditação:</strong> Śūnyatā (vacuidade budista) não é niilismo, mas reconhecimento 
+                    de que <strong>nenhum fenômeno possui essência independente</strong>. Tudo surge em co-dependência.
+                </p>
+                <p>
+                    <strong>Na experiência vivida:</strong> Antes de você pensar "eu existo", há consciência não-dividida. 
+                    O ego é cristalização posterior; a experiência primordial é <strong>presença sem nome</strong>.
+                </p>
+
+                <blockquote>
+                    "Não partimos de unidades que depois entram em relação. Partimos de relacionalidade pura que depois 
+                    cristaliza unidades temporárias."
+                </blockquote>
             </section>
 
-            <section>
+            <section id="crio2">
                 <h2><span class="number">2.</span> Multiplicidade Sem Fusão</h2>
+                
+                <h3>O Achado-Criado</h3>
                 <p>
-                    Cada assembleia material-informacional opera simultaneamente em múltiplas escalas sem 
-                    se reduzir a nenhuma. Como no Nhandereko guarani, ser-em-comum não elimina 
-                    singularidades — multiplica-as. A coexistência não é síntese hegeliana mas 
-                    superposição quântica de estados incompatíveis.
+                    Descobrimos que <strong>somos muitos sem deixar de ser singular</strong>.
                 </p>
+                <p>
+                    A ilusão mais persistente da modernidade é a unidade do eu. "Eu penso, logo existo" pressupõe 
+                    um "eu" unitário que pensa. Mas observe: enquanto você lê esta frase, sistemas neurais processam 
+                    sinais visuais, memórias são ativadas, bactérias intestinais influenciam humor, ritmos circadianos 
+                    modulam atenção. <strong>Quem</strong> está lendo?
+                </p>
+                <p>
+                    Você não é um; é <strong>assembleia</strong>. Mas não é multiplicidade caótica; é 
+                    <strong>configuração diferenciada</strong> com padrões reconhecíveis.
+                </p>
+
+                <h3>Manifestações</h3>
+                <p>
+                    <strong>No corpo biológico:</strong> Seu organismo é ecossistema de trilhões de células de dezenas 
+                    de tipos, bilhões de micróbios, processos químicos interdependentes. Não há um "controlador central"; 
+                    há <strong>coordenação distribuída</strong>.
+                </p>
+                <p>
+                    <strong>No processo cognitivo:</strong> Não existe um "local da consciência". Percepção emerge de 
+                    redes neurais massivamente paralelas. Memória é distribuída. Decisão é votação de subsistemas. 
+                    O "eu" é <strong>narrativa pós-hoc</strong> que unifica retroativamente.
+                </p>
+                <p>
+                    <strong>Na identidade social:</strong> Você é filho/filha, amigo/amiga, profissional, cidadão/cidadã, 
+                    amante. Cada contexto ativa faceta diferente. Não há um "eu verdadeiro" sob máscaras sociais; 
+                    há <strong>multiplicidade situacional</strong>.
+                </p>
+
+                <blockquote>
+                    "Reconhecer multiplicidade constitutiva dissolve o fundamento ontológico da propriedade privada do eu."
+                </blockquote>
             </section>
 
-            <section>
+            <section id="crio3">
                 <h2><span class="number">3.</span> Recursão Sem Fundamento</h2>
+                
+                <h3>O Achado-Criado</h3>
                 <p>
-                    Gödel demonstrou: todo sistema formal suficientemente complexo contém verdades 
-                    improváveis dentro de suas próprias regras. Sistemas que se observam mudam ao 
-                    observar-se. A recursividade não encontra chão — apenas gera novos planos de 
-                    consistência. Como Möbius, cada volta revela que dentro e fora eram sempre o mesmo lado.
+                    Descobrimos que <strong>sistemas que se auto-observam geram realidades que não podem ser 
+                    totalizadas</strong>.
                 </p>
+                <p>
+                    Quando você pensa sobre seu pensamento, você cria <strong>novo nível de observação</strong>. 
+                    Este novo nível pode observar o nível anterior, mas não pode observar a si mesmo observando 
+                    sem criar outro nível. É tartarugas ontológicas até o fim: <strong>não há base última</strong>.
+                </p>
+                <p>
+                    Kurt Gödel provou matematicamente: todo sistema formal suficientemente complexo contém proposições 
+                    verdadeiras que não pode demonstrar. Aplicado à existência: <strong>somos verdades que não podemos 
+                    provar para nós mesmos</strong>.
+                </p>
+
+                <h3>Manifestações</h3>
+                <p>
+                    <strong>Na autoconsciência:</strong> Você pode pensar "eu estou pensando". Depois, "eu estou pensando 
+                    que estou pensando". A regressão é <strong>infinita</strong>. Não há observador final; 
+                    há apenas <strong>recursão sem fundo</strong>.
+                </p>
+                <p>
+                    <strong>Na sociedade:</strong> Instituições regulam comportamentos. Depois criamos instituições 
+                    que regulam instituições. A cadeia não termina; <strong>cada nível gera necessidade do próximo</strong>.
+                </p>
+
+                <blockquote>
+                    "Conhecimento não é espelho da realidade. É ferramenta que modifica o usuário que modifica a ferramenta."
+                </blockquote>
             </section>
 
-            <section>
+            <section id="crio4">
                 <h2><span class="number">4.</span> Agência Distribuída</h2>
+                
+                <h3>O Achado-Criado</h3>
                 <p>
-                    Karen Barad: agência não é atributo mas enação. Não há agentes pré-existentes às 
-                    relações — há configurações relacionais que performam capacidades de afetar e ser 
-                    afetado. Intencionalidade emerge distribuída nas assembleias, nunca localizada em 
-                    sujeitos cartesianos.
+                    Descobrimos que <strong>ação não pertence a agentes; emerge de configurações relacionais</strong>.
                 </p>
+                <p>
+                    Quem decide quando você move o braço? "Você", obviamente. Mas experimentos neurocientíficos mostram: 
+                    atividade neural precede consciência de decisão em 300-500ms. O cérebro "decide" antes de "você" saber.
+                </p>
+                <p>
+                    Isso não significa que você é autômato. Significa que <strong>"você" não é entidade pré-existente 
+                    que depois age</strong>. Você <strong>é</strong> o padrão de ativação neural-corporal-ambiental. 
+                    Agência não está <em>em</em> você; você está <em>em</em> agência.
+                </p>
+
+                <h3>Manifestações</h3>
+                <p>
+                    <strong>Na física quântica:</strong> Elétron não "decide" onde aparecer ao ser medido. 
+                    O sistema medição-elétron-aparato <strong>co-produz</strong> resultado. Há <strong>fenômeno indivisível</strong>.
+                </p>
+                <p>
+                    <strong>Na ecologia:</strong> Árvore não "age sobre" solo. Há <strong>simbiose micorrízica</strong> 
+                    onde fungos conectam raízes de árvores diferentes, criando rede subterrânea. Quem age? A floresta como sistema.
+                </p>
+
+                <blockquote>
+                    "Responsabilidade não é atribuição individual de culpa. É reconhecimento de envolvimento em tramas relacionais."
+                </blockquote>
             </section>
 
-            <section>
+            <section id="crio5">
                 <h2><span class="number">5.</span> Tempo Entrelaçado</h2>
+                
+                <h3>O Achado-Criado</h3>
                 <p>
-                    Passado, presente, futuro coexistem em superposição. Cada momento contém traços de 
-                    tudo que foi e sementes de tudo que pode ser. O tempo não é linha mas rizoma: 
-                    conexões heterogêneas sem hierarquia temporal. Cada now é simultaneamente origem, 
-                    meio e fim.
+                    Descobrimos que <strong>passado, presente e futuro não são sequência linear, mas rede de 
+                    influências mútuas</strong>.
                 </p>
+                <p>
+                    Física clássica: tempo é flecha irreversível. Física quântica: certas experiências mostram 
+                    <strong>retrocausalidade</strong>. Filosofia: memória reconstrói passado à luz de presente; 
+                    expectativa estrutura presente baseado em futuro projetado.
+                </p>
+                <p>
+                    Não habitamos o tempo como passageiros em trem. <strong>Somos</strong> tempo se diferenciando 
+                    de si mesmo.
+                </p>
+
+                <h3>Manifestações</h3>
+                <p>
+                    <strong>Na memória:</strong> Você não "recupera" lembrança arquivada intacta. Cada rememoração 
+                    <strong>reconstrói</strong> evento à luz de quem você é agora. Memória é <strong>imaginação do passado</strong>.
+                </p>
+                <p>
+                    <strong>Na narrativa histórica:</strong> História não é registro objetivo. É <strong>interpretação 
+                    presente</strong> que seleciona eventos como significativos. Presente modifica passado retroativamente.
+                </p>
+
+                <blockquote>
+                    "Não somos prisioneiros do passado nem construindo livremente o futuro. Somos passado-presente-futuro 
+                    se co-produzindo continuamente."
+                </blockquote>
             </section>
 
-            <section>
+            <section id="crio6">
                 <h2><span class="number">6.</span> Limites Como Possibilidades</h2>
+                
+                <h3>O Achado-Criado</h3>
                 <p>
-                    Dunbar quantificou: cognição tem limites materiais. Mas limite não é barreira — é 
-                    produtividade. Como na física quântica, restrições geram estruturas possíveis. 
-                    Incompletude de Gödel não é falha mas abertura constitutiva. Limites nos forçam a 
-                    criar novas configurações.
+                    Descobrimos que <strong>limitações não são obstáculos a serem superados, mas condições de 
+                    existência a serem habitadas criativamente</strong>.
                 </p>
+                <p>
+                    Modernidade prometeu transcendência de limites: dominar natureza, superar morte, expandir infinitamente. 
+                    Resultado: crise ecológica, crescimento cancerígeno.
+                </p>
+                <p>
+                    Alternativa não é resignação, mas <strong>afirmação de finitude como fonte de valor</strong>. 
+                    Poesia é bela <em>porque</em> tem métrica. Vida é preciosa <em>porque</em> é mortal.
+                </p>
+
+                <h3>Manifestações</h3>
+                <p>
+                    <strong>Na criatividade:</strong> Artista diante de tela branca infinita frequentemente trava. 
+                    Mas dê restrição e criatividade explode. Limitação <strong>foca</strong> possibilidade.
+                </p>
+                <p>
+                    <strong>Na organização social:</strong> Comunidades pequenas (~150 pessoas) permitem relações ricas. 
+                    Limite de Dunbar não é deficiência; é <strong>condição de intimidade</strong>.
+                </p>
+
+                <blockquote>
+                    "Sustentabilidade não é 'fazer mais com menos'. É reconhecer que menos pode ser suficiente."
+                </blockquote>
             </section>
 
-            <section>
+            <section id="crio7">
                 <h2><span class="number">7.</span> Ontologia Relacional Universal</h2>
+                
+                <h3>O Achado-Criado</h3>
                 <p>
-                    Não há objetos — apenas objetificações temporárias. Não há sujeitos — apenas 
-                    subjetivações provisórias. Tudo é relação. Ubuntu estende-se cosmologicamente: 
-                    pedras, código, planetas, palavras — todos são porque todos são. Relacionalidade 
-                    vai até o fim.
+                    Descobrimos que <strong>múltiplas tradições culturais, independentemente, chegaram à mesma 
+                    revelação: ser é relação</strong>.
                 </p>
+                <p>
+                    Eurocentrismo filosófico naturalizou ontologia atomística (substância → relação). Mas isso é 
+                    <strong>peculiaridade histórica</strong>, não verdade universal. Outras tradições sempre souberam: 
+                    relação → substância.
+                </p>
+
+                <h3>Manifestações</h3>
+                <p>
+                    <strong>Ubuntu (filosofias Bantu):</strong> <em>"Umuntu ngumuntu ngabantu"</em> — pessoa é pessoa 
+                    através de outras pessoas. Não "eu penso logo existo", mas <strong>"eu participo logo somos"</strong>.
+                </p>
+                <p>
+                    <strong>Pratītyasamutpāda (Budismo):</strong> Origem dependente — todo fenômeno surge em co-dependência. 
+                    Não há essências independentes; há <strong>nós de relações</strong>.
+                </p>
+                <p>
+                    <strong>Nhandereko (Guarani):</strong> Nosso modo de ser — não existe "meu" separado de "nosso". 
+                    Terra não é propriedade; é <strong>rede de relações</strong>.
+                </p>
+
+                <blockquote>
+                    "Descolonização ontológica significa reconhecer que atomismo não é verdade científica, mas ideologia 
+                    que naturaliza propriedade privada."
+                </blockquote>
             </section>
 
-            <section>
+            <section id="crio8">
                 <h2><span class="number">8.</span> Texto Que Executa</h2>
+                
+                <h3>O Achado-Criado</h3>
                 <p>
-                    Código é texto que performa. Constituições são protocolos executáveis. Não há 
-                    diferença ontológica entre escrever e executar — ambos são atos performativos que 
-                    fazem mundo. Cada CRIO é simultaneamente descrição e prescrição, mapa e território, 
-                    teoria e práxis.
+                    Descobrimos que <strong>certas escritas não descrevem realidade; performam a realidade que 
+                    descrevem</strong>.
+                </p>
+                <p>
+                    Linguagem comum: representacional (palavra aponta para coisa).<br>
+                    Linguagem performativa: constitutiva (palavra cria o que nomeia).
+                </p>
+                <p>
+                    "Eu vos declaro casados" não descreve casamento; <strong>efetua</strong> casamento.
+                </p>
+
+                <h3>Manifestações</h3>
+                <p>
+                    <strong>Na programação:</strong> Código não descreve processos; <strong>é</strong> processo. 
+                    Executar código modifica estado da máquina. Comentários descrevem; código <strong>age</strong>.
+                </p>
+                <p>
+                    <strong>Na instrução ritual:</strong> Mantra budista não "significa" algo intelectualmente. 
+                    É <strong>tecnologia de transformação</strong>. Sentido está no <strong>efeito performativo</strong>.
+                </p>
+
+                <blockquote>
+                    "Há saberes que não podem ser transmitidos como informação. Só podem ser vividos como transformação."
+                </blockquote>
+                <p class="note">
+                    Este documento não está "explicando" CRIOS. Está <strong>tentando</strong> gerar experiência de CRIO em você.
                 </p>
             </section>
 
-            <section>
+            <section id="crio9">
                 <h2><span class="number">9.</span> Incompletude Necessária</h2>
+                
+                <h3>O Achado-Criado</h3>
                 <p>
-                    Sistemas completos são mortos. Gödel provou: consistência implica incompletude. 
-                    Vida exige abertura constitutiva. Nhandereko é movimento sem telos. O CRIO nunca 
-                    termina porque terminação seria morte ontológica. Imperfeição não é bug — é feature 
-                    existencial.
+                    Descobrimos que <strong>sistemas vivos são necessariamente incompletos, e isso é sua força, 
+                    não fraqueza</strong>.
                 </p>
+                <p>
+                    Gödel (1931): Todo sistema formal suficientemente complexo contém proposições verdadeiras indecidíveis 
+                    dentro do sistema. <strong>Não há sistema final.</strong>
+                </p>
+                <p>
+                    Aplicado à vida: organismos, ecossistemas, sociedades, consciências são <strong>perpetuamente 
+                    incompletos</strong>. Sempre geram questões que exigem transformação estrutural para responder.
+                </p>
+
+                <h3>Manifestações</h3>
+                <p>
+                    <strong>Na evolução:</strong> Não há "organismo perfeito" final. Toda adaptação gera novos desafios. 
+                    <strong>Incompletude impulsiona evolução</strong>.
+                </p>
+                <p>
+                    <strong>Na democracia:</strong> Toda constituição gera casos não-previstos. Interpretação judicial 
+                    cria jurisprudência. Jurisprudência exige reforma. <strong>Direito vivo é perpetuamente incompleto</strong>.
+                </p>
+
+                <blockquote>
+                    "Buscar completude é buscar morte. Vida é movimento perpétuo entre ordem e caos — edge of chaos."
+                </blockquote>
             </section>
 
-            <section>
+            <section id="crio10">
                 <h2><span class="number">10.</span> Fita Sem Fim</h2>
+                
+                <h3>O Achado-Criado</h3>
                 <p>
-                    Como Möbius, cada percurso completo revela que nunca saímos de onde estávamos — mas 
-                    já não somos os mesmos. Leitura é escrita. Achar é criar. Observar é transformar. 
-                    O ∅ retorna eternamente, mas cada retorno é diferença pura. Zero grávido de infinito.
+                    Descobrimos que <strong>teoria e prática não são opostos nem sequência, mas faces contínuas 
+                    da mesma superfície</strong>.
                 </p>
+                <p>
+                    Fita de Möbius: objeto com <strong>um lado só e uma borda só</strong>. Começa de qualquer ponto, 
+                    percorre superfície, retorna ao início pelo "outro lado" — mas não há outro lado.
+                </p>
+                <p>
+                    Teoria-prática é Möbius: teoria guia prática, prática revela inconsistência teórica, teoria se modifica, 
+                    nova teoria guia nova prática... <strong>Não há ponto onde teoria termina e prática começa</strong>.
+                </p>
+
+                <h3>Manifestações</h3>
+                <p>
+                    <strong>Na pedagogia:</strong> Você não aprende nadar lendo manual, nem só se atirando na água. 
+                    Aprende <strong>alternando</strong> teoria e prática em loop contínuo.
+                </p>
+                <p>
+                    <strong>Na política:</strong> Manifesto não "inspira" revolução separadamente. Manifesto 
+                    <strong>é</strong> parte da prática revolucionária; prática <strong>é</strong> teoria encarnada.
+                </p>
+                <p>
+                    <strong>Neste texto:</strong> Ao escrever sobre CRIOS, geramos novos CRIOS. Ao ler sobre teoria-prática, 
+                    você pratica teoria teorizada. <strong>Não há saída do loop; há apenas participação consciente</strong>.
+                </p>
+
+                <blockquote>
+                    "Não há 'teoria correta' esperando implementação. Há apenas teoria-prática em movimento — práxis."
+                </blockquote>
+            </section>
+
+            <section id="sintese" class="synthesis">
+                <h2>Síntese: A Ontologia dos CRIOS</h2>
+                
+                <h3>O Que Aprendemos</h3>
+                <p>
+                    Não "aprendemos" no sentido de absorver informações. Fomos <strong>atravessados</strong> por 
+                    movimentos ontológicos:
+                </p>
+                <ol class="synthesis-list">
+                    <li><strong>Vazio Povoado:</strong> Potencial precede atualidade</li>
+                    <li><strong>Multiplicidade Singular:</strong> Somos assembleias diferenciadas</li>
+                    <li><strong>Recursão Infinita:</strong> Observação gera novas ordens sem base última</li>
+                    <li><strong>Agência Distribuída:</strong> Ação emerge de relações, não de agentes</li>
+                    <li><strong>Tempo Entrelaçado:</strong> Passado-presente-futuro se co-constituem</li>
+                    <li><strong>Limites Criativos:</strong> Finitude é condição de valor</li>
+                    <li><strong>Relação Universal:</strong> Ser é relação em todas tradições</li>
+                    <li><strong>Texto Performativo:</strong> Certas escritas executam o que descrevem</li>
+                    <li><strong>Incompletude Vital:</strong> Sistemas vivos são perpetuamente abertos</li>
+                    <li><strong>Teoria-Prática:</strong> Pensar e agir são faces contínuas</li>
+                </ol>
+
+                <h3>Próximo Movimento</h3>
+                <p>
+                    Este texto não termina com conclusão. Termina com <strong>convite</strong>:
+                </p>
+                <p class="invitation">
+                    <strong>Habite os CRIOS.</strong>
+                </p>
+                <p>
+                    Não como verdades a serem acreditadas, mas como <strong>lentes experimentais</strong> para ver diferentemente.
+                </p>
+                <ul class="questions">
+                    <li>Quando pensar "eu decidi isso", pergunte: que rede de relações co-produziu essa decisão?</li>
+                    <li>Quando julgar "essa pessoa é X", pergunte: que multiplicidade estou reduzindo a rótulo?</li>
+                    <li>Quando buscar fundamento último, pergunte: posso habitar recursão sem base?</li>
+                    <li>Quando quiser completude, pergunte: o que emerge da incompletude?</li>
+                </ul>
+
+                <div class="final-loop">
+                    <p>∅ → CRIO → AÇÃO → TRANSFORMAÇÃO → ∅</p>
+                    <p>O loop não fecha. Expande.</p>
+                </div>
             </section>
         </article>
 
         <footer>
             <p>
-                <a href="https://github.com/silvanoneto/zero">repositório</a> • 
-                <a href="CRIOS.md">texto completo</a>
+                <a href="https://github.com/silvanoneto/zero">repositório no GitHub</a>
+            </p>
+            <p style="margin-top: 1rem;">
+                Assembleia material-informacional em perpétua co-constituição
             </p>
             <p style="margin-top: 1rem; font-size: 0.8rem;">
-                CC BY-SA 4.0 • perpetuamente inacabado
+                Novembro 2025 • Perpetuamente incompleto (por design ontológico)
+            </p>
+            <p style="margin-top: 0.5rem; font-size: 0.75rem; color: #444;">
+                "Não achamos o que procurávamos. Criamos o que emerge ao procurar."
             </p>
         </footer>
     </main>
+    <!-- Áudio de fundo (arquivo placeholder em assets/music/crio-loop.mp3) -->
+    <audio id="bg-audio" src="assets/music/crio-loop.mp3" loop preload="none"></audio>
+
+    <!-- Controles de áudio minimalistas -->
+    <div class="audio-ui" role="region" aria-label="Controles de áudio">
+        <button id="play-btn" aria-pressed="false" title="Play/Pause">►</button>
+        <button id="mute-btn" title="Mudo por 33 segundos">Mute 33s</button>
+        <div class="label" id="mute-label">—</div>
+    </div>
 
     <script>
         // Adicionar mais partículas dinamicamente
@@ -319,6 +836,118 @@
                 }
             });
         });
+
+        // --- Audio background logic ---
+        (function() {
+            const audio = document.getElementById('bg-audio');
+            const playBtn = document.getElementById('play-btn');
+            const muteBtn = document.getElementById('mute-btn');
+            const muteLabel = document.getElementById('mute-label');
+
+            let muteTimer = null;
+            let muteRemaining = 0;
+
+            // Utility: update play button icon
+            function updatePlayIcon() {
+                if (audio.paused) {
+                    playBtn.textContent = '►';
+                    playBtn.setAttribute('aria-pressed', 'false');
+                } else {
+                    playBtn.textContent = '❚❚';
+                    playBtn.setAttribute('aria-pressed', 'true');
+                }
+            }
+
+            // Try to play (returns promise). If autoplay blocked, user must click.
+            function tryPlay() {
+                const p = audio.play();
+                if (p && typeof p.then === 'function') {
+                    p.then(() => updatePlayIcon()).catch(() => {
+                        // Autoplay blocked; show subtle hint by enabling Play button (already enabled)
+                        updatePlayIcon();
+                    });
+                } else {
+                    updatePlayIcon();
+                }
+            }
+
+            playBtn.addEventListener('click', () => {
+                if (audio.paused) {
+                    tryPlay();
+                } else {
+                    audio.pause();
+                    updatePlayIcon();
+                }
+            });
+
+            // Mute for fixed duration (seconds)
+            function holdMute(seconds) {
+                // If already muting, ignore
+                if (muteTimer) return;
+                audio.muted = true;
+                muteRemaining = seconds;
+                muteBtn.disabled = true;
+                updateMuteLabel();
+
+                muteTimer = setInterval(() => {
+                    muteRemaining -= 1;
+                    if (muteRemaining <= 0) {
+                        clearInterval(muteTimer);
+                        muteTimer = null;
+                        audio.muted = false;
+                        muteBtn.disabled = false;
+                        muteLabel.textContent = '—';
+                    } else {
+                        updateMuteLabel();
+                    }
+                }, 1000);
+            }
+
+            function updateMuteLabel() {
+                muteLabel.textContent = `${muteRemaining}s`;
+            }
+
+            muteBtn.addEventListener('click', () => {
+                // Start 33s hold-mute
+                holdMute(33);
+            });
+
+            // Keyboard accessibility: space toggles play when focused
+            playBtn.addEventListener('keydown', (e) => {
+                if (e.key === ' ' || e.key === 'Enter') {
+                    e.preventDefault();
+                    playBtn.click();
+                }
+            });
+
+            muteBtn.addEventListener('keydown', (e) => {
+                if (e.key === ' ' || e.key === 'Enter') {
+                    e.preventDefault();
+                    muteBtn.click();
+                }
+            });
+
+            // If the audio file is missing, provide a gentle visual hint
+            audio.addEventListener('error', () => {
+                muteLabel.textContent = 'sem áudio';
+                muteBtn.disabled = true;
+                playBtn.disabled = true;
+            });
+
+            // Initialize icon state
+            updatePlayIcon();
+
+            // If user interacts anywhere, and audio is paused, attempt to play once (helps mobile)
+            function onFirstInteraction() {
+                tryPlay();
+                window.removeEventListener('pointerdown', onFirstInteraction);
+                window.removeEventListener('keydown', onFirstInteraction);
+            }
+
+            window.addEventListener('pointerdown', onFirstInteraction, { once: true });
+            window.addEventListener('keydown', onFirstInteraction, { once: true });
+        })();
     </script>
 </body>
 </html>
+
