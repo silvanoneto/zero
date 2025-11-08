@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-# Crawl-delay (optional, helps prevent overloading server)
-Crawl-delay: 10

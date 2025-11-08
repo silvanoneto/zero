@@ -1,3 +1,0 @@
-module.exports=[881779,a=>{"use strict";var b=a.i(187924),c=a.i(572131);function d(){return(0,c.useEffect)(()=>{window.location.href="/book/index.html"},[]),(0,b.jsx)("div",{className:"min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900",children:(0,b.jsxs)("div",{className:"text-center",children:[(0,b.jsx)("div",{className:"animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto mb-4"}),(0,b.jsx)("p",{className:"text-gray-600 dark:text-gray-400",children:"Carregando o livro..."})]})})}a.s(["default",()=>d])}];
-
-//# sourceMappingURL=src_app_book_page_tsx_27775d69._.js.map
