@@ -815,8 +815,8 @@
 
     <!-- Controles de áudio minimalistas -->
     <div class="audio-ui" role="region" aria-label="Controles de áudio">
-        <button id="mute-btn" title="Mudo por 33 segundos">Mute 33s</button>
-        <div class="label" id="mute-label">—</div>
+        <button id="mute-btn" title="Mudo por 33 segundos">Mute</button>
+        <div class="label" id="mute-label" style="display: none;">—</div>
     </div>
 
     <script>
@@ -873,7 +873,10 @@
                 if (muteTimer) return;
                 audio.muted = true;
                 muteRemaining = seconds;
-                muteBtn.disabled = true;
+                
+                // Toggle visibility: hide button, show counter
+                muteBtn.style.display = 'none';
+                muteLabel.style.display = 'block';
                 updateMuteLabel();
 
                 muteTimer = setInterval(() => {
@@ -882,8 +885,10 @@
                         clearInterval(muteTimer);
                         muteTimer = null;
                         audio.muted = false;
-                        muteBtn.disabled = false;
-                        muteLabel.textContent = '—';
+                        
+                        // Toggle visibility: show button, hide counter
+                        muteBtn.style.display = 'block';
+                        muteLabel.style.display = 'none';
                     } else {
                         updateMuteLabel();
                     }
@@ -921,7 +926,8 @@
             // If the audio file is missing, provide a gentle visual hint
             audio.addEventListener('error', () => {
                 muteLabel.textContent = 'sem áudio';
-                muteBtn.disabled = true;
+                muteLabel.style.display = 'block';
+                muteBtn.style.display = 'none';
             });
 
             // Auto-play after 33 seconds from page load
