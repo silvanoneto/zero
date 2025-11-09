@@ -305,13 +305,14 @@ async function init() {
     // Event listeners
     window.addEventListener('resize', onWindowResize);
     window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('touchmove', onTouchMove, { passive: true });
     window.addEventListener('click', onClick);
     window.addEventListener('keydown', onKeyDown);
 
     // Event listeners para busca
     searchInput.addEventListener('input', handleSearch);
 
-    // Controles de câmera (arrastar)
+    // Controles de câmera (arrastar) - Mouse
     renderer.domElement.addEventListener('mousedown', (e) => {
         isDragging = true;
         hasDragged = false;
@@ -361,6 +362,110 @@ async function init() {
             }, 3000);
         }
     });
+
+    // Controles de câmera (arrastar) - Touch para mobile
+    renderer.domElement.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+            isDragging = true;
+            hasDragged = false;
+            const touch = e.touches[0];
+            mouseDownPosition = { x: touch.clientX, y: touch.clientY };
+            previousMousePosition = { x: touch.clientX, y: touch.clientY };
+            userInteracting = true;
+            document.body.classList.add('grabbing');
+            
+            // Atualizar raycasting para detectar o nó tocado
+            mouse.x = (touch.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(touch.clientY / window.innerHeight) * 2 + 1;
+            performRaycast();
+            
+            console.log('touchstart - posição:', mouseDownPosition, 'hoveredNode:', hoveredNode);
+            
+            // Pausar auto-rotação temporariamente
+            if (autoRotateTimeout) clearTimeout(autoRotateTimeout);
+        }
+    }, { passive: true });
+
+    renderer.domElement.addEventListener('touchmove', (e) => {
+        if (isDragging && e.touches.length === 1) {
+            const touch = e.touches[0];
+            
+            // Verificar se ultrapassou o threshold de arrasto
+            const totalDelta = Math.sqrt(
+                Math.pow(touch.clientX - mouseDownPosition.x, 2) + 
+                Math.pow(touch.clientY - mouseDownPosition.y, 2)
+            );
+            
+            if (totalDelta > dragThreshold) {
+                if (!hasDragged) {
+                    console.log('Arrasto touch detectado - delta:', totalDelta);
+                }
+                hasDragged = true;
+                
+                // Só mover a câmera se realmente estiver arrastando
+                const deltaX = touch.clientX - previousMousePosition.x;
+                const deltaY = touch.clientY - previousMousePosition.y;
+                
+                camera.position.x += deltaX * 0.5;
+                camera.position.y -= deltaY * 0.5;
+                camera.lookAt(scene.position);
+            }
+            
+            previousMousePosition = { x: touch.clientX, y: touch.clientY };
+        }
+    }, { passive: true });
+
+    renderer.domElement.addEventListener('touchend', (e) => {
+        if (e.touches.length === 0) {
+            const wasNotDragged = !hasDragged;
+            
+            isDragging = false;
+            document.body.classList.remove('grabbing');
+            
+            // Se foi um tap (não arrasto), processar como clique
+            if (wasNotDragged) {
+                console.log('touchend - processando tap, hoveredNode:', hoveredNode);
+                // Processar o tap imediatamente usando o hoveredNode já detectado no touchstart
+                if (hoveredNode) {
+                    console.log('Focando nó (touch):', hoveredNode.userData.id);
+                    focusOnNode(hoveredNode);
+                } else {
+                    // Clicou no vazio - desmarcar tudo
+                    if (selectedCards.size > 0 || selectedNode) {
+                        nodes.forEach(n => {
+                            n.material.emissiveIntensity = 0.3;
+                            if (n.userData.innerLight) {
+                                n.userData.innerLight.intensity = 0.1;
+                            }
+                            n.scale.setScalar(1);
+                            resetConnectedNodes(n);
+                        });
+                        
+                        selectedNode = null;
+                        resetConnectionFilter();
+                        infoPanel.classList.remove('visible');
+                        
+                        // Retomar animação e rotação automática
+                        cameraLookAtTarget = null;
+                        userInteracting = false;
+                        autoRotate = true;
+                        isAnimating = true;
+                        
+                        showNotification('Seleção removida');
+                    }
+                }
+            }
+            
+            hasDragged = false;
+            
+            // Só retomar auto-rotação se não houver nó selecionado
+            if (autoRotate && !selectedNode && selectedCards.size === 0) {
+                autoRotateTimeout = setTimeout(() => {
+                    userInteracting = false;
+                }, 3000);
+            }
+        }
+    }, { passive: true });
 
     // Zoom com scroll
     renderer.domElement.addEventListener('wheel', (e) => {
@@ -698,12 +803,18 @@ function createConnections() {
             if (sourceNode && targetNode && concept.id < connId) {
                 // Criar linha usando LineSegments (muito mais leve)
                 const isDark = !isLightTheme();
-                const lineOpacity = isDark ? (showAllConnections ? 0.8 : 0.6) : (showAllConnections ? 1.0 : 0.95);
+                // Modo claro: opacidade completa para melhor visibilidade
+                const lineOpacity = isDark ? (showAllConnections ? 0.8 : 0.6) : (showAllConnections ? 1.0 : 1.0);
                 
                 // Cor da linha: mistura das cores dos dois nós conectados
                 const sourceColor = new THREE.Color(sourceNode.userData.originalColor);
                 const targetColor = new THREE.Color(targetNode.userData.originalColor);
                 const lineColor = sourceColor.clone().lerp(targetColor, 0.5); // Média das cores
+                
+                // No modo claro, escurecer ligeiramente a cor para melhor contraste
+                if (!isDark) {
+                    lineColor.multiplyScalar(0.7); // Reduz brilho em 30% no modo claro
+                }
                 
                 const material = new THREE.LineBasicMaterial({
                     color: lineColor,
@@ -764,11 +875,12 @@ function createSphere() {
     const isDark = !isLightTheme();
     
     // Material semi-transparente com wireframe
+    // No modo claro: cor mais escura e opacidade maior para melhor visibilidade
     const material = new THREE.MeshBasicMaterial({
-        color: isDark ? 0x00ff88 : 0x00aa66,
+        color: isDark ? 0x00ff88 : 0x0066aa,
         wireframe: true,
         transparent: true,
-        opacity: 0.15,
+        opacity: isDark ? 0.15 : 0.35,
         side: THREE.DoubleSide
     });
     
@@ -781,7 +893,9 @@ function updateSphereTheme() {
     if (!sphereMesh) return;
     
     const isDark = !isLightTheme();
-    sphereMesh.material.color.setHex(isDark ? 0x00ff88 : 0x00aa66);
+    // Modo claro: cor mais escura e opacidade maior
+    sphereMesh.material.color.setHex(isDark ? 0x00ff88 : 0x0066aa);
+    sphereMesh.material.opacity = isDark ? 0.15 : 0.35;
 }
 
 function toggleSphere() {
@@ -802,13 +916,13 @@ function toggleSphere() {
             // Reduzir opacidade quando esfera está ativa
             const reducedOpacity = isDark ? 
                 (line.userData.isGlow ? 0.3 : 0.4) : 
-                (line.userData.isGlow ? 0.5 : 0.6);
+                (line.userData.isGlow ? 0.6 : 0.7);
             line.material.opacity = reducedOpacity;
         } else {
             // Restaurar opacidade normal
             const normalOpacity = isDark ? 
                 (line.userData.isGlow ? 0.6 : 0.8) : 
-                (line.userData.isGlow ? 0.9 : 1.0);
+                (line.userData.isGlow ? 1.0 : 1.0);
             line.material.opacity = normalOpacity;
         }
     });
@@ -1035,6 +1149,9 @@ function initializeNodeMovement() {
  * Atualiza posições dos nós caminhando sobre as arestas
  */
 function updateNodeMovement(deltaTime) {
+    // Não mover nós se animação estiver pausada
+    if (!isAnimating) return;
+    
     const currentTime = Date.now();
     
     nodeMovement.forEach((movement, nodeId) => {
@@ -1435,8 +1552,8 @@ function updateLines() {
     
     // Calcular opacidade base baseada no tema e showAllConnections
     const isDark = !isLightTheme();
-    // Linhas mais grossas e opacas para melhor visibilidade
-    const baseOpacity = isDark ? (showAllConnections ? 0.8 : 0.6) : (showAllConnections ? 1.0 : 0.95);
+    // Linhas mais grossas e opacas para melhor visibilidade no modo claro
+    const baseOpacity = isDark ? (showAllConnections ? 0.8 : 0.6) : (showAllConnections ? 1.0 : 1.0);
     const activeOpacity = 1.0; // Máxima visibilidade quando ativas
     const activeGlowOpacity = 1.0;
     
@@ -1483,6 +1600,24 @@ function onMouseMove(event) {
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
     mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 
+    performRaycast();
+}
+
+function onTouchMove(event) {
+    // Ignorar eventos se não estiver no modo 3D
+    if (viewMode !== '3d') return;
+    
+    // Apenas processar hover se houver 1 toque e não estiver arrastando
+    if (event.touches.length === 1 && !isDragging) {
+        const touch = event.touches[0];
+        mouse.x = (touch.clientX / window.innerWidth) * 2 - 1;
+        mouse.y = -(touch.clientY / window.innerHeight) * 2 + 1;
+
+        performRaycast();
+    }
+}
+
+function performRaycast() {
     raycaster.setFromCamera(mouse, camera);
     const intersects = raycaster.intersectObjects(nodes);
 
@@ -1921,8 +2056,17 @@ function resetView() {
         selectedNode = null;
     }
     
+    // Limpar seleção de cards e resetar filtros
+    selectedCards.clear();
+    resetConnectionFilter();
+    
     infoPanel.classList.remove('visible');
-    updateStatusIndicator();
+    
+    // Esconder status-indicator ao resetar
+    if (statusIndicator) {
+        statusIndicator.style.opacity = '0';
+    }
+    
     showNotification('Visão resetada');
 }
 
@@ -2383,10 +2527,12 @@ function resetConnectionFilter() {
     activeConnectionFilter = null;
     selectedCards.clear();
     
-    // Reset all nodes to full opacity
+    // Reset all nodes to full opacity and visibility
     nodes.forEach(node => {
+        node.visible = true;
         node.material.opacity = 1.0;
         if (node.userData.label) {
+            node.userData.label.visible = true;
             node.userData.label.material.opacity = 0.9;
         }
     });
@@ -2457,10 +2603,12 @@ function setupLegendListeners() {
                     i.classList.remove('active');
                 });
                 
-                // Restaurar opacidade de todos os nós
+                // Restaurar opacidade e visibilidade de todos os nós
                 nodes.forEach(node => {
+                    node.visible = true;
                     node.material.opacity = BASE_OPACITY;
                     if (node.userData.label) {
+                        node.userData.label.visible = true;
                         node.userData.label.material.opacity = 0.9;
                     }
                 });
@@ -2491,14 +2639,18 @@ function setupLegendListeners() {
                 // Filtrar nós
                 nodes.forEach(node => {
                     if (activeLayerFilters.has(node.userData.layer)) {
+                        // Nó pertence a uma camada ativa - mostrar
+                        node.visible = true;
                         node.material.opacity = SELECTED_OPACITY;
                         if (node.userData.label) {
+                            node.userData.label.visible = true;
                             node.userData.label.material.opacity = 0.9;
                         }
                     } else {
-                        node.material.opacity = DIMMED_OPACITY;
+                        // Nó não pertence a camadas ativas - esconder
+                        node.visible = false;
                         if (node.userData.label) {
-                            node.userData.label.material.opacity = 0.05;
+                            node.userData.label.visible = false;
                         }
                     }
                 });
@@ -2874,6 +3026,9 @@ function highlightCard(card) {
         const filteredConcepts = concepts.filter(c => allConnectedIds.has(c.id));
         renderCards(null, filteredConcepts);
         
+        // Aplicar filtro também no 3D
+        apply3DFilter(allConnectedIds);
+        
         // Re-aplicar highlights aos cards selecionados
         setTimeout(() => {
             selectedCards.forEach(id => {
@@ -2908,6 +3063,9 @@ function highlightCard(card) {
     // Re-renderizar cards com filtro
     renderCards(null, filteredConcepts);
     
+    // Aplicar filtro também no 3D
+    apply3DFilter(allConnectedIds);
+    
     // Re-aplicar highlights após re-render
     setTimeout(() => {
         selectedCards.forEach(id => {
@@ -2927,6 +3085,74 @@ function highlightCard(card) {
     
     const concept = concepts.find(c => c.id === conceptId);
     showNotification(`${selectedCards.size} conceito(s) selecionado(s) - ${filteredConcepts.length} disponíveis`);
+}
+
+/**
+ * Aplica filtro de opacidade nos nós 3D baseado nos IDs filtrados
+ */
+function apply3DFilter(connectedIds) {
+    const isDark = !isLightTheme();
+    
+    // Aplicar filtro de opacidade e visibilidade nos nós
+    nodes.forEach(node => {
+        if (connectedIds.has(node.userData.id)) {
+            // Nó visível
+            node.visible = true;
+            if (node.userData.label) node.userData.label.visible = true;
+            
+            if (selectedCards.has(node.userData.id)) {
+                // Nó selecionado - totalmente opaco
+                node.material.opacity = SELECTED_OPACITY;
+                node.scale.setScalar(1.3);
+                if (node.userData.label) node.userData.label.material.opacity = 0.9;
+            } else {
+                // Nó conectado - opaco
+                node.material.opacity = 1.0;
+                node.scale.setScalar(1.0);
+                if (node.userData.label) node.userData.label.material.opacity = 0.9;
+            }
+        } else {
+            // Nó não conectado - esconder completamente
+            node.visible = false;
+            if (node.userData.label) node.userData.label.visible = false;
+        }
+    });
+    
+    // Aplicar filtro nas linhas
+    lines.forEach(line => {
+        const sourceId = line.userData.source.userData.id;
+        const targetId = line.userData.target.userData.id;
+        
+        if (connectedIds.has(sourceId) && connectedIds.has(targetId)) {
+            line.visible = true;
+            
+            // Destacar linhas conectadas a nós selecionados
+            const sourceSelected = selectedCards.has(sourceId);
+            const targetSelected = selectedCards.has(targetId);
+            
+            if (sourceSelected && targetSelected) {
+                // Ambos os nós selecionados - criar gradiente!
+                const sourceColor = line.userData.source.userData.originalColor;
+                const targetColor = line.userData.target.userData.originalColor;
+                updateLineGradient(line, sourceColor, targetColor);
+                line.material.opacity = 1.0;
+            } else if (sourceSelected || targetSelected) {
+                // Apenas um selecionado - usar cor única
+                const selectedColor = sourceSelected ? 
+                    line.userData.source.userData.originalColor : 
+                    line.userData.target.userData.originalColor;
+                resetLineColor(line, selectedColor);
+                line.material.opacity = 1.0;
+            } else {
+                // Nenhum selecionado - cor original com menor opacidade
+                resetLineColor(line, line.userData.originalColor);
+                const secondaryOpacity = isDark ? 0.5 : 0.85;
+                line.material.opacity = secondaryOpacity;
+            }
+        } else {
+            line.visible = false;
+        }
+    });
 }
 
 // Debounce para otimizar busca em tempo real
@@ -2993,6 +3219,7 @@ function performSearch(value) {
 
 function toggleViewMode() {
     const btnCards = document.getElementById('btn-cards');
+    const title = document.getElementById('title');
     
     if (viewMode === '3d') {
         // Mudar para cards
@@ -3001,8 +3228,9 @@ function toggleViewMode() {
         // Desativar completamente a renderização 3D
         isAnimating = false;
         
-        // Ocultar container 3D
+        // Ocultar container 3D e título
         container.classList.add('hidden');
+        if (title) title.style.display = 'none';
         cardsContainer.classList.add('visible');
         searchContainer.classList.add('visible');
         infoPanel.classList.remove('visible');
@@ -3037,8 +3265,9 @@ function toggleViewMode() {
         // Reativar renderização 3D
         isAnimating = true;
         
-        // Mostrar container 3D
+        // Mostrar container 3D e título
         container.classList.remove('hidden');
+        if (title) title.style.display = '';
         cardsContainer.classList.remove('visible');
         searchContainer.classList.remove('visible');
         

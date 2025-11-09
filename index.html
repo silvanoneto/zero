@@ -61,6 +61,10 @@
     
     <!-- Error handler for marked.js CDN failure -->
     <script>
+        // Expor marked globalmente para o módulo CRIO
+        window.marked = window.marked || {};
+    </script>
+    <script>
         function handleMarkedLoadError() {
             console.error('Failed to load marked.js from CDN');
             document.addEventListener('DOMContentLoaded', () => {
@@ -150,7 +154,11 @@
     <!-- Audio Controls -->
     <div class="audio-ui" role="group" aria-label="Controles de áudio e navegação">
         <button class="nav-toggle" id="nav-toggle" aria-label="Alternar índice de navegação" aria-expanded="false" aria-controls="nav-index">
-            <span aria-hidden="true">☰</span>
+            <span class="hamburger" aria-hidden="true">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </span>
         </button>
         <button class="riz∅ma-button" onclick="window.location.href='riz∅ma.html'" aria-label="Abrir riz∅ma de conceitos">
             <span aria-hidden="true">◈</span>
@@ -160,7 +168,9 @@
         </button>
         <button class="play-button" id="play-btn" aria-label="Reproduzir áudio de fundo">▶</button>
         <button class="mute-button" id="mute-btn" aria-label="Silenciar por 99 segundos e alternar tema">
-            <span id="mute-label" aria-hidden="true">•</span>
+            <span id="mute-label" aria-hidden="true">
+                <span class="theme-icon">☾</span>
+            </span>
             <span id="click-counter" class="click-counter" aria-live="polite"></span>
         </button>
         <span id="audio-status" class="audio-status" aria-live="polite"></span>
@@ -215,7 +225,7 @@
     <!-- Áudio de fundo -->
     <audio id="bg-audio" src="assets/CRIO.mp3" preload="none" aria-label="Áudio de fundo CRIO"></audio>
 
-    <!-- External JavaScript -->
-    <script src="crio.js"></script>
+    <!-- External JavaScript - TypeScript compilado -->
+    <script type="module" src="dist/crio.js"></script>
 </body>
 </html>
