@@ -38,7 +38,7 @@ let relations = []; // Nomes das relações entre conceitos
 // VARIÁVEIS GLOBAIS
 // ============================================================================
 
-let scene, camera, renderer, raycaster, mouse;
+let scene, camera, renderer, raycaster, mouse, controls;
 let nodes = [];
 let lines = [];
 let selectedNode = null;
@@ -87,7 +87,7 @@ const CONNECTED_OPACITY_L1 = 0.9;  // Nível 1 - bem opaco
 const CONNECTED_OPACITY_L2 = 0.85; // Nível 2 - levemente transparente
 const CONNECTED_OPACITY_L3 = 0.8;  // Nível 3 - mais transparente
 const BASE_OPACITY = 0.7;          // Estado base - vidro semi-transparente
-const DIMMED_OPACITY = 0.4;        // Nós distantes - aumentado de 0.2 para 0.4 (mais visível)
+const DIMMED_OPACITY = 0.08;       // Nós distantes - drasticamente reduzido para quase invisível
 
 // ============================================================================
 // SISTEMA DE MOVIMENTO SOBRE A REDE (CAOS)
@@ -97,12 +97,12 @@ const WALK_SPEED = 0.002; // Velocidade base de caminhada (reduzida de 0.005)
 const MAX_VELOCITY = 3.0; // Velocidade máxima absoluta por frame (unidades de distância)
 const PATH_CHANGE_INTERVAL = 3000; // Trocar de direção a cada 3 segundos
 const REPULSION_FORCE = 15; // Força de repulsão entre nós (antigravidade) - reduzido
-const REPULSION_DISTANCE = 40; // Distância mínima antes de aplicar repulsão - reduzido
+const REPULSION_DISTANCE = 50; // Distância mínima antes de aplicar repulsão - aumentado para mais espaço
 
 // LIMITES DE ARESTA (MOLAS ELÁSTICAS)
-const MIN_EDGE_LENGTH = 30; // Distância mínima - evita colisão
-const MAX_EDGE_LENGTH = 200; // Distância máxima - evita emaranhar demais
-const SPRING_STRENGTH = 0.15; // Força da "mola" que puxa/empurra os nós
+const MIN_EDGE_LENGTH = 40; // Distância mínima - aumentada para mais espaço
+const MAX_EDGE_LENGTH = 400; // Distância máxima - dobrada para permitir arestas mais longas que percorrem o globo
+const SPRING_STRENGTH = 0.08; // Força da "mola" reduzida para maior elasticidade
 let lastPathChange = 0;
 let repulsionCounter = 0; // Contador para aplicar repulsão com menos frequência
 
@@ -267,6 +267,39 @@ async function init() {
     renderer.toneMappingExposure = 2.2; // Exposição alta para cores vibrantes
     document.getElementById('container').appendChild(renderer.domElement);
 
+    // OrbitControls para navegação melhorada
+    controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true; // Suavização do movimento
+    controls.dampingFactor = 0.05;
+    controls.rotateSpeed = 0.7; // Velocidade de rotação
+    controls.zoomSpeed = 1.2; // Velocidade de zoom
+    controls.panSpeed = 0.8; // Velocidade de pan
+    controls.minDistance = 100; // Distância mínima de zoom
+    controls.maxDistance = 1500; // Distância máxima de zoom
+    controls.enablePan = true; // Permitir pan (arrastar com botão direito ou dois dedos)
+    controls.screenSpacePanning = true; // Pan no espaço da tela (mais intuitivo)
+    controls.keyPanSpeed = 20; // Velocidade de pan com teclado
+    controls.keys = {
+        LEFT: 'ArrowLeft',
+        UP: 'ArrowUp', 
+        RIGHT: 'ArrowRight',
+        BOTTOM: 'ArrowDown'
+    };
+    
+    // Listener para pausar auto-rotação durante interação
+    controls.addEventListener('start', () => {
+        userInteracting = true;
+        if (autoRotateTimeout) clearTimeout(autoRotateTimeout);
+    });
+    
+    controls.addEventListener('end', () => {
+        if (autoRotate && !selectedNode && selectedCards.size === 0) {
+            autoRotateTimeout = setTimeout(() => {
+                userInteracting = false;
+            }, 2000);
+        }
+    });
+
     // Raycaster para detecção de cliques
     raycaster = new THREE.Raycaster();
     mouse = new THREE.Vector2();
@@ -312,106 +345,57 @@ async function init() {
     // Event listeners para busca
     searchInput.addEventListener('input', handleSearch);
 
-    // Controles de câmera (arrastar) - Mouse
+    // Controles de câmera agora gerenciados pelo OrbitControls
+    // Mantemos apenas o tracking de drag para distinguir clique de arrasto
     renderer.domElement.addEventListener('mousedown', (e) => {
-        isDragging = true;
         hasDragged = false;
         mouseDownPosition = { x: e.clientX, y: e.clientY };
-        userInteracting = true;
-        document.body.classList.add('grabbing');
-        console.log('mousedown - posição:', mouseDownPosition);
-        
-        // Pausar auto-rotação temporariamente
-        if (autoRotateTimeout) clearTimeout(autoRotateTimeout);
     });
 
     renderer.domElement.addEventListener('mousemove', (e) => {
-        if (isDragging) {
-            // Verificar se ultrapassou o threshold de arrasto
-            const totalDelta = Math.sqrt(
-                Math.pow(e.clientX - mouseDownPosition.x, 2) + 
-                Math.pow(e.clientY - mouseDownPosition.y, 2)
-            );
-            
-            if (totalDelta > dragThreshold) {
-                if (!hasDragged) {
-                    console.log('Arrasto detectado - delta:', totalDelta);
-                }
-                hasDragged = true;
-                
-                // Só mover a câmera se realmente estiver arrastando
-                const deltaX = e.clientX - previousMousePosition.x;
-                const deltaY = e.clientY - previousMousePosition.y;
-                
-                camera.position.x += deltaX * 0.5;
-                camera.position.y -= deltaY * 0.5;
-                camera.lookAt(scene.position);
-            }
+        const totalDelta = Math.sqrt(
+            Math.pow(e.clientX - mouseDownPosition.x, 2) + 
+            Math.pow(e.clientY - mouseDownPosition.y, 2)
+        );
+        
+        if (totalDelta > dragThreshold) {
+            hasDragged = true;
         }
-        previousMousePosition = { x: e.clientX, y: e.clientY };
     });
 
     renderer.domElement.addEventListener('mouseup', () => {
-        isDragging = false;
-        document.body.classList.remove('grabbing');
-        
-        // Só retomar auto-rotação se não houver nó selecionado
-        if (autoRotate && !selectedNode && selectedCards.size === 0) {
-            autoRotateTimeout = setTimeout(() => {
-                userInteracting = false;
-            }, 3000);
-        }
+        // Resetar estado após soltar o mouse
+        setTimeout(() => {
+            hasDragged = false;
+        }, 10);
     });
 
-    // Controles de câmera (arrastar) - Touch para mobile
+    // Controles touch - simplificados, OrbitControls cuida da navegação
     renderer.domElement.addEventListener('touchstart', (e) => {
         if (e.touches.length === 1) {
-            isDragging = true;
             hasDragged = false;
             const touch = e.touches[0];
             mouseDownPosition = { x: touch.clientX, y: touch.clientY };
-            previousMousePosition = { x: touch.clientX, y: touch.clientY };
-            userInteracting = true;
-            document.body.classList.add('grabbing');
             
             // Atualizar raycasting para detectar o nó tocado
             mouse.x = (touch.clientX / window.innerWidth) * 2 - 1;
             mouse.y = -(touch.clientY / window.innerHeight) * 2 + 1;
             performRaycast();
-            
-            console.log('touchstart - posição:', mouseDownPosition, 'hoveredNode:', hoveredNode);
-            
-            // Pausar auto-rotação temporariamente
-            if (autoRotateTimeout) clearTimeout(autoRotateTimeout);
         }
     }, { passive: true });
 
     renderer.domElement.addEventListener('touchmove', (e) => {
-        if (isDragging && e.touches.length === 1) {
+        if (e.touches.length === 1) {
             const touch = e.touches[0];
             
-            // Verificar se ultrapassou o threshold de arrasto
             const totalDelta = Math.sqrt(
                 Math.pow(touch.clientX - mouseDownPosition.x, 2) + 
                 Math.pow(touch.clientY - mouseDownPosition.y, 2)
             );
             
             if (totalDelta > dragThreshold) {
-                if (!hasDragged) {
-                    console.log('Arrasto touch detectado - delta:', totalDelta);
-                }
                 hasDragged = true;
-                
-                // Só mover a câmera se realmente estiver arrastando
-                const deltaX = touch.clientX - previousMousePosition.x;
-                const deltaY = touch.clientY - previousMousePosition.y;
-                
-                camera.position.x += deltaX * 0.5;
-                camera.position.y -= deltaY * 0.5;
-                camera.lookAt(scene.position);
             }
-            
-            previousMousePosition = { x: touch.clientX, y: touch.clientY };
         }
     }, { passive: true });
 
@@ -419,15 +403,10 @@ async function init() {
         if (e.touches.length === 0) {
             const wasNotDragged = !hasDragged;
             
-            isDragging = false;
-            document.body.classList.remove('grabbing');
-            
             // Se foi um tap (não arrasto), processar como clique
             if (wasNotDragged) {
-                console.log('touchend - processando tap, hoveredNode:', hoveredNode);
                 // Processar o tap imediatamente usando o hoveredNode já detectado no touchstart
                 if (hoveredNode) {
-                    console.log('Focando nó (touch):', hoveredNode.userData.id);
                     focusOnNode(hoveredNode);
                 } else {
                     // Clicou no vazio - desmarcar tudo
@@ -457,139 +436,20 @@ async function init() {
             }
             
             hasDragged = false;
-            
-            // Só retomar auto-rotação se não houver nó selecionado
-            if (autoRotate && !selectedNode && selectedCards.size === 0) {
-                autoRotateTimeout = setTimeout(() => {
-                    userInteracting = false;
-                }, 3000);
-            }
         }
     }, { passive: true });
 
-    // Zoom com scroll
+    // Zoom com scroll - OrbitControls já gerencia, mas mantemos lógica de auto-rotação
     renderer.domElement.addEventListener('wheel', (e) => {
-        e.preventDefault();
-        const zoomSpeed = e.deltaY * 0.5;
-        camera.position.z += zoomSpeed;
-        camera.position.z = Math.max(200, Math.min(1000, camera.position.z));
-        
-        // Pausar rotação durante zoom (só se não houver nó selecionado)
-        if (autoRotate && Math.abs(zoomSpeed) > 1 && !selectedNode && selectedCards.size === 0) {
+        // OrbitControls já gerencia o zoom, apenas pausamos auto-rotação
+        if (autoRotate && !selectedNode && selectedCards.size === 0) {
             userInteracting = true;
             if (autoRotateTimeout) clearTimeout(autoRotateTimeout);
             autoRotateTimeout = setTimeout(() => {
                 userInteracting = false;
             }, 2000);
         }
-    }, { passive: false });
-    
-    // Suporte para toque em dispositivos móveis
-    let touchStartDistance = 0;
-    let touchStartCameraZ = 0;
-    let touchStartPosition = { x: 0, y: 0 };
-    let hasTouchDragged = false;
-    
-    renderer.domElement.addEventListener('touchstart', (e) => {
-        if (e.touches.length === 2) {
-            // Pinch to zoom
-            const dx = e.touches[0].clientX - e.touches[1].clientX;
-            const dy = e.touches[0].clientY - e.touches[1].clientY;
-            touchStartDistance = Math.sqrt(dx * dx + dy * dy);
-            touchStartCameraZ = camera.position.z;
-        } else if (e.touches.length === 1) {
-            // Single touch = drag
-            touchStartPosition = {
-                x: e.touches[0].clientX,
-                y: e.touches[0].clientY
-            };
-            previousMousePosition = {
-                x: e.touches[0].clientX,
-                y: e.touches[0].clientY
-            };
-            isDragging = true;
-            hasTouchDragged = false;
-            userInteracting = true;
-        }
-    });
-    
-    renderer.domElement.addEventListener('touchmove', (e) => {
-        e.preventDefault();
-        
-        if (e.touches.length === 2) {
-            // Pinch zoom
-            const dx = e.touches[0].clientX - e.touches[1].clientX;
-            const dy = e.touches[0].clientY - e.touches[1].clientY;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            const scale = distance / touchStartDistance;
-            camera.position.z = touchStartCameraZ / scale;
-            camera.position.z = Math.max(200, Math.min(1000, camera.position.z));
-        } else if (e.touches.length === 1 && isDragging) {
-            // Drag
-            const deltaX = e.touches[0].clientX - previousMousePosition.x;
-            const deltaY = e.touches[0].clientY - previousMousePosition.y;
-            
-            // Verificar se ultrapassou o threshold de arrasto
-            const totalDelta = Math.sqrt(
-                Math.pow(e.touches[0].clientX - touchStartPosition.x, 2) + 
-                Math.pow(e.touches[0].clientY - touchStartPosition.y, 2)
-            );
-            
-            if (totalDelta > dragThreshold) {
-                hasTouchDragged = true;
-            }
-            
-            camera.position.x += deltaX * 0.5;
-            camera.position.y -= deltaY * 0.5;
-            camera.lookAt(scene.position);
-            
-            previousMousePosition = {
-                x: e.touches[0].clientX,
-                y: e.touches[0].clientY
-            };
-        }
-    }, { passive: false });
-    
-    renderer.domElement.addEventListener('touchend', (e) => {
-        isDragging = false;
-        
-        // Se foi um toque único sem arrasto, simular clique
-        if (e.changedTouches.length === 1 && !hasTouchDragged) {
-            // Criar evento de clique sintético para touch
-            const touch = e.changedTouches[0];
-            mouse.x = (touch.clientX / window.innerWidth) * 2 - 1;
-            mouse.y = -(touch.clientY / window.innerHeight) * 2 + 1;
-            
-            raycaster.setFromCamera(mouse, camera);
-            const intersects = raycaster.intersectObjects(nodes);
-            
-            if (intersects.length > 0) {
-                focusOnNode(intersects[0].object);
-            } else {
-                // Toque no vazio - desselecionar
-                if (selectedCards.size > 0 || selectedNode) {
-                    nodes.forEach(n => {
-                        n.material.emissiveIntensity = 0.3;
-                        n.scale.setScalar(1);
-                        resetConnectedNodes(n);
-                    });
-                    
-                    selectedNode = null;
-                    resetConnectionFilter();
-                    infoPanel.classList.remove('visible');
-                }
-            }
-        }
-        
-        hasTouchDragged = false;
-        
-        // Só retomar auto-rotação se não houver nó selecionado
-        if (autoRotate && !selectedNode && selectedCards.size === 0) {
-            autoRotateTimeout = setTimeout(() => {
-                userInteracting = false;
-            }, 3000);
-        }
-    });
+    }, { passive: true });
 
     // Criar cards
     renderCards();
@@ -1417,6 +1277,11 @@ function resetLineColor(line, color) {
 
 function animate() {
     requestAnimationFrame(animate);
+    
+    // Atualizar OrbitControls
+    if (controls) {
+        controls.update();
+    }
 
     if (isAnimating) {
         const currentTime = Date.now();

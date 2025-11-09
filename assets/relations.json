@@ -7384,5 +7384,1223 @@
     "to": "multiespécies",
     "name": "flui em",
     "description": "Vida flui em Multiespécies"
+  },
+  {
+    "from": "sunyata",
+    "to": "madhyamaka",
+    "name": "fundamenta-se em",
+    "description": "A vacuidade encontra sua formulação filosófica no Madhyamaka"
+  },
+  {
+    "from": "madhyamaka",
+    "to": "nagarjuna",
+    "name": "emerge de",
+    "description": "A escola Madhyamaka emerge dos ensinamentos de Nagarjuna"
+  },
+  {
+    "from": "nagarjuna",
+    "to": "anti-fundacionalismo",
+    "name": "propõe",
+    "description": "Nagarjuna propõe um anti-fundacionalismo radical"
+  },
+  {
+    "from": "anti-fundacionalismo",
+    "to": "recursao",
+    "name": "dialoga com",
+    "description": "Anti-fundacionalismo dialoga com recursão sem fundamento"
+  },
+  {
+    "from": "budismo",
+    "to": "sunyata",
+    "name": "ensina",
+    "description": "Budismo ensina a vacuidade como natureza da realidade"
+  },
+  {
+    "from": "budismo",
+    "to": "anatman",
+    "name": "revela",
+    "description": "Budismo revela a inexistência de um eu permanente"
+  },
+  {
+    "from": "budismo",
+    "to": "pratityasamutpada",
+    "name": "explica",
+    "description": "Budismo explica a origem dependente de todos os fenômenos"
+  },
+  {
+    "from": "vazio",
+    "to": "potencial",
+    "name": "é pura",
+    "description": "O vazio é pura potencialidade não-manifesta"
+  },
+  {
+    "from": "vazio",
+    "to": "virtualidade",
+    "name": "contém",
+    "description": "O vazio contém virtualidade infinita"
+  },
+  {
+    "from": "virtualidade",
+    "to": "devir",
+    "name": "atualiza-se em",
+    "description": "A virtualidade se atualiza no devir"
+  },
+  {
+    "from": "multiplicidade",
+    "to": "identidade",
+    "name": "dissolve",
+    "description": "Multiplicidade dissolve identidades fixas"
+  },
+  {
+    "from": "identidade",
+    "to": "performatividade",
+    "name": "produz-se por",
+    "description": "Identidade se produz por performances reiteradas"
+  },
+  {
+    "from": "processo",
+    "to": "substância",
+    "name": "substitui",
+    "description": "Processo substitui a metafísica da substância"
+  },
+  {
+    "from": "processo",
+    "to": "fluxo",
+    "name": "é",
+    "description": "Processo é fluxo constante de ocasiões"
+  },
+  {
+    "from": "ocasioes",
+    "to": "evento",
+    "name": "precipita-se em",
+    "description": "Ocasiões de experiência precipitam-se em eventos"
+  },
+  {
+    "from": "devir",
+    "to": "identidade",
+    "name": "desestabiliza",
+    "description": "Devir desestabiliza identidades essencialistas"
+  },
+  {
+    "from": "devir",
+    "to": "transformação",
+    "name": "é",
+    "description": "Devir é transformação contínua"
+  },
+  {
+    "from": "intracao",
+    "to": "realismo agencial",
+    "name": "fundamenta",
+    "description": "Intra-ação fundamenta o realismo agencial de Barad"
+  },
+  {
+    "from": "realismo agencial",
+    "to": "objetividade",
+    "name": "reconfigura",
+    "description": "Realismo agencial reconfigura a objetividade científica"
+  },
+  {
+    "from": "intracao",
+    "to": "emaranhamento",
+    "name": "produz",
+    "description": "Intra-ação produz emaranhamento quântico e ontológico"
+  },
+  {
+    "from": "emaranhamento",
+    "to": "não-localidade",
+    "name": "manifesta",
+    "description": "Emaranhamento manifesta não-localidade"
+  },
+  {
+    "from": "recursao",
+    "to": "incompletude",
+    "name": "encontra",
+    "description": "Recursão encontra seus limites na incompletude de Gödel"
+  },
+  {
+    "from": "incompletude",
+    "to": "limite",
+    "name": "demonstra",
+    "description": "Incompletude demonstra limites intrínsecos da formalização"
+  },
+  {
+    "from": "recursao",
+    "to": "loop",
+    "name": "gera",
+    "description": "Recursão gera loops autorreferenciais"
+  },
+  {
+    "from": "loop",
+    "to": "autopoiese",
+    "name": "possibilita",
+    "description": "Loops autorreferenciais possibilitam autopoiese"
+  },
+  {
+    "from": "conhecimento",
+    "to": "epistemicídio",
+    "name": "resiste a",
+    "description": "Relacionalismo epistêmico resiste ao epistemicídio colonial"
+  },
+  {
+    "from": "epistemicídio",
+    "to": "colonialismo",
+    "name": "é arma de",
+    "description": "Epistemicídio é arma do colonialismo"
+  },
+  {
+    "from": "conhecimento",
+    "to": "política ontológica",
+    "name": "pratica",
+    "description": "Conhecimento pratica política ontológica"
+  },
+  {
+    "from": "política ontológica",
+    "to": "ontologia",
+    "name": "performa",
+    "description": "Política ontológica performa mundos"
+  },
+  {
+    "from": "tempo",
+    "to": "duração",
+    "name": "experimenta-se como",
+    "description": "Tempo se experimenta como duração bergsoniana"
+  },
+  {
+    "from": "duração",
+    "to": "processo",
+    "name": "flui como",
+    "description": "Duração flui como processo contínuo"
+  },
+  {
+    "from": "tempo",
+    "to": "estratostempo",
+    "name": "sedimenta-se em",
+    "description": "Tempo se sedimenta em estratos de temporalidade"
+  },
+  {
+    "from": "limite",
+    "to": "finitude",
+    "name": "revela",
+    "description": "Limite revela nossa finitude constitutiva"
+  },
+  {
+    "from": "finitude",
+    "to": "vulnerabilidade",
+    "name": "fundamenta",
+    "description": "Finitude fundamenta vulnerabilidade ontológica"
+  },
+  {
+    "from": "limite",
+    "to": "tecnologiaconvivial",
+    "name": "orienta",
+    "description": "Limite orienta tecnologias conviviais de Illich"
+  },
+  {
+    "from": "agencia",
+    "to": "actantes",
+    "name": "distribui-se entre",
+    "description": "Agência se distribui entre actantes humanos e não-humanos"
+  },
+  {
+    "from": "actantes",
+    "to": "ator-rede",
+    "name": "compõem",
+    "description": "Actantes compõem redes de ator-rede"
+  },
+  {
+    "from": "ator-rede",
+    "to": "redes",
+    "name": "constitui",
+    "description": "Teoria ator-rede constitui ontologia de redes"
+  },
+  {
+    "from": "agencia",
+    "to": "afeto",
+    "name": "modula-se por",
+    "description": "Agência se modula por afetos spinozistas"
+  },
+  {
+    "from": "afeto",
+    "to": "composicao",
+    "name": "possibilita",
+    "description": "Afeto possibilita composições potencializadoras"
+  },
+  {
+    "from": "sujeito",
+    "to": "subjetivação",
+    "name": "emerge por",
+    "description": "Sujeito emerge por processos de subjetivação"
+  },
+  {
+    "from": "subjetivação",
+    "to": "poder",
+    "name": "efetua-se por",
+    "description": "Subjetivação se efetua por relações de poder"
+  },
+  {
+    "from": "performatividade",
+    "to": "gênero",
+    "name": "constitui",
+    "description": "Performatividade constitui gênero como processo"
+  },
+  {
+    "from": "gênero",
+    "to": "identidade",
+    "name": "problematiza",
+    "description": "Gênero problematiza identidades essenciais"
+  },
+  {
+    "from": "evento",
+    "to": "fidelidade",
+    "name": "demanda",
+    "description": "Evento demanda fidelidade do sujeito"
+  },
+  {
+    "from": "fidelidade",
+    "to": "verdade",
+    "name": "produz",
+    "description": "Fidelidade ao evento produz verdade"
+  },
+  {
+    "from": "evento",
+    "to": "ressurgencia",
+    "name": "catalisa",
+    "description": "Evento catalisa ressurgência indígena"
+  },
+  {
+    "from": "vulnerabilidade",
+    "to": "precariedade",
+    "name": "intensifica-se em",
+    "description": "Vulnerabilidade se intensifica em precariedade"
+  },
+  {
+    "from": "precariedade",
+    "to": "despossessao",
+    "name": "efetua-se por",
+    "description": "Precariedade se efetua por despossessão"
+  },
+  {
+    "from": "precariedade",
+    "to": "responsabilidade",
+    "name": "demanda",
+    "description": "Precariedade demanda responsabilidade relacional"
+  },
+  {
+    "from": "responsabilidade",
+    "to": "cuidado",
+    "name": "manifesta-se como",
+    "description": "Responsabilidade se manifesta como ética do cuidado"
+  },
+  {
+    "from": "normatividade",
+    "to": "pluralismo",
+    "name": "afirma",
+    "description": "Normatividade relacional afirma pluralismo epistêmico"
+  },
+  {
+    "from": "pluralismo",
+    "to": "conhecimento",
+    "name": "multiplica",
+    "description": "Pluralismo multiplica modos de conhecer"
+  },
+  {
+    "from": "ubuntu",
+    "to": "filosofia africana",
+    "name": "expressa",
+    "description": "Ubuntu expressa filosofia africana relacional"
+  },
+  {
+    "from": "filosofia africana",
+    "to": "ontologia",
+    "name": "contribui para",
+    "description": "Filosofia africana contribui para ontologia relacional"
+  },
+  {
+    "from": "ubuntu",
+    "to": "intersubjetividade",
+    "name": "fundamenta-se em",
+    "description": "Ubuntu se fundamenta em intersubjetividade constitutiva"
+  },
+  {
+    "from": "intersubjetividade",
+    "to": "transindividual",
+    "name": "converge com",
+    "description": "Intersubjetividade converge com o transindividual"
+  },
+  {
+    "from": "indigena",
+    "to": "descolonização",
+    "name": "pratica",
+    "description": "Pensamento indígena pratica descolonização epistêmica"
+  },
+  {
+    "from": "descolonização",
+    "to": "epistemicídio",
+    "name": "resiste a",
+    "description": "Descolonização resiste ao epistemicídio"
+  },
+  {
+    "from": "indigena",
+    "to": "cosmopolitica",
+    "name": "pratica",
+    "description": "Pensamento indígena pratica cosmopolítica"
+  },
+  {
+    "from": "placethought",
+    "to": "terra",
+    "name": "pensa através de",
+    "description": "Place-thought pensa através da terra"
+  },
+  {
+    "from": "terra",
+    "to": "personalidade jurídica",
+    "name": "adquire",
+    "description": "Terra adquire personalidade jurídica em novas legislações"
+  },
+  {
+    "from": "personalidade jurídica",
+    "to": "direitos da natureza",
+    "name": "efetiva",
+    "description": "Personalidade jurídica efetiva direitos da natureza"
+  },
+  {
+    "from": "groundednormativity",
+    "to": "terra",
+    "name": "emerge da",
+    "description": "Normatividade enraizada emerge da terra"
+  },
+  {
+    "from": "groundednormativity",
+    "to": "autonomia",
+    "name": "afirma",
+    "description": "Grounded normativity afirma autonomia indígena"
+  },
+  {
+    "from": "autonomia",
+    "to": "autogestão",
+    "name": "pratica-se como",
+    "description": "Autonomia se pratica como autogestão"
+  },
+  {
+    "from": "ressurgencia",
+    "to": "transformação",
+    "name": "efetua",
+    "description": "Ressurgência efetua transformação social"
+  },
+  {
+    "from": "ressurgencia",
+    "to": "descolonização",
+    "name": "realiza",
+    "description": "Ressurgência realiza descolonização prática"
+  },
+  {
+    "from": "whanaungatanga",
+    "to": "whakapapa",
+    "name": "fundamenta-se em",
+    "description": "Whanaungatanga se fundamenta em whakapapa genealógico"
+  },
+  {
+    "from": "whakapapa",
+    "to": "ancestralidade",
+    "name": "traça",
+    "description": "Whakapapa traça linhas de ancestralidade"
+  },
+  {
+    "from": "whakapapa",
+    "to": "conhecimento",
+    "name": "estrutura",
+    "description": "Whakapapa estrutura conhecimento como genealogia"
+  },
+  {
+    "from": "reciprocidade",
+    "to": "economia",
+    "name": "fundamenta",
+    "description": "Reciprocidade fundamenta economias não-capitalistas"
+  },
+  {
+    "from": "reciprocidade",
+    "to": "dádiva",
+    "name": "circula como",
+    "description": "Reciprocidade circula como dádiva"
+  },
+  {
+    "from": "terra",
+    "to": "Pachamama",
+    "name": "é honrada como",
+    "description": "Terra é honrada como Pachamama"
+  },
+  {
+    "from": "Pachamama",
+    "to": "buen vivir",
+    "name": "orienta",
+    "description": "Pachamama orienta o buen vivir andino"
+  },
+  {
+    "from": "buen vivir",
+    "to": "decrescimento",
+    "name": "converge com",
+    "description": "Buen vivir converge com decrescimento"
+  },
+  {
+    "from": "terra",
+    "to": "ecologia",
+    "name": "constitui",
+    "description": "Terra constitui sistemas ecológicos"
+  },
+  {
+    "from": "ecologia",
+    "to": "biodiversidade",
+    "name": "sustenta",
+    "description": "Ecologia sustenta biodiversidade"
+  },
+  {
+    "from": "biodiversidade",
+    "to": "multiespécies",
+    "name": "compõe-se de",
+    "description": "Biodiversidade se compõe de relações multiespécies"
+  },
+  {
+    "from": "commons",
+    "to": "governança",
+    "name": "requer",
+    "description": "Commons requerem governança distribuída"
+  },
+  {
+    "from": "governança",
+    "to": "assembleia",
+    "name": "efetua-se em",
+    "description": "Governança se efetua em assembleias"
+  },
+  {
+    "from": "commons",
+    "to": "propriedade",
+    "name": "transcende",
+    "description": "Commons transcendem propriedade privada e estatal"
+  },
+  {
+    "from": "commons",
+    "to": "compartilhamento",
+    "name": "pratica",
+    "description": "Commons praticam compartilhamento de recursos"
+  },
+  {
+    "from": "cosmopolitica",
+    "to": "não-humanos",
+    "name": "inclui",
+    "description": "Cosmopolítica inclui agência de não-humanos"
+  },
+  {
+    "from": "não-humanos",
+    "to": "actantes",
+    "name": "atuam como",
+    "description": "Não-humanos atuam como actantes"
+  },
+  {
+    "from": "cosmopolitica",
+    "to": "democracia",
+    "name": "expande",
+    "description": "Cosmopolítica expande democracia além do humano"
+  },
+  {
+    "from": "democracia",
+    "to": "assembleia",
+    "name": "pratica-se em",
+    "description": "Democracia se pratica em assembleias"
+  },
+  {
+    "from": "decrescimento",
+    "to": "economia ecológica",
+    "name": "fundamenta-se em",
+    "description": "Decrescimento se fundamenta em economia ecológica"
+  },
+  {
+    "from": "economia ecológica",
+    "to": "limite",
+    "name": "reconhece",
+    "description": "Economia ecológica reconhece limites planetários"
+  },
+  {
+    "from": "decrescimento",
+    "to": "sustentabilidade",
+    "name": "busca",
+    "description": "Decrescimento busca sustentabilidade real"
+  },
+  {
+    "from": "sustentabilidade",
+    "to": "terra",
+    "name": "cuida da",
+    "description": "Sustentabilidade cuida da terra"
+  },
+  {
+    "from": "commons",
+    "to": "riz∅ma",
+    "name": "organizam-se como",
+    "description": "Commons se organizam rizomaticamente"
+  },
+  {
+    "from": "riz∅ma",
+    "to": "redes",
+    "name": "constitui",
+    "description": "Rizoma constitui redes descentralizadas"
+  },
+  {
+    "from": "riz∅ma",
+    "to": "heterarquia",
+    "name": "opera por",
+    "description": "Rizoma opera por heterarquia, não hierarquia"
+  },
+  {
+    "from": "heterarquia",
+    "to": "governança",
+    "name": "estrutura",
+    "description": "Heterarquia estrutura governança horizontal"
+  },
+  {
+    "from": "holobionte",
+    "to": "espécies companheiras",
+    "name": "exemplifica",
+    "description": "Holobionte exemplifica espécies companheiras de Haraway"
+  },
+  {
+    "from": "espécies companheiras",
+    "to": "multiespécies",
+    "name": "compõem",
+    "description": "Espécies companheiras compõem relações multiespécies"
+  },
+  {
+    "from": "holobionte",
+    "to": "identidade",
+    "name": "dissolve",
+    "description": "Holobionte dissolve identidade individual"
+  },
+  {
+    "from": "holobionte",
+    "to": "fronteiras",
+    "name": "torna porosas",
+    "description": "Holobionte torna porosas as fronteiras do organismo"
+  },
+  {
+    "from": "simbiose",
+    "to": "mutualismo",
+    "name": "pratica",
+    "description": "Simbiose pratica mutualismo"
+  },
+  {
+    "from": "simbiose",
+    "to": "cooperação",
+    "name": "efetua",
+    "description": "Simbiose efetua cooperação biológica"
+  },
+  {
+    "from": "cooperação",
+    "to": "evolução",
+    "name": "dirige",
+    "description": "Cooperação dirige evolução tanto quanto competição"
+  },
+  {
+    "from": "micorriza",
+    "to": "floresta",
+    "name": "conecta",
+    "description": "Micorrizas conectam árvores em florestas"
+  },
+  {
+    "from": "floresta",
+    "to": "redes",
+    "name": "estrutura-se como",
+    "description": "Floresta se estrutura como rede"
+  },
+  {
+    "from": "redesmiceliais",
+    "to": "comunicação",
+    "name": "permitem",
+    "description": "Redes miceliais permitem comunicação entre plantas"
+  },
+  {
+    "from": "redesmiceliais",
+    "to": "redes",
+    "name": "inspiram",
+    "description": "Redes miceliais inspiram arquiteturas de rede"
+  },
+  {
+    "from": "extrativismo",
+    "to": "colonialismo",
+    "name": "efetua",
+    "description": "Extrativismo efetua colonialismo material"
+  },
+  {
+    "from": "extrativismo",
+    "to": "capitalismo",
+    "name": "alimenta",
+    "description": "Extrativismo alimenta acumulação capitalista"
+  },
+  {
+    "from": "capitalismo",
+    "to": "acumulacaoprimitiva",
+    "name": "inicia-se por",
+    "description": "Capitalismo se inicia por acumulação primitiva"
+  },
+  {
+    "from": "capitalismo",
+    "to": "mercadorias fictícias",
+    "name": "cria",
+    "description": "Capitalismo cria mercadorias fictícias (terra, trabalho, dinheiro)"
+  },
+  {
+    "from": "acumulacaoprimitiva",
+    "to": "violência",
+    "name": "efetua-se por",
+    "description": "Acumulação primitiva se efetua por violência"
+  },
+  {
+    "from": "despossessao",
+    "to": "colonialismo",
+    "name": "é lógica de",
+    "description": "Despossessão é lógica central do colonialismo"
+  },
+  {
+    "from": "despossessao",
+    "to": "terra",
+    "name": "expropria",
+    "description": "Despossessão expropria terra de povos indígenas"
+  },
+  {
+    "from": "pratica",
+    "to": "teoria",
+    "name": "efetua",
+    "description": "Práxis efetua teoria no mundo"
+  },
+  {
+    "from": "pratica",
+    "to": "transformação",
+    "name": "realiza",
+    "description": "Prática realiza transformação social"
+  },
+  {
+    "from": "cooperativa",
+    "to": "economia solidária",
+    "name": "compõe",
+    "description": "Cooperativas compõem economia solidária"
+  },
+  {
+    "from": "economia solidária",
+    "to": "reciprocidade",
+    "name": "pratica",
+    "description": "Economia solidária pratica reciprocidade"
+  },
+  {
+    "from": "cooperativa",
+    "to": "autogestão",
+    "name": "pratica",
+    "description": "Cooperativas praticam autogestão"
+  },
+  {
+    "from": "autogestão",
+    "to": "democracia",
+    "name": "radicaliza",
+    "description": "Autogestão radicaliza democracia no trabalho"
+  },
+  {
+    "from": "moedascomunitarias",
+    "to": "economia",
+    "name": "redesenham",
+    "description": "Moedas comunitárias redesenham economia local"
+  },
+  {
+    "from": "moedascomunitarias",
+    "to": "crédito mútuo",
+    "name": "operam por",
+    "description": "Moedas comunitárias operam por crédito mútuo"
+  },
+  {
+    "from": "bancostempo",
+    "to": "reciprocidade",
+    "name": "praticam",
+    "description": "Bancos de tempo praticam reciprocidade direta"
+  },
+  {
+    "from": "bancostempo",
+    "to": "economia",
+    "name": "desmercantilizam",
+    "description": "Bancos de tempo desmercantilizam relações"
+  },
+  {
+    "from": "afeto",
+    "to": "emoção",
+    "name": "difere de",
+    "description": "Afeto spinozista difere de emoção subjetiva"
+  },
+  {
+    "from": "afeto",
+    "to": "poder",
+    "name": "modula",
+    "description": "Afeto modula potência de agir"
+  },
+  {
+    "from": "softwarelivre",
+    "to": "commons",
+    "name": "digitaliza",
+    "description": "Software livre digitaliza commons do conhecimento"
+  },
+  {
+    "from": "softwarelivre",
+    "to": "compartilhamento",
+    "name": "pratica",
+    "description": "Software livre pratica compartilhamento de código"
+  },
+  {
+    "from": "softwarelivre",
+    "to": "colaboração",
+    "name": "possibilita",
+    "description": "Software livre possibilita colaboração distribuída"
+  },
+  {
+    "from": "protocoloaberto",
+    "to": "redes",
+    "name": "estrutura",
+    "description": "Protocolos abertos estruturam redes descentralizadas"
+  },
+  {
+    "from": "protocoloaberto",
+    "to": "descentralização",
+    "name": "efetua",
+    "description": "Protocolos abertos efetuam descentralização"
+  },
+  {
+    "from": "descentralização",
+    "to": "poder",
+    "name": "distribui",
+    "description": "Descentralização distribui poder"
+  },
+  {
+    "from": "criptografia",
+    "to": "autonomia",
+    "name": "protege",
+    "description": "Criptografia protege autonomia digital"
+  },
+  {
+    "from": "criptografia",
+    "to": "privacidade",
+    "name": "garante",
+    "description": "Criptografia garante privacidade"
+  },
+  {
+    "from": "arterelacional",
+    "to": "performatividade",
+    "name": "pratica",
+    "description": "Arte relacional pratica performatividade"
+  },
+  {
+    "from": "arterelacional",
+    "to": "intersubjetividade",
+    "name": "cultiva",
+    "description": "Arte relacional cultiva intersubjetividade"
+  },
+  {
+    "from": "afrofuturismo",
+    "to": "imaginação",
+    "name": "libera",
+    "description": "Afrofuturismo libera imaginação especulativa"
+  },
+  {
+    "from": "imaginação",
+    "to": "futuridadequeer",
+    "name": "abre",
+    "description": "Imaginação abre futuridade queer"
+  },
+  {
+    "from": "afrofuturismo",
+    "to": "libertação",
+    "name": "especula",
+    "description": "Afrofuturismo especula libertação"
+  },
+  {
+    "from": "libertação",
+    "to": "autonomia",
+    "name": "busca",
+    "description": "Libertação busca autonomia"
+  },
+  {
+    "from": "educacaopopular",
+    "to": "pedagogia",
+    "name": "radicaliza",
+    "description": "Educação popular radicaliza pedagogia"
+  },
+  {
+    "from": "pedagogia",
+    "to": "transformação",
+    "name": "visa",
+    "description": "Pedagogia crítica visa transformação"
+  },
+  {
+    "from": "circuloscultura",
+    "to": "diálogo",
+    "name": "praticam",
+    "description": "Círculos de cultura praticam diálogo freireano"
+  },
+  {
+    "from": "diálogo",
+    "to": "conhecimento",
+    "name": "coproduz",
+    "description": "Diálogo coproduz conhecimento"
+  },
+  {
+    "from": "pedagogiaautonomia",
+    "to": "liberdade",
+    "name": "cultiva",
+    "description": "Pedagogia da autonomia cultiva liberdade"
+  },
+  {
+    "from": "liberdade",
+    "to": "responsabilidade",
+    "name": "implica",
+    "description": "Liberdade implica responsabilidade"
+  },
+  {
+    "from": "desescolarizacao",
+    "to": "autonomia",
+    "name": "radicaliza",
+    "description": "Desescolarização radicaliza autonomia educacional"
+  },
+  {
+    "from": "desescolarizacao",
+    "to": "instituição",
+    "name": "questiona",
+    "description": "Desescolarização questiona instituições totais"
+  },
+  {
+    "from": "corposemorgaos",
+    "to": "intensidade",
+    "name": "experimenta",
+    "description": "Corpo sem órgãos experimenta intensidades"
+  },
+  {
+    "from": "corposemorgaos",
+    "to": "organização",
+    "name": "dissolve",
+    "description": "Corpo sem órgãos dissolve organização estratificada"
+  },
+  {
+    "from": "necropolitica",
+    "to": "terror",
+    "name": "administra por",
+    "description": "Necropolítica administra por terror"
+  },
+  {
+    "from": "terror",
+    "to": "violência",
+    "name": "efetua",
+    "description": "Terror efetua violência sistêmica"
+  },
+  {
+    "from": "necropolitica",
+    "to": "soberania",
+    "name": "redefine",
+    "description": "Necropolítica redefine soberania como poder de matar"
+  },
+  {
+    "from": "soberania",
+    "to": "poder",
+    "name": "concentra",
+    "description": "Soberania concentra poder de decisão sobre vida e morte"
+  },
+  {
+    "from": "memoriacoletiva",
+    "to": "narrativa",
+    "name": "transmite-se por",
+    "description": "Memória coletiva se transmite por narrativas"
+  },
+  {
+    "from": "narrativa",
+    "to": "identidade",
+    "name": "constitui",
+    "description": "Narrativa constitui identidade coletiva"
+  },
+  {
+    "from": "ancestralidade",
+    "to": "tempo",
+    "name": "entrelaça",
+    "description": "Ancestralidade entrelaça passado e presente"
+  },
+  {
+    "from": "ancestralidade",
+    "to": "transmissão",
+    "name": "efetua",
+    "description": "Ancestralidade efetua transmissão cultural"
+  },
+  {
+    "from": "hauntologia",
+    "to": "espectralidade",
+    "name": "pensa",
+    "description": "Hauntologia pensa espectralidade do tempo"
+  },
+  {
+    "from": "hauntologia",
+    "to": "tempo",
+    "name": "desconjunta",
+    "description": "Hauntologia desconjunta o tempo"
+  },
+  {
+    "from": "futuridadequeer",
+    "to": "normatividade",
+    "name": "resiste a",
+    "description": "Futuridade queer resiste à normatividade heterossexual"
+  },
+  {
+    "from": "futuridadequeer",
+    "to": "tempo",
+    "name": "deslineariza",
+    "description": "Futuridade queer deslineariza o tempo"
+  },
+  {
+    "from": "setimagera",
+    "to": "responsabilidade",
+    "name": "ativa",
+    "description": "Sétima geração ativa responsabilidade temporal"
+  },
+  {
+    "from": "setimagera",
+    "to": "sustentabilidade",
+    "name": "orienta",
+    "description": "Sétima geração orienta sustentabilidade"
+  },
+  {
+    "from": "transindividual",
+    "to": "individuação",
+    "name": "processa",
+    "description": "Transindividual processa individuação coletiva"
+  },
+  {
+    "from": "individuação",
+    "to": "processo",
+    "name": "é",
+    "description": "Individuação é processo, não substância"
+  },
+  {
+    "from": "transindividual",
+    "to": "pré-individual",
+    "name": "emerge do",
+    "description": "Transindividual emerge do pré-individual"
+  },
+  {
+    "from": "cuidado",
+    "to": "interdependência",
+    "name": "reconhece",
+    "description": "Ética do cuidado reconhece interdependência"
+  },
+  {
+    "from": "interdependência",
+    "to": "ontologia",
+    "name": "fundamenta",
+    "description": "Interdependência fundamenta ontologia relacional"
+  },
+  {
+    "from": "reproducaosocial",
+    "to": "trabalho",
+    "name": "sustenta",
+    "description": "Reprodução social sustenta todo trabalho produtivo"
+  },
+  {
+    "from": "reproducaosocial",
+    "to": "feminismo",
+    "name": "é central para",
+    "description": "Reprodução social é central para feminismo materialista"
+  },
+  {
+    "from": "Chiapas",
+    "to": "autonomia",
+    "name": "exemplifica",
+    "description": "Chiapas exemplifica autonomia zapatista"
+  },
+  {
+    "from": "Chiapas",
+    "to": "autogestão",
+    "name": "pratica",
+    "description": "Chiapas pratica autogestão territorial"
+  },
+  {
+    "from": "Rojava",
+    "to": "confederalismo",
+    "name": "implementa",
+    "description": "Rojava implementa confederalismo democrático"
+  },
+  {
+    "from": "confederalismo",
+    "to": "municipalismo",
+    "name": "organiza-se por",
+    "description": "Confederalismo se organiza por municipalismo libertário"
+  },
+  {
+    "from": "municipalismo",
+    "to": "democracia",
+    "name": "radicaliza",
+    "description": "Municipalismo radicaliza democracia direta"
+  },
+  {
+    "from": "Rojava",
+    "to": "feminismo",
+    "name": "centra",
+    "description": "Rojava centra feminismo na organização social"
+  },
+  {
+    "from": "barcelona",
+    "to": "municipalismo",
+    "name": "experimenta",
+    "description": "Barcelona experimenta municipalismo radical"
+  },
+  {
+    "from": "barcelona",
+    "to": "commons",
+    "name": "remunicipaliza",
+    "description": "Barcelona remunicipaliza commons urbanos"
+  },
+  {
+    "from": "Kenya",
+    "to": "commons",
+    "name": "defende",
+    "description": "Movimentos no Quênia defendem commons de terra"
+  },
+  {
+    "from": "Colombia",
+    "to": "direitos da natureza",
+    "name": "reconhece",
+    "description": "Colômbia reconhece direitos da natureza"
+  },
+  {
+    "from": "Ecuador",
+    "to": "Pachamama",
+    "name": "constitucionaliza",
+    "description": "Equador constitucionaliza direitos da Pachamama"
+  },
+  {
+    "from": "País Basco",
+    "to": "cooperativa",
+    "name": "desenvolve",
+    "description": "País Basco desenvolve cooperativismo de Mondragón"
+  },
+  {
+    "from": "ciborgue",
+    "to": "hibridez",
+    "name": "encarna",
+    "description": "Ciborgue encarna hibridez humano-máquina"
+  },
+  {
+    "from": "hibridez",
+    "to": "identidade",
+    "name": "dissolve",
+    "description": "Hibridez dissolve identidades puras"
+  },
+  {
+    "from": "ciborgue",
+    "to": "fronteiras",
+    "name": "transgride",
+    "description": "Ciborgue transgride fronteiras natureza-cultura"
+  },
+  {
+    "from": "autopoiese",
+    "to": "autonomia",
+    "name": "efetua",
+    "description": "Autopoiese efetua autonomia sistêmica"
+  },
+  {
+    "from": "autopoiese",
+    "to": "vida",
+    "name": "caracteriza",
+    "description": "Autopoiese caracteriza sistemas vivos"
+  },
+  {
+    "from": "emergência",
+    "to": "complexidade",
+    "name": "surge de",
+    "description": "Emergência surge de complexidade"
+  },
+  {
+    "from": "complexidade",
+    "to": "redes",
+    "name": "estrutura-se em",
+    "description": "Complexidade se estrutura em redes"
+  },
+  {
+    "from": "emergência",
+    "to": "processo",
+    "name": "manifesta-se como",
+    "description": "Emergência se manifesta como processo"
+  },
+  {
+    "from": "RQM",
+    "to": "física quântica",
+    "name": "interpreta",
+    "description": "Mecânica quântica relacional interpreta física quântica"
+  },
+  {
+    "from": "RQM",
+    "to": "ontologia",
+    "name": "implica",
+    "description": "RQM implica ontologia relacional na física"
+  },
+  {
+    "from": "física quântica",
+    "to": "não-localidade",
+    "name": "demonstra",
+    "description": "Física quântica demonstra não-localidade"
+  },
+  {
+    "from": "Bell",
+    "to": "não-localidade",
+    "name": "prova",
+    "description": "Teorema de Bell prova não-localidade quântica"
+  },
+  {
+    "from": "emaranhamento",
+    "to": "ontologia",
+    "name": "sugere",
+    "description": "Emaranhamento quântico sugere ontologia relacional"
+  },
+  {
+    "from": "dasein",
+    "to": "Mitsein",
+    "name": "é sempre",
+    "description": "Dasein é sempre já Mitsein (ser-com)"
+  },
+  {
+    "from": "Mitsein",
+    "to": "ontologia",
+    "name": "fundamenta",
+    "description": "Mitsein fundamenta ontologia relacional em Heidegger"
+  },
+  {
+    "from": "Heidegger",
+    "to": "dasein",
+    "name": "pensa",
+    "description": "Heidegger pensa Dasein como ser-no-mundo"
+  },
+  {
+    "from": "campo",
+    "to": "relacionalidade",
+    "name": "é",
+    "description": "Campo é relacionalidade fundamental na física"
+  },
+  {
+    "from": "campo",
+    "to": "espaço-tempo",
+    "name": "estrutura",
+    "description": "Campo estrutura espaço-tempo"
+  },
+  {
+    "from": "relatividade conceitual",
+    "to": "ontologia",
+    "name": "relativiza",
+    "description": "Relatividade conceitual relativiza ontologia"
+  },
+  {
+    "from": "pragmatismo",
+    "to": "verdade",
+    "name": "redefine",
+    "description": "Pragmatismo redefine verdade como uso"
+  },
+  {
+    "from": "pragmatismo",
+    "to": "conhecimento",
+    "name": "pratica",
+    "description": "Pragmatismo pratica conhecimento como ação"
   }
 ]
