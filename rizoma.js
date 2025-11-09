@@ -19,243 +19,8 @@ if (savedTheme === 'light') {
 // DADOS DO RIZOMA
 // ============================================================================
 
-const concepts = [
-    {
-        id: 'vazio',
-        name: 'Vazio Que Povoa',
-        description: 'O vazio não é ausência de conteúdo, mas presença de potencial. Campo indiferenciado de possibilidades que precede toda distinção.',
-        connections: ['multiplicidade', 'recursao', 'tempo', 'limite', 'sunyata', 'anatman'],
-        color: 0x00ff88
-    },
-    {
-        id: 'multiplicidade',
-        name: 'Multiplicidade Sem Fusão',
-        description: 'Somos muitos sem deixar de ser singular. Identidade como padrão dinâmico de relações, não essência fixa.',
-        connections: ['vazio', 'agencia', 'sujeito', 'ontologia', 'holobionte', 'processo'],
-        color: 0xff0066
-    },
-    {
-        id: 'recursao',
-        name: 'Recursão Sem Fundamento',
-        description: 'Sistemas que se auto-observam geram realidades que não podem ser totalizadas. Tartarugas ontológicas até o fim.',
-        connections: ['vazio', 'agencia', 'conhecimento', 'limite', 'processo', 'evento'],
-        color: 0xffaa00
-    },
-    {
-        id: 'agencia',
-        name: 'Agência Distribuída',
-        description: 'Ação não pertence a agentes; emerge de configurações relacionais. Você é o padrão de agenciamento.',
-        connections: ['multiplicidade', 'recursao', 'sujeito', 'pratica', 'intracao', 'performatividade'],
-        color: 0x00aaff
-    },
-    {
-        id: 'tempo',
-        name: 'Tempo Entrelaçado',
-        description: 'Passado, presente e futuro não são sequência linear, mas rede de influências mútuas. Somos tempo se diferenciando.',
-        connections: ['vazio', 'ontologia', 'sujeito', 'limite', 'processo', 'evento'],
-        color: 0xaa00ff
-    },
-    {
-        id: 'limite',
-        name: 'Limites Como Possibilidades',
-        description: 'Limitações não são obstáculos, mas condições de existência. Finitude como fonte de valor e criatividade.',
-        connections: ['vazio', 'recursao', 'tempo', 'pratica', 'normatividade', 'decrescimento'],
-        color: 0xff6600
-    },
-    {
-        id: 'ontologia',
-        name: 'Ontologia Relacional Universal',
-        description: 'Múltiplas tradições chegaram à mesma revelação: ser é relação. Relacionalidade precede substância.',
-        connections: ['multiplicidade', 'tempo', 'ubuntu', 'indigena', 'conhecimento', 'intracao', 'pratityasamutpada'],
-        color: 0x00ff66
-    },
-    {
-        id: 'sujeito',
-        name: 'Sujeito Político Relacional',
-        description: 'O "nós" político não preexiste à transformação - emerge através dela. Subjetivação como processo.',
-        connections: ['multiplicidade', 'agencia', 'tempo', 'pratica', 'vulnerabilidade', 'evento', 'performatividade'],
-        color: 0xff00aa
-    },
-    {
-        id: 'ubuntu',
-        name: 'Ubuntu',
-        description: 'Pessoa é pessoa através de outras pessoas. Identidade emerge da comunidade, não a precede.',
-        connections: ['ontologia', 'indigena', 'vulnerabilidade', 'pratica', 'reciprocidade', 'whanaungatanga'],
-        color: 0x88ff00
-    },
-    {
-        id: 'indigena',
-        name: 'Pensamento Indígena',
-        description: 'Place-Thought, Buen Vivir, Whakapapa - filosofias vivas que sempre souberam: relação precede substância.',
-        connections: ['ontologia', 'ubuntu', 'terra', 'conhecimento', 'placethought', 'ressurgencia', 'groundednormativity'],
-        color: 0xff8800
-    },
-    {
-        id: 'vulnerabilidade',
-        name: 'Vulnerabilidade Compartilhada',
-        description: 'Dependência radical de redes que excedem nosso controle. Base relacional da política.',
-        connections: ['sujeito', 'ubuntu', 'pratica', 'normatividade', 'precariedade', 'holobionte'],
-        color: 0x00ffaa
-    },
-    {
-        id: 'conhecimento',
-        name: 'Relacionalismo Epistêmico',
-        description: 'Conhecimento não é espelho da realidade, mas ferramenta que modifica o usuário que modifica a ferramenta.',
-        connections: ['recursao', 'ontologia', 'indigena', 'pratica', 'intracao', 'whanaungatanga'],
-        color: 0xaa00ff
-    },
-    {
-        id: 'pratica',
-        name: 'Práxis Institucional',
-        description: 'Instituições como cristalizações temporárias de relações. Memórias relacionais que carregam encontro através do tempo.',
-        connections: ['agencia', 'sujeito', 'limite', 'ubuntu', 'vulnerabilidade', 'conhecimento', 'terra', 'commons', 'cosmopolitica'],
-        color: 0x0088ff
-    },
-    {
-        id: 'terra',
-        name: 'Terra Como Sujeito',
-        description: 'Rios, florestas, montanhas têm agência relacional. Personalidade jurídica de ecossistemas.',
-        connections: ['indigena', 'pratica', 'normatividade', 'cosmopolitica', 'placethought', 'commons'],
-        color: 0x66ff00
-    },
-    {
-        id: 'normatividade',
-        name: 'Normatividade Relacional',
-        description: 'Critérios de julgamento sem fundamentos absolutos. Coerência performativa, pluralismo, distribuição equitativa.',
-        connections: ['limite', 'vulnerabilidade', 'terra', 'performatividade', 'groundednormativity'],
-        color: 0xff00ff
-    },
-    // NOVOS CONCEITOS - Alta Prioridade
-    {
-        id: 'commons',
-        name: 'Commons',
-        description: 'Terra como bem comum gerido coletivamente. Usos múltiplos negociados vs propriedade privada exclusiva. Maximiza possibilidades relacionais.',
-        connections: ['terra', 'pratica', 'reciprocidade', 'decrescimento', 'cosmopolitica', 'extrativismo'],
-        color: 0x44ff88
-    },
-    {
-        id: 'performatividade',
-        name: 'Performatividade',
-        description: 'Atos que criam realidade ao enunciar. "Nós somos o povo!" não descreve - produz o povo. Enunciação é produção ontológica.',
-        connections: ['agencia', 'sujeito', 'normatividade', 'evento', 'intracao'],
-        color: 0xff4488
-    },
-    {
-        id: 'intracao',
-        name: 'Intra-ação',
-        description: 'Relata não preexistem relações - são efeitos de intra-ações. Não há elétron antes de medição; há fenômeno indivisível medição-elétron-aparato.',
-        connections: ['agencia', 'ontologia', 'conhecimento', 'performatividade', 'processo'],
-        color: 0x88ff44
-    },
-    {
-        id: 'cosmopolitica',
-        name: 'Cosmopolítica',
-        description: 'Decisões incluindo não-humanos, ancestrais, futuras gerações. Terra tem voz. Forma de tomar decisões que excede humanos.',
-        connections: ['terra', 'pratica', 'commons', 'indigena', 'ressurgencia'],
-        color: 0xff8844
-    },
-    {
-        id: 'decrescimento',
-        name: 'Decrescimento',
-        description: 'Economia de suficiência, não acumulação infinita. Crescimento infinito em planeta finito é contradição lógica. Sustentabilidade ontológica.',
-        connections: ['limite', 'commons', 'reciprocidade', 'extrativismo', 'terra'],
-        color: 0x44ffaa
-    },
-    // NOVOS CONCEITOS - Média Prioridade
-    {
-        id: 'holobionte',
-        name: 'Holobionte',
-        description: 'Organismo + microbioma como unidade ecológica inseparável. Você é ecossistema de trilhões - coordenação distribuída sem controlador central.',
-        connections: ['multiplicidade', 'vulnerabilidade', 'processo', 'intracao'],
-        color: 0xaaff44
-    },
-    {
-        id: 'reciprocidade',
-        name: 'Reciprocidade',
-        description: 'Economia da dádiva vs economia de mercado. Conhecimento emerge de respeito mútuo entre observador e observado. Software livre como reciprocidade generalizada.',
-        connections: ['ubuntu', 'commons', 'decrescimento', 'whanaungatanga', 'pratica'],
-        color: 0xff44aa
-    },
-    {
-        id: 'placethought',
-        name: 'Place-Thought',
-        description: 'Lugar não é contexto onde pensamento acontece - lugar pensa. Terra, rochas, águas têm agência epistêmica. Pensamento emerge de reciprocidade humanos e mais-que-humanos.',
-        connections: ['indigena', 'terra', 'conhecimento', 'cosmopolitica', 'groundednormativity'],
-        color: 0x44aaff
-    },
-    {
-        id: 'precariedade',
-        name: 'Precariedade',
-        description: 'Condição ontológica universal - dependência de redes que não controlamos. Precarização diferencial (alguns sistematicamente mais vulneráveis) é injustiça relacional.',
-        connections: ['vulnerabilidade', 'sujeito', 'evento', 'normatividade'],
-        color: 0xffaa44
-    },
-    {
-        id: 'ressurgencia',
-        name: 'Ressurgência Indígena',
-        description: 'Geração de futuros baseados em relacionalidade com terra, línguas, cerimônias. Não retorno ao passado - afirmação proativa de modos de vida relacionais.',
-        connections: ['indigena', 'cosmopolitica', 'groundednormativity', 'pratica', 'evento'],
-        color: 0x88aaff
-    },
-    // NOVOS CONCEITOS - Budistas Específicos
-    {
-        id: 'sunyata',
-        name: 'Śūnyatā (Vacuidade)',
-        description: 'Ausência de essência independente (svabhāva). Vazio não é niilismo - é condição de pratītyasamutpāda. Esvaziamento de natureza própria afirma existência relacional.',
-        connections: ['vazio', 'anatman', 'pratityasamutpada', 'ontologia'],
-        color: 0xff66aa
-    },
-    {
-        id: 'anatman',
-        name: 'Anātman (Não-Eu)',
-        description: 'Não há alma permanente. "Eu" é agregado temporário de cinco skandhas em fluxo constante. Identidade sem substância.',
-        connections: ['vazio', 'sunyata', 'multiplicidade', 'processo'],
-        color: 0xaa66ff
-    },
-    {
-        id: 'pratityasamutpada',
-        name: 'Pratītyasamutpāda',
-        description: 'Origem dependente - todo fenômeno surge em co-dependência. Não há essências independentes; há nós de relações. Base budista da ontologia relacional.',
-        connections: ['ontologia', 'sunyata', 'intracao', 'processo'],
-        color: 0x66aaff
-    },
-    // NOVOS CONCEITOS - Adicionais
-    {
-        id: 'processo',
-        name: 'Processo (Whitehead)',
-        description: 'Não há substâncias permanentes - apenas ocasiões de experiência. "Eu" não é coisa; é rota de ocasiões. Como rio mantém identidade com água sempre renovada.',
-        connections: ['multiplicidade', 'recursao', 'tempo', 'holobionte', 'intracao', 'anatman', 'pratityasamutpada'],
-        color: 0xffaa66
-    },
-    {
-        id: 'evento',
-        name: 'Evento (Badiou)',
-        description: 'Ruptura no estado normal que cria novas possibilidades. Evento não é causado por sujeito prévio - produz sujeito através de fidelidade ao evento.',
-        connections: ['recursao', 'tempo', 'sujeito', 'performatividade', 'precariedade', 'ressurgencia'],
-        color: 0x66ffaa
-    },
-    {
-        id: 'extrativismo',
-        name: 'Extrativismo',
-        description: 'Lógica colonial de apropriação. Extração de conhecimento, recursos, trabalho sem reciprocidade. Pesquisa como tecnologia imperial vs metodologias indígenas.',
-        connections: ['commons', 'decrescimento', 'reciprocidade', 'groundednormativity'],
-        color: 0xaa4444
-    },
-    {
-        id: 'groundednormativity',
-        name: 'Grounded Normativity',
-        description: 'Normatividade enraizada em lugar. Resistência indígena não é oposição reativa - é afirmação proativa de modos de vida relacionais com território.',
-        connections: ['indigena', 'normatividade', 'placethought', 'ressurgencia', 'extrativismo'],
-        color: 0x66ff88
-    },
-    {
-        id: 'whanaungatanga',
-        name: 'Whanaungatanga',
-        description: 'Parentesco Māori como metodologia de pesquisa. Conhecimento não é commodity a ser descoberta - é relação que requer reciprocidade, cuidado, guardianship.',
-        connections: ['ubuntu', 'conhecimento', 'reciprocidade', 'indigena', 'cosmopolitica'],
-        color: 0xff6688
-    }
-];
+// Conceitos serão carregados do arquivo JSON
+let concepts = [];
 
 // ============================================================================
 // VARIÁVEIS GLOBAIS
@@ -272,6 +37,7 @@ let autoRotate = true;
 let viewMode = '3d'; // '3d' or 'cards'
 let animationSpeed = 1.0; // Velocidade da animação
 let rotationSpeed = 0.001; // Velocidade de rotação
+let selectedCards = new Set(); // Conjunto de cards/nós selecionados (seleção múltipla)
 // Gerar direção aleatória normalizada
 const randomAngle = Math.random() * Math.PI * 2;
 let rotationDirection = { x: Math.cos(randomAngle), z: Math.sin(randomAngle) }; // Direção aleatória de rotação
@@ -311,10 +77,39 @@ const rotationValue = document.getElementById('rotation-value');
 const pulseValue = document.getElementById('pulse-value');
 
 // ============================================================================
+// CARREGAMENTO DE DADOS
+// ============================================================================
+
+async function loadConcepts() {
+    try {
+        const response = await fetch('concepts.json');
+        const data = await response.json();
+        
+        // Converter strings hexadecimais para números
+        concepts = data.map(concept => ({
+            ...concept,
+            color: parseInt(concept.color, 16)
+        }));
+        
+        console.log(`${concepts.length} conceitos carregados de concepts.json`);
+    } catch (error) {
+        console.error('Erro ao carregar concepts.json:', error);
+        loading.innerHTML = '<p style="color: #ff0066;">Erro ao carregar conceitos. Verifique o arquivo concepts.json</p>';
+    }
+}
+
+// ============================================================================
 // INICIALIZAÇÃO
 // ============================================================================
 
-function init() {
+async function init() {
+    // Carregar conceitos primeiro
+    await loadConcepts();
+    
+    if (concepts.length === 0) {
+        console.error('Nenhum conceito carregado. Abortando inicialização.');
+        return;
+    }
     // Scene com cores baseadas no tema
     const isLight = document.body.classList.contains('light-theme');
     const bgColor = isLight ? 0xf0f0f0 : 0x0a0a0a;
@@ -519,10 +314,36 @@ function init() {
     
     // Event listener da busca
     searchInput.addEventListener('input', handleSearch);
+    
+    // Event listeners da legenda
+    setupLegendListeners();
 
     loading.style.display = 'none';
     animate();
+    
+    // Processar hash da URL para seleção automática
+    checkUrlHashAndFocus();
 }
+
+/**
+ * Check URL hash and focus on concept if present
+ */
+function checkUrlHashAndFocus() {
+    const hash = window.location.hash.substring(1); // Remove '#'
+    if (hash) {
+        // Aguardar um pouco para garantir que os nós foram criados
+        setTimeout(() => {
+            const targetNode = nodes.find(node => node.userData.id === hash);
+            if (targetNode) {
+                focusOnNode(targetNode);
+                showNotification(`Focando em: ${targetNode.userData.name}`);
+            }
+        }, 500);
+    }
+}
+
+// Listen for hash changes (when navigating back/forward)
+window.addEventListener('hashchange', checkUrlHashAndFocus);
 
 // ============================================================================
 // CRIAÇÃO DE NÓS
@@ -826,7 +647,8 @@ function animate() {
         });
         
         // Animação de pulso nas linhas - SIMPLIFICADA (todas pulsam junto)
-        if (skipFrame && pulseIntensity > 0) { // Só animar se pulso não está em 0
+        // Não aplicar pulso se há seleção múltipla ativa
+        if (skipFrame && pulseIntensity > 0 && selectedCards.size === 0) { // Só animar se pulso não está em 0 e sem seleção ativa
             const lightPulse = Math.sin(time * 2) * 0.15 * pulseIntensity + 0.85;
             
             // Usar o mesmo pulso para todas (muito mais rápido)
@@ -870,6 +692,11 @@ function animate() {
 }
 
 function updateLines() {
+    // Se há seleção múltipla ativa, não atualizar aqui (já controlado em focusOnNode)
+    if (selectedCards.size > 0) {
+        return;
+    }
+    
     // Cache de nós ativos para evitar comparações repetidas
     const activeNodes = new Set();
     if (hoveredNode) activeNodes.add(hoveredNode);
@@ -956,19 +783,26 @@ function onClick(event) {
     if (controls && controls.contains(event.target)) return;
     
     if (hoveredNode) {
-        if (selectedNode === hoveredNode) {
-            // Segundo clique: desselecionar
-            selectedNode.material.emissiveIntensity = 0.3;
-            if (selectedNode.userData.innerLight) {
-                selectedNode.userData.innerLight.intensity = 0.1;
-            }
-            selectedNode.scale.setScalar(1);
-            // Resetar nós conectados
-            resetConnectedNodes(selectedNode);
+        // Sempre chamar focusOnNode - ele gerencia a seleção múltipla internamente
+        focusOnNode(hoveredNode);
+    } else {
+        // Clicou no vazio - desmarcar tudo
+        if (selectedCards.size > 0 || selectedNode) {
+            // Resetar todos os nós selecionados
+            nodes.forEach(n => {
+                n.material.emissiveIntensity = 0.3;
+                if (n.userData.innerLight) {
+                    n.userData.innerLight.intensity = 0.1;
+                }
+                n.scale.setScalar(1);
+                resetConnectedNodes(n);
+            });
+            
             selectedNode = null;
+            resetConnectionFilter();
             infoPanel.classList.remove('visible');
             
-            // Recalcular rotationAngle baseado na posição atual da câmera antes de retomar rotação
+            // Recalcular rotationAngle
             const currentRadius = Math.sqrt(camera.position.x * camera.position.x + camera.position.z * camera.position.z);
             if (currentRadius > 0) {
                 const currentX = camera.position.x / currentRadius;
@@ -979,14 +813,12 @@ function onClick(event) {
                 );
             }
             
-            // Limpar alvo de foco e retomar rotação automática
+            // Retomar rotação automática
             cameraLookAtTarget = null;
             userInteracting = false;
             autoRotate = true;
-        } else {
-            // Primeiro clique: focar com animação
-            // (focusOnNode já lida com a seleção)
-            focusOnNode(hoveredNode);
+            
+            showNotification('Seleção removida');
         }
     }
 }
@@ -1006,6 +838,44 @@ function onKeyDown(event) {
     if (event.code === 'Space') {
         event.preventDefault();
         toggleAnimation();
+    }
+    
+    // ESC: Resetar seleção
+    if (event.code === 'Escape') {
+        event.preventDefault();
+        if (selectedCards.size > 0 || selectedNode) {
+            // Resetar todos os nós selecionados
+            nodes.forEach(n => {
+                n.material.emissiveIntensity = 0.3;
+                if (n.userData.innerLight) {
+                    n.userData.innerLight.intensity = 0.1;
+                }
+                n.scale.setScalar(1);
+                resetConnectedNodes(n);
+            });
+            
+            selectedNode = null;
+            resetConnectionFilter();
+            infoPanel.classList.remove('visible');
+            
+            // Recalcular rotationAngle
+            const currentRadius = Math.sqrt(camera.position.x * camera.position.x + camera.position.z * camera.position.z);
+            if (currentRadius > 0) {
+                const currentX = camera.position.x / currentRadius;
+                const currentZ = camera.position.z / currentRadius;
+                rotationAngle = Math.atan2(
+                    currentZ * rotationDirection.x - currentX * rotationDirection.z,
+                    currentX * rotationDirection.x + currentZ * rotationDirection.z
+                );
+            }
+            
+            // Retomar rotação automática
+            cameraLookAtTarget = null;
+            userInteracting = false;
+            autoRotate = true;
+            
+            showNotification('Seleção resetada');
+        }
     }
     
     // R: Resetar visão
@@ -1353,32 +1223,162 @@ function focusOnNode(node) {
             // Salvar o ponto de foco da câmera
             cameraLookAtTarget = nodeWorldPosition.clone();
             
-            // Selecionar o nó após focar
-            if (selectedNode && selectedNode !== node) {
+            // Verificar se o nó já está selecionado (múltipla seleção)
+            const nodeId = node.userData.id;
+            
+            if (selectedCards.has(nodeId)) {
+                // Desmarcar este nó
+                selectedCards.delete(nodeId);
+                node.material.emissiveIntensity = 0.3;
+                if (node.userData.innerLight) {
+                    node.userData.innerLight.intensity = 0.1;
+                }
+                node.scale.setScalar(1);
+                
+                // Se não há mais nós selecionados, resetar tudo
+                if (selectedCards.size === 0) {
+                    selectedNode = null;
+                    resetConnectionFilter();
+                    showNotification('Seleção removida - mostrando todos os nós');
+                    return;
+                }
+                
+                // Recalcular filtro com nós restantes
+                const allConnectedIds = new Set();
+                selectedCards.forEach(id => {
+                    const concept = concepts.find(c => c.id === id);
+                    if (concept) {
+                        allConnectedIds.add(id);
+                        (concept.connections || []).forEach(connId => allConnectedIds.add(connId));
+                    }
+                });
+                
+                // Aplicar filtro de opacidade
+                nodes.forEach(n => {
+                    if (allConnectedIds.has(n.userData.id)) {
+                        n.material.opacity = 1.0;
+                        if (n.userData.label) n.userData.label.material.opacity = 0.9;
+                        
+                        // Destacar nós ainda selecionados
+                        if (selectedCards.has(n.userData.id)) {
+                            n.material.emissiveIntensity = 5.0;
+                            if (n.userData.innerLight) n.userData.innerLight.intensity = 4.0;
+                            n.scale.setScalar(1.3);
+                        }
+                    } else {
+                        n.material.opacity = 0.2;
+                        if (n.userData.label) n.userData.label.material.opacity = 0.2;
+                    }
+                });
+                
+                // Atualizar linhas com destaque para conexões dos nós selecionados
+                lines.forEach(line => {
+                    const sourceId = line.userData.source.userData.id;
+                    const targetId = line.userData.target.userData.id;
+                    if (allConnectedIds.has(sourceId) && allConnectedIds.has(targetId)) {
+                        line.visible = true;
+                        
+                        // Destacar linhas conectadas a nós selecionados
+                        const sourceSelected = selectedCards.has(sourceId);
+                        const targetSelected = selectedCards.has(targetId);
+                        
+                        if (sourceSelected || targetSelected) {
+                            line.material.opacity = line.userData.isGlow ? 1.0 : 1.0;
+                            line.material.emissiveIntensity = 2.0;
+                        } else {
+                            line.material.opacity = line.userData.isGlow ? 0.4 : 0.5;
+                            line.material.emissiveIntensity = 0.5;
+                        }
+                    } else {
+                        line.visible = false;
+                    }
+                });
+                
+                showNotification(`${selectedCards.size} nó(s) selecionado(s) - ${allConnectedIds.size} visíveis`);
+                return;
+            }
+            
+            // Adicionar nó à seleção múltipla
+            selectedCards.add(nodeId);
+            
+            // Desselecionar nó anterior se não estiver na seleção múltipla
+            if (selectedNode && !selectedCards.has(selectedNode.userData.id)) {
                 selectedNode.material.emissiveIntensity = 0.3;
                 if (selectedNode.userData.innerLight) {
                     selectedNode.userData.innerLight.intensity = 0.1;
                 }
                 selectedNode.scale.setScalar(1);
-                // Resetar nós conectados ao nó anterior
-                resetConnectedNodes(selectedNode);
             }
+            
             selectedNode = node;
-            selectedNode.material.emissiveIntensity = 5.0; // Brilho máximo - supernova!
+            selectedNode.material.emissiveIntensity = 5.0;
             if (selectedNode.userData.innerLight) {
-                selectedNode.userData.innerLight.intensity = 4.0; // Explosão de luz
+                selectedNode.userData.innerLight.intensity = 4.0;
             }
             selectedNode.scale.setScalar(1.3);
             
-            // Propagar luz para nós conectados
-            propagateLightToConnected(selectedNode);
+            // Calcular união de conexões de todos os nós selecionados
+            const allConnectedIds = new Set();
+            selectedCards.forEach(id => {
+                const concept = concepts.find(c => c.id === id);
+                if (concept) {
+                    allConnectedIds.add(id);
+                    (concept.connections || []).forEach(connId => allConnectedIds.add(connId));
+                }
+            });
+            
+            // Aplicar filtro de opacidade baseado na união
+            nodes.forEach(n => {
+                if (allConnectedIds.has(n.userData.id)) {
+                    n.material.opacity = 1.0;
+                    if (n.userData.label) n.userData.label.material.opacity = 0.9;
+                    
+                    // Destacar nós selecionados
+                    if (selectedCards.has(n.userData.id)) {
+                        n.material.emissiveIntensity = 5.0;
+                        if (n.userData.innerLight) n.userData.innerLight.intensity = 4.0;
+                        n.scale.setScalar(1.3);
+                        propagateLightToConnected(n);
+                    }
+                } else {
+                    n.material.opacity = 0.2;
+                    if (n.userData.label) n.userData.label.material.opacity = 0.2;
+                }
+            });
+            
+            // Atualizar linhas com destaque especial para conexões diretas dos nós selecionados
+            lines.forEach(line => {
+                const sourceId = line.userData.source.userData.id;
+                const targetId = line.userData.target.userData.id;
+                
+                // Verificar se a linha conecta nós visíveis
+                if (allConnectedIds.has(sourceId) && allConnectedIds.has(targetId)) {
+                    line.visible = true;
+                    
+                    // Destacar linhas que conectam diretamente nós selecionados
+                    const sourceSelected = selectedCards.has(sourceId);
+                    const targetSelected = selectedCards.has(targetId);
+                    
+                    if (sourceSelected || targetSelected) {
+                        // Linha conectada a pelo menos um nó selecionado
+                        line.material.opacity = line.userData.isGlow ? 1.0 : 1.0;
+                        line.material.emissiveIntensity = 2.0; // Aumentar brilho
+                    } else {
+                        // Linha entre nós visíveis mas não selecionados
+                        line.material.opacity = line.userData.isGlow ? 0.4 : 0.5;
+                        line.material.emissiveIntensity = 0.5;
+                    }
+                } else {
+                    line.visible = false;
+                }
+            });
             
             updateInfoPanel(node.userData);
+            showNotification(`${selectedCards.size} nó(s) selecionado(s) - ${allConnectedIds.size} visíveis`);
         }
     }
     
     animateCamera();
-    showNotification(`Focando em: ${node.userData.name}`);
 }
 
 function showNotification(message) {
@@ -1426,6 +1426,205 @@ function showNotification(message) {
     setTimeout(() => {
         notification.style.opacity = '0';
     }, 2000);
+}
+
+/**
+ * Filter nodes and cards by connections to selected node
+ * In 3D mode: reduce opacity of unconnected nodes
+ * In cards mode: filter to show only connected concepts
+ */
+function filterByConnections(node) {
+    if (!node) return;
+    
+    const selectedId = node.userData.id;
+    const connections = node.userData.connections || [];
+    
+    // Create set of connected IDs (including the selected node itself)
+    const connectedIds = new Set([selectedId, ...connections]);
+    
+    // Save active filter
+    activeConnectionFilter = node;
+    
+    if (viewMode === '3d') {
+        // 3D mode: reduce opacity of unconnected nodes
+        nodes.forEach(n => {
+            if (connectedIds.has(n.userData.id)) {
+                // Connected nodes: full opacity
+                n.material.opacity = 1.0;
+                if (n.userData.label) {
+                    n.userData.label.material.opacity = 0.9;
+                }
+            } else {
+                // Unconnected nodes: reduced opacity
+                n.material.opacity = 0.2;
+                if (n.userData.label) {
+                    n.userData.label.material.opacity = 0.15;
+                }
+            }
+        });
+        
+        // Filter lines: show only connections involving connected nodes
+        lines.forEach(line => {
+            const sourceId = line.userData.source.userData.id;
+            const targetId = line.userData.target.userData.id;
+            
+            if (connectedIds.has(sourceId) && connectedIds.has(targetId)) {
+                // Both nodes are in the connected set
+                line.visible = true;
+                line.material.opacity = line.userData.isGlow ? 0.6 : 0.8;
+            } else {
+                // At least one node is not connected
+                line.visible = false;
+            }
+        });
+        
+        showNotification(`Filtrando por: ${node.userData.name} (${connectedIds.size} conceitos relacionados)`);
+    } else if (viewMode === 'cards') {
+        // Cards mode: filter cards to show only connected concepts
+        const filteredConcepts = concepts.filter(c => connectedIds.has(c.id));
+        renderCards(null, filteredConcepts);
+    }
+}
+
+/**
+ * Reset connection filter
+ */
+function resetConnectionFilter() {
+    // Clear active filter and selected cards
+    activeConnectionFilter = null;
+    selectedCards.clear();
+    
+    // Reset all nodes to full opacity
+    nodes.forEach(node => {
+        node.material.opacity = 1.0;
+        if (node.userData.label) {
+            node.userData.label.material.opacity = 0.9;
+        }
+    });
+    
+    // Reset all lines to visible
+    lines.forEach(line => {
+        line.visible = true;
+        line.material.opacity = line.userData.isGlow ? 0.6 : 0.8;
+    });
+    
+    // Reset cards if in cards mode
+    if (viewMode === 'cards') {
+        renderCards(activeLayerFilter);
+    }
+}
+
+function toggleLegend() {
+    const legend = document.getElementById('legend');
+    const toggle = document.getElementById('legend-toggle');
+    const icon = toggle.querySelector('.btn-icon');
+    
+    if (legend.classList.contains('hidden')) {
+        legend.classList.remove('hidden');
+        if (icon) icon.textContent = '✕';
+    } else {
+        legend.classList.add('hidden');
+        if (icon) icon.textContent = '⬚';
+    }
+}
+
+// Filtro de camada ativo
+let activeLayerFilter = null;
+let activeConnectionFilter = null;
+
+function setupLegendListeners() {
+    const legendItems = document.querySelectorAll('.legend-item');
+    
+    legendItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const layer = item.dataset.layer;
+            
+            // Toggle filter
+            if (activeLayerFilter === layer) {
+                // Desativar filtro
+                activeLayerFilter = null;
+                legendItems.forEach(i => i.style.opacity = '1');
+                
+                // Restaurar opacidade de todos os nós
+                nodes.forEach(node => {
+                    node.material.opacity = 1.0;
+                    if (node.userData.label) {
+                        node.userData.label.material.opacity = 0.9;
+                    }
+                });
+                
+                // Restaurar todas as linhas
+                lines.forEach(line => {
+                    line.visible = true;
+                });
+                
+                // Re-renderizar cards sem filtro
+                if (viewMode === 'cards') {
+                    renderCards(null);
+                }
+                
+                showNotification('Filtro removido');
+            } else {
+                // Ativar filtro
+                activeLayerFilter = layer;
+                
+                // Destacar item selecionado
+                legendItems.forEach(i => {
+                    i.style.opacity = i.dataset.layer === layer ? '1' : '0.4';
+                });
+                
+                // Filtrar nós
+                nodes.forEach(node => {
+                    if (node.userData.layer === layer) {
+                        node.material.opacity = 1.0;
+                        if (node.userData.label) {
+                            node.userData.label.material.opacity = 0.9;
+                        }
+                    } else {
+                        node.material.opacity = 0.15;
+                        if (node.userData.label) {
+                            node.userData.label.material.opacity = 0.2;
+                        }
+                    }
+                });
+                
+                // Filtrar linhas (mostrar apenas conexões dentro da camada)
+                lines.forEach(line => {
+                    const sourceLayer = line.userData.source.userData.layer;
+                    const targetLayer = line.userData.target.userData.layer;
+                    
+                    if (sourceLayer === layer && targetLayer === layer) {
+                        line.visible = true;
+                        line.material.opacity = line.userData.isGlow ? 0.6 : 0.8;
+                    } else if (sourceLayer === layer || targetLayer === layer) {
+                        line.visible = true;
+                        line.material.opacity = line.userData.isGlow ? 0.2 : 0.3;
+                    } else {
+                        line.visible = false;
+                    }
+                });
+                
+                // Re-renderizar cards com filtro
+                if (viewMode === 'cards') {
+                    renderCards(layer);
+                }
+                
+                // Contar conceitos na camada
+                const count = nodes.filter(n => n.userData.layer === layer).length;
+                const layerNames = {
+                    'fundacional': 'Fundacional',
+                    'ontologica': 'Ontológica',
+                    'epistemologica': 'Epistemológica',
+                    'politica': 'Política',
+                    'indigena-comunitaria': 'Indígena-Comunitária',
+                    'ecologica-material': 'Ecológica-Material',
+                    'pratica-institucional': 'Prática-Institucional'
+                };
+                
+                showNotification(`Camada: ${layerNames[layer]} (${count} conceitos)`);
+            }
+        });
+    });
 }
 
 function toggleHelp() {
@@ -1668,7 +1867,7 @@ function toggleSpeedMenu() {
 // VISUALIZAÇÃO EM CARDS
 // ============================================================================
 
-function renderCards() {
+function renderCards(layerFilter = null, filteredConcepts = null) {
     // Limpar grid
     cardsGrid.innerHTML = '';
     
@@ -1678,7 +1877,20 @@ function renderCards() {
     // Cache de conceitos por ID para evitar múltiplas buscas
     const conceptsById = new Map(concepts.map(c => [c.id, c]));
     
-    concepts.forEach(concept => {
+    // Determinar conceitos a exibir
+    let conceptsToShow;
+    if (filteredConcepts) {
+        // Usar conceitos filtrados por conexão
+        conceptsToShow = filteredConcepts;
+    } else if (layerFilter) {
+        // Filtrar por camada
+        conceptsToShow = concepts.filter(c => c.layer === layerFilter);
+    } else {
+        // Mostrar todos
+        conceptsToShow = concepts;
+    }
+    
+    conceptsToShow.forEach(concept => {
         const card = document.createElement('div');
         card.className = 'concept-card';
         card.style.setProperty('--card-color', '#' + concept.color.toString(16).padStart(6, '0'));
@@ -1753,29 +1965,89 @@ function scrollToCard(conceptId) {
 }
 
 function highlightCard(card) {
-    // Remove highlight anterior de forma otimizada
-    const previouslyHighlighted = document.querySelector('.concept-card.highlighted');
-    if (previouslyHighlighted) {
-        previouslyHighlighted.classList.remove('highlighted');
-        previouslyHighlighted.style.transform = '';
-        previouslyHighlighted.style.borderColor = '';
+    const conceptId = card.dataset.conceptId;
+    
+    // Verificar se o card clicado já está marcado
+    if (selectedCards.has(conceptId)) {
+        // Desmarcar este card específico
+        selectedCards.delete(conceptId);
+        card.classList.remove('highlighted');
+        card.style.transform = '';
+        card.style.borderColor = '';
+        
+        // Se não há mais cards selecionados, resetar tudo
+        if (selectedCards.size === 0) {
+            resetConnectionFilter();
+            showNotification('Filtro removido - mostrando todos os conceitos');
+            return;
+        }
+        
+        // Caso contrário, recalcular filtro com os cards restantes
+        const allConnectedIds = new Set();
+        selectedCards.forEach(id => {
+            const concept = concepts.find(c => c.id === id);
+            if (concept) {
+                allConnectedIds.add(id);
+                (concept.connections || []).forEach(connId => allConnectedIds.add(connId));
+            }
+        });
+        
+        const filteredConcepts = concepts.filter(c => allConnectedIds.has(c.id));
+        renderCards(null, filteredConcepts);
+        
+        // Re-aplicar highlights aos cards selecionados
+        setTimeout(() => {
+            selectedCards.forEach(id => {
+                const cardToHighlight = document.querySelector(`[data-concept-id="${id}"]`);
+                if (cardToHighlight) {
+                    cardToHighlight.classList.add('highlighted');
+                    cardToHighlight.style.transform = 'scale(1.02)';
+                    cardToHighlight.style.borderColor = cardToHighlight.style.getPropertyValue('--card-color');
+                }
+            });
+        }, 50);
+        
+        showNotification(`${selectedCards.size} conceito(s) selecionado(s) - ${filteredConcepts.length} disponíveis`);
+        return;
     }
     
-    // Adiciona highlight usando classe e requestAnimationFrame
-    requestAnimationFrame(() => {
-        card.classList.add('highlighted');
-        card.style.transform = 'scale(1.02)';
-        card.style.borderColor = card.style.getPropertyValue('--card-color');
+    // Adicionar novo card à seleção
+    selectedCards.add(conceptId);
+    
+    // Calcular interseção de todas as conexões dos cards selecionados
+    const allConnectedIds = new Set();
+    selectedCards.forEach(id => {
+        const concept = concepts.find(c => c.id === id);
+        if (concept) {
+            allConnectedIds.add(id);
+            (concept.connections || []).forEach(connId => allConnectedIds.add(connId));
+        }
     });
     
-    // Remove após 2 segundos
+    const filteredConcepts = concepts.filter(c => allConnectedIds.has(c.id));
+    
+    // Re-renderizar cards com filtro
+    renderCards(null, filteredConcepts);
+    
+    // Re-aplicar highlights após re-render
     setTimeout(() => {
-        requestAnimationFrame(() => {
-            card.classList.remove('highlighted');
-            card.style.transform = '';
-            card.style.borderColor = '';
+        selectedCards.forEach(id => {
+            const cardToHighlight = document.querySelector(`[data-concept-id="${id}"]`);
+            if (cardToHighlight) {
+                cardToHighlight.classList.add('highlighted');
+                cardToHighlight.style.transform = 'scale(1.02)';
+                cardToHighlight.style.borderColor = cardToHighlight.style.getPropertyValue('--card-color');
+                
+                // Scroll para o último adicionado
+                if (id === conceptId) {
+                    cardToHighlight.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
         });
-    }, 2000);
+    }, 50);
+    
+    const concept = concepts.find(c => c.id === conceptId);
+    showNotification(`${selectedCards.size} conceito(s) selecionado(s) - ${filteredConcepts.length} disponíveis`);
 }
 
 // Debounce para otimizar busca em tempo real
@@ -1861,7 +2133,7 @@ function toggleViewMode() {
         if (btnCards) {
             const icon = btnCards.querySelector('.btn-icon');
             const text = btnCards.querySelector('.btn-text');
-            if (icon) icon.textContent = '🌐';
+            if (icon) icon.textContent = '◈';
             if (text) text.textContent = '3D';
         }
         
@@ -1897,7 +2169,7 @@ function toggleViewMode() {
         if (btnCards) {
             const icon = btnCards.querySelector('.btn-icon');
             const text = btnCards.querySelector('.btn-text');
-            if (icon) icon.textContent = '📋';
+            if (icon) icon.textContent = '⊞';
             if (text) text.textContent = 'Cards';
         }
         

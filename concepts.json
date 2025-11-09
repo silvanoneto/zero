@@ -1,0 +1,266 @@
+[
+    {
+        "id": "vazio",
+        "name": "Vazio Que Povoa",
+        "description": "O vazio não é ausência de conteúdo, mas presença de potencial. Campo indiferenciado de possibilidades que precede toda distinção.",
+        "connections": ["sunyata", "anatman", "multiplicidade", "recursao", "tempo", "processo"],
+        "layer": "fundacional",
+        "color": "0x9966ff"
+    },
+    {
+        "id": "sunyata",
+        "name": "Śūnyatā (Vacuidade)",
+        "description": "Ausência de essência independente (svabhāva). Vazio não é niilismo - é condição de pratītyasamutpāda. Esvaziamento de natureza própria afirma existência relacional.",
+        "connections": ["vazio", "anatman", "pratityasamutpada", "ontologia", "multiplicidade"],
+        "layer": "fundacional",
+        "color": "0x9966ff"
+    },
+    {
+        "id": "anatman",
+        "name": "Anātman (Não-Eu)",
+        "description": "Não há alma permanente. \"Eu\" é agregado temporário de cinco skandhas em fluxo constante. Identidade sem substância.",
+        "connections": ["vazio", "sunyata", "multiplicidade", "processo", "holobionte"],
+        "layer": "fundacional",
+        "color": "0x9966ff"
+    },
+    {
+        "id": "pratityasamutpada",
+        "name": "Pratītyasamutpāda",
+        "description": "Origem dependente - todo fenômeno surge em co-dependência. Não há essências independentes; há nós de relações. Base budista da ontologia relacional.",
+        "connections": ["sunyata", "ontologia", "intracao", "processo", "multiplicidade"],
+        "layer": "fundacional",
+        "color": "0x9966ff"
+    },
+    {
+        "id": "ontologia",
+        "name": "Ontologia Relacional Universal",
+        "description": "Múltiplas tradições chegaram à mesma revelação: ser é relação. Relacionalidade precede substância.",
+        "connections": ["pratityasamutpada", "intracao", "processo", "multiplicidade", "ubuntu", "indigena"],
+        "layer": "ontologica",
+        "color": "0x66ccff"
+    },
+    {
+        "id": "multiplicidade",
+        "name": "Multiplicidade Sem Fusão",
+        "description": "Somos muitos sem deixar de ser singular. Identidade como padrão dinâmico de relações, não essência fixa.",
+        "connections": ["vazio", "anatman", "pratityasamutpada", "ontologia", "holobionte", "processo", "sujeito"],
+        "layer": "ontologica",
+        "color": "0x66ccff"
+    },
+    {
+        "id": "processo",
+        "name": "Processo (Whitehead)",
+        "description": "Não há substâncias permanentes - apenas ocasiões de experiência. \"Eu\" não é coisa; é rota de ocasiões. Como rio mantém identidade com água sempre renovada.",
+        "connections": ["vazio", "anatman", "pratityasamutpada", "ontologia", "multiplicidade", "tempo", "intracao", "holobionte"],
+        "layer": "ontologica",
+        "color": "0x66ccff"
+    },
+    {
+        "id": "intracao",
+        "name": "Intra-ação",
+        "description": "Relata não preexistem relações - são efeitos de intra-ações. Não há elétron antes de medição; há fenômeno indivisível medição-elétron-aparato.",
+        "connections": ["ontologia", "pratityasamutpada", "processo", "agencia", "performatividade", "conhecimento"],
+        "layer": "ontologica",
+        "color": "0x66ccff"
+    },
+    {
+        "id": "recursao",
+        "name": "Recursão Sem Fundamento",
+        "description": "Sistemas que se auto-observam geram realidades que não podem ser totalizadas. Tartarugas ontológicas até o fim.",
+        "connections": ["vazio", "conhecimento", "limite", "processo", "evento", "agencia"],
+        "layer": "epistemologica",
+        "color": "0xff9966"
+    },
+    {
+        "id": "conhecimento",
+        "name": "Relacionalismo Epistêmico",
+        "description": "Conhecimento não é espelho da realidade, mas ferramenta que modifica o usuário que modifica a ferramenta.",
+        "connections": ["recursao", "intracao", "ontologia", "indigena", "placethought", "whanaungatanga"],
+        "layer": "epistemologica",
+        "color": "0xff9966"
+    },
+    {
+        "id": "tempo",
+        "name": "Tempo Entrelaçado",
+        "description": "Passado, presente e futuro não são sequência linear, mas rede de influências mútuas. Somos tempo se diferenciando.",
+        "connections": ["vazio", "processo", "evento", "limite", "ontologia"],
+        "layer": "epistemologica",
+        "color": "0xff9966"
+    },
+    {
+        "id": "limite",
+        "name": "Limites Como Possibilidades",
+        "description": "Limitações não são obstáculos, mas condições de existência. Finitude como fonte de valor e criatividade.",
+        "connections": ["vazio", "recursao", "tempo", "normatividade", "decrescimento", "precariedade"],
+        "layer": "epistemologica",
+        "color": "0xff9966"
+    },
+    {
+        "id": "agencia",
+        "name": "Agência Distribuída",
+        "description": "Ação não pertence a agentes; emerge de configurações relacionais. Você é o padrão de agenciamento.",
+        "connections": ["intracao", "recursao", "performatividade", "sujeito", "pratica"],
+        "layer": "politica",
+        "color": "0xff6699"
+    },
+    {
+        "id": "sujeito",
+        "name": "Sujeito Político Relacional",
+        "description": "O \"nós\" político não preexiste à transformação - emerge através dela. Subjetivação como processo.",
+        "connections": ["multiplicidade", "agencia", "performatividade", "vulnerabilidade", "evento", "pratica"],
+        "layer": "politica",
+        "color": "0xff6699"
+    },
+    {
+        "id": "performatividade",
+        "name": "Performatividade",
+        "description": "Atos que criam realidade ao enunciar. \"Nós somos o povo!\" não descreve - produz o povo. Enunciação é produção ontológica.",
+        "connections": ["agencia", "sujeito", "intracao", "evento", "normatividade"],
+        "layer": "politica",
+        "color": "0xff6699"
+    },
+    {
+        "id": "evento",
+        "name": "Evento (Badiou)",
+        "description": "Ruptura no estado normal que cria novas possibilidades. Evento não é causado por sujeito prévio - produz sujeito através de fidelidade ao evento.",
+        "connections": ["recursao", "tempo", "sujeito", "performatividade", "precariedade", "ressurgencia"],
+        "layer": "politica",
+        "color": "0xff6699"
+    },
+    {
+        "id": "vulnerabilidade",
+        "name": "Vulnerabilidade Compartilhada",
+        "description": "Dependência radical de redes que excedem nosso controle. Base relacional da política.",
+        "connections": ["sujeito", "precariedade", "holobionte", "ubuntu", "normatividade"],
+        "layer": "politica",
+        "color": "0xff6699"
+    },
+    {
+        "id": "precariedade",
+        "name": "Precariedade",
+        "description": "Condição ontológica universal - dependência de redes que não controlamos. Precarização diferencial (alguns sistematicamente mais vulneráveis) é injustiça relacional.",
+        "connections": ["vulnerabilidade", "evento", "limite", "normatividade", "extrativismo"],
+        "layer": "politica",
+        "color": "0xff6699"
+    },
+    {
+        "id": "normatividade",
+        "name": "Normatividade Relacional",
+        "description": "Critérios de julgamento sem fundamentos absolutos. Coerência performativa, pluralismo, distribuição equitativa.",
+        "connections": ["limite", "performatividade", "vulnerabilidade", "precariedade", "groundednormativity"],
+        "layer": "politica",
+        "color": "0xff6699"
+    },
+    {
+        "id": "ubuntu",
+        "name": "Ubuntu",
+        "description": "Pessoa é pessoa através de outras pessoas. Identidade emerge da comunidade, não a precede.",
+        "connections": ["ontologia", "indigena", "vulnerabilidade", "reciprocidade", "whanaungatanga"],
+        "layer": "indigena-comunitaria",
+        "color": "0x66ff99"
+    },
+    {
+        "id": "indigena",
+        "name": "Pensamento Indígena",
+        "description": "Place-Thought, Buen Vivir, Whakapapa - filosofias vivas que sempre souberam: relação precede substância.",
+        "connections": ["ontologia", "ubuntu", "conhecimento", "terra", "placethought", "ressurgencia", "groundednormativity", "whanaungatanga"],
+        "layer": "indigena-comunitaria",
+        "color": "0x66ff99"
+    },
+    {
+        "id": "placethought",
+        "name": "Place-Thought",
+        "description": "Lugar não é contexto onde pensamento acontece - lugar pensa. Terra, rochas, águas têm agência epistêmica. Pensamento emerge de reciprocidade humanos e mais-que-humanos.",
+        "connections": ["indigena", "terra", "conhecimento", "groundednormativity", "cosmopolitica"],
+        "layer": "indigena-comunitaria",
+        "color": "0x66ff99"
+    },
+    {
+        "id": "groundednormativity",
+        "name": "Grounded Normativity",
+        "description": "Normatividade enraizada em lugar. Resistência indígena não é oposição reativa - é afirmação proativa de modos de vida relacionais com território.",
+        "connections": ["indigena", "placethought", "normatividade", "ressurgencia", "terra", "extrativismo"],
+        "layer": "indigena-comunitaria",
+        "color": "0x66ff99"
+    },
+    {
+        "id": "ressurgencia",
+        "name": "Ressurgência Indígena",
+        "description": "Geração de futuros baseados em relacionalidade com terra, línguas, cerimônias. Não retorno ao passado - afirmação proativa de modos de vida relacionais.",
+        "connections": ["indigena", "groundednormativity", "evento", "cosmopolitica", "terra"],
+        "layer": "indigena-comunitaria",
+        "color": "0x66ff99"
+    },
+    {
+        "id": "whanaungatanga",
+        "name": "Whanaungatanga",
+        "description": "Parentesco Māori como metodologia de pesquisa. Conhecimento não é commodity a ser descoberta - é relação que requer reciprocidade, cuidado, guardianship.",
+        "connections": ["ubuntu", "indigena", "conhecimento", "reciprocidade", "cosmopolitica"],
+        "layer": "indigena-comunitaria",
+        "color": "0x66ff99"
+    },
+    {
+        "id": "reciprocidade",
+        "name": "Reciprocidade",
+        "description": "Economia da dádiva vs economia de mercado. Conhecimento emerge de respeito mútuo entre observador e observado. Software livre como reciprocidade generalizada.",
+        "connections": ["ubuntu", "whanaungatanga", "commons", "decrescimento", "extrativismo"],
+        "layer": "indigena-comunitaria",
+        "color": "0x66ff99"
+    },
+    {
+        "id": "terra",
+        "name": "Terra Como Sujeito",
+        "description": "Rios, florestas, montanhas têm agência relacional. Personalidade jurídica de ecossistemas.",
+        "connections": ["indigena", "placethought", "groundednormativity", "ressurgencia", "cosmopolitica", "commons"],
+        "layer": "ecologica-material",
+        "color": "0xffcc66"
+    },
+    {
+        "id": "commons",
+        "name": "Commons",
+        "description": "Terra como bem comum gerido coletivamente. Usos múltiplos negociados vs propriedade privada exclusiva. Maximiza possibilidades relacionais.",
+        "connections": ["terra", "reciprocidade", "decrescimento", "cosmopolitica", "pratica", "extrativismo"],
+        "layer": "ecologica-material",
+        "color": "0xffcc66"
+    },
+    {
+        "id": "cosmopolitica",
+        "name": "Cosmopolítica",
+        "description": "Decisões incluindo não-humanos, ancestrais, futuras gerações. Terra tem voz. Forma de tomar decisões que excede humanos.",
+        "connections": ["terra", "commons", "placethought", "ressurgencia", "whanaungatanga", "pratica"],
+        "layer": "ecologica-material",
+        "color": "0xffcc66"
+    },
+    {
+        "id": "decrescimento",
+        "name": "Decrescimento",
+        "description": "Economia de suficiência, não acumulação infinita. Crescimento infinito em planeta finito é contradição lógica. Sustentabilidade ontológica.",
+        "connections": ["limite", "commons", "reciprocidade", "extrativismo", "holobionte"],
+        "layer": "ecologica-material",
+        "color": "0xffcc66"
+    },
+    {
+        "id": "holobionte",
+        "name": "Holobionte",
+        "description": "Organismo + microbioma como unidade ecológica inseparável. Você é ecossistema de trilhões - coordenação distribuída sem controlador central.",
+        "connections": ["anatman", "multiplicidade", "vulnerabilidade", "processo", "decrescimento"],
+        "layer": "ecologica-material",
+        "color": "0xffcc66"
+    },
+    {
+        "id": "extrativismo",
+        "name": "Extrativismo",
+        "description": "Lógica colonial de apropriação. Extração de conhecimento, recursos, trabalho sem reciprocidade. Pesquisa como tecnologia imperial vs metodologias indígenas.",
+        "connections": ["commons", "decrescimento", "reciprocidade", "groundednormativity", "precariedade"],
+        "layer": "ecologica-material",
+        "color": "0xcc4444"
+    },
+    {
+        "id": "pratica",
+        "name": "Práxis Institucional",
+        "description": "Instituições como cristalizações temporárias de relações. Memórias relacionais que carregam encontro através do tempo.",
+        "connections": ["agencia", "sujeito", "commons", "cosmopolitica"],
+        "layer": "pratica-institucional",
+        "color": "0x99ccff"
+    }
+]

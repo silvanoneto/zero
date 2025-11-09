@@ -179,8 +179,13 @@ function clearMarkdownCache() {
  * 
  * @param {string} markdown - The markdown content to render
  */
-function renderMarkdownContent(markdown) {
+async function renderMarkdownContent(markdown) {
     const content = document.getElementById('content');
+    
+    // Load concepts if not loaded yet
+    if (rizomaConceptKeywords.length === 0) {
+        await loadRizomaConcepts();
+    }
     
     // Defer rendering to allow browser to paint loading state
     requestAnimationFrame(() => {
@@ -191,8 +196,191 @@ function renderMarkdownContent(markdown) {
         // Defer heavy operations to next frame
         requestAnimationFrame(() => {
             buildNavigation();
+            linkRizomaConceptsInContent();
             restoreScrollPosition();
         });
+    });
+}
+
+// ============================================================================
+// RIZOMA CONCEPT LINKING
+// ============================================================================
+
+// Conceitos carregados do JSON
+let rizomaConceptKeywords = [];
+
+/**
+ * Load concepts from JSON file
+ */
+async function loadRizomaConcepts() {
+    try {
+        const response = await fetch('concepts.json');
+        const concepts = await response.json();
+        
+        // Build keyword search list from concepts
+        rizomaConceptKeywords = concepts.map(concept => ({
+            text: concept.name.toLowerCase(),
+            id: concept.id,
+            name: concept.name,
+            desc: concept.description.split('.')[0], // Primeira frase da descrição
+            layer: concept.layer,
+            color: concept.color
+        }));
+        
+        // Add common variations and keywords
+        const variations = [];
+        concepts.forEach(concept => {
+            // Add variations based on concept names
+            if (concept.name.includes('(')) {
+                const mainName = concept.name.split('(')[0].trim().toLowerCase();
+                if (mainName !== concept.name.toLowerCase()) {
+                    variations.push({
+                        text: mainName,
+                        id: concept.id,
+                        name: concept.name,
+                        desc: concept.description.split('.')[0],
+                        layer: concept.layer,
+                        color: concept.color
+                    });
+                }
+            }
+        });
+        
+        rizomaConceptKeywords = [...rizomaConceptKeywords, ...variations];
+        
+        // Sort by length (longer first to avoid partial matches)
+        rizomaConceptKeywords.sort((a, b) => b.text.length - a.text.length);
+        
+        console.log(`${rizomaConceptKeywords.length} concept keywords loaded for linking`);
+    } catch (error) {
+        console.error('Error loading concepts for linking:', error);
+    }
+}
+
+/**
+ * Link rizoma concepts automatically in the content
+ * Marks keywords from rizoma and makes them interactive
+ */
+function linkRizomaConceptsInContent() {
+    if (rizomaConceptKeywords.length === 0) {
+        console.warn('No concept keywords loaded yet');
+        return;
+    }
+    
+    const content = document.getElementById('content');
+    if (!content) return;
+    
+    // Get all text nodes in the content
+    const walker = document.createTreeWalker(
+        content,
+        NodeFilter.SHOW_TEXT,
+        {
+            acceptNode: function(node) {
+                // Skip if parent is already a rizoma link or code/pre
+                if (node.parentElement.classList.contains('rizoma-link') ||
+                    node.parentElement.tagName === 'CODE' ||
+                    node.parentElement.tagName === 'PRE' ||
+                    node.parentElement.tagName === 'A') {
+                    return NodeFilter.FILTER_REJECT;
+                }
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        }
+    );
+    
+    const textNodes = [];
+    let currentNode;
+    while (currentNode = walker.nextNode()) {
+        textNodes.push(currentNode);
+    }
+    
+    // Process each text node
+    textNodes.forEach(node => {
+        let text = node.textContent;
+        let modified = false;
+        const replacements = [];
+        
+        // Find all matches for each keyword (case insensitive)
+        rizomaConceptKeywords.forEach(concept => {
+            const regex = new RegExp(`\\b${concept.text}\\b`, 'gi');
+            let match;
+            
+            while ((match = regex.exec(text)) !== null) {
+                replacements.push({
+                    index: match.index,
+                    length: match[0].length,
+                    original: match[0],
+                    concept: concept
+                });
+            }
+        });
+        
+        // Sort replacements by index (descending) to avoid offset issues
+        replacements.sort((a, b) => b.index - a.index);
+        
+        // Apply replacements
+        if (replacements.length > 0) {
+            const parent = node.parentElement;
+            const fragment = document.createDocumentFragment();
+            let lastIndex = text.length;
+            
+            replacements.forEach(rep => {
+                // Text after this replacement
+                if (lastIndex > rep.index + rep.length) {
+                    fragment.insertBefore(
+                        document.createTextNode(text.substring(rep.index + rep.length, lastIndex)),
+                        fragment.firstChild
+                    );
+                }
+                
+                // Create rizoma link
+                const link = document.createElement('span');
+                link.className = 'rizoma-link';
+                link.textContent = rep.original;
+                link.dataset.conceptId = rep.concept.id;
+                link.dataset.conceptName = rep.concept.name;
+                link.dataset.conceptDesc = rep.concept.desc;
+                link.dataset.conceptLayer = rep.concept.layer;
+                
+                // Apply layer color (convert from 0xRRGGBB to #RRGGBB)
+                if (rep.concept.color) {
+                    const colorHex = rep.concept.color.toString().replace('0x', '#');
+                    link.style.setProperty('--concept-color', colorHex);
+                }
+                
+                link.setAttribute('role', 'button');
+                link.setAttribute('tabindex', '0');
+                link.setAttribute('aria-label', `Ver conceito: ${rep.concept.name}`);
+                
+                // Click to open rizoma
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.location.href = `rizoma.html#${rep.concept.id}`;
+                });
+                
+                // Keyboard support
+                link.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        link.click();
+                    }
+                });
+                
+                fragment.insertBefore(link, fragment.firstChild);
+                
+                lastIndex = rep.index;
+            });
+            
+            // Text before first replacement
+            if (lastIndex > 0) {
+                fragment.insertBefore(
+                    document.createTextNode(text.substring(0, lastIndex)),
+                    fragment.firstChild
+                );
+            }
+            
+            parent.replaceChild(fragment, node);
+        }
     });
 }
 
@@ -1075,15 +1263,11 @@ function updateProgressBar(scrollPercent) {
 }
 
 /**
- * Update reading progress and time estimate
+ * Update reading progress percentage
  * 
  * Calculates:
  * - Scroll percentage (rounded to nearest integer)
- * - Remaining reading time (250 words/minute average)
  * - Auto-hides info panel after 2 seconds of no scrolling
- * 
- * Time estimates help users plan reading sessions and provide
- * positive reinforcement as they progress through the content.
  * 
  * @param {number} scrollPercent - Scroll percentage (0-100)
  */
@@ -1092,26 +1276,6 @@ function updateReadingInfo(scrollPercent) {
     const readingProgress = document.getElementById('reading-progress');
     if (readingProgress) {
         readingProgress.textContent = Math.round(scrollPercent) + '%';
-    }
-    
-    // Calculate reading time
-    const content = document.getElementById('content');
-    if (content) {
-        const totalWords = content.textContent.split(/\s+/).length;
-        const wordsPerMinute = 250;
-        const totalMinutes = Math.ceil(totalWords / wordsPerMinute);
-        const remainingMinutes = Math.ceil(totalMinutes * (1 - scrollPercent / 100));
-        
-        const readingTime = document.getElementById('reading-time');
-        if (readingTime) {
-            if (remainingMinutes === 0) {
-                readingTime.textContent = 'leitura concluída';
-            } else if (remainingMinutes === 1) {
-                readingTime.textContent = '~1 min restante';
-            } else {
-                readingTime.textContent = `~${remainingMinutes} min restantes`;
-            }
-        }
     }
     
     // Show reading info briefly on scroll

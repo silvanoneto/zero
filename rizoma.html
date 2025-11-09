@@ -190,6 +190,15 @@
             width: 8px;
         }
 
+        /* Card destacado/marcado */
+        .concept-card.highlighted {
+            box-shadow: 0 0 30px var(--card-color), 0 0 60px var(--card-color); /* Luz no modo escuro */
+        }
+
+        body.light-theme .concept-card.highlighted {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra no modo claro */
+        }
+
         .concept-card h3 {
             color: var(--card-color);
             margin-bottom: 15px;
@@ -410,28 +419,104 @@
             margin-bottom: 8px;
         }
 
+        /* Legend */
+        #legend {
+            position: absolute;
+            bottom: 100px;
+            left: 30px;
+            background: rgba(10, 10, 10, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 16px 20px;
+            border-radius: 12px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.85rem;
+            max-width: 280px;
+            z-index: 1000;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        body.light-theme #legend {
+            background: rgba(255, 255, 255, 0.5);
+            color: rgba(10, 10, 10, 0.9);
+            border: 1px solid rgba(10, 10, 10, 0.1);
+        }
+
+        #legend h4 {
+            margin: 0 0 12px 0;
+            font-size: 0.95rem;
+            color: var(--connection);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            gap: 10px;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .legend-item:hover {
+            transform: translateX(4px);
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .legend-label {
+            font-size: 0.8rem;
+            line-height: 1.3;
+            opacity: 0.9;
+        }
+
+        .legend-count {
+            font-size: 0.7rem;
+            opacity: 0.6;
+            margin-left: auto;
+        }
+
+        #legend.hidden {
+            opacity: 0;
+            transform: translateY(20px);
+            pointer-events: none;
+        }
+
         /* Controls */
         #controls {
             position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
+            left: 1rem;
+            bottom: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glow);
+            color: var(--emergence);
+            padding: 0.5rem 0.6rem;
+            display: inline-flex;
             gap: 0.5rem;
-            background: rgba(10, 10, 10, 0.4);
-            padding: 0.75rem 1rem;
-            border-top: 1px solid rgba(240, 240, 240, 0.05);
+            align-items: center;
+            border-radius: 6px;
             backdrop-filter: blur(4px);
             -webkit-backdrop-filter: blur(4px);
             z-index: 1000;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+            width: auto;
         }
         
         body.light-theme #controls {
-            background: rgba(255, 255, 255, 0.5);
-            border-top-color: rgba(26, 26, 26, 0.05);
+            background: rgba(255, 255, 255, 0.03);
+            border-color: var(--glow);
         }
 
         .control-btn {
@@ -492,21 +577,10 @@
             border-color: #1a1a1a;
         }
         
-        .control-separator {
-            width: 1px;
-            height: 30px;
-            background: rgba(255, 255, 255, 0.1);
-            margin: 0 0.25rem;
-        }
-        
-        body.light-theme .control-separator {
-            background: rgba(10, 10, 10, 0.1);
-        }
-        
         @media (max-width: 768px) {
             #controls {
-                gap: 6px;
-                padding: 10px 12px;
+                gap: 0.4rem;
+                padding: 0.4rem;
             }
             
             .control-btn {
@@ -522,16 +596,12 @@
             .control-btn .btn-icon {
                 font-size: 1.3rem;
             }
-            
-            .control-separator {
-                display: none;
-            }
         }
         
         @media (max-width: 480px) {
             #controls {
-                gap: 4px;
-                padding: 8px;
+                gap: 0.3rem;
+                padding: 0.3rem;
             }
             
             .control-btn {
@@ -560,37 +630,26 @@
             top: 100px;
             right: 30px;
             background: rgba(10, 10, 10, 0.3) !important;
-            border: 1px solid rgba(0, 255, 136, 0.2);
-            border-radius: 8px;
-            padding: 15px;
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 12px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+            max-width: 300px;
             z-index: 1000;
-            font-size: 0.85rem;
-            max-width: 250px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
         }
-        
+
         body.light-theme #instructions {
-            background: rgba(255, 255, 255, 0.3) !important;
-            border-color: rgba(0, 170, 102, 0.2);
-        }
-        
-        #status-indicator {
-            background: var(--glass-bg);
-            backdrop-filter: blur(25px) saturate(180%);
-            -webkit-backdrop-filter: blur(25px) saturate(180%);
-            border: 1px solid var(--connection);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
-        
-        body.light-theme #status-indicator {
-            background: var(--glass-bg) !important;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+            background: rgba(240, 240, 240, 0.3) !important;
+            color: rgba(10, 10, 10, 0.9);
+            border: 1px solid rgba(10, 10, 10, 0.1);
         }
 
         #instructions h3 {
             color: var(--connection);
-            margin-bottom: 10px;
+            margin: 0 0 10px 0;
             font-size: 1rem;
         }
 
@@ -650,6 +709,27 @@
                 right: 15px;
                 font-size: 0.75rem;
                 padding: 10px;
+            }
+            
+            #legend {
+                bottom: 70px;
+                left: 15px;
+                max-width: calc(100vw - 100px);
+                font-size: 0.75rem;
+                padding: 12px 16px;
+            }
+            
+            #status-indicator {
+                bottom: 70px !important;
+                right: 10px !important;
+                font-size: 11px !important;
+                padding: 8px 12px !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #legend {
+                max-width: calc(100vw - 80px);
             }
             
             #status-indicator {
@@ -723,13 +803,56 @@
         <div id="concept-connections" class="connections-list"></div>
     </div>
     
+    <!-- Legend -->
+    <div id="legend" class="hidden">
+        <h4>Camadas</h4>
+        <div class="legend-item" data-layer="fundacional">
+            <div class="legend-color" style="background: #9966ff;"></div>
+            <span class="legend-label">Fundacional</span>
+            <span class="legend-count">4</span>
+        </div>
+        <div class="legend-item" data-layer="ontologica">
+            <div class="legend-color" style="background: #66ccff;"></div>
+            <span class="legend-label">Ontológica</span>
+            <span class="legend-count">4</span>
+        </div>
+        <div class="legend-item" data-layer="epistemologica">
+            <div class="legend-color" style="background: #ff9966;"></div>
+            <span class="legend-label">Epistemológica</span>
+            <span class="legend-count">4</span>
+        </div>
+        <div class="legend-item" data-layer="politica">
+            <div class="legend-color" style="background: #ff6699;"></div>
+            <span class="legend-label">Política</span>
+            <span class="legend-count">7</span>
+        </div>
+        <div class="legend-item" data-layer="indigena-comunitaria">
+            <div class="legend-color" style="background: #66ff99;"></div>
+            <span class="legend-label">Indígena-Comunitária</span>
+            <span class="legend-count">7</span>
+        </div>
+        <div class="legend-item" data-layer="ecologica-material">
+            <div class="legend-color" style="background: #ffcc66;"></div>
+            <span class="legend-label">Ecológica-Material</span>
+            <span class="legend-count">6</span>
+        </div>
+        <div class="legend-item" data-layer="pratica-institucional">
+            <div class="legend-color" style="background: #99ccff;"></div>
+            <span class="legend-label">Prática-Institucional</span>
+            <span class="legend-count">1</span>
+        </div>
+    </div>
+    
     <div id="controls">
-        <button class="control-btn" id="btn-cards">
-            <span class="btn-icon">📋</span>
-            <span class="btn-text">Cards</span>
+        <button class="control-btn" id="legend-toggle" onclick="toggleLegend()">
+            <span class="btn-icon">⬚</span>
+            <span class="btn-text">Legenda</span>
         </button>
         
-        <div class="control-separator"></div>
+        <button class="control-btn" id="btn-cards">
+            <span class="btn-icon">⊞</span>
+            <span class="btn-text">Cards</span>
+        </button>
         
         <button class="control-btn" onclick="resetView()">
             <span class="btn-icon">↻</span>
@@ -740,8 +863,6 @@
             <span class="btn-icon">?</span>
             <span class="btn-text">Ajuda</span>
         </button>
-        
-        <div class="control-separator"></div>
         
         <button class="control-btn" onclick="window.location.href='index.html'">
             <span class="btn-icon">←</span>

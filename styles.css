@@ -13,6 +13,20 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+img,
+video,
+iframe,
+pre,
+code {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Touch-friendly interactive elements */
 button,
 a,
@@ -92,6 +106,8 @@ body {
     cursor: crosshair;
     transition: background 0.6s ease, color 0.6s ease;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
     font-size: 18px; /* Base size for better readability */
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
@@ -106,6 +122,7 @@ main {
     max-width: 800px;
     margin: 0 auto;
     width: 100%;
+    padding: 0;
     --tremor-intensity: 0;
     animation: tremor 0.1s infinite;
 }
@@ -1016,7 +1033,7 @@ body.symbol-takeover {
     padding: 0.5rem 1rem;
     border-radius: 6px;
     font-size: 0.8rem;
-    color: var(--trace);
+    color: #fff;
     backdrop-filter: blur(4px);
     z-index: 900;
     opacity: 0;
@@ -1024,12 +1041,86 @@ body.symbol-takeover {
     pointer-events: none;
 }
 
+body.light-theme .reading-info {
+    color: #0a0a0a;
+}
+
 .reading-info.visible {
     opacity: 1;
 }
 
 /* --------------------------------------------
-   10. CLICK COUNTER FEEDBACK
+   10. RIZOMA CONCEPT LINKS
+   -------------------------------------------- */
+
+.rizoma-link {
+    position: relative;
+    color: var(--concept-color, var(--connection));
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0 2px;
+}
+
+.rizoma-link:hover {
+    color: var(--concept-color, var(--pulse));
+    text-decoration-style: solid;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+}
+
+.rizoma-link:focus-visible {
+    outline: 2px solid var(--concept-color, var(--connection));
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+.rizoma-link::after {
+    content: attr(data-concept-desc);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px);
+    background: rgba(10, 10, 10, 0.95);
+    color: var(--emergence);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 10000;
+    border: 1px solid var(--concept-color, var(--connection));
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.rizoma-link:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-4px);
+}
+
+/* Light theme adjustments */
+.light-theme .rizoma-link {
+    color: var(--concept-color, var(--connection));
+}
+
+.light-theme .rizoma-link:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.light-theme .rizoma-link::after {
+    background: rgba(255, 255, 255, 0.98);
+    color: var(--emergence);
+    border-color: var(--concept-color, var(--connection));
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* --------------------------------------------
+   11. CLICK COUNTER FEEDBACK
    -------------------------------------------- */
 
 .click-counter {
@@ -1063,7 +1154,7 @@ body.symbol-takeover {
 }
 
 /* --------------------------------------------
-   11. RESPONSIVE DESIGN
+   12. RESPONSIVE DESIGN
    -------------------------------------------- */
 
 /* Large Desktop (≥1200px) */
@@ -1218,15 +1309,25 @@ body.symbol-takeover {
 /* Mobile (≤768px) */
 @media (max-width: 768px) {
     body {
-        padding: 1rem;
+        padding: 1.5rem !important;
         font-size: 16px; /* Slightly smaller on mobile */
         line-height: 1.8;
+        text-align: center;
     }
 
     p {
-        text-align: left;
+        text-align: center;
         max-width: none;
         line-height: 1.8;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-align: center;
     }
 
     h1 {
@@ -1341,7 +1442,7 @@ body.symbol-takeover {
 /* Small Mobile (≤480px) */
 @media (max-width: 480px) {
     body {
-        padding: 0.75rem;
+        padding: 1rem !important;
         font-size: 15px;
     }
 
@@ -1360,9 +1461,8 @@ body.symbol-takeover {
     
     /* Compact quotes for small screens */
     .crio-quote {
-        margin: 1.5rem -0.75rem;
-        padding: 1.25rem 0.75rem 1.25rem 2.5rem;
-        transform: translateX(-5px);
+        margin: 1.5rem 0;
+        padding: 1.25rem 1rem 1.25rem 2.5rem;
         font-size: 0.95em;
     }
     
@@ -1730,7 +1830,7 @@ body.symbol-takeover {
 }
 
 /* --------------------------------------------
-   12. ERROR HANDLING
+   13. ERROR HANDLING
    -------------------------------------------- */
 
 .error-container {
@@ -1959,7 +2059,7 @@ pre code {
 }
 
 /* ========================================
-   12. LOADING SKELETON
+   14. LOADING SKELETON
    ======================================== */
 
 /* Skeleton loader for better perceived performance during initial load */
