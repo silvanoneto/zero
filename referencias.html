@@ -955,6 +955,26 @@
                 });
             }
 
+            // Ordenar por: 1) ano (mais recente), 2) número de conceitos (mais conceitos), 3) nome do autor
+            filtered.sort((a, b) => {
+                // Primeiro critério: ano (decrescente)
+                const yearA = extractYear(a.ano);
+                const yearB = extractYear(b.ano);
+                if (yearA !== yearB) {
+                    return yearB - yearA;
+                }
+                
+                // Segundo critério: número de conceitos (decrescente)
+                const conceitosA = (a.conceitos || []).length;
+                const conceitosB = (b.conceitos || []).length;
+                if (conceitosA !== conceitosB) {
+                    return conceitosB - conceitosA;
+                }
+                
+                // Terceiro critério: nome do autor (alfabética)
+                return a.autor.localeCompare(b.autor, 'pt-BR');
+            });
+
             // Atualizar contador
             document.getElementById('filtered-count').textContent = filtered.length;
 

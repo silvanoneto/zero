@@ -1727,5 +1727,261 @@
       "autonomia",
       "Chiapas"
     ]
+  },
+  {
+    "id": "levinas-1961",
+    "categoria": "ética",
+    "autor": "Levinas, Emmanuel",
+    "ano": 1961,
+    "titulo": "Totalité et Infini: Essai sur l'Extériorité",
+    "editora": "Martinus Nijhoff",
+    "relevancia": "Responsabilidade infinita precede liberdade. O rosto do Outro interpela antes de toda escolha. Subjetividade é ser-refém do Outro. Ética como filosofia primeira.",
+    "conceitos": [
+      "responsabilidade-infinita",
+      "alteridade",
+      "ética",
+      "sujeito",
+      "Outro"
+    ]
+  },
+  {
+    "id": "derrida-1997",
+    "categoria": "ética",
+    "autor": "Derrida, Jacques",
+    "ano": 1997,
+    "titulo": "De l'hospitalité",
+    "editora": "Calmann-Lévy",
+    "relevancia": "Hospitalidade incondicional versus leis de hospitalidade. Paradoxo: hospitalidade verdadeira não pode ser regulada sem deixar de ser incondicional. Acolher sem perguntar nome.",
+    "conceitos": [
+      "hospitalidade",
+      "alteridade",
+      "paradoxo",
+      "ética",
+      "desconstrução"
+    ]
+  },
+  {
+    "id": "derrida-1994",
+    "categoria": "temporal",
+    "autor": "Derrida, Jacques",
+    "ano": 1994,
+    "titulo": "Spectres de Marx",
+    "editora": "Galilée",
+    "relevancia": "Hauntologia: espectros do passado não-morto e futuros não-nascidos assombram presente. Anacronismo produtivo contra presentismo. Justiça sempre por-vir, nunca presente.",
+    "conceitos": [
+      "hauntologia",
+      "anacronia",
+      "justica-por-vir",
+      "tempo",
+      "espectralidade"
+    ]
+  },
+  {
+    "id": "turner-1969",
+    "categoria": "ontológica",
+    "autor": "Turner, Victor",
+    "ano": 1969,
+    "titulo": "The Ritual Process: Structure and Anti-Structure",
+    "editora": "Aldine Publishing",
+    "relevancia": "Liminaridade como fase betwixt-and-between em rituais. Communitas emerge na liminaridade - vínculo anti-estrutural, igualitário, transitório. Estrutura social oscila entre hierarquia e communitas.",
+    "conceitos": [
+      "liminaridade",
+      "communitas",
+      "ritual",
+      "estrutura social",
+      "threshold"
+    ]
+  },
+  {
+    "id": "tsing-2005",
+    "categoria": "política",
+    "autor": "Tsing, Anna Lowenhaupt",
+    "ano": 2005,
+    "titulo": "Friction: An Ethnography of Global Connection",
+    "editora": "Princeton University Press",
+    "relevancia": "Fricção como encontro transformador entre escalas, culturas, projetos. Global não é fluido mas atrito produtivo. Zonas de contato produzem inovação através de resistência.",
+    "conceitos": [
+      "fricção",
+      "escala",
+      "global",
+      "zona",
+      "encontro"
+    ]
+  },
+  {
+    "id": "anzaldua-1987",
+    "categoria": "ontológica",
+    "autor": "Anzaldúa, Gloria",
+    "ano": 1987,
+    "titulo": "Borderlands/La Frontera: The New Mestiza",
+    "editora": "Aunt Lute Books",
+    "relevancia": "Borderlands como zona de mestiçagem ontológica. Nepantla: estar-entre-mundos. Fronteira não separa mas produz identidades híbridas através de tensão criativa.",
+    "conceitos": [
+      "mesticagem-ontologica",
+      "fronteira",
+      "nepantla",
+      "hibridação",
+      "liminaridade"
+    ]
+  },
+  {
+    "id": "stengers-2005",
+    "categoria": "epistemológica",
+    "autor": "Stengers, Isabelle",
+    "ano": 2005,
+    "titulo": "The Cosmopolitical Proposal",
+    "publicacao": "Em Making Things Public. MIT Press",
+    "relevancia": "Cosmopolítica não pressupõe mundo comum mas cria condições para coexistência de mundos heterogêneos. Tradução cosmopolítica cria conexões parciais sem equivalência total.",
+    "conceitos": [
+      "cosmopolitica",
+      "traducao-cosmopolitica",
+      "diplomacia ontológica",
+      "heterogeneidade",
+      "mundos múltiplos"
+    ]
+  },
+  {
+    "id": "viveiros-de-castro-2004",
+    "categoria": "indígena",
+    "autor": "Viveiros de Castro, Eduardo",
+    "ano": 2004,
+    "titulo": "Perspectival Anthropology and the Method of Controlled Equivocation",
+    "publicacao": "Tipití: Journal of the Society for the Anthropology of Lowland South America, 2(1)",
+    "relevancia": "Equivocação não é erro mas diferença ontológica. Perspectivismo ameríndio: mesma palavra, referentes distintos. Equivocação controlada mantém diferença produtiva sem colapso nem incomensurabilidade total.",
+    "conceitos": [
+      "equivocacao",
+      "perspectivismo",
+      "multinaturalismo",
+      "indigena",
+      "alteridade"
+    ]
+  },
+  {
+    "id": "foucault-1984",
+    "categoria": "política",
+    "autor": "Foucault, Michel",
+    "ano": 1984,
+    "titulo": "Des espaces autres (Hétérotopies)",
+    "publicacao": "Architecture, Mouvement, Continuité, 5",
+    "relevancia": "Heterotopias são espaços reais que contestam espaços normalizados. Não utopias (não-lugares) mas lugares outros - jardins, cemitérios, bordéis, colônias. Espelhos invertidos da sociedade.",
+    "conceitos": [
+      "heterotopia",
+      "espaço",
+      "poder",
+      "resistencia",
+      "utopia"
+    ]
+  },
+  {
+    "id": "prigogine-1977",
+    "categoria": "ontológica",
+    "autor": "Prigogine, Ilya",
+    "ano": 1977,
+    "titulo": "Time, Structure and Fluctuations (Nobel Lecture)",
+    "publicacao": "Nobel Prize",
+    "relevancia": "Estruturas dissipativas longe do equilíbrio exibem bifurcações. Pequenas flutuações em pontos críticos determinam trajetória sistêmica. Irreversibilidade e indeterminação fundamentais.",
+    "conceitos": [
+      "bifurcacao",
+      "estruturas dissipativas",
+      "threshold",
+      "processo",
+      "tempo irreversível"
+    ]
+  },
+  {
+    "id": "badiou-1988",
+    "categoria": "ontológica",
+    "autor": "Badiou, Alain",
+    "ano": 1988,
+    "titulo": "L'Être et l'Événement",
+    "editora": "Seuil",
+    "relevancia": "Evento rompe situação estabelecida. Decisão de fidelidade ao evento sem garantia. Verdade como processo, não correspondência. Sujeito emerge através de fidelidade.",
+    "conceitos": [
+      "evento",
+      "fidelidade",
+      "decisão",
+      "verdade",
+      "sujeito"
+    ]
+  },
+  {
+    "id": "agamben-1995",
+    "categoria": "temporal",
+    "autor": "Agamben, Giorgio",
+    "ano": 1995,
+    "titulo": "Il tempo che resta: Un commento alla Lettera ai Romani",
+    "editora": "Bollati Boringhieri",
+    "relevancia": "Kairós como tempo messiânico - não chronos vazio mas tempo-agora prenhe de possibilidade. Cada instante pode ser porta pela qual Messias entra. Temporalidade revolucionária.",
+    "conceitos": [
+      "kairos",
+      "tempo messiânico",
+      "chronos",
+      "revolução",
+      "messianismo"
+    ]
+  },
+  {
+    "id": "hartog-2015",
+    "categoria": "temporal",
+    "autor": "Hartog, François",
+    "ano": 2015,
+    "titulo": "Regimes of Historicity: Presentism and Experiences of Time",
+    "editora": "Columbia University Press",
+    "relevancia": "Cronocracia opera através de regimes de historicidade. Presentismo contemporâneo apaga passado e futuro, impondo eterno presente. Temporalidades dominantes silenciam outras.",
+    "conceitos": [
+      "cronocracia",
+      "regimes de historicidade",
+      "presentismo",
+      "tempo",
+      "poder temporal"
+    ]
+  },
+  {
+    "id": "pratt-1991",
+    "categoria": "política",
+    "autor": "Pratt, Mary Louise",
+    "ano": 1991,
+    "titulo": "Arts of the Contact Zone",
+    "publicacao": "Profession 91, MLA",
+    "relevancia": "Zonas de contato: espaços onde culturas díspares encontram-se em condições assimétricas de poder. Não harmonia mas negociação, apropriação, resistência, tradução.",
+    "conceitos": [
+      "zona",
+      "contato",
+      "poder",
+      "colonialidade",
+      "fricção"
+    ]
+  },
+  {
+    "id": "canclini-1989",
+    "categoria": "ontológica",
+    "autor": "García Canclini, Néstor",
+    "ano": 1989,
+    "titulo": "Culturas Híbridas: Estrategias para Entrar y Salir de la Modernidad",
+    "editora": "Grijalbo",
+    "relevancia": "América Latina como laboratório de hibridação. Modernidade não substitui tradição mas coexiste. Contra purismos: hibridação é criatividade, não degeneração.",
+    "conceitos": [
+      "hibridação",
+      "modernidade",
+      "cultura",
+      "América Latina",
+      "mestiçagem"
+    ]
+  },
+  {
+    "id": "gladwell-2000",
+    "categoria": "ontológica",
+    "autor": "Gladwell, Malcolm",
+    "ano": 2000,
+    "titulo": "The Tipping Point: How Little Things Can Make a Big Difference",
+    "editora": "Little, Brown",
+    "relevancia": "Tipping points: limiares onde mudança incremental torna-se transformação sistêmica. Aplicável a epidemias, moda, criminalidade, movimentos sociais.",
+    "conceitos": [
+      "tipping-point",
+      "threshold",
+      "transformação sistêmica",
+      "emergência",
+      "limiar crítico"
+    ]
   }
 ]

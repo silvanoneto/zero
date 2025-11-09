@@ -8602,5 +8602,683 @@
     "to": "conhecimento",
     "name": "pratica",
     "description": "Pragmatismo pratica conhecimento como ação"
+  },
+  {
+    "from": "kairos",
+    "to": "chronos",
+    "name": "contrasta com",
+    "description": "Kairós (tempo qualitativo) contrasta com chronos (tempo quantitativo)"
+  },
+  {
+    "from": "kairos",
+    "to": "evento",
+    "name": "abre-se no",
+    "description": "Kairós é o momento oportuno onde evento se torna possível"
+  },
+  {
+    "from": "kairos",
+    "to": "decisão",
+    "name": "demanda",
+    "description": "Kairós demanda decisão no momento propício"
+  },
+  {
+    "from": "kairos",
+    "to": "performatividade",
+    "name": "atualiza-se em",
+    "description": "Kairós atualiza-se através de performatividade política"
+  },
+  {
+    "from": "cronocracia",
+    "to": "biopolitica",
+    "name": "opera via",
+    "description": "Cronocracia opera via biopoder - controle de ritmos vitais"
+  },
+  {
+    "from": "cronocracia",
+    "to": "capitalismo",
+    "name": "acelera sob",
+    "description": "Capitalismo impõe aceleração como forma de cronocracia"
+  },
+  {
+    "from": "cronocracia",
+    "to": "resistencia",
+    "name": "é contestada por",
+    "description": "Movimentos slow e sabotagem temporal resistem à cronocracia"
+  },
+  {
+    "from": "cronocracia",
+    "to": "colonialidade",
+    "name": "sincroniza via",
+    "description": "Colonialidade impõe temporalidade dominante via cronocracia"
+  },
+  {
+    "from": "anacronia",
+    "to": "hauntologia",
+    "name": "manifesta",
+    "description": "Anacronismo produtivo manifesta hauntologia - passados não mortos"
+  },
+  {
+    "from": "anacronia",
+    "to": "multitemporal",
+    "name": "revela",
+    "description": "Anacronismo revela multitemporalidade do presente"
+  },
+  {
+    "from": "anacronia",
+    "to": "colonialidade",
+    "name": "expõe",
+    "description": "Anacronismo expõe violência da imposição temporal colonial"
+  },
+  {
+    "from": "anacronia",
+    "to": "indigena",
+    "name": "valida",
+    "description": "Anacronismo produtivo valida temporalidades indígenas"
+  },
+  {
+    "from": "multitemporal",
+    "to": "estratostempo",
+    "name": "compõe-se de",
+    "description": "Multitemporalidade compõe-se de estratos temporais heterogêneos"
+  },
+  {
+    "from": "multitemporal",
+    "to": "geologico",
+    "name": "inclui",
+    "description": "Multitemporalidade inclui tempo geológico profundo"
+  },
+  {
+    "from": "multitemporal",
+    "to": "setimagera",
+    "name": "projeta-se em",
+    "description": "Multitemporalidade projeta-se nas sete gerações"
+  },
+  {
+    "from": "multitemporal",
+    "to": "ancestralidade",
+    "name": "entrelaça",
+    "description": "Multitemporalidade entrelaça passado ancestral com presente"
+  },
+  {
+    "from": "devir-imperceptivel",
+    "to": "anatman",
+    "name": "realiza",
+    "description": "Devir-imperceptível realiza anātman - dissolução do eu"
+  },
+  {
+    "from": "devir-imperceptivel",
+    "to": "vazio",
+    "name": "retorna ao",
+    "description": "Devir-imperceptível retorna ao vazio como pura potência"
+  },
+  {
+    "from": "devir-imperceptivel",
+    "to": "multiplicidade",
+    "name": "multiplica até",
+    "description": "Devir-imperceptível multiplica conexões até indiscernibilidade"
+  },
+  {
+    "from": "devir-imperceptivel",
+    "to": "desterritorializacao",
+    "name": "intensifica",
+    "description": "Devir-imperceptível intensifica desterritorialização absoluta"
+  },
+  {
+    "from": "sincronia",
+    "to": "multiplicidade",
+    "name": "coordena",
+    "description": "Sincronia sem síntese coordena multiplicidades heterogêneas"
+  },
+  {
+    "from": "sincronia",
+    "to": "commons",
+    "name": "possibilita",
+    "description": "Sincronia sem fusão possibilita commons não totalizantes"
+  },
+  {
+    "from": "sincronia",
+    "to": "composição",
+    "name": "pratica",
+    "description": "Sincronia pratica composição que respeita diferenças"
+  },
+  {
+    "from": "responsabilidade-infinita",
+    "to": "alteridade",
+    "name": "constitui-se perante",
+    "description": "Responsabilidade infinita constitui-se perante o Outro"
+  },
+  {
+    "from": "responsabilidade-infinita",
+    "to": "sujeito",
+    "name": "precede",
+    "description": "Responsabilidade precede e constitui o sujeito (Levinas)"
+  },
+  {
+    "from": "responsabilidade-infinita",
+    "to": "vulnerabilidade",
+    "name": "responde à",
+    "description": "Responsabilidade infinita responde à vulnerabilidade ontológica"
+  },
+  {
+    "from": "responsabilidade-infinita",
+    "to": "reciprocidade",
+    "name": "excede",
+    "description": "Responsabilidade infinita excede reciprocidade calculável"
+  },
+  {
+    "from": "hospitalidade",
+    "to": "alteridade",
+    "name": "acolhe",
+    "description": "Hospitalidade incondicional acolhe alteridade sem condições"
+  },
+  {
+    "from": "hospitalidade",
+    "to": "reciprocidade",
+    "name": "suspende",
+    "description": "Hospitalidade incondicional suspende reciprocidade calculada"
+  },
+  {
+    "from": "hospitalidade",
+    "to": "commons",
+    "name": "fundamenta",
+    "description": "Hospitalidade incondicional fundamenta commons verdadeiros"
+  },
+  {
+    "from": "hospitalidade",
+    "to": "paradoxo",
+    "name": "habita",
+    "description": "Hospitalidade habita paradoxo entre lei e leis"
+  },
+  {
+    "from": "justica-por-vir",
+    "to": "justiça",
+    "name": "excede",
+    "description": "Justiça-por-vir excede toda justiça presente e calculável"
+  },
+  {
+    "from": "justica-por-vir",
+    "to": "impossível",
+    "name": "é",
+    "description": "Justiça-por-vir é impossível que ancora possíveis"
+  },
+  {
+    "from": "justica-por-vir",
+    "to": "potencial",
+    "name": "mantém",
+    "description": "Justiça-por-vir mantém futuro aberto como potencial"
+  },
+  {
+    "from": "justica-por-vir",
+    "to": "evento",
+    "name": "interpela",
+    "description": "Justiça-por-vir interpela todo evento político"
+  },
+  {
+    "from": "reparacao",
+    "to": "memoriacoletiva",
+    "name": "ativa",
+    "description": "Reparação histórica ativa memória coletiva transformadora"
+  },
+  {
+    "from": "reparacao",
+    "to": "ancestralidade",
+    "name": "honra",
+    "description": "Reparação honra ancestralidade violentada"
+  },
+  {
+    "from": "reparacao",
+    "to": "colonialidade",
+    "name": "confronta",
+    "description": "Reparação confronta legados de colonialidade"
+  },
+  {
+    "from": "reparacao",
+    "to": "reconciliação",
+    "name": "possibilita",
+    "description": "Reparação possibilita reconciliação não-superficial"
+  },
+  {
+    "from": "cuidado-como-ontologia",
+    "to": "ubuntu",
+    "name": "ressoa com",
+    "description": "Cuidado como ontologia ressoa com ubuntu - somos através de cuidado"
+  },
+  {
+    "from": "cuidado-como-ontologia",
+    "to": "ontologia",
+    "name": "fundamenta",
+    "description": "Cuidado não é atividade mas fundamento ontológico"
+  },
+  {
+    "from": "cuidado-como-ontologia",
+    "to": "vulnerabilidade",
+    "name": "responde à",
+    "description": "Cuidado responde à vulnerabilidade constitutiva"
+  },
+  {
+    "from": "cuidado-como-ontologia",
+    "to": "reprodução-social",
+    "name": "sustenta",
+    "description": "Cuidado sustenta reprodução social como infraestrutura ontológica"
+  },
+  {
+    "from": "liminaridade",
+    "to": "threshold",
+    "name": "habita",
+    "description": "Liminaridade habita thresholds - limiares de transformação"
+  },
+  {
+    "from": "liminaridade",
+    "to": "transformação",
+    "name": "possibilita",
+    "description": "Liminaridade possibilita transformação radical"
+  },
+  {
+    "from": "liminaridade",
+    "to": "communitas",
+    "name": "gera",
+    "description": "Liminaridade gera communitas - vínculo direto não-estruturado"
+  },
+  {
+    "from": "liminaridade",
+    "to": "evento",
+    "name": "abre para",
+    "description": "Liminaridade abre espaço para evento transformador"
+  },
+  {
+    "from": "threshold",
+    "to": "bifurcacao",
+    "name": "torna-se",
+    "description": "Threshold torna-se bifurcação onde futuros divergem"
+  },
+  {
+    "from": "threshold",
+    "to": "tipping-point",
+    "name": "pode ser",
+    "description": "Threshold pode ser tipping point de não-retorno"
+  },
+  {
+    "from": "threshold",
+    "to": "catástrofe",
+    "name": "ameaça",
+    "description": "Threshold ameaça catástrofe sistêmica"
+  },
+  {
+    "from": "threshold",
+    "to": "potencial",
+    "name": "concentra",
+    "description": "Threshold concentra potencial transformador"
+  },
+  {
+    "from": "traducao-cosmopolitica",
+    "to": "cosmopolitica",
+    "name": "pratica",
+    "description": "Tradução cosmopolítica pratica cosmopolítica concretamente"
+  },
+  {
+    "from": "traducao-cosmopolitica",
+    "to": "equivocacao",
+    "name": "trabalha com",
+    "description": "Tradução cosmopolítica trabalha com equivocação controlada"
+  },
+  {
+    "from": "traducao-cosmopolitica",
+    "to": "indigena",
+    "name": "conecta com",
+    "description": "Tradução cosmopolítica conecta mundos indígenas e ocidentais"
+  },
+  {
+    "from": "traducao-cosmopolitica",
+    "to": "diplomacia",
+    "name": "exige",
+    "description": "Tradução cosmopolítica exige diplomacia ontológica"
+  },
+  {
+    "from": "equivocacao",
+    "to": "perspectivismo",
+    "name": "deriva de",
+    "description": "Equivocação controlada deriva do perspectivismo ameríndio"
+  },
+  {
+    "from": "equivocacao",
+    "to": "multinaturalismo",
+    "name": "expressa",
+    "description": "Equivocação expressa multinaturalismo - perspectivas sobre naturezas distintas"
+  },
+  {
+    "from": "equivocacao",
+    "to": "alteridade",
+    "name": "preserva",
+    "description": "Equivocação preserva alteridade radical"
+  },
+  {
+    "from": "intersticio",
+    "to": "autonomia",
+    "name": "abriga",
+    "description": "Espaços intersticiais abrigam autonomia concreta"
+  },
+  {
+    "from": "intersticio",
+    "to": "commons",
+    "name": "nutre",
+    "description": "Interstícios nutrem commons nas brechas do capital"
+  },
+  {
+    "from": "intersticio",
+    "to": "heterotopia",
+    "name": "manifesta-se como",
+    "description": "Interstícios manifestam-se como heterotopias"
+  },
+  {
+    "from": "intersticio",
+    "to": "resistencia",
+    "name": "possibilita",
+    "description": "Interstícios possibilitam resistência não-frontal"
+  },
+  {
+    "from": "bifurcacao",
+    "to": "processo",
+    "name": "pontua",
+    "description": "Bifurcação pontua processo com momentos de indeterminação"
+  },
+  {
+    "from": "bifurcacao",
+    "to": "potencial",
+    "name": "abre",
+    "description": "Bifurcação abre campo de potenciais divergentes"
+  },
+  {
+    "from": "bifurcacao",
+    "to": "caos",
+    "name": "emerge do",
+    "description": "Bifurcação emerge quando caos estrutura novas ordens"
+  },
+  {
+    "from": "tipping-point",
+    "to": "catástrofe",
+    "name": "pode desencadear",
+    "description": "Tipping point pode desencadear catástrofe sistêmica"
+  },
+  {
+    "from": "tipping-point",
+    "to": "colapso",
+    "name": "ameaça",
+    "description": "Tipping point ameaça colapso de sistemas complexos"
+  },
+  {
+    "from": "tipping-point",
+    "to": "emergencia",
+    "name": "também possibilita",
+    "description": "Tipping point também possibilita emergência de novas ordens"
+  },
+  {
+    "from": "heterotopia",
+    "to": "commons",
+    "name": "espacializa",
+    "description": "Heterotopias espacializam commons como lugares outros"
+  },
+  {
+    "from": "heterotopia",
+    "to": "pratica",
+    "name": "incorpora",
+    "description": "Heterotopias incorporam práticas contestatórias"
+  },
+  {
+    "from": "heterotopia",
+    "to": "lugar",
+    "name": "ressignifica",
+    "description": "Heterotopias ressignificam lugares através de práticas"
+  },
+  {
+    "from": "communitas",
+    "to": "assembleia",
+    "name": "emerge em",
+    "description": "Communitas emerge em assembleias como efervescência coletiva"
+  },
+  {
+    "from": "communitas",
+    "to": "solidariedade",
+    "name": "produz",
+    "description": "Communitas produz solidariedade direta e igualitária"
+  },
+  {
+    "from": "communitas",
+    "to": "commons",
+    "name": "fundamenta",
+    "description": "Communitas fundamenta commons como vínculo não-institucionalizado"
+  },
+  {
+    "from": "geologico",
+    "to": "antropoceno",
+    "name": "marca",
+    "description": "Tempo geológico agora marcado pelo Antropoceno"
+  },
+  {
+    "from": "geologico",
+    "to": "terra",
+    "name": "é tempo da",
+    "description": "Tempo geológico é o deep time da Terra"
+  },
+  {
+    "from": "geologico",
+    "to": "escala",
+    "name": "excede",
+    "description": "Tempo geológico excede toda escala humana"
+  },
+  {
+    "from": "escala",
+    "to": "politica",
+    "name": "é produzida por",
+    "description": "Escala não é dada mas produzida politicamente"
+  },
+  {
+    "from": "escala",
+    "to": "assemblage",
+    "name": "emerge de",
+    "description": "Escalas emergem de assemblages heterogêneos"
+  },
+  {
+    "from": "escala",
+    "to": "fricção",
+    "name": "gera",
+    "description": "Fricção entre escalas gera transformação (Tsing)"
+  },
+  {
+    "from": "impossível",
+    "to": "potencial",
+    "name": "condiciona",
+    "description": "Impossível condiciona campo de possíveis"
+  },
+  {
+    "from": "impossível",
+    "to": "evento",
+    "name": "acontece como",
+    "description": "Impossível acontece como evento disruptivo"
+  },
+  {
+    "from": "impossível",
+    "to": "paradoxo",
+    "name": "estrutura-se em",
+    "description": "Impossível estrutura-se em paradoxos produtivos"
+  },
+  {
+    "from": "decisão",
+    "to": "evento",
+    "name": "responde ao",
+    "description": "Decisão verdadeira responde ao evento sem garantias"
+  },
+  {
+    "from": "decisão",
+    "to": "fidelidade",
+    "name": "manifesta",
+    "description": "Decisão manifesta fidelidade ao evento (Badiou)"
+  },
+  {
+    "from": "decisão",
+    "to": "kairos",
+    "name": "aproveita",
+    "description": "Decisão aproveita kairós - momento oportuno"
+  },
+  {
+    "from": "paradoxo",
+    "to": "aporia",
+    "name": "manifesta-se como",
+    "description": "Paradoxo produtivo manifesta-se como aporia"
+  },
+  {
+    "from": "paradoxo",
+    "to": "recursao",
+    "name": "opera via",
+    "description": "Paradoxo opera via recursão sem fundamento"
+  },
+  {
+    "from": "paradoxo",
+    "to": "pensamento",
+    "name": "gera",
+    "description": "Paradoxo gera pensamento ao resistir dissolução"
+  },
+  {
+    "from": "mesticagem-ontologica",
+    "to": "liminaridade",
+    "name": "habita",
+    "description": "Mestiçagem ontológica habita liminaridade entre mundos"
+  },
+  {
+    "from": "mesticagem-ontologica",
+    "to": "fronteira",
+    "name": "opera na",
+    "description": "Mestiçagem ontológica opera nas fronteiras porosas"
+  },
+  {
+    "from": "mesticagem-ontologica",
+    "to": "indigena",
+    "name": "articula",
+    "description": "Mestiçagem ontológica articula pensamento indígena com outros mundos"
+  },
+  {
+    "from": "fronteira",
+    "to": "zona",
+    "name": "constitui",
+    "description": "Fronteira porosa constitui zona de contato"
+  },
+  {
+    "from": "fronteira",
+    "to": "fricção",
+    "name": "produz",
+    "description": "Fronteiras produzem fricção transformadora"
+  },
+  {
+    "from": "fronteira",
+    "to": "traducao-cosmopolitica",
+    "name": "exige",
+    "description": "Fronteiras exigem tradução cosmopolítica"
+  },
+  {
+    "from": "hibridação",
+    "to": "mesticagem-ontologica",
+    "name": "expressa",
+    "description": "Hibridação cultural expressa mestiçagem ontológica"
+  },
+  {
+    "from": "hibridação",
+    "to": "indigena",
+    "name": "revaloriza",
+    "description": "Hibridação revaloriza elementos indígenas contra purismo moderno"
+  },
+  {
+    "from": "aporia",
+    "to": "limite",
+    "name": "encontra",
+    "description": "Aporia encontra limite do pensamento representacional"
+  },
+  {
+    "from": "aporia",
+    "to": "impossível",
+    "name": "confronta",
+    "description": "Aporia confronta impossível que ainda assim deve ser pensado"
+  },
+  {
+    "from": "zona",
+    "to": "poder",
+    "name": "negocia",
+    "description": "Zona de contato negocia em condições de assimetria de poder"
+  },
+  {
+    "from": "zona",
+    "to": "colonialidade",
+    "name": "marcada por",
+    "description": "Zonas de contato historicamente marcadas por colonialidade"
+  },
+  {
+    "from": "zona",
+    "to": "encontro",
+    "name": "possibilita",
+    "description": "Zona de contato possibilita encontros transformadores"
+  },
+  {
+    "from": "fricção",
+    "to": "heterogeneidade",
+    "name": "surge de",
+    "description": "Fricção surge do encontro de heterogeneidades"
+  },
+  {
+    "from": "fricção",
+    "to": "transformação",
+    "name": "produz",
+    "description": "Fricção produz transformação através de atrito produtivo"
+  },
+  {
+    "from": "encontro",
+    "to": "afeto",
+    "name": "produz",
+    "description": "Encontro produz afeto - capacidade de afetar e ser afetado"
+  },
+  {
+    "from": "encontro",
+    "to": "composição",
+    "name": "possibilita",
+    "description": "Encontro possibilita composição de corpos"
+  },
+  {
+    "from": "encontro",
+    "to": "intracao",
+    "name": "efetiva",
+    "description": "Encontro efetiva intra-ação constitutiva"
+  },
+  {
+    "from": "contato",
+    "to": "devir",
+    "name": "abre zona de",
+    "description": "Zona de indeterminação abre devires múltiplos"
+  },
+  {
+    "from": "contato",
+    "to": "liminaridade",
+    "name": "é forma de",
+    "description": "Zona de indeterminação é forma radical de liminaridade"
+  },
+  {
+    "from": "contato",
+    "to": "indiscernível",
+    "name": "produz",
+    "description": "Zona de indeterminação produz indiscernibilidade"
+  },
+  {
+    "from": "indiscernível",
+    "to": "devir-imperceptivel",
+    "name": "realiza-se em",
+    "description": "Indiscernibilidade realiza-se em devir-imperceptível"
+  },
+  {
+    "from": "indiscernível",
+    "to": "anatman",
+    "name": "expressa",
+    "description": "Indiscernibilidade expressa anātman - ausência de eu fixo"
+  },
+  {
+    "from": "indiscernível",
+    "to": "vazio",
+    "name": "aproxima-se do",
+    "description": "Indiscernibilidade aproxima-se do vazio como campo indiferenciado"
   }
 ]

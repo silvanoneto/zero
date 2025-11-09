@@ -3447,5 +3447,515 @@
     ],
     "layer": "ecologica",
     "color": "0x66ff99"
+  },
+  {
+    "id": "kairos",
+    "name": "Kairós",
+    "description": "Tempo qualitativo do momento oportuno. Não é chronos (tempo quantitativo linear), mas ocasião propícia, momento de decisão onde futuros se abrem. Temporalidade do evento político.",
+    "connections": [
+      "tempo",
+      "evento",
+      "devir",
+      "potencial",
+      "performatividade",
+      "decisão"
+    ],
+    "layer": "temporal",
+    "color": "0xff99cc"
+  },
+  {
+    "id": "cronocracia",
+    "name": "Cronocracia",
+    "description": "Poder sobre o tempo. Quem controla ritmos sociais? Aceleração capitalista versus slow movements. Temporalidades dominantes apagam temporalidades subalternas.",
+    "connections": [
+      "tempo",
+      "poder",
+      "capitalismo",
+      "resistencia",
+      "biopolitica",
+      "colonialidade"
+    ],
+    "layer": "temporal",
+    "color": "0xff99cc"
+  },
+  {
+    "id": "anacronia",
+    "name": "Anacronismo Produtivo",
+    "description": "Tempos múltiplos coexistem. Modernidade não substitui outras temporalidades - sobrepõe-se violentamente. Anacronismo revela que 'contemporâneo' é sempre múltiplo.",
+    "connections": [
+      "tempo",
+      "hauntologia",
+      "memoriacoletiva",
+      "colonialidade",
+      "indigena",
+      "multitemporal"
+    ],
+    "layer": "temporal",
+    "color": "0xff99cc"
+  },
+  {
+    "id": "multitemporal",
+    "name": "Multitemporalidade",
+    "description": "Diferentes camadas temporais atravessam o presente. Geológico, biológico, histórico, geracional coexistem. Contra linearidade progressista: tempo é heterocrônico.",
+    "connections": [
+      "tempo",
+      "estratostempo",
+      "setimagera",
+      "ancestralidade",
+      "geologico",
+      "processo"
+    ],
+    "layer": "temporal",
+    "color": "0xff99cc"
+  },
+  {
+    "id": "devir-imperceptivel",
+    "name": "Devir-Imperceptível",
+    "description": "Deleuze: tornar-se indiscernível, clandestino. Não é desaparecer mas multiplicar conexões até dissolver contornos identitários. Ápice do devir.",
+    "connections": [
+      "devir",
+      "multiplicidade",
+      "anatman",
+      "vazio",
+      "rizoma",
+      "desterritorializacao"
+    ],
+    "layer": "temporal",
+    "color": "0xff99cc"
+  },
+  {
+    "id": "sincronia",
+    "name": "Sincronia sem Síntese",
+    "description": "Tempos heterogêneos podem sincronizar-se sem fusão. Como músicos tocam juntos mantendo diferenças. Coordenação relacional versus unificação totalizante.",
+    "connections": [
+      "tempo",
+      "multiplicidade",
+      "commons",
+      "composição",
+      "heterogeneidade",
+      "assemblage"
+    ],
+    "layer": "temporal",
+    "color": "0xff99cc"
+  },
+  {
+    "id": "responsabilidade-infinita",
+    "name": "Responsabilidade Infinita",
+    "description": "Levinas: responsabilidade precede liberdade. Não escolhemos ser responsáveis - somos constituídos pela responsabilidade ao Outro. Infinita porque nunca pode ser quitada.",
+    "connections": [
+      "alteridade",
+      "ética",
+      "vulnerabilidade",
+      "sujeito",
+      "ontologia",
+      "reciprocidade"
+    ],
+    "layer": "etica",
+    "color": "0xffcccc"
+  },
+  {
+    "id": "hospitalidade",
+    "name": "Hospitalidade Incondicional",
+    "description": "Derrida: hospitalidade verdadeira não calcula. Acolher o Outro sem condições, sem demanda de identidade ou reciprocidade. Paradoxo: lei da hospitalidade versus leis de hospitalidade.",
+    "connections": [
+      "alteridade",
+      "ética",
+      "reciprocidade",
+      "vulnerabilidade",
+      "justiça",
+      "commons"
+    ],
+    "layer": "etica",
+    "color": "0xffcccc"
+  },
+  {
+    "id": "justica-por-vir",
+    "name": "Justiça-Por-Vir",
+    "description": "Derrida: justiça nunca está presente - sempre por vir. Não é direito (calculável), mas excede todo cálculo. Mantém futuro aberto contra totalização.",
+    "connections": [
+      "justiça",
+      "ética",
+      "evento",
+      "potencial",
+      "devir",
+      "impossível"
+    ],
+    "layer": "etica",
+    "color": "0xffcccc"
+  },
+  {
+    "id": "reparacao",
+    "name": "Reparação Histórica",
+    "description": "Responsabilidade por violências passadas persiste. Não é compensação individual mas reconhecimento estrutural. Memória ativa que transforma presente.",
+    "connections": [
+      "memoriacoletiva",
+      "justiça",
+      "ancestralidade",
+      "colonialidade",
+      "responsabilidade",
+      "reconciliação"
+    ],
+    "layer": "etica",
+    "color": "0xffcccc"
+  },
+  {
+    "id": "cuidado-como-ontologia",
+    "name": "Cuidado como Ontologia",
+    "description": "Não é atividade entre seres pré-existentes. Somos constituídos através de cuidado. Heidegger (Sorge), ética do cuidado feminista, ubuntu: ser é cuidar.",
+    "connections": [
+      "cuidado",
+      "ontologia",
+      "ubuntu",
+      "vulnerabilidade",
+      "reciprocidade",
+      "reprodução-social"
+    ],
+    "layer": "etica",
+    "color": "0xffcccc"
+  },
+  {
+    "id": "liminaridade",
+    "name": "Liminaridade",
+    "description": "Turner: estado betwixt and between. Nem aqui nem lá. Threshold onde transformação acontece. Rituais habitam liminaridade; movimentos sociais também.",
+    "connections": [
+      "threshold",
+      "transformação",
+      "devir",
+      "evento",
+      "communitas",
+      "rito"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "threshold",
+    "name": "Threshold (Limiar)",
+    "description": "Zona de indeterminação onde sistemas transitam. Não é linha mas região espessa. Ecological thresholds: pontos de não-retorno. Limiares políticos, ontológicos, éticos.",
+    "connections": [
+      "limite",
+      "transformação",
+      "bifurcação",
+      "tipping-point",
+      "catástrofe",
+      "potencial"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "traducao-cosmopolitica",
+    "name": "Tradução Cosmopolítica",
+    "description": "Stengers: tradução entre mundos ontologicamente distintos. Não é encontrar equivalências mas criar conexões parciais que respeitam incomensurabilidade.",
+    "connections": [
+      "cosmopolitica",
+      "indigena",
+      "ontologia",
+      "diplomacia",
+      "equivocação",
+      "conhecimento"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "equivocacao",
+    "name": "Equivocação Controlada",
+    "description": "Viveiros de Castro: equívocos não são erros mas diferenças de mundo. Perspectivas distintas não compartilham referentes. Equivocação controlada mantém diferença produtiva.",
+    "connections": [
+      "perspectivismo",
+      "traducao-cosmopolitica",
+      "ontologia",
+      "indigena",
+      "alteridade",
+      "multinaturalismo"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "intersticio",
+    "name": "Espaços Intersticiais",
+    "description": "Brechas no tecido do poder. Não são exteriores mas fissuras internas. Autonomia se constrói nos interstícios, não em pureza separada.",
+    "connections": [
+      "autonomia",
+      "resistencia",
+      "commons",
+      "heterotopia",
+      "liminaridade",
+      "poder"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "bifurcacao",
+    "name": "Bifurcação",
+    "description": "Prigogine: ponto onde sistema instável pode tomar múltiplos caminhos. Pequenas flutuações determinam trajetória. Momento de máxima indeterminação e criatividade.",
+    "connections": [
+      "threshold",
+      "potencial",
+      "catástrofe",
+      "evento",
+      "processo",
+      "caos"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "tipping-point",
+    "name": "Tipping Point",
+    "description": "Limiar crítico onde mudança incremental torna-se transformação sistêmica. Clima, ecossistemas, movimentos sociais: limiares de não-retorno.",
+    "connections": [
+      "threshold",
+      "bifurcacao",
+      "catástrofe",
+      "transformação",
+      "colapso",
+      "emergencia"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "heterotopia",
+    "name": "Heterotopia",
+    "description": "Foucault: espaços outros que espelham e contestam espaços reais. Não são utopias (não-lugares) mas lugares efetivamente diferentes. Jardins, cemitérios, teatros, commons.",
+    "connections": [
+      "intersticio",
+      "commons",
+      "autonomia",
+      "pratica",
+      "resistencia",
+      "lugar"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "communitas",
+    "name": "Communitas",
+    "description": "Turner: estrutura social emerge espontaneamente na liminaridade. Não é comunidade institucionalizada mas vínculo direto, igualitário, transitório. Efervescência coletiva.",
+    "connections": [
+      "liminaridade",
+      "comunidade",
+      "assembleia",
+      "evento",
+      "solidariedade",
+      "commons"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "geologico",
+    "name": "Tempo Geológico",
+    "description": "Deep time da Terra. Estratos, erosões, sedimentações operam em escalas que excedem história humana. Antropoceno: humanos como força geológica.",
+    "connections": [
+      "multitemporal",
+      "estratostempo",
+      "terra",
+      "antropoceno",
+      "escala",
+      "temporalidade"
+    ],
+    "layer": "temporal",
+    "color": "0xff99cc"
+  },
+  {
+    "id": "escala",
+    "name": "Política de Escala",
+    "description": "Escalas não são dadas mas produzidas. Local/global não são níveis fixos mas efeitos de práticas. Tsing: fricção entre escalas gera transformação.",
+    "connections": [
+      "politica",
+      "poder",
+      "commons",
+      "global",
+      "local",
+      "assemblage"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "impossível",
+    "name": "Im/possível",
+    "description": "Derrida: experiência do impossível como condição de possibilidade. Decisão verdadeira atravessa indecidível. Justiça, perdão, hospitalidade: impossíveis que acontecem.",
+    "connections": [
+      "potencial",
+      "evento",
+      "justica-por-vir",
+      "hospitalidade",
+      "paradoxo",
+      "decisão"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "decisão",
+    "name": "Decisão",
+    "description": "Não é aplicação de regra mas atravessamento do indecidível. Badiou: fidelidade ao evento requer decisões sem garantia. Kierkegaard: salto de fé.",
+    "connections": [
+      "evento",
+      "impossível",
+      "fidelidade",
+      "kairos",
+      "agencia",
+      "responsabilidade"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "paradoxo",
+    "name": "Paradoxo Produtivo",
+    "description": "Contradições que não se resolvem mas geram pensamento. Hospitalidade incondicional versus leis. Democracia por vir versus democracia existente. Habitar tensão.",
+    "connections": [
+      "impossível",
+      "recursao",
+      "limite",
+      "aporia",
+      "dialética",
+      "pensamento"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "mesticagem-ontologica",
+    "name": "Mestiçagem Ontológica",
+    "description": "Anzaldúa: borderlands onde ontologias mestiçam-se. Não é fusão harmoniosa mas zona de tensão produtiva. Nepantla: estar entre mundos.",
+    "connections": [
+      "liminaridade",
+      "traducao-cosmopolitica",
+      "indigena",
+      "heterogeneidade",
+      "fronteira",
+      "hibridação"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "fronteira",
+    "name": "Fronteira Porosa",
+    "description": "Não é linha de separação mas zona de contato, fricção, tradução. Fronteiras são produtivas quando porosas. Tsing: friction como encontro transformador.",
+    "connections": [
+      "mesticagem-ontologica",
+      "liminaridade",
+      "threshold",
+      "traducao-cosmopolitica",
+      "contato",
+      "zona"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "hibridação",
+    "name": "Hibridação",
+    "description": "García Canclini: culturas urbanas latino-americanas como híbridos de tradicional/moderno. Não é degeneração mas criatividade. Contra purismos.",
+    "connections": [
+      "mesticagem-ontologica",
+      "traducao-cosmopolitica",
+      "modernidade",
+      "indigena",
+      "cultura",
+      "criatividade"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "aporia",
+    "name": "Aporia",
+    "description": "Impasse produtivo. Derrida: aporias não são falhas mas estrutura do pensamento. Caminho sem passagem que ainda assim deve ser atravessado.",
+    "connections": [
+      "paradoxo",
+      "impossível",
+      "limite",
+      "pensamento",
+      "desconstrução",
+      "filosofia"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "zona",
+    "name": "Zona de Contato",
+    "description": "Pratt: espaço social onde culturas díspares encontram-se, chocam-se, entrelaçam-se. Não é harmonia mas negociação contínua em condições de assimetria de poder.",
+    "connections": [
+      "fronteira",
+      "traducao-cosmopolitica",
+      "poder",
+      "colonialidade",
+      "fricção",
+      "encontro"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "fricção",
+    "name": "Fricção",
+    "description": "Tsing: atrito entre escalas, ontologias, projetos. Fricção não é apenas resistência mas onde conexão heterogênea gera calor, movimento, transformação.",
+    "connections": [
+      "zona",
+      "fronteira",
+      "escala",
+      "heterogeneidade",
+      "transformação",
+      "encontro"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "encontro",
+    "name": "Encontro",
+    "description": "Spinoza: corpos se encontram e compõem ou decompõem. Não é fusão mas composição. Deleuze: encontro produz afeto - capacidade de afetar e ser afetado.",
+    "connections": [
+      "afeto",
+      "composição",
+      "zona",
+      "fricção",
+      "intracao",
+      "evento"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "contato",
+    "name": "Zona de Indeterminação",
+    "description": "Deleuze: zona onde distinções tornam-se indiscerníveis. Humano/animal, orgânico/inorgânico, vivo/morto. Não confusão mas devir.",
+    "connections": [
+      "devir",
+      "liminaridade",
+      "threshold",
+      "anatman",
+      "multiplicidade",
+      "indiscernível"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "indiscernível",
+    "name": "Indiscernibilidade",
+    "description": "Leibniz invertido: indiscerníveis não são idênticos mas múltiplos em devir. Zona onde diferença opera sem identidade distinta.",
+    "connections": [
+      "devir-imperceptivel",
+      "contato",
+      "multiplicidade",
+      "anatman",
+      "vazio",
+      "diferença"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
   }
 ]
