@@ -1243,7 +1243,7 @@ body:not(.light-theme) .theme-icon {
 .nav-index {
     position: fixed;
     bottom: 5rem;
-    left: 1rem;
+    right: 1rem;
     max-width: 320px;
     max-height: calc(100vh - 7rem);
     background: var(--void);
@@ -1252,7 +1252,7 @@ body:not(.light-theme) .theme-icon {
     padding: 1.5rem;
     z-index: 999;
     opacity: 0;
-    transform: translateX(-30px) scale(0.95);
+    transform: translateX(30px) scale(0.95);
     pointer-events: none;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(10px);
@@ -1285,10 +1285,10 @@ body:not(.light-theme) .theme-icon {
 @keyframes menuSlideIn {
     0% {
         opacity: 0;
-        transform: translateX(-30px) scale(0.9);
+        transform: translateX(30px) scale(0.9);
     }
     50% {
-        transform: translateX(5px) scale(1.02);
+        transform: translateX(-5px) scale(1.02);
     }
     100% {
         opacity: 1;
@@ -1830,8 +1830,8 @@ body.light-theme .reading-info {
 
     .nav-index {
         top: 4rem;
-        left: 0.75rem;
-        right: auto;
+        right: 0.75rem;
+        left: auto;
         max-width: 320px;
         max-height: 70vh;
     }
