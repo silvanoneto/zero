@@ -703,7 +703,8 @@ body.symbol-takeover {
 }
 
 /* Nav toggle button (now inside audio-ui) */
-.nav-toggle {
+.nav-toggle,
+.rizoma-button {
     background: transparent;
     border: 1px solid rgba(255,255,255,0.1);
     color: var(--emergence);
@@ -721,17 +722,43 @@ body.symbol-takeover {
     min-height: 44px;
 }
 
-.nav-toggle:hover {
+.rizoma-button {
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.rizoma-button::after {
+    content: 'RIZOMA';
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.65rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    letter-spacing: 0.1em;
+}
+
+.rizoma-button:hover::after {
+    opacity: 0.7;
+}
+
+.nav-toggle:hover,
+.rizoma-button:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: var(--emergence);
 }
 
-.nav-toggle:focus-visible {
+.nav-toggle:focus-visible,
+.rizoma-button:focus-visible {
     outline: 2px solid var(--emergence);
     outline-offset: 2px;
 }
 
-.nav-toggle:active {
+.nav-toggle:active,
+.rizoma-button:active {
     transform: scale(0.95);
 }
 
@@ -788,18 +815,6 @@ body.symbol-takeover {
     color: var(--trace);
     opacity: 0.7;
     white-space: nowrap;
-}
-
-.click-counter {
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 0.5rem;
-    font-size: 0.75rem;
-    color: var(--emergence);
-    white-space: nowrap;
-    pointer-events: none;
 }
 
 /* --------------------------------------------

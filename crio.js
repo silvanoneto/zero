@@ -1431,7 +1431,7 @@ function initializeAudioSystem() {
             particle.classList.add('stabilized');
         });
         
-        muteBtn.style.display = 'none';
+        // Keep button visible, just update the label text
         muteLabel.style.display = 'block';
         muteLabel.classList.add('blink');
         updateMuteLabel();
@@ -1443,7 +1443,6 @@ function initializeAudioSystem() {
                 clearInterval(muteTimer);
                 muteTimer = null;
                 audio.muted = false;
-                muteBtn.style.display = 'block';
                 muteLabel.style.display = 'none';
                 muteLabel.classList.remove('blink');
                 
@@ -1470,15 +1469,47 @@ function initializeAudioSystem() {
     }
 
     /**
-     * Dissolve and reload page
+     * Dissolve and reload page with void symbol animation
      */
     function dissolveAndReload() {
-        document.body.style.transition = 'opacity 3s ease-out';
-        document.body.style.opacity = '0';
+        const main = document.querySelector('main');
+        const audioUI = document.querySelector('.audio-ui');
+        const voidSymbol = document.querySelector('.void-symbol');
+        
+        // Fade out main content
+        main.style.transition = 'opacity 6s ease-out';
+        main.style.opacity = '0';
+        
+        // Fade out audio UI
+        if (audioUI) {
+            audioUI.style.transition = 'opacity 6s ease-out';
+            audioUI.style.opacity = '0';
+        }
+        
+        // Activate void symbol
+        if (voidSymbol) {
+            voidSymbol.classList.add('active');
+            
+            // After 3 seconds, start zoom
+            setTimeout(() => {
+                voidSymbol.classList.add('zoom');
+                document.body.classList.add('symbol-takeover');
+            }, 3000);
+        }
+        
+        // Remove all particles after fade
+        setTimeout(() => {
+            const particles = document.querySelectorAll('.particle');
+            particles.forEach(particle => {
+                particle.style.transition = 'opacity 6s ease-out';
+                particle.style.opacity = '0';
+            });
+        }, 3000);
+        
+        // After complete animation (15s zoom + 5s hold = 20s total), reload
         setTimeout(() => {
             window.location.reload();
-            document.body.style.opacity = '1';
-        }, 3000);
+        }, 20000);
     }
 
     /**
