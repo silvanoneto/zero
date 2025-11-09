@@ -1,0 +1,48 @@
+{
+  "name": "CRIO - Ontologia Relacional Interativa",
+  "short_name": "CRIO",
+  "description": "Uma experiência filosófica interativa explorando ontologia relacional através de sete CRIOS",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><text y='150' font-size='150' fill='%23f0f0f0'>∅</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><text y='400' font-size='400' fill='%23f0f0f0'>∅</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "entertainment", "lifestyle"],
+  "shortcuts": [
+    {
+      "name": "Introdução",
+      "short_name": "Intro",
+      "description": "O que são CRIOS",
+      "url": "/#intro",
+      "icons": []
+    },
+    {
+      "name": "Primeiro CRIO",
+      "short_name": "CRIO 1",
+      "description": "O Vazio Que Povoa",
+      "url": "/#crio-1",
+      "icons": []
+    }
+  ],
+  "share_target": {
+    "action": "/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded"
+  }
+}

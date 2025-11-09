@@ -1,0 +1,14 @@
+# robots.txt for CRIO - Ontologia Relacional Interativa
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://revolucaocibernetica.com/sitemap.xml
+
+# Crawl delay (optional, helps with server load)
+Crawl-delay: 1
+
+# Disallow specific paths (if needed in future)
+# Disallow: /private/
+# Disallow: /temp/

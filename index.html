@@ -2,18 +2,136 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CRIO: onde achar e criar são o mesmo movimento">
-    <title>∅ → CRIO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    
+    <!-- Primary Meta Tags -->
+    <title>∅ → CRIO | Ontologia Relacional Interativa</title>
+    <meta name="title" content="∅ → CRIO | Ontologia Relacional Interativa">
+    <meta name="description" content="Uma experiência filosófica interativa explorando ontologia relacional através de oito CRIOS: do vazio que povoa ao sujeito político relacional. Leitura imersiva com áudio sincronizado.">
+    <meta name="keywords" content="CRIO, ontologia relacional, filosofia interativa, vazio, emergência, multiplicidade, recursão, agência distribuída, tempo entrelaçado, política relacional">
+    <meta name="author" content="Revolução Cibernética">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://revolucaocibernetica.com/">
+    <meta property="og:title" content="∅ → CRIO | Ontologia Relacional Interativa">
+    <meta property="og:description" content="Explore os oito CRIOS: uma jornada filosófica interativa do vazio ao sujeito político relacional. Experiência imersiva com áudio sincronizado e animações emergentes.">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="CRIO">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://revolucaocibernetica.com/">
+    <meta name="twitter:title" content="∅ → CRIO | Ontologia Relacional Interativa">
+    <meta name="twitter:description" content="Uma experiência filosófica interativa explorando ontologia relacional através de oito CRIOS. Leitura imersiva com áudio sincronizado.">
+    <meta name="twitter:creator" content="@revolucaocibernetica">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://revolucaocibernetica.com/">
+    
+    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80' fill='%23f0f0f0'>∅</text></svg>">
+    
+    <!-- Robots & Crawlers -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    
+    <!-- Language -->
+    <link rel="alternate" hreflang="pt-br" href="https://revolucao-cibernetica.org/">
+    <link rel="alternate" hreflang="x-default" href="https://revolucao-cibernetica.org/">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
     
     <!-- Marked.js para renderizar markdown -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" onerror="handleMarkedLoadError()"></script>
+    
+    <!-- 
+        CRIO uses intelligent caching via localStorage to improve performance.
+        Content is cached for 7 days with version checking.
+        Press Ctrl+Shift+C (or Cmd+Shift+C on Mac) to clear cache and reload.
+    -->
+    
+    <!-- Error handler for marked.js CDN failure -->
+    <script>
+        function handleMarkedLoadError() {
+            console.error('Failed to load marked.js from CDN');
+            document.addEventListener('DOMContentLoaded', () => {
+                const content = document.getElementById('content');
+                if (content) {
+                    content.classList.remove('loading');
+                    content.innerHTML = `
+                        <div class="error-container">
+                            <div class="error-icon">🌐</div>
+                            <h2>Erro de dependência</h2>
+                            <p class="error-description">
+                                Não foi possível carregar a biblioteca marked.js do CDN.
+                            </p>
+                            <div class="error-section">
+                                <h3>Possíveis causas:</h3>
+                                <ul class="error-list">
+                                    <li>Sem conexão com a internet</li>
+                                    <li>CDN indisponível</li>
+                                    <li>Bloqueio de firewall ou proxy</li>
+                                </ul>
+                            </div>
+                            <div class="error-section">
+                                <h3>Soluções:</h3>
+                                <p class="info-text">
+                                    1. Verifique sua conexão com a internet<br>
+                                    2. Tente novamente em alguns minutos<br>
+                                    3. Verifique se há bloqueios de firewall
+                                </p>
+                            </div>
+                            <button onclick="location.reload()" class="retry-button">
+                                Tentar novamente
+                            </button>
+                        </div>
+                    `;
+                }
+            });
+        }
+    </script>
+    
+    <!-- Structured Data (Schema.org JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "CRIO: Ontologia Relacional Interativa",
+        "description": "Uma experiência filosófica interativa explorando ontologia relacional através de oito CRIOS: do vazio que povoa ao sujeito político relacional.",
+        "author": {
+            "@type": "Organization",
+            "name": "Revolução Cibernética"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Revolução Cibernética"
+        },
+        "datePublished": "2025-11-08",
+        "dateModified": "2025-11-08",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://revolucaocibernetica.com/"
+        },
+        "inLanguage": "pt-BR",
+        "keywords": "ontologia relacional, filosofia interativa, CRIO, vazio, emergência, multiplicidade",
+        "articleSection": "Filosofia",
+        "genre": "Filosofia Interativa"
+    }
+    </script>
 </head>
 <body>
+    <!-- Skip to main content link for screen readers -->
+    <a href="#content" class="skip-to-content">Pular para o conteúdo principal</a>
+
     <!-- Progress Bar -->
     <div class="progress-bar" role="progressbar" aria-label="Progresso de leitura" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
         <div class="progress-bar-fill"></div>
@@ -26,43 +144,71 @@
 
     <!-- Reading Info -->
     <div class="reading-info" role="status" aria-live="polite">
-        <span id="reading-progress">0%</span> · 
-        <span id="reading-time">~0 min restantes</span>
+        <span id="reading-progress" aria-label="Porcentagem de leitura">0%</span> · 
+        <span id="reading-time" aria-label="Tempo estimado restante">~0 min restantes</span>
     </div>
 
-    <!-- Navigation Toggle -->
-    <button class="nav-toggle" id="nav-toggle" aria-label="Alternar índice de navegação" aria-expanded="false">
-        ☰ Índice
-    </button>
+    <!-- Audio Controls -->
+    <div class="audio-ui" role="group" aria-label="Controles de áudio e navegação">
+        <button class="nav-toggle" id="nav-toggle" aria-label="Alternar índice de navegação" aria-expanded="false" aria-controls="nav-index">
+            <span aria-hidden="true">☰</span>
+        </button>
+        <button class="play-button" id="play-btn" aria-label="Reproduzir áudio de fundo">▶</button>
+        <button class="mute-button" id="mute-btn" aria-label="Silenciar por 99 segundos e alternar tema">
+            <span id="mute-label" aria-hidden="true">•</span>
+            <span id="click-counter" class="click-counter" aria-live="polite"></span>
+        </button>
+        <span id="audio-status" class="audio-status" aria-live="polite"></span>
+    </div>
 
     <!-- Navigation Index -->
-    <nav class="nav-index" id="nav-index" role="navigation" aria-label="Índice de CRIOS">
+    <nav class="nav-index" id="nav-index" role="navigation" aria-label="Índice de CRIOS" aria-hidden="false">
         <h3>Navegação</h3>
-        <ul id="nav-list">
+        <ul id="nav-list" role="list">
             <!-- Will be populated dynamically -->
         </ul>
     </nav>
 
-    <main>
-        <div id="content" class="loading">
+    <main id="main-content" role="main">
+        <!-- Loading Skeleton (shown during initial load) -->
+        <div id="skeleton-loader" class="skeleton-loader" aria-hidden="true">
+            <div class="skeleton-header">
+                <div class="skeleton-title"></div>
+                <div class="skeleton-subtitle"></div>
+            </div>
+            <div class="skeleton-content">
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line short"></div>
+                <div class="skeleton-spacer"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line short"></div>
+                <div class="skeleton-spacer"></div>
+                <div class="skeleton-quote">
+                    <div class="skeleton-line"></div>
+                    <div class="skeleton-line short"></div>
+                </div>
+                <div class="skeleton-spacer"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line short"></div>
+            </div>
+        </div>
+
+        <!-- Actual Content (populated dynamically) -->
+        <div id="content" class="loading" aria-live="polite" aria-busy="true" style="display: none;">
             ∅ → carregando CRIO...
         </div>
     </main>
 
     <!-- Símbolo do vazio -->
-    <div class="void-symbol">∅</div>
-
-    <!-- Click counter feedback -->
-    <div class="click-counter" id="click-counter" aria-live="polite" aria-atomic="true"></div>
+    <div class="void-symbol" aria-hidden="true">∅</div>
 
     <!-- Áudio de fundo -->
-    <audio id="bg-audio" src="CRIO.mp3" preload="none"></audio>
-
-    <!-- Controles de áudio minimalistas -->
-    <div class="audio-ui" role="region" aria-label="Controles de áudio" style="display: none;">
-        <button id="mute-btn" title="Mudo por 99 segundos" aria-label="Mudo por 99 segundos">CRIO</button>
-        <div class="label" id="mute-label" style="display: none;">—</div>
-    </div>
+    <audio id="bg-audio" src="CRIO.mp3" preload="none" aria-label="Áudio de fundo CRIO"></audio>
 
     <!-- External JavaScript -->
     <script src="crio.js"></script>
