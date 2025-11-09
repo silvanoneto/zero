@@ -466,6 +466,9 @@ async function init() {
     
     // Event listeners da legenda
     setupLegendListeners();
+    
+    // Atualizar contagens iniciais da legenda
+    updateLegendCounts();
 
     loading.style.display = 'none';
     animate();
@@ -1924,6 +1927,7 @@ function resetView() {
     // Limpar seleção de cards e resetar filtros
     selectedCards.clear();
     resetConnectionFilter();
+    updateLegendCounts(); // Atualizar contagens após resetar filtros
     
     infoPanel.classList.remove('visible');
     
@@ -2434,7 +2438,7 @@ function toggleLegend() {
         if (icon) icon.textContent = '✕';
     } else {
         legend.classList.add('hidden');
-        if (icon) icon.textContent = '⬚';
+        if (icon) icon.textContent = '◫';
     }
 }
 
@@ -2482,6 +2486,9 @@ function setupLegendListeners() {
                 lines.forEach(line => {
                     line.visible = true;
                 });
+                
+                // Atualizar contagens
+                updateLegendCounts();
                 
                 // Re-renderizar cards sem filtro
                 if (viewMode === 'cards') {
@@ -2550,6 +2557,9 @@ function setupLegendListeners() {
                     renderCards(Array.from(activeLayerFilters));
                 }
                 
+                // Atualizar contagens
+                updateLegendCounts();
+                
                 // Contar conceitos nas camadas selecionadas
                 const count = nodes.filter(n => activeLayerFilters.has(n.userData.layer)).length;
                 const layerNames = {
@@ -2573,6 +2583,54 @@ function setupLegendListeners() {
                 }
             }
         });
+    });
+}
+
+// Atualizar contagens da legenda dinamicamente
+function updateLegendCounts() {
+    const legendItems = document.querySelectorAll('.legend-item');
+    
+    legendItems.forEach(item => {
+        const layer = item.dataset.layer;
+        const countElement = item.querySelector('.legend-count');
+        
+        if (!countElement) return;
+        
+        let count = 0;
+        
+        if (activeLayerFilters.size === 0) {
+            // Sem filtros: contar todos os nós da camada
+            count = nodes.filter(n => n.userData.layer === layer).length;
+        } else if (activeLayerFilters.has(layer)) {
+            // Camada está selecionada: mostrar total da camada
+            count = nodes.filter(n => n.userData.layer === layer).length;
+        } else {
+            // Camada não selecionada: mostrar quantos conceitos desta camada
+            // estão conectados com as camadas selecionadas
+            const visibleNodeIds = new Set(
+                nodes.filter(n => activeLayerFilters.has(n.userData.layer))
+                     .map(n => n.userData.id)
+            );
+            
+            // Encontrar nós desta camada que têm conexão com nós visíveis
+            const connectedNodes = nodes.filter(n => {
+                if (n.userData.layer !== layer) return false;
+                
+                // Verificar se tem alguma conexão com nós visíveis
+                return n.userData.connections.some(connId => visibleNodeIds.has(connId));
+            });
+            
+            count = connectedNodes.length;
+        }
+        
+        countElement.textContent = count.toString();
+        
+        // Atualizar estilo baseado na contagem
+        if (count === 0 && activeLayerFilters.size > 0 && !activeLayerFilters.has(layer)) {
+            countElement.style.opacity = '0.3';
+        } else {
+            countElement.style.opacity = '1';
+        }
     });
 }
 
