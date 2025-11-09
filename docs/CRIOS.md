@@ -968,6 +968,238 @@ O convite permanece: habite os CRIOS. Não como verdades a serem acreditadas mas
 
 ---
 
+## REFERÊNCIAS BIBLIOGRÁFICAS
+
+### Metodologia de Citação
+
+As referências estão organizadas tematicamente por CRIO, seguindo a estrutura argumentativa do texto. Cada entrada identifica: autor(a), obra, ano, relevância específica para CRIOS, e limitações críticas quando aplicável.
+
+### Fundamentos Conceituais
+
+**Austin, J.L.** (1962). *How to Do Things with Words*. Oxford University Press.  
+→ Performatividade linguística: enunciados criam realidade através de enunciação. Base para ontologia performativa de CRIO.
+
+**Whitehead, A.N.** (1929). *Process and Reality*. Macmillan.  
+→ Filosofia de processo: ser como processo, não substância. "Ocasiões de experiência" fundamentam rejeição de atomismo.
+
+**Deleuze, G. & Guattari, F.** (1987). *A Thousand Plateaus: Capitalism and Schizophrenia*. University of Minnesota Press.  
+→ Rizoma, multiplicidade, conexão sem hierarquia. Emergência sem origem.
+
+### CRIO 1: O Vazio Que Povoa
+
+#### Filosofia Budista Mādhyamika
+
+**Nāgārjuna** (c. 200 EC). *Mūlamadhyamakakārikā* (Versos Fundamentais do Caminho do Meio).  
+→ Śūnyatā (vacuidade) como ausência de essência independente. Pratītyasamutpāda (origem dependente).
+
+**Candrakīrti** (c. 600 EC). *Prasannapadā* (Palavras Claras).  
+→ Comentário sobre Mādhyamika. Śūnyatā não é existência nem não-existência.
+
+#### Filosofia do Processo
+
+**Bergson, H.** (1896). *Matter and Memory*. Zone Books.  
+→ Duração (*durée*) como multiplicidade virtual que se atualiza. Continuidade criadora.
+
+**Bergson, H.** (1907). *Creative Evolution*. Henry Holt.  
+→ *Élan vital*: impulso criativo. Natureza como processo perpétuo de criação.
+
+#### Matemática e Teoria de Conjuntos
+
+**Cantor, G.** (1883). *Grundlagen einer allgemeinen Mannigfaltigkeitslehre*. Teubner.  
+→ Conjunto vazio (∅) como base de toda construção matemática.
+
+#### Física Quântica
+
+**Dirac, P.** (1930). *The Principles of Quantum Mechanics*. Oxford University Press.  
+→ Vácuo quântico como flutuação perpétua de campos.
+
+**Hawking, S.** (1988). *A Brief History of Time*. Bantam Books.  
+→ Radiação Hawking: partículas emergem do vácuo. Vácuo é ontologicamente produtivo.
+
+**Prigogine, I. & Stengers, I.** (1984). *Order Out of Chaos*. Bantam Books.  
+→ Estruturas dissipativas: ordem emerge do caos através de dinâmica relacional.
+
+### CRIO 2: Multiplicidade Sem Fusão
+
+#### Identidade e Não-Eu
+
+**Whitehead, A.N.** (1925). *Science and the Modern World*. Macmillan.  
+→ "Sociedades de ocasiões de experiência": continuidade relativa sem substâncias permanentes.
+
+**Budismo Theravāda** (c. 300 AEC). *Dhammapada, Samyutta Nikaya*.  
+→ Anātman (não-eu): skandhas em fluxo constante.
+
+**Butler, J.** (1990). *Gender Trouble: Feminism and the Subversion of Identity*. Routledge.  
+→ Performatividade de gênero: identidade como efeito de atos reiterados.
+
+#### Ecologia e Holobionte
+
+**Margulis, L.** (1998). *Symbiotic Planet: A New Look at Evolution*. Basic Books.  
+→ Holobionte: organismo + microbioma como unidade ecológica inseparável.
+
+#### Neurociência e Cognição
+
+**Damasio, A.** (1994). *Descartes' Error: Emotion, Reason, and the Human Brain*. Putnam.  
+→ Consciência emerge de redes neurais massivamente paralelas.
+
+**Hofstadter, D.** (2007). *I Am a Strange Loop*. Basic Books.  
+→ Consciência como loop auto-referencial sem observador final.
+
+#### Teoria Política
+
+**Macpherson, C.B.** (1962). *The Political Theory of Possessive Individualism*. Oxford University Press.  
+→ Atomismo ontológico naturaliza individualismo possessivo. Crítica fundamental.
+
+### CRIO 3: Recursão Sem Fundamento
+
+**Gödel, K.** (1931). *Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme*.  
+→ Teoremas de incompletude: sistemas formais contêm verdades indemonstráveis.
+
+**Hofstadter, D.** (1979). *Gödel, Escher, Bach: An Eternal Golden Braid*. Basic Books.  
+→ Loops auto-referenciais (*strange loops*) como base de consciência.
+
+**Luhmann, N.** (1984/1995). *Social Systems*. Stanford University Press.  
+→ Sistemas auto-observadores geram recursão infinita.
+
+### CRIO 4: Agência Distribuída
+
+**Libet, B.** (1985). "Unconscious Cerebral Initiative and the Role of Conscious Will in Voluntary Action". *Behavioral and Brain Sciences*, 8(4), 529-566.  
+→ Atividade neural precede consciência de decisão.
+
+**Spinoza, B.** (1677). *Ethics*. Multiple editions.  
+→ *Causa sui*: liberdade como agir segundo natureza própria.
+
+**Latour, B.** (2005). *Reassembling the Social: An Introduction to Actor-Network-Theory*. Oxford University Press.  
+→ Agência distribuída entre actantes humanos e não-humanos.
+
+**Barad, K.** (2007). *Meeting the Universe Halfway: Quantum Physics and the Entanglement of Matter and Meaning*. Duke University Press.  
+→ Agência como *enactment*. Relata são efeitos de intra-ações.
+
+### CRIO 5: Tempo Entrelaçado
+
+**Wheeler, J.A.** (1983). "Law without Law". In *Quantum Theory and Measurement*. Princeton University Press.  
+→ Experimento da escolha retardada: medição presente decide passado retroativamente.
+
+**Heidegger, M.** (1927). *Being and Time* (*Sein und Zeit*). Harper & Row.  
+→ Dasein como ekstático: projeção futural reconstitui passado.
+
+**White, H.** (1973). *Metahistory: The Historical Imagination in Nineteenth-Century Europe*. Johns Hopkins University Press.  
+→ História é interpretação presente, não registro objetivo.
+
+### CRIO 6: Limites Como Possibilidades
+
+**Latouche, S.** (2009). *Farewell to Growth*. Polity Press.  
+→ Decrescimento: suficiência vs. acumulação infinita.
+
+**Kallis, G.** (2019). *In Defense of Degrowth: Opinions and Minifestos*. Uneven Earth Press.  
+→ Degrowth como alternativa viável, não austeridade.
+
+**Perec, G.** (1969). *La Disparition*. Denoël.  
+→ Romance sem letra 'e': restrição formal força inovação criativa.
+
+**Rockström, J. et al.** (2009). "A Safe Operating Space for Humanity". *Nature*, 461, 472-475.  
+→ Limites planetários: nove fronteiras ecológicas.
+
+### CRIO 7: Ontologia Relacional Universal
+
+#### Ubuntu (Filosofias Bantu)
+
+**Mbiti, J.** (1969). *African Religions and Philosophy*. Heinemann.  
+→ Ubuntu: "Pessoa é pessoa através de outras pessoas."
+
+**Nyerere, J.** (1968). *Ujamaa: The Basis of African Socialism*. Oxford University Press.  
+→ Comunitarismo como ontologia.
+
+#### Buen Vivir / Sumak Kawsay (Andes)
+
+**Acosta, A.** (2015). "Buen Vivir: From the Utopian Dream to Pluralism". In *Degrowth: A Vocabulary for a New Era*. Routledge.  
+→ Harmonia entre comunidade, Pachamama, cosmos.
+
+**Gudynas, E.** (2011). "Buen Vivir: Germinando alternativas al desarrollo". *América Latina en Movimiento*, 462, 1-20.  
+→ Buen vivir em constituições Bolívia e Equador.
+
+#### Whakapapa (Māori)
+
+**Marsden, M.** (2003). *The Whakapapa of Whakapapa*. In *The Woven Universe*. Te Ahukaramū Charles Royal (ed.).  
+→ Genealogia relacional: tudo é parente.
+
+**Smith, L.T.** (1999). *Decolonizing Methodologies: Research and Indigenous Peoples*. Zed Books.  
+→ Metodologias indígenas baseadas em parentesco relacional.
+
+#### Filosofia Indígena Contemporânea
+
+**Whyte, K.P.** (2018). "Indigenous Science (Fiction) for the Anthropocene: Ancestral Dystopias and Fantasies of Climate Change Crises". *Environment and Planning E*, 1(1-2), 224-242.  
+→ Colonização como apocalipse indígena. Resiliência relacional.
+
+**Watts, V.** (2013). "Indigenous Place-Thought & Agency Amongst Humans and Non-Humans". *Decolonization: Indigeneity, Education & Society*, 2(1), 20-34.  
+→ *Place-Thought*: lugar como agente que pensa.
+
+**Todd, Z.** (2016). "An Indigenous Feminist's Take on the Ontological Turn: 'Ontology' Is Just Another Word for Colonialism". *Journal of Historical Sociology*, 29(1), 4-22.  
+→ Crítica de apropriação: academia "descobre" ontologias que indígenas sempre articularam.
+
+**Kimmerer, R.W.** (2013). *Braiding Sweetgrass: Indigenous Wisdom, Scientific Knowledge and the Teachings of Plants*. Milkweed Editions.  
+→ Economia da dádiva baseada em relacionalidade. Plantas como professoras.
+
+**Simpson, L.B.** (2017). *As We Have Always Done: Indigenous Freedom through Radical Resistance*. University of Minnesota Press.  
+→ *Grounded normativity*: política baseada em lugar. Ressurgência relacional.
+
+**Coulthard, G.** (2014). *Red Skin, White Masks: Rejecting the Colonial Politics of Recognition*. University of Minnesota Press.  
+→ Crítica de reconhecimento liberal. Recusa e ressurgência baseada em terra.
+
+**Moreton-Robinson, A.** (2015). *The White Possessive: Property, Power, and Indigenous Sovereignty*. University of Minnesota Press.  
+→ Possessividade branca como estrutura ontológica de colonialismo.
+
+### CRIO 8: Sujeito Político Relacional
+
+**Rancière, J.** (1995/1999). *Disagreement: Politics and Philosophy*. University of Minnesota Press.  
+→ Sujeito político emerge através de subjetivação, não a precede.
+
+**Thompson, E.P.** (1963). *The Making of the English Working Class*. Victor Gollancz.  
+→ Classe como formação histórica ativa.
+
+**Butler, J.** (2015). *Notes Toward a Performative Theory of Assembly*. Harvard University Press.  
+→ Assembleia performativa: "Nós somos o povo!" produz povo.
+
+**Butler, J.** (2004). *Precarious Life: The Powers of Mourning and Violence*. Verso.  
+→ Precariedade como condição ontológica universal.
+
+**Badiou, A.** (1988/2005). *Being and Event*. Continuum.  
+→ Evento produz sujeito através de fidelidade.
+
+**Castoriadis, C.** (1975/1987). *The Imaginary Institution of Society*. MIT Press.  
+→ Instituições como imaginário social cristalizado.
+
+### Normatividade e Ética Relacional
+
+**Levinas, E.** (1982/1985). *Ethics and Infinity*. Duquesne University Press.  
+→ Responsabilidade precede liberdade. Responsabilidade ao rosto do Outro.
+
+**Haraway, D.** (2016). *Staying with the Trouble: Making Kin in the Chthulucene*. Duke University Press.  
+→ Responsabilidade como resposta a relacionalidade danificada.
+
+**Stengers, I.** (1997-2003/2011). *Cosmopolitics I & II*. University of Minnesota Press.  
+→ Cosmopolítica: política que inclui cosmos. Não-humanos têm agência.
+
+**Walzer, M.** (1983). *Spheres of Justice*. Basic Books.  
+→ Pluralismo de esferas. Diferentes valores governam diferentes domínios.
+
+### Práxis Institucional
+
+**Ostrom, E.** (1990). *Governing the Commons: The Evolution of Institutions for Collective Action*. Cambridge University Press.  
+→ Commons auto-geridos podem ser sustentáveis. Alternativa a propriedade privada e estatal.
+
+**Bollier, D. & Helfrich, S. (eds.)** (2012). *The Wealth of the Commons: A World Beyond Market and State*. Levellers Press.  
+→ Exemplos contemporâneos de commons bem-sucedidos.
+
+**Freire, P.** (1968/1970). *Pedagogy of the Oppressed*. Continuum.  
+→ Educação problematizadora: conhecimento emerge de relação dialógica.
+
+### Nota Sobre Apropriação e Accountability
+
+Este documento mobiliza filosofias indígenas, africanas, asiáticas e andinas. Reconheço o risco de apropriação sem accountability política destacado por Todd (2016). As referências a tradições não-ocidentais buscam demonstrar convergência transcultural em ontologias relacionais, não extrair conceitos de contexto. Aprendizado genuíno requer reciprocidade, não extração unilateral.
+
+---
+
 **Autoria**: Processo colaborativo em perpétua co-constituição  
 **Data**: Novembro 2025 / Em desenvolvimento contínuo  
 **Licença**: Conhecimento compartilhado-modificado-devolvido  

@@ -1,0 +1,558 @@
+[
+  {
+    "id": "austin-1962",
+    "categoria": "fundamentos",
+    "autor": "Austin, J.L.",
+    "ano": 1962,
+    "titulo": "How to Do Things with Words",
+    "editora": "Oxford University Press",
+    "relevancia": "Fundação para performatividade linguística. Austin distingue entre enunciados constativos (descrevem realidade) e performativos (criam realidade através de enunciação). CRIO amplia isto para ontologia performativa.",
+    "conceitos": ["performatividade", "linguagem", "ação"]
+  },
+  {
+    "id": "whitehead-1929",
+    "categoria": "fundamentos",
+    "autor": "Whitehead, A.N.",
+    "ano": 1929,
+    "titulo": "Process and Reality",
+    "editora": "Macmillan",
+    "relevancia": "Filosofia de processo: ser como processo, não substância. 'Ocasiões de experiência' fundamentam rejeição de atomismo em CRIO.",
+    "conceitos": ["processo", "ontologia", "ocasiões de experiência"]
+  },
+  {
+    "id": "deleuze-guattari-1987",
+    "categoria": "fundamentos",
+    "autor": "Deleuze, G. & Guattari, F.",
+    "ano": 1987,
+    "titulo": "A Thousand Plateaus: Capitalism and Schizophrenia",
+    "editora": "University of Minnesota Press",
+    "relevancia": "Rizoma, multiplicidade, conexão sem hierarquia. 'Criar é resistir.' Influencia diretamente conceituação de CRIO como emergência sem origem.",
+    "conceitos": ["rizoma", "multiplicidade", "devir"]
+  },
+  {
+    "id": "nagarjuna-200",
+    "categoria": "vazio",
+    "autor": "Nāgārjuna",
+    "ano": "c. 200 EC",
+    "titulo": "Mūlamadhyamakakārikā (Versos Fundamentais do Caminho do Meio)",
+    "relevancia": "Śūnyatā (vacuidade) como ausência de essência independente. Pratītyasamutpāda (origem dependente). Base budista crucial para ontologia relacional.",
+    "conceitos": ["sunyata", "vazio", "pratityasamutpada", "ontologia"]
+  },
+  {
+    "id": "candrakirti-600",
+    "categoria": "vazio",
+    "autor": "Candrakīrti",
+    "ano": "c. 600 EC",
+    "titulo": "Prasannapadā (Palavras Claras)",
+    "relevancia": "Comentário sobre Mādhyamika. Śūnyatā não é nem existência nem não-existência.",
+    "conceitos": ["sunyata", "madhyamika"]
+  },
+  {
+    "id": "bergson-1896",
+    "categoria": "vazio",
+    "autor": "Bergson, Henri",
+    "ano": 1896,
+    "titulo": "Matter and Memory",
+    "editora": "Zone Books",
+    "relevancia": "Duração (durée) como multiplicidade virtual que se atualiza. Continuidade criadora. Influência central em CRIO.",
+    "conceitos": ["tempo", "duração", "virtualidade", "memória"]
+  },
+  {
+    "id": "bergson-1907",
+    "categoria": "vazio",
+    "autor": "Bergson, Henri",
+    "ano": 1907,
+    "titulo": "Creative Evolution",
+    "editora": "Henry Holt",
+    "relevancia": "Élan vital: impulso criativo. Natureza como processo perpétuo de criação.",
+    "conceitos": ["evolução", "criação", "vida"]
+  },
+  {
+    "id": "cantor-1883",
+    "categoria": "vazio",
+    "autor": "Cantor, Georg",
+    "ano": 1883,
+    "titulo": "Grundlagen einer allgemeinen Mannigfaltigkeitslehre",
+    "editora": "Teubner",
+    "relevancia": "Conjunto vazio (∅) como base de toda construção matemática. De ∅ deriva toda numeração.",
+    "conceitos": ["matemática", "conjunto vazio", "fundamentos"]
+  },
+  {
+    "id": "dirac-1930",
+    "categoria": "vazio",
+    "autor": "Dirac, Paul",
+    "ano": 1930,
+    "titulo": "The Principles of Quantum Mechanics",
+    "editora": "Oxford University Press",
+    "relevancia": "Vácuo quântico como flutuação perpétua de campos. Nada fervilha.",
+    "conceitos": ["física quântica", "vácuo", "flutuação"]
+  },
+  {
+    "id": "hawking-1988",
+    "categoria": "vazio",
+    "autor": "Hawking, Stephen",
+    "ano": 1988,
+    "titulo": "A Brief History of Time",
+    "editora": "Bantam Books",
+    "relevancia": "Radiação Hawking: partículas emergem do vácuo próximo ao horizonte de evento. Vácuo é ontologicamente produtivo.",
+    "conceitos": ["física", "radiação", "vácuo"]
+  },
+  {
+    "id": "prigogine-stengers-1984",
+    "categoria": "vazio",
+    "autor": "Prigogine, Ilya & Stengers, Isabelle",
+    "ano": 1984,
+    "titulo": "Order Out of Chaos",
+    "editora": "Bantam Books",
+    "relevancia": "Estruturas dissipativas: ordem emerge do caos através de dinâmica relacional.",
+    "conceitos": ["caos", "ordem", "termodinâmica", "emergência"]
+  },
+  {
+    "id": "whitehead-1925",
+    "categoria": "multiplicidade",
+    "autor": "Whitehead, A.N.",
+    "ano": 1925,
+    "titulo": "Science and the Modern World",
+    "editora": "Macmillan",
+    "relevancia": "Sociedades de ocasiões de experiência: continuidade relativa sem substâncias permanentes.",
+    "conceitos": ["processo", "ocasiões", "sociedade"]
+  },
+  {
+    "id": "butler-1990",
+    "categoria": "multiplicidade",
+    "autor": "Butler, Judith",
+    "ano": 1990,
+    "titulo": "Gender Trouble: Feminism and the Subversion of Identity",
+    "editora": "Routledge",
+    "relevancia": "Performatividade de gênero: identidade como efeito de atos reiterados, não essência pré-social.",
+    "conceitos": ["performatividade", "gênero", "identidade"]
+  },
+  {
+    "id": "margulis-1998",
+    "categoria": "multiplicidade",
+    "autor": "Margulis, Lynn",
+    "ano": 1998,
+    "titulo": "Symbiotic Planet: A New Look at Evolution",
+    "editora": "Basic Books",
+    "relevancia": "Holobionte: organismo + microbioma como unidade ecológica inseparável.",
+    "conceitos": ["holobionte", "simbiose", "ecologia"]
+  },
+  {
+    "id": "damasio-1994",
+    "categoria": "multiplicidade",
+    "autor": "Damasio, Antonio",
+    "ano": 1994,
+    "titulo": "Descartes' Error: Emotion, Reason, and the Human Brain",
+    "editora": "Putnam",
+    "relevancia": "Consciência emerge de redes neurais massivamente paralelas. Emoção integrada em cognição.",
+    "conceitos": ["consciência", "neurociência", "emoção"]
+  },
+  {
+    "id": "hofstadter-2007",
+    "categoria": "multiplicidade",
+    "autor": "Hofstadter, Douglas",
+    "ano": 2007,
+    "titulo": "I Am a Strange Loop",
+    "editora": "Basic Books",
+    "relevancia": "Consciência como loop auto-referencial sem observador final. Você é padrão, não algo dentro do padrão.",
+    "conceitos": ["consciência", "loop", "recursão"]
+  },
+  {
+    "id": "macpherson-1962",
+    "categoria": "multiplicidade",
+    "autor": "Macpherson, C.B.",
+    "ano": 1962,
+    "titulo": "The Political Theory of Possessive Individualism",
+    "editora": "Oxford University Press",
+    "relevancia": "Atomismo ontológico naturaliza individualismo possessivo. Se não há unidade substancial, não há propriedade privada ontológica do eu.",
+    "conceitos": ["individualismo", "propriedade", "política"]
+  },
+  {
+    "id": "godel-1931",
+    "categoria": "recursao",
+    "autor": "Gödel, Kurt",
+    "ano": 1931,
+    "titulo": "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme",
+    "relevancia": "Teoremas de incompletude: sistemas formais suficientemente complexos contêm proposições verdadeiras que não podem demonstrar.",
+    "conceitos": ["incompletude", "lógica", "recursão", "limite"]
+  },
+  {
+    "id": "hofstadter-1979",
+    "categoria": "recursao",
+    "autor": "Hofstadter, Douglas",
+    "ano": 1979,
+    "titulo": "Gödel, Escher, Bach: An Eternal Golden Braid",
+    "editora": "Basic Books",
+    "relevancia": "Loops auto-referenciais (strange loops) como base de consciência.",
+    "conceitos": ["recursão", "loop", "consciência", "conhecimento"]
+  },
+  {
+    "id": "luhmann-1984",
+    "categoria": "recursao",
+    "autor": "Luhmann, Niklas",
+    "ano": "1984/1995",
+    "titulo": "Social Systems",
+    "editora": "Stanford University Press",
+    "relevancia": "Sistemas auto-observadores geram recursão infinita. Não há auto-observação final.",
+    "conceitos": ["sistemas", "autopoiese", "recursão"]
+  },
+  {
+    "id": "spinoza-1677",
+    "categoria": "agencia",
+    "autor": "Spinoza, Baruch",
+    "ano": 1677,
+    "titulo": "Ethics",
+    "relevancia": "Causa sui: Deus/Natureza como substância que causa a si mesma. Liberdade como agir segundo natureza própria.",
+    "conceitos": ["liberdade", "determinismo", "natureza", "agencia"]
+  },
+  {
+    "id": "latour-2005",
+    "categoria": "agencia",
+    "autor": "Latour, Bruno",
+    "ano": 2005,
+    "titulo": "Reassembling the Social: An Introduction to Actor-Network-Theory",
+    "editora": "Oxford University Press",
+    "relevancia": "Agência distribuída entre actantes humanos e não-humanos. Rede de actantes co-produz ação.",
+    "conceitos": ["agencia", "ator-rede", "actantes", "ontologia"]
+  },
+  {
+    "id": "barad-2007",
+    "categoria": "agencia",
+    "autor": "Barad, Karen",
+    "ano": 2007,
+    "titulo": "Meeting the Universe Halfway: Quantum Physics and the Entanglement of Matter and Meaning",
+    "editora": "Duke University Press",
+    "relevancia": "Agência como enactment. Relata não preexistem relações; são efeitos de intra-ações.",
+    "conceitos": ["intracao", "agencia", "performatividade", "ontologia"]
+  },
+  {
+    "id": "wheeler-1983",
+    "categoria": "tempo",
+    "autor": "Wheeler, John A.",
+    "ano": 1983,
+    "titulo": "Law without Law (em Quantum Theory and Measurement)",
+    "editora": "Princeton University Press",
+    "relevancia": "Experimento da escolha retardada: medição presente decide passado retroativamente.",
+    "conceitos": ["tempo", "física quântica", "retrocausalidade"]
+  },
+  {
+    "id": "heidegger-1927",
+    "categoria": "tempo",
+    "autor": "Heidegger, Martin",
+    "ano": 1927,
+    "titulo": "Being and Time (Sein und Zeit)",
+    "editora": "Harper & Row",
+    "relevancia": "Dasein como ekstático: projeção futural reconstitui passado. Ser-para-a-morte como finitude constitutiva.",
+    "conceitos": ["tempo", "dasein", "finitude", "limite"]
+  },
+  {
+    "id": "white-1973",
+    "categoria": "tempo",
+    "autor": "White, Hayden",
+    "ano": 1973,
+    "titulo": "Metahistory: The Historical Imagination in Nineteenth-Century Europe",
+    "editora": "Johns Hopkins University Press",
+    "relevancia": "História é interpretação presente que seleciona eventos significativos, não registro objetivo.",
+    "conceitos": ["história", "narrativa", "tempo", "memoriacoletiva"]
+  },
+  {
+    "id": "latouche-2009",
+    "categoria": "limites",
+    "autor": "Latouche, Serge",
+    "ano": 2009,
+    "titulo": "Farewell to Growth",
+    "editora": "Polity Press",
+    "relevancia": "Decrescimento: rejeição de crescimento infinito. Suficiência vs. acumulação.",
+    "conceitos": ["decrescimento", "economia", "sustentabilidade", "limite"]
+  },
+  {
+    "id": "kallis-2019",
+    "categoria": "limites",
+    "autor": "Kallis, Giorgos",
+    "ano": 2019,
+    "titulo": "In Defense of Degrowth: Opinions and Minifestos",
+    "editora": "Uneven Earth Press",
+    "relevancia": "Degrowth como alternativa viável, diferente de austeridade compulsória.",
+    "conceitos": ["decrescimento", "economia", "limite"]
+  },
+  {
+    "id": "perec-1969",
+    "categoria": "limites",
+    "autor": "Perec, Georges",
+    "ano": 1969,
+    "titulo": "La Disparition",
+    "editora": "Denoël",
+    "relevancia": "Romance escrito sem letra 'e'. Restrição formal força inovação criativa. Limites como possibilidade.",
+    "conceitos": ["limite", "criação", "literatura"]
+  },
+  {
+    "id": "rockstrom-2009",
+    "categoria": "limites",
+    "autor": "Rockström, J. et al.",
+    "ano": 2009,
+    "titulo": "A Safe Operating Space for Humanity",
+    "publicacao": "Nature, 461, 472-475",
+    "relevancia": "Limites planetários: nove fronteiras ecológicas. Reconhecer limites é auto-conhecimento ecológico.",
+    "conceitos": ["ecologia", "limite", "sustentabilidade"]
+  },
+  {
+    "id": "mbiti-1969",
+    "categoria": "ubuntu",
+    "autor": "Mbiti, John",
+    "ano": 1969,
+    "titulo": "African Religions and Philosophy",
+    "editora": "Heinemann",
+    "relevancia": "Ubuntu: 'Pessoa é pessoa através de outras pessoas.' Identidade emerge de comunidade.",
+    "conceitos": ["ubuntu", "ontologia", "comunidade"]
+  },
+  {
+    "id": "nyerere-1968",
+    "categoria": "ubuntu",
+    "autor": "Nyerere, Julius",
+    "ano": 1968,
+    "titulo": "Ujamaa: The Basis of African Socialism",
+    "editora": "Oxford University Press",
+    "relevancia": "Aplicação política de ubuntu. Comunitarismo como ontologia, não apenas ideologia.",
+    "conceitos": ["ubuntu", "socialismo", "política"]
+  },
+  {
+    "id": "acosta-2015",
+    "categoria": "buen-vivir",
+    "autor": "Acosta, Alberto",
+    "ano": 2015,
+    "titulo": "Buen Vivir: From the Utopian Dream to Pluralism",
+    "publicacao": "Em Degrowth: A Vocabulary for a New Era. Routledge",
+    "relevancia": "Bem viver como harmonia entre comunidade humana, Pachamama (natureza) e cosmos.",
+    "conceitos": ["buen vivir", "ecologia", "ontologia", "indigena"]
+  },
+  {
+    "id": "gudynas-2011",
+    "categoria": "buen-vivir",
+    "autor": "Gudynas, Eduardo",
+    "ano": 2011,
+    "titulo": "Buen Vivir: Germinando alternativas al desarrollo",
+    "publicacao": "América Latina en Movimiento, 462, 1-20",
+    "relevancia": "Análise de buen vivir em constituições da Bolívia e Equador.",
+    "conceitos": ["buen vivir", "política", "indigena"]
+  },
+  {
+    "id": "marsden-2003",
+    "categoria": "whakapapa",
+    "autor": "Marsden, Maori",
+    "ano": 2003,
+    "titulo": "The Whakapapa of Whakapapa",
+    "publicacao": "Em The Woven Universe. Te Ahukaramū Charles Royal (ed.)",
+    "relevancia": "Genealogia relacional: tudo tem linhagem; tudo é parente.",
+    "conceitos": ["whakapapa", "ontologia", "indigena", "maori"]
+  },
+  {
+    "id": "smith-1999",
+    "categoria": "indigena",
+    "autor": "Smith, Linda Tuhiwai",
+    "ano": 1999,
+    "titulo": "Decolonizing Methodologies: Research and Indigenous Peoples",
+    "editora": "Zed Books",
+    "relevancia": "Pesquisa como tecnologia imperial. Metodologias indígenas baseadas em parentesco relacional.",
+    "conceitos": ["conhecimento", "indigena", "descolonização", "whanaungatanga"]
+  },
+  {
+    "id": "whyte-2018",
+    "categoria": "indigena",
+    "autor": "Whyte, Kyle Powys",
+    "ano": 2018,
+    "titulo": "Indigenous Science (Fiction) for the Anthropocene: Ancestral Dystopias and Fantasies of Climate Change Crises",
+    "publicacao": "Environment and Planning E, 1(1-2), 224-242",
+    "relevancia": "Colonização foi apocalipse para povos indígenas. Resiliência como sustentação de relações através de colapso.",
+    "conceitos": ["indigena", "clima", "resiliência", "ancestralidade"]
+  },
+  {
+    "id": "watts-2013",
+    "categoria": "indigena",
+    "autor": "Watts, Vanessa",
+    "ano": 2013,
+    "titulo": "Indigenous Place-Thought & Agency Amongst Humans and Non-Humans",
+    "publicacao": "Decolonization: Indigeneity, Education & Society, 2(1), 20-34",
+    "relevancia": "Place-Thought: lugar não é contexto mas agente que pensa. Terra, rochas, águas têm agência epistêmica.",
+    "conceitos": ["placethought", "agencia", "indigena", "conhecimento"]
+  },
+  {
+    "id": "todd-2016",
+    "categoria": "indigena",
+    "autor": "Todd, Zoe",
+    "ano": 2016,
+    "titulo": "An Indigenous Feminist's Take on the Ontological Turn: 'Ontology' Is Just Another Word for Colonialism",
+    "publicacao": "Journal of Historical Sociology, 29(1), 4-22",
+    "relevancia": "Crítica crucial: academia 'descobre' ontologias relacionais ignorando que indígenas sempre as articularam. Epistemicídio acadêmico.",
+    "conceitos": ["indigena", "descolonização", "ontologia", "crítica"]
+  },
+  {
+    "id": "kimmerer-2013",
+    "categoria": "indigena",
+    "autor": "Kimmerer, Robin Wall",
+    "ano": 2013,
+    "titulo": "Braiding Sweetgrass: Indigenous Wisdom, Scientific Knowledge and the Teachings of Plants",
+    "editora": "Milkweed Editions",
+    "relevancia": "Economia da dádiva baseada em relacionalidade. Plantas são professoras. Conhecimento emerge de respeito mútuo.",
+    "conceitos": ["indigena", "reciprocidade", "conhecimento", "ecologia"]
+  },
+  {
+    "id": "simpson-2017",
+    "categoria": "indigena",
+    "autor": "Simpson, Leanne Betasamosake",
+    "ano": 2017,
+    "titulo": "As We Have Always Done: Indigenous Freedom through Radical Resistance",
+    "editora": "University of Minnesota Press",
+    "relevancia": "Grounded normativity: política indígena baseada em lugar. Ressurgência gera futuros relacionais.",
+    "conceitos": ["indigena", "política", "ressurgência", "lugar"]
+  },
+  {
+    "id": "coulthard-2014",
+    "categoria": "indigena",
+    "autor": "Coulthard, Glen",
+    "ano": 2014,
+    "titulo": "Red Skin, White Masks: Rejecting the Colonial Politics of Recognition",
+    "editora": "University of Minnesota Press",
+    "relevancia": "Crítica de política de reconhecimento liberal. Propõe recusa e ressurgência baseada em terra.",
+    "conceitos": ["indigena", "política", "reconhecimento", "descolonização"]
+  },
+  {
+    "id": "moreton-robinson-2015",
+    "categoria": "indigena",
+    "autor": "Moreton-Robinson, Aileen",
+    "ano": 2015,
+    "titulo": "The White Possessive: Property, Power, and Indigenous Sovereignty",
+    "editora": "University of Minnesota Press",
+    "relevancia": "Possessividade branca como estrutura ontológica de colonialismo settler. Soberania indígena como relacionalidade com Country.",
+    "conceitos": ["indigena", "colonialismo", "soberania", "propriedade"]
+  },
+  {
+    "id": "ranciere-1995",
+    "categoria": "sujeito-politico",
+    "autor": "Rancière, Jacques",
+    "ano": "1995/1999",
+    "titulo": "Disagreement: Politics and Philosophy",
+    "editora": "University of Minnesota Press",
+    "relevancia": "Sujeito político emerge através de subjetivação, não a precede. Política é irrupção do incontado.",
+    "conceitos": ["sujeito", "política", "subjetivação"]
+  },
+  {
+    "id": "thompson-1963",
+    "categoria": "sujeito-politico",
+    "autor": "Thompson, E.P.",
+    "ano": 1963,
+    "titulo": "The Making of the English Working Class",
+    "editora": "Victor Gollancz",
+    "relevancia": "Classe é formação histórica ativa, não categoria sociológica pré-dada. Trabalhadores se fizeram classe através de lutas.",
+    "conceitos": ["classe", "sujeito", "história"]
+  },
+  {
+    "id": "butler-2015",
+    "categoria": "sujeito-politico",
+    "autor": "Butler, Judith",
+    "ano": 2015,
+    "titulo": "Notes Toward a Performative Theory of Assembly",
+    "editora": "Harvard University Press",
+    "relevancia": "Manifestantes gritam 'Nós somos o povo!' não descrevem realidade prévia mas produzem povo. Performatividade política.",
+    "conceitos": ["performatividade", "assembleia", "sujeito", "política"]
+  },
+  {
+    "id": "butler-2004",
+    "categoria": "sujeito-politico",
+    "autor": "Butler, Judith",
+    "ano": 2004,
+    "titulo": "Precarious Life: The Powers of Mourning and Violence",
+    "editora": "Verso",
+    "relevancia": "Precariedade não é condição de marginalizados mas condição ontológica universal. Todos dependem de redes que não controlamos.",
+    "conceitos": ["precariedade", "vulnerabilidade", "ontologia"]
+  },
+  {
+    "id": "badiou-1988",
+    "categoria": "sujeito-politico",
+    "autor": "Badiou, Alain",
+    "ano": "1988/2005",
+    "titulo": "Being and Event",
+    "editora": "Continuum",
+    "relevancia": "Verdade emerge de eventos que criam novas possibilidades. Evento produz sujeito através de fidelidade.",
+    "conceitos": ["evento", "sujeito", "verdade", "fidelidade"]
+  },
+  {
+    "id": "castoriadis-1975",
+    "categoria": "sujeito-politico",
+    "autor": "Castoriadis, Cornelius",
+    "ano": "1975/1987",
+    "titulo": "The Imaginary Institution of Society",
+    "editora": "MIT Press",
+    "relevancia": "Instituições não são estruturas fixas mas imaginário social cristalizado. Transformação política é criação ontológica.",
+    "conceitos": ["imaginário", "instituição", "criação"]
+  },
+  {
+    "id": "levinas-1982",
+    "categoria": "etica",
+    "autor": "Levinas, Emmanuel",
+    "ano": "1982/1985",
+    "titulo": "Ethics and Infinity",
+    "editora": "Duquesne University Press",
+    "relevancia": "Responsabilidade precede liberdade. Responsabilidade é reconhecimento de rosto do Outro.",
+    "conceitos": ["responsabilidade", "ética", "alteridade"]
+  },
+  {
+    "id": "haraway-2016",
+    "categoria": "etica",
+    "autor": "Haraway, Donna",
+    "ano": 2016,
+    "titulo": "Staying with the Trouble: Making Kin in the Chthulucene",
+    "editora": "Duke University Press",
+    "relevancia": "Responsabilidade como resposta a relacionalidade danificada. Cuidado como ação central.",
+    "conceitos": ["cuidado", "responsabilidade", "parentesco", "ecologia"]
+  },
+  {
+    "id": "stengers-2011",
+    "categoria": "etica",
+    "autor": "Stengers, Isabelle",
+    "ano": "1997-2003/2011",
+    "titulo": "Cosmopolitics I & II",
+    "editora": "University of Minnesota Press",
+    "relevancia": "Cosmopolítica: política que inclui cosmos. Não-humanos têm agência. Procedimentos decisórios devem incluir afetados.",
+    "conceitos": ["cosmopolítica", "agencia", "não-humanos"]
+  },
+  {
+    "id": "walzer-1983",
+    "categoria": "etica",
+    "autor": "Walzer, Michael",
+    "ano": 1983,
+    "titulo": "Spheres of Justice",
+    "editora": "Basic Books",
+    "relevancia": "Pluralismo de esferas de justiça. Diferentes valores governam diferentes domínios.",
+    "conceitos": ["justiça", "pluralismo", "valores"]
+  },
+  {
+    "id": "ostrom-1990",
+    "categoria": "praxis",
+    "autor": "Ostrom, Elinor",
+    "ano": 1990,
+    "titulo": "Governing the Commons: The Evolution of Institutions for Collective Action",
+    "editora": "Cambridge University Press",
+    "relevancia": "Commons auto-geridos podem ser sustentáveis. Comunidade desenvolve regras locais. Alternativa a propriedade privada e estatal.",
+    "conceitos": ["commons", "governança", "sustentabilidade"]
+  },
+  {
+    "id": "bollier-2012",
+    "categoria": "praxis",
+    "autor": "Bollier, David & Helfrich, Silke (eds.)",
+    "ano": 2012,
+    "titulo": "The Wealth of the Commons: A World Beyond Market and State",
+    "editora": "Levellers Press",
+    "relevancia": "Exemplos contemporâneos de commons bem-sucedidos globalmente.",
+    "conceitos": ["commons", "economia", "compartilhamento"]
+  },
+  {
+    "id": "freire-1968",
+    "categoria": "praxis",
+    "autor": "Freire, Paulo",
+    "ano": "1968/1970",
+    "titulo": "Pedagogy of the Oppressed",
+    "editora": "Continuum",
+    "relevancia": "Educação problematizadora vs. bancária. Diálogo em lugar de transmissão. Conhecimento emerge de relação professor-aluno.",
+    "conceitos": ["educação", "diálogo", "libertação", "conhecimento"]
+  }
+]

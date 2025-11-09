@@ -138,6 +138,25 @@ main.high-tremor {
 #content {
     opacity: 0;
     animation: emerge 2s 1s ease-out forwards;
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+}
+
+/* Permitir seleção de texto em elementos de conteúdo */
+#content p,
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6,
+#content li,
+#content blockquote,
+#content .riz∅ma-link {
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
 }
 
 .loading {
@@ -892,6 +911,7 @@ body.light-theme .void-message {
 /* Nav toggle button (now inside audio-ui) */
 .nav-toggle,
 .riz∅ma-button,
+.referencias-button,
 .font-size-button,
 .auto-scroll-button {
     background: transparent;
@@ -920,9 +940,10 @@ body.light-theme .void-message {
     border-bottom: none;
     border-right: none;
     border-radius: 0;
-    margin: -0.5rem -0.6rem -0.5rem 0.5rem;
-    padding: 1rem 1rem;
+    margin: 0 0 0 0.5rem;
+    padding: 0.6rem 0.8rem;
     min-width: 48px;
+    min-height: 44px;
 }
 
 /* Hamburger Menu Animation */
@@ -984,6 +1005,10 @@ body.light-theme .void-message {
     font-size: 1.4rem;
 }
 
+.referencias-button {
+    font-size: 1.3rem;
+}
+
 .font-size-button {
     font-size: 1.3rem;
     font-weight: bold;
@@ -1005,6 +1030,24 @@ body.light-theme .void-message {
 }
 
 .riz∅ma-button:hover::after {
+    opacity: 0.7;
+}
+
+.referencias-button::after {
+    content: 'REFERÊNCIAS';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.65rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    letter-spacing: 0.1em;
+}
+
+.referencias-button:hover::after {
     opacity: 0.7;
 }
 
@@ -1100,6 +1143,7 @@ body.light-theme .void-message {
 
 .nav-toggle:hover,
 .riz∅ma-button:hover,
+.referencias-button:hover,
 .font-size-button:hover,
 .auto-scroll-button:hover {
     background: rgba(255, 255, 255, 0.1);
@@ -1613,25 +1657,28 @@ body.light-theme .reading-info {
 
 .riz∅ma-link {
     position: relative;
-    color: var(--concept-color, var(--connection));
+    color: var(--concept-color) !important;
     text-decoration: underline;
     text-decoration-style: dotted;
+    text-decoration-color: var(--concept-color) !important;
     text-decoration-thickness: 1px;
     text-underline-offset: 2px;
     cursor: pointer;
     transition: all 0.2s ease;
     padding: 0 2px;
+    filter: brightness(1.1) saturate(1.2);
 }
 
 .riz∅ma-link:hover {
-    color: var(--concept-color, var(--pulse));
+    color: var(--concept-color) !important;
     text-decoration-style: solid;
     background: rgba(255, 255, 255, 0.1);
+    filter: brightness(1.4) saturate(1.3) drop-shadow(0 0 6px var(--concept-color));
     border-radius: 2px;
 }
 
 .riz∅ma-link:focus-visible {
-    outline: 2px solid var(--concept-color, var(--connection));
+    outline: 2px solid var(--concept-color) !important;
     outline-offset: 2px;
     border-radius: 2px;
 }
@@ -1647,13 +1694,34 @@ body.light-theme .reading-info {
     padding: 8px 12px;
     border-radius: 6px;
     font-size: 0.85rem;
-    white-space: nowrap;
+    white-space: normal;
+    max-width: min(450px, 90vw);
+    width: max-content;
+    text-align: center;
+    line-height: 1.5;
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.2s ease, transform 0.2s ease;
     z-index: 10000;
-    border: 1px solid var(--concept-color, var(--connection));
+    border: 1px solid var(--concept-color) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .riz∅ma-link::after {
+        max-width: 85vw;
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .riz∅ma-link::after {
+        max-width: 80vw;
+        font-size: 0.75rem;
+        left: 10%;
+        transform: translateX(0) translateY(-8px);
+    }
 }
 
 .riz∅ma-link:hover::after {
@@ -1663,17 +1731,19 @@ body.light-theme .reading-info {
 
 /* Light theme adjustments */
 .light-theme .riz∅ma-link {
-    color: var(--concept-color, var(--connection));
+    color: var(--concept-color) !important;
+    filter: brightness(0.75) saturate(1.4) contrast(1.1);
 }
 
 .light-theme .riz∅ma-link:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.05) !important;
+    filter: brightness(0.65) saturate(1.5) contrast(1.2) drop-shadow(0 0 4px var(--concept-color));
 }
 
 .light-theme .riz∅ma-link::after {
     background: rgba(255, 255, 255, 0.98);
     color: var(--emergence);
-    border-color: var(--concept-color, var(--connection));
+    border-color: var(--concept-color) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 

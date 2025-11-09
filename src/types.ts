@@ -7,7 +7,7 @@ export interface Concept {
   description: string;
   connections: string[];
   layer: Layer;
-  color: number;
+  color: number | string;
 }
 
 export type Layer = 

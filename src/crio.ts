@@ -3,6 +3,8 @@
  * Carrega e renderiza docs/CRIOS.md com funcionalidades interativas
  */
 
+import type { Concept } from './types';
+
 // ============================================================================
 // TIPOS
 // ============================================================================
@@ -21,6 +23,10 @@ const CACHE_VERSION = '1.0';
 const CACHE_DURATION = 7 * 24 * 60 * 60 * 1000; // 7 dias
 const CRIOS_URL = 'docs/CRIOS.md';
 const AUDIO_URL = 'assets/CRIO.mp3';
+const CONCEPTS_URL = 'assets/concepts.json';
+
+// Estado global
+let concepts: Concept[] = [];
 
 // ============================================================================
 // GERENCIAMENTO DE CACHE
@@ -76,6 +82,23 @@ document.addEventListener('keydown', (e: KeyboardEvent) => {
 // ============================================================================
 // CARREGAMENTO DE CONTEÚDO
 // ============================================================================
+
+async function loadConcepts(): Promise<void> {
+    try {
+        console.log('Carregando conceitos do rizoma...');
+        const response = await fetch(CONCEPTS_URL);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        concepts = await response.json();
+        console.log(`${concepts.length} conceitos carregados com sucesso`);
+    } catch (error) {
+        console.error('Erro ao carregar conceitos:', error);
+        concepts = [];
+    }
+}
 
 async function loadCRIOSContent(): Promise<void> {
     const contentDiv = document.getElementById('content');
@@ -420,10 +443,6 @@ function updateActiveMarkers(): void {
     });
 }
 
-// ============================================================================
-// FUNCIONALIDADES INTERATIVAS
-// ============================================================================
-
 function initInteractiveFeatures(): void {
     console.log('Inicializando funcionalidades interativas...');
     initAudio();
@@ -435,13 +454,290 @@ function initInteractiveFeatures(): void {
     initBackgroundParticles();
     initTextTremor();
     initAutoScroll();
+    linkConceptsInContent();
 }
+
+// ============================================================================
+// LINKAGEM DE CONCEITOS DO RIZOMA
+// ============================================================================
+
+function linkConceptsInContent(): void {
+    const contentDiv = document.getElementById('content');
+    if (!contentDiv) {
+        console.warn('Linkagem de conceitos: elemento #content não encontrado');
+        return;
+    }
+    
+    if (concepts.length === 0) {
+        console.warn('Linkagem de conceitos: nenhum conceito carregado - tentando carregar novamente');
+        // Tentar carregar conceitos novamente se ainda não foram carregados
+        loadConcepts().then(() => {
+            if (concepts.length > 0) {
+                console.log('Conceitos carregados, relinkando...');
+                linkConceptsInContent();
+            }
+        });
+        return;
+    }
+
+    console.log(`Linkando ${concepts.length} conceitos no conteúdo...`);
+
+    // Criar mapa de conceitos para busca mais eficiente
+    const conceptMap = new Map<string, Concept>();
+    const conceptNames: string[] = [];
+
+    concepts.forEach(concept => {
+        conceptMap.set(concept.name.toLowerCase(), concept);
+        conceptNames.push(concept.name);
+        
+        // Adicionar variações comuns
+        const variations = generateConceptVariations(concept.name);
+        variations.forEach(v => conceptMap.set(v.toLowerCase(), concept));
+    });
+    
+    console.log(`Mapa de conceitos criado com ${conceptMap.size} entradas`);
+
+    // Processar todos os parágrafos e listas
+    const textElements = contentDiv.querySelectorAll('p, li, blockquote');
+    
+    console.log(`Processando ${textElements.length} elementos de texto...`);
+    
+    let linksCreated = 0;
+    
+    textElements.forEach((element, index) => {
+        if (element.classList.contains('concept-processed')) return;
+        
+        const initialLinks = element.querySelectorAll('.riz∅ma-link').length;
+        linkConceptsInElement(element as HTMLElement, conceptMap);
+        element.classList.add('concept-processed');
+        const finalLinks = element.querySelectorAll('.riz∅ma-link').length;
+        const newLinks = finalLinks - initialLinks;
+        linksCreated += newLinks;
+        
+        // Log para elementos com links criados
+        if (newLinks > 0 && index < 10) {
+            console.log(`Elemento ${index}: ${newLinks} link(s) criado(s) - "${element.textContent?.substring(0, 50)}..."`);
+        }
+    });
+
+    console.log(`✅ ${linksCreated} links de conceitos criados com sucesso!`);
+    
+    // Log de verificação final
+    const allLinks = contentDiv.querySelectorAll('.riz∅ma-link');
+    console.log(`Total de links riz∅ma encontrados no DOM: ${allLinks.length}`);
+}
+
+function generateConceptVariations(name: string): string[] {
+    const variations: string[] = [name];
+    
+    // Adicionar variações sem acentos
+    const normalized = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    if (normalized !== name) {
+        variations.push(normalized);
+    }
+    
+    // Se tiver parênteses, adicionar versão sem parênteses
+    const withoutParens = name.replace(/\s*\([^)]*\)\s*/g, '').trim();
+    if (withoutParens !== name && withoutParens.length > 0) {
+        variations.push(withoutParens);
+    }
+    
+    // Adicionar apenas a primeira palavra se for composto (para matches parciais)
+    const firstWord = name.split(/[\s(]/)[0];
+    if (firstWord.length >= 4) { // Só palavras com 4+ caracteres
+        variations.push(firstWord);
+    }
+    
+    // Adicionar versão singular/plural simples
+    if (name.endsWith('s') && !name.endsWith('ss')) {
+        variations.push(name.slice(0, -1));
+    } else if (!name.endsWith('s')) {
+        variations.push(name + 's');
+    }
+    
+    return variations;
+}
+
+function linkConceptsInElement(element: HTMLElement, conceptMap: Map<string, Concept>): void {
+    const walker = document.createTreeWalker(
+        element,
+        NodeFilter.SHOW_TEXT,
+        {
+            acceptNode: (node) => {
+                // Não processar se já está dentro de um link
+                if (node.parentElement?.classList.contains('riz∅ma-link')) {
+                    return NodeFilter.FILTER_REJECT;
+                }
+                // Não processar links existentes
+                if (node.parentElement?.tagName === 'A') {
+                    return NodeFilter.FILTER_REJECT;
+                }
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        }
+    );
+
+    const textNodes: Text[] = [];
+    let currentNode: Node | null;
+    
+    while (currentNode = walker.nextNode()) {
+        textNodes.push(currentNode as Text);
+    }
+
+    // Processar cada nó de texto
+    textNodes.forEach(textNode => {
+        const text = textNode.textContent || '';
+        if (text.trim().length === 0) return;
+
+        const fragments = createConceptLinks(text, conceptMap);
+        
+        if (fragments.length > 1) {
+            const parent = textNode.parentElement;
+            if (!parent) return;
+
+            // Substituir o nó de texto pelos fragmentos
+            const tempContainer = document.createElement('span');
+            fragments.forEach(frag => tempContainer.appendChild(frag));
+
+            parent.replaceChild(tempContainer, textNode);
+            
+            // Desembrulhar o container temporário
+            while (tempContainer.firstChild) {
+                parent.insertBefore(tempContainer.firstChild, tempContainer);
+            }
+            parent.removeChild(tempContainer);
+        }
+    });
+}
+
+function createConceptLinks(text: string, conceptMap: Map<string, Concept>): (Text | HTMLElement)[] {
+    const fragments: (Text | HTMLElement)[] = [];
+    
+    // Criar array de conceitos ordenado por tamanho (maiores primeiro)
+    const conceptNames = Array.from(new Set(conceptMap.keys()));
+    conceptNames.sort((a, b) => b.length - a.length);
+    
+    // Criar pattern que busca conceitos completos (case-insensitive)
+    const escapedNames = conceptNames.map(n => escapeRegex(n));
+    const pattern = new RegExp(
+        '(^|[^\\wÀ-ÿ])(' + escapedNames.join('|') + ')(?![\\wÀ-ÿ])',
+        'gi'
+    );
+
+    let lastIndex = 0;
+    const matches: Array<{start: number, end: number, text: string, concept: Concept, prefixLen: number}> = [];
+    
+    // Coletar todos os matches
+    let match: RegExpExecArray | null;
+    while ((match = pattern.exec(text)) !== null) {
+        const prefix = match[1] || '';
+        const matchedText = match[2];
+        const concept = conceptMap.get(matchedText.toLowerCase());
+        if (concept) {
+            matches.push({
+                start: match.index + prefix.length,
+                end: match.index + match[0].length,
+                text: matchedText,
+                concept: concept,
+                prefixLen: prefix.length
+            });
+        }
+    }
+    
+    // Remover overlaps (preferir matches mais longos)
+    const filteredMatches = matches.filter((m1, i) => {
+        return !matches.some((m2, j) => {
+            if (i === j) return false;
+            // Se m2 overlaps m1 e é mais longo, filtrar m1
+            if (m2.start <= m1.start && m2.end >= m1.end && m2.text.length > m1.text.length) {
+                return true;
+            }
+            // Se m2 overlaps m1 de qualquer forma e começa antes, filtrar m1
+            if (m2.start < m1.start && m2.end > m1.start) {
+                return true;
+            }
+            return false;
+        });
+    });
+    
+    // Criar fragmentos
+    filteredMatches.forEach((match, index) => {
+        // Adicionar texto antes do match
+        if (match.start > lastIndex) {
+            fragments.push(document.createTextNode(text.slice(lastIndex, match.start)));
+        }
+
+        // Criar link para o conceito
+        const link = createConceptLink(match.text, match.concept);
+        fragments.push(link);
+
+        lastIndex = match.end;
+    });
+
+    // Adicionar texto restante
+    if (lastIndex < text.length) {
+        fragments.push(document.createTextNode(text.slice(lastIndex)));
+    }
+
+    // Se não houve matches, retornar o texto original
+    if (fragments.length === 0) {
+        fragments.push(document.createTextNode(text));
+    }
+
+    return fragments;
+}
+
+function createConceptLink(text: string, concept: Concept): HTMLElement {
+    const link = document.createElement('span');
+    link.className = 'riz∅ma-link';
+    link.textContent = text;
+    link.setAttribute('data-concept-id', concept.id);
+    link.setAttribute('data-concept-desc', concept.description);
+    link.setAttribute('role', 'button');
+    link.setAttribute('tabindex', '0');
+    
+    // Converter cor (pode ser número ou string com "0x")
+    let colorHex: string;
+    if (typeof concept.color === 'string') {
+        // Se for string tipo "0x9966ff", converter para "#9966ff"
+        colorHex = '#' + concept.color.replace('0x', '');
+    } else {
+        // Se for número, converter para hex
+        colorHex = '#' + concept.color.toString(16).padStart(6, '0');
+    }
+    
+    link.style.setProperty('--concept-color', colorHex);
+    link.style.color = colorHex; // Aplicar cor diretamente também
+    link.style.textDecorationColor = colorHex;
+    console.log(`Link criado para "${concept.name}": cor=${colorHex} (original: ${concept.color})`);
+    
+    // Ao clicar, abrir o rizoma com foco nesse conceito
+    const handleActivation = (e: Event) => {
+        e.preventDefault();
+        console.log(`Abrindo riz∅ma no conceito: ${concept.name} (${concept.id})`);
+        window.location.href = `riz∅ma.html#${concept.id}`;
+    };
+
+    link.addEventListener('click', handleActivation);
+    link.addEventListener('keydown', (e: KeyboardEvent) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            handleActivation(e);
+        }
+    });
+
+    return link;
+}
+
+function escapeRegex(str: string): string {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// ============================================================================
+// FUNCIONALIDADES INTERATIVAS
+// ============================================================================
 
 // Áudio
 let currentAudio: HTMLAudioElement | null = null;
-let isMuted = false;
-let muteTimeout: number | null = null;
-let clickCount = 0;
 
 function initAudio(): void {
     const playBtn = document.getElementById('play-btn');
@@ -463,7 +759,8 @@ function initAudio(): void {
                 playBtn.textContent = '⏸';
                 playBtn.setAttribute('aria-label', 'Pausar áudio');
                 statusSpan.textContent = '♪';
-                console.log('Áudio reproduzindo');
+                console.log('Áudio reproduzindo - tremor pausado');
+                updateTextTremor(); // Atualizar tremor (vai zerar)
             }).catch(e => {
                 console.error('Erro ao reproduzir áudio:', e);
                 statusSpan.textContent = '✕';
@@ -473,34 +770,18 @@ function initAudio(): void {
             playBtn.textContent = '▶';
             playBtn.setAttribute('aria-label', 'Reproduzir áudio');
             statusSpan.textContent = '';
-            console.log('Áudio pausado');
+            console.log('Áudio pausado - tremor retomado');
+            updateTextTremor(); // Atualizar tremor (vai retomar)
         }
     });
     
     muteBtn.addEventListener('click', () => {
-        clickCount++;
-        const counter = document.getElementById('click-counter');
-        if (counter) {
-            counter.textContent = clickCount.toString();
-        }
+        console.log('Alternando tema');
         
-        console.log(`Mute clicado (${clickCount}x) - silenciando por 99s e alternando tema`);
+        // Reduzir tremor temporariamente
+        reduceTextTremorTemporarily();
         
-        // Silenciar por 99 segundos
-        audio.volume = 0;
-        isMuted = true;
-        
-        if (muteTimeout) {
-            clearTimeout(muteTimeout);
-        }
-        
-        muteTimeout = window.setTimeout(() => {
-            audio.volume = 1;
-            isMuted = false;
-            console.log('Volume restaurado');
-        }, 99000);
-        
-        // Alternar tema
+        // Apenas alternar tema
         document.body.classList.toggle('light-theme');
         const theme = document.body.classList.contains('light-theme') ? 'light' : 'dark';
         localStorage.setItem('crio-theme', theme);
@@ -850,19 +1131,26 @@ function updateTextTremor(): void {
     // Calcular progresso de leitura (0 a 1)
     const progress = scrollTop / (documentHeight - windowHeight);
     
-    // Calcular intensidade do tremor baseado no progresso
+    // Verificar se o áudio está tocando
+    const audio = document.getElementById('bg-audio') as HTMLAudioElement;
+    const isAudioPlaying = audio && !audio.paused;
+    
+    // Se áudio estiver tocando, tremor é zero (caos passa para o áudio)
     let intensity = 0;
     
-    if (progress < TREMOR_START) {
-        // Antes de 20%: sem tremor
-        intensity = 0;
-    } else if (progress < TREMOR_PEAK) {
-        // Entre 20% e 80%: crescimento gradual
-        const tremorProgress = (progress - TREMOR_START) / (TREMOR_PEAK - TREMOR_START);
-        intensity = tremorProgress * MAX_TREMOR;
-    } else {
-        // Após 80%: tremor máximo
-        intensity = MAX_TREMOR;
+    if (!isAudioPlaying) {
+        // Calcular intensidade do tremor baseado no progresso
+        if (progress < TREMOR_START) {
+            // Antes de 20%: sem tremor
+            intensity = 0;
+        } else if (progress < TREMOR_PEAK) {
+            // Entre 20% e 80%: crescimento gradual
+            const tremorProgress = (progress - TREMOR_START) / (TREMOR_PEAK - TREMOR_START);
+            intensity = tremorProgress * MAX_TREMOR;
+        } else {
+            // Após 80%: tremor máximo
+            intensity = MAX_TREMOR;
+        }
     }
     
     // Aplicar intensidade ao elemento main
@@ -872,7 +1160,7 @@ function updateTextTremor(): void {
         
         // Log periódico (a cada 10%)
         if (Math.floor(progress * 10) !== Math.floor((tremorIntensity / MAX_TREMOR) * 10)) {
-            console.log(`Tremor: ${intensity.toFixed(2)} (${(progress * 100).toFixed(0)}% da página)`);
+            console.log(`Tremor: ${intensity.toFixed(2)} (${(progress * 100).toFixed(0)}% da página)${isAudioPlaying ? ' [ÁUDIO TOCANDO - tremor pausado]' : ''}`);
         }
         
         // Adicionar classe para tremor alto
@@ -904,7 +1192,65 @@ function intensifyTremor(multiplier: number = 2, duration: number = 3000): void 
     
     setTimeout(() => {
         main.style.setProperty('--tremor-intensity', currentIntensity.toString());
+        console.log(`Tremor retornado: ${intensifiedValue} → ${currentIntensity}`);
     }, duration);
+}
+
+// Função para reduzir temporariamente o tremor (ao trocar de tema)
+function reduceTextTremorTemporarily(): void {
+    const main = document.querySelector('main') as HTMLElement;
+    if (!main) return;
+    
+    const currentIntensity = tremorIntensity;
+    const reducedIntensity = currentIntensity * 0.1; // Reduz para 10%
+    
+    // Calcular duração baseada na intensidade atual
+    // 0 intensidade = 1s, máxima intensidade = 9s
+    const intensityRatio = currentIntensity / MAX_TREMOR;
+    const returnDuration = 1000 + (intensityRatio * 8000); // 1s a 9s
+    const reductionDuration = 300 + (intensityRatio * 500); // 0.3s a 0.8s
+    
+    console.log(`Reduzindo tremor temporariamente: ${currentIntensity.toFixed(2)} → ${reducedIntensity.toFixed(2)} (retorno em ${(returnDuration/1000).toFixed(1)}s)`);
+    
+    // Animar redução para 10%
+    animateTremorChange(currentIntensity, reducedIntensity, reductionDuration, () => {
+        console.log(`Tremor reduzido, aguardando antes de retornar em ${(returnDuration/1000).toFixed(1)}s...`);
+        
+        // Aguardar um pouco e retornar gradualmente
+        setTimeout(() => {
+            console.log(`Tremor retornando gradualmente: ${reducedIntensity.toFixed(2)} → ${currentIntensity.toFixed(2)}`);
+            animateTremorChange(reducedIntensity, currentIntensity, returnDuration);
+        }, 500);
+    });
+}
+
+// Função auxiliar para animar mudanças de tremor
+function animateTremorChange(from: number, to: number, duration: number, onComplete?: () => void): void {
+    const main = document.querySelector('main') as HTMLElement;
+    if (!main) return;
+    
+    const startTime = Date.now();
+    
+    function animate() {
+        const elapsed = Date.now() - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Easing: ease-in-out
+        const eased = progress < 0.5 
+            ? 2 * progress * progress 
+            : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+        
+        const currentValue = from + (to - from) * eased;
+        main.style.setProperty('--tremor-intensity', currentValue.toString());
+        
+        if (progress < 1) {
+            requestAnimationFrame(animate);
+        } else if (onComplete) {
+            onComplete();
+        }
+    }
+    
+    requestAnimationFrame(animate);
 }
 
 // Vazio no fim da página
@@ -953,7 +1299,7 @@ function triggerEndOfPageVoid(): void {
         }, index * 50);
     });
     
-    // Recomeçar automaticamente após 6 segundos (sem mensagem)
+    // Aguardar 9 segundos antes de retornar ao início
     setTimeout(() => {
         console.log('🔄 Retornando ao início...');
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -962,7 +1308,7 @@ function triggerEndOfPageVoid(): void {
         setTimeout(() => {
             resetEndOfPage();
         }, 1000);
-    }, 6000);
+    }, 9000); // 9 segundos de delay
 }
 
 function resetEndOfPage(): void {
@@ -1119,7 +1465,12 @@ function resumeAutoScroll(): void {
 // INICIALIZAÇÃO
 // ============================================================================
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     console.log('DOM carregado - inicializando CRIO...');
-    loadCRIOSContent();
+    
+    // Carregar conceitos primeiro
+    await loadConcepts();
+    
+    // Depois carregar e renderizar o conteúdo
+    await loadCRIOSContent();
 });

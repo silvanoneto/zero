@@ -163,6 +163,7 @@ revolucao-cibernetica/
 ├── assets/                # Recursos estáticos
 │   ├── concepts.json      # 68 conceitos filosóficos estruturados
 │   ├── relations.json     # 289 relações entre conceitos
+│   ├── referencias.json   # 60+ referências bibliográficas
 │   └── CRIO.mp3           # Áudio de fundo (opcional)
 ├── docs/                  # Documentação
 │   ├── CRIOS.md           # Conteúdo filosófico (~50.000 palavras)
@@ -177,6 +178,7 @@ revolucao-cibernetica/
 │   └── pages.yml         # CI/CD para GitHub Pages
 ├── index.html            # Experiência de leitura CRIO (landing page)
 ├── riz∅ma.html           # Visualização 3D rizomática
+├── referencias.html      # Bibliografia interativa com busca e filtros
 ├── styles.css            # Estilos responsivos completos
 ├── package.json          # Dependências e scripts npm
 ├── tsconfig.json         # Configuração TypeScript
@@ -256,6 +258,28 @@ revolucao-cibernetica/
 - **Ícones de tema**: ☾ (lua) e ☀ (sol) com animação de rotação
 - **Persistência**: Tema e posição de scroll salvos em localStorage
 - **Responsivo**: Layout adaptativo para mobile/tablet/desktop
+- **Links de conceitos**: Palavras-chave linkadas automaticamente ao rizoma
+- **Referências**: Botão 📚 para acessar bibliografia completa
+
+### Referências Bibliográficas (referencias.html)
+
+**Interface de Busca e Filtro:**
+- **Busca em tempo real**: Filtra por autor, título, relevância ou conceitos
+- **Filtros por categoria**: 16 categorias temáticas (fundamentos, vazio, multiplicidade, etc.)
+- **Estatísticas dinâmicas**: Total de referências, categorias, conceitos e filtrados
+- **Layout responsivo**: Grid adaptativo para diferentes tamanhos de tela
+
+**Cards de Referência:**
+- **Informações completas**: Autor, ano, título, editora/publicação
+- **Relevância contextual**: Explicação de como cada obra relaciona-se com CRIOS
+- **Tags interativas**: Categoria destacada + conceitos vinculados
+- **Efeitos visuais**: Hover com elevação e borda destacada
+
+**Dados Estruturados:**
+- 60+ referências bibliográficas fundamentais
+- Categorização temática alinhada aos CRIOS
+- Vinculação com conceitos do rizoma
+- JSON estruturado para extensibilidade futura
 
 ### Visualização Rizoma (riz∅ma.html)
 
