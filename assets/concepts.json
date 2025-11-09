@@ -1,546 +1,3451 @@
-    [
-    {
-        "id": "vazio",
-        "name": "Vazio Que Povoa",
-        "description": "O vazio não é ausência de conteúdo, mas presença de potencial. Campo indiferenciado de possibilidades que precede toda distinção. Não é 'nada' - é 'ainda-não-determinado'.",
-        "connections": ["sunyata", "anatman", "multiplicidade", "recursao", "tempo", "processo", "ontologia"],
-        "layer": "fundacional",
-        "color": "0x9966ff"
-    },
-    {
-        "id": "sunyata",
-        "name": "Śūnyatā (Vacuidade)",
-        "description": "Ausência de essência independente (svabhāva). Vazio não é niilismo - é condição de pratītyasamutpāda. Esvaziamento de natureza própria afirma existência relacional.",
-        "connections": ["vazio", "anatman", "pratityasamutpada", "ontologia", "multiplicidade"],
-        "layer": "fundacional",
-        "color": "0x9966ff"
-    },
-    {
-        "id": "anatman",
-        "name": "Anātman (Não-Eu)",
-        "description": "Não há alma permanente. \"Eu\" é agregado temporário de cinco skandhas em fluxo constante. Identidade sem substância.",
-        "connections": ["vazio", "sunyata", "multiplicidade", "processo", "holobionte"],
-        "layer": "fundacional",
-        "color": "0x9966ff"
-    },
-    {
-        "id": "pratityasamutpada",
-        "name": "Pratītyasamutpāda",
-        "description": "Origem dependente - todo fenômeno surge em co-dependência. Não há essências independentes; há nós de relações. Base budista da ontologia relacional.",
-        "connections": ["sunyata", "ontologia", "intracao", "processo", "multiplicidade"],
-        "layer": "fundacional",
-        "color": "0x9966ff"
-    },
-    {
-        "id": "ontologia",
-        "name": "Ontologia Relacional Universal",
-        "description": "Múltiplas tradições chegaram à mesma revelação: ser é relação. Relacionalidade precede substância.",
-        "connections": ["pratityasamutpada", "intracao", "processo", "multiplicidade", "ubuntu", "indigena", "transindividual"],
-        "layer": "ontologica",
-        "color": "0x66ccff"
-    },
-    {
-        "id": "multiplicidade",
-        "name": "Multiplicidade Sem Fusão",
-        "description": "Somos muitos sem deixar de ser singular. Identidade como padrão dinâmico de relações, não essência fixa.",
-        "connections": ["vazio", "anatman", "pratityasamutpada", "ontologia", "holobionte", "processo", "sujeito", "riz∅ma", "corposemorgaos", "transindividual"],
-        "layer": "ontologica",
-        "color": "0x66ccff"
-    },
-    {
-        "id": "processo",
-        "name": "Processo (Whitehead)",
-        "description": "Não há substâncias permanentes - apenas ocasiões de experiência. \"Eu\" não é coisa; é rota de ocasiões. Como rio mantém identidade com água sempre renovada.",
-        "connections": ["vazio", "anatman", "pratityasamutpada", "ontologia", "multiplicidade", "tempo", "intracao", "holobionte", "ocasioes", "devir", "transindividual", "estratostempo"],
-        "layer": "ontologica",
-        "color": "0x66ccff"
-    },
-    {
-        "id": "ocasioes",
-        "name": "Ocasiões de Experiência",
-        "description": "Whitehead: unidades atômicas da realidade são eventos, não coisas. Cada ocasião é prehensão criativa do passado + novidade. Realidade como processo de becoming, não being estático.",
-        "connections": ["processo", "tempo", "vazio", "devir", "evento", "intracao"],
-        "layer": "ontologica",
-        "color": "0x66ccff"
-    },
-    {
-        "id": "devir",
-        "name": "Devir (Deleuze)",
-        "description": "Devir não é tornar-se outra coisa, mas entrar em zona de indiscernibilidade. Devir-animal, devir-mulher, devir-imperceptível: movimento que desfaz identidades fixas. Ser é devir.",
-        "connections": ["processo", "ocasioes", "multiplicidade", "tempo", "vazio", "composicao", "evento", "riz∅ma", "corposemorgaos", "futuridadequeer"],
-        "layer": "ontologica",
-        "color": "0x66ccff"
-    },
-    {
-        "id": "intracao",
-        "name": "Intra-ação (Barad)",
-        "description": "Relata não preexistem relações - são efeitos de intra-ações. Não há elétron antes de medição; há fenômeno indivisível medição-elétron-aparato. Performatividade material da natureza.",
-        "connections": ["ontologia", "pratityasamutpada", "processo", "agencia", "performatividade", "conhecimento", "multiplicidade", "transindividual"],
-        "layer": "ontologica",
-        "color": "0x66ccff"
-    },
-    {
-        "id": "recursao",
-        "name": "Recursão Sem Fundamento",
-        "description": "Sistemas que se auto-observam geram realidades que não podem ser totalizadas. Tartarugas ontológicas até o fim. Incompletude de Gödel aplicada à existência - somos verdades que não podemos provar.",
-        "connections": ["vazio", "conhecimento", "limite", "processo", "evento", "agencia", "multiplicidade", "memoriacoletiva", "hauntologia", "estratostempo"],
-        "layer": "epistemologica",
-        "color": "0xff9966"
-    },
-    {
-        "id": "conhecimento",
-        "name": "Relacionalismo Epistêmico",
-        "description": "Conhecimento não é espelho da realidade, mas ferramenta que modifica o usuário que modifica a ferramenta.",
-        "connections": ["recursao", "intracao", "ontologia", "indigena", "placethought", "whanaungatanga", "riz∅ma", "cuidado"],
-        "layer": "epistemologica",
-        "color": "0xff9966"
-    },
-    {
-        "id": "tempo",
-        "name": "Tempo Entrelaçado",
-        "description": "Passado não está atrás, futuro não está adiante. Kairós (tempo oportuno) vs Chronos (tempo mensurável). Haudenosaunee: sete gerações atrás e adiante estão conosco agora.",
-        "connections": ["processo", "vazio", "evento", "ocasioes", "devir", "memoriacoletiva", "ancestralidade", "setimagera", "estratostempo", "futuridadequeer"],
-        "layer": "epistemologica",
-        "color": "0xff9966"
-    },
-    {
-        "id": "limite",
-        "name": "Limite",
-        "description": "Fronteiras não são muros, mas membranas. Diferenciação necessária para relação. Paradoxo: definir limite é estar dentro E fora. Illich: ferramentas emancipam até certo ponto; depois escravizam.",
-        "connections": ["recursao", "tempo", "vazio", "evento", "hauntologia", "setimagera"],
-        "layer": "epistemologica",
-        "color": "0xff9966"
-    },
-    {
-        "id": "agencia",
-        "name": "Agência Distribuída",
-        "description": "Ação não pertence a agentes; emerge de configurações relacionais. Você é o padrão de agenciamento. Latour: humanos e não-humanos como actantes. Spinoza: liberdade como agir segundo natureza própria.",
-        "connections": ["intracao", "recursao", "performatividade", "sujeito", "pratica", "ontologia"],
-        "layer": "politica",
-        "color": "0xff6699"
-    },
-    {
-        "id": "sujeito",
-        "name": "Sujeito Relacional",
-        "description": "Não substância isolada, mas nó de relações. Subjetivação (Foucault): tornar-se sujeito é processo político. Agência sem agente prévio.",
-        "connections": ["multiplicidade", "agencia", "performatividade", "evento", "memoriacoletiva", "transindividual"],
-        "layer": "politica",
-        "color": "0xff6666"
-    },
-    {
-        "id": "performatividade",
-        "name": "Performatividade",
-        "description": "Austin/Butler: linguagem não descreve, mas faz. 'Eu te batizo' produz cristão. Identidades não preexistem performances; são efeitos de atos reiterados. Realidade como teatro recursivo.",
-        "connections": ["intracao", "evento", "sujeito", "agencia", "afrofuturismo", "futuridadequeer"],
-        "layer": "politica",
-        "color": "0xff6666"
-    },
-    {
-        "id": "evento",
-        "name": "Evento (Badiou)",
-        "description": "Ruptura no estado normal que cria novas possibilidades. Evento não é causado por sujeito prévio - produz sujeito através de fidelidade. Verdade emerge de acontecimentos imprevisíveis.",
-        "connections": ["recursao", "tempo", "sujeito", "performatividade", "precariedade", "limite", "corposemorgaos", "necropolitica", "futuridadequeer"],
-        "layer": "politica",
-        "color": "0xff6666"
-    },
-    {
-        "id": "vulnerabilidade",
-        "name": "Vulnerabilidade",
-        "description": "Não fraqueza, mas condição ontológica. Butler: precariedade partilhada fundamenta ética. Reconhecer dependência mútua vs fantasia de autossuficiência.",
-        "connections": ["reciprocidade", "afeto", "ubuntu", "holobionte", "cuidado", "reproducaosocial", "necropolitica"],
-        "layer": "politica",
-        "color": "0xff6666"
-    },
-    {
-        "id": "precariedade",
-        "name": "Precariedade",
-        "description": "Condição ontológica universal - dependência de redes que não controlamos. Precarização diferencial (alguns sistematicamente mais vulneráveis) é injustiça relacional.",
-        "connections": ["vulnerabilidade", "evento", "limite", "normatividade", "extrativismo", "despossessao", "necropolitica"],
-        "layer": "politica",
-        "color": "0xff6699"
-    },
-    {
-        "id": "normatividade",
-        "name": "Normatividade Relacional",
-        "description": "Critérios de julgamento sem fundamentos absolutos. Coerência performativa, pluralismo, distribuição equitativa. Verdade como adequação a rede de relações, não correspondência a Real absoluto.",
-        "connections": ["limite", "performatividade", "vulnerabilidade", "precariedade", "groundednormativity", "conhecimento"],
-        "layer": "politica",
-        "color": "0xff6699"
-    },
-    {
-        "id": "ubuntu",
-        "name": "Ubuntu",
-        "description": "Filosofia Bantu: 'Sou porque somos'. Pessoa se torna pessoa através de outras pessoas. Não individualismo possessivo, mas relacionalidade constitutiva.",
-        "connections": ["ontologia", "reciprocidade", "vulnerabilidade", "indigena", "whanaungatanga", "cuidado", "transindividual"],
-        "layer": "indigena-comunitaria",
-        "color": "0x99ff99"
-    },
-    {
-        "id": "indigena",
-        "name": "Pensamento Indígena",
-        "description": "Não há 'pensamento indígena' monolítico - há milhares de tradições. Mas convergências: relacionalidade, reciprocidade, terra como sujeito. Decolonizar epistemologia.",
-        "connections": ["ontologia", "conhecimento", "placethought", "ubuntu", "whanaungatanga", "groundednormativity", "terra", "ancestralidade"],
-        "layer": "indigena-comunitaria",
-        "color": "0x99ff99"
-    },
-    {
-        "id": "placethought",
-        "name": "Place-Thought",
-        "description": "Vanessa Watts: terra pensa através de nós. Não humanos pensando SOBRE lugar, mas lugar pensando ATRAVÉS de humanos. Pensamento é evento geológico.",
-        "connections": ["indigena", "terra", "conhecimento", "ontologia", "groundednormativity", "ancestralidade"],
-        "layer": "indigena-comunitaria",
-        "color": "0x99ff99"
-    },
-        {
-        "id": "groundednormativity",
-        "name": "Grounded Normativity",
-        "description": "Glen Coulthard/Leanne Simpson: ética brota do lugar. Terra não é recurso, mas sistema de relações que gera obrigações. Crítica da recognição colonial: não queremos reconhecimento do Estado, mas autodeterminação.",
-        "connections": ["placethought", "indigena", "terra", "reciprocidade", "acumulacaoprimitiva", "despossessao", "necropolitica"],
-        "layer": "indigena-comunitaria",
-        "color": "0x99ff99"
-    },
-    {
-        "id": "ressurgencia",
-        "name": "Ressurgência Indígena",
-        "description": "Geração de futuros baseados em relacionalidade com terra, línguas, cerimônias. Não retorno ao passado - afirmação proativa de modos de vida relacionais.",
-        "connections": ["indigena", "groundednormativity", "evento", "cosmopolitica", "terra"],
-        "layer": "indigena-comunitaria",
-        "color": "0x66ff99"
-    },
-    {
-        "id": "whanaungatanga",
-        "name": "Whanaungatanga",
-        "description": "Māori: relacionalidade como princípio organizador. Conhecimento emerge de e sustenta teias de parentesco. Epistemologia é genealogia. Whakapapa: tudo está conectado por linhagens.",
-        "connections": ["ubuntu", "placethought", "conhecimento", "indigena", "ontologia", "cuidado"],
-        "layer": "indigena-comunitaria",
-        "color": "0x99ff99"
-    },
-    {
-        "id": "reciprocidade",
-        "name": "Reciprocidade",
-        "description": "Fundamento de economias não-capitalistas. Mauss: dádiva cria vínculo. Ayni (Andes), Ubuntu (Bantu): ser é ser-com. Circular, não acumular.",
-        "connections": ["vulnerabilidade", "commons", "cooperativa", "decrescimento", "ubuntu", "cuidado", "reproducaosocial"],
-        "layer": "politica",
-        "color": "0xff6666"
-    },
-    {
-        "id": "terra",
-        "name": "Terra Como Sujeito",
-        "description": "Rio Whanganui (NZ) e Rio Atrato (Colômbia) têm personalidade jurídica. Direitos da natureza: Pachamama nas constituições. Terra não é recurso, mas ator.",
-        "connections": ["placethought", "holobionte", "indigena", "groundednormativity", "simbiose", "setimagera"],
-        "layer": "ecologica-material",
-        "color": "0xffcc66"
-    },
-    {
-        "id": "commons",
-        "name": "Commons",
-        "description": "Recursos geridos coletivamente. Não propriedade privada nem estatal; regime de co-gestão. Elinor Ostrom: comuns sustentáveis exigem governança distribuída. Terra, água, conhecimento, código.",
-        "connections": ["reciprocidade", "cooperativa", "decrescimento", "terra", "softwarelivre", "riz∅ma"],
-        "layer": "pratica-institucional",
-        "color": "0x99ccff"
-    },
-    {
-        "id": "cosmopolitica",
-        "name": "Cosmopolítica",
-        "description": "Decisões incluindo não-humanos, ancestrais, futuras gerações. Terra tem voz. Forma de tomar decisões que excede humanos.",
-        "connections": ["terra", "commons", "placethought", "ressurgencia", "whanaungatanga", "pratica"],
-        "layer": "ecologica-material",
-        "color": "0xffcc66"
-    },
-    {
-        "id": "decrescimento",
-        "name": "Decrescimento",
-        "description": "Não recessão, mas redução planejada de escala metabólica da economia. Suficiência vs crescimento infinito em planeta finito. Ecologia decolonial.",
-        "connections": ["commons", "reciprocidade", "terra", "limite", "acumulacaoprimitiva"],
-        "layer": "politica",
-        "color": "0xff6666"
-    },
-    {
-        "id": "holobionte",
-        "name": "Holobionte",
-        "description": "Organismo + microbioma como unidade ecológica inseparável. Você é ecossistema de trilhões - coordenação distribuída sem controlador central.",
-        "connections": ["anatman", "multiplicidade", "vulnerabilidade", "processo", "decrescimento", "simbiose", "micorriza"],
-        "layer": "ecologica-material",
-        "color": "0xffcc66"
-    },
-    {
-        "id": "simbiose",
-        "name": "Simbiose",
-        "description": "Lynn Margulis: cooperação, não competição, como motor da evolução. Células eucarióticas são simbiose estabilizada. Vida emerge de associações mutuamente benéficas.",
-        "connections": ["holobionte", "micorriza", "reciprocidade", "composicao", "multiplicidade", "terra"],
-        "layer": "ecologica-material",
-        "color": "0xffcc66"
-    },
-    {
-        "id": "micorriza",
-        "name": "Micorrizas",
-        "description": "Fungos que conectam raízes de plantas em rede subterrânea. Trocam nutrientes, água, informação química. Árvores-mãe alimentam filhotes via micorriza. Suzanne Simard: Wood Wide Web.",
-        "connections": ["simbiose", "holobionte", "terra", "reciprocidade", "redesmiceliais", "commons"],
-        "layer": "ecologica-material",
-        "color": "0xffcc66"
-    },
-    {
-        "id": "redesmiceliais",
-        "name": "Redes Micelianas",
-        "description": "Micélio forma internet natural - rede descentralizada, resiliente, auto-organizante. Paul Stamets: fungos como arquitetos ecológicos. Modelo de infraestrutura relacional.",
-        "connections": ["micorriza", "simbiose", "protocoloaberto", "commons", "terra", "agencia", "riz∅ma"],
-        "layer": "ecologica-material",
-        "color": "0xffcc66"
-    },
-    {
-        "id": "extrativismo",
-        "name": "Extrativismo",
-        "description": "Lógica colonial de apropriação. Extração de conhecimento, recursos, trabalho sem reciprocidade. Pesquisa como tecnologia imperial vs metodologias indígenas. Violência epistêmica.",
-        "connections": ["commons", "decrescimento", "reciprocidade", "groundednormativity", "precariedade", "terra", "acumulacaoprimitiva", "despossessao", "reproducaosocial"],
-        "layer": "ecologica-material",
-        "color": "0xffcc66"
-    },
-    {
-        "id": "pratica",
-        "name": "Práxis Institucional",
-        "description": "Instituições como cristalizações temporárias de relações. Memórias relacionais que carregam encontro através do tempo. Estruturas que possibilitam sem determinar.",
-        "connections": ["agencia", "sujeito", "commons", "cosmopolitica", "processo", "tempo", "cooperativa", "assembleia"],
-        "layer": "pratica-institucional",
-        "color": "0x99ccff"
-    },
-    {
-        "id": "cooperativa",
-        "name": "Cooperativas",
-        "description": "Propriedade coletiva dos meios de produção. Não patrão vs empregado, mas membros com direitos iguais. Mondragón, MST: economia como relação, não extração.",
-        "connections": ["pratica", "commons", "reciprocidade", "agencia", "decrescimento"],
-        "layer": "pratica-institucional",
-        "color": "0x99ccff"
-    },
-    {
-        "id": "assembleia",
-        "name": "Assembleias",
-        "description": "Decisão horizontal sem representação. Occupy, 15M, assembleias populares: democracia direta como performance relacional. Fala circula, não concentra.",
-        "connections": ["pratica", "performatividade", "sujeito", "cosmopolitica", "evento"],
-        "layer": "pratica-institucional",
-        "color": "0x99ccff"
-    },
-    {
-        "id": "tecnologiaconvivial",
-        "name": "Tecnologias Conviviais",
-        "description": "Illich: ferramentas que ampliam autonomia, não criam dependência. Bicicleta vs automóvel. Tecnologia que maximiza liberdade relacional, não controle centralizado.",
-        "connections": ["pratica", "limite", "commons", "softwarelivre", "decrescimento", "desescolarizacao"],
-        "layer": "pratica-institucional",
-        "color": "0x99ccff"
-    },
-    {
-        "id": "moedascomunitarias",
-        "name": "Moedas Comunitárias",
-        "description": "Bancos Palmas, SOL (França), LETS: dinheiro local que circula em comunidade. Não acumula juros, estimula reciprocidade. Economia solidária vs financeirização.",
-        "connections": ["cooperativa", "reciprocidade", "commons", "decrescimento", "pratica"],
-        "layer": "pratica-institucional",
-        "color": "0x99ccff"
-    },
-    {
-        "id": "bancostempo",
-        "name": "Bancos de Tempo",
-        "description": "Timebanking: uma hora de trabalho = uma hora de trabalho, independente de profissão. Desierarquiza saberes, valoriza cuidado. Edgar Cahn: co-produção horizontal.",
-        "connections": ["reciprocidade", "moedascomunitarias", "cooperativa", "normatividade", "commons"],
-        "layer": "pratica-institucional",
-        "color": "0x99ccff"
-    },
-    {
-        "id": "circuloscultura",
-        "name": "Círculos de Cultura (Freire)",
-        "description": "Paulo Freire: não professor que deposita conhecimento, mas diálogo horizontal. Alfabetização como conscientização. Educador-educando: aprender é co-criação.",
-        "connections": ["educacaopopular", "assembleia", "conhecimento", "pratica", "performatividade"],
-        "layer": "pedagogica",
-        "color": "0xff99cc"
-    },
-    {
-        "id": "afeto",
-        "name": "Afeto Spinozista",
-        "description": "Capacidade de afetar e ser afetado. Não emoção subjetiva, mas potência relacional. Alegria aumenta potência de agir; tristeza diminui. Política como composição afetiva.",
-        "connections": ["agencia", "vulnerabilidade", "composicao", "ontologia", "processo", "corposemorgaos"],
-        "layer": "ontologica",
-        "color": "0x66ccff"
-    },
-    {
-        "id": "composicao",
-        "name": "Composição de Corpos",
-        "description": "Corpos que se encontram compõem ou decompõem. Bons encontros aumentam potência; maus encontros enfraquecem. Ética como arte de compor relações potencializadoras.",
-        "connections": ["afeto", "holobionte", "agencia", "vulnerabilidade", "multiplicidade", "corposemorgaos"],
-        "layer": "ontologica",
-        "color": "0x66ccff"
-    },
-    {
-        "id": "softwarelivre",
-        "name": "Software Livre",
-        "description": "Código aberto, modificável, distribuível. GNU/Linux, copyleft: conhecimento como commons, não propriedade. Liberdade 0-3: usar, estudar, modificar, compartilhar.",
-        "connections": ["reciprocidade", "commons", "tecnologiaconvivial", "protocoloaberto", "extrativismo"],
-        "layer": "pratica-institucional",
-        "color": "0x99ccff"
-    },
-    {
-        "id": "protocoloaberto",
-        "name": "Protocolos Abertos",
-        "description": "TCP/IP, ActivityPub, SMTP: infraestrutura sem dono. Descentralização como resistência a captura. Interoperabilidade vs jardins murados (walled gardens).",
-        "connections": ["softwarelivre", "commons", "tecnologiaconvivial", "reciprocidade", "agencia", "riz∅ma"],
-        "layer": "pratica-institucional",
-        "color": "0x99ccff"
-    },
-    {
-        "id": "criptografia",
-        "name": "Criptografia",
-        "description": "Matemática como proteção relacional. PGP, Signal: privacidade não é segredo, é autonomia comunicacional. Cifrar é criar espaços não-capturáveis pelo Estado/Capital.",
-        "connections": ["tecnologiaconvivial", "protocoloaberto", "vulnerabilidade", "agencia", "limite"],
-        "layer": "pratica-institucional",
-        "color": "0x99ccff"
-    },
-    {
-        "id": "arterelacional",
-        "name": "Arte Relacional",
-        "description": "Bourriaud: obra não é objeto, mas contexto de encontro. Lygia Clark, Hélio Oiticica: arte como produção de relações, não contemplação. Estética = relacionalidade vivida.",
-        "connections": ["performatividade", "evento", "afeto", "composicao", "pratica", "afrofuturismo"],
-        "layer": "pratica-institucional",
-        "color": "0x99ccff"
-    },
-    {
-        "id": "educacaopopular",
-        "name": "Educação Popular",
-        "description": "Freire: educação como prática de liberdade, não domesticação. Ninguém educa ninguém; educam-se em comunhão. Conhecimento emerge do diálogo com realidade concreta.",
-        "connections": ["circuloscultura", "conhecimento", "sujeito", "performatividade", "pedagogiaautonomia", "indigena", "cuidado"],
-        "layer": "pedagogica",
-        "color": "0xff99cc"
-    },
-    {
-        "id": "pedagogiaautonomia",
-        "name": "Pedagogia da Autonomia",
-        "description": "Freire: ensinar exige respeito à autonomia do educando. Educação não é transferência de conhecimento, mas criação de possibilidades. Ética, estética e política indissociáveis.",
-        "connections": ["educacaopopular", "desescolarizacao", "agencia", "vulnerabilidade", "normatividade"],
-        "layer": "pedagogica",
-        "color": "0xff99cc"
-    },
-    {
-        "id": "desescolarizacao",
-        "name": "Desescolarização",
-        "description": "Illich: escola como instituição que monopoliza aprendizagem e certifica competência. Sociedade desescolarizada: aprender em redes conviviais, não currículos padronizados.",
-        "connections": ["pedagogiaautonomia", "tecnologiaconvivial", "limite", "commons", "reciprocidade"],
-        "layer": "pedagogica",
-        "color": "0xff99cc"
-    },
-    {
-        "id": "riz∅ma",
-        "name": "Rizoma",
-        "description": "Deleuze/Guattari: estrutura não-hierárquica sem centro. Conecta qualquer ponto a qualquer ponto. Vs árvore (raiz única). Modelo: batata, grama, redes micelianas, internet.",
-        "connections": ["multiplicidade", "redesmiceliais", "protocoloaberto", "conhecimento", "devir", "commons", "corposemorgaos"],
-        "layer": "ontologica",
-        "color": "0x66ccff"
-    },
-    {
-        "id": "cuidado",
-        "name": "Ética do Cuidado",
-        "description": "Carol Gilligan, Joan Tronto: responsabilidade relacional precede direitos individuais. Cuidado não é altruísmo, mas reconhecimento de interdependência radical.",
-        "connections": ["vulnerabilidade", "reciprocidade", "educacaopopular", "ubuntu", "afeto", "whanaungatanga", "reproducaosocial"],
-        "layer": "epistemologica",
-        "color": "0xff9966"
-    },
-    {
-        "id": "acumulacaoprimitiva",
-        "name": "Acumulação Primitiva",
-        "description": "Marx/Harvey: despossessão violenta como condição do capital. Cercamentos, escravidão, colonialismo. Não é fase histórica passada, mas processo contínuo de expropriação.",
-        "connections": ["extrativismo", "despossessao", "groundednormativity", "commons", "decrescimento", "reproducaosocial", "necropolitica"],
-        "layer": "politica",
-        "color": "0xff6666"
-    },
-    {
-        "id": "despossessao",
-        "name": "Despossessão",
-        "description": "David Harvey: acumulação por despossessão. Privatização de commons (água, terra, conhecimento), financeirização, fraude corporativa. Capitalismo como roubo contínuo.",
-        "connections": ["acumulacaoprimitiva", "extrativismo", "commons", "groundednormativity", "precariedade", "reproducaosocial", "necropolitica"],
-        "layer": "politica",
-        "color": "0xff6666"
-    },
-    {
-        "id": "memoriacoletiva",
-        "name": "Memória Coletiva",
-        "description": "Halbwachs: memória não é individual, mas social. Lembramos através de quadros coletivos. Passado é reconstruído pelo presente, não recuperado intacto.",
-        "connections": ["tempo", "indigena", "ancestralidade", "conhecimento", "sujeito", "recursao", "estratostempo"],
-        "layer": "temporal",
-        "color": "0xcc99ff"
-    },
-    {
-        "id": "ancestralidade",
-        "name": "Ancestralidade",
-        "description": "Tradições africanas/indígenas: antepassados não estão mortos, mas ativos. Passado não é arquivo inerte, mas força presente. Sankofa: voltar para buscar o futuro.",
-        "connections": ["memoriacoletiva", "indigena", "ubuntu", "placethought", "tempo", "setimagera", "estratostempo"],
-        "layer": "temporal",
-        "color": "0xcc99ff"
-    },
-    {
-        "id": "hauntologia",
-        "name": "Hauntologia",
-        "description": "Derrida/Mark Fisher: assombração de futuros cancelados. O passado que não passa, o futuro que não chega. Espectros políticos: comunismo, utopias traídas.",
-        "connections": ["tempo", "memoriacoletiva", "afrofuturismo", "recursao", "limite"],
-        "layer": "temporal",
-        "color": "0xcc99ff"
-    },
-    {
-        "id": "afrofuturismo",
-        "name": "Afrofuturismo",
-        "description": "Octavia Butler, Sun Ra, Janelle Monáe: futuro como campo de batalha estética. Diáspora africana reiventa tempo. Passado mítico + futuro especulativo = presente transformador.",
-        "connections": ["ancestralidade", "hauntologia", "tempo", "indigena", "performatividade", "arterelacional", "futuridadequeer"],
-        "layer": "temporal",
-        "color": "0xcc99ff"
-    },
-    {
-        "id": "setimagera",
-        "name": "Sétima Geração",
-        "description": "Haudenosaunee: decisões consideram impacto nas próximas 7 gerações. Futuro como responsabilidade presente. Tempo não-linear: antepassados e descendentes co-presentes.",
-        "connections": ["ancestralidade", "indigena", "tempo", "limite", "decrescimento", "terra"],
-        "layer": "temporal",
-        "color": "0xcc99ff"
-    },
-    {
-        "id": "corposemorgaos",
-        "name": "Corpo sem Órgãos",
-        "description": "Deleuze/Guattari: plano de intensidades pré-individuais. Não corpo anatômico, mas campo de forças. CsO não é vazio, mas repleto de potenciais não-organizados. Desterritorialização radical.",
-        "connections": ["devir", "multiplicidade", "afeto", "composicao", "riz∅ma", "evento"],
-        "layer": "ontologica",
-        "color": "0x66ccff"
-    },
-    {
-        "id": "transindividual",
-        "name": "Transindividual",
-        "description": "Simondon: nível ontológico entre individual e coletivo. Não soma de indivíduos nem coletivo que os transcende. Individuação psíquica e coletiva são simultâneas. Relação constitui os termos.",
-        "connections": ["multiplicidade", "sujeito", "ontologia", "processo", "intracao", "ubuntu"],
-        "layer": "ontologica",
-        "color": "0x66ccff"
-    },
-    {
-        "id": "reproducaosocial",
-        "name": "Reprodução Social",
-        "description": "Nancy Fraser, Silvia Federici: trabalho não-pago (cuidado, gestação, alimentação) que sustenta capital. Invisibilização do trabalho feminino/racializado. Capitalismo parasita reprodução.",
-        "connections": ["cuidado", "vulnerabilidade", "despossessao", "acumulacaoprimitiva", "reciprocidade", "extrativismo"],
-        "layer": "politica",
-        "color": "0xff6666"
-    },
-    {
-        "id": "necropolitica",
-        "name": "Necropolítica",
-        "description": "Achille Mbembe: soberania como poder de ditar quem pode viver e quem deve morrer. Além de biopolítica (Foucault): não gerir vida, mas administrar morte. Colonialismo, escravidão, genocídio.",
-        "connections": ["precariedade", "vulnerabilidade", "groundednormativity", "acumulacaoprimitiva", "despossessao", "evento"],
-        "layer": "politica",
-        "color": "0xff6666"
-    },
-    {
-        "id": "estratostempo",
-        "name": "Estratos de Tempo",
-        "description": "Reinhart Koselleck: temporalidades múltiplas coexistem. Tempo geológico, biológico, histórico, vivencial em velocidades diferentes. Presente como sedimentação de durações heterogêneas.",
-        "connections": ["tempo", "memoriacoletiva", "ancestralidade", "recursao", "processo"],
-        "layer": "temporal",
-        "color": "0xcc99ff"
-    },
-    {
-        "id": "futuridadequeer",
-        "name": "Futuridade Queer",
-        "description": "José Esteban Muñoz: futuro como horizonte utópico que critica presente. Queerness não é identidade fixa, mas relação com futuro. 'Queerness is not yet here' - potencialidade vs presença.",
-        "connections": ["afrofuturismo", "hauntologia", "performatividade", "devir", "evento", "tempo"],
-        "layer": "temporal",
-        "color": "0xcc99ff"
-    }
+[
+  {
+    "id": "vazio",
+    "name": "Vazio Que Povoa",
+    "description": "O vazio não é ausência de conteúdo, mas presença de potencial. Campo indiferenciado de possibilidades que precede toda distinção. Não é 'nada' - é 'ainda-não-determinado'.",
+    "connections": [
+      "anatman",
+      "multiplicidade",
+      "ontologia",
+      "processo",
+      "recursao",
+      "sunyata",
+      "tempo"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "sunyata",
+    "name": "Śūnyatā (Vacuidade)",
+    "description": "Ausência de essência independente (svabhāva). Vazio não é niilismo - é condição de pratītyasamutpāda. Esvaziamento de natureza própria afirma existência relacional.",
+    "connections": [
+      "anatman",
+      "multiplicidade",
+      "ontologia",
+      "pratityasamutpada",
+      "vazio"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "anatman",
+    "name": "Anātman (Não-Eu)",
+    "description": "Não há alma permanente. \"Eu\" é agregado temporário de cinco skandhas em fluxo constante. Identidade sem substância.",
+    "connections": [
+      "holobionte",
+      "multiplicidade",
+      "processo",
+      "sunyata",
+      "vazio"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "pratityasamutpada",
+    "name": "Pratītyasamutpāda",
+    "description": "Origem dependente - todo fenômeno surge em co-dependência. Não há essências independentes; há nós de relações. Base budista da ontologia relacional.",
+    "connections": [
+      "intracao",
+      "multiplicidade",
+      "ontologia",
+      "processo",
+      "sunyata"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "ontologia",
+    "name": "Ontologia Relacional Universal",
+    "description": "Múltiplas tradições chegaram à mesma revelação: ser é relação. Relacionalidade precede substância.",
+    "connections": [
+      "indigena",
+      "intracao",
+      "multiplicidade",
+      "pratityasamutpada",
+      "processo",
+      "transindividual",
+      "ubuntu"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "multiplicidade",
+    "name": "Multiplicidade Sem Fusão",
+    "description": "Somos muitos sem deixar de ser singular. Identidade como padrão dinâmico de relações, não essência fixa.",
+    "connections": [
+      "anatman",
+      "corposemorgaos",
+      "holobionte",
+      "ontologia",
+      "pratityasamutpada",
+      "processo",
+      "riz∅ma",
+      "sujeito",
+      "transindividual",
+      "vazio"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "processo",
+    "name": "Processo (Whitehead)",
+    "description": "Não há substâncias permanentes - apenas ocasiões de experiência. \"Eu\" não é coisa; é rota de ocasiões. Como rio mantém identidade com água sempre renovada.",
+    "connections": [
+      "anatman",
+      "devir",
+      "estratostempo",
+      "holobionte",
+      "intracao",
+      "multiplicidade",
+      "ocasioes",
+      "ontologia",
+      "pratityasamutpada",
+      "tempo",
+      "transindividual",
+      "vazio"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "ocasioes",
+    "name": "Ocasiões de Experiência",
+    "description": "Whitehead: unidades atômicas da realidade são eventos, não coisas. Cada ocasião é prehensão criativa do passado + novidade. Realidade como processo de becoming, não being estático.",
+    "connections": [
+      "devir",
+      "evento",
+      "intracao",
+      "ocasiões",
+      "processo",
+      "tempo",
+      "vazio"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "devir",
+    "name": "Devir (Deleuze)",
+    "description": "Devir não é tornar-se outra coisa, mas entrar em zona de indiscernibilidade. Devir-animal, devir-mulher, devir-imperceptível: movimento que desfaz identidades fixas. Ser é devir.",
+    "connections": [
+      "composicao",
+      "corposemorgaos",
+      "evento",
+      "futuridadequeer",
+      "multiplicidade",
+      "ocasioes",
+      "processo",
+      "riz∅ma",
+      "tempo",
+      "vazio"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "intracao",
+    "name": "Intra-ação (Barad)",
+    "description": "Relata não preexistem relações - são efeitos de intra-ações. Não há elétron antes de medição; há fenômeno indivisível medição-elétron-aparato. Performatividade material da natureza.",
+    "connections": [
+      "agencia",
+      "conhecimento",
+      "multiplicidade",
+      "ontologia",
+      "performatividade",
+      "pratityasamutpada",
+      "processo",
+      "transindividual"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "recursao",
+    "name": "Recursão Sem Fundamento",
+    "description": "Sistemas que se auto-observam geram realidades que não podem ser totalizadas. Tartarugas ontológicas até o fim. Incompletude de Gödel aplicada à existência - somos verdades que não podemos provar.",
+    "connections": [
+      "agencia",
+      "conhecimento",
+      "estratostempo",
+      "evento",
+      "hauntologia",
+      "limite",
+      "memoriacoletiva",
+      "multiplicidade",
+      "processo",
+      "vazio"
+    ],
+    "layer": "epistemica",
+    "color": "0xff9966"
+  },
+  {
+    "id": "conhecimento",
+    "name": "Relacionalismo Epistêmico",
+    "description": "Não é representação neutra da realidade, mas práticas situadas, relacionais, incorporadas. Epistemologia inseparável de ontologia e política.",
+    "connections": [
+      "conhecimento",
+      "crítica",
+      "cuidado",
+      "epistemologia",
+      "indigena",
+      "intracao",
+      "ontologia",
+      "placethought",
+      "pratica",
+      "recursao",
+      "riz∅ma",
+      "whakapapa",
+      "whanaungatanga"
+    ],
+    "layer": "epistemica",
+    "color": "0xff9966"
+  },
+  {
+    "id": "tempo",
+    "name": "Tempo Entrelaçado",
+    "description": "Passado não está atrás, futuro não está adiante. Kairós (tempo oportuno) vs Chronos (tempo mensurável). Haudenosaunee: sete gerações atrás e adiante estão conosco agora.",
+    "connections": [
+      "ancestralidade",
+      "devir",
+      "estratostempo",
+      "evento",
+      "futuridadequeer",
+      "memoriacoletiva",
+      "ocasioes",
+      "processo",
+      "setimagera",
+      "vazio"
+    ],
+    "layer": "epistemica",
+    "color": "0xff9966"
+  },
+  {
+    "id": "limite",
+    "name": "Limite",
+    "description": "Fronteiras não são muros, mas membranas. Diferenciação necessária para relação. Paradoxo: definir limite é estar dentro E fora. Illich: ferramentas emancipam até certo ponto; depois escravizam.",
+    "connections": [
+      "decrescimento",
+      "evento",
+      "hauntologia",
+      "precariedade",
+      "recursao",
+      "setimagera",
+      "tecnologiaconvivial",
+      "tempo",
+      "vazio"
+    ],
+    "layer": "epistemica",
+    "color": "0xff9966"
+  },
+  {
+    "id": "agencia",
+    "name": "Agência Distribuída",
+    "description": "Ação não pertence a agentes; emerge de configurações relacionais. Você é o padrão de agenciamento. Latour: humanos e não-humanos como actantes. Spinoza: liberdade como agir segundo natureza própria.",
+    "connections": [
+      "afeto",
+      "intracao",
+      "não-humanos",
+      "ontologia",
+      "performatividade",
+      "pratica",
+      "recursao",
+      "sujeito"
+    ],
+    "layer": "politica",
+    "color": "0xff6699"
+  },
+  {
+    "id": "sujeito",
+    "name": "Sujeito Relacional",
+    "description": "Não substância isolada, mas nó de relações. Subjetivação (Foucault): tornar-se sujeito é processo político. Agência sem agente prévio.",
+    "connections": [
+      "agencia",
+      "evento",
+      "memoriacoletiva",
+      "multiplicidade",
+      "performatividade",
+      "sujeito",
+      "transindividual"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "performatividade",
+    "name": "Performatividade",
+    "description": "Austin/Butler: linguagem não descreve, mas faz. 'Eu te batizo' produz cristão. Identidades não preexistem performances; são efeitos de atos reiterados. Realidade como teatro recursivo.",
+    "connections": [
+      "afrofuturismo",
+      "agencia",
+      "evento",
+      "futuridadequeer",
+      "gênero",
+      "intracao",
+      "pratica",
+      "sujeito"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "evento",
+    "name": "Evento (Badiou)",
+    "description": "Ruptura no estado normal que cria novas possibilidades. Evento não é causado por sujeito prévio - produz sujeito através de fidelidade. Verdade emerge de acontecimentos imprevisíveis.",
+    "connections": [
+      "corposemorgaos",
+      "futuridadequeer",
+      "limite",
+      "necropolitica",
+      "performatividade",
+      "precariedade",
+      "recursao",
+      "sujeito",
+      "tempo"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "vulnerabilidade",
+    "name": "Vulnerabilidade",
+    "description": "Não fraqueza, mas condição ontológica. Butler: precariedade partilhada fundamenta ética. Reconhecer dependência mútua vs fantasia de autossuficiência.",
+    "connections": [
+      "afeto",
+      "cuidado",
+      "holobionte",
+      "necropolitica",
+      "reciprocidade",
+      "reproducaosocial",
+      "ubuntu"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "precariedade",
+    "name": "Precariedade",
+    "description": "Condição ontológica universal - dependência de redes que não controlamos. Precarização diferencial (alguns sistematicamente mais vulneráveis) é injustiça relacional.",
+    "connections": [
+      "despossessao",
+      "evento",
+      "extrativismo",
+      "limite",
+      "necropolitica",
+      "normatividade",
+      "vulnerabilidade"
+    ],
+    "layer": "politica",
+    "color": "0xff6699"
+  },
+  {
+    "id": "normatividade",
+    "name": "Normatividade Relacional",
+    "description": "Critérios de julgamento sem fundamentos absolutos. Coerência performativa, pluralismo, distribuição equitativa. Verdade como adequação a rede de relações, não correspondência a Real absoluto.",
+    "connections": [
+      "conhecimento",
+      "groundednormativity",
+      "limite",
+      "performatividade",
+      "precariedade",
+      "vulnerabilidade"
+    ],
+    "layer": "politica",
+    "color": "0xff6699"
+  },
+  {
+    "id": "ubuntu",
+    "name": "Ubuntu",
+    "description": "Filosofia Bantu: 'Sou porque somos'. Pessoa se torna pessoa através de outras pessoas. Não individualismo possessivo, mas relacionalidade constitutiva.",
+    "connections": [
+      "cuidado",
+      "indigena",
+      "ontologia",
+      "reciprocidade",
+      "transindividual",
+      "vulnerabilidade",
+      "whanaungatanga"
+    ],
+    "layer": "ontologica",
+    "color": "0x99ff99"
+  },
+  {
+    "id": "indigena",
+    "name": "Pensamento Indígena",
+    "description": "Não há 'pensamento indígena' monolítico - há milhares de tradições. Mas convergências: relacionalidade, reciprocidade, terra como sujeito. Decolonizar epistemologia.",
+    "connections": [
+      "ancestralidade",
+      "conhecimento",
+      "groundednormativity",
+      "indigena",
+      "ontologia",
+      "placethought",
+      "ressurgência",
+      "terra",
+      "ubuntu",
+      "whanaungatanga"
+    ],
+    "layer": "ontologica",
+    "color": "0x99ff99"
+  },
+  {
+    "id": "placethought",
+    "name": "Place-Thought",
+    "description": "Vanessa Watts: terra pensa através de nós. Não humanos pensando SOBRE lugar, mas lugar pensando ATRAVÉS de humanos. Pensamento é evento geológico.",
+    "connections": [
+      "ancestralidade",
+      "conhecimento",
+      "groundednormativity",
+      "indigena",
+      "ontologia",
+      "placethought",
+      "terra"
+    ],
+    "layer": "ontologica",
+    "color": "0x99ff99"
+  },
+  {
+    "id": "groundednormativity",
+    "name": "Grounded Normativity",
+    "description": "Glen Coulthard/Leanne Simpson: ética brota do lugar. Terra não é recurso, mas sistema de relações que gera obrigações. Crítica da recognição colonial: não queremos reconhecimento do Estado, mas autodeterminação.",
+    "connections": [
+      "acumulacaoprimitiva",
+      "despossessao",
+      "indigena",
+      "necropolitica",
+      "placethought",
+      "reciprocidade",
+      "terra"
+    ],
+    "layer": "ontologica",
+    "color": "0x99ff99"
+  },
+  {
+    "id": "ressurgencia",
+    "name": "Ressurgência Indígena",
+    "description": "Geração de futuros baseados em relacionalidade com terra, línguas, cerimônias. Não retorno ao passado - afirmação proativa de modos de vida relacionais.",
+    "connections": [
+      "cosmopolitica",
+      "evento",
+      "groundednormativity",
+      "indigena",
+      "terra"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ff99"
+  },
+  {
+    "id": "whanaungatanga",
+    "name": "Whanaungatanga",
+    "description": "Māori: relacionalidade como princípio organizador. Conhecimento emerge de e sustenta teias de parentesco. Epistemologia é genealogia. Whakapapa: tudo está conectado por linhagens.",
+    "connections": [
+      "conhecimento",
+      "cuidado",
+      "indigena",
+      "ontologia",
+      "placethought",
+      "ubuntu"
+    ],
+    "layer": "ontologica",
+    "color": "0x99ff99"
+  },
+  {
+    "id": "reciprocidade",
+    "name": "Reciprocidade",
+    "description": "Fundamento de economias não-capitalistas. Mauss: dádiva cria vínculo. Ayni (Andes), Ubuntu (Bantu): ser é ser-com. Circular, não acumular.",
+    "connections": [
+      "commons",
+      "cooperativa",
+      "cuidado",
+      "decrescimento",
+      "reproducaosocial",
+      "ubuntu",
+      "vulnerabilidade"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "terra",
+    "name": "Terra Como Sujeito",
+    "description": "Rio Whanganui (NZ) e Rio Atrato (Colômbia) têm personalidade jurídica. Direitos da natureza: Pachamama nas constituições. Terra não é recurso, mas ator.",
+    "connections": [
+      "Pachamama",
+      "direitos da natureza",
+      "ecologia",
+      "groundednormativity",
+      "holobionte",
+      "indigena",
+      "placethought",
+      "setimagera",
+      "simbiose",
+      "terra"
+    ],
+    "layer": "ecologica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "commons",
+    "name": "Commons",
+    "description": "Recursos geridos coletivamente. Não propriedade privada nem estatal; regime de co-gestão. Elinor Ostrom: comuns sustentáveis exigem governança distribuída. Terra, água, conhecimento, código.",
+    "connections": [
+      "cooperativa",
+      "cosmopolitica",
+      "decrescimento",
+      "extrativismo",
+      "reciprocidade",
+      "riz∅ma",
+      "softwarelivre",
+      "terra"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "cosmopolitica",
+    "name": "Cosmopolítica",
+    "description": "Decisões incluindo não-humanos, ancestrais, futuras gerações. Terra tem voz. Forma de tomar decisões que excede humanos.",
+    "connections": [
+      "assembleia",
+      "commons",
+      "cosmopolitica",
+      "não-humanos",
+      "placethought",
+      "pluralismo",
+      "pratica",
+      "ressurgencia",
+      "terra",
+      "whanaungatanga"
+    ],
+    "layer": "ecologica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "decrescimento",
+    "name": "Decrescimento",
+    "description": "Redução planejada de produção e consumo para viver dentro de limites planetários. Não é recessão, mas desaceleração intencional. Commons, cooperativas, reciprocidade.",
+    "connections": [
+      "acumulacaoprimitiva",
+      "commons",
+      "economia",
+      "extrativismo",
+      "holobionte",
+      "limite",
+      "reciprocidade",
+      "terra"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "holobionte",
+    "name": "Holobionte",
+    "description": "Organismo + microbioma como unidade ecológica inseparável. Você é ecossistema de trilhões - coordenação distribuída sem controlador central.",
+    "connections": [
+      "anatman",
+      "decrescimento",
+      "micorriza",
+      "multiplicidade",
+      "processo",
+      "simbiose",
+      "vulnerabilidade"
+    ],
+    "layer": "ecologica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "simbiose",
+    "name": "Simbiose",
+    "description": "Lynn Margulis: cooperação, não competição, como motor da evolução. Células eucarióticas são simbiose estabilizada. Vida emerge de associações mutuamente benéficas.",
+    "connections": [
+      "composicao",
+      "holobionte",
+      "micorriza",
+      "multiplicidade",
+      "reciprocidade",
+      "terra"
+    ],
+    "layer": "ecologica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "micorriza",
+    "name": "Micorrizas",
+    "description": "Fungos que conectam raízes de plantas em rede subterrânea. Trocam nutrientes, água, informação química. Árvores-mãe alimentam filhotes via micorriza. Suzanne Simard: Wood Wide Web.",
+    "connections": [
+      "commons",
+      "holobionte",
+      "reciprocidade",
+      "redesmiceliais",
+      "simbiose",
+      "terra"
+    ],
+    "layer": "ecologica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "redesmiceliais",
+    "name": "Redes Micelianas",
+    "description": "Micélio forma internet natural - rede descentralizada, resiliente, auto-organizante. Paul Stamets: fungos como arquitetos ecológicos. Modelo de infraestrutura relacional.",
+    "connections": [
+      "agencia",
+      "commons",
+      "micorriza",
+      "protocoloaberto",
+      "riz∅ma",
+      "simbiose",
+      "terra"
+    ],
+    "layer": "ecologica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "extrativismo",
+    "name": "Extrativismo",
+    "description": "Lógica colonial de apropriação. Extração de conhecimento, recursos, trabalho sem reciprocidade. Pesquisa como tecnologia imperial vs metodologias indígenas. Violência epistêmica.",
+    "connections": [
+      "acumulacaoprimitiva",
+      "commons",
+      "decrescimento",
+      "despossessao",
+      "groundednormativity",
+      "precariedade",
+      "reciprocidade",
+      "reproducaosocial",
+      "terra"
+    ],
+    "layer": "ecologica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "pratica",
+    "name": "Práxis Institucional",
+    "description": "Instituições como cristalizações temporárias de relações. Memórias relacionais que carregam encontro através do tempo. Estruturas que possibilitam sem determinar.",
+    "connections": [
+      "agencia",
+      "assembleia",
+      "commons",
+      "cooperativa",
+      "cosmopolitica",
+      "processo",
+      "sujeito",
+      "tempo"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "cooperativa",
+    "name": "Cooperativas",
+    "description": "Propriedade coletiva dos meios de produção. Não patrão vs empregado, mas membros com direitos iguais. Mondragón, MST: economia como relação, não extração.",
+    "connections": [
+      "agencia",
+      "commons",
+      "cooperativa",
+      "decrescimento",
+      "governança",
+      "moedascomunitarias",
+      "pratica",
+      "reciprocidade"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "assembleia",
+    "name": "Assembleias",
+    "description": "Decisão horizontal sem representação. Occupy, 15M, assembleias populares: democracia direta como performance relacional. Fala circula, não concentra.",
+    "connections": [
+      "cosmopolitica",
+      "evento",
+      "performatividade",
+      "pratica",
+      "sujeito"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "tecnologiaconvivial",
+    "name": "Tecnologias Conviviais",
+    "description": "Illich: ferramentas que ampliam autonomia, não criam dependência. Bicicleta vs automóvel. Tecnologia que maximiza liberdade relacional, não controle centralizado.",
+    "connections": [
+      "commons",
+      "decrescimento",
+      "desescolarizacao",
+      "limite",
+      "pratica",
+      "softwarelivre"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "moedascomunitarias",
+    "name": "Moedas Comunitárias",
+    "description": "Bancos Palmas, SOL (França), LETS: dinheiro local que circula em comunidade. Não acumula juros, estimula reciprocidade. Economia solidária vs financeirização.",
+    "connections": [
+      "bancostempo",
+      "commons",
+      "cooperativa",
+      "decrescimento",
+      "pratica",
+      "reciprocidade"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "bancostempo",
+    "name": "Bancos de Tempo",
+    "description": "Timebanking: uma hora de trabalho = uma hora de trabalho, independente de profissão. Desierarquiza saberes, valoriza cuidado. Edgar Cahn: co-produção horizontal.",
+    "connections": [
+      "commons",
+      "cooperativa",
+      "moedascomunitarias",
+      "normatividade",
+      "reciprocidade"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "circuloscultura",
+    "name": "Círculos de Cultura (Freire)",
+    "description": "Paulo Freire: não professor que deposita conhecimento, mas diálogo horizontal. Alfabetização como conscientização. Educador-educando: aprender é co-criação.",
+    "connections": [
+      "assembleia",
+      "conhecimento",
+      "educacaopopular",
+      "performatividade",
+      "pratica"
+    ],
+    "layer": "pratica",
+    "color": "0xff99cc"
+  },
+  {
+    "id": "afeto",
+    "name": "Afeto Spinozista",
+    "description": "Capacidade de afetar e ser afetado. Não emoção subjetiva, mas potência relacional. Alegria aumenta potência de agir; tristeza diminui. Política como composição afetiva.",
+    "connections": [
+      "agencia",
+      "composicao",
+      "corposemorgaos",
+      "ontologia",
+      "processo",
+      "vulnerabilidade"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "composicao",
+    "name": "Composição de Corpos",
+    "description": "Corpos que se encontram compõem ou decompõem. Bons encontros aumentam potência; maus encontros enfraquecem. Ética como arte de compor relações potencializadoras.",
+    "connections": [
+      "afeto",
+      "agencia",
+      "corposemorgaos",
+      "holobionte",
+      "multiplicidade",
+      "vulnerabilidade"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "softwarelivre",
+    "name": "Software Livre",
+    "description": "Código aberto, modificável, distribuível. GNU/Linux, copyleft: conhecimento como commons, não propriedade. Liberdade 0-3: usar, estudar, modificar, compartilhar.",
+    "connections": [
+      "commons",
+      "extrativismo",
+      "protocoloaberto",
+      "reciprocidade",
+      "tecnologiaconvivial"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "protocoloaberto",
+    "name": "Protocolos Abertos",
+    "description": "TCP/IP, ActivityPub, SMTP: infraestrutura sem dono. Descentralização como resistência a captura. Interoperabilidade vs jardins murados (walled gardens).",
+    "connections": [
+      "agencia",
+      "commons",
+      "reciprocidade",
+      "riz∅ma",
+      "softwarelivre",
+      "tecnologiaconvivial"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "criptografia",
+    "name": "Criptografia",
+    "description": "Matemática como proteção relacional. PGP, Signal: privacidade não é segredo, é autonomia comunicacional. Cifrar é criar espaços não-capturáveis pelo Estado/Capital.",
+    "connections": [
+      "agencia",
+      "limite",
+      "protocoloaberto",
+      "tecnologiaconvivial",
+      "vulnerabilidade"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "arterelacional",
+    "name": "Arte Relacional",
+    "description": "Bourriaud: obra não é objeto, mas contexto de encontro. Lygia Clark, Hélio Oiticica: arte como produção de relações, não contemplação. Estética = relacionalidade vivida.",
+    "connections": [
+      "afeto",
+      "afrofuturismo",
+      "composicao",
+      "evento",
+      "performatividade",
+      "pratica"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "educacaopopular",
+    "name": "Educação Popular",
+    "description": "Freire: educação como prática de liberdade, não domesticação. Ninguém educa ninguém; educam-se em comunhão. Conhecimento emerge do diálogo com realidade concreta.",
+    "connections": [
+      "circuloscultura",
+      "conhecimento",
+      "cuidado",
+      "indigena",
+      "pedagogiaautonomia",
+      "performatividade",
+      "sujeito"
+    ],
+    "layer": "pratica",
+    "color": "0xff99cc"
+  },
+  {
+    "id": "pedagogiaautonomia",
+    "name": "Pedagogia da Autonomia",
+    "description": "Freire: ensinar exige respeito à autonomia do educando. Educação não é transferência de conhecimento, mas criação de possibilidades. Ética, estética e política indissociáveis.",
+    "connections": [
+      "agencia",
+      "desescolarizacao",
+      "educacaopopular",
+      "normatividade",
+      "vulnerabilidade"
+    ],
+    "layer": "pratica",
+    "color": "0xff99cc"
+  },
+  {
+    "id": "desescolarizacao",
+    "name": "Desescolarização",
+    "description": "Illich: escola como instituição que monopoliza aprendizagem e certifica competência. Sociedade desescolarizada: aprender em redes conviviais, não currículos padronizados.",
+    "connections": [
+      "commons",
+      "limite",
+      "pedagogiaautonomia",
+      "reciprocidade",
+      "tecnologiaconvivial"
+    ],
+    "layer": "pratica",
+    "color": "0xff99cc"
+  },
+  {
+    "id": "riz∅ma",
+    "name": "Rizoma",
+    "description": "Deleuze/Guattari: estrutura não-hierárquica sem centro. Conecta qualquer ponto a qualquer ponto. Vs árvore (raiz única). Modelo: batata, grama, redes micelianas, internet.",
+    "connections": [
+      "commons",
+      "conhecimento",
+      "corposemorgaos",
+      "devir",
+      "heterarquia",
+      "multiplicidade",
+      "protocoloaberto",
+      "redesmiceliais"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "cuidado",
+    "name": "Ética do Cuidado",
+    "description": "Carol Gilligan, Joan Tronto: responsabilidade relacional precede direitos individuais. Cuidado não é altruísmo, mas reconhecimento de interdependência radical.",
+    "connections": [
+      "afeto",
+      "educacaopopular",
+      "reciprocidade",
+      "reproducaosocial",
+      "ubuntu",
+      "vulnerabilidade",
+      "whanaungatanga"
+    ],
+    "layer": "epistemica",
+    "color": "0xff9966"
+  },
+  {
+    "id": "acumulacaoprimitiva",
+    "name": "Acumulação Primitiva",
+    "description": "Marx/Harvey: despossessão violenta como condição do capital. Cercamentos, escravidão, colonialismo. Não é fase histórica passada, mas processo contínuo de expropriação.",
+    "connections": [
+      "commons",
+      "decrescimento",
+      "despossessao",
+      "extrativismo",
+      "groundednormativity",
+      "necropolitica",
+      "reproducaosocial"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "despossessao",
+    "name": "Despossessão",
+    "description": "David Harvey: acumulação por despossessão. Privatização de commons (água, terra, conhecimento), financeirização, fraude corporativa. Capitalismo como roubo contínuo.",
+    "connections": [
+      "acumulacaoprimitiva",
+      "commons",
+      "extrativismo",
+      "groundednormativity",
+      "necropolitica",
+      "precariedade",
+      "reproducaosocial"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "memoriacoletiva",
+    "name": "Memória Coletiva",
+    "description": "Halbwachs: memória não é individual, mas social. Lembramos através de quadros coletivos. Passado é reconstruído pelo presente, não recuperado intacto.",
+    "connections": [
+      "ancestralidade",
+      "conhecimento",
+      "consciência coletiva",
+      "estratostempo",
+      "indigena",
+      "recursao",
+      "sujeito",
+      "tempo"
+    ],
+    "layer": "temporal",
+    "color": "0xcc99ff"
+  },
+  {
+    "id": "ancestralidade",
+    "name": "Ancestralidade",
+    "description": "Tradições africanas/indígenas: antepassados não estão mortos, mas ativos. Passado não é arquivo inerte, mas força presente. Sankofa: voltar para buscar o futuro.",
+    "connections": [
+      "afrofuturismo",
+      "estratostempo",
+      "indigena",
+      "memoriacoletiva",
+      "placethought",
+      "setimagera",
+      "tempo",
+      "ubuntu",
+      "whakapapa"
+    ],
+    "layer": "temporal",
+    "color": "0xcc99ff"
+  },
+  {
+    "id": "hauntologia",
+    "name": "Hauntologia",
+    "description": "Derrida/Mark Fisher: assombração de futuros cancelados. O passado que não passa, o futuro que não chega. Espectros políticos: comunismo, utopias traídas.",
+    "connections": [
+      "afrofuturismo",
+      "limite",
+      "memoriacoletiva",
+      "recursao",
+      "tempo"
+    ],
+    "layer": "temporal",
+    "color": "0xcc99ff"
+  },
+  {
+    "id": "afrofuturismo",
+    "name": "Afrofuturismo",
+    "description": "Octavia Butler, Sun Ra, Janelle Monáe: futuro como campo de batalha estética. Diáspora africana reiventa tempo. Passado mítico + futuro especulativo = presente transformador.",
+    "connections": [
+      "ancestralidade",
+      "arterelacional",
+      "futuridadequeer",
+      "hauntologia",
+      "indigena",
+      "performatividade",
+      "tempo"
+    ],
+    "layer": "temporal",
+    "color": "0xcc99ff"
+  },
+  {
+    "id": "setimagera",
+    "name": "Sétima Geração",
+    "description": "Haudenosaunee: decisões consideram impacto nas próximas 7 gerações. Futuro como responsabilidade presente. Tempo não-linear: antepassados e descendentes co-presentes.",
+    "connections": [
+      "ancestralidade",
+      "decrescimento",
+      "indigena",
+      "limite",
+      "tempo",
+      "terra"
+    ],
+    "layer": "temporal",
+    "color": "0xcc99ff"
+  },
+  {
+    "id": "corposemorgaos",
+    "name": "Corpo sem Órgãos",
+    "description": "Deleuze/Guattari: plano de intensidades pré-individuais. Não corpo anatômico, mas campo de forças. CsO não é vazio, mas repleto de potenciais não-organizados. Desterritorialização radical.",
+    "connections": [
+      "afeto",
+      "composicao",
+      "devir",
+      "evento",
+      "multiplicidade",
+      "riz∅ma"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "transindividual",
+    "name": "Transindividual",
+    "description": "Simondon: nível ontológico entre individual e coletivo. Não soma de indivíduos nem coletivo que os transcende. Individuação psíquica e coletiva são simultâneas. Relação constitui os termos.",
+    "connections": [
+      "intracao",
+      "multiplicidade",
+      "ontologia",
+      "processo",
+      "sujeito",
+      "ubuntu"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "reproducaosocial",
+    "name": "Reprodução Social",
+    "description": "Nancy Fraser, Silvia Federici: trabalho não-pago (cuidado, gestação, alimentação) que sustenta capital. Invisibilização do trabalho feminino/racializado. Capitalismo parasita reprodução.",
+    "connections": [
+      "acumulacaoprimitiva",
+      "cuidado",
+      "despossessao",
+      "extrativismo",
+      "reciprocidade",
+      "vulnerabilidade"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "necropolitica",
+    "name": "Necropolítica",
+    "description": "Achille Mbembe: soberania como poder de ditar quem pode viver e quem deve morrer. Além de biopolítica (Foucault): não gerir vida, mas administrar morte. Colonialismo, escravidão, genocídio.",
+    "connections": [
+      "acumulacaoprimitiva",
+      "despossessao",
+      "evento",
+      "groundednormativity",
+      "precariedade",
+      "vulnerabilidade"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "estratostempo",
+    "name": "Estratos de Tempo",
+    "description": "Reinhart Koselleck: temporalidades múltiplas coexistem. Tempo geológico, biológico, histórico, vivencial em velocidades diferentes. Presente como sedimentação de durações heterogêneas.",
+    "connections": [
+      "ancestralidade",
+      "memoriacoletiva",
+      "processo",
+      "recursao",
+      "tempo"
+    ],
+    "layer": "temporal",
+    "color": "0xcc99ff"
+  },
+  {
+    "id": "futuridadequeer",
+    "name": "Futuridade Queer",
+    "description": "José Esteban Muñoz: futuro como horizonte utópico que critica presente. Queerness não é identidade fixa, mas relação com futuro. 'Queerness is not yet here' - potencialidade vs presença.",
+    "connections": [
+      "afrofuturismo",
+      "devir",
+      "evento",
+      "hauntologia",
+      "performatividade",
+      "tempo"
+    ],
+    "layer": "temporal",
+    "color": "0xcc99ff"
+  },
+  {
+    "id": "crítica",
+    "name": "Crítica",
+    "description": "Questionamento sistemático de estruturas, pressupostos e condições de possibilidade. Não apenas negação, mas exposição de limites e abertura de alternativas.",
+    "connections": [
+      "conhecimento",
+      "epistemologia",
+      "performatividade",
+      "política",
+      "ética"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "física quântica",
+    "name": "Física Quântica",
+    "description": "Domínio onde ontologia clássica colapsa: superposição, emaranhamento, não-localidade. Realidade não existe independente de medição. Base física do relacionalismo.",
+    "connections": [
+      "RQM",
+      "emaranhamento",
+      "fatos relativos",
+      "não-localidade",
+      "ontologia",
+      "processo"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "governança",
+    "name": "Governança",
+    "description": "Estruturas e práticas de coordenação coletiva. Vai além de governo formal: inclui commons, cooperativas, assembleias, protocolos distribuídos.",
+    "connections": [
+      "assembleia",
+      "commons",
+      "cooperativa",
+      "cosmopolitica",
+      "democracia",
+      "descentralização",
+      "pratica"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "RQM",
+    "name": "RQM (Relational Quantum Mechanics)",
+    "description": "Carlo Rovelli: propriedades físicas são relacionais, não intrínsecas. Estados quânticos existem apenas relativos a outros sistemas. Anti-fundacionalismo radical.",
+    "connections": [
+      "anti-fundacionalismo",
+      "fatos relativos",
+      "física quântica",
+      "ontologia",
+      "processo",
+      "relacionalidade"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "política",
+    "name": "Política",
+    "description": "Esfera da ação coletiva, poder, conflito e constituição do comum. Não é administração técnica, mas espaço de transformação e disputa ontológica.",
+    "connections": [
+      "cosmopolitica",
+      "democracia",
+      "evento",
+      "governança",
+      "poder",
+      "pratica",
+      "sujeito"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "direitos da natureza",
+    "name": "Direitos da Natureza",
+    "description": "Reconhecimento jurídico de rios, florestas, montanhas como sujeitos de direito. Descentraliza humano. Pachamama, Whanganui River, Atrato River.",
+    "connections": [
+      "Pachamama",
+      "cosmopolitica",
+      "indigena",
+      "não-humanos",
+      "personalidade jurídica",
+      "terra"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "economia",
+    "name": "Economia",
+    "description": "Sistema de produção, distribuição, troca. Não é fato natural, mas construção social e política. Economia solidária, ecológica, decrescimento como alternativas.",
+    "connections": [
+      "capitalismo",
+      "commons",
+      "cooperativa",
+      "decrescimento",
+      "extrativismo",
+      "mercadorias fictícias"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "ecologia",
+    "name": "Ecologia",
+    "description": "Estudo de relações entre organismos e ambiente. Dissolve fronteiras entre indivíduo e meio. Base científica para ontologia relacional multiespécies.",
+    "connections": [
+      "biodiversidade",
+      "holobionte",
+      "micorriza",
+      "multiespécies",
+      "simbiose",
+      "terra"
+    ],
+    "layer": "ecologica",
+    "color": "0x66ff99"
+  },
+  {
+    "id": "super-humeanismo",
+    "name": "Super-Humeanismo",
+    "description": "Jonathan Schaffer: mosaic of local matters of fact é tudo que existe. Radicalização de Hume: relações supervenientes a propriedades intrínsecas. RQM inverte isso.",
+    "connections": [
+      "RQM",
+      "fundamentos",
+      "física quântica",
+      "ontologia",
+      "relacionalidade"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "personalidade jurídica",
+    "name": "Personalidade Jurídica",
+    "description": "Atribuição de capacidade legal a entidades. Expansão além de humanos individuais: corporações, rios, florestas. Política ontológica do direito.",
+    "connections": [
+      "Pachamama",
+      "cosmopolitica",
+      "direitos da natureza",
+      "não-humanos",
+      "terra"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "heterarquia",
+    "name": "Heterarquia",
+    "description": "Organização sem hierarquia única ou centro fixo. Múltiplos ordenamentos coexistem. Alternativa a pirâmides de comando.",
+    "connections": [
+      "agencia",
+      "assembleia",
+      "commons",
+      "descentralização",
+      "riz∅ma"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "ética",
+    "name": "Ética",
+    "description": "Não é código universal abstrato, mas responsabilidade situada. Ética do cuidado, da reciprocidade, da vulnerabilidade compartilhada.",
+    "connections": [
+      "cuidado",
+      "normatividade",
+      "reciprocidade",
+      "responsabilidade",
+      "vulnerabilidade"
+    ],
+    "layer": "etica",
+    "color": "0xffcccc"
+  },
+  {
+    "id": "descolonização",
+    "name": "Descolonização",
+    "description": "Não apenas independência política, mas transformação epistêmica, ontológica, econômica. Desaprender violências coloniais. Ressurgência de saberes silenciados.",
+    "connections": [
+      "despossessao",
+      "epistemicídio",
+      "extrativismo",
+      "groundednormativity",
+      "indigena",
+      "ressurgência"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "consciência",
+    "name": "Consciência",
+    "description": "Não é substância imaterial nem epifenômeno. Processo relacional, incorporado, distribuído. Consciência coletiva como fenômeno emergente.",
+    "connections": [
+      "consciência coletiva",
+      "intersubjetividade",
+      "neurociência",
+      "processo",
+      "sujeito"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "tecnologia",
+    "name": "Tecnologia",
+    "description": "Não é ferramenta neutra. Incorpora valores, estrutura relações, distribui poder. Tecnologias conviviais vs tecnologias de controle.",
+    "connections": [
+      "agencia",
+      "limite",
+      "protocoloaberto",
+      "softwarelivre",
+      "tecnologiaconvivial"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "poder",
+    "name": "Poder",
+    "description": "Capacidade de estruturar campo de possibilidades. Foucault: não apenas repressão, mas produção. Circula, não se possui. Poder constituinte vs constituído.",
+    "connections": [
+      "agencia",
+      "evento",
+      "governança",
+      "necropolitica",
+      "política",
+      "pratica"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "madhyamaka",
+    "name": "Madhyamaka",
+    "description": "Escola budista do 'caminho do meio' fundada por Nāgārjuna. Śūnyatā não é niilismo nem eternalismo. Lógica tetralemática que transcende afirmação e negação.",
+    "connections": [
+      "budismo",
+      "nagarjuna",
+      "ontologia",
+      "sunyata",
+      "vazio"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "Māori",
+    "name": "Māori",
+    "description": "Povo indígena da Aotearoa (Nova Zelândia). Whanaungatanga, whakapapa: relacionalidade, genealogia como ontologia. Rio Whanganui como pessoa jurídica.",
+    "connections": [
+      "direitos da natureza",
+      "indigena",
+      "placethought",
+      "whakapapa",
+      "whanaungatanga"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "justiça",
+    "name": "Justiça",
+    "description": "Não é imparcialidade abstrata, mas reconhecimento de diferenças e reparação de violências. Justiça ambiental, epistêmica, reprodutiva, restaurativa.",
+    "connections": [
+      "descolonização",
+      "direitos da natureza",
+      "responsabilidade",
+      "vulnerabilidade",
+      "ética"
+    ],
+    "layer": "etica",
+    "color": "0xffcccc"
+  },
+  {
+    "id": "intersubjetividade",
+    "name": "Intersubjetividade",
+    "description": "Sujeitos não existem primeiro para depois se relacionar. Constituição mútua através de encontros. Mitsein (Heidegger), transindividual (Simondon).",
+    "connections": [
+      "consciência coletiva",
+      "ontologia",
+      "sujeito",
+      "transindividual",
+      "ubuntu"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "identidade",
+    "name": "Identidade",
+    "description": "Não é essência fixa, mas cristalização temporária de processos. Performativa, relacional, múltipla. Identidade como verbo, não substantivo.",
+    "connections": [
+      "devir",
+      "multiplicidade",
+      "performatividade",
+      "processo",
+      "sujeito"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "buen vivir",
+    "name": "Buen Vivir",
+    "description": "Sumak Kawsay (Quechua), Suma Qamaña (Aymara): viver bem em harmonia com comunidade e natureza. Alternativa a desenvolvimento. Constituições Ecuador e Bolívia.",
+    "connections": [
+      "Pachamama",
+      "commons",
+      "cosmopolitica",
+      "decrescimento",
+      "indigena"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "budismo",
+    "name": "Budismo",
+    "description": "Tradição filosófica e espiritual: śūnyatā, pratītyasamutpāda, anātman. Base de ontologia relacional radical. Madhyamaka, Zen, Vajrayana.",
+    "connections": [
+      "anatman",
+      "madhyamaka",
+      "nagarjuna",
+      "pratityasamutpada",
+      "sunyata",
+      "vazio"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "violência simbólica",
+    "name": "Violência Simbólica",
+    "description": "Pierre Bourdieu: dominação que se naturaliza através de cultura, linguagem, educação. Misrecognition: oprimidos internalizam categorias de opressão.",
+    "connections": [
+      "crítica",
+      "descolonização",
+      "educacaopopular",
+      "epistemicídio",
+      "poder"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "vácuo",
+    "name": "Vácuo Quântico",
+    "description": "Vácuo não é vazio absoluto. Flutuações quânticas, partículas virtuais, energia de ponto zero. Vazio que povoa desde nível físico fundamental.",
+    "connections": [
+      "física quântica",
+      "processo",
+      "vazio",
+      "virtualidade"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "sustentabilidade",
+    "name": "Sustentabilidade",
+    "description": "Capacidade de manter processos vitais através do tempo. Sete gerações. Não é apenas ambiental, mas social, econômica, epistêmica.",
+    "connections": [
+      "commons",
+      "decrescimento",
+      "holobionte",
+      "limite",
+      "setimagera"
+    ],
+    "layer": "etica",
+    "color": "0xffcccc"
+  },
+  {
+    "id": "ressurgência",
+    "name": "Ressurgência",
+    "description": "Leanne Betasamosake Simpson: não é resistência reativa, mas reemergência criativa de práticas, línguas, relações indígenas. Grounded normativity como base.",
+    "connections": [
+      "descolonização",
+      "evento",
+      "groundednormativity",
+      "indigena"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "responsabilidade",
+    "name": "Responsabilidade",
+    "description": "Response-ability (Haraway): habilidade de responder. Não é culpa individual, mas capacidade situada de compor relações éticas.",
+    "connections": [
+      "agencia",
+      "cuidado",
+      "intracao",
+      "reciprocidade",
+      "vulnerabilidade"
+    ],
+    "layer": "etica",
+    "color": "0xffcccc"
+  },
+  {
+    "id": "relações",
+    "name": "Relações",
+    "description": "Não conectam termos pré-existentes. Relações constituem os termos. Ontologia relacional: relações vêm primeiro.",
+    "connections": [
+      "intracao",
+      "ontologia",
+      "pratityasamutpada",
+      "processo",
+      "relacionalidade"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "relacionalidade",
+    "name": "Relacionalidade",
+    "description": "Princípio ontológico: ser é ser-em-relação. Ubuntu, pratītyasamutpāda, intra-ação convergem. Relacionalidade precede substância.",
+    "connections": [
+      "RQM",
+      "intracao",
+      "ontologia",
+      "pratityasamutpada",
+      "relações",
+      "ubuntu"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "propriedade",
+    "name": "Propriedade",
+    "description": "Não é relação natural com coisas, mas construção jurídica e política. Propriedade privada vs commons. Cercamentos, despossessão, mercantilização.",
+    "connections": [
+      "acumulacaoprimitiva",
+      "commons",
+      "despossessao",
+      "extrativismo",
+      "terra"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "pluralismo",
+    "name": "Pluralismo",
+    "description": "Múltiplas ontologias, epistemologias, mundos coexistem. Não é relativismo (tudo vale), mas reconhecimento de diferenças irredutíveis.",
+    "connections": [
+      "cosmopolitica",
+      "indigena",
+      "multiplicidade",
+      "ontologia",
+      "relacionalidade"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "Pachamama",
+    "name": "Pachamama",
+    "description": "Mãe Terra nas cosmologias andinas. Não é recurso, mas sujeito vivo. Direitos da natureza nas constituições de Ecuador e Bolívia.",
+    "connections": [
+      "buen vivir",
+      "cosmopolitica",
+      "direitos da natureza",
+      "indigena",
+      "terra"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "neurociência",
+    "name": "Neurociência",
+    "description": "Estudo do sistema nervoso. Dissolve dualismo: mente é processo incorporado. Plasticidade, embodiment, 4E cognition.",
+    "connections": [
+      "afeto",
+      "consciência",
+      "holobionte",
+      "processo"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "nagarjuna",
+    "name": "Nāgārjuna",
+    "description": "Filósofo budista (c. 150-250 EC), fundador do Madhyamaka. Mūlamadhyamakakārikā: śūnyatā através de lógica tetralemática. Anti-fundacionalismo radical.",
+    "connections": [
+      "budismo",
+      "madhyamaka",
+      "ontologia",
+      "sunyata",
+      "vazio"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "democracia",
+    "name": "Democracia",
+    "description": "Não é apenas votar. Democracia direta, participativa, deliberativa. Assembleias, conselhos, confederalismo. Democracia como processo, não forma fixa.",
+    "connections": [
+      "assembleia",
+      "confederalismo",
+      "governança",
+      "política",
+      "pratica"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "descentralização",
+    "name": "Descentralização",
+    "description": "Distribuição de poder e decisão. Não é fragmentação, mas coordenação policêntrica. Municipalismo, confederalismo, redes peer-to-peer.",
+    "connections": [
+      "agencia",
+      "confederalismo",
+      "governança",
+      "heterarquia",
+      "protocoloaberto"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "desigualdade",
+    "name": "Desigualdade",
+    "description": "Distribuição assimétrica de recursos, poder, reconhecimento. Produzida por estruturas, não diferenças naturais. Capitalismo, colonialismo, patriarcado.",
+    "connections": [
+      "acumulacaoprimitiva",
+      "capitalismo",
+      "classe",
+      "extrativismo",
+      "justiça"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "emaranhamento",
+    "name": "Emaranhamento Quântico",
+    "description": "Correlações não-locais entre partículas. Einstein: 'ação fantasmagórica à distância'. Bell: não-localidade é real. Relacionalidade física fundamental.",
+    "connections": [
+      "RQM",
+      "física quântica",
+      "não-localidade",
+      "ontologia",
+      "relações"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "epistemologia",
+    "name": "Epistemologia",
+    "description": "Teoria do conhecimento. Não é separável de ontologia. Relacionalismo epistêmico: conhecer é co-constituir.",
+    "connections": [
+      "conhecimento",
+      "crítica",
+      "ontologia",
+      "pratica"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "escala",
+    "name": "Escala",
+    "description": "Níveis de organização: quântico, molecular, celular, organismo, ecossistema, planetário. Propriedades emergem em cada escala.",
+    "connections": [
+      "emergência",
+      "holobionte",
+      "limite",
+      "processo"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "espaço-tempo",
+    "name": "Espaço-Tempo",
+    "description": "Relatividade: espaço e tempo não são absolutos, mas tecido unificado. Gravidade como curvatura do espaço-tempo. Loop quantum gravity: espaço-tempo é relacional.",
+    "connections": [
+      "física quântica",
+      "processo",
+      "relações",
+      "tempo"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "fatos relativos",
+    "name": "Fatos Relativos",
+    "description": "RQM: fatos físicos são relativos a sistemas observadores. Não há perspectiva do universo. Relacionalismo radical: propriedades existem apenas entre sistemas.",
+    "connections": [
+      "RQM",
+      "anti-fundacionalismo",
+      "física quântica",
+      "ontologia",
+      "relacionalidade"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "feminismo",
+    "name": "Feminismo",
+    "description": "Crítica de patriarcado e gênero. Não é apenas igualdade, mas transformação ontológica. Feminismos: negro, decolonial, materialista, queer, ecofeminismo.",
+    "connections": [
+      "cuidado",
+      "gênero",
+      "performatividade",
+      "reproducaosocial",
+      "vulnerabilidade"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "filosofia africana",
+    "name": "Filosofia Africana",
+    "description": "Ubuntu, comunalidade, relacionalidade. Não é folclore, mas ontologia e epistemologia. Descolonização da filosofia.",
+    "connections": [
+      "descolonização",
+      "indigena",
+      "ontologia",
+      "ubuntu"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "intra-ação",
+    "name": "Intra-ação",
+    "description": "Karen Barad: não inter-ação (entre termos pré-existentes), mas intra-ação (co-constituição mútua). Agencial realism: matéria e significado emergem juntos.",
+    "connections": [
+      "agencia",
+      "intracao",
+      "ontologia",
+      "performatividade",
+      "realismo agencial"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "capitalismo",
+    "name": "Capitalismo",
+    "description": "Sistema baseado em acumulação de capital, propriedade privada, trabalho assalariado. Mercadorias fictícias (Polanyi). Extrativismo, cercamentos, despossessão.",
+    "connections": [
+      "acumulacaoprimitiva",
+      "despossessao",
+      "economia",
+      "extrativismo",
+      "mercadorias fictícias"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "confederalismo",
+    "name": "Confederalismo Democrático",
+    "description": "Murray Bookchin, Abdullah Öcalan: municipalismo libertário, assembleias, descentralização. Rojava como experimento. Alternativa a Estado-nação.",
+    "connections": [
+      "Rojava",
+      "assembleia",
+      "democracia",
+      "descentralização",
+      "municipalismo"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "anti-fundacionalismo",
+    "name": "Anti-Fundacionalismo",
+    "description": "Rejeição de fundamentos últimos. Rovelli: iteração irrestrita - mesmo relações são relativas. Turtles all the way down.",
+    "connections": [
+      "RQM",
+      "madhyamaka",
+      "ontologia",
+      "recursao",
+      "vazio"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "antropocentrismo",
+    "name": "Antropocentrismo",
+    "description": "Humano como medida e centro. Crítica: não-humanos têm agência, valor, direitos. Multiespécies, cosmopolítica, direitos da natureza.",
+    "connections": [
+      "cosmopolitica",
+      "direitos da natureza",
+      "holobionte",
+      "multiespécies",
+      "não-humanos"
+    ],
+    "layer": "politica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "gênero",
+    "name": "Gênero",
+    "description": "Não é biologia, mas performance (Butler). Normas de gênero produzem corpos. Queerness, não-binariedade, transgeneridade como dissidência ontológica.",
+    "connections": [
+      "feminismo",
+      "futuridadequeer",
+      "holobionte",
+      "performatividade",
+      "sujeito"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "não-humanos",
+    "name": "Não-Humanos",
+    "description": "Animais, plantas, rios, montanhas, tecnologias como agentes. Latour: actantes. Haraway: espécies companheiras. Cosmopolítica.",
+    "connections": [
+      "actantes",
+      "agencia",
+      "cosmopolitica",
+      "direitos da natureza",
+      "multiespécies"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "não-localidade",
+    "name": "Não-Localidade",
+    "description": "Correlações quânticas instantâneas independentes de distância. Bell, Aspect: não-localidade é real. Desafia separabilidade ontológica.",
+    "connections": [
+      "RQM",
+      "emaranhamento",
+      "física quântica",
+      "relações"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "multiespécies",
+    "name": "Multiespécies",
+    "description": "Etnografia, ontologia, ética que centra relações entre espécies. Holobionte, simbiose, espécies companheiras. Além de antropocentrismo.",
+    "connections": [
+      "ecologia",
+      "espécies companheiras",
+      "holobionte",
+      "não-humanos",
+      "simbiose"
+    ],
+    "layer": "ecologica",
+    "color": "0x66ff99"
+  },
+  {
+    "id": "epistemicídio",
+    "name": "Epistemicídio",
+    "description": "Boaventura de Sousa Santos: assassinato de conhecimentos. Colonização destrói epistemologias indígenas, africanas, não-ocidentais. Violência epistêmica.",
+    "connections": [
+      "conhecimento",
+      "descolonização",
+      "indigena",
+      "violência simbólica"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "realismo agencial",
+    "name": "Realismo Agencial",
+    "description": "Karen Barad: matéria e significado não são separados. Aparatos de medição performam realidade. Ontologia e epistemologia inseparáveis (onto-epistemologia).",
+    "connections": [
+      "física quântica",
+      "intra-ação",
+      "intracao",
+      "ontologia",
+      "performatividade"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "liberdade",
+    "name": "Liberdade",
+    "description": "Não é autonomia absoluta, mas capacidade situada de responder. Liberdade em vulnerabilidade, não apesar dela. Agência distribuída.",
+    "connections": [
+      "agencia",
+      "autonomia",
+      "responsabilidade",
+      "vulnerabilidade"
+    ],
+    "layer": "etica",
+    "color": "0xffcccc"
+  },
+  {
+    "id": "mercadorias fictícias",
+    "name": "Mercadorias Fictícias",
+    "description": "Polanyi: trabalho, terra, dinheiro tratados como mercadorias mas não produzidos para venda. Capitalismo cria ficção destrutiva.",
+    "connections": [
+      "acumulacaoprimitiva",
+      "capitalismo",
+      "economia",
+      "terra"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "consciência coletiva",
+    "name": "Consciência Coletiva",
+    "description": "Fenômeno emergente de interações. Não é soma de consciências individuais. Assembleias, movimentos sociais como consciência coletiva em ato.",
+    "connections": [
+      "assembleia",
+      "consciência",
+      "memoriacoletiva",
+      "sujeito",
+      "transindividual"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "autonomia",
+    "name": "Autonomia",
+    "description": "Não é independência absoluta, mas capacidade de auto-organização. Zapatismo: mandar obedecendo. Pedagogia da autonomia (Freire).",
+    "connections": [
+      "agencia",
+      "autogestão",
+      "liberdade",
+      "municipalismo",
+      "pedagogiaautonomia"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "espécies companheiras",
+    "name": "Espécies Companheiras",
+    "description": "Donna Haraway: co-evolução, co-constituição. Cães, micróbios, plantas como companheiros, não recursos. Tornar-se com.",
+    "connections": [
+      "holobionte",
+      "multiespécies",
+      "não-humanos",
+      "simbiose"
+    ],
+    "layer": "ecologica",
+    "color": "0x66ff99"
+  },
+  {
+    "id": "Rojava",
+    "name": "Rojava",
+    "description": "Região autônoma no norte da Síria. Experimento de confederalismo democrático, ecologia social, feminismo. Municipalismo em prática.",
+    "connections": [
+      "assembleia",
+      "confederalismo",
+      "democracia",
+      "municipalismo"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "municipalismo",
+    "name": "Municipalismo",
+    "description": "Poder em escala municipal. Confederação de comunas. Bookchin, Barcelona en Comú, Fearless Cities. Democracia direta local.",
+    "connections": [
+      "assembleia",
+      "confederalismo",
+      "democracia",
+      "descentralização"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "actantes",
+    "name": "Actantes",
+    "description": "Bruno Latour (ANT): qualquer coisa que tenha agência. Humanos, não-humanos, tecnologias, instituições. Simetria generalizada.",
+    "connections": [
+      "agencia",
+      "ator-rede",
+      "cosmopolitica",
+      "não-humanos"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "whakapapa",
+    "name": "Whakapapa",
+    "description": "Genealogia Māori. Não é apenas árvore genealógica, mas ontologia relacional. Tudo tem whakapapa - humanos, rios, montanhas.",
+    "connections": [
+      "Māori",
+      "ancestralidade",
+      "conhecimento",
+      "indigena",
+      "ontologia"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "autogestão",
+    "name": "Autogestão",
+    "description": "Gestão direta pelos trabalhadores/participantes. Assembleias, conselhos, rotação. Cooperativas, fábricas recuperadas.",
+    "connections": [
+      "assembleia",
+      "autonomia",
+      "cooperativa",
+      "pratica"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "emergência",
+    "name": "Emergência",
+    "description": "Propriedades que surgem em níveis de organização sem estar presentes em componentes. Todo irredutível a partes.",
+    "connections": [
+      "consciência coletiva",
+      "escala",
+      "holobionte",
+      "processo"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "origem dependente",
+    "name": "Origem Dependente",
+    "description": "Pratītyasamutpāda: fenômenos surgem em co-dependência. Cadeia de doze elos no budismo. Base da ontologia relacional.",
+    "connections": [
+      "budismo",
+      "ontologia",
+      "pratityasamutpada",
+      "relações"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "ator-rede",
+    "name": "Teoria Ator-Rede",
+    "description": "Latour, Callon, Law: sociedade não explica técnica nem técnica explica sociedade. Actantes humanos e não-humanos em redes.",
+    "connections": [
+      "actantes",
+      "agencia",
+      "não-humanos",
+      "redes"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "virtualidade",
+    "name": "Virtualidade",
+    "description": "Deleuze: virtual é real mas não atual. Campo de potenciais que se atualiza. Vazio como virtualidade pura.",
+    "connections": [
+      "devir",
+      "vazio",
+      "vácuo"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "classe",
+    "name": "Classe",
+    "description": "Posição nas relações de produção. Não é apenas renda. Trabalhadores, capitalistas, precariado. Luta de classes como motor histórico.",
+    "connections": [
+      "acumulacaoprimitiva",
+      "capitalismo",
+      "desigualdade",
+      "política"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "redes",
+    "name": "Redes",
+    "description": "Estruturas descentralizadas, distribuídas. Micelianas, rizomáticas, peer-to-peer. Internet, redes sociais, redes de apoio mútuo.",
+    "connections": [
+      "descentralização",
+      "protocoloaberto",
+      "redesmiceliais",
+      "riz∅ma"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "biodiversidade",
+    "name": "Biodiversidade",
+    "description": "Variedade de vida. Não é apenas preservação, mas relações simbióticas. Holobionte, multiespécies, ecologia.",
+    "connections": [
+      "ecologia",
+      "holobionte",
+      "multiespécies",
+      "simbiose"
+    ],
+    "layer": "ecologica",
+    "color": "0x66ff99"
+  },
+  {
+    "id": "loop",
+    "name": "Loop",
+    "description": "Retroalimentação, recursão, circularidade. Loop gravity: espaço-tempo como loops. Recursão sem fundamento.",
+    "connections": [
+      "espaço-tempo",
+      "processo",
+      "recursao"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "ocasiões",
+    "name": "Ocasiões",
+    "description": "Eventos pontuais (Whitehead). Processo se compõe de ocasiões de experiência. Tempo como série de ocasiões.",
+    "connections": [
+      "evento",
+      "ocasioes",
+      "processo",
+      "tempo"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "ação",
+    "name": "Ação",
+    "description": "Não é apenas movimento físico. Ação situada, relacional, performativa. Práxis: ação refletida que transforma mundo e sujeito.",
+    "connections": [
+      "agencia",
+      "evento",
+      "performatividade",
+      "pratica"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "alteridade",
+    "name": "Alteridade",
+    "description": "Outro como irredutível. Lévinas: ética como responsabilidade ao rosto do outro. Alteridade constitui identidade.",
+    "connections": [
+      "intersubjetividade",
+      "sujeito",
+      "vulnerabilidade",
+      "ética"
+    ],
+    "layer": "etica",
+    "color": "0xffcccc"
+  },
+  {
+    "id": "alternativas",
+    "name": "Alternativas",
+    "description": "Fisher: realismo capitalista bloqueia imaginação de alternativas. Commons, decrescimento, buen vivir como alternativas em ato.",
+    "connections": [
+      "buen vivir",
+      "capitalismo",
+      "commons",
+      "decrescimento",
+      "imaginação"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "apropriação",
+    "name": "Apropriação",
+    "description": "Processo de captura e privatização. Cercamentos, extrativismo, gentrificação. Oposto: reciprocidade, commons.",
+    "connections": [
+      "capitalismo",
+      "despossessao",
+      "extrativismo",
+      "propriedade"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "arqueologia",
+    "name": "Arqueologia",
+    "description": "Foucault: escavação de condições históricas de possibilidade. Arqueologia do saber expõe epistemes. Método genealógico.",
+    "connections": [
+      "ancestralidade",
+      "conhecimento",
+      "crítica",
+      "história"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "autopoiese",
+    "name": "Autopoiese",
+    "description": "Maturana & Varela: sistemas que produzem a si mesmos. Auto-organização, fechamento operacional, acoplamento estrutural.",
+    "connections": [
+      "autonomia",
+      "emergência",
+      "processo",
+      "sistemas"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "barcelona",
+    "name": "Barcelona",
+    "description": "Barcelona en Comú: experimento de municipalismo, commons urbanos, tecnologias conviviais. Gap entre retórica e implementação.",
+    "connections": [
+      "commons",
+      "governança",
+      "municipalismo",
+      "tecnologiaconvivial"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "Bell",
+    "name": "Teorema de Bell",
+    "description": "John Bell (1964): desigualdades que testam não-localidade. Experimentos (Aspect): violam desigualdades de Bell. Não-localidade é real.",
+    "connections": [
+      "emaranhamento",
+      "física quântica",
+      "não-localidade"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "campo",
+    "name": "Campo",
+    "description": "Física: campo eletromagnético, gravitacional, quântico. Bourdieu: campo social. Vazio como campo de possibilidades.",
+    "connections": [
+      "física quântica",
+      "poder",
+      "vazio"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "caos",
+    "name": "Caos",
+    "description": "Não é desordem absoluta. Caos determinístico: sensibilidade a condições iniciais. Borda do caos: emergência de ordem.",
+    "connections": [
+      "emergência",
+      "ordem",
+      "processo"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "CARE",
+    "name": "Princípios CARE",
+    "description": "Collective benefit, Authority to control, Responsibility, Ethics. Governança de dados indígenas. Complementa FAIR.",
+    "connections": [
+      "dados",
+      "governança",
+      "indigena",
+      "responsabilidade"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "Chiapas",
+    "name": "Chiapas",
+    "description": "Zapatismo em Chiapas, México. Autonomia indígena, democracia direta, mandar obedecendo. Outra política possível.",
+    "connections": [
+      "autonomia",
+      "democracia",
+      "indigena",
+      "municipalismo"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "ciborgue",
+    "name": "Ciborgue",
+    "description": "Donna Haraway: organismo cibernético. Híbrido humano-máquina. Ciborgue como metáfora ontológica: todos somos híbridos.",
+    "connections": [
+      "feminismo",
+      "hibridez",
+      "não-humanos",
+      "tecnologia"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "circunscrição",
+    "name": "Circunscrição",
+    "description": "Delimitação de domínio, escopo, território. Problema: circunscrição é já operação política. Quem delimita?",
+    "connections": [
+      "limite",
+      "lugar",
+      "poder"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "clima",
+    "name": "Clima",
+    "description": "Sistema terrestre em colapso. Antropoceno, capitaloceno. Justiça climática: quem sofre mais não causou. Decrescimento como resposta.",
+    "connections": [
+      "capitalismo",
+      "decrescimento",
+      "ecologia",
+      "justiça"
+    ],
+    "layer": "ecologica",
+    "color": "0x66ff99"
+  },
+  {
+    "id": "colaboração",
+    "name": "Colaboração",
+    "description": "Não é harmonia automática. Trabalho de composição entre diferenças. Cooperativas, assembleias, protocolos.",
+    "connections": [
+      "assembleia",
+      "commons",
+      "cooperativa",
+      "reciprocidade"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "Colombia",
+    "name": "Colômbia",
+    "description": "Rio Atrato: primeiro rio com direitos na Colômbia. Direitos da natureza, cosmopolítica. Resistência indígena e afrodescendente.",
+    "connections": [
+      "cosmopolitica",
+      "direitos da natureza",
+      "indigena",
+      "rio"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "colonialismo",
+    "name": "Colonialismo",
+    "description": "Sistema de dominação territorial, econômica, epistêmica. Fundamento de capitalismo. Genocídio, escravidão, despossessão, epistemicídio.",
+    "connections": [
+      "acumulacaoprimitiva",
+      "capitalismo",
+      "descolonização",
+      "epistemicídio",
+      "necropolitica"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "compartilhamento",
+    "name": "Compartilhamento",
+    "description": "Commons: compartilhar sem perder. Software livre, conhecimento aberto. Oposto: propriedade excludente.",
+    "connections": [
+      "commons",
+      "propriedade",
+      "reciprocidade",
+      "softwarelivre"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "comunidade",
+    "name": "Comunidade",
+    "description": "Não é totalidade harmônica. Comunidade como composição tensa. Ubuntu: pessoa é pessoa através de pessoas.",
+    "connections": [
+      "commons",
+      "intersubjetividade",
+      "reciprocidade",
+      "ubuntu"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "conjunto vazio",
+    "name": "Conjunto Vazio",
+    "description": "∅ em teoria de conjuntos. Conjunto sem elementos. Fundamento paradoxal: vazio que funda tudo. Vazio que povoa matematicamente.",
+    "connections": [
+      "fundamentos",
+      "matemática",
+      "vazio"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "constituição",
+    "name": "Constituição",
+    "description": "Texto fundante de ordenamento jurídico. Ecuador e Bolívia: direitos da natureza. Constituição como processo vivo.",
+    "connections": [
+      "Pachamama",
+      "buen vivir",
+      "direitos da natureza",
+      "política"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "cooptação",
+    "name": "Cooptação",
+    "description": "Captura de práticas alternativas pelo sistema. Greenwashing, pinkwashing, capitalism-washing. Risco constante de commons.",
+    "connections": [
+      "apropriação",
+      "capitalismo",
+      "commons"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "coordenação",
+    "name": "Coordenação",
+    "description": "Sincronização sem centro. Redes, protocolos, assembleias. Coordenação distribuída vs comando hierárquico.",
+    "connections": [
+      "descentralização",
+      "governança",
+      "heterarquia",
+      "protocoloaberto"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "crédito mútuo",
+    "name": "Crédito Mútuo",
+    "description": "Sistema de troca onde crédito é criado por membros. LETS, moedas comunitárias. Sem dívida com banco central.",
+    "connections": [
+      "commons",
+      "moedascomunitarias",
+      "reciprocidade"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "criação",
+    "name": "Criação",
+    "description": "Processo de produção do novo. Não ex nihilo, mas reconfiguração relacional. Criação é sempre co-criação.",
+    "connections": [
+      "devir",
+      "emergência",
+      "processo",
+      "virtualidade"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "crimes de guerra",
+    "name": "Crimes de Guerra",
+    "description": "Violações de direito humanitário. Genocídio, limpeza étnica. Necropolítica em ato. Impunidade estrutural.",
+    "connections": [
+      "necropolitica",
+      "terror",
+      "violência simbólica"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "dados",
+    "name": "Dados",
+    "description": "Não são fatos brutos. Dados já são capta (Drucker): capturados dentro de frameworks. CARE: soberania de dados indígenas.",
+    "connections": [
+      "CARE",
+      "conhecimento",
+      "governança",
+      "indigena"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "dasein",
+    "name": "Dasein",
+    "description": "Heidegger: ser-aí. Existência humana como ser-no-mundo. Não sujeito isolado, mas sempre já situado.",
+    "connections": [
+      "Heidegger",
+      "Mitsein",
+      "lugar",
+      "ontologia"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "determinismo",
+    "name": "Determinismo",
+    "description": "Tudo é causalmente determinado. Física quântica: indeterminismo fundamental. Liberdade não é ausência de determinação, mas capacidade de responder.",
+    "connections": [
+      "agencia",
+      "física quântica",
+      "livre-arbítrio"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "diálogo",
+    "name": "Diálogo",
+    "description": "Freire: não é depositar ideias, mas co-criar conhecimento. Círculos de cultura. Diálogo como práxis.",
+    "connections": [
+      "circuloscultura",
+      "conhecimento",
+      "educacaopopular",
+      "pratica"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "duração",
+    "name": "Duração",
+    "description": "Bergson: tempo vivido, qualitativo. Não é tempo mensurável (chronos), mas experiência de continuidade. Estratos de tempo.",
+    "connections": [
+      "consciência",
+      "estratostempo",
+      "processo",
+      "tempo"
+    ],
+    "layer": "temporal",
+    "color": "0xcc99ff"
+  },
+  {
+    "id": "economia ecológica",
+    "name": "Economia Ecológica",
+    "description": "Economia dentro de limites ecológicos. Decrescimento, steady-state. Crítica de PIB como medida de progresso.",
+    "connections": [
+      "decrescimento",
+      "ecologia",
+      "limite",
+      "sustentabilidade"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "economia solidária",
+    "name": "Economia Solidária",
+    "description": "Cooperativas, bancos comunitários, moedas locais. Solidariedade vs competição. Reprodução social vs acumulação.",
+    "connections": [
+      "commons",
+      "cooperativa",
+      "moedascomunitarias",
+      "reproducaosocial"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "Ecuador",
+    "name": "Ecuador",
+    "description": "Primeira constituição a reconhecer direitos da Pachamama (2008). Buen vivir como princípio constitucional.",
+    "connections": [
+      "Pachamama",
+      "buen vivir",
+      "constituição",
+      "direitos da natureza"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "educação",
+    "name": "Educação",
+    "description": "Não é transmissão bancária (Freire). Educação popular, pedagogia da autonomia, círculos de cultura. Desescolarização.",
+    "connections": [
+      "circuloscultura",
+      "desescolarizacao",
+      "educacaopopular",
+      "pedagogiaautonomia"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "emoção",
+    "name": "Emoção",
+    "description": "Não é irracional. Emoções estruturam cognição. Maturana: emoção fundamenta razão. Afeto spinozista.",
+    "connections": [
+      "afeto",
+      "consciência",
+      "holobionte",
+      "neurociência"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "evolução",
+    "name": "Evolução",
+    "description": "Não é progresso linear. Simbiogênese (Margulis): evolução por cooperação. Holobionte como unidade evolutiva.",
+    "connections": [
+      "holobionte",
+      "processo",
+      "simbiose",
+      "tempo"
+    ],
+    "layer": "ecologica",
+    "color": "0x66ff99"
+  },
+  {
+    "id": "fact-nets",
+    "name": "Fact-Nets",
+    "description": "RQM: fatos são relativos a redes de sistemas observadores. Não há fatos absolutos, apenas fact-nets relacionais.",
+    "connections": [
+      "RQM",
+      "fatos relativos",
+      "redes",
+      "relacionalidade"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "fidelidade",
+    "name": "Fidelidade",
+    "description": "Badiou: fidelidade ao evento. Não é obediência, mas persistência na consequência de evento transformador.",
+    "connections": [
+      "evento",
+      "pratica",
+      "sujeito",
+      "verdade"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "filosofia",
+    "name": "Filosofia",
+    "description": "Não é apenas ocidental. Filosofias africana, indígena, budista. Pluriverso filosófico. Descolonização da filosofia.",
+    "connections": [
+      "budismo",
+      "descolonização",
+      "filosofia africana",
+      "indigena"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "finitude",
+    "name": "Finitude",
+    "description": "Limite fundamental. Morte, escassez, incompletude. Heidegger: ser-para-a-morte. Finitude não é falta, mas condição de sentido.",
+    "connections": [
+      "dasein",
+      "limite",
+      "tempo",
+      "vulnerabilidade"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "física",
+    "name": "Física",
+    "description": "Estudo da matéria, energia, espaço-tempo. Física quântica e relatividade desafiam ontologia clássica.",
+    "connections": [
+      "espaço-tempo",
+      "física quântica",
+      "ontologia"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "floresta",
+    "name": "Floresta",
+    "description": "Não é coleção de árvores. Rede miceliana, holobionte planetário. Floresta pensa (Kohn). Direitos da floresta.",
+    "connections": [
+      "direitos da natureza",
+      "holobionte",
+      "micorriza",
+      "terra"
+    ],
+    "layer": "ecologica",
+    "color": "0x66ff99"
+  },
+  {
+    "id": "flutuação",
+    "name": "Flutuação",
+    "description": "Vácuo quântico: flutuações de energia. Caos: flutuações podem amplificar. Ordem emerge de flutuações.",
+    "connections": [
+      "caos",
+      "emergência",
+      "física quântica",
+      "vácuo"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "formalização",
+    "name": "Formalização",
+    "description": "Tradução para linguagem formal. Matemática, lógica. Gödel: formalização sempre incompleta. Incompletude essencial.",
+    "connections": [
+      "incompletude",
+      "limite",
+      "lógica",
+      "matemática"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "fundamentos",
+    "name": "Fundamentos",
+    "description": "Busca de base última. Anti-fundacionalismo: turtles all the way down. Recursão sem fundamento.",
+    "connections": [
+      "anti-fundacionalismo",
+      "madhyamaka",
+      "recursao",
+      "vazio"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "Heidegger",
+    "name": "Heidegger",
+    "description": "Filósofo alemão. Dasein, Mitsein, ser-no-mundo. Crítica de metafísica da presença. Problema: nazismo.",
+    "connections": [
+      "Mitsein",
+      "dasein",
+      "filosofia",
+      "ontologia"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "hibridez",
+    "name": "Hibridez",
+    "description": "Mistura, mestiçagem, ciborgue. Fronteiras porosas. Pureza é mito violento. Somos todos híbridos.",
+    "connections": [
+      "ciborgue",
+      "holobionte",
+      "multiespécies",
+      "multiplicidade"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "história",
+    "name": "História",
+    "description": "Não é passado morto. Estratos de tempo, hauntologia, ancestralidade. História como campo de lutas.",
+    "connections": [
+      "ancestralidade",
+      "hauntologia",
+      "memoriacoletiva",
+      "tempo"
+    ],
+    "layer": "temporal",
+    "color": "0xcc99ff"
+  },
+  {
+    "id": "imaginação",
+    "name": "Imaginação",
+    "description": "Capacidade de pensar alternativas. Realismo capitalista captura imaginação. Afrofuturismo, futuridade queer liberam.",
+    "connections": [
+      "afrofuturismo",
+      "alternativas",
+      "capitalismo",
+      "futuridadequeer"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "imaginário",
+    "name": "Imaginário",
+    "description": "Castoriadis: instituição imaginária da sociedade. Imaginário social cria realidade, não apenas reflete.",
+    "connections": [
+      "criação",
+      "imaginação",
+      "instituição",
+      "sociedade"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "implementação",
+    "name": "Implementação",
+    "description": "Gap entre retórica e prática. Barcelona: promessas tecnopolíticas vs barreiras institucionais. Fazer acontecer é político.",
+    "connections": [
+      "barcelona",
+      "governança",
+      "limite",
+      "pratica"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "incompletude",
+    "name": "Incompletude",
+    "description": "Gödel: sistemas formais suficientemente poderosos são incompletos. Verdades não-demonstráveis. Limite da formalização.",
+    "connections": [
+      "formalização",
+      "fundamentos",
+      "limite",
+      "matemática"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "individualismo",
+    "name": "Individualismo",
+    "description": "Ideologia do indivíduo atomizado. Thatcher: 'não existe sociedade'. Ubuntu inverte: pessoa através de pessoas.",
+    "connections": [
+      "capitalismo",
+      "ontologia",
+      "sujeito",
+      "ubuntu"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "instituição",
+    "name": "Instituição",
+    "description": "Estrutura que cristaliza práticas. Pode fossilizar ou habilitar. Práxis institucional transforma de dentro.",
+    "connections": [
+      "governança",
+      "imaginário",
+      "poder",
+      "pratica"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "Kenya",
+    "name": "Kenya",
+    "description": "Ubuntu em prática. Harambee: auto-ajuda comunitária. Filosofia africana viva.",
+    "connections": [
+      "commons",
+      "filosofia africana",
+      "reciprocidade",
+      "ubuntu"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "libertação",
+    "name": "Libertação",
+    "description": "Freire: educação como prática de liberdade. Não é libertação individual, mas transformação coletiva de estruturas opressoras.",
+    "connections": [
+      "descolonização",
+      "educacaopopular",
+      "liberdade",
+      "pratica"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "liderança",
+    "name": "Liderança",
+    "description": "Não é comando vertical. Zapatismo: mandar obedecendo. Liderança rotativa, distribuída, accountable.",
+    "connections": [
+      "assembleia",
+      "autonomia",
+      "descentralização",
+      "governança"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "linguagem",
+    "name": "Linguagem",
+    "description": "Não é espelho de mundo. Linguagem performa realidade. Wittgenstein, Austin, Butler. Tradução como política.",
+    "connections": [
+      "conhecimento",
+      "performatividade",
+      "poder",
+      "tradução"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "livre-arbítrio",
+    "name": "Livre-Arbítrio",
+    "description": "Problema clássico. Não é independência causal, mas capacidade de responder situada. Agência distribuída dissolve problema.",
+    "connections": [
+      "agencia",
+      "determinismo",
+      "liberdade",
+      "responsabilidade"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "lógica",
+    "name": "Lógica",
+    "description": "Regras de inferência. Lógica clássica: bivalente. Madhyamaka: tetralemma. Lógicas paraconsistentes, fuzzy, quantum.",
+    "connections": [
+      "formalização",
+      "madhyamaka",
+      "matemática",
+      "ontologia"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "lugar",
+    "name": "Lugar",
+    "description": "Não é apenas localização. Place-thought: terra pensa. Lugar constitui conhecimento, identidade, ontologia.",
+    "connections": [
+      "conhecimento",
+      "placethought",
+      "terra"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "madhyamika",
+    "name": "Madhyamika",
+    "description": "Variante de madhyamaka. Caminho do meio budista. Śūnyatā como via média entre eternalismo e niilismo.",
+    "connections": [
+      "budismo",
+      "madhyamaka",
+      "ontologia",
+      "sunyata"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "matemática",
+    "name": "Matemática",
+    "description": "Padrões formais, estruturas abstratas. Não é reino platônico separado. Matemática é prática humana situada.",
+    "connections": [
+      "conjunto vazio",
+      "formalização",
+      "incompletude",
+      "lógica"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "misrecognition",
+    "name": "Misrecognition",
+    "description": "Bourdieu: não-reconhecimento de arbitrariedade do poder. Dominação se naturaliza. Violência simbólica internalizada.",
+    "connections": [
+      "poder",
+      "reconhecimento",
+      "violência simbólica"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "Mitsein",
+    "name": "Mitsein",
+    "description": "Heidegger: ser-com. Dasein é sempre já Mitsein. Intersubjetividade constitutiva, não acidental.",
+    "connections": [
+      "Heidegger",
+      "dasein",
+      "intersubjetividade",
+      "ontologia"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "narrativa",
+    "name": "Narrativa",
+    "description": "Histórias que estruturam sentido. Não é distorção de fatos, mas constituição de realidade. Contra-narrativas como resistência.",
+    "connections": [
+      "conhecimento",
+      "história",
+      "imaginário",
+      "performatividade"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "natureza",
+    "name": "Natureza",
+    "description": "Não é objeto separado de cultura. Natureza-cultura (Haraway). Direitos da natureza: natureza como sujeito.",
+    "connections": [
+      "comunidade",
+      "direitos da natureza",
+      "ecologia",
+      "multiespécies"
+    ],
+    "layer": "ecologica",
+    "color": "0x66ff99"
+  },
+  {
+    "id": "novo-materialismo",
+    "name": "Novo-Materialismo",
+    "description": "Matéria tem agência. Barad, Bennett: realismo agencial, materialismo vital. Além de dualismo matéria/sentido.",
+    "connections": [
+      "agencia",
+      "intracao",
+      "ontologia",
+      "realismo agencial"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "objetividade",
+    "name": "Objetividade",
+    "description": "Não é visão de lugar nenhum. Haraway: objetividade é corporificada, situada, responsável. Saberes localizados.",
+    "connections": [
+      "conhecimento",
+      "epistemologia",
+      "responsabilidade"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "ordem",
+    "name": "Ordem",
+    "description": "Não é imposta de cima. Ordem emerge de interações. Auto-organização, complexidade, caos.",
+    "connections": [
+      "autopoiese",
+      "caos",
+      "emergência",
+      "processo"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "País Basco",
+    "name": "País Basco",
+    "description": "Mondragón: maior complexo cooperativo do mundo. Economia solidária em escala. Limites e contradições.",
+    "connections": [
+      "cooperativa",
+      "economia solidária",
+      "governança"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "parentesco",
+    "name": "Parentesco",
+    "description": "Haraway: fazer parentes, não bebês. Parentesco além de biologia. Multiespécies, escolhido, queer.",
+    "connections": [
+      "feminismo",
+      "multiespécies",
+      "ontologia",
+      "whakapapa"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "pedagogia",
+    "name": "Pedagogia",
+    "description": "Arte de ensinar-aprender. Freire: pedagogia do oprimido, da autonomia. Não é transmissão, mas diálogo.",
+    "connections": [
+      "diálogo",
+      "educacaopopular",
+      "pedagogiaautonomia",
+      "pratica"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "perdão",
+    "name": "Perdão",
+    "description": "Não é esquecer. Ubuntu: reconciliação sem justiça é vazia. Perdão como processo relacional, não absolvição unilateral.",
+    "connections": [
+      "justiça",
+      "reconciliação",
+      "ubuntu",
+      "vulnerabilidade"
+    ],
+    "layer": "etica",
+    "color": "0xffcccc"
+  },
+  {
+    "id": "política ontológica",
+    "name": "Política Ontológica",
+    "description": "Mol: práticas performam realidades. Ontologia não é dada, mas feita. Direitos da natureza como política ontológica.",
+    "connections": [
+      "direitos da natureza",
+      "ontologia",
+      "performatividade",
+      "política"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "pragmatismo",
+    "name": "Pragmatismo",
+    "description": "Verdade como o que funciona. Peirce, James, Dewey. Conhecimento é ferramenta para agir no mundo.",
+    "connections": [
+      "ação",
+      "conhecimento",
+      "pratica",
+      "verdade"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "programação",
+    "name": "Programação",
+    "description": "Escrever código. Não é apenas técnica, mas prática política. Software livre vs proprietário. Protocolos abertos.",
+    "connections": [
+      "protocoloaberto",
+      "softwarelivre",
+      "tecnologia"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "radiação",
+    "name": "Radiação",
+    "description": "Física: emissão de energia. Hawking: buracos negros irradiam. Radiação de fundo cósmico.",
+    "connections": [
+      "espaço-tempo",
+      "física quântica",
+      "termodinâmica"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "realismo",
+    "name": "Realismo",
+    "description": "Mundo existe independente de nós? Realismo agencial: sim, mas é performado por práticas. Realismo relacional.",
+    "connections": [
+      "epistemologia",
+      "ontologia",
+      "realismo agencial"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "reconciliação",
+    "name": "Reconciliação",
+    "description": "Ubuntu: processo de restauração de relações. Não é apenas perdão, mas reparação. Verdade e reconciliação.",
+    "connections": [
+      "justiça",
+      "perdão",
+      "ubuntu",
+      "vulnerabilidade"
+    ],
+    "layer": "etica",
+    "color": "0xffcccc"
+  },
+  {
+    "id": "reconhecimento",
+    "name": "Reconhecimento",
+    "description": "Hegel, Honneth: luta por reconhecimento. Mas reconhecimento pode ser captura (Butler). Misrecognition estrutural.",
+    "connections": [
+      "intersubjetividade",
+      "justiça",
+      "misrecognition",
+      "sujeito"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "recursão",
+    "name": "Recursão",
+    "description": "Auto-referência. Função que chama a si mesma. Recursão sem fundamento: turtles all the way down.",
+    "connections": [
+      "anti-fundacionalismo",
+      "loop",
+      "processo",
+      "recursao"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "relatividade conceitual",
+    "name": "Relatividade Conceitual",
+    "description": "Putnam: esquemas conceituais não são neutros. Conceitos estruturam o que podemos ver. Mas não é relativismo absoluto.",
+    "connections": [
+      "conhecimento",
+      "epistemologia",
+      "ontologia"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "resiliência",
+    "name": "Resiliência",
+    "description": "Capacidade de absorver perturbação. Ecologia: resiliência de ecossistemas. Mas resiliência pode ser cooptada (suportar opressão).",
+    "connections": [
+      "ecologia",
+      "sustentabilidade",
+      "vulnerabilidade"
+    ],
+    "layer": "ecologica",
+    "color": "0x66ff99"
+  },
+  {
+    "id": "retrocausalidade",
+    "name": "Retrocausalidade",
+    "description": "Física quântica: futuro pode afetar passado? Escolha retardada, borracha quântica. Temporalidade não-linear.",
+    "connections": [
+      "física quântica",
+      "processo",
+      "tempo"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "rio",
+    "name": "Rio",
+    "description": "Whanganui (NZ), Atrato (Colômbia), Ganges (Índia): rios como pessoas jurídicas. Direitos da natureza em ato.",
+    "connections": [
+      "cosmopolitica",
+      "direitos da natureza",
+      "personalidade jurídica",
+      "terra"
+    ],
+    "layer": "pratica",
+    "color": "0x99ccff"
+  },
+  {
+    "id": "sistemas",
+    "name": "Sistemas",
+    "description": "Conjunto de elementos em interação. Teoria de sistemas, cibernética. Autopoiese, emergência, feedback.",
+    "connections": [
+      "autopoiese",
+      "emergência",
+      "processo"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "soberania",
+    "name": "Soberania",
+    "description": "Poder supremo. Schmitt: soberano decide exceção. Foucault, Mbembe: soberania como poder sobre vida/morte. Soberania de dados indígenas.",
+    "connections": [
+      "CARE",
+      "indigena",
+      "necropolitica",
+      "poder"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "socialismo",
+    "name": "Socialismo",
+    "description": "Propriedade social dos meios de produção. Múltiplas tradições: marxismo, anarquismo, ecosocialismo. Relação tensa com commons.",
+    "connections": [
+      "capitalismo",
+      "commons",
+      "cooperativa",
+      "economia"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "sociedade",
+    "name": "Sociedade",
+    "description": "Não é soma de indivíduos. Durkheim: fatos sociais. Castoriadis: instituição imaginária. Transindividual.",
+    "connections": [
+      "comunidade",
+      "imaginário",
+      "instituição",
+      "transindividual"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "subjetivação",
+    "name": "Subjetivação",
+    "description": "Processo de tornar-se sujeito. Foucault: subjetivação por práticas disciplinares. Mas também modos de resistência.",
+    "connections": [
+      "performatividade",
+      "poder",
+      "pratica",
+      "sujeito"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "sul global",
+    "name": "Sul Global",
+    "description": "Não é apenas geografia. Posição epistêmica, política, econômica. Epistemologias do Sul. Descolonização.",
+    "connections": [
+      "descolonização",
+      "epistemologia",
+      "indigena",
+      "justiça"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "switching",
+    "name": "Switching",
+    "description": "RQM: mudança de perspectiva entre sistemas observadores. Fatos mudam ao trocar de referência. Relacionalismo radical.",
+    "connections": [
+      "RQM",
+      "fatos relativos",
+      "relacionalidade"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "termodinâmica",
+    "name": "Termodinâmica",
+    "description": "Estudo de energia, entropia, irreversibilidade. Segundo lei: entropia aumenta. Mas vida é anti-entrópica localmente.",
+    "connections": [
+      "física",
+      "ordem",
+      "processo",
+      "tempo"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "terror",
+    "name": "Terror",
+    "description": "Arendt: totalitarismo usa terror para eliminar imprevisibilidade. Terror como tecnologia de controle.",
+    "connections": [
+      "necropolitica",
+      "totalitarismo",
+      "violência simbólica"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "totalitarismo",
+    "name": "Totalitarismo",
+    "description": "Arendt: não é apenas autoritarismo. Terror + ideologia total. Elimina espaço de imprevisibilidade. Fechamento ontológico.",
+    "connections": [
+      "liberdade",
+      "limite",
+      "política",
+      "terror"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "tradução",
+    "name": "Tradução",
+    "description": "Não é transparente. Toda tradução é transformação. Política de tradução: quem traduz, para quem, em que termos.",
+    "connections": [
+      "conhecimento",
+      "descolonização",
+      "linguagem",
+      "poder"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "transformação",
+    "name": "Transformação",
+    "description": "Mudança qualitativa. Polanyi: grande transformação. Evento transforma situação. Práxis transforma mundo e sujeito.",
+    "connections": [
+      "devir",
+      "evento",
+      "pratica",
+      "processo"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "valores",
+    "name": "Valores",
+    "description": "Não são universais abstratos. Valores emergem de práticas situadas. Normatividade relacional.",
+    "connections": [
+      "comunidade",
+      "normatividade",
+      "pratica",
+      "ética"
+    ],
+    "layer": "etica",
+    "color": "0xffcccc"
+  },
+  {
+    "id": "verdade",
+    "name": "Verdade",
+    "description": "Badiou: verdade é processo, não correspondência. Fidelidade ao evento produz verdades. Pluralidade de regimes de verdade.",
+    "connections": [
+      "conhecimento",
+      "epistemologia",
+      "evento",
+      "fidelidade"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "vida",
+    "name": "Vida",
+    "description": "Não é apenas biologia. Autopoiese, processo, devir. Holobionte: vida é sempre multiespécies.",
+    "connections": [
+      "autopoiese",
+      "holobionte",
+      "multiespécies",
+      "processo"
+    ],
+    "layer": "ecologica",
+    "color": "0x66ff99"
+  }
 ]

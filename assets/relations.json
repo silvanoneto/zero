@@ -422,20 +422,20 @@
   {
     "from": "sunyata",
     "to": "anatman",
-    "name": "conecta-se com",
-    "description": "Śūnyatā (Vacuidade) conecta-se com Anātman (Não-Eu)"
+    "name": "possibilita",
+    "description": "Śūnyatā (Vacuidade) possibilita Anātman (Não-Eu)"
   },
   {
     "from": "sunyata",
     "to": "ontologia",
-    "name": "conecta-se com",
-    "description": "Śūnyatā (Vacuidade) conecta-se com Ontologia Relacional Universal"
+    "name": "emerge em",
+    "description": "Śūnyatā (Vacuidade) emerge em Ontologia Relacional Universal"
   },
   {
     "from": "sunyata",
     "to": "multiplicidade",
-    "name": "conecta-se com",
-    "description": "Śūnyatā (Vacuidade) conecta-se com Multiplicidade Sem Fusão"
+    "name": "emerge em",
+    "description": "Śūnyatā (Vacuidade) emerge em Multiplicidade Sem Fusão"
   },
   {
     "from": "anatman",
@@ -452,8 +452,8 @@
   {
     "from": "pratityasamutpada",
     "to": "ontologia",
-    "name": "conecta-se com",
-    "description": "Pratītyasamutpāda conecta-se com Ontologia Relacional Universal"
+    "name": "emerge em",
+    "description": "Pratītyasamutpāda emerge em Ontologia Relacional Universal"
   },
   {
     "from": "pratityasamutpada",
@@ -464,14 +464,14 @@
   {
     "from": "pratityasamutpada",
     "to": "multiplicidade",
-    "name": "conecta-se com",
-    "description": "Pratītyasamutpāda conecta-se com Multiplicidade Sem Fusão"
+    "name": "emerge em",
+    "description": "Pratītyasamutpāda emerge em Multiplicidade Sem Fusão"
   },
   {
     "from": "ontologia",
     "to": "intracao",
-    "name": "conecta-se com",
-    "description": "Ontologia Relacional Universal conecta-se com Intra-ação (Barad)"
+    "name": "compõe",
+    "description": "Ontologia Relacional Universal compõe Intra-ação (Barad)"
   },
   {
     "from": "ontologia",
@@ -482,14 +482,14 @@
   {
     "from": "ontologia",
     "to": "multiplicidade",
-    "name": "conecta-se com",
-    "description": "Ontologia Relacional Universal conecta-se com Multiplicidade Sem Fusão"
+    "name": "compõe",
+    "description": "Ontologia Relacional Universal compõe Multiplicidade Sem Fusão"
   },
   {
     "from": "multiplicidade",
     "to": "holobionte",
-    "name": "conecta-se com",
-    "description": "Multiplicidade Sem Fusão conecta-se com Holobionte"
+    "name": "compõe",
+    "description": "Multiplicidade Sem Fusão compõe Holobionte"
   },
   {
     "from": "multiplicidade",
@@ -518,14 +518,14 @@
   {
     "from": "processo",
     "to": "intracao",
-    "name": "conecta-se com",
-    "description": "Processo (Whitehead) conecta-se com Intra-ação (Barad)"
+    "name": "compõe",
+    "description": "Processo (Whitehead) compõe Intra-ação (Barad)"
   },
   {
     "from": "processo",
     "to": "holobionte",
-    "name": "conecta-se com",
-    "description": "Processo (Whitehead) conecta-se com Holobionte"
+    "name": "compõe",
+    "description": "Processo (Whitehead) compõe Holobionte"
   },
   {
     "from": "processo",
@@ -548,20 +548,20 @@
   {
     "from": "ocasioes",
     "to": "devir",
-    "name": "conecta-se com",
-    "description": "Ocasiões de Experiência conecta-se com Devir (Deleuze)"
+    "name": "compõe",
+    "description": "Ocasiões de Experiência compõe Devir (Deleuze)"
   },
   {
     "from": "ocasioes",
     "to": "evento",
-    "name": "conecta-se com",
-    "description": "Ocasiões de Experiência conecta-se com Evento (Badiou)"
+    "name": "constitui",
+    "description": "Ocasiões de Experiência constitui Evento (Badiou)"
   },
   {
     "from": "ocasioes",
     "to": "intracao",
-    "name": "conecta-se com",
-    "description": "Ocasiões de Experiência conecta-se com Intra-ação (Barad)"
+    "name": "compõe",
+    "description": "Ocasiões de Experiência compõe Intra-ação (Barad)"
   },
   {
     "from": "devir",
@@ -584,8 +584,8 @@
   {
     "from": "devir",
     "to": "composicao",
-    "name": "conecta-se com",
-    "description": "Devir (Deleuze) conecta-se com Composição de Corpos"
+    "name": "compõe",
+    "description": "Devir (Deleuze) compõe Composição de Corpos"
   },
   {
     "from": "devir",
@@ -602,14 +602,14 @@
   {
     "from": "devir",
     "to": "corposemorgaos",
-    "name": "conecta-se com",
-    "description": "Devir (Deleuze) conecta-se com Corpo sem Órgãos"
+    "name": "compõe",
+    "description": "Devir (Deleuze) compõe Corpo sem Órgãos"
   },
   {
     "from": "intracao",
     "to": "conhecimento",
-    "name": "conecta-se com",
-    "description": "Intra-ação (Barad) conecta-se com Relacionalismo Epistêmico"
+    "name": "entrelaça-se com",
+    "description": "Intra-ação (Barad) entrelaça-se com Conhecimento"
   },
   {
     "from": "intracao",
@@ -626,38 +626,38 @@
   {
     "from": "recursao",
     "to": "processo",
-    "name": "conecta-se com",
-    "description": "Recursão Sem Fundamento conecta-se com Processo (Whitehead)"
+    "name": "questiona",
+    "description": "Recursão Sem Fundamento questiona Processo (Whitehead)"
   },
   {
     "from": "recursao",
     "to": "evento",
-    "name": "conecta-se com",
-    "description": "Recursão Sem Fundamento conecta-se com Evento (Badiou)"
+    "name": "dialoga com",
+    "description": "Recursão Sem Fundamento dialoga com Evento (Badiou)"
   },
   {
     "from": "recursao",
     "to": "agencia",
-    "name": "conecta-se com",
-    "description": "Recursão Sem Fundamento conecta-se com Agência Distribuída"
+    "name": "dialoga com",
+    "description": "Recursão Sem Fundamento dialoga com Agência Distribuída"
   },
   {
     "from": "recursao",
     "to": "multiplicidade",
-    "name": "conecta-se com",
-    "description": "Recursão Sem Fundamento conecta-se com Multiplicidade Sem Fusão"
+    "name": "questiona",
+    "description": "Recursão Sem Fundamento questiona Multiplicidade Sem Fusão"
   },
   {
     "from": "recursao",
     "to": "memoriacoletiva",
-    "name": "conecta-se com",
-    "description": "Recursão Sem Fundamento conecta-se com Memória Coletiva"
+    "name": "questiona",
+    "description": "Recursão Sem Fundamento questiona Memória Coletiva"
   },
   {
     "from": "recursao",
     "to": "estratostempo",
-    "name": "conecta-se com",
-    "description": "Recursão Sem Fundamento conecta-se com Estratos de Tempo"
+    "name": "questiona",
+    "description": "Recursão Sem Fundamento questiona Estratos de Tempo"
   },
   {
     "from": "conhecimento",
@@ -686,20 +686,20 @@
   {
     "from": "tempo",
     "to": "evento",
-    "name": "conecta-se com",
-    "description": "Tempo Entrelaçado conecta-se com Evento (Badiou)"
+    "name": "dialoga com",
+    "description": "Tempo Entrelaçado dialoga com Evento (Badiou)"
   },
   {
     "from": "tempo",
     "to": "estratostempo",
-    "name": "conecta-se com",
-    "description": "Tempo Entrelaçado conecta-se com Estratos de Tempo"
+    "name": "questiona",
+    "description": "Tempo Entrelaçado questiona Estratos de Tempo"
   },
   {
     "from": "tempo",
     "to": "futuridadequeer",
-    "name": "conecta-se com",
-    "description": "Tempo Entrelaçado conecta-se com Futuridade Queer"
+    "name": "questiona",
+    "description": "Tempo Entrelaçado questiona Futuridade Queer"
   },
   {
     "from": "limite",
@@ -716,14 +716,14 @@
   {
     "from": "limite",
     "to": "evento",
-    "name": "conecta-se com",
-    "description": "Limite conecta-se com Evento (Badiou)"
+    "name": "constitui",
+    "description": "Limite constitui Evento (Badiou)"
   },
   {
     "from": "limite",
     "to": "hauntologia",
-    "name": "conecta-se com",
-    "description": "Limite conecta-se com Hauntologia"
+    "name": "constitui",
+    "description": "Limite constitui Hauntologia"
   },
   {
     "from": "limite",
@@ -746,14 +746,14 @@
   {
     "from": "sujeito",
     "to": "evento",
-    "name": "conecta-se com",
-    "description": "Sujeito Relacional conecta-se com Evento (Badiou)"
+    "name": "constitui",
+    "description": "Sujeito constitui Evento (Badiou)"
   },
   {
     "from": "sujeito",
     "to": "memoriacoletiva",
-    "name": "conecta-se com",
-    "description": "Sujeito Relacional conecta-se com Memória Coletiva"
+    "name": "constitui",
+    "description": "Sujeito constitui Memória Coletiva"
   },
   {
     "from": "sujeito",
@@ -764,20 +764,20 @@
   {
     "from": "performatividade",
     "to": "afrofuturismo",
-    "name": "conecta-se com",
-    "description": "Performatividade conecta-se com Afrofuturismo"
+    "name": "constitui",
+    "description": "Performatividade constitui Afrofuturismo"
   },
   {
     "from": "performatividade",
     "to": "futuridadequeer",
-    "name": "conecta-se com",
-    "description": "Performatividade conecta-se com Futuridade Queer"
+    "name": "constitui",
+    "description": "Performatividade constitui Futuridade Queer"
   },
   {
     "from": "evento",
     "to": "corposemorgaos",
-    "name": "conecta-se com",
-    "description": "Evento (Badiou) conecta-se com Corpo sem Órgãos"
+    "name": "emancipa-se via",
+    "description": "Evento (Badiou) emancipa-se via Corpo sem Órgãos"
   },
   {
     "from": "evento",
@@ -794,32 +794,32 @@
   {
     "from": "vulnerabilidade",
     "to": "afeto",
-    "name": "conecta-se com",
-    "description": "Vulnerabilidade conecta-se com Afeto Spinozista"
+    "name": "emancipa-se via",
+    "description": "Vulnerabilidade emancipa-se via Afeto Spinozista"
   },
   {
     "from": "vulnerabilidade",
     "to": "ubuntu",
-    "name": "conecta-se com",
-    "description": "Vulnerabilidade conecta-se com Ubuntu"
+    "name": "disputa",
+    "description": "Vulnerabilidade disputa Ubuntu"
   },
   {
     "from": "vulnerabilidade",
     "to": "holobionte",
-    "name": "conecta-se com",
-    "description": "Vulnerabilidade conecta-se com Holobionte"
+    "name": "disputa",
+    "description": "Vulnerabilidade disputa Holobionte"
   },
   {
     "from": "vulnerabilidade",
     "to": "reproducaosocial",
-    "name": "conecta-se com",
-    "description": "Vulnerabilidade conecta-se com Reprodução Social"
+    "name": "emancipa-se via",
+    "description": "Vulnerabilidade emancipa-se via Reprodução Social"
   },
   {
     "from": "vulnerabilidade",
     "to": "necropolitica",
-    "name": "conecta-se com",
-    "description": "Vulnerabilidade conecta-se com Necropolítica"
+    "name": "emancipa-se via",
+    "description": "Vulnerabilidade emancipa-se via Necropolítica"
   },
   {
     "from": "precariedade",
@@ -830,32 +830,32 @@
   {
     "from": "precariedade",
     "to": "limite",
-    "name": "conecta-se com",
-    "description": "Precariedade conecta-se com Limite"
+    "name": "emancipa-se via",
+    "description": "Precariedade emancipa-se via Limite"
   },
   {
     "from": "precariedade",
     "to": "normatividade",
-    "name": "conecta-se com",
-    "description": "Precariedade conecta-se com Normatividade Relacional"
+    "name": "emancipa-se via",
+    "description": "Precariedade emancipa-se via Normatividade Relacional"
   },
   {
     "from": "precariedade",
     "to": "extrativismo",
-    "name": "conecta-se com",
-    "description": "Precariedade conecta-se com Extrativismo"
+    "name": "disputa",
+    "description": "Precariedade disputa Extrativismo"
   },
   {
     "from": "precariedade",
     "to": "despossessao",
-    "name": "conecta-se com",
-    "description": "Precariedade conecta-se com Despossessão"
+    "name": "emancipa-se via",
+    "description": "Precariedade emancipa-se via Despossessão"
   },
   {
     "from": "normatividade",
     "to": "limite",
-    "name": "conecta-se com",
-    "description": "Normatividade Relacional conecta-se com Limite"
+    "name": "emancipa-se via",
+    "description": "Normatividade Relacional emancipa-se via Limite"
   },
   {
     "from": "normatividade",
@@ -872,38 +872,38 @@
   {
     "from": "normatividade",
     "to": "groundednormativity",
-    "name": "conecta-se com",
-    "description": "Normatividade Relacional conecta-se com Grounded Normativity"
+    "name": "disputa",
+    "description": "Normatividade Relacional disputa Grounded Normativity"
   },
   {
     "from": "normatividade",
     "to": "conhecimento",
-    "name": "conecta-se com",
-    "description": "Normatividade Relacional conecta-se com Relacionalismo Epistêmico"
+    "name": "resiste a",
+    "description": "Normatividade Relacional resiste a Conhecimento"
   },
   {
     "from": "ubuntu",
     "to": "reciprocidade",
-    "name": "conecta-se com",
-    "description": "Ubuntu conecta-se com Reciprocidade"
+    "name": "articula-se com",
+    "description": "Ubuntu articula-se com Reciprocidade"
   },
   {
     "from": "ubuntu",
     "to": "indigena",
-    "name": "conecta-se com",
-    "description": "Ubuntu conecta-se com Pensamento Indígena"
+    "name": "entrelaça-se com",
+    "description": "Ubuntu entrelaça-se com Pensamento Indígena"
   },
   {
     "from": "ubuntu",
     "to": "cuidado",
-    "name": "conecta-se com",
-    "description": "Ubuntu conecta-se com Ética do Cuidado"
+    "name": "compõe",
+    "description": "Ubuntu compõe Ética do Cuidado"
   },
   {
     "from": "ubuntu",
     "to": "transindividual",
-    "name": "conecta-se com",
-    "description": "Ubuntu conecta-se com Transindividual"
+    "name": "entrelaça-se com",
+    "description": "Ubuntu entrelaça-se com Transindividual"
   },
   {
     "from": "indigena",
@@ -926,26 +926,26 @@
   {
     "from": "indigena",
     "to": "ancestralidade",
-    "name": "conecta-se com",
-    "description": "Pensamento Indígena conecta-se com Ancestralidade"
+    "name": "entrelaça-se com",
+    "description": "Pensamento Indígena entrelaça-se com Ancestralidade"
   },
   {
     "from": "placethought",
     "to": "ontologia",
-    "name": "conecta-se com",
-    "description": "Place-Thought conecta-se com Ontologia Relacional Universal"
+    "name": "entrelaça-se com",
+    "description": "Place-Thought entrelaça-se com Ontologia Relacional Universal"
   },
   {
     "from": "placethought",
     "to": "groundednormativity",
-    "name": "conecta-se com",
-    "description": "Place-Thought conecta-se com Grounded Normativity"
+    "name": "entrelaça-se com",
+    "description": "Place-Thought entrelaça-se com Grounded Normativity"
   },
   {
     "from": "placethought",
     "to": "ancestralidade",
-    "name": "conecta-se com",
-    "description": "Place-Thought conecta-se com Ancestralidade"
+    "name": "entrelaça-se com",
+    "description": "Place-Thought entrelaça-se com Ancestralidade"
   },
   {
     "from": "groundednormativity",
@@ -962,14 +962,14 @@
   {
     "from": "groundednormativity",
     "to": "acumulacaoprimitiva",
-    "name": "conecta-se com",
-    "description": "Grounded Normativity conecta-se com Acumulação Primitiva"
+    "name": "articula-se com",
+    "description": "Grounded Normativity articula-se com Acumulação Primitiva"
   },
   {
     "from": "groundednormativity",
     "to": "despossessao",
-    "name": "conecta-se com",
-    "description": "Grounded Normativity conecta-se com Despossessão"
+    "name": "articula-se com",
+    "description": "Grounded Normativity articula-se com Despossessão"
   },
   {
     "from": "groundednormativity",
@@ -980,20 +980,20 @@
   {
     "from": "ressurgencia",
     "to": "indigena",
-    "name": "conecta-se com",
-    "description": "Ressurgência Indígena conecta-se com Pensamento Indígena"
+    "name": "entrelaça-se com",
+    "description": "Ressurgência Indígena entrelaça-se com Pensamento Indígena"
   },
   {
     "from": "ressurgencia",
     "to": "evento",
-    "name": "conecta-se com",
-    "description": "Ressurgência Indígena conecta-se com Evento (Badiou)"
+    "name": "articula-se com",
+    "description": "Ressurgência Indígena articula-se com Evento (Badiou)"
   },
   {
     "from": "ressurgencia",
     "to": "cosmopolitica",
-    "name": "conecta-se com",
-    "description": "Ressurgência Indígena conecta-se com Cosmopolítica"
+    "name": "articula-se com",
+    "description": "Ressurgência Indígena articula-se com Cosmopolítica"
   },
   {
     "from": "ressurgencia",
@@ -1004,50 +1004,50 @@
   {
     "from": "whanaungatanga",
     "to": "placethought",
-    "name": "conecta-se com",
-    "description": "Whanaungatanga conecta-se com Place-Thought"
+    "name": "entrelaça-se com",
+    "description": "Whanaungatanga entrelaça-se com Place-Thought"
   },
   {
     "from": "whanaungatanga",
     "to": "ontologia",
-    "name": "conecta-se com",
-    "description": "Whanaungatanga conecta-se com Ontologia Relacional Universal"
+    "name": "entrelaça-se com",
+    "description": "Whanaungatanga entrelaça-se com Ontologia Relacional Universal"
   },
   {
     "from": "whanaungatanga",
     "to": "cuidado",
-    "name": "conecta-se com",
-    "description": "Whanaungatanga conecta-se com Ética do Cuidado"
+    "name": "compõe",
+    "description": "Whanaungatanga compõe Ética do Cuidado"
   },
   {
     "from": "reciprocidade",
     "to": "cooperativa",
-    "name": "conecta-se com",
-    "description": "Reciprocidade conecta-se com Cooperativas"
+    "name": "mobiliza",
+    "description": "Reciprocidade mobiliza Cooperativas"
   },
   {
     "from": "reciprocidade",
     "to": "decrescimento",
-    "name": "conecta-se com",
-    "description": "Reciprocidade conecta-se com Decrescimento"
+    "name": "emancipa-se via",
+    "description": "Reciprocidade emancipa-se via Decrescimento"
   },
   {
     "from": "reciprocidade",
     "to": "cuidado",
-    "name": "conecta-se com",
-    "description": "Reciprocidade conecta-se com Ética do Cuidado"
+    "name": "organiza",
+    "description": "Reciprocidade organiza Ética do Cuidado"
   },
   {
     "from": "terra",
     "to": "holobionte",
-    "name": "conecta-se com",
-    "description": "Terra Como Sujeito conecta-se com Holobionte"
+    "name": "simbiosa com",
+    "description": "Terra simbiosa com Holobionte"
   },
   {
     "from": "terra",
     "to": "setimagera",
-    "name": "conecta-se com",
-    "description": "Terra Como Sujeito conecta-se com Sétima Geração"
+    "name": "entrelaça-se com",
+    "description": "Terra entrelaça-se com Sétima Geração"
   },
   {
     "from": "commons",
@@ -1070,8 +1070,8 @@
   {
     "from": "cosmopolitica",
     "to": "commons",
-    "name": "conecta-se com",
-    "description": "Cosmopolítica conecta-se com Commons"
+    "name": "simbiosa com",
+    "description": "Cosmopolítica simbiosa com Commons"
   },
   {
     "from": "cosmopolitica",
@@ -1106,32 +1106,32 @@
   {
     "from": "decrescimento",
     "to": "acumulacaoprimitiva",
-    "name": "conecta-se com",
-    "description": "Decrescimento conecta-se com Acumulação Primitiva"
+    "name": "emancipa-se via",
+    "description": "Decrescimento emancipa-se via Acumulação Primitiva"
   },
   {
     "from": "holobionte",
     "to": "decrescimento",
-    "name": "conecta-se com",
-    "description": "Holobionte conecta-se com Decrescimento"
+    "name": "simbiosa com",
+    "description": "Holobionte simbiosa com Decrescimento"
   },
   {
     "from": "simbiose",
     "to": "micorriza",
-    "name": "conecta-se com",
-    "description": "Simbiose conecta-se com Micorrizas"
+    "name": "co-habita",
+    "description": "Simbiose co-habita Micorrizas"
   },
   {
     "from": "simbiose",
     "to": "reciprocidade",
-    "name": "conecta-se com",
-    "description": "Simbiose conecta-se com Reciprocidade"
+    "name": "simbiosa com",
+    "description": "Simbiose simbiosa com Reciprocidade"
   },
   {
     "from": "simbiose",
     "to": "multiplicidade",
-    "name": "conecta-se com",
-    "description": "Simbiose conecta-se com Multiplicidade Sem Fusão"
+    "name": "territorializa-se em",
+    "description": "Simbiose territorializa-se em Multiplicidade Sem Fusão"
   },
   {
     "from": "micorriza",
@@ -1148,8 +1148,8 @@
   {
     "from": "micorriza",
     "to": "commons",
-    "name": "conecta-se com",
-    "description": "Micorrizas conecta-se com Commons"
+    "name": "simbiosa com",
+    "description": "Micorrizas simbiosa com Commons"
   },
   {
     "from": "redesmiceliais",
@@ -1160,8 +1160,8 @@
   {
     "from": "redesmiceliais",
     "to": "commons",
-    "name": "conecta-se com",
-    "description": "Redes Micelianas conecta-se com Commons"
+    "name": "simbiosa com",
+    "description": "Redes Micelianas simbiosa com Commons"
   },
   {
     "from": "redesmiceliais",
@@ -1172,8 +1172,8 @@
   {
     "from": "redesmiceliais",
     "to": "agencia",
-    "name": "conecta-se com",
-    "description": "Redes Micelianas conecta-se com Agência Distribuída"
+    "name": "simbiosa com",
+    "description": "Redes Micelianas simbiosa com Agência Distribuída"
   },
   {
     "from": "redesmiceliais",
@@ -1184,14 +1184,14 @@
   {
     "from": "extrativismo",
     "to": "commons",
-    "name": "conecta-se com",
-    "description": "Extrativismo conecta-se com Commons"
+    "name": "simbiosa com",
+    "description": "Extrativismo simbiosa com Commons"
   },
   {
     "from": "extrativismo",
     "to": "decrescimento",
-    "name": "conecta-se com",
-    "description": "Extrativismo conecta-se com Decrescimento"
+    "name": "simbiosa com",
+    "description": "Extrativismo simbiosa com Decrescimento"
   },
   {
     "from": "extrativismo",
@@ -1226,8 +1226,8 @@
   {
     "from": "pratica",
     "to": "commons",
-    "name": "conecta-se com",
-    "description": "Práxis Institucional conecta-se com Commons"
+    "name": "realiza",
+    "description": "Práxis Institucional realiza Commons"
   },
   {
     "from": "pratica",
@@ -1244,14 +1244,14 @@
   {
     "from": "pratica",
     "to": "cooperativa",
-    "name": "conecta-se com",
-    "description": "Práxis Institucional conecta-se com Cooperativas"
+    "name": "experimenta",
+    "description": "Práxis Institucional experimenta Cooperativas"
   },
   {
     "from": "cooperativa",
     "to": "agencia",
-    "name": "conecta-se com",
-    "description": "Cooperativas conecta-se com Agência Distribuída"
+    "name": "efetiva",
+    "description": "Cooperativas efetiva Agência Distribuída"
   },
   {
     "from": "cooperativa",
@@ -1286,38 +1286,38 @@
   {
     "from": "tecnologiaconvivial",
     "to": "pratica",
-    "name": "conecta-se com",
-    "description": "Tecnologias Conviviais conecta-se com Práxis Institucional"
+    "name": "experimenta",
+    "description": "Tecnologias Conviviais experimenta Práxis Institucional"
   },
   {
     "from": "tecnologiaconvivial",
     "to": "limite",
-    "name": "conecta-se com",
-    "description": "Tecnologias Conviviais conecta-se com Limite"
+    "name": "efetiva",
+    "description": "Tecnologias Conviviais efetiva Limite"
   },
   {
     "from": "tecnologiaconvivial",
     "to": "commons",
-    "name": "conecta-se com",
-    "description": "Tecnologias Conviviais conecta-se com Commons"
+    "name": "realiza",
+    "description": "Tecnologias Conviviais realiza Commons"
   },
   {
     "from": "tecnologiaconvivial",
     "to": "softwarelivre",
-    "name": "conecta-se com",
-    "description": "Tecnologias Conviviais conecta-se com Software Livre"
+    "name": "experimenta",
+    "description": "Tecnologias Conviviais experimenta Software Livre"
   },
   {
     "from": "tecnologiaconvivial",
     "to": "decrescimento",
-    "name": "conecta-se com",
-    "description": "Tecnologias Conviviais conecta-se com Decrescimento"
+    "name": "realiza",
+    "description": "Tecnologias Conviviais realiza Decrescimento"
   },
   {
     "from": "tecnologiaconvivial",
     "to": "desescolarizacao",
-    "name": "conecta-se com",
-    "description": "Tecnologias Conviviais conecta-se com Desescolarização"
+    "name": "experimenta",
+    "description": "Tecnologias Conviviais experimenta Desescolarização"
   },
   {
     "from": "moedascomunitarias",
@@ -1328,14 +1328,14 @@
   {
     "from": "moedascomunitarias",
     "to": "commons",
-    "name": "conecta-se com",
-    "description": "Moedas Comunitárias conecta-se com Commons"
+    "name": "realiza",
+    "description": "Moedas Comunitárias realiza Commons"
   },
   {
     "from": "moedascomunitarias",
     "to": "decrescimento",
-    "name": "conecta-se com",
-    "description": "Moedas Comunitárias conecta-se com Decrescimento"
+    "name": "realiza",
+    "description": "Moedas Comunitárias realiza Decrescimento"
   },
   {
     "from": "moedascomunitarias",
@@ -1370,8 +1370,8 @@
   {
     "from": "circuloscultura",
     "to": "assembleia",
-    "name": "conecta-se com",
-    "description": "Círculos de Cultura (Freire) conecta-se com Assembleias"
+    "name": "experimenta",
+    "description": "Círculos de Cultura (Freire) experimenta Assembleias"
   },
   {
     "from": "circuloscultura",
@@ -1424,8 +1424,8 @@
   {
     "from": "composicao",
     "to": "agencia",
-    "name": "conecta-se com",
-    "description": "Composição de Corpos conecta-se com Agência Distribuída"
+    "name": "constitui",
+    "description": "Composição de Corpos constitui Agência Distribuída"
   },
   {
     "from": "composicao",
@@ -1448,20 +1448,20 @@
   {
     "from": "softwarelivre",
     "to": "reciprocidade",
-    "name": "conecta-se com",
-    "description": "Software Livre conecta-se com Reciprocidade"
+    "name": "realiza",
+    "description": "Software Livre realiza Reciprocidade"
   },
   {
     "from": "softwarelivre",
     "to": "extrativismo",
-    "name": "conecta-se com",
-    "description": "Software Livre conecta-se com Extrativismo"
+    "name": "pratica",
+    "description": "Software Livre pratica Extrativismo"
   },
   {
     "from": "protocoloaberto",
     "to": "commons",
-    "name": "conecta-se com",
-    "description": "Protocolos Abertos conecta-se com Commons"
+    "name": "realiza",
+    "description": "Protocolos Abertos realiza Commons"
   },
   {
     "from": "protocoloaberto",
@@ -1478,8 +1478,8 @@
   {
     "from": "protocoloaberto",
     "to": "agencia",
-    "name": "conecta-se com",
-    "description": "Protocolos Abertos conecta-se com Agência Distribuída"
+    "name": "realiza",
+    "description": "Protocolos Abertos realiza Agência Distribuída"
   },
   {
     "from": "protocoloaberto",
@@ -1502,8 +1502,8 @@
   {
     "from": "criptografia",
     "to": "agencia",
-    "name": "conecta-se com",
-    "description": "Criptografia conecta-se com Agência Distribuída"
+    "name": "realiza",
+    "description": "Criptografia realiza Agência Distribuída"
   },
   {
     "from": "criptografia",
@@ -1526,8 +1526,8 @@
   {
     "from": "arterelacional",
     "to": "afeto",
-    "name": "conecta-se com",
-    "description": "Arte Relacional conecta-se com Afeto Spinozista"
+    "name": "efetiva",
+    "description": "Arte Relacional efetiva Afeto Spinozista"
   },
   {
     "from": "arterelacional",
@@ -1544,8 +1544,8 @@
   {
     "from": "educacaopopular",
     "to": "conhecimento",
-    "name": "conecta-se com",
-    "description": "Educação Popular conecta-se com Relacionalismo Epistêmico"
+    "name": "pratica",
+    "description": "Educação Popular pratica Conhecimento"
   },
   {
     "from": "educacaopopular",
@@ -1568,14 +1568,14 @@
   {
     "from": "educacaopopular",
     "to": "cuidado",
-    "name": "conecta-se com",
-    "description": "Educação Popular conecta-se com Ética do Cuidado"
+    "name": "pratica",
+    "description": "Educação Popular pratica Ética do Cuidado"
   },
   {
     "from": "pedagogiaautonomia",
     "to": "agencia",
-    "name": "conecta-se com",
-    "description": "Pedagogia da Autonomia conecta-se com Agência Distribuída"
+    "name": "realiza",
+    "description": "Pedagogia da Autonomia realiza Agência Distribuída"
   },
   {
     "from": "pedagogiaautonomia",
@@ -1586,8 +1586,8 @@
   {
     "from": "pedagogiaautonomia",
     "to": "normatividade",
-    "name": "conecta-se com",
-    "description": "Pedagogia da Autonomia conecta-se com Normatividade Relacional"
+    "name": "realiza",
+    "description": "Pedagogia da Autonomia realiza Normatividade Relacional"
   },
   {
     "from": "desescolarizacao",
@@ -1598,8 +1598,8 @@
   {
     "from": "desescolarizacao",
     "to": "commons",
-    "name": "conecta-se com",
-    "description": "Desescolarização conecta-se com Commons"
+    "name": "realiza",
+    "description": "Desescolarização realiza Commons"
   },
   {
     "from": "desescolarizacao",
@@ -1610,8 +1610,8 @@
   {
     "from": "cuidado",
     "to": "afeto",
-    "name": "conecta-se com",
-    "description": "Ética do Cuidado conecta-se com Afeto Spinozista"
+    "name": "questiona",
+    "description": "Ética do Cuidado questiona Afeto Spinozista"
   },
   {
     "from": "cuidado",
@@ -1640,8 +1640,8 @@
   {
     "from": "despossessao",
     "to": "commons",
-    "name": "conecta-se com",
-    "description": "Despossessão conecta-se com Commons"
+    "name": "emancipa-se via",
+    "description": "Despossessão emancipa-se via Commons"
   },
   {
     "from": "despossessao",
@@ -1658,20 +1658,20 @@
   {
     "from": "memoriacoletiva",
     "to": "indigena",
-    "name": "conecta-se com",
-    "description": "Memória Coletiva conecta-se com Pensamento Indígena"
+    "name": "marca",
+    "description": "Memória Coletiva marca Pensamento Indígena"
   },
   {
     "from": "memoriacoletiva",
     "to": "conhecimento",
-    "name": "conecta-se com",
-    "description": "Memória Coletiva conecta-se com Relacionalismo Epistêmico"
+    "name": "sedimenta-se em",
+    "description": "Memória Coletiva sedimenta-se em Conhecimento"
   },
   {
     "from": "memoriacoletiva",
     "to": "estratostempo",
-    "name": "conecta-se com",
-    "description": "Memória Coletiva conecta-se com Estratos de Tempo"
+    "name": "atualiza",
+    "description": "Memória Coletiva atualiza Estratos de Tempo"
   },
   {
     "from": "ancestralidade",
@@ -1718,19 +1718,5671 @@
   {
     "from": "setimagera",
     "to": "indigena",
-    "name": "conecta-se com",
-    "description": "Sétima Geração conecta-se com Pensamento Indígena"
+    "name": "marca",
+    "description": "Sétima Geração marca Pensamento Indígena"
   },
   {
     "from": "setimagera",
     "to": "decrescimento",
-    "name": "conecta-se com",
-    "description": "Sétima Geração conecta-se com Decrescimento"
+    "name": "marca",
+    "description": "Sétima Geração marca Decrescimento"
   },
   {
     "from": "futuridadequeer",
     "to": "hauntologia",
     "name": "assombra-se em",
     "description": "Futuridade queer assombra-se"
+  },
+  {
+    "from": "sunyata",
+    "to": "vazio",
+    "name": "possibilita",
+    "description": "Śūnyatā (Vacuidade) possibilita Vazio Que Povoa"
+  },
+  {
+    "from": "anatman",
+    "to": "vazio",
+    "name": "possibilita",
+    "description": "Anātman (Não-Eu) possibilita Vazio Que Povoa"
+  },
+  {
+    "from": "anatman",
+    "to": "sunyata",
+    "name": "possibilita",
+    "description": "Anātman (Não-Eu) possibilita Śūnyatā (Vacuidade)"
+  },
+  {
+    "from": "pratityasamutpada",
+    "to": "sunyata",
+    "name": "possibilita",
+    "description": "Pratītyasamutpāda possibilita Śūnyatā (Vacuidade)"
+  },
+  {
+    "from": "ontologia",
+    "to": "pratityasamutpada",
+    "name": "configura-se em",
+    "description": "Ontologia Relacional Universal configura-se em Pratītyasamutpāda"
+  },
+  {
+    "from": "multiplicidade",
+    "to": "vazio",
+    "name": "configura-se em",
+    "description": "Multiplicidade Sem Fusão configura-se em Vazio Que Povoa"
+  },
+  {
+    "from": "multiplicidade",
+    "to": "anatman",
+    "name": "configura-se em",
+    "description": "Multiplicidade Sem Fusão configura-se em Anātman (Não-Eu)"
+  },
+  {
+    "from": "multiplicidade",
+    "to": "pratityasamutpada",
+    "name": "configura-se em",
+    "description": "Multiplicidade Sem Fusão configura-se em Pratītyasamutpāda"
+  },
+  {
+    "from": "multiplicidade",
+    "to": "ontologia",
+    "name": "compõe",
+    "description": "Multiplicidade Sem Fusão compõe Ontologia Relacional Universal"
+  },
+  {
+    "from": "processo",
+    "to": "vazio",
+    "name": "configura-se em",
+    "description": "Processo (Whitehead) configura-se em Vazio Que Povoa"
+  },
+  {
+    "from": "processo",
+    "to": "anatman",
+    "name": "configura-se em",
+    "description": "Processo (Whitehead) configura-se em Anātman (Não-Eu)"
+  },
+  {
+    "from": "processo",
+    "to": "pratityasamutpada",
+    "name": "configura-se em",
+    "description": "Processo (Whitehead) configura-se em Pratītyasamutpāda"
+  },
+  {
+    "from": "processo",
+    "to": "ontologia",
+    "name": "compõe",
+    "description": "Processo (Whitehead) compõe Ontologia Relacional Universal"
+  },
+  {
+    "from": "processo",
+    "to": "multiplicidade",
+    "name": "compõe",
+    "description": "Processo (Whitehead) compõe Multiplicidade Sem Fusão"
+  },
+  {
+    "from": "ocasioes",
+    "to": "processo",
+    "name": "compõe",
+    "description": "Ocasiões de Experiência compõe Processo (Whitehead)"
+  },
+  {
+    "from": "devir",
+    "to": "processo",
+    "name": "compõe",
+    "description": "Devir (Deleuze) compõe Processo (Whitehead)"
+  },
+  {
+    "from": "devir",
+    "to": "ocasioes",
+    "name": "compõe",
+    "description": "Devir (Deleuze) compõe Ocasiões de Experiência"
+  },
+  {
+    "from": "intracao",
+    "to": "ontologia",
+    "name": "compõe",
+    "description": "Intra-ação (Barad) compõe Ontologia Relacional Universal"
+  },
+  {
+    "from": "intracao",
+    "to": "pratityasamutpada",
+    "name": "configura-se em",
+    "description": "Intra-ação (Barad) configura-se em Pratītyasamutpāda"
+  },
+  {
+    "from": "intracao",
+    "to": "processo",
+    "name": "compõe",
+    "description": "Intra-ação (Barad) compõe Processo (Whitehead)"
+  },
+  {
+    "from": "recursao",
+    "to": "vazio",
+    "name": "pensa através de",
+    "description": "Recursão Sem Fundamento pensa através de Vazio Que Povoa"
+  },
+  {
+    "from": "conhecimento",
+    "to": "recursao",
+    "name": "aprende de",
+    "description": "Conhecimento aprende de Recursão Sem Fundamento"
+  },
+  {
+    "from": "conhecimento",
+    "to": "intracao",
+    "name": "aprende de",
+    "description": "Conhecimento aprende de Intra-ação (Barad)"
+  },
+  {
+    "from": "tempo",
+    "to": "processo",
+    "name": "questiona",
+    "description": "Tempo Entrelaçado questiona Processo (Whitehead)"
+  },
+  {
+    "from": "tempo",
+    "to": "vazio",
+    "name": "pensa através de",
+    "description": "Tempo Entrelaçado pensa através de Vazio Que Povoa"
+  },
+  {
+    "from": "tempo",
+    "to": "ocasioes",
+    "name": "questiona",
+    "description": "Tempo Entrelaçado questiona Ocasiões de Experiência"
+  },
+  {
+    "from": "tempo",
+    "to": "devir",
+    "name": "questiona",
+    "description": "Tempo Entrelaçado questiona Devir (Deleuze)"
+  },
+  {
+    "from": "limite",
+    "to": "recursao",
+    "name": "intensifica-se em",
+    "description": "Limite intensifica-se em Recursão Sem Fundamento"
+  },
+  {
+    "from": "agencia",
+    "to": "intracao",
+    "name": "emancipa-se via",
+    "description": "Agência Distribuída emancipa-se via Intra-ação (Barad)"
+  },
+  {
+    "from": "agencia",
+    "to": "recursao",
+    "name": "organiza",
+    "description": "Agência Distribuída organiza Recursão Sem Fundamento"
+  },
+  {
+    "from": "sujeito",
+    "to": "multiplicidade",
+    "name": "compõe",
+    "description": "Sujeito compõe Multiplicidade Sem Fusão"
+  },
+  {
+    "from": "sujeito",
+    "to": "agencia",
+    "name": "constitui",
+    "description": "Sujeito constitui Agência Distribuída"
+  },
+  {
+    "from": "performatividade",
+    "to": "intracao",
+    "name": "compõe",
+    "description": "Performatividade compõe Intra-ação (Barad)"
+  },
+  {
+    "from": "performatividade",
+    "to": "sujeito",
+    "name": "compõe",
+    "description": "Performatividade compõe Sujeito"
+  },
+  {
+    "from": "performatividade",
+    "to": "agencia",
+    "name": "constitui",
+    "description": "Performatividade constitui Agência Distribuída"
+  },
+  {
+    "from": "evento",
+    "to": "recursao",
+    "name": "organiza",
+    "description": "Evento (Badiou) organiza Recursão Sem Fundamento"
+  },
+  {
+    "from": "evento",
+    "to": "tempo",
+    "name": "organiza",
+    "description": "Evento (Badiou) organiza Tempo Entrelaçado"
+  },
+  {
+    "from": "evento",
+    "to": "sujeito",
+    "name": "emancipa-se via",
+    "description": "Evento (Badiou) emancipa-se via Sujeito"
+  },
+  {
+    "from": "evento",
+    "to": "performatividade",
+    "name": "emancipa-se via",
+    "description": "Evento (Badiou) emancipa-se via Performatividade"
+  },
+  {
+    "from": "evento",
+    "to": "limite",
+    "name": "emancipa-se via",
+    "description": "Evento (Badiou) emancipa-se via Limite"
+  },
+  {
+    "from": "precariedade",
+    "to": "evento",
+    "name": "emancipa-se via",
+    "description": "Precariedade emancipa-se via Evento (Badiou)"
+  },
+  {
+    "from": "normatividade",
+    "to": "precariedade",
+    "name": "emancipa-se via",
+    "description": "Normatividade Relacional emancipa-se via Precariedade"
+  },
+  {
+    "from": "ubuntu",
+    "to": "ontologia",
+    "name": "entrelaça-se com",
+    "description": "Ubuntu entrelaça-se com Ontologia Relacional Universal"
+  },
+  {
+    "from": "ubuntu",
+    "to": "vulnerabilidade",
+    "name": "articula-se com",
+    "description": "Ubuntu articula-se com Vulnerabilidade"
+  },
+  {
+    "from": "indigena",
+    "to": "ontologia",
+    "name": "entrelaça-se com",
+    "description": "Pensamento Indígena entrelaça-se com Ontologia Relacional Universal"
+  },
+  {
+    "from": "indigena",
+    "to": "conhecimento",
+    "name": "compõe",
+    "description": "Pensamento Indígena compõe Conhecimento"
+  },
+  {
+    "from": "indigena",
+    "to": "ubuntu",
+    "name": "entrelaça-se com",
+    "description": "Pensamento Indígena entrelaça-se com Ubuntu"
+  },
+  {
+    "from": "placethought",
+    "to": "indigena",
+    "name": "entrelaça-se com",
+    "description": "Place-Thought entrelaça-se com Pensamento Indígena"
+  },
+  {
+    "from": "placethought",
+    "to": "conhecimento",
+    "name": "compõe",
+    "description": "Place-Thought compõe Conhecimento"
+  },
+  {
+    "from": "groundednormativity",
+    "to": "placethought",
+    "name": "entrelaça-se com",
+    "description": "Grounded Normativity entrelaça-se com Place-Thought"
+  },
+  {
+    "from": "groundednormativity",
+    "to": "indigena",
+    "name": "entrelaça-se com",
+    "description": "Grounded Normativity entrelaça-se com Pensamento Indígena"
+  },
+  {
+    "from": "ressurgencia",
+    "to": "groundednormativity",
+    "name": "entrelaça-se com",
+    "description": "Ressurgência Indígena entrelaça-se com Grounded Normativity"
+  },
+  {
+    "from": "whanaungatanga",
+    "to": "ubuntu",
+    "name": "entrelaça-se com",
+    "description": "Whanaungatanga entrelaça-se com Ubuntu"
+  },
+  {
+    "from": "whanaungatanga",
+    "to": "conhecimento",
+    "name": "compõe",
+    "description": "Whanaungatanga compõe Conhecimento"
+  },
+  {
+    "from": "whanaungatanga",
+    "to": "indigena",
+    "name": "entrelaça-se com",
+    "description": "Whanaungatanga entrelaça-se com Pensamento Indígena"
+  },
+  {
+    "from": "reciprocidade",
+    "to": "vulnerabilidade",
+    "name": "emancipa-se via",
+    "description": "Reciprocidade emancipa-se via Vulnerabilidade"
+  },
+  {
+    "from": "reciprocidade",
+    "to": "ubuntu",
+    "name": "disputa",
+    "description": "Reciprocidade disputa Ubuntu"
+  },
+  {
+    "from": "terra",
+    "to": "placethought",
+    "name": "entrelaça-se com",
+    "description": "Terra entrelaça-se com Place-Thought"
+  },
+  {
+    "from": "terra",
+    "to": "indigena",
+    "name": "entrelaça-se com",
+    "description": "Terra entrelaça-se com Pensamento Indígena"
+  },
+  {
+    "from": "terra",
+    "to": "groundednormativity",
+    "name": "entrelaça-se com",
+    "description": "Terra entrelaça-se com Grounded Normativity"
+  },
+  {
+    "from": "commons",
+    "to": "reciprocidade",
+    "name": "emancipa-se via",
+    "description": "Commons emancipa-se via Reciprocidade"
+  },
+  {
+    "from": "cosmopolitica",
+    "to": "terra",
+    "name": "co-habita",
+    "description": "Cosmopolítica co-habita Terra"
+  },
+  {
+    "from": "cosmopolitica",
+    "to": "ressurgencia",
+    "name": "territorializa-se em",
+    "description": "Cosmopolítica territorializa-se em Ressurgência Indígena"
+  },
+  {
+    "from": "decrescimento",
+    "to": "commons",
+    "name": "emancipa-se via",
+    "description": "Decrescimento emancipa-se via Commons"
+  },
+  {
+    "from": "decrescimento",
+    "to": "reciprocidade",
+    "name": "emancipa-se via",
+    "description": "Decrescimento emancipa-se via Reciprocidade"
+  },
+  {
+    "from": "holobionte",
+    "to": "anatman",
+    "name": "simbiosa com",
+    "description": "Holobionte simbiosa com Anātman (Não-Eu)"
+  },
+  {
+    "from": "holobionte",
+    "to": "multiplicidade",
+    "name": "territorializa-se em",
+    "description": "Holobionte territorializa-se em Multiplicidade Sem Fusão"
+  },
+  {
+    "from": "holobionte",
+    "to": "vulnerabilidade",
+    "name": "simbiosa com",
+    "description": "Holobionte simbiosa com Vulnerabilidade"
+  },
+  {
+    "from": "holobionte",
+    "to": "processo",
+    "name": "territorializa-se em",
+    "description": "Holobionte territorializa-se em Processo (Whitehead)"
+  },
+  {
+    "from": "simbiose",
+    "to": "holobionte",
+    "name": "co-habita",
+    "description": "Simbiose co-habita Holobionte"
+  },
+  {
+    "from": "simbiose",
+    "to": "terra",
+    "name": "co-habita",
+    "description": "Simbiose co-habita Terra"
+  },
+  {
+    "from": "micorriza",
+    "to": "simbiose",
+    "name": "co-habita",
+    "description": "Micorrizas co-habita Simbiose"
+  },
+  {
+    "from": "micorriza",
+    "to": "holobionte",
+    "name": "co-habita",
+    "description": "Micorrizas co-habita Holobionte"
+  },
+  {
+    "from": "redesmiceliais",
+    "to": "micorriza",
+    "name": "co-habita",
+    "description": "Redes Micelianas co-habita Micorrizas"
+  },
+  {
+    "from": "extrativismo",
+    "to": "precariedade",
+    "name": "simbiosa com",
+    "description": "Extrativismo simbiosa com Precariedade"
+  },
+  {
+    "from": "pratica",
+    "to": "agencia",
+    "name": "realiza",
+    "description": "Práxis Institucional realiza Agência Distribuída"
+  },
+  {
+    "from": "pratica",
+    "to": "cosmopolitica",
+    "name": "pratica",
+    "description": "Práxis Institucional pratica Cosmopolítica"
+  },
+  {
+    "from": "cooperativa",
+    "to": "pratica",
+    "name": "experimenta",
+    "description": "Cooperativas experimenta Práxis Institucional"
+  },
+  {
+    "from": "cooperativa",
+    "to": "commons",
+    "name": "efetiva",
+    "description": "Cooperativas efetiva Commons"
+  },
+  {
+    "from": "cooperativa",
+    "to": "reciprocidade",
+    "name": "efetiva",
+    "description": "Cooperativas efetiva Reciprocidade"
+  },
+  {
+    "from": "assembleia",
+    "to": "pratica",
+    "name": "experimenta",
+    "description": "Assembleias experimenta Práxis Institucional"
+  },
+  {
+    "from": "moedascomunitarias",
+    "to": "cooperativa",
+    "name": "experimenta",
+    "description": "Moedas Comunitárias experimenta Cooperativas"
+  },
+  {
+    "from": "bancostempo",
+    "to": "moedascomunitarias",
+    "name": "experimenta",
+    "description": "Bancos de Tempo experimenta Moedas Comunitárias"
+  },
+  {
+    "from": "circuloscultura",
+    "to": "educacaopopular",
+    "name": "experimenta",
+    "description": "Círculos de Cultura (Freire) experimenta Educação Popular"
+  },
+  {
+    "from": "afeto",
+    "to": "vulnerabilidade",
+    "name": "constitui",
+    "description": "Afeto Spinozista constitui Vulnerabilidade"
+  },
+  {
+    "from": "composicao",
+    "to": "afeto",
+    "name": "compõe",
+    "description": "Composição de Corpos compõe Afeto Spinozista"
+  },
+  {
+    "from": "softwarelivre",
+    "to": "commons",
+    "name": "realiza",
+    "description": "Software Livre realiza Commons"
+  },
+  {
+    "from": "softwarelivre",
+    "to": "tecnologiaconvivial",
+    "name": "experimenta",
+    "description": "Software Livre experimenta Tecnologias Conviviais"
+  },
+  {
+    "from": "protocoloaberto",
+    "to": "softwarelivre",
+    "name": "experimenta",
+    "description": "Protocolos Abertos experimenta Software Livre"
+  },
+  {
+    "from": "criptografia",
+    "to": "protocoloaberto",
+    "name": "experimenta",
+    "description": "Criptografia experimenta Protocolos Abertos"
+  },
+  {
+    "from": "pedagogiaautonomia",
+    "to": "educacaopopular",
+    "name": "experimenta",
+    "description": "Pedagogia da Autonomia experimenta Educação Popular"
+  },
+  {
+    "from": "desescolarizacao",
+    "to": "pedagogiaautonomia",
+    "name": "experimenta",
+    "description": "Desescolarização experimenta Pedagogia da Autonomia"
+  },
+  {
+    "from": "desescolarizacao",
+    "to": "tecnologiaconvivial",
+    "name": "experimenta",
+    "description": "Desescolarização experimenta Tecnologias Conviviais"
+  },
+  {
+    "from": "riz∅ma",
+    "to": "multiplicidade",
+    "name": "compõe",
+    "description": "Rizoma compõe Multiplicidade Sem Fusão"
+  },
+  {
+    "from": "riz∅ma",
+    "to": "redesmiceliais",
+    "name": "compõe",
+    "description": "Rizoma compõe Redes Micelianas"
+  },
+  {
+    "from": "riz∅ma",
+    "to": "protocoloaberto",
+    "name": "entrelaça-se com",
+    "description": "Rizoma entrelaça-se com Protocolos Abertos"
+  },
+  {
+    "from": "riz∅ma",
+    "to": "conhecimento",
+    "name": "entrelaça-se com",
+    "description": "Rizoma entrelaça-se com Conhecimento"
+  },
+  {
+    "from": "riz∅ma",
+    "to": "devir",
+    "name": "compõe",
+    "description": "Rizoma compõe Devir (Deleuze)"
+  },
+  {
+    "from": "riz∅ma",
+    "to": "commons",
+    "name": "constitui",
+    "description": "Rizoma constitui Commons"
+  },
+  {
+    "from": "cuidado",
+    "to": "vulnerabilidade",
+    "name": "dialoga com",
+    "description": "Ética do Cuidado dialoga com Vulnerabilidade"
+  },
+  {
+    "from": "cuidado",
+    "to": "reciprocidade",
+    "name": "dialoga com",
+    "description": "Ética do Cuidado dialoga com Reciprocidade"
+  },
+  {
+    "from": "cuidado",
+    "to": "educacaopopular",
+    "name": "revela",
+    "description": "Ética do Cuidado revela Educação Popular"
+  },
+  {
+    "from": "cuidado",
+    "to": "ubuntu",
+    "name": "questiona",
+    "description": "Ética do Cuidado questiona Ubuntu"
+  },
+  {
+    "from": "cuidado",
+    "to": "whanaungatanga",
+    "name": "questiona",
+    "description": "Ética do Cuidado questiona Whanaungatanga"
+  },
+  {
+    "from": "acumulacaoprimitiva",
+    "to": "extrativismo",
+    "name": "disputa",
+    "description": "Acumulação Primitiva disputa Extrativismo"
+  },
+  {
+    "from": "acumulacaoprimitiva",
+    "to": "groundednormativity",
+    "name": "disputa",
+    "description": "Acumulação Primitiva disputa Grounded Normativity"
+  },
+  {
+    "from": "acumulacaoprimitiva",
+    "to": "decrescimento",
+    "name": "emancipa-se via",
+    "description": "Acumulação Primitiva emancipa-se via Decrescimento"
+  },
+  {
+    "from": "despossessao",
+    "to": "acumulacaoprimitiva",
+    "name": "emancipa-se via",
+    "description": "Despossessão emancipa-se via Acumulação Primitiva"
+  },
+  {
+    "from": "despossessao",
+    "to": "extrativismo",
+    "name": "disputa",
+    "description": "Despossessão disputa Extrativismo"
+  },
+  {
+    "from": "despossessao",
+    "to": "groundednormativity",
+    "name": "disputa",
+    "description": "Despossessão disputa Grounded Normativity"
+  },
+  {
+    "from": "despossessao",
+    "to": "precariedade",
+    "name": "emancipa-se via",
+    "description": "Despossessão emancipa-se via Precariedade"
+  },
+  {
+    "from": "memoriacoletiva",
+    "to": "tempo",
+    "name": "atualiza",
+    "description": "Memória Coletiva atualiza Tempo Entrelaçado"
+  },
+  {
+    "from": "memoriacoletiva",
+    "to": "sujeito",
+    "name": "sedimenta-se em",
+    "description": "Memória Coletiva sedimenta-se em Sujeito"
+  },
+  {
+    "from": "memoriacoletiva",
+    "to": "recursao",
+    "name": "atualiza",
+    "description": "Memória Coletiva atualiza Recursão Sem Fundamento"
+  },
+  {
+    "from": "ancestralidade",
+    "to": "memoriacoletiva",
+    "name": "atualiza",
+    "description": "Ancestralidade atualiza Memória Coletiva"
+  },
+  {
+    "from": "ancestralidade",
+    "to": "indigena",
+    "name": "marca",
+    "description": "Ancestralidade marca Pensamento Indígena"
+  },
+  {
+    "from": "ancestralidade",
+    "to": "placethought",
+    "name": "marca",
+    "description": "Ancestralidade marca Place-Thought"
+  },
+  {
+    "from": "ancestralidade",
+    "to": "tempo",
+    "name": "atualiza",
+    "description": "Ancestralidade atualiza Tempo Entrelaçado"
+  },
+  {
+    "from": "hauntologia",
+    "to": "recursao",
+    "name": "atualiza",
+    "description": "Hauntologia atualiza Recursão Sem Fundamento"
+  },
+  {
+    "from": "hauntologia",
+    "to": "limite",
+    "name": "sedimenta-se em",
+    "description": "Hauntologia sedimenta-se em Limite"
+  },
+  {
+    "from": "afrofuturismo",
+    "to": "ancestralidade",
+    "name": "atualiza",
+    "description": "Afrofuturismo atualiza Ancestralidade"
+  },
+  {
+    "from": "afrofuturismo",
+    "to": "hauntologia",
+    "name": "atualiza",
+    "description": "Afrofuturismo atualiza Hauntologia"
+  },
+  {
+    "from": "afrofuturismo",
+    "to": "performatividade",
+    "name": "sedimenta-se em",
+    "description": "Afrofuturismo sedimenta-se em Performatividade"
+  },
+  {
+    "from": "afrofuturismo",
+    "to": "arterelacional",
+    "name": "desdobra-se em",
+    "description": "Afrofuturismo desdobra-se em Arte Relacional"
+  },
+  {
+    "from": "setimagera",
+    "to": "ancestralidade",
+    "name": "atualiza",
+    "description": "Sétima Geração atualiza Ancestralidade"
+  },
+  {
+    "from": "setimagera",
+    "to": "tempo",
+    "name": "atualiza",
+    "description": "Sétima Geração atualiza Tempo Entrelaçado"
+  },
+  {
+    "from": "setimagera",
+    "to": "limite",
+    "name": "sedimenta-se em",
+    "description": "Sétima Geração sedimenta-se em Limite"
+  },
+  {
+    "from": "setimagera",
+    "to": "terra",
+    "name": "desdobra-se em",
+    "description": "Sétima Geração desdobra-se em Terra"
+  },
+  {
+    "from": "corposemorgaos",
+    "to": "devir",
+    "name": "compõe",
+    "description": "Corpo sem Órgãos compõe Devir (Deleuze)"
+  },
+  {
+    "from": "corposemorgaos",
+    "to": "multiplicidade",
+    "name": "compõe",
+    "description": "Corpo sem Órgãos compõe Multiplicidade Sem Fusão"
+  },
+  {
+    "from": "corposemorgaos",
+    "to": "afeto",
+    "name": "compõe",
+    "description": "Corpo sem Órgãos compõe Afeto Spinozista"
+  },
+  {
+    "from": "corposemorgaos",
+    "to": "composicao",
+    "name": "compõe",
+    "description": "Corpo sem Órgãos compõe Composição de Corpos"
+  },
+  {
+    "from": "corposemorgaos",
+    "to": "riz∅ma",
+    "name": "compõe",
+    "description": "Corpo sem Órgãos compõe Rizoma"
+  },
+  {
+    "from": "corposemorgaos",
+    "to": "evento",
+    "name": "constitui",
+    "description": "Corpo sem Órgãos constitui Evento (Badiou)"
+  },
+  {
+    "from": "transindividual",
+    "to": "multiplicidade",
+    "name": "compõe",
+    "description": "Transindividual compõe Multiplicidade Sem Fusão"
+  },
+  {
+    "from": "transindividual",
+    "to": "sujeito",
+    "name": "compõe",
+    "description": "Transindividual compõe Sujeito"
+  },
+  {
+    "from": "transindividual",
+    "to": "ontologia",
+    "name": "compõe",
+    "description": "Transindividual compõe Ontologia Relacional Universal"
+  },
+  {
+    "from": "transindividual",
+    "to": "processo",
+    "name": "compõe",
+    "description": "Transindividual compõe Processo (Whitehead)"
+  },
+  {
+    "from": "transindividual",
+    "to": "intracao",
+    "name": "compõe",
+    "description": "Transindividual compõe Intra-ação (Barad)"
+  },
+  {
+    "from": "transindividual",
+    "to": "ubuntu",
+    "name": "estrutura",
+    "description": "Transindividual estrutura Ubuntu"
+  },
+  {
+    "from": "reproducaosocial",
+    "to": "cuidado",
+    "name": "organiza",
+    "description": "Reprodução Social organiza Ética do Cuidado"
+  },
+  {
+    "from": "reproducaosocial",
+    "to": "vulnerabilidade",
+    "name": "emancipa-se via",
+    "description": "Reprodução Social emancipa-se via Vulnerabilidade"
+  },
+  {
+    "from": "reproducaosocial",
+    "to": "despossessao",
+    "name": "emancipa-se via",
+    "description": "Reprodução Social emancipa-se via Despossessão"
+  },
+  {
+    "from": "reproducaosocial",
+    "to": "acumulacaoprimitiva",
+    "name": "emancipa-se via",
+    "description": "Reprodução Social emancipa-se via Acumulação Primitiva"
+  },
+  {
+    "from": "reproducaosocial",
+    "to": "reciprocidade",
+    "name": "emancipa-se via",
+    "description": "Reprodução Social emancipa-se via Reciprocidade"
+  },
+  {
+    "from": "reproducaosocial",
+    "to": "extrativismo",
+    "name": "disputa",
+    "description": "Reprodução Social disputa Extrativismo"
+  },
+  {
+    "from": "necropolitica",
+    "to": "precariedade",
+    "name": "emancipa-se via",
+    "description": "Necropolítica emancipa-se via Precariedade"
+  },
+  {
+    "from": "necropolitica",
+    "to": "vulnerabilidade",
+    "name": "emancipa-se via",
+    "description": "Necropolítica emancipa-se via Vulnerabilidade"
+  },
+  {
+    "from": "necropolitica",
+    "to": "groundednormativity",
+    "name": "disputa",
+    "description": "Necropolítica disputa Grounded Normativity"
+  },
+  {
+    "from": "necropolitica",
+    "to": "acumulacaoprimitiva",
+    "name": "emancipa-se via",
+    "description": "Necropolítica emancipa-se via Acumulação Primitiva"
+  },
+  {
+    "from": "necropolitica",
+    "to": "despossessao",
+    "name": "emancipa-se via",
+    "description": "Necropolítica emancipa-se via Despossessão"
+  },
+  {
+    "from": "necropolitica",
+    "to": "evento",
+    "name": "emancipa-se via",
+    "description": "Necropolítica emancipa-se via Evento (Badiou)"
+  },
+  {
+    "from": "estratostempo",
+    "to": "tempo",
+    "name": "atualiza",
+    "description": "Estratos de Tempo atualiza Tempo Entrelaçado"
+  },
+  {
+    "from": "estratostempo",
+    "to": "memoriacoletiva",
+    "name": "atualiza",
+    "description": "Estratos de Tempo atualiza Memória Coletiva"
+  },
+  {
+    "from": "estratostempo",
+    "to": "ancestralidade",
+    "name": "atualiza",
+    "description": "Estratos de Tempo atualiza Ancestralidade"
+  },
+  {
+    "from": "estratostempo",
+    "to": "recursao",
+    "name": "atualiza",
+    "description": "Estratos de Tempo atualiza Recursão Sem Fundamento"
+  },
+  {
+    "from": "estratostempo",
+    "to": "processo",
+    "name": "sedimenta-se em",
+    "description": "Estratos de Tempo sedimenta-se em Processo (Whitehead)"
+  },
+  {
+    "from": "futuridadequeer",
+    "to": "afrofuturismo",
+    "name": "atualiza",
+    "description": "Futuridade Queer atualiza Afrofuturismo"
+  },
+  {
+    "from": "futuridadequeer",
+    "to": "performatividade",
+    "name": "sedimenta-se em",
+    "description": "Futuridade Queer sedimenta-se em Performatividade"
+  },
+  {
+    "from": "futuridadequeer",
+    "to": "devir",
+    "name": "sedimenta-se em",
+    "description": "Futuridade Queer sedimenta-se em Devir (Deleuze)"
+  },
+  {
+    "from": "futuridadequeer",
+    "to": "evento",
+    "name": "marca",
+    "description": "Futuridade Queer marca Evento (Badiou)"
+  },
+  {
+    "from": "futuridadequeer",
+    "to": "tempo",
+    "name": "atualiza",
+    "description": "Futuridade Queer atualiza Tempo Entrelaçado"
+  },
+  {
+    "from": "crítica",
+    "to": "conhecimento",
+    "name": "problematiza",
+    "description": "Crítica problematiza Conhecimento"
+  },
+  {
+    "from": "crítica",
+    "to": "epistemologia",
+    "name": "problematiza",
+    "description": "Crítica problematiza Epistemologia"
+  },
+  {
+    "from": "crítica",
+    "to": "política",
+    "name": "aprende de",
+    "description": "Crítica aprende de Política"
+  },
+  {
+    "from": "crítica",
+    "to": "ética",
+    "name": "aprende de",
+    "description": "Crítica aprende de Ética"
+  },
+  {
+    "from": "crítica",
+    "to": "performatividade",
+    "name": "aprende de",
+    "description": "Crítica aprende de Performatividade"
+  },
+  {
+    "from": "física quântica",
+    "to": "RQM",
+    "name": "possibilita",
+    "description": "Física Quântica possibilita RQM (Relational Quantum Mechanics)"
+  },
+  {
+    "from": "física quântica",
+    "to": "emaranhamento",
+    "name": "possibilita",
+    "description": "Física Quântica possibilita Emaranhamento Quântico"
+  },
+  {
+    "from": "física quântica",
+    "to": "não-localidade",
+    "name": "possibilita",
+    "description": "Física Quântica possibilita Não-Localidade"
+  },
+  {
+    "from": "física quântica",
+    "to": "fatos relativos",
+    "name": "possibilita",
+    "description": "Física Quântica possibilita Fatos Relativos"
+  },
+  {
+    "from": "física quântica",
+    "to": "ontologia",
+    "name": "emerge em",
+    "description": "Física Quântica emerge em Ontologia Relacional Universal"
+  },
+  {
+    "from": "física quântica",
+    "to": "processo",
+    "name": "emerge em",
+    "description": "Física Quântica emerge em Processo (Whitehead)"
+  },
+  {
+    "from": "indigena",
+    "to": "ressurgência",
+    "name": "constitui",
+    "description": "Pensamento Indígena constitui Ressurgência"
+  },
+  {
+    "from": "governança",
+    "to": "commons",
+    "name": "emancipa-se via",
+    "description": "Governança emancipa-se via Commons"
+  },
+  {
+    "from": "governança",
+    "to": "cooperativa",
+    "name": "mobiliza",
+    "description": "Governança mobiliza Cooperativas"
+  },
+  {
+    "from": "governança",
+    "to": "assembleia",
+    "name": "resiste a",
+    "description": "Governança resiste a Assembleias"
+  },
+  {
+    "from": "governança",
+    "to": "cosmopolitica",
+    "name": "disputa",
+    "description": "Governança disputa Cosmopolítica"
+  },
+  {
+    "from": "governança",
+    "to": "pratica",
+    "name": "resiste a",
+    "description": "Governança resiste a Práxis Institucional"
+  },
+  {
+    "from": "governança",
+    "to": "democracia",
+    "name": "emancipa-se via",
+    "description": "Governança emancipa-se via Democracia"
+  },
+  {
+    "from": "governança",
+    "to": "descentralização",
+    "name": "emancipa-se via",
+    "description": "Governança emancipa-se via Descentralização"
+  },
+  {
+    "from": "RQM",
+    "to": "física quântica",
+    "name": "possibilita",
+    "description": "RQM (Relational Quantum Mechanics) possibilita Física Quântica"
+  },
+  {
+    "from": "RQM",
+    "to": "fatos relativos",
+    "name": "possibilita",
+    "description": "RQM (Relational Quantum Mechanics) possibilita Fatos Relativos"
+  },
+  {
+    "from": "RQM",
+    "to": "ontologia",
+    "name": "emerge em",
+    "description": "RQM (Relational Quantum Mechanics) emerge em Ontologia Relacional Universal"
+  },
+  {
+    "from": "RQM",
+    "to": "relacionalidade",
+    "name": "possibilita",
+    "description": "RQM (Relational Quantum Mechanics) possibilita Relacionalismo"
+  },
+  {
+    "from": "RQM",
+    "to": "anti-fundacionalismo",
+    "name": "possibilita",
+    "description": "RQM (Relational Quantum Mechanics) possibilita Anti-Fundacionalismo"
+  },
+  {
+    "from": "RQM",
+    "to": "processo",
+    "name": "emerge em",
+    "description": "RQM (Relational Quantum Mechanics) emerge em Processo (Whitehead)"
+  },
+  {
+    "from": "política",
+    "to": "poder",
+    "name": "emancipa-se via",
+    "description": "Política emancipa-se via Poder"
+  },
+  {
+    "from": "política",
+    "to": "democracia",
+    "name": "emancipa-se via",
+    "description": "Política emancipa-se via Democracia"
+  },
+  {
+    "from": "política",
+    "to": "cosmopolitica",
+    "name": "disputa",
+    "description": "Política disputa Cosmopolítica"
+  },
+  {
+    "from": "política",
+    "to": "pratica",
+    "name": "resiste a",
+    "description": "Política resiste a Práxis Institucional"
+  },
+  {
+    "from": "política",
+    "to": "evento",
+    "name": "emancipa-se via",
+    "description": "Política emancipa-se via Evento (Badiou)"
+  },
+  {
+    "from": "política",
+    "to": "sujeito",
+    "name": "emancipa-se via",
+    "description": "Política emancipa-se via Sujeito"
+  },
+  {
+    "from": "política",
+    "to": "governança",
+    "name": "emancipa-se via",
+    "description": "Política emancipa-se via Governança"
+  },
+  {
+    "from": "direitos da natureza",
+    "to": "terra",
+    "name": "resiste a",
+    "description": "Direitos da Natureza resiste a Terra"
+  },
+  {
+    "from": "direitos da natureza",
+    "to": "Pachamama",
+    "name": "emancipa-se via",
+    "description": "Direitos da Natureza emancipa-se via Pachamama"
+  },
+  {
+    "from": "direitos da natureza",
+    "to": "cosmopolitica",
+    "name": "disputa",
+    "description": "Direitos da Natureza disputa Cosmopolítica"
+  },
+  {
+    "from": "direitos da natureza",
+    "to": "personalidade jurídica",
+    "name": "emancipa-se via",
+    "description": "Direitos da Natureza emancipa-se via Personalidade Jurídica"
+  },
+  {
+    "from": "direitos da natureza",
+    "to": "indigena",
+    "name": "emancipa-se via",
+    "description": "Direitos da Natureza emancipa-se via Pensamento Indígena"
+  },
+  {
+    "from": "direitos da natureza",
+    "to": "não-humanos",
+    "name": "emancipa-se via",
+    "description": "Direitos da Natureza emancipa-se via Não-Humanos"
+  },
+  {
+    "from": "conhecimento",
+    "to": "crítica",
+    "name": "problematiza",
+    "description": "Conhecimento problematiza Crítica"
+  },
+  {
+    "from": "conhecimento",
+    "to": "epistemologia",
+    "name": "problematiza",
+    "description": "Conhecimento problematiza Epistemologia"
+  },
+  {
+    "from": "conhecimento",
+    "to": "pratica",
+    "name": "reconhece",
+    "description": "Conhecimento reconhece Práxis Institucional"
+  },
+  {
+    "from": "conhecimento",
+    "to": "whakapapa",
+    "name": "problematiza",
+    "description": "Conhecimento problematiza Whakapapa"
+  },
+  {
+    "from": "agencia",
+    "to": "afeto",
+    "name": "compõe",
+    "description": "Agência compõe Afeto Spinozista"
+  },
+  {
+    "from": "agencia",
+    "to": "não-humanos",
+    "name": "compõe",
+    "description": "Agência compõe Não-Humanos"
+  },
+  {
+    "from": "economia",
+    "to": "capitalismo",
+    "name": "emancipa-se via",
+    "description": "Economia emancipa-se via Capitalismo"
+  },
+  {
+    "from": "economia",
+    "to": "mercadorias fictícias",
+    "name": "emancipa-se via",
+    "description": "Economia emancipa-se via Mercadorias Fictícias"
+  },
+  {
+    "from": "economia",
+    "to": "commons",
+    "name": "emancipa-se via",
+    "description": "Economia emancipa-se via Commons"
+  },
+  {
+    "from": "economia",
+    "to": "cooperativa",
+    "name": "mobiliza",
+    "description": "Economia mobiliza Cooperativas"
+  },
+  {
+    "from": "economia",
+    "to": "decrescimento",
+    "name": "emancipa-se via",
+    "description": "Economia emancipa-se via Decrescimento"
+  },
+  {
+    "from": "economia",
+    "to": "extrativismo",
+    "name": "disputa",
+    "description": "Economia disputa Extrativismo"
+  },
+  {
+    "from": "ecologia",
+    "to": "holobionte",
+    "name": "simbiosa com",
+    "description": "Ecologia simbiosa com Holobionte"
+  },
+  {
+    "from": "ecologia",
+    "to": "simbiose",
+    "name": "simbiosa com",
+    "description": "Ecologia simbiosa com Simbiose"
+  },
+  {
+    "from": "ecologia",
+    "to": "micorriza",
+    "name": "simbiosa com",
+    "description": "Ecologia simbiosa com Micorrizas"
+  },
+  {
+    "from": "ecologia",
+    "to": "multiespécies",
+    "name": "flui em",
+    "description": "Ecologia flui em Multiespécies"
+  },
+  {
+    "from": "ecologia",
+    "to": "terra",
+    "name": "flui em",
+    "description": "Ecologia flui em Terra"
+  },
+  {
+    "from": "ecologia",
+    "to": "biodiversidade",
+    "name": "flui em",
+    "description": "Ecologia flui em Biodiversidade"
+  },
+  {
+    "from": "super-humeanismo",
+    "to": "RQM",
+    "name": "possibilita",
+    "description": "Super-Humeanismo possibilita RQM (Relational Quantum Mechanics)"
+  },
+  {
+    "from": "super-humeanismo",
+    "to": "ontologia",
+    "name": "emerge em",
+    "description": "Super-Humeanismo emerge em Ontologia Relacional Universal"
+  },
+  {
+    "from": "super-humeanismo",
+    "to": "relacionalidade",
+    "name": "possibilita",
+    "description": "Super-Humeanismo possibilita Relacionalismo"
+  },
+  {
+    "from": "super-humeanismo",
+    "to": "fundamentos",
+    "name": "possibilita",
+    "description": "Super-Humeanismo possibilita Fundamentos"
+  },
+  {
+    "from": "super-humeanismo",
+    "to": "física quântica",
+    "name": "possibilita",
+    "description": "Super-Humeanismo possibilita Física Quântica"
+  },
+  {
+    "from": "personalidade jurídica",
+    "to": "direitos da natureza",
+    "name": "emancipa-se via",
+    "description": "Personalidade Jurídica emancipa-se via Direitos da Natureza"
+  },
+  {
+    "from": "personalidade jurídica",
+    "to": "terra",
+    "name": "resiste a",
+    "description": "Personalidade Jurídica resiste a Terra"
+  },
+  {
+    "from": "personalidade jurídica",
+    "to": "não-humanos",
+    "name": "emancipa-se via",
+    "description": "Personalidade Jurídica emancipa-se via Não-Humanos"
+  },
+  {
+    "from": "personalidade jurídica",
+    "to": "cosmopolitica",
+    "name": "disputa",
+    "description": "Personalidade Jurídica disputa Cosmopolítica"
+  },
+  {
+    "from": "personalidade jurídica",
+    "to": "Pachamama",
+    "name": "emancipa-se via",
+    "description": "Personalidade Jurídica emancipa-se via Pachamama"
+  },
+  {
+    "from": "performatividade",
+    "to": "pratica",
+    "name": "entrelaça-se com",
+    "description": "Performatividade entrelaça-se com Práxis Institucional"
+  },
+  {
+    "from": "performatividade",
+    "to": "gênero",
+    "name": "compõe",
+    "description": "Performatividade compõe Gênero"
+  },
+  {
+    "from": "limite",
+    "to": "precariedade",
+    "name": "constitui",
+    "description": "Limite constitui Precariedade"
+  },
+  {
+    "from": "limite",
+    "to": "tecnologiaconvivial",
+    "name": "entrelaça-se com",
+    "description": "Limite entrelaça-se com Tecnologias Conviviais"
+  },
+  {
+    "from": "limite",
+    "to": "decrescimento",
+    "name": "constitui",
+    "description": "Limite constitui Decrescimento"
+  },
+  {
+    "from": "heterarquia",
+    "to": "riz∅ma",
+    "name": "emancipa-se via",
+    "description": "Heterarquia emancipa-se via Rizoma"
+  },
+  {
+    "from": "heterarquia",
+    "to": "agencia",
+    "name": "emancipa-se via",
+    "description": "Heterarquia emancipa-se via Agência"
+  },
+  {
+    "from": "heterarquia",
+    "to": "descentralização",
+    "name": "emancipa-se via",
+    "description": "Heterarquia emancipa-se via Descentralização"
+  },
+  {
+    "from": "heterarquia",
+    "to": "commons",
+    "name": "emancipa-se via",
+    "description": "Heterarquia emancipa-se via Commons"
+  },
+  {
+    "from": "heterarquia",
+    "to": "assembleia",
+    "name": "resiste a",
+    "description": "Heterarquia resiste a Assembleias"
+  },
+  {
+    "from": "ética",
+    "to": "cuidado",
+    "name": "acolhe",
+    "description": "Ética acolhe Ética do Cuidado"
+  },
+  {
+    "from": "ética",
+    "to": "vulnerabilidade",
+    "name": "respeita",
+    "description": "Ética respeita Vulnerabilidade"
+  },
+  {
+    "from": "ética",
+    "to": "reciprocidade",
+    "name": "respeita",
+    "description": "Ética respeita Reciprocidade"
+  },
+  {
+    "from": "ética",
+    "to": "responsabilidade",
+    "name": "reconhece",
+    "description": "Ética reconhece Responsabilidade"
+  },
+  {
+    "from": "ética",
+    "to": "normatividade",
+    "name": "respeita",
+    "description": "Ética respeita Normatividade Relacional"
+  },
+  {
+    "from": "descolonização",
+    "to": "indigena",
+    "name": "emancipa-se via",
+    "description": "Descolonização emancipa-se via Pensamento Indígena"
+  },
+  {
+    "from": "descolonização",
+    "to": "epistemicídio",
+    "name": "emancipa-se via",
+    "description": "Descolonização emancipa-se via Epistemicídio"
+  },
+  {
+    "from": "descolonização",
+    "to": "ressurgência",
+    "name": "emancipa-se via",
+    "description": "Descolonização emancipa-se via Ressurgência"
+  },
+  {
+    "from": "descolonização",
+    "to": "groundednormativity",
+    "name": "disputa",
+    "description": "Descolonização disputa Grounded Normativity"
+  },
+  {
+    "from": "descolonização",
+    "to": "extrativismo",
+    "name": "disputa",
+    "description": "Descolonização disputa Extrativismo"
+  },
+  {
+    "from": "descolonização",
+    "to": "despossessao",
+    "name": "emancipa-se via",
+    "description": "Descolonização emancipa-se via Despossessão"
+  },
+  {
+    "from": "decrescimento",
+    "to": "extrativismo",
+    "name": "disputa",
+    "description": "Decrescimento disputa Extrativismo"
+  },
+  {
+    "from": "decrescimento",
+    "to": "economia",
+    "name": "emancipa-se via",
+    "description": "Decrescimento emancipa-se via Economia"
+  },
+  {
+    "from": "decrescimento",
+    "to": "holobionte",
+    "name": "disputa",
+    "description": "Decrescimento disputa Holobionte"
+  },
+  {
+    "from": "consciência",
+    "to": "consciência coletiva",
+    "name": "compõe",
+    "description": "Consciência compõe Consciência Coletiva"
+  },
+  {
+    "from": "consciência",
+    "to": "neurociência",
+    "name": "entrelaça-se com",
+    "description": "Consciência entrelaça-se com Neurociência"
+  },
+  {
+    "from": "consciência",
+    "to": "processo",
+    "name": "compõe",
+    "description": "Consciência compõe Processo (Whitehead)"
+  },
+  {
+    "from": "consciência",
+    "to": "sujeito",
+    "name": "compõe",
+    "description": "Consciência compõe Sujeito"
+  },
+  {
+    "from": "consciência",
+    "to": "intersubjetividade",
+    "name": "compõe",
+    "description": "Consciência compõe Intersubjetividade"
+  },
+  {
+    "from": "commons",
+    "to": "cosmopolitica",
+    "name": "disputa",
+    "description": "Commons disputa Cosmopolítica"
+  },
+  {
+    "from": "commons",
+    "to": "extrativismo",
+    "name": "disputa",
+    "description": "Commons disputa Extrativismo"
+  },
+  {
+    "from": "tecnologia",
+    "to": "tecnologiaconvivial",
+    "name": "experimenta",
+    "description": "Tecnologia experimenta Tecnologias Conviviais"
+  },
+  {
+    "from": "tecnologia",
+    "to": "softwarelivre",
+    "name": "experimenta",
+    "description": "Tecnologia experimenta Software Livre"
+  },
+  {
+    "from": "tecnologia",
+    "to": "protocoloaberto",
+    "name": "experimenta",
+    "description": "Tecnologia experimenta Protocolos Abertos"
+  },
+  {
+    "from": "tecnologia",
+    "to": "agencia",
+    "name": "experimenta",
+    "description": "Tecnologia experimenta Agência"
+  },
+  {
+    "from": "tecnologia",
+    "to": "limite",
+    "name": "experimenta",
+    "description": "Tecnologia experimenta Limite"
+  },
+  {
+    "from": "poder",
+    "to": "política",
+    "name": "emancipa-se via",
+    "description": "Poder emancipa-se via Política"
+  },
+  {
+    "from": "poder",
+    "to": "agencia",
+    "name": "emancipa-se via",
+    "description": "Poder emancipa-se via Agência"
+  },
+  {
+    "from": "poder",
+    "to": "necropolitica",
+    "name": "emancipa-se via",
+    "description": "Poder emancipa-se via Necropolítica"
+  },
+  {
+    "from": "poder",
+    "to": "governança",
+    "name": "emancipa-se via",
+    "description": "Poder emancipa-se via Governança"
+  },
+  {
+    "from": "poder",
+    "to": "pratica",
+    "name": "resiste a",
+    "description": "Poder resiste a Práxis Institucional"
+  },
+  {
+    "from": "poder",
+    "to": "evento",
+    "name": "emancipa-se via",
+    "description": "Poder emancipa-se via Evento (Badiou)"
+  },
+  {
+    "from": "madhyamaka",
+    "to": "sunyata",
+    "name": "possibilita",
+    "description": "Madhyamaka possibilita Śūnyatā (Vacuidade)"
+  },
+  {
+    "from": "madhyamaka",
+    "to": "nagarjuna",
+    "name": "possibilita",
+    "description": "Madhyamaka possibilita Nāgārjuna"
+  },
+  {
+    "from": "madhyamaka",
+    "to": "vazio",
+    "name": "possibilita",
+    "description": "Madhyamaka possibilita Vazio Que Povoa"
+  },
+  {
+    "from": "madhyamaka",
+    "to": "budismo",
+    "name": "possibilita",
+    "description": "Madhyamaka possibilita Budismo"
+  },
+  {
+    "from": "madhyamaka",
+    "to": "ontologia",
+    "name": "emerge em",
+    "description": "Madhyamaka emerge em Ontologia Relacional Universal"
+  },
+  {
+    "from": "Māori",
+    "to": "whanaungatanga",
+    "name": "estrutura",
+    "description": "Māori estrutura Whanaungatanga"
+  },
+  {
+    "from": "Māori",
+    "to": "whakapapa",
+    "name": "entrelaça-se com",
+    "description": "Māori entrelaça-se com Whakapapa"
+  },
+  {
+    "from": "Māori",
+    "to": "indigena",
+    "name": "compõe",
+    "description": "Māori compõe Pensamento Indígena"
+  },
+  {
+    "from": "Māori",
+    "to": "direitos da natureza",
+    "name": "constitui",
+    "description": "Māori constitui Direitos da Natureza"
+  },
+  {
+    "from": "Māori",
+    "to": "placethought",
+    "name": "estrutura",
+    "description": "Māori estrutura Place-Thought"
+  },
+  {
+    "from": "justiça",
+    "to": "ética",
+    "name": "reconhece",
+    "description": "Justiça reconhece Ética"
+  },
+  {
+    "from": "justiça",
+    "to": "responsabilidade",
+    "name": "reconhece",
+    "description": "Justiça reconhece Responsabilidade"
+  },
+  {
+    "from": "justiça",
+    "to": "descolonização",
+    "name": "respeita",
+    "description": "Justiça respeita Descolonização"
+  },
+  {
+    "from": "justiça",
+    "to": "direitos da natureza",
+    "name": "respeita",
+    "description": "Justiça respeita Direitos da Natureza"
+  },
+  {
+    "from": "justiça",
+    "to": "vulnerabilidade",
+    "name": "respeita",
+    "description": "Justiça respeita Vulnerabilidade"
+  },
+  {
+    "from": "intersubjetividade",
+    "to": "transindividual",
+    "name": "compõe",
+    "description": "Intersubjetividade compõe Transindividual"
+  },
+  {
+    "from": "intersubjetividade",
+    "to": "sujeito",
+    "name": "compõe",
+    "description": "Intersubjetividade compõe Sujeito"
+  },
+  {
+    "from": "intersubjetividade",
+    "to": "ontologia",
+    "name": "compõe",
+    "description": "Intersubjetividade compõe Ontologia Relacional Universal"
+  },
+  {
+    "from": "intersubjetividade",
+    "to": "consciência coletiva",
+    "name": "compõe",
+    "description": "Intersubjetividade compõe Consciência Coletiva"
+  },
+  {
+    "from": "intersubjetividade",
+    "to": "ubuntu",
+    "name": "estrutura",
+    "description": "Intersubjetividade estrutura Ubuntu"
+  },
+  {
+    "from": "identidade",
+    "to": "sujeito",
+    "name": "compõe",
+    "description": "Identidade compõe Sujeito"
+  },
+  {
+    "from": "identidade",
+    "to": "performatividade",
+    "name": "compõe",
+    "description": "Identidade compõe Performatividade"
+  },
+  {
+    "from": "identidade",
+    "to": "multiplicidade",
+    "name": "compõe",
+    "description": "Identidade compõe Multiplicidade Sem Fusão"
+  },
+  {
+    "from": "identidade",
+    "to": "processo",
+    "name": "compõe",
+    "description": "Identidade compõe Processo (Whitehead)"
+  },
+  {
+    "from": "identidade",
+    "to": "devir",
+    "name": "compõe",
+    "description": "Identidade compõe Devir (Deleuze)"
+  },
+  {
+    "from": "buen vivir",
+    "to": "indigena",
+    "name": "emancipa-se via",
+    "description": "Buen Vivir emancipa-se via Pensamento Indígena"
+  },
+  {
+    "from": "buen vivir",
+    "to": "Pachamama",
+    "name": "emancipa-se via",
+    "description": "Buen Vivir emancipa-se via Pachamama"
+  },
+  {
+    "from": "buen vivir",
+    "to": "commons",
+    "name": "emancipa-se via",
+    "description": "Buen Vivir emancipa-se via Commons"
+  },
+  {
+    "from": "buen vivir",
+    "to": "decrescimento",
+    "name": "emancipa-se via",
+    "description": "Buen Vivir emancipa-se via Decrescimento"
+  },
+  {
+    "from": "buen vivir",
+    "to": "cosmopolitica",
+    "name": "disputa",
+    "description": "Buen Vivir disputa Cosmopolítica"
+  },
+  {
+    "from": "budismo",
+    "to": "sunyata",
+    "name": "possibilita",
+    "description": "Budismo possibilita Śūnyatā (Vacuidade)"
+  },
+  {
+    "from": "budismo",
+    "to": "pratityasamutpada",
+    "name": "possibilita",
+    "description": "Budismo possibilita Pratītyasamutpāda"
+  },
+  {
+    "from": "budismo",
+    "to": "anatman",
+    "name": "possibilita",
+    "description": "Budismo possibilita Anātman (Não-Eu)"
+  },
+  {
+    "from": "budismo",
+    "to": "madhyamaka",
+    "name": "possibilita",
+    "description": "Budismo possibilita Madhyamaka"
+  },
+  {
+    "from": "budismo",
+    "to": "nagarjuna",
+    "name": "possibilita",
+    "description": "Budismo possibilita Nāgārjuna"
+  },
+  {
+    "from": "budismo",
+    "to": "vazio",
+    "name": "possibilita",
+    "description": "Budismo possibilita Vazio Que Povoa"
+  },
+  {
+    "from": "violência simbólica",
+    "to": "poder",
+    "name": "emancipa-se via",
+    "description": "Violência Simbólica emancipa-se via Poder"
+  },
+  {
+    "from": "violência simbólica",
+    "to": "epistemicídio",
+    "name": "emancipa-se via",
+    "description": "Violência Simbólica emancipa-se via Epistemicídio"
+  },
+  {
+    "from": "violência simbólica",
+    "to": "descolonização",
+    "name": "emancipa-se via",
+    "description": "Violência Simbólica emancipa-se via Descolonização"
+  },
+  {
+    "from": "violência simbólica",
+    "to": "educacaopopular",
+    "name": "radicaliza-se em",
+    "description": "Violência Simbólica radicaliza-se em Educação Popular"
+  },
+  {
+    "from": "violência simbólica",
+    "to": "crítica",
+    "name": "resiste a",
+    "description": "Violência Simbólica resiste a Crítica"
+  },
+  {
+    "from": "vácuo",
+    "to": "vazio",
+    "name": "possibilita",
+    "description": "Vácuo Quântico possibilita Vazio Que Povoa"
+  },
+  {
+    "from": "vácuo",
+    "to": "física quântica",
+    "name": "possibilita",
+    "description": "Vácuo Quântico possibilita Física Quântica"
+  },
+  {
+    "from": "vácuo",
+    "to": "processo",
+    "name": "emerge em",
+    "description": "Vácuo Quântico emerge em Processo (Whitehead)"
+  },
+  {
+    "from": "vácuo",
+    "to": "virtualidade",
+    "name": "emerge em",
+    "description": "Vácuo Quântico emerge em Virtualidade"
+  },
+  {
+    "from": "sustentabilidade",
+    "to": "setimagera",
+    "name": "compartilha",
+    "description": "Sustentabilidade compartilha Sétima Geração"
+  },
+  {
+    "from": "sustentabilidade",
+    "to": "decrescimento",
+    "name": "respeita",
+    "description": "Sustentabilidade respeita Decrescimento"
+  },
+  {
+    "from": "sustentabilidade",
+    "to": "commons",
+    "name": "respeita",
+    "description": "Sustentabilidade respeita Commons"
+  },
+  {
+    "from": "sustentabilidade",
+    "to": "holobionte",
+    "name": "acolhe",
+    "description": "Sustentabilidade acolhe Holobionte"
+  },
+  {
+    "from": "sustentabilidade",
+    "to": "limite",
+    "name": "compartilha",
+    "description": "Sustentabilidade compartilha Limite"
+  },
+  {
+    "from": "ressurgência",
+    "to": "indigena",
+    "name": "emancipa-se via",
+    "description": "Ressurgência emancipa-se via Pensamento Indígena"
+  },
+  {
+    "from": "ressurgência",
+    "to": "groundednormativity",
+    "name": "disputa",
+    "description": "Ressurgência disputa Grounded Normativity"
+  },
+  {
+    "from": "ressurgência",
+    "to": "descolonização",
+    "name": "emancipa-se via",
+    "description": "Ressurgência emancipa-se via Descolonização"
+  },
+  {
+    "from": "ressurgência",
+    "to": "evento",
+    "name": "emancipa-se via",
+    "description": "Ressurgência emancipa-se via Evento (Badiou)"
+  },
+  {
+    "from": "responsabilidade",
+    "to": "vulnerabilidade",
+    "name": "respeita",
+    "description": "Responsabilidade respeita Vulnerabilidade"
+  },
+  {
+    "from": "responsabilidade",
+    "to": "reciprocidade",
+    "name": "respeita",
+    "description": "Responsabilidade respeita Reciprocidade"
+  },
+  {
+    "from": "responsabilidade",
+    "to": "cuidado",
+    "name": "acolhe",
+    "description": "Responsabilidade acolhe Ética do Cuidado"
+  },
+  {
+    "from": "responsabilidade",
+    "to": "agencia",
+    "name": "compartilha",
+    "description": "Responsabilidade compartilha Agência"
+  },
+  {
+    "from": "responsabilidade",
+    "to": "intracao",
+    "name": "compartilha",
+    "description": "Responsabilidade compartilha Intra-ação (Barad)"
+  },
+  {
+    "from": "relações",
+    "to": "ontologia",
+    "name": "emerge em",
+    "description": "Relações emerge em Ontologia Relacional Universal"
+  },
+  {
+    "from": "relações",
+    "to": "intracao",
+    "name": "emerge em",
+    "description": "Relações emerge em Intra-ação (Barad)"
+  },
+  {
+    "from": "relações",
+    "to": "pratityasamutpada",
+    "name": "possibilita",
+    "description": "Relações possibilita Pratītyasamutpāda"
+  },
+  {
+    "from": "relações",
+    "to": "relacionalidade",
+    "name": "possibilita",
+    "description": "Relações possibilita Relacionalismo"
+  },
+  {
+    "from": "relações",
+    "to": "processo",
+    "name": "emerge em",
+    "description": "Relações emerge em Processo (Whitehead)"
+  },
+  {
+    "from": "relacionalidade",
+    "to": "ontologia",
+    "name": "emerge em",
+    "description": "Relacionalidade emerge em Ontologia Relacional Universal"
+  },
+  {
+    "from": "relacionalidade",
+    "to": "relações",
+    "name": "possibilita",
+    "description": "Relacionalidade possibilita Relações"
+  },
+  {
+    "from": "relacionalidade",
+    "to": "intracao",
+    "name": "emerge em",
+    "description": "Relacionalidade emerge em Intra-ação (Barad)"
+  },
+  {
+    "from": "relacionalidade",
+    "to": "ubuntu",
+    "name": "condiciona",
+    "description": "Relacionalidade condiciona Ubuntu"
+  },
+  {
+    "from": "relacionalidade",
+    "to": "pratityasamutpada",
+    "name": "possibilita",
+    "description": "Relacionalidade possibilita Pratītyasamutpāda"
+  },
+  {
+    "from": "propriedade",
+    "to": "commons",
+    "name": "emancipa-se via",
+    "description": "Propriedade emancipa-se via Commons"
+  },
+  {
+    "from": "propriedade",
+    "to": "despossessao",
+    "name": "emancipa-se via",
+    "description": "Propriedade emancipa-se via Despossessão"
+  },
+  {
+    "from": "propriedade",
+    "to": "acumulacaoprimitiva",
+    "name": "emancipa-se via",
+    "description": "Propriedade emancipa-se via Acumulação Primitiva"
+  },
+  {
+    "from": "propriedade",
+    "to": "extrativismo",
+    "name": "disputa",
+    "description": "Propriedade disputa Extrativismo"
+  },
+  {
+    "from": "propriedade",
+    "to": "terra",
+    "name": "resiste a",
+    "description": "Propriedade resiste a Terra"
+  },
+  {
+    "from": "pluralismo",
+    "to": "ontologia",
+    "name": "compõe",
+    "description": "Pluralismo compõe Ontologia Relacional Universal"
+  },
+  {
+    "from": "pluralismo",
+    "to": "cosmopolitica",
+    "name": "compõe",
+    "description": "Pluralismo compõe Cosmopolítica"
+  },
+  {
+    "from": "pluralismo",
+    "to": "indigena",
+    "name": "compõe",
+    "description": "Pluralismo compõe Pensamento Indígena"
+  },
+  {
+    "from": "pluralismo",
+    "to": "relacionalidade",
+    "name": "configura-se em",
+    "description": "Pluralismo configura-se em Relacionalismo"
+  },
+  {
+    "from": "pluralismo",
+    "to": "multiplicidade",
+    "name": "compõe",
+    "description": "Pluralismo compõe Multiplicidade Sem Fusão"
+  },
+  {
+    "from": "Pachamama",
+    "to": "terra",
+    "name": "articula-se com",
+    "description": "Pachamama articula-se com Terra"
+  },
+  {
+    "from": "Pachamama",
+    "to": "direitos da natureza",
+    "name": "constitui",
+    "description": "Pachamama constitui Direitos da Natureza"
+  },
+  {
+    "from": "Pachamama",
+    "to": "indigena",
+    "name": "compõe",
+    "description": "Pachamama compõe Pensamento Indígena"
+  },
+  {
+    "from": "Pachamama",
+    "to": "buen vivir",
+    "name": "constitui",
+    "description": "Pachamama constitui Buen Vivir"
+  },
+  {
+    "from": "Pachamama",
+    "to": "cosmopolitica",
+    "name": "compõe",
+    "description": "Pachamama compõe Cosmopolítica"
+  },
+  {
+    "from": "neurociência",
+    "to": "consciência",
+    "name": "aprende de",
+    "description": "Neurociência aprende de Consciência"
+  },
+  {
+    "from": "neurociência",
+    "to": "processo",
+    "name": "aprende de",
+    "description": "Neurociência aprende de Processo (Whitehead)"
+  },
+  {
+    "from": "neurociência",
+    "to": "holobionte",
+    "name": "informa",
+    "description": "Neurociência informa Holobionte"
+  },
+  {
+    "from": "neurociência",
+    "to": "afeto",
+    "name": "aprende de",
+    "description": "Neurociência aprende de Afeto Spinozista"
+  },
+  {
+    "from": "nagarjuna",
+    "to": "madhyamaka",
+    "name": "possibilita",
+    "description": "Nāgārjuna possibilita Madhyamaka"
+  },
+  {
+    "from": "nagarjuna",
+    "to": "sunyata",
+    "name": "possibilita",
+    "description": "Nāgārjuna possibilita Śūnyatā (Vacuidade)"
+  },
+  {
+    "from": "nagarjuna",
+    "to": "budismo",
+    "name": "possibilita",
+    "description": "Nāgārjuna possibilita Budismo"
+  },
+  {
+    "from": "nagarjuna",
+    "to": "vazio",
+    "name": "possibilita",
+    "description": "Nāgārjuna possibilita Vazio Que Povoa"
+  },
+  {
+    "from": "nagarjuna",
+    "to": "ontologia",
+    "name": "emerge em",
+    "description": "Nāgārjuna emerge em Ontologia Relacional Universal"
+  },
+  {
+    "from": "democracia",
+    "to": "assembleia",
+    "name": "resiste a",
+    "description": "Democracia resiste a Assembleias"
+  },
+  {
+    "from": "democracia",
+    "to": "confederalismo",
+    "name": "emancipa-se via",
+    "description": "Democracia emancipa-se via Confederalismo Democrático"
+  },
+  {
+    "from": "democracia",
+    "to": "governança",
+    "name": "emancipa-se via",
+    "description": "Democracia emancipa-se via Governança"
+  },
+  {
+    "from": "democracia",
+    "to": "política",
+    "name": "emancipa-se via",
+    "description": "Democracia emancipa-se via Política"
+  },
+  {
+    "from": "democracia",
+    "to": "pratica",
+    "name": "resiste a",
+    "description": "Democracia resiste a Práxis Institucional"
+  },
+  {
+    "from": "descentralização",
+    "to": "heterarquia",
+    "name": "emancipa-se via",
+    "description": "Descentralização emancipa-se via Heterarquia"
+  },
+  {
+    "from": "descentralização",
+    "to": "agencia",
+    "name": "emancipa-se via",
+    "description": "Descentralização emancipa-se via Agência"
+  },
+  {
+    "from": "descentralização",
+    "to": "confederalismo",
+    "name": "emancipa-se via",
+    "description": "Descentralização emancipa-se via Confederalismo Democrático"
+  },
+  {
+    "from": "descentralização",
+    "to": "protocoloaberto",
+    "name": "resiste a",
+    "description": "Descentralização resiste a Protocolos Abertos"
+  },
+  {
+    "from": "descentralização",
+    "to": "governança",
+    "name": "emancipa-se via",
+    "description": "Descentralização emancipa-se via Governança"
+  },
+  {
+    "from": "desigualdade",
+    "to": "capitalismo",
+    "name": "emancipa-se via",
+    "description": "Desigualdade emancipa-se via Capitalismo"
+  },
+  {
+    "from": "desigualdade",
+    "to": "acumulacaoprimitiva",
+    "name": "emancipa-se via",
+    "description": "Desigualdade emancipa-se via Acumulação Primitiva"
+  },
+  {
+    "from": "desigualdade",
+    "to": "extrativismo",
+    "name": "disputa",
+    "description": "Desigualdade disputa Extrativismo"
+  },
+  {
+    "from": "desigualdade",
+    "to": "justiça",
+    "name": "disputa",
+    "description": "Desigualdade disputa Justiça"
+  },
+  {
+    "from": "desigualdade",
+    "to": "classe",
+    "name": "emancipa-se via",
+    "description": "Desigualdade emancipa-se via Classe"
+  },
+  {
+    "from": "emaranhamento",
+    "to": "física quântica",
+    "name": "possibilita",
+    "description": "Emaranhamento Quântico possibilita Física Quântica"
+  },
+  {
+    "from": "emaranhamento",
+    "to": "não-localidade",
+    "name": "possibilita",
+    "description": "Emaranhamento Quântico possibilita Não-Localidade"
+  },
+  {
+    "from": "emaranhamento",
+    "to": "relações",
+    "name": "possibilita",
+    "description": "Emaranhamento Quântico possibilita Relações"
+  },
+  {
+    "from": "emaranhamento",
+    "to": "RQM",
+    "name": "possibilita",
+    "description": "Emaranhamento Quântico possibilita RQM (Relational Quantum Mechanics)"
+  },
+  {
+    "from": "emaranhamento",
+    "to": "ontologia",
+    "name": "emerge em",
+    "description": "Emaranhamento Quântico emerge em Ontologia Relacional Universal"
+  },
+  {
+    "from": "epistemologia",
+    "to": "conhecimento",
+    "name": "problematiza",
+    "description": "Epistemologia problematiza Conhecimento"
+  },
+  {
+    "from": "epistemologia",
+    "to": "ontologia",
+    "name": "aprende de",
+    "description": "Epistemologia aprende de Ontologia Relacional Universal"
+  },
+  {
+    "from": "epistemologia",
+    "to": "crítica",
+    "name": "problematiza",
+    "description": "Epistemologia problematiza Crítica"
+  },
+  {
+    "from": "epistemologia",
+    "to": "pratica",
+    "name": "reconhece",
+    "description": "Epistemologia reconhece Práxis Institucional"
+  },
+  {
+    "from": "escala",
+    "to": "processo",
+    "name": "compõe",
+    "description": "Escala compõe Processo (Whitehead)"
+  },
+  {
+    "from": "escala",
+    "to": "emergência",
+    "name": "compõe",
+    "description": "Escala compõe Emergência"
+  },
+  {
+    "from": "escala",
+    "to": "holobionte",
+    "name": "compõe",
+    "description": "Escala compõe Holobionte"
+  },
+  {
+    "from": "escala",
+    "to": "limite",
+    "name": "compõe",
+    "description": "Escala compõe Limite"
+  },
+  {
+    "from": "espaço-tempo",
+    "to": "tempo",
+    "name": "possibilita",
+    "description": "Espaço-Tempo possibilita Tempo Entrelaçado"
+  },
+  {
+    "from": "espaço-tempo",
+    "to": "física quântica",
+    "name": "possibilita",
+    "description": "Espaço-Tempo possibilita Física Quântica"
+  },
+  {
+    "from": "espaço-tempo",
+    "to": "processo",
+    "name": "emerge em",
+    "description": "Espaço-Tempo emerge em Processo (Whitehead)"
+  },
+  {
+    "from": "espaço-tempo",
+    "to": "relações",
+    "name": "possibilita",
+    "description": "Espaço-Tempo possibilita Relações"
+  },
+  {
+    "from": "fatos relativos",
+    "to": "RQM",
+    "name": "possibilita",
+    "description": "Fatos Relativos possibilita RQM (Relational Quantum Mechanics)"
+  },
+  {
+    "from": "fatos relativos",
+    "to": "física quântica",
+    "name": "possibilita",
+    "description": "Fatos Relativos possibilita Física Quântica"
+  },
+  {
+    "from": "fatos relativos",
+    "to": "ontologia",
+    "name": "emerge em",
+    "description": "Fatos Relativos emerge em Ontologia Relacional Universal"
+  },
+  {
+    "from": "fatos relativos",
+    "to": "relacionalidade",
+    "name": "possibilita",
+    "description": "Fatos Relativos possibilita Relacionalismo"
+  },
+  {
+    "from": "fatos relativos",
+    "to": "anti-fundacionalismo",
+    "name": "possibilita",
+    "description": "Fatos Relativos possibilita Anti-Fundacionalismo"
+  },
+  {
+    "from": "feminismo",
+    "to": "gênero",
+    "name": "emancipa-se via",
+    "description": "Feminismo emancipa-se via Gênero"
+  },
+  {
+    "from": "feminismo",
+    "to": "performatividade",
+    "name": "emancipa-se via",
+    "description": "Feminismo emancipa-se via Performatividade"
+  },
+  {
+    "from": "feminismo",
+    "to": "vulnerabilidade",
+    "name": "emancipa-se via",
+    "description": "Feminismo emancipa-se via Vulnerabilidade"
+  },
+  {
+    "from": "feminismo",
+    "to": "cuidado",
+    "name": "organiza",
+    "description": "Feminismo organiza Ética do Cuidado"
+  },
+  {
+    "from": "feminismo",
+    "to": "reproducaosocial",
+    "name": "emancipa-se via",
+    "description": "Feminismo emancipa-se via Reprodução Social"
+  },
+  {
+    "from": "filosofia africana",
+    "to": "ubuntu",
+    "name": "estrutura",
+    "description": "Filosofia Africana estrutura Ubuntu"
+  },
+  {
+    "from": "filosofia africana",
+    "to": "ontologia",
+    "name": "compõe",
+    "description": "Filosofia Africana compõe Ontologia Relacional Universal"
+  },
+  {
+    "from": "filosofia africana",
+    "to": "indigena",
+    "name": "compõe",
+    "description": "Filosofia Africana compõe Pensamento Indígena"
+  },
+  {
+    "from": "filosofia africana",
+    "to": "descolonização",
+    "name": "constitui",
+    "description": "Filosofia Africana constitui Descolonização"
+  },
+  {
+    "from": "intra-ação",
+    "to": "intracao",
+    "name": "compõe",
+    "description": "Intra-ação compõe Intra-ação (Barad)"
+  },
+  {
+    "from": "intra-ação",
+    "to": "agencia",
+    "name": "compõe",
+    "description": "Intra-ação compõe Agência"
+  },
+  {
+    "from": "intra-ação",
+    "to": "performatividade",
+    "name": "compõe",
+    "description": "Intra-ação compõe Performatividade"
+  },
+  {
+    "from": "intra-ação",
+    "to": "ontologia",
+    "name": "compõe",
+    "description": "Intra-ação compõe Ontologia Relacional Universal"
+  },
+  {
+    "from": "intra-ação",
+    "to": "realismo agencial",
+    "name": "compõe",
+    "description": "Intra-ação compõe Realismo Agencial"
+  },
+  {
+    "from": "capitalismo",
+    "to": "acumulacaoprimitiva",
+    "name": "emancipa-se via",
+    "description": "Capitalismo emancipa-se via Acumulação Primitiva"
+  },
+  {
+    "from": "capitalismo",
+    "to": "extrativismo",
+    "name": "disputa",
+    "description": "Capitalismo disputa Extrativismo"
+  },
+  {
+    "from": "capitalismo",
+    "to": "mercadorias fictícias",
+    "name": "emancipa-se via",
+    "description": "Capitalismo emancipa-se via Mercadorias Fictícias"
+  },
+  {
+    "from": "capitalismo",
+    "to": "despossessao",
+    "name": "emancipa-se via",
+    "description": "Capitalismo emancipa-se via Despossessão"
+  },
+  {
+    "from": "capitalismo",
+    "to": "economia",
+    "name": "emancipa-se via",
+    "description": "Capitalismo emancipa-se via Economia"
+  },
+  {
+    "from": "confederalismo",
+    "to": "assembleia",
+    "name": "resiste a",
+    "description": "Confederalismo Democrático resiste a Assembleias"
+  },
+  {
+    "from": "confederalismo",
+    "to": "descentralização",
+    "name": "emancipa-se via",
+    "description": "Confederalismo Democrático emancipa-se via Descentralização"
+  },
+  {
+    "from": "confederalismo",
+    "to": "democracia",
+    "name": "emancipa-se via",
+    "description": "Confederalismo Democrático emancipa-se via Democracia"
+  },
+  {
+    "from": "confederalismo",
+    "to": "municipalismo",
+    "name": "emancipa-se via",
+    "description": "Confederalismo Democrático emancipa-se via Municipalismo"
+  },
+  {
+    "from": "confederalismo",
+    "to": "Rojava",
+    "name": "mobiliza",
+    "description": "Confederalismo Democrático mobiliza Rojava"
+  },
+  {
+    "from": "cosmopolitica",
+    "to": "não-humanos",
+    "name": "emancipa-se via",
+    "description": "Cosmopolítica emancipa-se via Não-Humanos"
+  },
+  {
+    "from": "cosmopolitica",
+    "to": "assembleia",
+    "name": "resiste a",
+    "description": "Cosmopolítica resiste a Assembleias"
+  },
+  {
+    "from": "cosmopolitica",
+    "to": "pluralismo",
+    "name": "emancipa-se via",
+    "description": "Cosmopolítica emancipa-se via Pluralismo"
+  },
+  {
+    "from": "anti-fundacionalismo",
+    "to": "recursao",
+    "name": "possibilita",
+    "description": "Anti-Fundacionalismo possibilita Recursão Sem Fundamento"
+  },
+  {
+    "from": "anti-fundacionalismo",
+    "to": "RQM",
+    "name": "possibilita",
+    "description": "Anti-Fundacionalismo possibilita RQM (Relational Quantum Mechanics)"
+  },
+  {
+    "from": "anti-fundacionalismo",
+    "to": "ontologia",
+    "name": "emerge em",
+    "description": "Anti-Fundacionalismo emerge em Ontologia Relacional Universal"
+  },
+  {
+    "from": "anti-fundacionalismo",
+    "to": "vazio",
+    "name": "possibilita",
+    "description": "Anti-Fundacionalismo possibilita Vazio Que Povoa"
+  },
+  {
+    "from": "anti-fundacionalismo",
+    "to": "madhyamaka",
+    "name": "possibilita",
+    "description": "Anti-Fundacionalismo possibilita Madhyamaka"
+  },
+  {
+    "from": "antropocentrismo",
+    "to": "não-humanos",
+    "name": "radicaliza-se em",
+    "description": "Antropocentrismo radicaliza-se em Não-Humanos"
+  },
+  {
+    "from": "antropocentrismo",
+    "to": "multiespécies",
+    "name": "resiste a",
+    "description": "Antropocentrismo resiste a Multiespécies"
+  },
+  {
+    "from": "antropocentrismo",
+    "to": "direitos da natureza",
+    "name": "disputa",
+    "description": "Antropocentrismo disputa Direitos da Natureza"
+  },
+  {
+    "from": "antropocentrismo",
+    "to": "cosmopolitica",
+    "name": "resiste a",
+    "description": "Antropocentrismo resiste a Cosmopolítica"
+  },
+  {
+    "from": "antropocentrismo",
+    "to": "holobionte",
+    "name": "resiste a",
+    "description": "Antropocentrismo resiste a Holobionte"
+  },
+  {
+    "from": "gênero",
+    "to": "performatividade",
+    "name": "compõe",
+    "description": "Gênero compõe Performatividade"
+  },
+  {
+    "from": "gênero",
+    "to": "feminismo",
+    "name": "constitui",
+    "description": "Gênero constitui Feminismo"
+  },
+  {
+    "from": "gênero",
+    "to": "futuridadequeer",
+    "name": "constitui",
+    "description": "Gênero constitui Futuridade Queer"
+  },
+  {
+    "from": "gênero",
+    "to": "holobionte",
+    "name": "compõe",
+    "description": "Gênero compõe Holobionte"
+  },
+  {
+    "from": "gênero",
+    "to": "sujeito",
+    "name": "compõe",
+    "description": "Gênero compõe Sujeito"
+  },
+  {
+    "from": "não-humanos",
+    "to": "multiespécies",
+    "name": "articula-se com",
+    "description": "Não-Humanos articula-se com Multiespécies"
+  },
+  {
+    "from": "não-humanos",
+    "to": "actantes",
+    "name": "compõe",
+    "description": "Não-Humanos compõe Actantes"
+  },
+  {
+    "from": "não-humanos",
+    "to": "cosmopolitica",
+    "name": "compõe",
+    "description": "Não-Humanos compõe Cosmopolítica"
+  },
+  {
+    "from": "não-humanos",
+    "to": "direitos da natureza",
+    "name": "constitui",
+    "description": "Não-Humanos constitui Direitos da Natureza"
+  },
+  {
+    "from": "não-humanos",
+    "to": "agencia",
+    "name": "compõe",
+    "description": "Não-Humanos compõe Agência"
+  },
+  {
+    "from": "não-localidade",
+    "to": "emaranhamento",
+    "name": "possibilita",
+    "description": "Não-Localidade possibilita Emaranhamento Quântico"
+  },
+  {
+    "from": "não-localidade",
+    "to": "física quântica",
+    "name": "possibilita",
+    "description": "Não-Localidade possibilita Física Quântica"
+  },
+  {
+    "from": "não-localidade",
+    "to": "relações",
+    "name": "possibilita",
+    "description": "Não-Localidade possibilita Relações"
+  },
+  {
+    "from": "não-localidade",
+    "to": "RQM",
+    "name": "possibilita",
+    "description": "Não-Localidade possibilita RQM (Relational Quantum Mechanics)"
+  },
+  {
+    "from": "multiespécies",
+    "to": "holobionte",
+    "name": "simbiosa com",
+    "description": "Multiespécies simbiosa com Holobionte"
+  },
+  {
+    "from": "multiespécies",
+    "to": "simbiose",
+    "name": "simbiosa com",
+    "description": "Multiespécies simbiosa com Simbiose"
+  },
+  {
+    "from": "multiespécies",
+    "to": "não-humanos",
+    "name": "simbiosa com",
+    "description": "Multiespécies simbiosa com Não-Humanos"
+  },
+  {
+    "from": "multiespécies",
+    "to": "espécies companheiras",
+    "name": "flui em",
+    "description": "Multiespécies flui em Espécies Companheiras"
+  },
+  {
+    "from": "multiespécies",
+    "to": "ecologia",
+    "name": "flui em",
+    "description": "Multiespécies flui em Ecologia"
+  },
+  {
+    "from": "relacionalidade",
+    "to": "RQM",
+    "name": "possibilita",
+    "description": "Relacionalismo possibilita RQM (Relational Quantum Mechanics)"
+  },
+  {
+    "from": "epistemicídio",
+    "to": "descolonização",
+    "name": "emancipa-se via",
+    "description": "Epistemicídio emancipa-se via Descolonização"
+  },
+  {
+    "from": "epistemicídio",
+    "to": "indigena",
+    "name": "emancipa-se via",
+    "description": "Epistemicídio emancipa-se via Pensamento Indígena"
+  },
+  {
+    "from": "epistemicídio",
+    "to": "violência simbólica",
+    "name": "emancipa-se via",
+    "description": "Epistemicídio emancipa-se via Violência Simbólica"
+  },
+  {
+    "from": "epistemicídio",
+    "to": "conhecimento",
+    "name": "resiste a",
+    "description": "Epistemicídio resiste a Conhecimento"
+  },
+  {
+    "from": "realismo agencial",
+    "to": "intracao",
+    "name": "compõe",
+    "description": "Realismo Agencial compõe Intra-ação (Barad)"
+  },
+  {
+    "from": "realismo agencial",
+    "to": "intra-ação",
+    "name": "compõe",
+    "description": "Realismo Agencial compõe Intra-ação"
+  },
+  {
+    "from": "realismo agencial",
+    "to": "performatividade",
+    "name": "compõe",
+    "description": "Realismo Agencial compõe Performatividade"
+  },
+  {
+    "from": "realismo agencial",
+    "to": "ontologia",
+    "name": "compõe",
+    "description": "Realismo Agencial compõe Ontologia Relacional Universal"
+  },
+  {
+    "from": "realismo agencial",
+    "to": "física quântica",
+    "name": "configura-se em",
+    "description": "Realismo Agencial configura-se em Física Quântica"
+  },
+  {
+    "from": "liberdade",
+    "to": "agencia",
+    "name": "compartilha",
+    "description": "Liberdade compartilha Agência"
+  },
+  {
+    "from": "liberdade",
+    "to": "vulnerabilidade",
+    "name": "respeita",
+    "description": "Liberdade respeita Vulnerabilidade"
+  },
+  {
+    "from": "liberdade",
+    "to": "autonomia",
+    "name": "respeita",
+    "description": "Liberdade respeita Autonomia"
+  },
+  {
+    "from": "liberdade",
+    "to": "responsabilidade",
+    "name": "reconhece",
+    "description": "Liberdade reconhece Responsabilidade"
+  },
+  {
+    "from": "memoriacoletiva",
+    "to": "consciência coletiva",
+    "name": "sedimenta-se em",
+    "description": "Memória Coletiva sedimenta-se em Consciência Coletiva"
+  },
+  {
+    "from": "mercadorias fictícias",
+    "to": "capitalismo",
+    "name": "emancipa-se via",
+    "description": "Mercadorias Fictícias emancipa-se via Capitalismo"
+  },
+  {
+    "from": "mercadorias fictícias",
+    "to": "economia",
+    "name": "emancipa-se via",
+    "description": "Mercadorias Fictícias emancipa-se via Economia"
+  },
+  {
+    "from": "mercadorias fictícias",
+    "to": "terra",
+    "name": "resiste a",
+    "description": "Mercadorias Fictícias resiste a Terra"
+  },
+  {
+    "from": "mercadorias fictícias",
+    "to": "acumulacaoprimitiva",
+    "name": "emancipa-se via",
+    "description": "Mercadorias Fictícias emancipa-se via Acumulação Primitiva"
+  },
+  {
+    "from": "riz∅ma",
+    "to": "heterarquia",
+    "name": "constitui",
+    "description": "Rizoma constitui Heterarquia"
+  },
+  {
+    "from": "consciência coletiva",
+    "to": "consciência",
+    "name": "compõe",
+    "description": "Consciência Coletiva compõe Consciência"
+  },
+  {
+    "from": "consciência coletiva",
+    "to": "transindividual",
+    "name": "compõe",
+    "description": "Consciência Coletiva compõe Transindividual"
+  },
+  {
+    "from": "consciência coletiva",
+    "to": "memoriacoletiva",
+    "name": "constitui",
+    "description": "Consciência Coletiva constitui Memória Coletiva"
+  },
+  {
+    "from": "consciência coletiva",
+    "to": "assembleia",
+    "name": "entrelaça-se com",
+    "description": "Consciência Coletiva entrelaça-se com Assembleias"
+  },
+  {
+    "from": "consciência coletiva",
+    "to": "sujeito",
+    "name": "compõe",
+    "description": "Consciência Coletiva compõe Sujeito"
+  },
+  {
+    "from": "terra",
+    "to": "Pachamama",
+    "name": "simbiosa com",
+    "description": "Terra simbiosa com Pachamama"
+  },
+  {
+    "from": "terra",
+    "to": "direitos da natureza",
+    "name": "circula em",
+    "description": "Terra circula em Direitos da Natureza"
+  },
+  {
+    "from": "terra",
+    "to": "ecologia",
+    "name": "flui em",
+    "description": "Terra flui em Ecologia"
+  },
+  {
+    "from": "ancestralidade",
+    "to": "whakapapa",
+    "name": "sedimenta-se em",
+    "description": "Ancestralidade sedimenta-se em Whakapapa"
+  },
+  {
+    "from": "cooperativa",
+    "to": "governança",
+    "name": "efetiva",
+    "description": "Cooperativas efetiva Governança"
+  },
+  {
+    "from": "autonomia",
+    "to": "agencia",
+    "name": "emancipa-se via",
+    "description": "Autonomia emancipa-se via Agência"
+  },
+  {
+    "from": "autonomia",
+    "to": "liberdade",
+    "name": "disputa",
+    "description": "Autonomia disputa Liberdade"
+  },
+  {
+    "from": "autonomia",
+    "to": "pedagogiaautonomia",
+    "name": "radicaliza-se em",
+    "description": "Autonomia radicaliza-se em Pedagogia da Autonomia"
+  },
+  {
+    "from": "autonomia",
+    "to": "autogestão",
+    "name": "mobiliza",
+    "description": "Autonomia mobiliza Autogestão"
+  },
+  {
+    "from": "autonomia",
+    "to": "municipalismo",
+    "name": "emancipa-se via",
+    "description": "Autonomia emancipa-se via Municipalismo"
+  },
+  {
+    "from": "espécies companheiras",
+    "to": "multiespécies",
+    "name": "flui em",
+    "description": "Espécies Companheiras flui em Multiespécies"
+  },
+  {
+    "from": "espécies companheiras",
+    "to": "holobionte",
+    "name": "simbiosa com",
+    "description": "Espécies Companheiras simbiosa com Holobionte"
+  },
+  {
+    "from": "espécies companheiras",
+    "to": "simbiose",
+    "name": "simbiosa com",
+    "description": "Espécies Companheiras simbiosa com Simbiose"
+  },
+  {
+    "from": "espécies companheiras",
+    "to": "não-humanos",
+    "name": "simbiosa com",
+    "description": "Espécies Companheiras simbiosa com Não-Humanos"
+  },
+  {
+    "from": "Rojava",
+    "to": "confederalismo",
+    "name": "efetiva",
+    "description": "Rojava efetiva Confederalismo Democrático"
+  },
+  {
+    "from": "Rojava",
+    "to": "municipalismo",
+    "name": "efetiva",
+    "description": "Rojava efetiva Municipalismo"
+  },
+  {
+    "from": "Rojava",
+    "to": "assembleia",
+    "name": "experimenta",
+    "description": "Rojava experimenta Assembleias"
+  },
+  {
+    "from": "Rojava",
+    "to": "democracia",
+    "name": "efetiva",
+    "description": "Rojava efetiva Democracia"
+  },
+  {
+    "from": "municipalismo",
+    "to": "confederalismo",
+    "name": "emancipa-se via",
+    "description": "Municipalismo emancipa-se via Confederalismo Democrático"
+  },
+  {
+    "from": "municipalismo",
+    "to": "assembleia",
+    "name": "resiste a",
+    "description": "Municipalismo resiste a Assembleias"
+  },
+  {
+    "from": "municipalismo",
+    "to": "democracia",
+    "name": "emancipa-se via",
+    "description": "Municipalismo emancipa-se via Democracia"
+  },
+  {
+    "from": "municipalismo",
+    "to": "descentralização",
+    "name": "emancipa-se via",
+    "description": "Municipalismo emancipa-se via Descentralização"
+  },
+  {
+    "from": "actantes",
+    "to": "não-humanos",
+    "name": "compõe",
+    "description": "Actantes compõe Não-Humanos"
+  },
+  {
+    "from": "actantes",
+    "to": "agencia",
+    "name": "compõe",
+    "description": "Actantes compõe Agência"
+  },
+  {
+    "from": "actantes",
+    "to": "ator-rede",
+    "name": "compõe",
+    "description": "Actantes compõe Teoria Ator-Rede"
+  },
+  {
+    "from": "actantes",
+    "to": "cosmopolitica",
+    "name": "compõe",
+    "description": "Actantes compõe Cosmopolítica"
+  },
+  {
+    "from": "whakapapa",
+    "to": "Māori",
+    "name": "aprende de",
+    "description": "Whakapapa aprende de Māori"
+  },
+  {
+    "from": "whakapapa",
+    "to": "indigena",
+    "name": "aprende de",
+    "description": "Whakapapa aprende de Pensamento Indígena"
+  },
+  {
+    "from": "whakapapa",
+    "to": "conhecimento",
+    "name": "problematiza",
+    "description": "Whakapapa problematiza Conhecimento"
+  },
+  {
+    "from": "whakapapa",
+    "to": "ancestralidade",
+    "name": "aprende de",
+    "description": "Whakapapa aprende de Ancestralidade"
+  },
+  {
+    "from": "whakapapa",
+    "to": "ontologia",
+    "name": "aprende de",
+    "description": "Whakapapa aprende de Ontologia Relacional Universal"
+  },
+  {
+    "from": "autogestão",
+    "to": "cooperativa",
+    "name": "implementa",
+    "description": "Autogestão implementa Cooperativas"
+  },
+  {
+    "from": "autogestão",
+    "to": "assembleia",
+    "name": "experimenta",
+    "description": "Autogestão experimenta Assembleias"
+  },
+  {
+    "from": "autogestão",
+    "to": "autonomia",
+    "name": "efetiva",
+    "description": "Autogestão efetiva Autonomia"
+  },
+  {
+    "from": "autogestão",
+    "to": "pratica",
+    "name": "experimenta",
+    "description": "Autogestão experimenta Práxis Institucional"
+  },
+  {
+    "from": "ocasioes",
+    "to": "ocasiões",
+    "name": "possibilita",
+    "description": "Ocasiões de Experiência possibilita Ocasiões"
+  },
+  {
+    "from": "emergência",
+    "to": "processo",
+    "name": "compõe",
+    "description": "Emergência compõe Processo (Whitehead)"
+  },
+  {
+    "from": "emergência",
+    "to": "escala",
+    "name": "compõe",
+    "description": "Emergência compõe Escala"
+  },
+  {
+    "from": "emergência",
+    "to": "holobionte",
+    "name": "compõe",
+    "description": "Emergência compõe Holobionte"
+  },
+  {
+    "from": "emergência",
+    "to": "consciência coletiva",
+    "name": "compõe",
+    "description": "Emergência compõe Consciência Coletiva"
+  },
+  {
+    "from": "origem dependente",
+    "to": "pratityasamutpada",
+    "name": "possibilita",
+    "description": "Origem Dependente possibilita Pratītyasamutpāda"
+  },
+  {
+    "from": "origem dependente",
+    "to": "budismo",
+    "name": "possibilita",
+    "description": "Origem Dependente possibilita Budismo"
+  },
+  {
+    "from": "origem dependente",
+    "to": "ontologia",
+    "name": "emerge em",
+    "description": "Origem Dependente emerge em Ontologia Relacional Universal"
+  },
+  {
+    "from": "origem dependente",
+    "to": "relações",
+    "name": "possibilita",
+    "description": "Origem Dependente possibilita Relações"
+  },
+  {
+    "from": "ator-rede",
+    "to": "actantes",
+    "name": "compõe",
+    "description": "Teoria Ator-Rede compõe Actantes"
+  },
+  {
+    "from": "ator-rede",
+    "to": "não-humanos",
+    "name": "compõe",
+    "description": "Teoria Ator-Rede compõe Não-Humanos"
+  },
+  {
+    "from": "ator-rede",
+    "to": "agencia",
+    "name": "compõe",
+    "description": "Teoria Ator-Rede compõe Agência"
+  },
+  {
+    "from": "ator-rede",
+    "to": "redes",
+    "name": "constitui",
+    "description": "Teoria Ator-Rede constitui Redes"
+  },
+  {
+    "from": "virtualidade",
+    "to": "vazio",
+    "name": "configura-se em",
+    "description": "Virtualidade configura-se em Vazio Que Povoa"
+  },
+  {
+    "from": "virtualidade",
+    "to": "vácuo",
+    "name": "configura-se em",
+    "description": "Virtualidade configura-se em Vácuo Quântico"
+  },
+  {
+    "from": "virtualidade",
+    "to": "devir",
+    "name": "compõe",
+    "description": "Virtualidade compõe Devir (Deleuze)"
+  },
+  {
+    "from": "classe",
+    "to": "capitalismo",
+    "name": "emancipa-se via",
+    "description": "Classe emancipa-se via Capitalismo"
+  },
+  {
+    "from": "classe",
+    "to": "desigualdade",
+    "name": "emancipa-se via",
+    "description": "Classe emancipa-se via Desigualdade"
+  },
+  {
+    "from": "classe",
+    "to": "acumulacaoprimitiva",
+    "name": "emancipa-se via",
+    "description": "Classe emancipa-se via Acumulação Primitiva"
+  },
+  {
+    "from": "classe",
+    "to": "política",
+    "name": "emancipa-se via",
+    "description": "Classe emancipa-se via Política"
+  },
+  {
+    "from": "redes",
+    "to": "redesmiceliais",
+    "name": "experimenta",
+    "description": "Redes experimenta Redes Micelianas"
+  },
+  {
+    "from": "redes",
+    "to": "riz∅ma",
+    "name": "experimenta",
+    "description": "Redes experimenta Rizoma"
+  },
+  {
+    "from": "redes",
+    "to": "descentralização",
+    "name": "efetiva",
+    "description": "Redes efetiva Descentralização"
+  },
+  {
+    "from": "redes",
+    "to": "protocoloaberto",
+    "name": "experimenta",
+    "description": "Redes experimenta Protocolos Abertos"
+  },
+  {
+    "from": "biodiversidade",
+    "to": "ecologia",
+    "name": "flui em",
+    "description": "Biodiversidade flui em Ecologia"
+  },
+  {
+    "from": "biodiversidade",
+    "to": "holobionte",
+    "name": "simbiosa com",
+    "description": "Biodiversidade simbiosa com Holobionte"
+  },
+  {
+    "from": "biodiversidade",
+    "to": "simbiose",
+    "name": "simbiosa com",
+    "description": "Biodiversidade simbiosa com Simbiose"
+  },
+  {
+    "from": "biodiversidade",
+    "to": "multiespécies",
+    "name": "flui em",
+    "description": "Biodiversidade flui em Multiespécies"
+  },
+  {
+    "from": "loop",
+    "to": "recursao",
+    "name": "possibilita",
+    "description": "Loop possibilita Recursão Sem Fundamento"
+  },
+  {
+    "from": "loop",
+    "to": "processo",
+    "name": "emerge em",
+    "description": "Loop emerge em Processo (Whitehead)"
+  },
+  {
+    "from": "loop",
+    "to": "espaço-tempo",
+    "name": "possibilita",
+    "description": "Loop possibilita Espaço-Tempo"
+  },
+  {
+    "from": "ocasiões",
+    "to": "ocasioes",
+    "name": "possibilita",
+    "description": "Ocasiões possibilita Ocasiões de Experiência"
+  },
+  {
+    "from": "ocasiões",
+    "to": "processo",
+    "name": "emerge em",
+    "description": "Ocasiões emerge em Processo (Whitehead)"
+  },
+  {
+    "from": "ocasiões",
+    "to": "tempo",
+    "name": "possibilita",
+    "description": "Ocasiões possibilita Tempo Entrelaçado"
+  },
+  {
+    "from": "ocasiões",
+    "to": "evento",
+    "name": "possibilita",
+    "description": "Ocasiões possibilita Evento (Badiou)"
+  },
+  {
+    "from": "ação",
+    "to": "agencia",
+    "name": "compõe",
+    "description": "Ação compõe Agência"
+  },
+  {
+    "from": "ação",
+    "to": "pratica",
+    "name": "entrelaça-se com",
+    "description": "Ação entrelaça-se com Práxis Institucional"
+  },
+  {
+    "from": "ação",
+    "to": "performatividade",
+    "name": "compõe",
+    "description": "Ação compõe Performatividade"
+  },
+  {
+    "from": "ação",
+    "to": "evento",
+    "name": "constitui",
+    "description": "Ação constitui Evento (Badiou)"
+  },
+  {
+    "from": "alteridade",
+    "to": "sujeito",
+    "name": "compartilha",
+    "description": "Alteridade compartilha Sujeito"
+  },
+  {
+    "from": "alteridade",
+    "to": "ética",
+    "name": "reconhece",
+    "description": "Alteridade reconhece Ética"
+  },
+  {
+    "from": "alteridade",
+    "to": "intersubjetividade",
+    "name": "compartilha",
+    "description": "Alteridade compartilha Intersubjetividade"
+  },
+  {
+    "from": "alteridade",
+    "to": "vulnerabilidade",
+    "name": "respeita",
+    "description": "Alteridade respeita Vulnerabilidade"
+  },
+  {
+    "from": "alternativas",
+    "to": "imaginação",
+    "name": "resiste a",
+    "description": "Alternativas resiste a Imaginação"
+  },
+  {
+    "from": "alternativas",
+    "to": "capitalismo",
+    "name": "emancipa-se via",
+    "description": "Alternativas emancipa-se via Capitalismo"
+  },
+  {
+    "from": "alternativas",
+    "to": "commons",
+    "name": "emancipa-se via",
+    "description": "Alternativas emancipa-se via Commons"
+  },
+  {
+    "from": "alternativas",
+    "to": "decrescimento",
+    "name": "emancipa-se via",
+    "description": "Alternativas emancipa-se via Decrescimento"
+  },
+  {
+    "from": "alternativas",
+    "to": "buen vivir",
+    "name": "emancipa-se via",
+    "description": "Alternativas emancipa-se via Buen Vivir"
+  },
+  {
+    "from": "apropriação",
+    "to": "extrativismo",
+    "name": "disputa",
+    "description": "Apropriação disputa Extrativismo"
+  },
+  {
+    "from": "apropriação",
+    "to": "propriedade",
+    "name": "emancipa-se via",
+    "description": "Apropriação emancipa-se via Propriedade"
+  },
+  {
+    "from": "apropriação",
+    "to": "despossessao",
+    "name": "emancipa-se via",
+    "description": "Apropriação emancipa-se via Despossessão"
+  },
+  {
+    "from": "apropriação",
+    "to": "capitalismo",
+    "name": "emancipa-se via",
+    "description": "Apropriação emancipa-se via Capitalismo"
+  },
+  {
+    "from": "arqueologia",
+    "to": "história",
+    "name": "aprende de",
+    "description": "Arqueologia aprende de História"
+  },
+  {
+    "from": "arqueologia",
+    "to": "conhecimento",
+    "name": "problematiza",
+    "description": "Arqueologia problematiza Conhecimento"
+  },
+  {
+    "from": "arqueologia",
+    "to": "crítica",
+    "name": "problematiza",
+    "description": "Arqueologia problematiza Crítica"
+  },
+  {
+    "from": "arqueologia",
+    "to": "ancestralidade",
+    "name": "aprende de",
+    "description": "Arqueologia aprende de Ancestralidade"
+  },
+  {
+    "from": "autopoiese",
+    "to": "processo",
+    "name": "compõe",
+    "description": "Autopoiese compõe Processo (Whitehead)"
+  },
+  {
+    "from": "autopoiese",
+    "to": "autonomia",
+    "name": "constitui",
+    "description": "Autopoiese constitui Autonomia"
+  },
+  {
+    "from": "autopoiese",
+    "to": "emergência",
+    "name": "compõe",
+    "description": "Autopoiese compõe Emergência"
+  },
+  {
+    "from": "autopoiese",
+    "to": "sistemas",
+    "name": "compõe",
+    "description": "Autopoiese compõe Sistemas"
+  },
+  {
+    "from": "barcelona",
+    "to": "municipalismo",
+    "name": "efetiva",
+    "description": "Barcelona efetiva Municipalismo"
+  },
+  {
+    "from": "barcelona",
+    "to": "commons",
+    "name": "efetiva",
+    "description": "Barcelona efetiva Commons"
+  },
+  {
+    "from": "barcelona",
+    "to": "tecnologiaconvivial",
+    "name": "experimenta",
+    "description": "Barcelona experimenta Tecnologias Conviviais"
+  },
+  {
+    "from": "barcelona",
+    "to": "governança",
+    "name": "efetiva",
+    "description": "Barcelona efetiva Governança"
+  },
+  {
+    "from": "Bell",
+    "to": "não-localidade",
+    "name": "possibilita",
+    "description": "Teorema de Bell possibilita Não-Localidade"
+  },
+  {
+    "from": "Bell",
+    "to": "emaranhamento",
+    "name": "possibilita",
+    "description": "Teorema de Bell possibilita Emaranhamento Quântico"
+  },
+  {
+    "from": "Bell",
+    "to": "física quântica",
+    "name": "possibilita",
+    "description": "Teorema de Bell possibilita Física Quântica"
+  },
+  {
+    "from": "campo",
+    "to": "vazio",
+    "name": "possibilita",
+    "description": "Campo possibilita Vazio Que Povoa"
+  },
+  {
+    "from": "campo",
+    "to": "física quântica",
+    "name": "possibilita",
+    "description": "Campo possibilita Física Quântica"
+  },
+  {
+    "from": "campo",
+    "to": "poder",
+    "name": "possibilita",
+    "description": "Campo possibilita Poder"
+  },
+  {
+    "from": "caos",
+    "to": "emergência",
+    "name": "compõe",
+    "description": "Caos compõe Emergência"
+  },
+  {
+    "from": "caos",
+    "to": "ordem",
+    "name": "compõe",
+    "description": "Caos compõe Ordem"
+  },
+  {
+    "from": "caos",
+    "to": "processo",
+    "name": "compõe",
+    "description": "Caos compõe Processo (Whitehead)"
+  },
+  {
+    "from": "CARE",
+    "to": "indigena",
+    "name": "emancipa-se via",
+    "description": "Princípios CARE emancipa-se via Pensamento Indígena"
+  },
+  {
+    "from": "CARE",
+    "to": "governança",
+    "name": "emancipa-se via",
+    "description": "Princípios CARE emancipa-se via Governança"
+  },
+  {
+    "from": "CARE",
+    "to": "dados",
+    "name": "resiste a",
+    "description": "Princípios CARE resiste a Dados"
+  },
+  {
+    "from": "CARE",
+    "to": "responsabilidade",
+    "name": "disputa",
+    "description": "Princípios CARE disputa Responsabilidade"
+  },
+  {
+    "from": "Chiapas",
+    "to": "indigena",
+    "name": "experimenta",
+    "description": "Chiapas experimenta Pensamento Indígena"
+  },
+  {
+    "from": "Chiapas",
+    "to": "autonomia",
+    "name": "efetiva",
+    "description": "Chiapas efetiva Autonomia"
+  },
+  {
+    "from": "Chiapas",
+    "to": "democracia",
+    "name": "efetiva",
+    "description": "Chiapas efetiva Democracia"
+  },
+  {
+    "from": "Chiapas",
+    "to": "municipalismo",
+    "name": "efetiva",
+    "description": "Chiapas efetiva Municipalismo"
+  },
+  {
+    "from": "ciborgue",
+    "to": "hibridez",
+    "name": "compõe",
+    "description": "Ciborgue compõe Hibridez"
+  },
+  {
+    "from": "ciborgue",
+    "to": "tecnologia",
+    "name": "constitui",
+    "description": "Ciborgue constitui Tecnologia"
+  },
+  {
+    "from": "ciborgue",
+    "to": "não-humanos",
+    "name": "compõe",
+    "description": "Ciborgue compõe Não-Humanos"
+  },
+  {
+    "from": "ciborgue",
+    "to": "feminismo",
+    "name": "constitui",
+    "description": "Ciborgue constitui Feminismo"
+  },
+  {
+    "from": "circunscrição",
+    "to": "limite",
+    "name": "emancipa-se via",
+    "description": "Circunscrição emancipa-se via Limite"
+  },
+  {
+    "from": "circunscrição",
+    "to": "poder",
+    "name": "emancipa-se via",
+    "description": "Circunscrição emancipa-se via Poder"
+  },
+  {
+    "from": "circunscrição",
+    "to": "lugar",
+    "name": "emancipa-se via",
+    "description": "Circunscrição emancipa-se via Lugar"
+  },
+  {
+    "from": "clima",
+    "to": "ecologia",
+    "name": "flui em",
+    "description": "Clima flui em Ecologia"
+  },
+  {
+    "from": "clima",
+    "to": "capitalismo",
+    "name": "circula em",
+    "description": "Clima circula em Capitalismo"
+  },
+  {
+    "from": "clima",
+    "to": "justiça",
+    "name": "co-habita",
+    "description": "Clima co-habita Justiça"
+  },
+  {
+    "from": "clima",
+    "to": "decrescimento",
+    "name": "circula em",
+    "description": "Clima circula em Decrescimento"
+  },
+  {
+    "from": "colaboração",
+    "to": "reciprocidade",
+    "name": "efetiva",
+    "description": "Colaboração efetiva Reciprocidade"
+  },
+  {
+    "from": "colaboração",
+    "to": "cooperativa",
+    "name": "implementa",
+    "description": "Colaboração implementa Cooperativas"
+  },
+  {
+    "from": "colaboração",
+    "to": "assembleia",
+    "name": "experimenta",
+    "description": "Colaboração experimenta Assembleias"
+  },
+  {
+    "from": "colaboração",
+    "to": "commons",
+    "name": "efetiva",
+    "description": "Colaboração efetiva Commons"
+  },
+  {
+    "from": "Colombia",
+    "to": "direitos da natureza",
+    "name": "efetiva",
+    "description": "Colômbia efetiva Direitos da Natureza"
+  },
+  {
+    "from": "Colombia",
+    "to": "indigena",
+    "name": "experimenta",
+    "description": "Colômbia experimenta Pensamento Indígena"
+  },
+  {
+    "from": "Colombia",
+    "to": "rio",
+    "name": "implementa",
+    "description": "Colômbia implementa Rio"
+  },
+  {
+    "from": "Colombia",
+    "to": "cosmopolitica",
+    "name": "experimenta",
+    "description": "Colômbia experimenta Cosmopolítica"
+  },
+  {
+    "from": "colonialismo",
+    "to": "capitalismo",
+    "name": "emancipa-se via",
+    "description": "Colonialismo emancipa-se via Capitalismo"
+  },
+  {
+    "from": "colonialismo",
+    "to": "epistemicídio",
+    "name": "emancipa-se via",
+    "description": "Colonialismo emancipa-se via Epistemicídio"
+  },
+  {
+    "from": "colonialismo",
+    "to": "descolonização",
+    "name": "emancipa-se via",
+    "description": "Colonialismo emancipa-se via Descolonização"
+  },
+  {
+    "from": "colonialismo",
+    "to": "acumulacaoprimitiva",
+    "name": "emancipa-se via",
+    "description": "Colonialismo emancipa-se via Acumulação Primitiva"
+  },
+  {
+    "from": "colonialismo",
+    "to": "necropolitica",
+    "name": "emancipa-se via",
+    "description": "Colonialismo emancipa-se via Necropolítica"
+  },
+  {
+    "from": "compartilhamento",
+    "to": "commons",
+    "name": "efetiva",
+    "description": "Compartilhamento efetiva Commons"
+  },
+  {
+    "from": "compartilhamento",
+    "to": "softwarelivre",
+    "name": "experimenta",
+    "description": "Compartilhamento experimenta Software Livre"
+  },
+  {
+    "from": "compartilhamento",
+    "to": "reciprocidade",
+    "name": "efetiva",
+    "description": "Compartilhamento efetiva Reciprocidade"
+  },
+  {
+    "from": "compartilhamento",
+    "to": "propriedade",
+    "name": "efetiva",
+    "description": "Compartilhamento efetiva Propriedade"
+  },
+  {
+    "from": "comunidade",
+    "to": "ubuntu",
+    "name": "estrutura",
+    "description": "Comunidade estrutura Ubuntu"
+  },
+  {
+    "from": "comunidade",
+    "to": "commons",
+    "name": "constitui",
+    "description": "Comunidade constitui Commons"
+  },
+  {
+    "from": "comunidade",
+    "to": "intersubjetividade",
+    "name": "compõe",
+    "description": "Comunidade compõe Intersubjetividade"
+  },
+  {
+    "from": "comunidade",
+    "to": "reciprocidade",
+    "name": "constitui",
+    "description": "Comunidade constitui Reciprocidade"
+  },
+  {
+    "from": "conjunto vazio",
+    "to": "vazio",
+    "name": "possibilita",
+    "description": "Conjunto Vazio possibilita Vazio Que Povoa"
+  },
+  {
+    "from": "conjunto vazio",
+    "to": "matemática",
+    "name": "condiciona",
+    "description": "Conjunto Vazio condiciona Matemática"
+  },
+  {
+    "from": "conjunto vazio",
+    "to": "fundamentos",
+    "name": "possibilita",
+    "description": "Conjunto Vazio possibilita Fundamentos"
+  },
+  {
+    "from": "constituição",
+    "to": "direitos da natureza",
+    "name": "emancipa-se via",
+    "description": "Constituição emancipa-se via Direitos da Natureza"
+  },
+  {
+    "from": "constituição",
+    "to": "Pachamama",
+    "name": "emancipa-se via",
+    "description": "Constituição emancipa-se via Pachamama"
+  },
+  {
+    "from": "constituição",
+    "to": "buen vivir",
+    "name": "emancipa-se via",
+    "description": "Constituição emancipa-se via Buen Vivir"
+  },
+  {
+    "from": "constituição",
+    "to": "política",
+    "name": "emancipa-se via",
+    "description": "Constituição emancipa-se via Política"
+  },
+  {
+    "from": "cooptação",
+    "to": "capitalismo",
+    "name": "emancipa-se via",
+    "description": "Cooptação emancipa-se via Capitalismo"
+  },
+  {
+    "from": "cooptação",
+    "to": "commons",
+    "name": "emancipa-se via",
+    "description": "Cooptação emancipa-se via Commons"
+  },
+  {
+    "from": "cooptação",
+    "to": "apropriação",
+    "name": "emancipa-se via",
+    "description": "Cooptação emancipa-se via Apropriação"
+  },
+  {
+    "from": "coordenação",
+    "to": "governança",
+    "name": "efetiva",
+    "description": "Coordenação efetiva Governança"
+  },
+  {
+    "from": "coordenação",
+    "to": "descentralização",
+    "name": "efetiva",
+    "description": "Coordenação efetiva Descentralização"
+  },
+  {
+    "from": "coordenação",
+    "to": "protocoloaberto",
+    "name": "experimenta",
+    "description": "Coordenação experimenta Protocolos Abertos"
+  },
+  {
+    "from": "coordenação",
+    "to": "heterarquia",
+    "name": "efetiva",
+    "description": "Coordenação efetiva Heterarquia"
+  },
+  {
+    "from": "crédito mútuo",
+    "to": "moedascomunitarias",
+    "name": "implementa",
+    "description": "Crédito Mútuo implementa Moeda Comunitária"
+  },
+  {
+    "from": "crédito mútuo",
+    "to": "commons",
+    "name": "efetiva",
+    "description": "Crédito Mútuo efetiva Commons"
+  },
+  {
+    "from": "crédito mútuo",
+    "to": "reciprocidade",
+    "name": "efetiva",
+    "description": "Crédito Mútuo efetiva Reciprocidade"
+  },
+  {
+    "from": "criação",
+    "to": "devir",
+    "name": "compõe",
+    "description": "Criação compõe Devir (Deleuze)"
+  },
+  {
+    "from": "criação",
+    "to": "processo",
+    "name": "compõe",
+    "description": "Criação compõe Processo (Whitehead)"
+  },
+  {
+    "from": "criação",
+    "to": "emergência",
+    "name": "compõe",
+    "description": "Criação compõe Emergência"
+  },
+  {
+    "from": "criação",
+    "to": "virtualidade",
+    "name": "compõe",
+    "description": "Criação compõe Virtualidade"
+  },
+  {
+    "from": "crimes de guerra",
+    "to": "necropolitica",
+    "name": "emancipa-se via",
+    "description": "Crimes de Guerra emancipa-se via Necropolítica"
+  },
+  {
+    "from": "crimes de guerra",
+    "to": "violência simbólica",
+    "name": "emancipa-se via",
+    "description": "Crimes de Guerra emancipa-se via Violência Simbólica"
+  },
+  {
+    "from": "crimes de guerra",
+    "to": "terror",
+    "name": "emancipa-se via",
+    "description": "Crimes de Guerra emancipa-se via Terror"
+  },
+  {
+    "from": "dados",
+    "to": "CARE",
+    "name": "aprende de",
+    "description": "Dados aprende de Princípios CARE"
+  },
+  {
+    "from": "dados",
+    "to": "conhecimento",
+    "name": "problematiza",
+    "description": "Dados problematiza Conhecimento"
+  },
+  {
+    "from": "dados",
+    "to": "indigena",
+    "name": "aprende de",
+    "description": "Dados aprende de Pensamento Indígena"
+  },
+  {
+    "from": "dados",
+    "to": "governança",
+    "name": "aprende de",
+    "description": "Dados aprende de Governança"
+  },
+  {
+    "from": "dasein",
+    "to": "Heidegger",
+    "name": "compõe",
+    "description": "Dasein compõe Heidegger"
+  },
+  {
+    "from": "dasein",
+    "to": "ontologia",
+    "name": "compõe",
+    "description": "Dasein compõe Ontologia Relacional Universal"
+  },
+  {
+    "from": "dasein",
+    "to": "Mitsein",
+    "name": "compõe",
+    "description": "Dasein compõe Mitsein"
+  },
+  {
+    "from": "dasein",
+    "to": "lugar",
+    "name": "compõe",
+    "description": "Dasein compõe Lugar"
+  },
+  {
+    "from": "determinismo",
+    "to": "livre-arbítrio",
+    "name": "emerge em",
+    "description": "Determinismo emerge em Livre-Arbítrio"
+  },
+  {
+    "from": "determinismo",
+    "to": "física quântica",
+    "name": "possibilita",
+    "description": "Determinismo possibilita Física Quântica"
+  },
+  {
+    "from": "determinismo",
+    "to": "agencia",
+    "name": "emerge em",
+    "description": "Determinismo emerge em Agência"
+  },
+  {
+    "from": "diálogo",
+    "to": "educacaopopular",
+    "name": "implementa",
+    "description": "Diálogo implementa Educação Popular"
+  },
+  {
+    "from": "diálogo",
+    "to": "circuloscultura",
+    "name": "implementa",
+    "description": "Diálogo implementa Círculos de Cultura (Freire)"
+  },
+  {
+    "from": "diálogo",
+    "to": "pratica",
+    "name": "experimenta",
+    "description": "Diálogo experimenta Práxis Institucional"
+  },
+  {
+    "from": "diálogo",
+    "to": "conhecimento",
+    "name": "atua em",
+    "description": "Diálogo atua em Conhecimento"
+  },
+  {
+    "from": "duração",
+    "to": "tempo",
+    "name": "atualiza",
+    "description": "Duração atualiza Tempo Entrelaçado"
+  },
+  {
+    "from": "duração",
+    "to": "estratostempo",
+    "name": "atualiza",
+    "description": "Duração atualiza Estratos de Tempo"
+  },
+  {
+    "from": "duração",
+    "to": "processo",
+    "name": "sedimenta-se em",
+    "description": "Duração sedimenta-se em Processo (Whitehead)"
+  },
+  {
+    "from": "duração",
+    "to": "consciência",
+    "name": "sedimenta-se em",
+    "description": "Duração sedimenta-se em Consciência"
+  },
+  {
+    "from": "economia ecológica",
+    "to": "ecologia",
+    "name": "resiste a",
+    "description": "Economia Ecológica resiste a Ecologia"
+  },
+  {
+    "from": "economia ecológica",
+    "to": "decrescimento",
+    "name": "emancipa-se via",
+    "description": "Economia Ecológica emancipa-se via Decrescimento"
+  },
+  {
+    "from": "economia ecológica",
+    "to": "limite",
+    "name": "emancipa-se via",
+    "description": "Economia Ecológica emancipa-se via Limite"
+  },
+  {
+    "from": "economia ecológica",
+    "to": "sustentabilidade",
+    "name": "disputa",
+    "description": "Economia Ecológica disputa Sustentabilidade"
+  },
+  {
+    "from": "economia solidária",
+    "to": "cooperativa",
+    "name": "implementa",
+    "description": "Economia Solidária implementa Cooperativas"
+  },
+  {
+    "from": "economia solidária",
+    "to": "moedascomunitarias",
+    "name": "implementa",
+    "description": "Economia Solidária implementa Moeda Comunitária"
+  },
+  {
+    "from": "economia solidária",
+    "to": "commons",
+    "name": "efetiva",
+    "description": "Economia Solidária efetiva Commons"
+  },
+  {
+    "from": "economia solidária",
+    "to": "reproducaosocial",
+    "name": "efetiva",
+    "description": "Economia Solidária efetiva Reprodução Social"
+  },
+  {
+    "from": "Ecuador",
+    "to": "Pachamama",
+    "name": "experimenta",
+    "description": "Ecuador experimenta Pachamama"
+  },
+  {
+    "from": "Ecuador",
+    "to": "buen vivir",
+    "name": "efetiva",
+    "description": "Ecuador efetiva Buen Vivir"
+  },
+  {
+    "from": "Ecuador",
+    "to": "direitos da natureza",
+    "name": "efetiva",
+    "description": "Ecuador efetiva Direitos da Natureza"
+  },
+  {
+    "from": "Ecuador",
+    "to": "constituição",
+    "name": "efetiva",
+    "description": "Ecuador efetiva Constituição"
+  },
+  {
+    "from": "educação",
+    "to": "educacaopopular",
+    "name": "implementa",
+    "description": "Educação implementa Educação Popular"
+  },
+  {
+    "from": "educação",
+    "to": "pedagogiaautonomia",
+    "name": "implementa",
+    "description": "Educação implementa Pedagogia da Autonomia"
+  },
+  {
+    "from": "educação",
+    "to": "desescolarizacao",
+    "name": "implementa",
+    "description": "Educação implementa Desescolarização"
+  },
+  {
+    "from": "educação",
+    "to": "circuloscultura",
+    "name": "implementa",
+    "description": "Educação implementa Círculos de Cultura (Freire)"
+  },
+  {
+    "from": "emoção",
+    "to": "afeto",
+    "name": "compõe",
+    "description": "Emoção compõe Afeto Spinozista"
+  },
+  {
+    "from": "emoção",
+    "to": "neurociência",
+    "name": "entrelaça-se com",
+    "description": "Emoção entrelaça-se com Neurociência"
+  },
+  {
+    "from": "emoção",
+    "to": "holobionte",
+    "name": "compõe",
+    "description": "Emoção compõe Holobionte"
+  },
+  {
+    "from": "emoção",
+    "to": "consciência",
+    "name": "compõe",
+    "description": "Emoção compõe Consciência"
+  },
+  {
+    "from": "evolução",
+    "to": "simbiose",
+    "name": "simbiosa com",
+    "description": "Evolução simbiosa com Simbiose"
+  },
+  {
+    "from": "evolução",
+    "to": "holobionte",
+    "name": "simbiosa com",
+    "description": "Evolução simbiosa com Holobionte"
+  },
+  {
+    "from": "evolução",
+    "to": "processo",
+    "name": "simbiosa com",
+    "description": "Evolução simbiosa com Processo (Whitehead)"
+  },
+  {
+    "from": "evolução",
+    "to": "tempo",
+    "name": "circula em",
+    "description": "Evolução circula em Tempo Entrelaçado"
+  },
+  {
+    "from": "fact-nets",
+    "to": "RQM",
+    "name": "possibilita",
+    "description": "Fact-Nets possibilita RQM (Relational Quantum Mechanics)"
+  },
+  {
+    "from": "fact-nets",
+    "to": "fatos relativos",
+    "name": "possibilita",
+    "description": "Fact-Nets possibilita Fatos Relativos"
+  },
+  {
+    "from": "fact-nets",
+    "to": "relacionalidade",
+    "name": "possibilita",
+    "description": "Fact-Nets possibilita Relacionalismo"
+  },
+  {
+    "from": "fact-nets",
+    "to": "redes",
+    "name": "precede",
+    "description": "Fact-Nets precede Redes"
+  },
+  {
+    "from": "fidelidade",
+    "to": "evento",
+    "name": "constitui",
+    "description": "Fidelidade constitui Evento (Badiou)"
+  },
+  {
+    "from": "fidelidade",
+    "to": "sujeito",
+    "name": "compõe",
+    "description": "Fidelidade compõe Sujeito"
+  },
+  {
+    "from": "fidelidade",
+    "to": "verdade",
+    "name": "entrelaça-se com",
+    "description": "Fidelidade entrelaça-se com Verdade"
+  },
+  {
+    "from": "fidelidade",
+    "to": "pratica",
+    "name": "entrelaça-se com",
+    "description": "Fidelidade entrelaça-se com Práxis Institucional"
+  },
+  {
+    "from": "filosofia",
+    "to": "filosofia africana",
+    "name": "aprende de",
+    "description": "Filosofia aprende de Filosofia Africana"
+  },
+  {
+    "from": "filosofia",
+    "to": "budismo",
+    "name": "dialoga com",
+    "description": "Filosofia dialoga com Budismo"
+  },
+  {
+    "from": "filosofia",
+    "to": "indigena",
+    "name": "aprende de",
+    "description": "Filosofia aprende de Pensamento Indígena"
+  },
+  {
+    "from": "filosofia",
+    "to": "descolonização",
+    "name": "aprende de",
+    "description": "Filosofia aprende de Descolonização"
+  },
+  {
+    "from": "finitude",
+    "to": "limite",
+    "name": "compõe",
+    "description": "Finitude compõe Limite"
+  },
+  {
+    "from": "finitude",
+    "to": "vulnerabilidade",
+    "name": "constitui",
+    "description": "Finitude constitui Vulnerabilidade"
+  },
+  {
+    "from": "finitude",
+    "to": "tempo",
+    "name": "intensifica-se em",
+    "description": "Finitude intensifica-se em Tempo Entrelaçado"
+  },
+  {
+    "from": "finitude",
+    "to": "dasein",
+    "name": "compõe",
+    "description": "Finitude compõe Dasein"
+  },
+  {
+    "from": "física",
+    "to": "física quântica",
+    "name": "possibilita",
+    "description": "Física possibilita Física Quântica"
+  },
+  {
+    "from": "física",
+    "to": "espaço-tempo",
+    "name": "possibilita",
+    "description": "Física possibilita Espaço-Tempo"
+  },
+  {
+    "from": "física",
+    "to": "ontologia",
+    "name": "emerge em",
+    "description": "Física emerge em Ontologia Relacional Universal"
+  },
+  {
+    "from": "floresta",
+    "to": "micorriza",
+    "name": "simbiosa com",
+    "description": "Floresta simbiosa com Micorrizas"
+  },
+  {
+    "from": "floresta",
+    "to": "holobionte",
+    "name": "simbiosa com",
+    "description": "Floresta simbiosa com Holobionte"
+  },
+  {
+    "from": "floresta",
+    "to": "direitos da natureza",
+    "name": "circula em",
+    "description": "Floresta circula em Direitos da Natureza"
+  },
+  {
+    "from": "floresta",
+    "to": "terra",
+    "name": "flui em",
+    "description": "Floresta flui em Terra"
+  },
+  {
+    "from": "flutuação",
+    "to": "vácuo",
+    "name": "possibilita",
+    "description": "Flutuação possibilita Vácuo Quântico"
+  },
+  {
+    "from": "flutuação",
+    "to": "caos",
+    "name": "emerge em",
+    "description": "Flutuação emerge em Caos"
+  },
+  {
+    "from": "flutuação",
+    "to": "emergência",
+    "name": "emerge em",
+    "description": "Flutuação emerge em Emergência"
+  },
+  {
+    "from": "flutuação",
+    "to": "física quântica",
+    "name": "possibilita",
+    "description": "Flutuação possibilita Física Quântica"
+  },
+  {
+    "from": "formalização",
+    "to": "matemática",
+    "name": "problematiza",
+    "description": "Formalização problematiza Matemática"
+  },
+  {
+    "from": "formalização",
+    "to": "lógica",
+    "name": "problematiza",
+    "description": "Formalização problematiza Lógica"
+  },
+  {
+    "from": "formalização",
+    "to": "incompletude",
+    "name": "dialoga com",
+    "description": "Formalização dialoga com Incompletude"
+  },
+  {
+    "from": "formalização",
+    "to": "limite",
+    "name": "aprende de",
+    "description": "Formalização aprende de Limite"
+  },
+  {
+    "from": "fundamentos",
+    "to": "anti-fundacionalismo",
+    "name": "possibilita",
+    "description": "Fundamentos possibilita Anti-Fundacionalismo"
+  },
+  {
+    "from": "fundamentos",
+    "to": "recursao",
+    "name": "possibilita",
+    "description": "Fundamentos possibilita Recursão Sem Fundamento"
+  },
+  {
+    "from": "fundamentos",
+    "to": "vazio",
+    "name": "possibilita",
+    "description": "Fundamentos possibilita Vazio Que Povoa"
+  },
+  {
+    "from": "fundamentos",
+    "to": "madhyamaka",
+    "name": "possibilita",
+    "description": "Fundamentos possibilita Madhyamaka"
+  },
+  {
+    "from": "Heidegger",
+    "to": "dasein",
+    "name": "compõe",
+    "description": "Heidegger compõe Dasein"
+  },
+  {
+    "from": "Heidegger",
+    "to": "Mitsein",
+    "name": "compõe",
+    "description": "Heidegger compõe Mitsein"
+  },
+  {
+    "from": "Heidegger",
+    "to": "ontologia",
+    "name": "compõe",
+    "description": "Heidegger compõe Ontologia Relacional Universal"
+  },
+  {
+    "from": "Heidegger",
+    "to": "filosofia",
+    "name": "entrelaça-se com",
+    "description": "Heidegger entrelaça-se com Filosofia"
+  },
+  {
+    "from": "hibridez",
+    "to": "ciborgue",
+    "name": "compõe",
+    "description": "Hibridez compõe Ciborgue"
+  },
+  {
+    "from": "hibridez",
+    "to": "multiespécies",
+    "name": "articula-se com",
+    "description": "Hibridez articula-se com Multiespécies"
+  },
+  {
+    "from": "hibridez",
+    "to": "holobionte",
+    "name": "compõe",
+    "description": "Hibridez compõe Holobionte"
+  },
+  {
+    "from": "hibridez",
+    "to": "multiplicidade",
+    "name": "compõe",
+    "description": "Hibridez compõe Multiplicidade Sem Fusão"
+  },
+  {
+    "from": "história",
+    "to": "tempo",
+    "name": "atualiza",
+    "description": "História atualiza Tempo Entrelaçado"
+  },
+  {
+    "from": "história",
+    "to": "ancestralidade",
+    "name": "atualiza",
+    "description": "História atualiza Ancestralidade"
+  },
+  {
+    "from": "história",
+    "to": "hauntologia",
+    "name": "atualiza",
+    "description": "História atualiza Hauntologia"
+  },
+  {
+    "from": "história",
+    "to": "memoriacoletiva",
+    "name": "atualiza",
+    "description": "História atualiza Memória Coletiva"
+  },
+  {
+    "from": "imaginação",
+    "to": "alternativas",
+    "name": "aprende de",
+    "description": "Imaginação aprende de Alternativas"
+  },
+  {
+    "from": "imaginação",
+    "to": "capitalismo",
+    "name": "aprende de",
+    "description": "Imaginação aprende de Capitalismo"
+  },
+  {
+    "from": "imaginação",
+    "to": "afrofuturismo",
+    "name": "aprende de",
+    "description": "Imaginação aprende de Afrofuturismo"
+  },
+  {
+    "from": "imaginação",
+    "to": "futuridadequeer",
+    "name": "aprende de",
+    "description": "Imaginação aprende de Futuridade Queer"
+  },
+  {
+    "from": "imaginário",
+    "to": "imaginação",
+    "name": "entrelaça-se com",
+    "description": "Imaginário entrelaça-se com Imaginação"
+  },
+  {
+    "from": "imaginário",
+    "to": "sociedade",
+    "name": "compõe",
+    "description": "Imaginário compõe Sociedade"
+  },
+  {
+    "from": "imaginário",
+    "to": "criação",
+    "name": "compõe",
+    "description": "Imaginário compõe Criação"
+  },
+  {
+    "from": "imaginário",
+    "to": "instituição",
+    "name": "constitui",
+    "description": "Imaginário constitui Instituição"
+  },
+  {
+    "from": "implementação",
+    "to": "barcelona",
+    "name": "implementa",
+    "description": "Implementação implementa Barcelona"
+  },
+  {
+    "from": "implementação",
+    "to": "pratica",
+    "name": "experimenta",
+    "description": "Implementação experimenta Práxis Institucional"
+  },
+  {
+    "from": "implementação",
+    "to": "governança",
+    "name": "efetiva",
+    "description": "Implementação efetiva Governança"
+  },
+  {
+    "from": "implementação",
+    "to": "limite",
+    "name": "experimenta",
+    "description": "Implementação experimenta Limite"
+  },
+  {
+    "from": "incompletude",
+    "to": "formalização",
+    "name": "condiciona",
+    "description": "Incompletude condiciona Formalização"
+  },
+  {
+    "from": "incompletude",
+    "to": "limite",
+    "name": "emerge em",
+    "description": "Incompletude emerge em Limite"
+  },
+  {
+    "from": "incompletude",
+    "to": "matemática",
+    "name": "condiciona",
+    "description": "Incompletude condiciona Matemática"
+  },
+  {
+    "from": "incompletude",
+    "to": "fundamentos",
+    "name": "possibilita",
+    "description": "Incompletude possibilita Fundamentos"
+  },
+  {
+    "from": "individualismo",
+    "to": "capitalismo",
+    "name": "emancipa-se via",
+    "description": "Individualismo emancipa-se via Capitalismo"
+  },
+  {
+    "from": "individualismo",
+    "to": "ubuntu",
+    "name": "disputa",
+    "description": "Individualismo disputa Ubuntu"
+  },
+  {
+    "from": "individualismo",
+    "to": "ontologia",
+    "name": "emancipa-se via",
+    "description": "Individualismo emancipa-se via Ontologia Relacional Universal"
+  },
+  {
+    "from": "individualismo",
+    "to": "sujeito",
+    "name": "emancipa-se via",
+    "description": "Individualismo emancipa-se via Sujeito"
+  },
+  {
+    "from": "instituição",
+    "to": "pratica",
+    "name": "resiste a",
+    "description": "Instituição resiste a Práxis Institucional"
+  },
+  {
+    "from": "instituição",
+    "to": "governança",
+    "name": "emancipa-se via",
+    "description": "Instituição emancipa-se via Governança"
+  },
+  {
+    "from": "instituição",
+    "to": "poder",
+    "name": "emancipa-se via",
+    "description": "Instituição emancipa-se via Poder"
+  },
+  {
+    "from": "instituição",
+    "to": "imaginário",
+    "name": "emancipa-se via",
+    "description": "Instituição emancipa-se via Imaginário"
+  },
+  {
+    "from": "Kenya",
+    "to": "ubuntu",
+    "name": "pratica",
+    "description": "Kenya pratica Ubuntu"
+  },
+  {
+    "from": "Kenya",
+    "to": "filosofia africana",
+    "name": "experimenta",
+    "description": "Kenya experimenta Filosofia Africana"
+  },
+  {
+    "from": "Kenya",
+    "to": "commons",
+    "name": "efetiva",
+    "description": "Kenya efetiva Commons"
+  },
+  {
+    "from": "Kenya",
+    "to": "reciprocidade",
+    "name": "efetiva",
+    "description": "Kenya efetiva Reciprocidade"
+  },
+  {
+    "from": "libertação",
+    "to": "educacaopopular",
+    "name": "radicaliza-se em",
+    "description": "Libertação radicaliza-se em Educação Popular"
+  },
+  {
+    "from": "libertação",
+    "to": "descolonização",
+    "name": "emancipa-se via",
+    "description": "Libertação emancipa-se via Descolonização"
+  },
+  {
+    "from": "libertação",
+    "to": "pratica",
+    "name": "resiste a",
+    "description": "Libertação resiste a Práxis Institucional"
+  },
+  {
+    "from": "libertação",
+    "to": "liberdade",
+    "name": "disputa",
+    "description": "Libertação disputa Liberdade"
+  },
+  {
+    "from": "liderança",
+    "to": "autonomia",
+    "name": "efetiva",
+    "description": "Liderança efetiva Autonomia"
+  },
+  {
+    "from": "liderança",
+    "to": "descentralização",
+    "name": "efetiva",
+    "description": "Liderança efetiva Descentralização"
+  },
+  {
+    "from": "liderança",
+    "to": "assembleia",
+    "name": "experimenta",
+    "description": "Liderança experimenta Assembleias"
+  },
+  {
+    "from": "liderança",
+    "to": "governança",
+    "name": "efetiva",
+    "description": "Liderança efetiva Governança"
+  },
+  {
+    "from": "linguagem",
+    "to": "performatividade",
+    "name": "aprende de",
+    "description": "Linguagem aprende de Performatividade"
+  },
+  {
+    "from": "linguagem",
+    "to": "tradução",
+    "name": "problematiza",
+    "description": "Linguagem problematiza Tradução"
+  },
+  {
+    "from": "linguagem",
+    "to": "conhecimento",
+    "name": "problematiza",
+    "description": "Linguagem problematiza Conhecimento"
+  },
+  {
+    "from": "linguagem",
+    "to": "poder",
+    "name": "aprende de",
+    "description": "Linguagem aprende de Poder"
+  },
+  {
+    "from": "livre-arbítrio",
+    "to": "agencia",
+    "name": "compõe",
+    "description": "Livre-Arbítrio compõe Agência"
+  },
+  {
+    "from": "livre-arbítrio",
+    "to": "determinismo",
+    "name": "configura-se em",
+    "description": "Livre-Arbítrio configura-se em Determinismo"
+  },
+  {
+    "from": "livre-arbítrio",
+    "to": "responsabilidade",
+    "name": "compõe",
+    "description": "Livre-Arbítrio compõe Responsabilidade"
+  },
+  {
+    "from": "livre-arbítrio",
+    "to": "liberdade",
+    "name": "compõe",
+    "description": "Livre-Arbítrio compõe Liberdade"
+  },
+  {
+    "from": "lógica",
+    "to": "madhyamaka",
+    "name": "dialoga com",
+    "description": "Lógica dialoga com Madhyamaka"
+  },
+  {
+    "from": "lógica",
+    "to": "formalização",
+    "name": "problematiza",
+    "description": "Lógica problematiza Formalização"
+  },
+  {
+    "from": "lógica",
+    "to": "matemática",
+    "name": "problematiza",
+    "description": "Lógica problematiza Matemática"
+  },
+  {
+    "from": "lógica",
+    "to": "ontologia",
+    "name": "aprende de",
+    "description": "Lógica aprende de Ontologia Relacional Universal"
+  },
+  {
+    "from": "lugar",
+    "to": "placethought",
+    "name": "estrutura",
+    "description": "Lugar estrutura Place-Thought"
+  },
+  {
+    "from": "lugar",
+    "to": "terra",
+    "name": "articula-se com",
+    "description": "Lugar articula-se com Terra"
+  },
+  {
+    "from": "lugar",
+    "to": "conhecimento",
+    "name": "entrelaça-se com",
+    "description": "Lugar entrelaça-se com Conhecimento"
+  },
+  {
+    "from": "madhyamika",
+    "to": "madhyamaka",
+    "name": "possibilita",
+    "description": "Madhyamika possibilita Madhyamaka"
+  },
+  {
+    "from": "madhyamika",
+    "to": "sunyata",
+    "name": "possibilita",
+    "description": "Madhyamika possibilita Śūnyatā (Vacuidade)"
+  },
+  {
+    "from": "madhyamika",
+    "to": "budismo",
+    "name": "possibilita",
+    "description": "Madhyamika possibilita Budismo"
+  },
+  {
+    "from": "madhyamika",
+    "to": "ontologia",
+    "name": "emerge em",
+    "description": "Madhyamika emerge em Ontologia Relacional Universal"
+  },
+  {
+    "from": "matemática",
+    "to": "lógica",
+    "name": "problematiza",
+    "description": "Matemática problematiza Lógica"
+  },
+  {
+    "from": "matemática",
+    "to": "formalização",
+    "name": "problematiza",
+    "description": "Matemática problematiza Formalização"
+  },
+  {
+    "from": "matemática",
+    "to": "incompletude",
+    "name": "dialoga com",
+    "description": "Matemática dialoga com Incompletude"
+  },
+  {
+    "from": "matemática",
+    "to": "conjunto vazio",
+    "name": "dialoga com",
+    "description": "Matemática dialoga com Conjunto Vazio"
+  },
+  {
+    "from": "misrecognition",
+    "to": "violência simbólica",
+    "name": "emancipa-se via",
+    "description": "Misrecognition emancipa-se via Violência Simbólica"
+  },
+  {
+    "from": "misrecognition",
+    "to": "poder",
+    "name": "emancipa-se via",
+    "description": "Misrecognition emancipa-se via Poder"
+  },
+  {
+    "from": "misrecognition",
+    "to": "reconhecimento",
+    "name": "emancipa-se via",
+    "description": "Misrecognition emancipa-se via Reconhecimento"
+  },
+  {
+    "from": "Mitsein",
+    "to": "dasein",
+    "name": "compõe",
+    "description": "Mitsein compõe Dasein"
+  },
+  {
+    "from": "Mitsein",
+    "to": "Heidegger",
+    "name": "compõe",
+    "description": "Mitsein compõe Heidegger"
+  },
+  {
+    "from": "Mitsein",
+    "to": "intersubjetividade",
+    "name": "compõe",
+    "description": "Mitsein compõe Intersubjetividade"
+  },
+  {
+    "from": "Mitsein",
+    "to": "ontologia",
+    "name": "compõe",
+    "description": "Mitsein compõe Ontologia Relacional Universal"
+  },
+  {
+    "from": "narrativa",
+    "to": "história",
+    "name": "aprende de",
+    "description": "Narrativa aprende de História"
+  },
+  {
+    "from": "narrativa",
+    "to": "imaginário",
+    "name": "aprende de",
+    "description": "Narrativa aprende de Imaginário"
+  },
+  {
+    "from": "narrativa",
+    "to": "conhecimento",
+    "name": "problematiza",
+    "description": "Narrativa problematiza Conhecimento"
+  },
+  {
+    "from": "narrativa",
+    "to": "performatividade",
+    "name": "aprende de",
+    "description": "Narrativa aprende de Performatividade"
+  },
+  {
+    "from": "natureza",
+    "to": "direitos da natureza",
+    "name": "circula em",
+    "description": "Natureza circula em Direitos da Natureza"
+  },
+  {
+    "from": "natureza",
+    "to": "ecologia",
+    "name": "flui em",
+    "description": "Natureza flui em Ecologia"
+  },
+  {
+    "from": "natureza",
+    "to": "multiespécies",
+    "name": "flui em",
+    "description": "Natureza flui em Multiespécies"
+  },
+  {
+    "from": "natureza",
+    "to": "comunidade",
+    "name": "simbiosa com",
+    "description": "Natureza simbiosa com Comunidade"
+  },
+  {
+    "from": "novo-materialismo",
+    "to": "realismo agencial",
+    "name": "compõe",
+    "description": "Novo-Materialismo compõe Realismo Agencial"
+  },
+  {
+    "from": "novo-materialismo",
+    "to": "intracao",
+    "name": "compõe",
+    "description": "Novo-Materialismo compõe Intra-ação (Barad)"
+  },
+  {
+    "from": "novo-materialismo",
+    "to": "agencia",
+    "name": "compõe",
+    "description": "Novo-Materialismo compõe Agência"
+  },
+  {
+    "from": "novo-materialismo",
+    "to": "ontologia",
+    "name": "compõe",
+    "description": "Novo-Materialismo compõe Ontologia Relacional Universal"
+  },
+  {
+    "from": "objetividade",
+    "to": "conhecimento",
+    "name": "problematiza",
+    "description": "Objetividade problematiza Conhecimento"
+  },
+  {
+    "from": "objetividade",
+    "to": "responsabilidade",
+    "name": "aprende de",
+    "description": "Objetividade aprende de Responsabilidade"
+  },
+  {
+    "from": "objetividade",
+    "to": "epistemologia",
+    "name": "problematiza",
+    "description": "Objetividade problematiza Epistemologia"
+  },
+  {
+    "from": "ordem",
+    "to": "emergência",
+    "name": "compõe",
+    "description": "Ordem compõe Emergência"
+  },
+  {
+    "from": "ordem",
+    "to": "caos",
+    "name": "compõe",
+    "description": "Ordem compõe Caos"
+  },
+  {
+    "from": "ordem",
+    "to": "autopoiese",
+    "name": "compõe",
+    "description": "Ordem compõe Autopoiese"
+  },
+  {
+    "from": "ordem",
+    "to": "processo",
+    "name": "compõe",
+    "description": "Ordem compõe Processo (Whitehead)"
+  },
+  {
+    "from": "País Basco",
+    "to": "cooperativa",
+    "name": "implementa",
+    "description": "País Basco implementa Cooperativas"
+  },
+  {
+    "from": "País Basco",
+    "to": "economia solidária",
+    "name": "implementa",
+    "description": "País Basco implementa Economia Solidária"
+  },
+  {
+    "from": "País Basco",
+    "to": "governança",
+    "name": "efetiva",
+    "description": "País Basco efetiva Governança"
+  },
+  {
+    "from": "parentesco",
+    "to": "multiespécies",
+    "name": "articula-se com",
+    "description": "Parentesco articula-se com Multiespécies"
+  },
+  {
+    "from": "parentesco",
+    "to": "whakapapa",
+    "name": "entrelaça-se com",
+    "description": "Parentesco entrelaça-se com Whakapapa"
+  },
+  {
+    "from": "parentesco",
+    "to": "feminismo",
+    "name": "constitui",
+    "description": "Parentesco constitui Feminismo"
+  },
+  {
+    "from": "parentesco",
+    "to": "ontologia",
+    "name": "compõe",
+    "description": "Parentesco compõe Ontologia Relacional Universal"
+  },
+  {
+    "from": "pedagogia",
+    "to": "pedagogiaautonomia",
+    "name": "implementa",
+    "description": "Pedagogia implementa Pedagogia da Autonomia"
+  },
+  {
+    "from": "pedagogia",
+    "to": "educacaopopular",
+    "name": "implementa",
+    "description": "Pedagogia implementa Educação Popular"
+  },
+  {
+    "from": "pedagogia",
+    "to": "diálogo",
+    "name": "implementa",
+    "description": "Pedagogia implementa Diálogo"
+  },
+  {
+    "from": "pedagogia",
+    "to": "pratica",
+    "name": "experimenta",
+    "description": "Pedagogia experimenta Práxis Institucional"
+  },
+  {
+    "from": "perdão",
+    "to": "ubuntu",
+    "name": "reconhece",
+    "description": "Perdão reconhece Ubuntu"
+  },
+  {
+    "from": "perdão",
+    "to": "reconciliação",
+    "name": "reconhece",
+    "description": "Perdão reconhece Reconciliação"
+  },
+  {
+    "from": "perdão",
+    "to": "justiça",
+    "name": "reconhece",
+    "description": "Perdão reconhece Justiça"
+  },
+  {
+    "from": "perdão",
+    "to": "vulnerabilidade",
+    "name": "respeita",
+    "description": "Perdão respeita Vulnerabilidade"
+  },
+  {
+    "from": "política ontológica",
+    "to": "performatividade",
+    "name": "compõe",
+    "description": "Política Ontológica compõe Performatividade"
+  },
+  {
+    "from": "política ontológica",
+    "to": "ontologia",
+    "name": "compõe",
+    "description": "Política Ontológica compõe Ontologia Relacional Universal"
+  },
+  {
+    "from": "política ontológica",
+    "to": "política",
+    "name": "constitui",
+    "description": "Política Ontológica constitui Política"
+  },
+  {
+    "from": "política ontológica",
+    "to": "direitos da natureza",
+    "name": "constitui",
+    "description": "Política Ontológica constitui Direitos da Natureza"
+  },
+  {
+    "from": "pragmatismo",
+    "to": "pratica",
+    "name": "reconhece",
+    "description": "Pragmatismo reconhece Práxis Institucional"
+  },
+  {
+    "from": "pragmatismo",
+    "to": "conhecimento",
+    "name": "problematiza",
+    "description": "Pragmatismo problematiza Conhecimento"
+  },
+  {
+    "from": "pragmatismo",
+    "to": "ação",
+    "name": "aprende de",
+    "description": "Pragmatismo aprende de Ação"
+  },
+  {
+    "from": "pragmatismo",
+    "to": "verdade",
+    "name": "problematiza",
+    "description": "Pragmatismo problematiza Verdade"
+  },
+  {
+    "from": "programação",
+    "to": "softwarelivre",
+    "name": "experimenta",
+    "description": "Programação experimenta Software Livre"
+  },
+  {
+    "from": "programação",
+    "to": "protocoloaberto",
+    "name": "experimenta",
+    "description": "Programação experimenta Protocolos Abertos"
+  },
+  {
+    "from": "programação",
+    "to": "tecnologia",
+    "name": "implementa",
+    "description": "Programação implementa Tecnologia"
+  },
+  {
+    "from": "radiação",
+    "to": "física quântica",
+    "name": "possibilita",
+    "description": "Radiação possibilita Física Quântica"
+  },
+  {
+    "from": "radiação",
+    "to": "espaço-tempo",
+    "name": "possibilita",
+    "description": "Radiação possibilita Espaço-Tempo"
+  },
+  {
+    "from": "radiação",
+    "to": "termodinâmica",
+    "name": "possibilita",
+    "description": "Radiação possibilita Termodinâmica"
+  },
+  {
+    "from": "realismo",
+    "to": "realismo agencial",
+    "name": "emerge em",
+    "description": "Realismo emerge em Realismo Agencial"
+  },
+  {
+    "from": "realismo",
+    "to": "ontologia",
+    "name": "emerge em",
+    "description": "Realismo emerge em Ontologia Relacional Universal"
+  },
+  {
+    "from": "realismo",
+    "to": "epistemologia",
+    "name": "condiciona",
+    "description": "Realismo condiciona Epistemologia"
+  },
+  {
+    "from": "reconciliação",
+    "to": "ubuntu",
+    "name": "reconhece",
+    "description": "Reconciliação reconhece Ubuntu"
+  },
+  {
+    "from": "reconciliação",
+    "to": "perdão",
+    "name": "reconhece",
+    "description": "Reconciliação reconhece Perdão"
+  },
+  {
+    "from": "reconciliação",
+    "to": "justiça",
+    "name": "reconhece",
+    "description": "Reconciliação reconhece Justiça"
+  },
+  {
+    "from": "reconciliação",
+    "to": "vulnerabilidade",
+    "name": "respeita",
+    "description": "Reconciliação respeita Vulnerabilidade"
+  },
+  {
+    "from": "reconhecimento",
+    "to": "sujeito",
+    "name": "compõe",
+    "description": "Reconhecimento compõe Sujeito"
+  },
+  {
+    "from": "reconhecimento",
+    "to": "misrecognition",
+    "name": "constitui",
+    "description": "Reconhecimento constitui Misrecognition"
+  },
+  {
+    "from": "reconhecimento",
+    "to": "justiça",
+    "name": "compõe",
+    "description": "Reconhecimento compõe Justiça"
+  },
+  {
+    "from": "reconhecimento",
+    "to": "intersubjetividade",
+    "name": "compõe",
+    "description": "Reconhecimento compõe Intersubjetividade"
+  },
+  {
+    "from": "recursão",
+    "to": "recursao",
+    "name": "possibilita",
+    "description": "Recursão possibilita Recursão Sem Fundamento"
+  },
+  {
+    "from": "recursão",
+    "to": "anti-fundacionalismo",
+    "name": "possibilita",
+    "description": "Recursão possibilita Anti-Fundacionalismo"
+  },
+  {
+    "from": "recursão",
+    "to": "loop",
+    "name": "possibilita",
+    "description": "Recursão possibilita Loop"
+  },
+  {
+    "from": "recursão",
+    "to": "processo",
+    "name": "emerge em",
+    "description": "Recursão emerge em Processo (Whitehead)"
+  },
+  {
+    "from": "relatividade conceitual",
+    "to": "conhecimento",
+    "name": "problematiza",
+    "description": "Relatividade Conceitual problematiza Conhecimento"
+  },
+  {
+    "from": "relatividade conceitual",
+    "to": "epistemologia",
+    "name": "problematiza",
+    "description": "Relatividade Conceitual problematiza Epistemologia"
+  },
+  {
+    "from": "relatividade conceitual",
+    "to": "ontologia",
+    "name": "aprende de",
+    "description": "Relatividade Conceitual aprende de Ontologia Relacional Universal"
+  },
+  {
+    "from": "resiliência",
+    "to": "ecologia",
+    "name": "flui em",
+    "description": "Resiliência flui em Ecologia"
+  },
+  {
+    "from": "resiliência",
+    "to": "vulnerabilidade",
+    "name": "circula em",
+    "description": "Resiliência circula em Vulnerabilidade"
+  },
+  {
+    "from": "resiliência",
+    "to": "sustentabilidade",
+    "name": "co-habita",
+    "description": "Resiliência co-habita Sustentabilidade"
+  },
+  {
+    "from": "retrocausalidade",
+    "to": "física quântica",
+    "name": "possibilita",
+    "description": "Retrocausalidade possibilita Física Quântica"
+  },
+  {
+    "from": "retrocausalidade",
+    "to": "tempo",
+    "name": "possibilita",
+    "description": "Retrocausalidade possibilita Tempo Entrelaçado"
+  },
+  {
+    "from": "retrocausalidade",
+    "to": "processo",
+    "name": "emerge em",
+    "description": "Retrocausalidade emerge em Processo (Whitehead)"
+  },
+  {
+    "from": "rio",
+    "to": "direitos da natureza",
+    "name": "efetiva",
+    "description": "Rio efetiva Direitos da Natureza"
+  },
+  {
+    "from": "rio",
+    "to": "personalidade jurídica",
+    "name": "efetiva",
+    "description": "Rio efetiva Personalidade Jurídica"
+  },
+  {
+    "from": "rio",
+    "to": "terra",
+    "name": "pratica",
+    "description": "Rio pratica Terra"
+  },
+  {
+    "from": "rio",
+    "to": "cosmopolitica",
+    "name": "experimenta",
+    "description": "Rio experimenta Cosmopolítica"
+  },
+  {
+    "from": "sistemas",
+    "to": "autopoiese",
+    "name": "compõe",
+    "description": "Sistemas compõe Autopoiese"
+  },
+  {
+    "from": "sistemas",
+    "to": "emergência",
+    "name": "compõe",
+    "description": "Sistemas compõe Emergência"
+  },
+  {
+    "from": "sistemas",
+    "to": "processo",
+    "name": "compõe",
+    "description": "Sistemas compõe Processo (Whitehead)"
+  },
+  {
+    "from": "soberania",
+    "to": "poder",
+    "name": "emancipa-se via",
+    "description": "Soberania emancipa-se via Poder"
+  },
+  {
+    "from": "soberania",
+    "to": "necropolitica",
+    "name": "emancipa-se via",
+    "description": "Soberania emancipa-se via Necropolítica"
+  },
+  {
+    "from": "soberania",
+    "to": "CARE",
+    "name": "emancipa-se via",
+    "description": "Soberania emancipa-se via Princípios CARE"
+  },
+  {
+    "from": "soberania",
+    "to": "indigena",
+    "name": "emancipa-se via",
+    "description": "Soberania emancipa-se via Pensamento Indígena"
+  },
+  {
+    "from": "socialismo",
+    "to": "economia",
+    "name": "emancipa-se via",
+    "description": "Socialismo emancipa-se via Economia"
+  },
+  {
+    "from": "socialismo",
+    "to": "commons",
+    "name": "emancipa-se via",
+    "description": "Socialismo emancipa-se via Commons"
+  },
+  {
+    "from": "socialismo",
+    "to": "cooperativa",
+    "name": "mobiliza",
+    "description": "Socialismo mobiliza Cooperativas"
+  },
+  {
+    "from": "socialismo",
+    "to": "capitalismo",
+    "name": "emancipa-se via",
+    "description": "Socialismo emancipa-se via Capitalismo"
+  },
+  {
+    "from": "sociedade",
+    "to": "transindividual",
+    "name": "compõe",
+    "description": "Sociedade compõe Transindividual"
+  },
+  {
+    "from": "sociedade",
+    "to": "imaginário",
+    "name": "compõe",
+    "description": "Sociedade compõe Imaginário"
+  },
+  {
+    "from": "sociedade",
+    "to": "instituição",
+    "name": "constitui",
+    "description": "Sociedade constitui Instituição"
+  },
+  {
+    "from": "sociedade",
+    "to": "comunidade",
+    "name": "compõe",
+    "description": "Sociedade compõe Comunidade"
+  },
+  {
+    "from": "subjetivação",
+    "to": "sujeito",
+    "name": "compõe",
+    "description": "Subjetivação compõe Sujeito"
+  },
+  {
+    "from": "subjetivação",
+    "to": "performatividade",
+    "name": "compõe",
+    "description": "Subjetivação compõe Performatividade"
+  },
+  {
+    "from": "subjetivação",
+    "to": "poder",
+    "name": "constitui",
+    "description": "Subjetivação constitui Poder"
+  },
+  {
+    "from": "subjetivação",
+    "to": "pratica",
+    "name": "entrelaça-se com",
+    "description": "Subjetivação entrelaça-se com Práxis Institucional"
+  },
+  {
+    "from": "sul global",
+    "to": "descolonização",
+    "name": "emancipa-se via",
+    "description": "Sul Global emancipa-se via Descolonização"
+  },
+  {
+    "from": "sul global",
+    "to": "indigena",
+    "name": "emancipa-se via",
+    "description": "Sul Global emancipa-se via Pensamento Indígena"
+  },
+  {
+    "from": "sul global",
+    "to": "epistemologia",
+    "name": "resiste a",
+    "description": "Sul Global resiste a Epistemologia"
+  },
+  {
+    "from": "sul global",
+    "to": "justiça",
+    "name": "disputa",
+    "description": "Sul Global disputa Justiça"
+  },
+  {
+    "from": "switching",
+    "to": "RQM",
+    "name": "possibilita",
+    "description": "Switching possibilita RQM (Relational Quantum Mechanics)"
+  },
+  {
+    "from": "switching",
+    "to": "fatos relativos",
+    "name": "possibilita",
+    "description": "Switching possibilita Fatos Relativos"
+  },
+  {
+    "from": "switching",
+    "to": "relacionalidade",
+    "name": "possibilita",
+    "description": "Switching possibilita Relacionalismo"
+  },
+  {
+    "from": "termodinâmica",
+    "to": "física",
+    "name": "possibilita",
+    "description": "Termodinâmica possibilita Física"
+  },
+  {
+    "from": "termodinâmica",
+    "to": "tempo",
+    "name": "possibilita",
+    "description": "Termodinâmica possibilita Tempo Entrelaçado"
+  },
+  {
+    "from": "termodinâmica",
+    "to": "processo",
+    "name": "emerge em",
+    "description": "Termodinâmica emerge em Processo (Whitehead)"
+  },
+  {
+    "from": "termodinâmica",
+    "to": "ordem",
+    "name": "emerge em",
+    "description": "Termodinâmica emerge em Ordem"
+  },
+  {
+    "from": "terror",
+    "to": "totalitarismo",
+    "name": "emancipa-se via",
+    "description": "Terror emancipa-se via Totalitarismo"
+  },
+  {
+    "from": "terror",
+    "to": "necropolitica",
+    "name": "emancipa-se via",
+    "description": "Terror emancipa-se via Necropolítica"
+  },
+  {
+    "from": "terror",
+    "to": "violência simbólica",
+    "name": "emancipa-se via",
+    "description": "Terror emancipa-se via Violência Simbólica"
+  },
+  {
+    "from": "totalitarismo",
+    "to": "terror",
+    "name": "emancipa-se via",
+    "description": "Totalitarismo emancipa-se via Terror"
+  },
+  {
+    "from": "totalitarismo",
+    "to": "política",
+    "name": "emancipa-se via",
+    "description": "Totalitarismo emancipa-se via Política"
+  },
+  {
+    "from": "totalitarismo",
+    "to": "liberdade",
+    "name": "disputa",
+    "description": "Totalitarismo disputa Liberdade"
+  },
+  {
+    "from": "totalitarismo",
+    "to": "limite",
+    "name": "emancipa-se via",
+    "description": "Totalitarismo emancipa-se via Limite"
+  },
+  {
+    "from": "tradução",
+    "to": "linguagem",
+    "name": "problematiza",
+    "description": "Tradução problematiza Linguagem"
+  },
+  {
+    "from": "tradução",
+    "to": "conhecimento",
+    "name": "problematiza",
+    "description": "Tradução problematiza Conhecimento"
+  },
+  {
+    "from": "tradução",
+    "to": "poder",
+    "name": "aprende de",
+    "description": "Tradução aprende de Poder"
+  },
+  {
+    "from": "tradução",
+    "to": "descolonização",
+    "name": "aprende de",
+    "description": "Tradução aprende de Descolonização"
+  },
+  {
+    "from": "transformação",
+    "to": "evento",
+    "name": "constitui",
+    "description": "Transformação constitui Evento (Badiou)"
+  },
+  {
+    "from": "transformação",
+    "to": "pratica",
+    "name": "entrelaça-se com",
+    "description": "Transformação entrelaça-se com Práxis Institucional"
+  },
+  {
+    "from": "transformação",
+    "to": "processo",
+    "name": "compõe",
+    "description": "Transformação compõe Processo (Whitehead)"
+  },
+  {
+    "from": "transformação",
+    "to": "devir",
+    "name": "compõe",
+    "description": "Transformação compõe Devir (Deleuze)"
+  },
+  {
+    "from": "valores",
+    "to": "normatividade",
+    "name": "respeita",
+    "description": "Valores respeita Normatividade Relacional"
+  },
+  {
+    "from": "valores",
+    "to": "ética",
+    "name": "reconhece",
+    "description": "Valores reconhece Ética"
+  },
+  {
+    "from": "valores",
+    "to": "pratica",
+    "name": "respeita",
+    "description": "Valores respeita Práxis Institucional"
+  },
+  {
+    "from": "valores",
+    "to": "comunidade",
+    "name": "compartilha",
+    "description": "Valores compartilha Comunidade"
+  },
+  {
+    "from": "verdade",
+    "to": "fidelidade",
+    "name": "aprende de",
+    "description": "Verdade aprende de Fidelidade"
+  },
+  {
+    "from": "verdade",
+    "to": "evento",
+    "name": "aprende de",
+    "description": "Verdade aprende de Evento (Badiou)"
+  },
+  {
+    "from": "verdade",
+    "to": "conhecimento",
+    "name": "problematiza",
+    "description": "Verdade problematiza Conhecimento"
+  },
+  {
+    "from": "verdade",
+    "to": "epistemologia",
+    "name": "problematiza",
+    "description": "Verdade problematiza Epistemologia"
+  },
+  {
+    "from": "vida",
+    "to": "holobionte",
+    "name": "simbiosa com",
+    "description": "Vida simbiosa com Holobionte"
+  },
+  {
+    "from": "vida",
+    "to": "autopoiese",
+    "name": "simbiosa com",
+    "description": "Vida simbiosa com Autopoiese"
+  },
+  {
+    "from": "vida",
+    "to": "processo",
+    "name": "simbiosa com",
+    "description": "Vida simbiosa com Processo (Whitehead)"
+  },
+  {
+    "from": "vida",
+    "to": "multiespécies",
+    "name": "flui em",
+    "description": "Vida flui em Multiespécies"
   }
 ]

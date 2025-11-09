@@ -57,68 +57,243 @@
 
         .search-filter-section {
             display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
             flex-wrap: wrap;
+            align-items: flex-start;
         }
 
         .search-box {
             flex: 1;
-            min-width: 250px;
+            min-width: 280px;
+            position: relative;
         }
 
         .search-box input {
             width: 100%;
-            padding: 0.8rem 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--glow);
-            border-radius: 6px;
+            padding: 1rem 1.2rem 1rem 3rem;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
             color: var(--emergence);
             font-size: 1rem;
             font-family: inherit;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .search-box::before {
+            content: '🔍';
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+            opacity: 0.5;
+            pointer-events: none;
         }
 
         .search-box input::placeholder {
             color: var(--connection);
-            opacity: 0.5;
+            opacity: 0.6;
         }
 
         .search-box input:focus {
             outline: none;
+            background: rgba(255, 255, 255, 0.06);
             border-color: var(--emergence);
-            box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(153, 102, 255, 0.15), 0 0 40px rgba(153, 102, 255, 0.08);
+            transform: translateY(-1px);
         }
 
-        .filter-buttons {
+        .filter-section {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        .filter-label {
+            font-size: 0.85rem;
+            color: var(--connection);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .period-filters {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+
+        .period-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .period-slider-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .period-range {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: rgba(255, 255, 255, 0.1);
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        .period-range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--emergence);
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(153, 102, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .period-range::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 15px rgba(153, 102, 255, 0.8);
+        }
+
+        .period-range::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--emergence);
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 0 10px rgba(153, 102, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .period-range::-moz-range-thumb:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 15px rgba(153, 102, 255, 0.8);
+        }
+
+        .period-display {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--emergence);
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .period-display span {
+            padding: 0.3rem 0.8rem;
+            background: rgba(153, 102, 255, 0.15);
+            border-radius: 12px;
+            border: 1px solid rgba(153, 102, 255, 0.3);
+        }
+
+        .period-presets {
             display: flex;
             gap: 0.5rem;
             flex-wrap: wrap;
         }
 
-        .filter-btn {
-            padding: 0.6rem 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--glow);
-            border-radius: 6px;
+        .period-preset-btn {
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            color: var(--connection);
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: inherit;
+            font-weight: 500;
+        }
+
+        .period-preset-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(153, 102, 255, 0.4);
+            transform: translateY(-1px);
+        }
+
+        .period-preset-btn.active {
+            background: linear-gradient(135deg, rgba(153, 102, 255, 0.25), rgba(102, 204, 255, 0.25));
             color: var(--emergence);
+            border-color: var(--emergence);
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-btn {
+            padding: 0.7rem 1.3rem;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            color: var(--connection);
             cursor: pointer;
             font-size: 0.9rem;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             font-family: inherit;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(153, 102, 255, 0.3), transparent);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .filter-btn:hover::before {
+            width: 200%;
+            height: 200%;
         }
 
         .filter-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--emergence);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(153, 102, 255, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .filter-btn.active {
-            background: var(--emergence);
-            color: #000;
+            background: linear-gradient(135deg, rgba(153, 102, 255, 0.25), rgba(102, 204, 255, 0.25));
+            color: var(--emergence);
             border-color: var(--emergence);
+            box-shadow: 0 0 20px rgba(153, 102, 255, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
+            font-weight: 600;
         }
 
-        .stats-section {
+        .filter-btn.active::before {
+            width: 100%;
+            height: 100%;
+        }        .stats-section {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
@@ -155,16 +330,28 @@
         .referencia-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid var(--glow);
-            border-radius: 8px;
+            border-radius: 12px;
             padding: 1.5rem;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: fadeInUp 0.5s ease-out backwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .referencia-card:hover {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.06);
             border-color: var(--emergence);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 40px rgba(153, 102, 255, 0.1);
         }
 
         .referencia-card.hidden {
@@ -227,24 +414,56 @@
 
         .referencia-tags {
             display: flex;
-            gap: 0.5rem;
+            gap: 0.6rem;
             flex-wrap: wrap;
+            margin-top: 1rem;
         }
 
         .tag {
             font-size: 0.8rem;
-            padding: 0.3rem 0.7rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--glow);
-            border-radius: 4px;
+            padding: 0.4rem 0.9rem;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
             color: var(--connection);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 500;
+            cursor: default;
+            position: relative;
+        }
+
+        .tag::before {
+            content: '#';
+            opacity: 0.4;
+            margin-right: 0.2rem;
+        }
+
+        .tag:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         }
 
         .tag.categoria {
             background: linear-gradient(135deg, rgba(153, 102, 255, 0.2), rgba(102, 204, 255, 0.2));
-            border-color: var(--emergence);
+            border: 1px solid rgba(153, 102, 255, 0.4);
             color: var(--emergence);
-            font-weight: bold;
+            font-weight: 600;
+            padding: 0.45rem 1rem;
+            box-shadow: 0 0 15px rgba(153, 102, 255, 0.2);
+        }
+
+        .tag.categoria::before {
+            content: '📂';
+            margin-right: 0.4rem;
+        }
+
+        .tag.categoria:hover {
+            background: linear-gradient(135deg, rgba(153, 102, 255, 0.3), rgba(102, 204, 255, 0.3));
+            border-color: var(--emergence);
+            box-shadow: 0 0 20px rgba(153, 102, 255, 0.3), 0 2px 8px rgba(0, 0, 0, 0.15);
         }
 
         .no-results {
@@ -300,9 +519,20 @@
         }
 
         .light-theme .search-box input,
-        .light-theme .filter-btn {
-            background: rgba(0, 0, 0, 0.03);
+        .light-theme .filter-btn,
+        .light-theme .period-preset-btn {
+            background: rgba(0, 0, 0, 0.02);
             border-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .light-theme .search-box input:focus {
+            background: rgba(0, 0, 0, 0.04);
+            box-shadow: 0 0 20px rgba(153, 102, 255, 0.1), 0 0 40px rgba(153, 102, 255, 0.05);
+        }
+
+        .light-theme .filter-btn:hover,
+        .light-theme .period-preset-btn:hover {
+            background: rgba(0, 0, 0, 0.05);
         }
 
         .light-theme .stat-card {
@@ -310,17 +540,97 @@
             border-color: rgba(0, 0, 0, 0.1);
         }
 
+        .light-theme .tag {
+            background: rgba(0, 0, 0, 0.03);
+            border-color: rgba(0, 0, 0, 0.08);
+        }
+
+        .light-theme .tag:hover {
+            background: rgba(0, 0, 0, 0.06);
+            border-color: rgba(0, 0, 0, 0.12);
+        }
+
+        .light-theme .period-range {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .light-theme .period-display span {
+            background: rgba(153, 102, 255, 0.1);
+            border-color: rgba(153, 102, 255, 0.2);
+        }
+
         @media (max-width: 768px) {
             .referencias-header h1 {
                 font-size: 2rem;
+            }
+
+            .referencias-header p {
+                font-size: 1rem;
             }
 
             .search-filter-section {
                 flex-direction: column;
             }
 
+            .search-box {
+                min-width: 100%;
+            }
+
+            .period-filters {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .period-group {
+                min-width: 100%;
+            }
+
+            .period-presets {
+                gap: 0.4rem;
+            }
+
+            .period-preset-btn {
+                padding: 0.5rem 0.9rem;
+                font-size: 0.8rem;
+            }
+
+            .filter-section {
+                margin-bottom: 1.5rem;
+            }
+
+            .filter-label {
+                font-size: 0.8rem;
+                margin-bottom: 0.8rem;
+            }
+
             .filter-buttons {
-                justify-content: center;
+                gap: 0.5rem;
+            }
+
+            .filter-btn {
+                padding: 0.6rem 1.1rem;
+                font-size: 0.85rem;
+            }
+
+            .stats-section {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.8rem;
+            }
+
+            .stat-card {
+                padding: 0.8rem;
+            }
+
+            .stat-card .number {
+                font-size: 1.6rem;
+            }
+
+            .stat-card .label {
+                font-size: 0.8rem;
+            }
+
+            .referencia-card {
+                padding: 1.2rem;
             }
 
             .back-button {
@@ -328,6 +638,29 @@
                 right: 1rem;
                 padding: 0.8rem 1.2rem;
                 font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .referencias-header h1 {
+                font-size: 1.6rem;
+            }
+
+            .period-display {
+                font-size: 0.85rem;
+            }
+
+            .period-display span {
+                padding: 0.25rem 0.6rem;
+            }
+
+            .tag {
+                font-size: 0.75rem;
+                padding: 0.35rem 0.75rem;
+            }
+
+            .tag.categoria {
+                padding: 0.4rem 0.85rem;
             }
         }
     </style>
@@ -372,8 +705,59 @@
             </div>
         </div>
 
-        <div class="filter-buttons" id="filter-buttons">
-            <!-- Filtros gerados dinamicamente -->
+        <!-- Period Filters -->
+        <div class="period-filters">
+            <div class="period-group">
+                <div class="filter-label">
+                    <span>📅</span>
+                    <span>Filtrar por Período</span>
+                </div>
+                <div class="period-slider-container">
+                    <input 
+                        type="range" 
+                        id="year-min" 
+                        class="period-range" 
+                        min="1600" 
+                        max="2025" 
+                        value="1600"
+                        step="1"
+                    >
+                    <input 
+                        type="range" 
+                        id="year-max" 
+                        class="period-range" 
+                        min="1600" 
+                        max="2025" 
+                        value="2025"
+                        step="1"
+                    >
+                    <div class="period-display">
+                        <span id="year-min-display">1600</span>
+                        <span>→</span>
+                        <span id="year-max-display">2025</span>
+                    </div>
+                </div>
+            </div>
+            <div class="period-group">
+                <div class="filter-label">Períodos Predefinidos</div>
+                <div class="period-presets">
+                    <button class="period-preset-btn" onclick="setPeriod(1600, 2025)">Todos</button>
+                    <button class="period-preset-btn" onclick="setPeriod(1600, 1900)">Clássicos</button>
+                    <button class="period-preset-btn" onclick="setPeriod(1900, 1970)">Séc. XX Início</button>
+                    <button class="period-preset-btn" onclick="setPeriod(1970, 2000)">Séc. XX Fim</button>
+                    <button class="period-preset-btn" onclick="setPeriod(2000, 2025)">Contemporâneos</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <div class="filter-label">
+                <span>🏷️</span>
+                <span>Filtrar por Categoria</span>
+            </div>
+            <div class="filter-buttons" id="filter-buttons">
+                <!-- Filtros gerados dinamicamente -->
+            </div>
         </div>
 
         <!-- Referencias Grid -->
@@ -403,6 +787,68 @@
         let referencias = [];
         let currentFilter = 'todos';
         let searchTerm = '';
+        let yearMin = 1600;
+        let yearMax = 2025;
+
+        // Extrair ano numérico de uma string
+        function extractYear(ano) {
+            if (typeof ano === 'number') return ano;
+            if (typeof ano === 'string') {
+                // Tenta extrair o primeiro número de 4 dígitos
+                const match = ano.match(/\d{4}/);
+                if (match) return parseInt(match[0]);
+                // Se for algo como "c. 200 EC", tenta extrair o número
+                const numMatch = ano.match(/\d+/);
+                if (numMatch) return parseInt(numMatch[0]);
+            }
+            return 0;
+        }
+
+        // Configurar sliders de período
+        function setupPeriodSliders() {
+            const yearMinSlider = document.getElementById('year-min');
+            const yearMaxSlider = document.getElementById('year-max');
+            const yearMinDisplay = document.getElementById('year-min-display');
+            const yearMaxDisplay = document.getElementById('year-max-display');
+
+            yearMinSlider.addEventListener('input', (e) => {
+                yearMin = parseInt(e.target.value);
+                if (yearMin > yearMax) {
+                    yearMin = yearMax;
+                    yearMinSlider.value = yearMin;
+                }
+                yearMinDisplay.textContent = yearMin;
+                renderReferencias();
+            });
+
+            yearMaxSlider.addEventListener('input', (e) => {
+                yearMax = parseInt(e.target.value);
+                if (yearMax < yearMin) {
+                    yearMax = yearMin;
+                    yearMaxSlider.value = yearMax;
+                }
+                yearMaxDisplay.textContent = yearMax;
+                renderReferencias();
+            });
+        }
+
+        // Definir período predefinido
+        window.setPeriod = function(min, max) {
+            yearMin = min;
+            yearMax = max;
+            document.getElementById('year-min').value = min;
+            document.getElementById('year-max').value = max;
+            document.getElementById('year-min-display').textContent = min;
+            document.getElementById('year-max-display').textContent = max;
+            
+            // Atualizar botões ativos
+            document.querySelectorAll('.period-preset-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            renderReferencias();
+        }
 
         // Carregar referências
         async function loadReferencias() {
@@ -410,6 +856,7 @@
                 const response = await fetch('assets/referencias.json');
                 referencias = await response.json();
                 
+                setupPeriodSliders();
                 updateStats();
                 renderFilterButtons();
                 renderReferencias();
@@ -438,10 +885,16 @@
             const categorias = [...new Set(referencias.map(r => r.categoria))].sort();
             const container = document.getElementById('filter-buttons');
             
+            // Contar referências por categoria
+            const counts = {};
+            referencias.forEach(r => {
+                counts[r.categoria] = (counts[r.categoria] || 0) + 1;
+            });
+
             // Botão "Todos"
             const todosBtn = document.createElement('button');
             todosBtn.className = 'filter-btn active';
-            todosBtn.textContent = 'Todos';
+            todosBtn.innerHTML = `Todos <span style="opacity: 0.6; margin-left: 0.3rem;">(${referencias.length})</span>`;
             todosBtn.onclick = () => setFilter('todos');
             container.appendChild(todosBtn);
 
@@ -449,7 +902,8 @@
             categorias.forEach(cat => {
                 const btn = document.createElement('button');
                 btn.className = 'filter-btn';
-                btn.textContent = capitalize(cat);
+                btn.innerHTML = `${capitalize(cat)} <span style="opacity: 0.6; margin-left: 0.3rem;">(${counts[cat]})</span>`;
+                btn.dataset.category = cat;
                 btn.onclick = () => setFilter(cat);
                 container.appendChild(btn);
             });
@@ -462,8 +916,8 @@
             // Atualizar botões
             document.querySelectorAll('.filter-btn').forEach(btn => {
                 btn.classList.remove('active');
-                if ((filter === 'todos' && btn.textContent === 'Todos') ||
-                    (btn.textContent.toLowerCase() === filter)) {
+                if ((filter === 'todos' && btn.innerHTML.startsWith('Todos')) ||
+                    (btn.dataset.category === filter)) {
                     btn.classList.add('active');
                 }
             });
@@ -483,6 +937,12 @@
             if (currentFilter !== 'todos') {
                 filtered = filtered.filter(r => r.categoria === currentFilter);
             }
+
+            // Aplicar filtro de período
+            filtered = filtered.filter(r => {
+                const year = extractYear(r.ano);
+                return year >= yearMin && year <= yearMax;
+            });
 
             // Aplicar busca
             if (searchTerm) {
@@ -506,16 +966,17 @@
             }
 
             // Renderizar cards
-            filtered.forEach(ref => {
-                const card = createReferenciaCard(ref);
+            filtered.forEach((ref, index) => {
+                const card = createReferenciaCard(ref, index);
                 container.appendChild(card);
             });
         }
 
         // Criar card de referência
-        function createReferenciaCard(ref) {
+        function createReferenciaCard(ref, index) {
             const card = document.createElement('div');
             card.className = 'referencia-card';
+            card.style.animationDelay = `${index * 0.05}s`;
 
             const header = document.createElement('div');
             header.className = 'referencia-header';
