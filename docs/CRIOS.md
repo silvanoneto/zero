@@ -424,6 +424,7 @@ Todd critica dimensões estruturais: virada ontológica trata pensamento indíge
 **A distinção crucial**:
 
 **Apropriação extrativista:**
+
 - Trata conhecimento indígena como "dados" para agregar
 - Cherry-pick conceitos atraentes
 - Usa ideias para suplementar teorias ocidentais
@@ -431,6 +432,7 @@ Todd critica dimensões estruturais: virada ontológica trata pensamento indíge
 - Mentalidade de "descoberta"
 
 **Engajamento relacional:**
+
 - Reconhece conhecimento indígena como sistemas corporificados, relacionais, baseados-em-lugar
 - Construção de relacionamento de longo prazo antes de pesquisa
 - Respeita governança indígena de sistemas de conhecimento
@@ -1107,6 +1109,7 @@ O convite permanece: **habite os CRIOS**. Não como verdades a serem acreditadas
 **Processo**: Esta versão incorpora críticas substantivas de scholarship 2020-2025, desenvolve teoria de poder mais robusta, aborda honestamente apropriação de conhecimentos indígenas, reconhece limitações de escala institucional, e mantém tensões filosóficas produtivamente irresolvidas.
 
 **Compromissos**:
+
 - Honestidade sobre aporias que não podem ser completamente resolvidas
 - Reconhecimento de precedência de tradições não-ocidentais
 - Citação de pensadores específicos em vez de generalização
