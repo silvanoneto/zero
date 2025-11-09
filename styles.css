@@ -977,8 +977,9 @@ body.light-theme .void-message {
     position: relative;
 }
 
-.font-size-button::after {
-    content: 'FONTE';
+/* Legendas dos botões (tooltips) - na ordem da UI */
+.nav-toggle::after {
+    content: 'MENU';
     position: absolute;
     top: -30px;
     left: 50%;
@@ -991,7 +992,7 @@ body.light-theme .void-message {
     letter-spacing: 0.1em;
 }
 
-.font-size-button:hover::after {
+.nav-toggle:hover::after {
     opacity: 0.7;
 }
 
@@ -1013,8 +1014,8 @@ body.light-theme .void-message {
     opacity: 0.7;
 }
 
-.nav-toggle::after {
-    content: 'MENU';
+.font-size-button::after {
+    content: 'FONTE';
     position: absolute;
     top: -30px;
     left: 50%;
@@ -1027,7 +1028,25 @@ body.light-theme .void-message {
     letter-spacing: 0.1em;
 }
 
-.nav-toggle:hover::after {
+.font-size-button:hover::after {
+    opacity: 0.7;
+}
+
+.auto-scroll-button::after {
+    content: 'SCROLL';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.65rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    letter-spacing: 0.1em;
+}
+
+.auto-scroll-button:hover::after {
     opacity: 0.7;
 }
 
@@ -1064,24 +1083,6 @@ body.light-theme .void-message {
 }
 
 .mute-button:hover::after {
-    opacity: 0.7;
-}
-
-.auto-scroll-button::after {
-    content: 'SCROLL';
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.65rem;
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-    letter-spacing: 0.1em;
-}
-
-.auto-scroll-button:hover::after {
     opacity: 0.7;
 }
 
