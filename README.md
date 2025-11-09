@@ -155,26 +155,29 @@ revolucao-cibernetica/
 │   ├── constants.ts       # Constantes (opacidades, raios, configurações)
 │   ├── utils.ts           # Utilitários (cores, geometria, DOM helpers)
 │   ├── state.ts           # Gerenciamento de estado global
-│   └── riz∅ma-full.ts     # Aplicação principal (visualização 3D + cards)
+│   ├── crio.ts            # Aplicação principal index.html (CRIO reader)
+│   └── rizoma-full.ts     # Visualização 3D rizomática (riz∅ma.html)
 ├── dist/                   # JavaScript compilado (gerado automaticamente)
-│   └── riz∅ma-full.js     # Bundle compilado para produção
+│   ├── crio.js            # Bundle CRIO compilado
+│   └── rizoma-full.js     # Bundle rizoma compilado
 ├── assets/                # Recursos estáticos
 │   ├── concepts.json      # 68 conceitos filosóficos estruturados
 │   ├── relations.json     # 289 relações entre conceitos
 │   └── CRIO.mp3           # Áudio de fundo (opcional)
 ├── docs/                  # Documentação
 │   ├── CRIOS.md           # Conteúdo filosófico (~50.000 palavras)
+│   ├── LIVE_RELOAD.md     # Guia do live reload
 │   └── meta-reflexao.md   # Meta-reflexão sobre o projeto
 ├── public/                # Arquivos públicos
 │   ├── manifest.json      # PWA manifest
 │   ├── robots.txt         # Diretivas para crawlers
 │   └── sitemap.xml        # Mapa do site para SEO
-├── .backup/               # Arquivos legados (ignorado pelo git)
+├── .dev-docs/             # Documentação temporária (não versionada)
 ├── .github/workflows/
 │   └── pages.yml         # CI/CD para GitHub Pages
-├── riz∅ma.html           # Interface web principal (visualização 3D)
-├── index.html            # Landing page CRIO
-├── styles.css            # Estilos responsivos
+├── index.html            # Experiência de leitura CRIO (landing page)
+├── riz∅ma.html           # Visualização 3D rizomática
+├── styles.css            # Estilos responsivos completos
 ├── package.json          # Dependências e scripts npm
 ├── tsconfig.json         # Configuração TypeScript
 ├── Makefile              # Comandos de desenvolvimento
@@ -188,8 +191,9 @@ revolucao-cibernetica/
 - `types.ts`: Sistema de tipos (Concept, Relation, Layer, NodeUserData, LineUserData)
 - `constants.ts`: Valores centralizados (SELECTED_OPACITY=1.0, NODE_RADIUS=1.5, etc.)
 - `utils.ts`: Funções utilitárias (lerpColor, randomSpherePoint, showNotification)
-- `state.ts`: Estado global com getters/setters (concepts, nodes, activeLayerFilters)
-- `riz∅ma-full.ts`: Aplicação completa Three.js (visualização 3D + modo cards)
+- `state.ts`: Single source of truth para estado global
+- `crio.ts`: Experiência de leitura CRIO (menu dinâmico, efeitos visuais, autoscroll)
+- `rizoma-full.ts`: Visualização 3D rizomática (scene, rendering, events, cards)
 
 **Dados (assets/):**
 
@@ -204,9 +208,9 @@ revolucao-cibernetica/
 
 **HTML/CSS:**
 
+- `index.html`: Experiência de leitura com menu de navegação dinâmico e efeitos visuais
 - `riz∅ma.html`: Interface com canvas Three.js, legenda de camadas, controles
-- `index.html`: Landing page com carregamento dinâmico de docs/CRIOS.md
-- `styles.css`: Estilos responsivos, tema adaptativo, animações
+- `styles.css`: Estilos responsivos, tema adaptativo, animações (2700+ linhas)
 
 **Build:**
 
@@ -223,6 +227,35 @@ revolucao-cibernetica/
 ---
 
 ## ✨ Recursos e Funcionalidades
+
+### Experiência de Leitura CRIO (index.html)
+
+**Menu de Navegação Dinâmico:**
+- **Botão hambúrguer animado**: Transformação fluida de ☰ → ✕
+- **Seções numeradas**: Navegação estruturada pelos 7 CRIOS + seções adicionais
+- **Previews contextuais**: Primeiras linhas de cada seção ao passar o mouse
+- **Barras de progresso**: Indicadores visuais de leitura em cada seção
+- **Sincronização automática**: Menu acompanha posição do scroll
+- **Tema adaptativo**: Ajustes de cores para modo claro/escuro
+
+**Efeitos Visuais Interativos:**
+- **Partículas flutuantes**: 30 elementos animados em background
+- **Símbolo do vazio (∅)**: Animação de opacidade e escala baseada no scroll
+- **Tremor progressivo**: Intensidade 0-3 aumenta conforme rolagem (20%-80%)
+- **Marcadores laterais**: Indicadores de progresso por seção com preenchimento dinâmico
+- **Auto-scroll meditativo**: Movimento automático suave a 0.5px/frame
+- **Áudio de fundo**: CRIO.mp3 com controles de play/pause
+
+**Performance:**
+- **Cache inteligente**: localStorage com TTL de 7 dias para docs/CRIOS.md
+- **Renderização lazy**: Markdown processado uma vez e reutilizado
+- **GPU acceleration**: Transforms e opacity otimizados
+- **Scroll throttling**: Handlers limitados a 16ms (60fps)
+
+**Interatividade:**
+- **Ícones de tema**: ☾ (lua) e ☀ (sol) com animação de rotação
+- **Persistência**: Tema e posição de scroll salvos em localStorage
+- **Responsivo**: Layout adaptativo para mobile/tablet/desktop
 
 ### Visualização Rizoma (riz∅ma.html)
 
@@ -303,7 +336,6 @@ src/*.ts → tsc → dist/*.js → GitHub Pages
 2. `npm ci` (instalação limpa de dependências)
 3. `npm run build` (compilação TypeScript)
 4. Upload de `dist/` como artifact
-5. Deploy para GitHub Pages
 5. Deploy para GitHub Pages com arquivos compilados
 
 ### Modularização
