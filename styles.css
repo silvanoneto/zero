@@ -912,6 +912,19 @@ body.light-theme .void-message {
     position: relative;
 }
 
+/* Botão de menu integrado à barra */
+.nav-toggle {
+    background: rgba(255, 255, 255, 0.05);
+    border-right: 1px solid var(--glow);
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-radius: 0;
+    margin: -0.5rem 0.5rem -0.5rem -0.6rem;
+    padding: 1rem 1rem;
+    min-width: 48px;
+}
+
 /* Hamburger Menu Animation */
 .hamburger {
     display: flex;
@@ -1095,11 +1108,19 @@ body.light-theme .void-message {
 }
 
 .nav-toggle:hover {
-    transform: rotate(180deg);
+    background: rgba(255, 255, 255, 0.08);
+    border-right-color: var(--glow);
+    transform: none;
+}
+
+.nav-toggle[aria-expanded="true"] {
+    background: rgba(255, 255, 255, 0.1);
+    border-right-color: var(--emergence);
 }
 
 .nav-toggle[aria-expanded="true"]:hover {
-    transform: rotate(0deg);
+    background: rgba(255, 255, 255, 0.12);
+    transform: none;
 }
 
 .nav-toggle:focus-visible,
@@ -1110,16 +1131,14 @@ body.light-theme .void-message {
     outline-offset: 2px;
 }
 
-.nav-toggle:active,
+.nav-toggle:active {
+    background: rgba(255, 255, 255, 0.15);
+}
+
 .riz∅ma-button:active,
 .font-size-button:active,
 .auto-scroll-button:active {
     transform: scale(0.95);
-}
-
-.nav-toggle[aria-expanded="true"] {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: var(--emergence);
 }
 
 /* Autoscroll button active state */
