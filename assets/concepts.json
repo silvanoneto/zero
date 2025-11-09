@@ -1,4 +1,4 @@
-[
+    [
     {
         "id": "vazio",
         "name": "Vazio Que Povoa",
@@ -43,7 +43,7 @@
         "id": "multiplicidade",
         "name": "Multiplicidade Sem Fusão",
         "description": "Somos muitos sem deixar de ser singular. Identidade como padrão dinâmico de relações, não essência fixa.",
-        "connections": ["vazio", "anatman", "pratityasamutpada", "ontologia", "holobionte", "processo", "sujeito", "rizoma", "corposemorgaos", "transindividual"],
+        "connections": ["vazio", "anatman", "pratityasamutpada", "ontologia", "holobionte", "processo", "sujeito", "riz∅ma", "corposemorgaos", "transindividual"],
         "layer": "ontologica",
         "color": "0x66ccff"
     },
@@ -67,7 +67,7 @@
         "id": "devir",
         "name": "Devir (Deleuze)",
         "description": "Devir não é tornar-se outra coisa, mas entrar em zona de indiscernibilidade. Devir-animal, devir-mulher, devir-imperceptível: movimento que desfaz identidades fixas. Ser é devir.",
-        "connections": ["processo", "ocasioes", "multiplicidade", "tempo", "vazio", "composicao", "evento", "rizoma", "corposemorgaos", "futuridadequeer"],
+        "connections": ["processo", "ocasioes", "multiplicidade", "tempo", "vazio", "composicao", "evento", "riz∅ma", "corposemorgaos", "futuridadequeer"],
         "layer": "ontologica",
         "color": "0x66ccff"
     },
@@ -91,7 +91,7 @@
         "id": "conhecimento",
         "name": "Relacionalismo Epistêmico",
         "description": "Conhecimento não é espelho da realidade, mas ferramenta que modifica o usuário que modifica a ferramenta.",
-        "connections": ["recursao", "intracao", "ontologia", "indigena", "placethought", "whanaungatanga", "rizoma", "cuidado"],
+        "connections": ["recursao", "intracao", "ontologia", "indigena", "placethought", "whanaungatanga", "riz∅ma", "cuidado"],
         "layer": "epistemologica",
         "color": "0xff9966"
     },
@@ -235,7 +235,7 @@
         "id": "commons",
         "name": "Commons",
         "description": "Recursos geridos coletivamente. Não propriedade privada nem estatal; regime de co-gestão. Elinor Ostrom: comuns sustentáveis exigem governança distribuída. Terra, água, conhecimento, código.",
-        "connections": ["reciprocidade", "cooperativa", "decrescimento", "terra", "softwarelivre", "rizoma"],
+        "connections": ["reciprocidade", "cooperativa", "decrescimento", "terra", "softwarelivre", "riz∅ma"],
         "layer": "pratica-institucional",
         "color": "0x99ccff"
     },
@@ -283,7 +283,7 @@
         "id": "redesmiceliais",
         "name": "Redes Micelianas",
         "description": "Micélio forma internet natural - rede descentralizada, resiliente, auto-organizante. Paul Stamets: fungos como arquitetos ecológicos. Modelo de infraestrutura relacional.",
-        "connections": ["micorriza", "simbiose", "protocoloaberto", "commons", "terra", "agencia", "rizoma"],
+        "connections": ["micorriza", "simbiose", "protocoloaberto", "commons", "terra", "agencia", "riz∅ma"],
         "layer": "ecologica-material",
         "color": "0xffcc66"
     },
@@ -379,7 +379,7 @@
         "id": "protocoloaberto",
         "name": "Protocolos Abertos",
         "description": "TCP/IP, ActivityPub, SMTP: infraestrutura sem dono. Descentralização como resistência a captura. Interoperabilidade vs jardins murados (walled gardens).",
-        "connections": ["softwarelivre", "commons", "tecnologiaconvivial", "reciprocidade", "agencia", "rizoma"],
+        "connections": ["softwarelivre", "commons", "tecnologiaconvivial", "reciprocidade", "agencia", "riz∅ma"],
         "layer": "pratica-institucional",
         "color": "0x99ccff"
     },
@@ -424,7 +424,7 @@
         "color": "0xff99cc"
     },
     {
-        "id": "rizoma",
+        "id": "riz∅ma",
         "name": "Rizoma",
         "description": "Deleuze/Guattari: estrutura não-hierárquica sem centro. Conecta qualquer ponto a qualquer ponto. Vs árvore (raiz única). Modelo: batata, grama, redes micelianas, internet.",
         "connections": ["multiplicidade", "redesmiceliais", "protocoloaberto", "conhecimento", "devir", "commons", "corposemorgaos"],
@@ -499,7 +499,7 @@
         "id": "corposemorgaos",
         "name": "Corpo sem Órgãos",
         "description": "Deleuze/Guattari: plano de intensidades pré-individuais. Não corpo anatômico, mas campo de forças. CsO não é vazio, mas repleto de potenciais não-organizados. Desterritorialização radical.",
-        "connections": ["devir", "multiplicidade", "afeto", "composicao", "rizoma", "evento"],
+        "connections": ["devir", "multiplicidade", "afeto", "composicao", "riz∅ma", "evento"],
         "layer": "ontologica",
         "color": "0x66ccff"
     },

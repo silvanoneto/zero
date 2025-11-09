@@ -1,0 +1,1736 @@
+[
+  {
+    "from": "vazio",
+    "to": "sunyata",
+    "name": "fundamenta-se em",
+    "description": "O Vazio Que Povoa encontra fundamento filosófico na vacuidade budista"
+  },
+  {
+    "from": "vazio",
+    "to": "anatman",
+    "name": "dissolve",
+    "description": "O vazio dissolve a ilusão de um eu permanente"
+  },
+  {
+    "from": "vazio",
+    "to": "multiplicidade",
+    "name": "possibilita",
+    "description": "O vazio como campo de possibilidades gera multiplicidade"
+  },
+  {
+    "from": "vazio",
+    "to": "recursao",
+    "name": "manifesta",
+    "description": "O vazio se manifesta através de recursão sem fundamento"
+  },
+  {
+    "from": "vazio",
+    "to": "tempo",
+    "name": "precede",
+    "description": "O vazio precede e contém todas as temporalidades"
+  },
+  {
+    "from": "vazio",
+    "to": "processo",
+    "name": "sustenta",
+    "description": "O vazio sustenta o processo contínuo de vir-a-ser"
+  },
+  {
+    "from": "vazio",
+    "to": "ontologia",
+    "name": "fundamenta",
+    "description": "O vazio fundamenta uma ontologia relacional"
+  },
+  {
+    "from": "sunyata",
+    "to": "pratityasamutpada",
+    "name": "condiciona",
+    "description": "A vacuidade é condição para a origem dependente"
+  },
+  {
+    "from": "anatman",
+    "to": "holobionte",
+    "name": "exemplifica-se em",
+    "description": "A ausência de eu fixo se exemplifica no holobionte"
+  },
+  {
+    "from": "pratityasamutpada",
+    "to": "intracao",
+    "name": "converge com",
+    "description": "Origem dependente converge com o conceito de intra-ação"
+  },
+  {
+    "from": "ontologia",
+    "to": "ubuntu",
+    "name": "realiza-se em",
+    "description": "Ontologia relacional se realiza no Ubuntu"
+  },
+  {
+    "from": "ontologia",
+    "to": "indigena",
+    "name": "ressoa em",
+    "description": "Ontologia relacional ressoa em pensamentos indígenas"
+  },
+  {
+    "from": "ontologia",
+    "to": "transindividual",
+    "name": "articula-se como",
+    "description": "Ontologia relacional se articula no nível transindividual"
+  },
+  {
+    "from": "multiplicidade",
+    "to": "riz∅ma",
+    "name": "estrutura-se como",
+    "description": "Multiplicidade se estrutura riz∅maticamente"
+  },
+  {
+    "from": "multiplicidade",
+    "to": "corposemorgaos",
+    "name": "intensifica-se em",
+    "description": "Multiplicidade se intensifica no Corpo sem Órgãos"
+  },
+  {
+    "from": "processo",
+    "to": "ocasioes",
+    "name": "compõe-se de",
+    "description": "Processo se compõe de ocasiões de experiência"
+  },
+  {
+    "from": "processo",
+    "to": "devir",
+    "name": "manifesta-se como",
+    "description": "Processo se manifesta como devir"
+  },
+  {
+    "from": "processo",
+    "to": "estratostempo",
+    "name": "sedimenta-se em",
+    "description": "Processo sedimenta-se em estratos de tempo"
+  },
+  {
+    "from": "devir",
+    "to": "futuridadequeer",
+    "name": "projeta-se em",
+    "description": "Devir se projeta na futuridade queer"
+  },
+  {
+    "from": "intracao",
+    "to": "agencia",
+    "name": "distribui",
+    "description": "Intra-ação distribui agência"
+  },
+  {
+    "from": "intracao",
+    "to": "performatividade",
+    "name": "efetiva",
+    "description": "Intra-ação efetiva performativamente a realidade"
+  },
+  {
+    "from": "recursao",
+    "to": "conhecimento",
+    "name": "problematiza",
+    "description": "Recursão problematiza fundamentos do conhecimento"
+  },
+  {
+    "from": "recursao",
+    "to": "limite",
+    "name": "encontra",
+    "description": "Recursão encontra seus próprios limites"
+  },
+  {
+    "from": "recursao",
+    "to": "hauntologia",
+    "name": "assombra-se em",
+    "description": "Recursão se assombra hauntologicamente"
+  },
+  {
+    "from": "conhecimento",
+    "to": "placethought",
+    "name": "territorializa-se em",
+    "description": "Conhecimento se territorializa no pensamento-lugar"
+  },
+  {
+    "from": "conhecimento",
+    "to": "whanaungatanga",
+    "name": "genealogiza-se em",
+    "description": "Conhecimento se genealogiza no whakapapa"
+  },
+  {
+    "from": "tempo",
+    "to": "memoriacoletiva",
+    "name": "cristaliza-se em",
+    "description": "Tempo se cristaliza em memória coletiva"
+  },
+  {
+    "from": "tempo",
+    "to": "ancestralidade",
+    "name": "entrelaça-se com",
+    "description": "Tempo se entrelaça com ancestralidade"
+  },
+  {
+    "from": "tempo",
+    "to": "setimagera",
+    "name": "expande-se em",
+    "description": "Tempo se expande nas sete gerações"
+  },
+  {
+    "from": "agencia",
+    "to": "sujeito",
+    "name": "constitui",
+    "description": "Agência constitui o sujeito relacional"
+  },
+  {
+    "from": "agencia",
+    "to": "pratica",
+    "name": "cristaliza-se em",
+    "description": "Agência se cristaliza em práticas institucionais"
+  },
+  {
+    "from": "sujeito",
+    "to": "performatividade",
+    "name": "emerge de",
+    "description": "Sujeito emerge de performances iteradas"
+  },
+  {
+    "from": "performatividade",
+    "to": "evento",
+    "name": "produz",
+    "description": "Performatividade produz eventos transformadores"
+  },
+  {
+    "from": "evento",
+    "to": "precariedade",
+    "name": "expõe",
+    "description": "Evento expõe a precariedade ontológica"
+  },
+  {
+    "from": "vulnerabilidade",
+    "to": "reciprocidade",
+    "name": "demanda",
+    "description": "Vulnerabilidade demanda reciprocidade"
+  },
+  {
+    "from": "vulnerabilidade",
+    "to": "cuidado",
+    "name": "requer",
+    "description": "Vulnerabilidade requer ética do cuidado"
+  },
+  {
+    "from": "precariedade",
+    "to": "necropolitica",
+    "name": "politiza-se como",
+    "description": "Precariedade se politiza na necropolítica"
+  },
+  {
+    "from": "ubuntu",
+    "to": "whanaungatanga",
+    "name": "ressoa com",
+    "description": "Ubuntu ressoa com whanaungatanga"
+  },
+  {
+    "from": "indigena",
+    "to": "groundednormativity",
+    "name": "fundamenta-se em",
+    "description": "Pensamento indígena fundamenta normatividade enraizada"
+  },
+  {
+    "from": "placethought",
+    "to": "terra",
+    "name": "pensa através de",
+    "description": "Pensamento-lugar pensa através da terra"
+  },
+  {
+    "from": "groundednormativity",
+    "to": "ressurgencia",
+    "name": "mobiliza",
+    "description": "Normatividade enraizada mobiliza ressurgência"
+  },
+  {
+    "from": "reciprocidade",
+    "to": "commons",
+    "name": "sustenta",
+    "description": "Reciprocidade sustenta os comuns"
+  },
+  {
+    "from": "reciprocidade",
+    "to": "reproducaosocial",
+    "name": "estrutura",
+    "description": "Reciprocidade estrutura reprodução social"
+  },
+  {
+    "from": "terra",
+    "to": "cosmopolitica",
+    "name": "participa de",
+    "description": "Terra participa de decisões cosmopolíticas"
+  },
+  {
+    "from": "terra",
+    "to": "simbiose",
+    "name": "tecea",
+    "description": "Terra tece relações simbióticas"
+  },
+  {
+    "from": "commons",
+    "to": "cooperativa",
+    "name": "organiza-se como",
+    "description": "Commons se organizam em cooperativas"
+  },
+  {
+    "from": "commons",
+    "to": "softwarelivre",
+    "name": "digitaliza-se em",
+    "description": "Commons se digitalizam em software livre"
+  },
+  {
+    "from": "holobionte",
+    "to": "simbiose",
+    "name": "exemplifica",
+    "description": "Holobionte exemplifica simbiose"
+  },
+  {
+    "from": "holobionte",
+    "to": "micorriza",
+    "name": "conecta-se via",
+    "description": "Holobionte se conecta via micorrizas"
+  },
+  {
+    "from": "simbiose",
+    "to": "composicao",
+    "name": "potencializa",
+    "description": "Simbiose potencializa composições"
+  },
+  {
+    "from": "micorriza",
+    "to": "redesmiceliais",
+    "name": "estrutura",
+    "description": "Micorrizas estruturam redes micelianas"
+  },
+  {
+    "from": "redesmiceliais",
+    "to": "protocoloaberto",
+    "name": "inspira",
+    "description": "Redes micelianas inspiram protocolos abertos"
+  },
+  {
+    "from": "extrativismo",
+    "to": "acumulacaoprimitiva",
+    "name": "efetiva",
+    "description": "Extrativismo efetiva acumulação primitiva"
+  },
+  {
+    "from": "extrativismo",
+    "to": "despossessao",
+    "name": "perpetua",
+    "description": "Extrativismo perpetua despossessão"
+  },
+  {
+    "from": "pratica",
+    "to": "assembleia",
+    "name": "manifesta-se em",
+    "description": "Práxis se manifesta em assembleias"
+  },
+  {
+    "from": "cooperativa",
+    "to": "moedascomunitarias",
+    "name": "circula através de",
+    "description": "Cooperativas circulam através de moedas comunitárias"
+  },
+  {
+    "from": "moedascomunitarias",
+    "to": "bancostempo",
+    "name": "evolui para",
+    "description": "Moedas comunitárias evoluem para bancos de tempo"
+  },
+  {
+    "from": "afeto",
+    "to": "composicao",
+    "name": "possibilita",
+    "description": "Afeto possibilita composições potencializadoras"
+  },
+  {
+    "from": "softwarelivre",
+    "to": "protocoloaberto",
+    "name": "implementa-se em",
+    "description": "Software livre se implementa em protocolos abertos"
+  },
+  {
+    "from": "protocoloaberto",
+    "to": "criptografia",
+    "name": "protege-se via",
+    "description": "Protocolos abertos se protegem via criptografia"
+  },
+  {
+    "from": "arterelacional",
+    "to": "afrofuturismo",
+    "name": "especula em",
+    "description": "Arte relacional especula afrofuturisticamente"
+  },
+  {
+    "from": "educacaopopular",
+    "to": "circuloscultura",
+    "name": "pratica-se em",
+    "description": "Educação popular se pratica em círculos de cultura"
+  },
+  {
+    "from": "educacaopopular",
+    "to": "pedagogiaautonomia",
+    "name": "fundamenta-se em",
+    "description": "Educação popular se fundamenta na pedagogia da autonomia"
+  },
+  {
+    "from": "pedagogiaautonomia",
+    "to": "desescolarizacao",
+    "name": "radicaliza-se em",
+    "description": "Pedagogia da autonomia se radicaliza na desescolarização"
+  },
+  {
+    "from": "riz∅ma",
+    "to": "corposemorgaos",
+    "name": "desterritorializa-se em",
+    "description": "Rizoma se desterritorializa no Corpo sem Órgãos"
+  },
+  {
+    "from": "acumulacaoprimitiva",
+    "to": "necropolitica",
+    "name": "administra morte via",
+    "description": "Acumulação primitiva administra morte via necropolítica"
+  },
+  {
+    "from": "memoriacoletiva",
+    "to": "ancestralidade",
+    "name": "ativa",
+    "description": "Memória coletiva ativa ancestralidade"
+  },
+  {
+    "from": "ancestralidade",
+    "to": "afrofuturismo",
+    "name": "projeta-se em",
+    "description": "Ancestralidade se projeta no afrofuturismo"
+  },
+  {
+    "from": "hauntologia",
+    "to": "afrofuturismo",
+    "name": "especula com",
+    "description": "Hauntologia especula com afrofuturismo"
+  },
+  {
+    "from": "afrofuturismo",
+    "to": "futuridadequeer",
+    "name": "entrelaça-se com",
+    "description": "Afrofuturismo se entrelaça com futuridade queer"
+  },
+  {
+    "from": "sunyata",
+    "to": "anatman",
+    "name": "conecta-se com",
+    "description": "Śūnyatā (Vacuidade) conecta-se com Anātman (Não-Eu)"
+  },
+  {
+    "from": "sunyata",
+    "to": "ontologia",
+    "name": "conecta-se com",
+    "description": "Śūnyatā (Vacuidade) conecta-se com Ontologia Relacional Universal"
+  },
+  {
+    "from": "sunyata",
+    "to": "multiplicidade",
+    "name": "conecta-se com",
+    "description": "Śūnyatā (Vacuidade) conecta-se com Multiplicidade Sem Fusão"
+  },
+  {
+    "from": "anatman",
+    "to": "multiplicidade",
+    "name": "dissolve-se em",
+    "description": "Não-eu como multiplicidade sem centro"
+  },
+  {
+    "from": "anatman",
+    "to": "processo",
+    "name": "flui em",
+    "description": "Anātman como processo sem substância"
+  },
+  {
+    "from": "pratityasamutpada",
+    "to": "ontologia",
+    "name": "conecta-se com",
+    "description": "Pratītyasamutpāda conecta-se com Ontologia Relacional Universal"
+  },
+  {
+    "from": "pratityasamutpada",
+    "to": "processo",
+    "name": "fundamenta",
+    "description": "Pratītyasamutpāda fundamenta processo"
+  },
+  {
+    "from": "pratityasamutpada",
+    "to": "multiplicidade",
+    "name": "conecta-se com",
+    "description": "Pratītyasamutpāda conecta-se com Multiplicidade Sem Fusão"
+  },
+  {
+    "from": "ontologia",
+    "to": "intracao",
+    "name": "conecta-se com",
+    "description": "Ontologia Relacional Universal conecta-se com Intra-ação (Barad)"
+  },
+  {
+    "from": "ontologia",
+    "to": "processo",
+    "name": "processa-se como",
+    "description": "Ontologia processa-se"
+  },
+  {
+    "from": "ontologia",
+    "to": "multiplicidade",
+    "name": "conecta-se com",
+    "description": "Ontologia Relacional Universal conecta-se com Multiplicidade Sem Fusão"
+  },
+  {
+    "from": "multiplicidade",
+    "to": "holobionte",
+    "name": "conecta-se com",
+    "description": "Multiplicidade Sem Fusão conecta-se com Holobionte"
+  },
+  {
+    "from": "multiplicidade",
+    "to": "processo",
+    "name": "desdobra-se em",
+    "description": "Multiplicidade desdobra-se em processo"
+  },
+  {
+    "from": "multiplicidade",
+    "to": "sujeito",
+    "name": "dissolve",
+    "description": "Multiplicidade dissolve sujeito unitário"
+  },
+  {
+    "from": "multiplicidade",
+    "to": "transindividual",
+    "name": "articula-se como",
+    "description": "Multiplicidade articula-se como transindividual"
+  },
+  {
+    "from": "processo",
+    "to": "tempo",
+    "name": "desdobra",
+    "description": "Processo desdobra tempo"
+  },
+  {
+    "from": "processo",
+    "to": "intracao",
+    "name": "conecta-se com",
+    "description": "Processo (Whitehead) conecta-se com Intra-ação (Barad)"
+  },
+  {
+    "from": "processo",
+    "to": "holobionte",
+    "name": "conecta-se com",
+    "description": "Processo (Whitehead) conecta-se com Holobionte"
+  },
+  {
+    "from": "processo",
+    "to": "transindividual",
+    "name": "individua-se em",
+    "description": "Processo individua-se transindividualmente"
+  },
+  {
+    "from": "ocasioes",
+    "to": "tempo",
+    "name": "pontua",
+    "description": "Ocasiões pontuam tempo"
+  },
+  {
+    "from": "ocasioes",
+    "to": "vazio",
+    "name": "emerge do",
+    "description": "Ocasiões emergem do vazio"
+  },
+  {
+    "from": "ocasioes",
+    "to": "devir",
+    "name": "conecta-se com",
+    "description": "Ocasiões de Experiência conecta-se com Devir (Deleuze)"
+  },
+  {
+    "from": "ocasioes",
+    "to": "evento",
+    "name": "conecta-se com",
+    "description": "Ocasiões de Experiência conecta-se com Evento (Badiou)"
+  },
+  {
+    "from": "ocasioes",
+    "to": "intracao",
+    "name": "conecta-se com",
+    "description": "Ocasiões de Experiência conecta-se com Intra-ação (Barad)"
+  },
+  {
+    "from": "devir",
+    "to": "multiplicidade",
+    "name": "expressa",
+    "description": "Devir expressa multiplicidade"
+  },
+  {
+    "from": "devir",
+    "to": "tempo",
+    "name": "desdobra",
+    "description": "Devir desdobra tempo"
+  },
+  {
+    "from": "devir",
+    "to": "vazio",
+    "name": "emerge do",
+    "description": "Devir emerge do vazio"
+  },
+  {
+    "from": "devir",
+    "to": "composicao",
+    "name": "conecta-se com",
+    "description": "Devir (Deleuze) conecta-se com Composição de Corpos"
+  },
+  {
+    "from": "devir",
+    "to": "evento",
+    "name": "irrompe como",
+    "description": "Devir irrompe como evento"
+  },
+  {
+    "from": "devir",
+    "to": "riz∅ma",
+    "name": "riz∅matiza-se",
+    "description": "Devir riz∅matiza-se"
+  },
+  {
+    "from": "devir",
+    "to": "corposemorgaos",
+    "name": "conecta-se com",
+    "description": "Devir (Deleuze) conecta-se com Corpo sem Órgãos"
+  },
+  {
+    "from": "intracao",
+    "to": "conhecimento",
+    "name": "conecta-se com",
+    "description": "Intra-ação (Barad) conecta-se com Relacionalismo Epistêmico"
+  },
+  {
+    "from": "intracao",
+    "to": "multiplicidade",
+    "name": "produz",
+    "description": "Intra-ação produz multiplicidade"
+  },
+  {
+    "from": "intracao",
+    "to": "transindividual",
+    "name": "articula-se com",
+    "description": "Intra-ação articula-se com transindividual"
+  },
+  {
+    "from": "recursao",
+    "to": "processo",
+    "name": "conecta-se com",
+    "description": "Recursão Sem Fundamento conecta-se com Processo (Whitehead)"
+  },
+  {
+    "from": "recursao",
+    "to": "evento",
+    "name": "conecta-se com",
+    "description": "Recursão Sem Fundamento conecta-se com Evento (Badiou)"
+  },
+  {
+    "from": "recursao",
+    "to": "agencia",
+    "name": "conecta-se com",
+    "description": "Recursão Sem Fundamento conecta-se com Agência Distribuída"
+  },
+  {
+    "from": "recursao",
+    "to": "multiplicidade",
+    "name": "conecta-se com",
+    "description": "Recursão Sem Fundamento conecta-se com Multiplicidade Sem Fusão"
+  },
+  {
+    "from": "recursao",
+    "to": "memoriacoletiva",
+    "name": "conecta-se com",
+    "description": "Recursão Sem Fundamento conecta-se com Memória Coletiva"
+  },
+  {
+    "from": "recursao",
+    "to": "estratostempo",
+    "name": "conecta-se com",
+    "description": "Recursão Sem Fundamento conecta-se com Estratos de Tempo"
+  },
+  {
+    "from": "conhecimento",
+    "to": "ontologia",
+    "name": "fundamenta-se em",
+    "description": "Epistemologia fundamenta-se em ontologia"
+  },
+  {
+    "from": "conhecimento",
+    "to": "indigena",
+    "name": "aprende de",
+    "description": "Relacionalismo aprende de pensamento indígena"
+  },
+  {
+    "from": "conhecimento",
+    "to": "riz∅ma",
+    "name": "riz∅matiza-se em",
+    "description": "Conhecimento riz∅matiza-se"
+  },
+  {
+    "from": "conhecimento",
+    "to": "cuidado",
+    "name": "entrelaça-se com",
+    "description": "Conhecimento entrelaça-se com cuidado"
+  },
+  {
+    "from": "tempo",
+    "to": "evento",
+    "name": "conecta-se com",
+    "description": "Tempo Entrelaçado conecta-se com Evento (Badiou)"
+  },
+  {
+    "from": "tempo",
+    "to": "estratostempo",
+    "name": "conecta-se com",
+    "description": "Tempo Entrelaçado conecta-se com Estratos de Tempo"
+  },
+  {
+    "from": "tempo",
+    "to": "futuridadequeer",
+    "name": "conecta-se com",
+    "description": "Tempo Entrelaçado conecta-se com Futuridade Queer"
+  },
+  {
+    "from": "limite",
+    "to": "tempo",
+    "name": "marca",
+    "description": "Limite marca tempo"
+  },
+  {
+    "from": "limite",
+    "to": "vazio",
+    "name": "bordeja",
+    "description": "Limite bordeja vazio"
+  },
+  {
+    "from": "limite",
+    "to": "evento",
+    "name": "conecta-se com",
+    "description": "Limite conecta-se com Evento (Badiou)"
+  },
+  {
+    "from": "limite",
+    "to": "hauntologia",
+    "name": "conecta-se com",
+    "description": "Limite conecta-se com Hauntologia"
+  },
+  {
+    "from": "limite",
+    "to": "setimagera",
+    "name": "projeta",
+    "description": "Limite projeta sete gerações"
+  },
+  {
+    "from": "agencia",
+    "to": "performatividade",
+    "name": "realiza-se por",
+    "description": "Agência se realiza performativamente"
+  },
+  {
+    "from": "agencia",
+    "to": "ontologia",
+    "name": "distribui-se em",
+    "description": "Agência distribuída ontologicamente"
+  },
+  {
+    "from": "sujeito",
+    "to": "evento",
+    "name": "conecta-se com",
+    "description": "Sujeito Relacional conecta-se com Evento (Badiou)"
+  },
+  {
+    "from": "sujeito",
+    "to": "memoriacoletiva",
+    "name": "conecta-se com",
+    "description": "Sujeito Relacional conecta-se com Memória Coletiva"
+  },
+  {
+    "from": "sujeito",
+    "to": "transindividual",
+    "name": "individua-se como",
+    "description": "Sujeito individua-se transindividualmente"
+  },
+  {
+    "from": "performatividade",
+    "to": "afrofuturismo",
+    "name": "conecta-se com",
+    "description": "Performatividade conecta-se com Afrofuturismo"
+  },
+  {
+    "from": "performatividade",
+    "to": "futuridadequeer",
+    "name": "conecta-se com",
+    "description": "Performatividade conecta-se com Futuridade Queer"
+  },
+  {
+    "from": "evento",
+    "to": "corposemorgaos",
+    "name": "conecta-se com",
+    "description": "Evento (Badiou) conecta-se com Corpo sem Órgãos"
+  },
+  {
+    "from": "evento",
+    "to": "necropolitica",
+    "name": "resiste a",
+    "description": "Evento resiste à necropolítica"
+  },
+  {
+    "from": "evento",
+    "to": "futuridadequeer",
+    "name": "abre",
+    "description": "Evento abre futuridade queer"
+  },
+  {
+    "from": "vulnerabilidade",
+    "to": "afeto",
+    "name": "conecta-se com",
+    "description": "Vulnerabilidade conecta-se com Afeto Spinozista"
+  },
+  {
+    "from": "vulnerabilidade",
+    "to": "ubuntu",
+    "name": "conecta-se com",
+    "description": "Vulnerabilidade conecta-se com Ubuntu"
+  },
+  {
+    "from": "vulnerabilidade",
+    "to": "holobionte",
+    "name": "conecta-se com",
+    "description": "Vulnerabilidade conecta-se com Holobionte"
+  },
+  {
+    "from": "vulnerabilidade",
+    "to": "reproducaosocial",
+    "name": "conecta-se com",
+    "description": "Vulnerabilidade conecta-se com Reprodução Social"
+  },
+  {
+    "from": "vulnerabilidade",
+    "to": "necropolitica",
+    "name": "conecta-se com",
+    "description": "Vulnerabilidade conecta-se com Necropolítica"
+  },
+  {
+    "from": "precariedade",
+    "to": "vulnerabilidade",
+    "name": "intensifica",
+    "description": "Precariedade intensifica vulnerabilidade"
+  },
+  {
+    "from": "precariedade",
+    "to": "limite",
+    "name": "conecta-se com",
+    "description": "Precariedade conecta-se com Limite"
+  },
+  {
+    "from": "precariedade",
+    "to": "normatividade",
+    "name": "conecta-se com",
+    "description": "Precariedade conecta-se com Normatividade Relacional"
+  },
+  {
+    "from": "precariedade",
+    "to": "extrativismo",
+    "name": "conecta-se com",
+    "description": "Precariedade conecta-se com Extrativismo"
+  },
+  {
+    "from": "precariedade",
+    "to": "despossessao",
+    "name": "conecta-se com",
+    "description": "Precariedade conecta-se com Despossessão"
+  },
+  {
+    "from": "normatividade",
+    "to": "limite",
+    "name": "conecta-se com",
+    "description": "Normatividade Relacional conecta-se com Limite"
+  },
+  {
+    "from": "normatividade",
+    "to": "performatividade",
+    "name": "realiza-se por",
+    "description": "Normatividade realiza-se performativamente"
+  },
+  {
+    "from": "normatividade",
+    "to": "vulnerabilidade",
+    "name": "reconhece",
+    "description": "Normatividade reconhece vulnerabilidade"
+  },
+  {
+    "from": "normatividade",
+    "to": "groundednormativity",
+    "name": "conecta-se com",
+    "description": "Normatividade Relacional conecta-se com Grounded Normativity"
+  },
+  {
+    "from": "normatividade",
+    "to": "conhecimento",
+    "name": "conecta-se com",
+    "description": "Normatividade Relacional conecta-se com Relacionalismo Epistêmico"
+  },
+  {
+    "from": "ubuntu",
+    "to": "reciprocidade",
+    "name": "conecta-se com",
+    "description": "Ubuntu conecta-se com Reciprocidade"
+  },
+  {
+    "from": "ubuntu",
+    "to": "indigena",
+    "name": "conecta-se com",
+    "description": "Ubuntu conecta-se com Pensamento Indígena"
+  },
+  {
+    "from": "ubuntu",
+    "to": "cuidado",
+    "name": "conecta-se com",
+    "description": "Ubuntu conecta-se com Ética do Cuidado"
+  },
+  {
+    "from": "ubuntu",
+    "to": "transindividual",
+    "name": "conecta-se com",
+    "description": "Ubuntu conecta-se com Transindividual"
+  },
+  {
+    "from": "indigena",
+    "to": "placethought",
+    "name": "pratica",
+    "description": "Pensamento indígena pratica place-thought"
+  },
+  {
+    "from": "indigena",
+    "to": "whanaungatanga",
+    "name": "pratica",
+    "description": "Pensamento indígena pratica whanaungatanga"
+  },
+  {
+    "from": "indigena",
+    "to": "terra",
+    "name": "relaciona-se com",
+    "description": "Pensamento indígena relaciona-se com terra"
+  },
+  {
+    "from": "indigena",
+    "to": "ancestralidade",
+    "name": "conecta-se com",
+    "description": "Pensamento Indígena conecta-se com Ancestralidade"
+  },
+  {
+    "from": "placethought",
+    "to": "ontologia",
+    "name": "conecta-se com",
+    "description": "Place-Thought conecta-se com Ontologia Relacional Universal"
+  },
+  {
+    "from": "placethought",
+    "to": "groundednormativity",
+    "name": "conecta-se com",
+    "description": "Place-Thought conecta-se com Grounded Normativity"
+  },
+  {
+    "from": "placethought",
+    "to": "ancestralidade",
+    "name": "conecta-se com",
+    "description": "Place-Thought conecta-se com Ancestralidade"
+  },
+  {
+    "from": "groundednormativity",
+    "to": "terra",
+    "name": "enraíza-se em",
+    "description": "Normatividade enraíza-se na terra"
+  },
+  {
+    "from": "groundednormativity",
+    "to": "reciprocidade",
+    "name": "pratica",
+    "description": "Normatividade pratica reciprocidade"
+  },
+  {
+    "from": "groundednormativity",
+    "to": "acumulacaoprimitiva",
+    "name": "conecta-se com",
+    "description": "Grounded Normativity conecta-se com Acumulação Primitiva"
+  },
+  {
+    "from": "groundednormativity",
+    "to": "despossessao",
+    "name": "conecta-se com",
+    "description": "Grounded Normativity conecta-se com Despossessão"
+  },
+  {
+    "from": "groundednormativity",
+    "to": "necropolitica",
+    "name": "resiste a",
+    "description": "Normatividade territorial resiste à necropolítica"
+  },
+  {
+    "from": "ressurgencia",
+    "to": "indigena",
+    "name": "conecta-se com",
+    "description": "Ressurgência Indígena conecta-se com Pensamento Indígena"
+  },
+  {
+    "from": "ressurgencia",
+    "to": "evento",
+    "name": "conecta-se com",
+    "description": "Ressurgência Indígena conecta-se com Evento (Badiou)"
+  },
+  {
+    "from": "ressurgencia",
+    "to": "cosmopolitica",
+    "name": "conecta-se com",
+    "description": "Ressurgência Indígena conecta-se com Cosmopolítica"
+  },
+  {
+    "from": "ressurgencia",
+    "to": "terra",
+    "name": "reconecta-se com",
+    "description": "Ressurgência reconecta-se com terra"
+  },
+  {
+    "from": "whanaungatanga",
+    "to": "placethought",
+    "name": "conecta-se com",
+    "description": "Whanaungatanga conecta-se com Place-Thought"
+  },
+  {
+    "from": "whanaungatanga",
+    "to": "ontologia",
+    "name": "conecta-se com",
+    "description": "Whanaungatanga conecta-se com Ontologia Relacional Universal"
+  },
+  {
+    "from": "whanaungatanga",
+    "to": "cuidado",
+    "name": "conecta-se com",
+    "description": "Whanaungatanga conecta-se com Ética do Cuidado"
+  },
+  {
+    "from": "reciprocidade",
+    "to": "cooperativa",
+    "name": "conecta-se com",
+    "description": "Reciprocidade conecta-se com Cooperativas"
+  },
+  {
+    "from": "reciprocidade",
+    "to": "decrescimento",
+    "name": "conecta-se com",
+    "description": "Reciprocidade conecta-se com Decrescimento"
+  },
+  {
+    "from": "reciprocidade",
+    "to": "cuidado",
+    "name": "conecta-se com",
+    "description": "Reciprocidade conecta-se com Ética do Cuidado"
+  },
+  {
+    "from": "terra",
+    "to": "holobionte",
+    "name": "conecta-se com",
+    "description": "Terra Como Sujeito conecta-se com Holobionte"
+  },
+  {
+    "from": "terra",
+    "to": "setimagera",
+    "name": "conecta-se com",
+    "description": "Terra Como Sujeito conecta-se com Sétima Geração"
+  },
+  {
+    "from": "commons",
+    "to": "decrescimento",
+    "name": "possibilita",
+    "description": "Commons possibilitam decrescimento"
+  },
+  {
+    "from": "commons",
+    "to": "terra",
+    "name": "enraíza-se em",
+    "description": "Commons enraízam-se na terra"
+  },
+  {
+    "from": "commons",
+    "to": "riz∅ma",
+    "name": "riz∅matiza-se em",
+    "description": "Commons riz∅matizam-se"
+  },
+  {
+    "from": "cosmopolitica",
+    "to": "commons",
+    "name": "conecta-se com",
+    "description": "Cosmopolítica conecta-se com Commons"
+  },
+  {
+    "from": "cosmopolitica",
+    "to": "placethought",
+    "name": "territorializa-se em",
+    "description": "Cosmopolítica territorializa-se em lugar"
+  },
+  {
+    "from": "cosmopolitica",
+    "to": "whanaungatanga",
+    "name": "pratica-se como",
+    "description": "Cosmopolítica pratica-se como whanaungatanga"
+  },
+  {
+    "from": "cosmopolitica",
+    "to": "pratica",
+    "name": "realiza-se como",
+    "description": "Cosmopolítica realiza-se como práxis"
+  },
+  {
+    "from": "decrescimento",
+    "to": "terra",
+    "name": "respeita",
+    "description": "Decrescimento respeita a terra"
+  },
+  {
+    "from": "decrescimento",
+    "to": "limite",
+    "name": "reconhece",
+    "description": "Decrescimento reconhece limites"
+  },
+  {
+    "from": "decrescimento",
+    "to": "acumulacaoprimitiva",
+    "name": "conecta-se com",
+    "description": "Decrescimento conecta-se com Acumulação Primitiva"
+  },
+  {
+    "from": "holobionte",
+    "to": "decrescimento",
+    "name": "conecta-se com",
+    "description": "Holobionte conecta-se com Decrescimento"
+  },
+  {
+    "from": "simbiose",
+    "to": "micorriza",
+    "name": "conecta-se com",
+    "description": "Simbiose conecta-se com Micorrizas"
+  },
+  {
+    "from": "simbiose",
+    "to": "reciprocidade",
+    "name": "conecta-se com",
+    "description": "Simbiose conecta-se com Reciprocidade"
+  },
+  {
+    "from": "simbiose",
+    "to": "multiplicidade",
+    "name": "conecta-se com",
+    "description": "Simbiose conecta-se com Multiplicidade Sem Fusão"
+  },
+  {
+    "from": "micorriza",
+    "to": "terra",
+    "name": "conecta",
+    "description": "Micorrizas conectam terra"
+  },
+  {
+    "from": "micorriza",
+    "to": "reciprocidade",
+    "name": "pratica",
+    "description": "Micorrizas praticam reciprocidade"
+  },
+  {
+    "from": "micorriza",
+    "to": "commons",
+    "name": "conecta-se com",
+    "description": "Micorrizas conecta-se com Commons"
+  },
+  {
+    "from": "redesmiceliais",
+    "to": "simbiose",
+    "name": "pratica",
+    "description": "Redes praticam simbiose"
+  },
+  {
+    "from": "redesmiceliais",
+    "to": "commons",
+    "name": "conecta-se com",
+    "description": "Redes Micelianas conecta-se com Commons"
+  },
+  {
+    "from": "redesmiceliais",
+    "to": "terra",
+    "name": "conecta",
+    "description": "Redes conectam terra"
+  },
+  {
+    "from": "redesmiceliais",
+    "to": "agencia",
+    "name": "conecta-se com",
+    "description": "Redes Micelianas conecta-se com Agência Distribuída"
+  },
+  {
+    "from": "redesmiceliais",
+    "to": "riz∅ma",
+    "name": "assemelha-se a",
+    "description": "Redes micelianas assemelham-se a riz∅ma"
+  },
+  {
+    "from": "extrativismo",
+    "to": "commons",
+    "name": "conecta-se com",
+    "description": "Extrativismo conecta-se com Commons"
+  },
+  {
+    "from": "extrativismo",
+    "to": "decrescimento",
+    "name": "conecta-se com",
+    "description": "Extrativismo conecta-se com Decrescimento"
+  },
+  {
+    "from": "extrativismo",
+    "to": "reciprocidade",
+    "name": "nega",
+    "description": "Extrativismo nega reciprocidade"
+  },
+  {
+    "from": "extrativismo",
+    "to": "groundednormativity",
+    "name": "viola",
+    "description": "Extrativismo viola normatividade territorial"
+  },
+  {
+    "from": "extrativismo",
+    "to": "terra",
+    "name": "explora",
+    "description": "Extrativismo explora a terra"
+  },
+  {
+    "from": "extrativismo",
+    "to": "reproducaosocial",
+    "name": "destrói",
+    "description": "Extrativismo destrói reprodução social"
+  },
+  {
+    "from": "pratica",
+    "to": "sujeito",
+    "name": "forma",
+    "description": "Práxis forma sujeito"
+  },
+  {
+    "from": "pratica",
+    "to": "commons",
+    "name": "conecta-se com",
+    "description": "Práxis Institucional conecta-se com Commons"
+  },
+  {
+    "from": "pratica",
+    "to": "processo",
+    "name": "atualiza",
+    "description": "Práxis atualiza processo"
+  },
+  {
+    "from": "pratica",
+    "to": "tempo",
+    "name": "transforma",
+    "description": "Práxis transforma tempo"
+  },
+  {
+    "from": "pratica",
+    "to": "cooperativa",
+    "name": "conecta-se com",
+    "description": "Práxis Institucional conecta-se com Cooperativas"
+  },
+  {
+    "from": "cooperativa",
+    "to": "agencia",
+    "name": "conecta-se com",
+    "description": "Cooperativas conecta-se com Agência Distribuída"
+  },
+  {
+    "from": "cooperativa",
+    "to": "decrescimento",
+    "name": "viabiliza",
+    "description": "Cooperativas viabilizam decrescimento"
+  },
+  {
+    "from": "assembleia",
+    "to": "performatividade",
+    "name": "performa",
+    "description": "Assembleia performa democracia"
+  },
+  {
+    "from": "assembleia",
+    "to": "sujeito",
+    "name": "constitui",
+    "description": "Assembleia constitui sujeitos coletivos"
+  },
+  {
+    "from": "assembleia",
+    "to": "cosmopolitica",
+    "name": "pratica",
+    "description": "Assembleia como prática cosmopolítica"
+  },
+  {
+    "from": "assembleia",
+    "to": "evento",
+    "name": "cria",
+    "description": "Assembleia cria evento político"
+  },
+  {
+    "from": "tecnologiaconvivial",
+    "to": "pratica",
+    "name": "conecta-se com",
+    "description": "Tecnologias Conviviais conecta-se com Práxis Institucional"
+  },
+  {
+    "from": "tecnologiaconvivial",
+    "to": "limite",
+    "name": "conecta-se com",
+    "description": "Tecnologias Conviviais conecta-se com Limite"
+  },
+  {
+    "from": "tecnologiaconvivial",
+    "to": "commons",
+    "name": "conecta-se com",
+    "description": "Tecnologias Conviviais conecta-se com Commons"
+  },
+  {
+    "from": "tecnologiaconvivial",
+    "to": "softwarelivre",
+    "name": "conecta-se com",
+    "description": "Tecnologias Conviviais conecta-se com Software Livre"
+  },
+  {
+    "from": "tecnologiaconvivial",
+    "to": "decrescimento",
+    "name": "conecta-se com",
+    "description": "Tecnologias Conviviais conecta-se com Decrescimento"
+  },
+  {
+    "from": "tecnologiaconvivial",
+    "to": "desescolarizacao",
+    "name": "conecta-se com",
+    "description": "Tecnologias Conviviais conecta-se com Desescolarização"
+  },
+  {
+    "from": "moedascomunitarias",
+    "to": "reciprocidade",
+    "name": "circulam",
+    "description": "Moedas circulam reciprocidade"
+  },
+  {
+    "from": "moedascomunitarias",
+    "to": "commons",
+    "name": "conecta-se com",
+    "description": "Moedas Comunitárias conecta-se com Commons"
+  },
+  {
+    "from": "moedascomunitarias",
+    "to": "decrescimento",
+    "name": "conecta-se com",
+    "description": "Moedas Comunitárias conecta-se com Decrescimento"
+  },
+  {
+    "from": "moedascomunitarias",
+    "to": "pratica",
+    "name": "implementa",
+    "description": "Moedas implementam práxis"
+  },
+  {
+    "from": "bancostempo",
+    "to": "reciprocidade",
+    "name": "pratica",
+    "description": "Pratica reciprocidade temporal"
+  },
+  {
+    "from": "bancostempo",
+    "to": "cooperativa",
+    "name": "organiza",
+    "description": "Bancos organizam cooperação temporal"
+  },
+  {
+    "from": "bancostempo",
+    "to": "normatividade",
+    "name": "estabelece",
+    "description": "Estabelece normatividade da reciprocidade"
+  },
+  {
+    "from": "bancostempo",
+    "to": "commons",
+    "name": "compartilha",
+    "description": "Bancos de tempo compartilham commons temporais"
+  },
+  {
+    "from": "circuloscultura",
+    "to": "assembleia",
+    "name": "conecta-se com",
+    "description": "Círculos de Cultura (Freire) conecta-se com Assembleias"
+  },
+  {
+    "from": "circuloscultura",
+    "to": "conhecimento",
+    "name": "co-cria",
+    "description": "Círculos co-criam conhecimento"
+  },
+  {
+    "from": "circuloscultura",
+    "to": "pratica",
+    "name": "transforma em",
+    "description": "Círculos transformam em práxis"
+  },
+  {
+    "from": "circuloscultura",
+    "to": "performatividade",
+    "name": "performa",
+    "description": "Círculos performam pedagogia"
+  },
+  {
+    "from": "afeto",
+    "to": "agencia",
+    "name": "constitui",
+    "description": "Afetos constituem capacidades de agência"
+  },
+  {
+    "from": "afeto",
+    "to": "ontologia",
+    "name": "conecta-se em",
+    "description": "Afetos como conexões ontológicas"
+  },
+  {
+    "from": "afeto",
+    "to": "processo",
+    "name": "impulsiona",
+    "description": "Afetos impulsionam processos"
+  },
+  {
+    "from": "afeto",
+    "to": "corposemorgaos",
+    "name": "intensifica-se em",
+    "description": "Afetos intensificam-se no CsO"
+  },
+  {
+    "from": "composicao",
+    "to": "holobionte",
+    "name": "forma",
+    "description": "Composição forma holobionte"
+  },
+  {
+    "from": "composicao",
+    "to": "agencia",
+    "name": "conecta-se com",
+    "description": "Composição de Corpos conecta-se com Agência Distribuída"
+  },
+  {
+    "from": "composicao",
+    "to": "vulnerabilidade",
+    "name": "expõe",
+    "description": "Composição expõe vulnerabilidade"
+  },
+  {
+    "from": "composicao",
+    "to": "multiplicidade",
+    "name": "expressa",
+    "description": "Composição expressa multiplicidade"
+  },
+  {
+    "from": "composicao",
+    "to": "corposemorgaos",
+    "name": "intensifica-se em",
+    "description": "Composição intensifica-se no CsO"
+  },
+  {
+    "from": "softwarelivre",
+    "to": "reciprocidade",
+    "name": "conecta-se com",
+    "description": "Software Livre conecta-se com Reciprocidade"
+  },
+  {
+    "from": "softwarelivre",
+    "to": "extrativismo",
+    "name": "conecta-se com",
+    "description": "Software Livre conecta-se com Extrativismo"
+  },
+  {
+    "from": "protocoloaberto",
+    "to": "commons",
+    "name": "conecta-se com",
+    "description": "Protocolos Abertos conecta-se com Commons"
+  },
+  {
+    "from": "protocoloaberto",
+    "to": "tecnologiaconvivial",
+    "name": "implementa",
+    "description": "Protocolos implementam convivialidade"
+  },
+  {
+    "from": "protocoloaberto",
+    "to": "reciprocidade",
+    "name": "possibilita",
+    "description": "Protocolos possibilitam reciprocidade"
+  },
+  {
+    "from": "protocoloaberto",
+    "to": "agencia",
+    "name": "conecta-se com",
+    "description": "Protocolos Abertos conecta-se com Agência Distribuída"
+  },
+  {
+    "from": "protocoloaberto",
+    "to": "riz∅ma",
+    "name": "estrutura",
+    "description": "Protocolos estruturam riz∅ma"
+  },
+  {
+    "from": "criptografia",
+    "to": "tecnologiaconvivial",
+    "name": "possibilita",
+    "description": "Criptografia possibilita convivialidade"
+  },
+  {
+    "from": "criptografia",
+    "to": "vulnerabilidade",
+    "name": "protege",
+    "description": "Criptografia protege vulnerabilidade"
+  },
+  {
+    "from": "criptografia",
+    "to": "agencia",
+    "name": "conecta-se com",
+    "description": "Criptografia conecta-se com Agência Distribuída"
+  },
+  {
+    "from": "criptografia",
+    "to": "limite",
+    "name": "estabelece",
+    "description": "Criptografia estabelece limites"
+  },
+  {
+    "from": "arterelacional",
+    "to": "performatividade",
+    "name": "atua por",
+    "description": "Arte atua performativamente"
+  },
+  {
+    "from": "arterelacional",
+    "to": "evento",
+    "name": "produz",
+    "description": "Arte relacional produz eventos"
+  },
+  {
+    "from": "arterelacional",
+    "to": "afeto",
+    "name": "conecta-se com",
+    "description": "Arte Relacional conecta-se com Afeto Spinozista"
+  },
+  {
+    "from": "arterelacional",
+    "to": "composicao",
+    "name": "compõe",
+    "description": "Arte compõe corpos relacionais"
+  },
+  {
+    "from": "arterelacional",
+    "to": "pratica",
+    "name": "transforma",
+    "description": "Arte transforma práxis institucional"
+  },
+  {
+    "from": "educacaopopular",
+    "to": "conhecimento",
+    "name": "conecta-se com",
+    "description": "Educação Popular conecta-se com Relacionalismo Epistêmico"
+  },
+  {
+    "from": "educacaopopular",
+    "to": "sujeito",
+    "name": "forma",
+    "description": "Educação popular forma sujeitos"
+  },
+  {
+    "from": "educacaopopular",
+    "to": "performatividade",
+    "name": "performa",
+    "description": "Educação popular performa emancipação"
+  },
+  {
+    "from": "educacaopopular",
+    "to": "indigena",
+    "name": "aprende de",
+    "description": "Educação popular aprende de pensamento indígena"
+  },
+  {
+    "from": "educacaopopular",
+    "to": "cuidado",
+    "name": "conecta-se com",
+    "description": "Educação Popular conecta-se com Ética do Cuidado"
+  },
+  {
+    "from": "pedagogiaautonomia",
+    "to": "agencia",
+    "name": "conecta-se com",
+    "description": "Pedagogia da Autonomia conecta-se com Agência Distribuída"
+  },
+  {
+    "from": "pedagogiaautonomia",
+    "to": "vulnerabilidade",
+    "name": "reconhece",
+    "description": "Pedagogia reconhece vulnerabilidade"
+  },
+  {
+    "from": "pedagogiaautonomia",
+    "to": "normatividade",
+    "name": "conecta-se com",
+    "description": "Pedagogia da Autonomia conecta-se com Normatividade Relacional"
+  },
+  {
+    "from": "desescolarizacao",
+    "to": "limite",
+    "name": "questiona",
+    "description": "Desescolarização questiona limites institucionais"
+  },
+  {
+    "from": "desescolarizacao",
+    "to": "commons",
+    "name": "conecta-se com",
+    "description": "Desescolarização conecta-se com Commons"
+  },
+  {
+    "from": "desescolarizacao",
+    "to": "reciprocidade",
+    "name": "favorece",
+    "description": "Desescolarização favorece reciprocidade"
+  },
+  {
+    "from": "cuidado",
+    "to": "afeto",
+    "name": "conecta-se com",
+    "description": "Ética do Cuidado conecta-se com Afeto Spinozista"
+  },
+  {
+    "from": "cuidado",
+    "to": "reproducaosocial",
+    "name": "sustenta",
+    "description": "Cuidado sustenta reprodução social"
+  },
+  {
+    "from": "acumulacaoprimitiva",
+    "to": "despossessao",
+    "name": "produz",
+    "description": "Acumulação primitiva produz despossessão sistemática"
+  },
+  {
+    "from": "acumulacaoprimitiva",
+    "to": "commons",
+    "name": "expropria",
+    "description": "A acumulação primitiva expropria os commons através do cercamento"
+  },
+  {
+    "from": "acumulacaoprimitiva",
+    "to": "reproducaosocial",
+    "name": "subordina",
+    "description": "Subordina a reprodução social à acumulação"
+  },
+  {
+    "from": "despossessao",
+    "to": "commons",
+    "name": "conecta-se com",
+    "description": "Despossessão conecta-se com Commons"
+  },
+  {
+    "from": "despossessao",
+    "to": "reproducaosocial",
+    "name": "ameaça",
+    "description": "Despossessão ameaça reprodução social"
+  },
+  {
+    "from": "despossessao",
+    "to": "necropolitica",
+    "name": "articula-se com",
+    "description": "Despossessão articula-se com necropolítica"
+  },
+  {
+    "from": "memoriacoletiva",
+    "to": "indigena",
+    "name": "conecta-se com",
+    "description": "Memória Coletiva conecta-se com Pensamento Indígena"
+  },
+  {
+    "from": "memoriacoletiva",
+    "to": "conhecimento",
+    "name": "conecta-se com",
+    "description": "Memória Coletiva conecta-se com Relacionalismo Epistêmico"
+  },
+  {
+    "from": "memoriacoletiva",
+    "to": "estratostempo",
+    "name": "conecta-se com",
+    "description": "Memória Coletiva conecta-se com Estratos de Tempo"
+  },
+  {
+    "from": "ancestralidade",
+    "to": "ubuntu",
+    "name": "conecta-se em",
+    "description": "Ubuntu como conexão ancestral"
+  },
+  {
+    "from": "ancestralidade",
+    "to": "setimagera",
+    "name": "projeta",
+    "description": "Ancestrais projetam sete gerações"
+  },
+  {
+    "from": "ancestralidade",
+    "to": "estratostempo",
+    "name": "estratifica",
+    "description": "Ancestrais estratificam tempos"
+  },
+  {
+    "from": "hauntologia",
+    "to": "tempo",
+    "name": "desconjunta",
+    "description": "Hauntologia desconjunta tempo"
+  },
+  {
+    "from": "hauntologia",
+    "to": "memoriacoletiva",
+    "name": "assombra",
+    "description": "Hauntologia assombra memória"
+  },
+  {
+    "from": "afrofuturismo",
+    "to": "tempo",
+    "name": "reimagina",
+    "description": "Reimagina temporalidades não-lineares"
+  },
+  {
+    "from": "afrofuturismo",
+    "to": "indigena",
+    "name": "dialoga com",
+    "description": "Futurismos negros e indígenas em diálogo"
+  },
+  {
+    "from": "setimagera",
+    "to": "indigena",
+    "name": "conecta-se com",
+    "description": "Sétima Geração conecta-se com Pensamento Indígena"
+  },
+  {
+    "from": "setimagera",
+    "to": "decrescimento",
+    "name": "conecta-se com",
+    "description": "Sétima Geração conecta-se com Decrescimento"
+  },
+  {
+    "from": "futuridadequeer",
+    "to": "hauntologia",
+    "name": "assombra-se em",
+    "description": "Futuridade queer assombra-se"
+  }
+]

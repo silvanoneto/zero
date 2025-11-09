@@ -5,6 +5,17 @@
  * flutuam em uma esfera, evitando colisões através da terceira dimensão.
  */
 
+// @ts-nocheck - Desabilita verificação temporária durante migração
+
+// ============================================================================
+// IMPORTS
+// ============================================================================
+
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import type { Concept, Relation, NodeUserData, LineUserData, ViewMode, Layer } from './types';
+import { LAYER_NAMES } from './constants';
+
 // ============================================================================
 // TEMA (SINCRONIZADO COM INDEX.HTML)
 // ============================================================================
@@ -19,8 +30,9 @@ if (savedTheme === 'light') {
 // DADOS DO RIZOMA
 // ============================================================================
 
-// Conceitos serão carregados do arquivo JSON
+// Conceitos e relações serão carregados dos arquivos JSON
 let concepts = [];
+let relations = []; // Nomes das relações entre conceitos
 
 // ============================================================================
 // VARIÁVEIS GLOBAIS
@@ -35,6 +47,7 @@ let isAnimating = true;
 let showAllConnections = false;
 let autoRotate = true;
 let viewMode = '3d'; // '3d' or 'cards'
+let cameraMode = 'outside'; // 'inside' (dentro do caos) ou 'outside' (fora do caos)
 let animationSpeed = 1.0; // Velocidade da animação
 let rotationSpeed = 0.001; // Velocidade de rotação
 let selectedCards = new Set(); // Conjunto de cards/nós selecionados (seleção múltipla)
@@ -43,7 +56,7 @@ const randomAngle = Math.random() * Math.PI * 2;
 let rotationDirection = { x: Math.cos(randomAngle), z: Math.sin(randomAngle) }; // Direção aleatória de rotação
 let rotationAngle = 0; // Ângulo atual de rotação
 let cameraLookAtTarget = null; // Ponto onde a câmera está olhando (null = centro)
-let pulseIntensity = 1.0; // Intensidade do pulso
+let pulseIntensity = 0.0; // Intensidade do pulso (ativado apenas para hover/seleção)
 let userInteracting = false; // Flag para saber se usuário está interagindo
 let autoRotateTimeout = null; // Timer para retomar rotação automática
 let labelsVisible = true; // Controle de visibilidade de labels para otimização
@@ -53,9 +66,47 @@ let performanceMode = false; // Modo de performance reduzida
 let fpsHistory = []; // Histórico de FPS para auto-ajuste
 let lastFPSCheck = 0;
 
+// Superfície esférica
+let sphereMesh = null;
+let sphereVisible = false;
+
+// Variáveis para controle de drag
+let isDragging = false;
+let hasDragged = false; // Flag para distinguir clique de arrasto
+let mouseDownPosition = { x: 0, y: 0 };
+let previousMousePosition = { x: 0, y: 0 };
+const dragThreshold = 5; // pixels mínimos para considerar como arrasto
+
 // Detectar tema claro/escuro
 const isLightTheme = () => document.body.classList.contains('light-theme');
 const getGlowColor = () => isLightTheme() ? 0x1a1a1a : 0xffffff;
+
+// Opacidades para indicar seleção - vidro colorizado
+const SELECTED_OPACITY = 1.0;      // Totalmente opaco quando selecionado
+const CONNECTED_OPACITY_L1 = 0.9;  // Nível 1 - bem opaco
+const CONNECTED_OPACITY_L2 = 0.85; // Nível 2 - levemente transparente
+const CONNECTED_OPACITY_L3 = 0.8;  // Nível 3 - mais transparente
+const BASE_OPACITY = 0.7;          // Estado base - vidro semi-transparente
+const DIMMED_OPACITY = 0.4;        // Nós distantes - aumentado de 0.2 para 0.4 (mais visível)
+
+// ============================================================================
+// SISTEMA DE MOVIMENTO SOBRE A REDE (CAOS)
+// ============================================================================
+const nodeMovement = new Map(); // Map<nodeId, {targetNode, progress, speed}>
+const WALK_SPEED = 0.002; // Velocidade base de caminhada (reduzida de 0.005)
+const MAX_VELOCITY = 3.0; // Velocidade máxima absoluta por frame (unidades de distância)
+const PATH_CHANGE_INTERVAL = 3000; // Trocar de direção a cada 3 segundos
+const REPULSION_FORCE = 15; // Força de repulsão entre nós (antigravidade) - reduzido
+const REPULSION_DISTANCE = 40; // Distância mínima antes de aplicar repulsão - reduzido
+
+// LIMITES DE ARESTA (MOLAS ELÁSTICAS)
+const MIN_EDGE_LENGTH = 30; // Distância mínima - evita colisão
+const MAX_EDGE_LENGTH = 200; // Distância máxima - evita emaranhar demais
+const SPRING_STRENGTH = 0.15; // Força da "mola" que puxa/empurra os nós
+let lastPathChange = 0;
+let repulsionCounter = 0; // Contador para aplicar repulsão com menos frequência
+
+// ============================================================================
 
 // Detectar dispositivo fraco automaticamente
 if (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4) {
@@ -70,11 +121,26 @@ const cardsContainer = document.getElementById('cards-container');
 const cardsGrid = document.getElementById('cards-grid');
 const searchContainer = document.getElementById('search-container');
 const searchInput = document.getElementById('search-input');
-const instructions = document.getElementById('instructions');
 const statusIndicator = document.getElementById('status-indicator');
 const speedValue = document.getElementById('speed-value');
 const rotationValue = document.getElementById('rotation-value');
 const pulseValue = document.getElementById('pulse-value');
+
+// ============================================================================
+// FUNÇÕES AUXILIARES DE COR
+// ============================================================================
+
+// Interpolar entre duas cores (formato hexadecimal)
+function lerpColor(color1, color2, t) {
+    const c1 = new THREE.Color(color1);
+    const c2 = new THREE.Color(color2);
+    return c1.lerp(c2, t);
+}
+
+// Clarear uma cor (tornar mais próxima do branco)
+function lightenColor(color, amount) {
+    return lerpColor(color, 0xffffff, amount);
+}
 
 // ============================================================================
 // CARREGAMENTO DE DADOS
@@ -82,7 +148,7 @@ const pulseValue = document.getElementById('pulse-value');
 
 async function loadConcepts() {
     try {
-        const response = await fetch('concepts.json');
+        const response = await fetch('assets/concepts.json');
         const data = await response.json();
         
         // Converter strings hexadecimais para números
@@ -91,10 +157,23 @@ async function loadConcepts() {
             color: parseInt(concept.color, 16)
         }));
         
-        console.log(`${concepts.length} conceitos carregados de concepts.json`);
+        console.log(`${concepts.length} conceitos carregados de assets/concepts.json`);
     } catch (error) {
-        console.error('Erro ao carregar concepts.json:', error);
-        loading.innerHTML = '<p style="color: #ff0066;">Erro ao carregar conceitos. Verifique o arquivo concepts.json</p>';
+        console.error('Erro ao carregar assets/concepts.json:', error);
+        loading.innerHTML = '<p style="color: #ff0066;">Erro ao carregar conceitos. Verifique o arquivo assets/concepts.json</p>';
+    }
+}
+
+async function loadRelations() {
+    try {
+        const response = await fetch('assets/relations.json');
+        relations = await response.json();
+        
+        console.log(`${relations.length} relações carregadas de assets/relations.json`);
+    } catch (error) {
+        console.error('Erro ao carregar assets/relations.json:', error);
+        // Relações são opcionais, então não bloqueia o app
+        relations = [];
     }
 }
 
@@ -102,9 +181,55 @@ async function loadConcepts() {
 // INICIALIZAÇÃO
 // ============================================================================
 
+/**
+ * Centraliza a câmera no nó com mais conexões
+ */
+function centerOnMostConnectedNode() {
+    if (nodes.length === 0 || concepts.length === 0) return;
+    
+    // Encontrar o conceito "processo" especificamente
+    let targetConcept = concepts.find(c => c.id === 'processo');
+    
+    // Se não encontrar "processo", usar o com mais conexões
+    if (!targetConcept) {
+        targetConcept = concepts.reduce((prev, current) => 
+            (current.connections.length > prev.connections.length) ? current : prev
+        );
+    }
+    
+    // Encontrar o nó correspondente
+    const targetNode = nodes.find(n => n.userData.id === targetConcept.id);
+    
+    if (targetNode) {
+        // NÃO rotacionar a cena - isso quebra a distribuição esférica!
+        // Em vez disso, posicionar a câmera para olhar para o nó
+        
+        const nodePos = targetNode.position.clone();
+        
+        // Calcular posição da câmera: na direção oposta ao nó, mantendo distância
+        const cameraDistance = cameraMode === 'inside' ? 0 : 900;
+        const direction = nodePos.clone().normalize();
+        
+        if (cameraMode === 'outside') {
+            // Câmera olha de fora para o nó
+            camera.position.copy(direction.multiplyScalar(cameraDistance));
+            camera.lookAt(nodePos);
+        } else {
+            // Câmera no centro, olhando para o nó
+            camera.position.set(0, 0, 0);
+            camera.lookAt(nodePos);
+        }
+        
+        cameraLookAtTarget = nodePos;
+        
+        console.log(`📍 Câmera apontada para "${targetConcept.name}" (${targetConcept.connections.length} conexões)`);
+    }
+}
+
 async function init() {
-    // Carregar conceitos primeiro
+    // Carregar conceitos e relações primeiro
     await loadConcepts();
+    await loadRelations();
     
     if (concepts.length === 0) {
         console.error('Nenhum conceito carregado. Abortando inicialização.');
@@ -152,24 +277,30 @@ async function init() {
     // Criar conexões
     createConnections();
     
+    // Criar superfície esférica (inicialmente invisível)
+    createSphere();
+    
+    // Inicializar movimento dos nós sobre a rede
+    initializeNodeMovement();
+    
+    // Centralizar no nó com mais conexões
+    centerOnMostConnectedNode();
+    
     // Atualizar cores das linhas baseado no tema atual
     updateLineColors();
 
-    // Adicionar luzes (ajustadas conforme tema)
-    const ambientLight = new THREE.AmbientLight(isLight ? 0x404050 : 0x0a0a10, isLight ? 0.2 : 0.05);
+    // Adicionar luzes (MeshPhysicalMaterial precisa de iluminação adequada)
+    const ambientLight = new THREE.AmbientLight(isLight ? 0xffffff : 0x404040, isLight ? 0.6 : 0.4);
     scene.add(ambientLight);
 
-    const pointLight1 = new THREE.PointLight(0x8080ff, 0.3);
-    pointLight1.position.set(300, 300, 300);
-    scene.add(pointLight1);
-    
-    const pointLight2 = new THREE.PointLight(0xff8080, 0.3);
-    pointLight2.position.set(-300, -300, 300);
-    scene.add(pointLight2);
-    
-    const pointLight3 = new THREE.PointLight(0x80ff80, 0.3);
-    pointLight3.position.set(0, 300, -300);
-    scene.add(pointLight3);
+    // Luzes direcionais para melhor iluminação dos materiais físicos
+    const directionalLight1 = new THREE.DirectionalLight(0xffffff, 0.8);
+    directionalLight1.position.set(1, 1, 1);
+    scene.add(directionalLight1);
+
+    const directionalLight2 = new THREE.DirectionalLight(0x8080ff, 0.4);
+    directionalLight2.position.set(-1, -0.5, -1);
+    scene.add(directionalLight2);
 
     // Event listeners
     window.addEventListener('resize', onWindowResize);
@@ -181,13 +312,13 @@ async function init() {
     searchInput.addEventListener('input', handleSearch);
 
     // Controles de câmera (arrastar)
-    let isDragging = false;
-    let previousMousePosition = { x: 0, y: 0 };
-
     renderer.domElement.addEventListener('mousedown', (e) => {
         isDragging = true;
+        hasDragged = false;
+        mouseDownPosition = { x: e.clientX, y: e.clientY };
         userInteracting = true;
         document.body.classList.add('grabbing');
+        console.log('mousedown - posição:', mouseDownPosition);
         
         // Pausar auto-rotação temporariamente
         if (autoRotateTimeout) clearTimeout(autoRotateTimeout);
@@ -195,12 +326,26 @@ async function init() {
 
     renderer.domElement.addEventListener('mousemove', (e) => {
         if (isDragging) {
-            const deltaX = e.clientX - previousMousePosition.x;
-            const deltaY = e.clientY - previousMousePosition.y;
-
-            camera.position.x += deltaX * 0.5;
-            camera.position.y -= deltaY * 0.5;
-            camera.lookAt(scene.position);
+            // Verificar se ultrapassou o threshold de arrasto
+            const totalDelta = Math.sqrt(
+                Math.pow(e.clientX - mouseDownPosition.x, 2) + 
+                Math.pow(e.clientY - mouseDownPosition.y, 2)
+            );
+            
+            if (totalDelta > dragThreshold) {
+                if (!hasDragged) {
+                    console.log('Arrasto detectado - delta:', totalDelta);
+                }
+                hasDragged = true;
+                
+                // Só mover a câmera se realmente estiver arrastando
+                const deltaX = e.clientX - previousMousePosition.x;
+                const deltaY = e.clientY - previousMousePosition.y;
+                
+                camera.position.x += deltaX * 0.5;
+                camera.position.y -= deltaY * 0.5;
+                camera.lookAt(scene.position);
+            }
         }
         previousMousePosition = { x: e.clientX, y: e.clientY };
     });
@@ -209,18 +354,11 @@ async function init() {
         isDragging = false;
         document.body.classList.remove('grabbing');
         
-        // Retomar auto-rotação após 3 segundos de inatividade
-        if (autoRotate) {
+        // Só retomar auto-rotação se não houver nó selecionado
+        if (autoRotate && !selectedNode && selectedCards.size === 0) {
             autoRotateTimeout = setTimeout(() => {
                 userInteracting = false;
             }, 3000);
-        }
-    });
-    
-    // Double click: focar no nó
-    renderer.domElement.addEventListener('dblclick', () => {
-        if (hoveredNode) {
-            focusOnNode(hoveredNode);
         }
     });
 
@@ -231,8 +369,8 @@ async function init() {
         camera.position.z += zoomSpeed;
         camera.position.z = Math.max(200, Math.min(1000, camera.position.z));
         
-        // Pausar rotação durante zoom
-        if (autoRotate && Math.abs(zoomSpeed) > 1) {
+        // Pausar rotação durante zoom (só se não houver nó selecionado)
+        if (autoRotate && Math.abs(zoomSpeed) > 1 && !selectedNode && selectedCards.size === 0) {
             userInteracting = true;
             if (autoRotateTimeout) clearTimeout(autoRotateTimeout);
             autoRotateTimeout = setTimeout(() => {
@@ -244,6 +382,8 @@ async function init() {
     // Suporte para toque em dispositivos móveis
     let touchStartDistance = 0;
     let touchStartCameraZ = 0;
+    let touchStartPosition = { x: 0, y: 0 };
+    let hasTouchDragged = false;
     
     renderer.domElement.addEventListener('touchstart', (e) => {
         if (e.touches.length === 2) {
@@ -254,11 +394,16 @@ async function init() {
             touchStartCameraZ = camera.position.z;
         } else if (e.touches.length === 1) {
             // Single touch = drag
+            touchStartPosition = {
+                x: e.touches[0].clientX,
+                y: e.touches[0].clientY
+            };
             previousMousePosition = {
                 x: e.touches[0].clientX,
                 y: e.touches[0].clientY
             };
             isDragging = true;
+            hasTouchDragged = false;
             userInteracting = true;
         }
     });
@@ -279,6 +424,16 @@ async function init() {
             const deltaX = e.touches[0].clientX - previousMousePosition.x;
             const deltaY = e.touches[0].clientY - previousMousePosition.y;
             
+            // Verificar se ultrapassou o threshold de arrasto
+            const totalDelta = Math.sqrt(
+                Math.pow(e.touches[0].clientX - touchStartPosition.x, 2) + 
+                Math.pow(e.touches[0].clientY - touchStartPosition.y, 2)
+            );
+            
+            if (totalDelta > dragThreshold) {
+                hasTouchDragged = true;
+            }
+            
             camera.position.x += deltaX * 0.5;
             camera.position.y -= deltaY * 0.5;
             camera.lookAt(scene.position);
@@ -290,10 +445,41 @@ async function init() {
         }
     }, { passive: false });
     
-    renderer.domElement.addEventListener('touchend', () => {
+    renderer.domElement.addEventListener('touchend', (e) => {
         isDragging = false;
         
-        if (autoRotate) {
+        // Se foi um toque único sem arrasto, simular clique
+        if (e.changedTouches.length === 1 && !hasTouchDragged) {
+            // Criar evento de clique sintético para touch
+            const touch = e.changedTouches[0];
+            mouse.x = (touch.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(touch.clientY / window.innerHeight) * 2 + 1;
+            
+            raycaster.setFromCamera(mouse, camera);
+            const intersects = raycaster.intersectObjects(nodes);
+            
+            if (intersects.length > 0) {
+                focusOnNode(intersects[0].object);
+            } else {
+                // Toque no vazio - desselecionar
+                if (selectedCards.size > 0 || selectedNode) {
+                    nodes.forEach(n => {
+                        n.material.emissiveIntensity = 0.3;
+                        n.scale.setScalar(1);
+                        resetConnectedNodes(n);
+                    });
+                    
+                    selectedNode = null;
+                    resetConnectionFilter();
+                    infoPanel.classList.remove('visible');
+                }
+            }
+        }
+        
+        hasTouchDragged = false;
+        
+        // Só retomar auto-rotação se não houver nó selecionado
+        if (autoRotate && !selectedNode && selectedCards.size === 0) {
             autoRotateTimeout = setTimeout(() => {
                 userInteracting = false;
             }, 3000);
@@ -306,11 +492,9 @@ async function init() {
     // Event listeners dos controles
     const btnCards = document.getElementById('btn-cards');
     const btnSpeed = document.getElementById('btn-speed');
-    const btnHelp = document.getElementById('btn-help');
     
     if (btnCards) btnCards.addEventListener('click', toggleViewMode);
     if (btnSpeed) btnSpeed.addEventListener('click', toggleSpeedMenu);
-    if (btnHelp) btnHelp.addEventListener('click', toggleHelp);
     
     // Event listener da busca
     searchInput.addEventListener('input', handleSearch);
@@ -352,8 +536,10 @@ window.addEventListener('hashchange', checkUrlHashAndFocus);
 function createNodes() {
     const radius = 300; // Raio da esfera de distribuição
     
-    // Geometria compartilhada para todas as esferas (grande otimização!)
-    const sharedGeometry = new THREE.SphereGeometry(20, 32, 32); // Reduz de 64 para 32 segmentos
+    console.log('🔵 createNodes() chamado - Total de conceitos:', concepts.length);
+    
+    // Geometria compartilhada com menos segmentos para melhor performance
+    const sharedGeometry = new THREE.SphereGeometry(20, 16, 16); // Reduz de 32 para 16 segmentos
 
     concepts.forEach((concept, i) => {
         // Distribuição Fibonacci Sphere para evitar aglomeração
@@ -364,54 +550,48 @@ function createNodes() {
         const y = radius * Math.sin(phi) * Math.sin(theta);
         const z = radius * Math.cos(phi);
 
-        // Ajustar cores baseado no tema
-        const isDark = !isLightTheme();
-        const nodeColor = isDark ? concept.color : concept.color; // Manter cor base
-        const emissiveIntensity = isDark ? 0.3 : -0.5; // Negativo para escurecer no modo claro
-        const lightIntensity = isDark ? 0.1 : -0.05; // Luz negativa escurece
+        // Cores e intensidades neutras - independente do tema
+        // O riz∅ma transcende polaridades (luz/trevas)
+        const nodeColor = concept.color;
         
-        // Usar geometria compartilhada
-        const material = new THREE.MeshPhysicalMaterial({
+        // Material tipo vidro colorizado - transparente e reflexivo
+        // Temporariamente usando MeshStandardMaterial para melhor compatibilidade
+        const material = new THREE.MeshStandardMaterial({
             color: nodeColor,
-            emissive: nodeColor,
-            emissiveIntensity: emissiveIntensity, // Brilho invertido no modo claro
-            metalness: 0.4,
-            roughness: 0.01,
+            metalness: 0.2,
+            roughness: 0.3,
             transparent: true,
-            opacity: 1.0, // Totalmente opaco
-            transmission: 0.4, // Refração de vidro moderada
-            thickness: 1.0, // Espessura do vidro aumentada
-            ior: 1.5,
-            clearcoat: 1.0,
-            clearcoatRoughness: 0.0,
-            envMapIntensity: 2.5,
-            side: THREE.DoubleSide
+            opacity: BASE_OPACITY,
+            emissive: nodeColor,
+            emissiveIntensity: 0.2
         });
 
         const sphere = new THREE.Mesh(sharedGeometry, material);
         sphere.position.set(x, y, z);
+        sphere.scale.setScalar(1.0); // Inicializar com escala normal
+        
+        // DESABILITAR FRUSTUM CULLING - nós sempre visíveis
+        sphere.frustumCulled = false;
         
         // Dados customizados
         sphere.userData = {
             ...concept,
             originalColor: concept.color,
-            originalEmissive: 0.3
+            originalEmissive: 0.3,
+            originalPosition: new THREE.Vector3(x, y, z) // Salvar posição original da esfera Fibonacci
         };
 
         scene.add(sphere);
         nodes.push(sphere);
         
-        // Adicionar luz interna para efeito de bola de vidro iluminada (ou escurecida no modo claro)
-        const innerLight = new THREE.PointLight(nodeColor, lightIntensity, 80);
-        innerLight.position.copy(sphere.position);
-        scene.add(innerLight);
-        
-        // Guardar referência à luz para animações futuras
-        sphere.userData.innerLight = innerLight;
+        // Remover luz interna para reduzir carga de processamento
+        // (a emissão do material já fornece o brilho necessário)
 
         // Adicionar label (sprite de texto)
         createLabel(concept.name, sphere);
     });
+    
+    console.log('✅ Nós criados:', nodes.length, 'esferas adicionadas à cena');
 }
 
 // ============================================================================
@@ -422,8 +602,8 @@ function createLabel(text, node) {
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
     
-    // Configurar fonte primeiro para medir texto
-    context.font = 'Bold 40px Arial';
+    // Reduzir tamanho da fonte para melhor performance
+    context.font = 'Bold 32px Arial';
     
     // Quebrar texto em múltiplas linhas se necessário
     const words = text.split(' ');
@@ -448,12 +628,12 @@ function createLabel(text, node) {
     const line2Width = line2 ? context.measureText(line2).width : 0;
     const maxWidth = Math.max(line1Width, line2Width);
     
-    // Ajustar tamanho do canvas com padding (reduzido para otimização)
-    canvas.width = Math.max(256, Math.min(512, maxWidth + 60)); // Limita tamanho máximo
-    canvas.height = line2 ? 120 : 70; // Reduz altura
+    // Canvas menor para melhor performance
+    canvas.width = Math.max(200, Math.min(400, maxWidth + 40));
+    canvas.height = line2 ? 100 : 60;
     
     // Redesenhar com novo tamanho
-    const fontSize = canvas.width < 300 ? 32 : 36; // Fonte adaptativa
+    const fontSize = canvas.width < 250 ? 28 : 32;
     context.font = `Bold ${fontSize}px Arial`;
     context.fillStyle = 'rgba(0, 0, 0, 0.75)';
     context.fillRect(0, 0, canvas.width, canvas.height);
@@ -475,25 +655,28 @@ function createLabel(text, node) {
     }
 
     const texture = new THREE.CanvasTexture(canvas);
-    texture.minFilter = THREE.LinearFilter; // Otimiza renderização
+    texture.minFilter = THREE.LinearFilter;
     texture.magFilter = THREE.LinearFilter;
-    texture.generateMipmaps = false; // Desabilita mipmaps para performance
+    texture.generateMipmaps = false;
     
     const spriteMaterial = new THREE.SpriteMaterial({
         map: texture,
         transparent: true,
         opacity: 0.9,
         depthTest: true,
-        depthWrite: false // Otimização para transparência
+        depthWrite: false
     });
 
     const sprite = new THREE.Sprite(spriteMaterial);
     
-    // Ajustar escala proporcionalmente ao tamanho do canvas (reduzido)
-    const scale = canvas.width / 512 * 80; // Reduz de 100 para 80
+    // DESABILITAR FRUSTUM CULLING - labels sempre visíveis
+    sprite.frustumCulled = false;
+    
+    // Escala menor para labels
+    const scale = canvas.width / 400 * 70;
     sprite.scale.set(scale, scale * (canvas.height / canvas.width), 1);
     sprite.position.copy(node.position);
-    sprite.position.y += 30; // Reduz de 35 para 30
+    sprite.position.y += 28;
 
     scene.add(sprite);
     node.userData.label = sprite;
@@ -504,8 +687,7 @@ function createLabel(text, node) {
 // ============================================================================
 
 function createConnections() {
-    // Usar geometria compartilhada para linhas (otimização de memória)
-    const lineGeometryCache = new Map();
+    const SPHERE_RADIUS = 300; // Mesmo raio usado em createNodes
     
     concepts.forEach((concept) => {
         const sourceNode = nodes.find(n => n.userData.id === concept.id);
@@ -514,71 +696,602 @@ function createConnections() {
             const targetNode = nodes.find(n => n.userData.id === connId);
             
             if (sourceNode && targetNode && concept.id < connId) {
-                // Criar linha como feixe de luz (ou escuridão no modo claro)
+                // Criar linha usando LineSegments (muito mais leve)
                 const isDark = !isLightTheme();
-                const lineOpacity = isDark ? (showAllConnections ? 0.8 : 0.5) : (showAllConnections ? 0.9 : 0.7);
+                const lineOpacity = isDark ? (showAllConnections ? 0.8 : 0.6) : (showAllConnections ? 1.0 : 0.95);
+                
+                // Cor da linha: mistura das cores dos dois nós conectados
+                const sourceColor = new THREE.Color(sourceNode.userData.originalColor);
+                const targetColor = new THREE.Color(targetNode.userData.originalColor);
+                const lineColor = sourceColor.clone().lerp(targetColor, 0.5); // Média das cores
                 
                 const material = new THREE.LineBasicMaterial({
-                    color: concept.color,
+                    color: lineColor,
                     transparent: true,
                     opacity: lineOpacity,
-                    linewidth: 1,
-                    blending: isLightTheme() ? THREE.NormalBlending : THREE.AdditiveBlending
+                    blending: isLightTheme() ? THREE.NormalBlending : THREE.AdditiveBlending,
+                    linewidth: 2 // Nota: linewidth > 1 não funciona em todos os browsers
                 });
 
-                const geometry = new THREE.BufferGeometry().setFromPoints([
-                    sourceNode.position,
-                    targetNode.position
-                ]);
-
+                // Usar geometria de linha simples (BufferGeometry)
+                const points = [
+                    sourceNode.userData.originalPosition.clone(),
+                    targetNode.userData.originalPosition.clone()
+                ];
+                
+                const geometry = new THREE.BufferGeometry().setFromPoints(points);
                 const line = new THREE.Line(geometry, material);
+                
+                // Buscar nome da relação
+                const relation = relations.find(r => 
+                    (r.from === concept.id && r.to === connId) ||
+                    (r.from === connId && r.to === concept.id)
+                );
+                
                 line.userData = {
                     source: sourceNode,
-                    target: targetNode
+                    target: targetNode,
+                    from: concept.id,
+                    to: connId,
+                    isConnection: true,
+                    relationName: relation ? relation.name : null,
+                    relationDescription: relation ? relation.description : null,
+                    originalColor: lineColor // Salvar a cor misturada como original
                 };
 
                 scene.add(line);
                 lines.push(line);
                 
-                // Adicionar um segundo feixe mais fino (brilhante no escuro, escuro no claro)
-                const glowOpacity = isDark ? (showAllConnections ? 0.6 : 0.4) : (showAllConnections ? 0.8 : 0.6);
-                
-                const glowMaterial = new THREE.LineBasicMaterial({
-                    color: getGlowColor(),
-                    transparent: true,
-                    opacity: glowOpacity,
-                    linewidth: 1,
-                    blending: isLightTheme() ? THREE.NormalBlending : THREE.AdditiveBlending
-                });
-                
-                const glowLine = new THREE.Line(geometry.clone(), glowMaterial);
-                glowLine.userData = {
-                    source: sourceNode,
-                    target: targetNode,
-                    isGlow: true
-                };
-                
-                scene.add(glowLine);
-                lines.push(glowLine);
+                // Criar label da relação (se existir)
+                if (relation && relation.name) {
+                    createEdgeLabel(line, relation.name, sourceNode, targetNode);
+                }
             }
         });
     });
 }
 
+// ============================================================================
+// SUPERFÍCIE ESFÉRICA
+// ============================================================================
+
+function createSphere() {
+    const SPHERE_RADIUS = 300; // Mesmo raio dos nós
+    
+    // Criar geometria esférica com wireframe
+    const geometry = new THREE.SphereGeometry(SPHERE_RADIUS, 32, 32);
+    
+    const isDark = !isLightTheme();
+    
+    // Material semi-transparente com wireframe
+    const material = new THREE.MeshBasicMaterial({
+        color: isDark ? 0x00ff88 : 0x00aa66,
+        wireframe: true,
+        transparent: true,
+        opacity: 0.15,
+        side: THREE.DoubleSide
+    });
+    
+    sphereMesh = new THREE.Mesh(geometry, material);
+    sphereMesh.visible = false; // Inicialmente invisível
+    scene.add(sphereMesh);
+}
+
+function updateSphereTheme() {
+    if (!sphereMesh) return;
+    
+    const isDark = !isLightTheme();
+    sphereMesh.material.color.setHex(isDark ? 0x00ff88 : 0x00aa66);
+}
+
+function toggleSphere() {
+    if (!sphereMesh) {
+        createSphere();
+    }
+    
+    sphereVisible = !sphereVisible;
+    sphereMesh.visible = sphereVisible;
+    
+    // Atualizar cor baseado no tema atual
+    updateSphereTheme();
+    
+    // Ajustar opacidade das arestas
+    const isDark = !isLightTheme();
+    lines.forEach(line => {
+        if (sphereVisible) {
+            // Reduzir opacidade quando esfera está ativa
+            const reducedOpacity = isDark ? 
+                (line.userData.isGlow ? 0.3 : 0.4) : 
+                (line.userData.isGlow ? 0.5 : 0.6);
+            line.material.opacity = reducedOpacity;
+        } else {
+            // Restaurar opacidade normal
+            const normalOpacity = isDark ? 
+                (line.userData.isGlow ? 0.6 : 0.8) : 
+                (line.userData.isGlow ? 0.9 : 1.0);
+            line.material.opacity = normalOpacity;
+        }
+    });
+    
+    // Atualizar ícone do botão
+    const sphereToggle = document.getElementById('sphere-toggle');
+    if (sphereToggle) {
+        const icon = sphereToggle.querySelector('.btn-icon');
+        if (icon) {
+            icon.textContent = sphereVisible ? '●' : '○';
+        }
+    }
+    
+    showNotification(sphereVisible ? 'Superfície esférica ativada' : 'Superfície esférica desativada');
+}
+
+// Expor função para HTML
+window.toggleSphere = toggleSphere;
+
+/**
+ * Cria uma curva geodésica (arco) na superfície de uma esfera
+ * NOTA: Função mantida para compatibilidade, mas não mais usada
+ */
+function createGeodesicCurve(start, end, radius) {
+    const startNorm = start.clone().normalize();
+    const endNorm = end.clone().normalize();
+    
+    return new THREE.QuadraticBezierCurve3(
+        start.clone(),
+        new THREE.Vector3()
+            .addVectors(start, end)
+            .multiplyScalar(0.5)
+            .normalize()
+            .multiplyScalar(radius * 1.1),
+        end.clone()
+    );
+}
+
+// Criar label para uma aresta (relação entre nós)
+function createEdgeLabel(line, relationName, sourceNode, targetNode) {
+    // Calcular posição no meio da linha
+    const midpoint = new THREE.Vector3().addVectors(
+        sourceNode.position,
+        targetNode.position
+    ).multiplyScalar(0.5);
+    
+    // Criar canvas para o texto
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    canvas.width = 256;
+    canvas.height = 64;
+    
+    // Background semi-transparente
+    context.fillStyle = 'rgba(0, 0, 0, 0.6)';
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    
+    // Texto
+    context.font = 'Bold 16px Arial';
+    context.fillStyle = '#00ff88';
+    context.textAlign = 'center';
+    context.textBaseline = 'middle';
+    context.fillText(relationName, canvas.width / 2, canvas.height / 2);
+    
+    // Criar sprite
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.minFilter = THREE.LinearFilter;
+    texture.magFilter = THREE.LinearFilter;
+    texture.generateMipmaps = false; // Desabilitar mipmaps para evitar warnings
+    
+    const spriteMaterial = new THREE.SpriteMaterial({
+        map: texture,
+        transparent: true,
+        opacity: 0.7,
+        depthTest: true,
+        depthWrite: false
+    });
+    
+    const sprite = new THREE.Sprite(spriteMaterial);
+    sprite.scale.set(40, 10, 1);
+    sprite.position.copy(midpoint);
+    
+    // Guardar referência no userData da linha
+    line.userData.label = sprite;
+    
+    // Inicialmente invisível (só aparece quando linha está ativa)
+    sprite.visible = false;
+    
+    scene.add(sprite);
+}
+
 // Função para atualizar cores das linhas quando tema muda
 function updateLineColors() {
-    const glowColor = getGlowColor();
     const useNormalBlending = isLightTheme();
     
     lines.forEach(line => {
-        if (line.userData.isGlow) {
-            line.material.color.setHex(glowColor);
-            line.material.blending = useNormalBlending ? THREE.NormalBlending : THREE.AdditiveBlending;
-        } else {
-            line.material.blending = useNormalBlending ? THREE.NormalBlending : THREE.AdditiveBlending;
-        }
+        line.material.blending = useNormalBlending ? THREE.NormalBlending : THREE.AdditiveBlending;
         line.material.needsUpdate = true;
     });
+}
+
+// ============================================================================
+// MOVIMENTO DOS NÓS SOBRE A REDE (CAOS)
+// ============================================================================
+
+/**
+ * Aplica forças de mola nas arestas para manter distâncias min/max
+ */
+function applyEdgeSpringForces(SPHERE_RADIUS) {
+    const springForces = new Map(); // Map<nodeId, Vector3>
+    
+    // Inicializar forças para todos os nós
+    nodes.forEach(node => {
+        springForces.set(node.userData.id, new THREE.Vector3(0, 0, 0));
+    });
+    
+    // Calcular forças de mola para cada aresta
+    lines.forEach(line => {
+        const sourceNode = line.userData.source;
+        const targetNode = line.userData.target;
+        
+        if (sourceNode && targetNode) {
+            const currentDistance = sourceNode.position.distanceTo(targetNode.position);
+            const direction = new THREE.Vector3().subVectors(targetNode.position, sourceNode.position);
+            
+            let force = 0;
+            
+            // Se muito perto: empurrar para longe (repulsão)
+            if (currentDistance < MIN_EDGE_LENGTH && currentDistance > 0) {
+                force = -(MIN_EDGE_LENGTH - currentDistance) * SPRING_STRENGTH;
+            }
+            // Se muito longe: puxar para perto (atração)
+            else if (currentDistance > MAX_EDGE_LENGTH) {
+                force = (currentDistance - MAX_EDGE_LENGTH) * SPRING_STRENGTH;
+            }
+            
+            if (force !== 0) {
+                direction.normalize().multiplyScalar(force);
+                
+                // Aplicar força igual e oposta aos dois nós (Lei de Newton)
+                const sourceForce = springForces.get(sourceNode.userData.id);
+                const targetForce = springForces.get(targetNode.userData.id);
+                
+                if (sourceForce) sourceForce.add(direction);
+                if (targetForce) targetForce.sub(direction);
+            }
+        }
+    });
+    
+    // Aplicar forças acumuladas aos nós
+    nodes.forEach(node => {
+        const force = springForces.get(node.userData.id);
+        if (force && force.lengthSq() > 0.01) {
+            node.position.add(force);
+            
+            // Re-projetar na superfície esférica
+            node.position.normalize().multiplyScalar(SPHERE_RADIUS);
+        }
+    });
+}
+
+/**
+ * Calcula força de repulsão entre nós (antigravidade)
+ * OTIMIZADO: Verifica apenas vizinhos próximos usando grid espacial
+ */
+function applyRepulsionForces(node, allNodes, SPHERE_RADIUS) {
+    const repulsionForce = new THREE.Vector3(0, 0, 0);
+    let repulsionCount = 0;
+    
+    // Otimização: limitar número de verificações
+    for (let i = 0; i < allNodes.length && repulsionCount < 5; i++) {
+        const otherNode = allNodes[i];
+        if (otherNode === node) continue;
+        
+        const distance = node.position.distanceTo(otherNode.position);
+        
+        // Aplicar repulsão se estiver muito próximo
+        if (distance < REPULSION_DISTANCE && distance > 0) {
+            const direction = new THREE.Vector3().subVectors(node.position, otherNode.position);
+            direction.normalize();
+            
+            // Força inversamente proporcional à distância
+            const strength = REPULSION_FORCE * (1 - distance / REPULSION_DISTANCE);
+            direction.multiplyScalar(strength);
+            
+            repulsionForce.add(direction);
+            repulsionCount++;
+        }
+    }
+    
+    // Aplicar força de repulsão (apenas se houver)
+    if (repulsionForce.lengthSq() > 0.01) {
+        node.position.add(repulsionForce);
+        
+        // Re-projetar na superfície esférica após aplicar repulsão
+        node.position.normalize().multiplyScalar(SPHERE_RADIUS);
+    }
+}
+
+/**
+ * Inicializa movimento dos nós - cada nó escolhe um vizinho aleatório para caminhar
+ */
+function initializeNodeMovement() {
+    nodes.forEach(node => {
+        const connections = node.userData.connections || [];
+        if (connections.length > 0) {
+            // Escolher vizinho aleatório
+            const randomTargetId = connections[Math.floor(Math.random() * connections.length)];
+            
+            // Armazenar apenas IDs, não referências (para evitar bugs de posição)
+            nodeMovement.set(node.userData.id, {
+                startNodeId: node.userData.id,
+                targetNodeId: randomTargetId,
+                progress: Math.random() * 0.3, // Começar no início do caminho (0-30%)
+                speed: WALK_SPEED * (0.8 + Math.random() * 0.4), // Velocidade variável
+                previousNodeId: null, // Memória do nó anterior (evitar volta imediata)
+                pathHistory: [] // Histórico de caminhos recentes
+            });
+        }
+    });
+    console.log(`🚶 Inicializado movimento para ${nodeMovement.size} nós sobre a rede`);
+}
+
+/**
+ * Atualiza posições dos nós caminhando sobre as arestas
+ */
+function updateNodeMovement(deltaTime) {
+    const currentTime = Date.now();
+    
+    nodeMovement.forEach((movement, nodeId) => {
+        const { startNodeId, targetNodeId, speed } = movement;
+        let { progress } = movement;
+        
+        // Encontrar os nós
+        const currentNode = nodes.find(n => n.userData.id === nodeId);
+        const startNode = nodes.find(n => n.userData.id === startNodeId);
+        const targetNode = nodes.find(n => n.userData.id === targetNodeId);
+        
+        if (!currentNode || !startNode || !targetNode) return;
+        
+        // Avançar ao longo da aresta
+        progress += speed * deltaTime * 0.06 * animationSpeed;
+        
+        // Se chegou ao destino, escolher próximo vizinho
+        if (progress >= 1.0) {
+            const connections = targetNode.userData.connections || [];
+            if (connections.length > 0) {
+                // Filtrar conexões para EVITAR voltar pro nó anterior
+                const previousNodeId = movement.previousNodeId;
+                const pathHistory = movement.pathHistory || [];
+                
+                let availableConnections = connections.filter(connId => {
+                    // Não voltar para o nó anterior
+                    if (connId === previousNodeId) return false;
+                    // Não repetir últimos 3 nós visitados
+                    if (pathHistory.includes(connId)) return false;
+                    return true;
+                });
+                
+                // Se filtrou tudo (ciclo), permitir qualquer exceto o anterior imediato
+                if (availableConnections.length === 0) {
+                    availableConnections = connections.filter(connId => connId !== previousNodeId);
+                }
+                
+                // Se ainda está vazio, usar todas
+                if (availableConnections.length === 0) {
+                    availableConnections = connections;
+                }
+                
+                // Escolher aleatório entre as opções filtradas (mais natural que sempre o mais próximo)
+                const nextTargetId = availableConnections[Math.floor(Math.random() * availableConnections.length)];
+                
+                // Atualizar histórico de caminho
+                pathHistory.push(targetNodeId);
+                if (pathHistory.length > 3) {
+                    pathHistory.shift(); // Manter apenas últimos 3
+                }
+                
+                // Salvar a posição atual do nó como ponto de partida da próxima aresta
+                // Isso evita "pulos" ao mudar de aresta
+                movement.lastPosition = currentNode.position.clone();
+                
+                // Atualizar IDs mantendo o targetNode como novo startNode
+                movement.previousNodeId = startNodeId;
+                movement.startNodeId = targetNodeId;
+                movement.targetNodeId = nextTargetId;
+                movement.pathHistory = pathHistory;
+                movement.progress = 0;
+                progress = 0;
+            } else {
+                progress = 0; // Resetar se não há conexões
+            }
+        }
+        
+        // Salvar progresso atualizado
+        movement.progress = progress;
+        
+        // MOVIMENTO NA SUPERFÍCIE ESFÉRICA COM SUAVIZAÇÃO:
+        // Aplicar easing para transições mais suaves (evita mudanças bruscas)
+        const easedProgress = progress < 0.5 
+            ? 2 * progress * progress  // Ease in (aceleração suave)
+            : 1 - Math.pow(-2 * progress + 2, 2) / 2; // Ease out (desaceleração suave)
+        
+        const SPHERE_RADIUS = 300;
+        
+        // Usar posição salva quando mudamos de aresta (evita glitch)
+        // ou posição original do nó de origem
+        const startOriginal = movement.lastPosition || startNode.userData.originalPosition;
+        const targetOriginal = targetNode.userData.originalPosition;
+        
+        // Interpolação usando o progresso suavizado
+        const interpolatedPos = new THREE.Vector3().lerpVectors(
+            startOriginal,
+            targetOriginal,
+            easedProgress
+        );
+        
+        // PROJETAR de volta para a superfície esférica
+        // Normalizar e multiplicar pelo raio - isso garante que sempre fica na superfície
+        const newPos = interpolatedPos.normalize().multiplyScalar(SPHERE_RADIUS);
+        
+        currentNode.position.copy(newPos);
+    });
+    
+    // Atualizar labels após movimento
+    nodes.forEach(node => {
+        if (node.userData.label) {
+            node.userData.label.position.copy(node.position);
+            node.userData.label.position.y += 28;
+        }
+    });
+    
+    // ATUALIZAR LINHAS - os nós arrastam as arestas
+    updateConnectionLines();
+}
+
+/**
+ * Atualiza as posições das linhas de conexão baseadas nas novas posições dos nós
+ * Os nós arrastam as arestas enquanto caminham na superfície esférica
+ */
+let lineUpdateThrottle = 0;
+function updateConnectionLines() {
+    // Atualizar apenas a cada 2 frames
+    lineUpdateThrottle++;
+    if (lineUpdateThrottle < 2) {
+        return;
+    }
+    lineUpdateThrottle = 0;
+    
+    lines.forEach(line => {
+        const sourceNode = line.userData.source;
+        const targetNode = line.userData.target;
+        
+        if (sourceNode && targetNode && line.geometry) {
+            // Verificar se é uma linha simples (BufferGeometry com 2 pontos) ou cilindro
+            const positions = line.geometry.attributes.position?.array;
+            
+            if (positions && positions.length === 6) {
+                // Linha simples - atualizar os 2 pontos
+                positions[0] = sourceNode.position.x;
+                positions[1] = sourceNode.position.y;
+                positions[2] = sourceNode.position.z;
+                
+                positions[3] = targetNode.position.x;
+                positions[4] = targetNode.position.y;
+                positions[5] = targetNode.position.z;
+                
+                line.geometry.attributes.position.needsUpdate = true;
+                
+                // Atualizar label
+                if (line.userData.label) {
+                    const midpoint = new THREE.Vector3(
+                        (positions[0] + positions[3]) / 2,
+                        (positions[1] + positions[4]) / 2,
+                        (positions[2] + positions[5]) / 2
+                    );
+                    line.userData.label.position.copy(midpoint);
+                }
+            } else if (line.geometry.type === 'CylinderGeometry') {
+                // Cilindro (gradiente) - reposicionar e reorientar
+                const sourcePos = sourceNode.position;
+                const targetPos = targetNode.position;
+                const direction = new THREE.Vector3().subVectors(targetPos, sourcePos);
+                const length = direction.length();
+                
+                // Atualizar tamanho do cilindro se mudou
+                if (Math.abs(line.geometry.parameters.height - length) > 0.01) {
+                    const lineRadius = 0.5;
+                    const isGradient = line.material.vertexColors;
+                    
+                    if (isGradient) {
+                        // Recriar gradiente com novo tamanho
+                        const sourceColor = line.userData.source.userData.originalColor;
+                        const targetColor = line.userData.target.userData.originalColor;
+                        updateLineGradient(line, sourceColor, targetColor);
+                    } else {
+                        // Recriar cilindro simples com novo tamanho
+                        line.geometry.dispose();
+                        line.geometry = new THREE.CylinderGeometry(lineRadius, lineRadius, length, 8, 1);
+                    }
+                }
+                
+                // Atualizar posição e orientação
+                line.position.copy(sourcePos).add(direction.clone().multiplyScalar(0.5));
+                line.quaternion.setFromUnitVectors(
+                    new THREE.Vector3(0, 1, 0),
+                    direction.normalize()
+                );
+                
+                // Atualizar label
+                if (line.userData.label) {
+                    line.userData.label.position.copy(line.position);
+                }
+            }
+        }
+    });
+}
+
+// Função para criar gradiente de cor na linha entre dois nós
+function updateLineGradient(line, sourceColor, targetColor) {
+    // Para cilindros, criar geometria com cores por vértice ao longo do comprimento
+    const sourcePos = line.userData.source.position;
+    const targetPos = line.userData.target.position;
+    
+    const direction = new THREE.Vector3().subVectors(targetPos, sourcePos);
+    const length = direction.length();
+    const lineRadius = 0.5;
+    
+    // Criar cilindro com gradiente
+    const segments = 20; // Mais segmentos para gradiente suave
+    const radialSegments = 8;
+    const geometry = new THREE.CylinderGeometry(lineRadius, lineRadius, length, radialSegments, segments);
+    
+    // Adicionar cores por vértice
+    const colors = [];
+    const positions = geometry.attributes.position;
+    const sourceColorObj = new THREE.Color(sourceColor);
+    const targetColorObj = new THREE.Color(targetColor);
+    
+    for (let i = 0; i < positions.count; i++) {
+        // Y vai de -length/2 a +length/2 no cilindro
+        const y = positions.getY(i);
+        const t = (y + length / 2) / length; // 0 a 1
+        
+        const color = sourceColorObj.clone().lerp(targetColorObj, t);
+        colors.push(color.r, color.g, color.b);
+    }
+    
+    // Atualizar geometria
+    line.geometry.dispose();
+    line.geometry = geometry;
+    line.geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+    
+    // Reposicionar e reorientar
+    line.position.copy(sourcePos).add(direction.clone().multiplyScalar(0.5));
+    line.quaternion.setFromUnitVectors(
+        new THREE.Vector3(0, 1, 0),
+        direction.normalize()
+    );
+    
+    // Ativar cores por vértice
+    line.material.vertexColors = true;
+    line.material.needsUpdate = true;
+}
+
+// Função para resetar linha para geometria original (linha simples)
+function resetLineColor(line, color) {
+    const sourcePos = line.userData.source.position;
+    const targetPos = line.userData.target.position;
+    
+    // Voltar para geometria de linha simples (BufferGeometry com 2 pontos)
+    const points = [sourcePos.clone(), targetPos.clone()];
+    
+    line.geometry.dispose();
+    line.geometry = new THREE.BufferGeometry().setFromPoints(points);
+    
+    // Resetar posição e rotação para identidade
+    line.position.set(0, 0, 0);
+    line.quaternion.identity();
+    
+    // Desativar cores por vértice e usar cor única
+    line.material.vertexColors = false;
+    line.material.color.set(color);
+    line.material.needsUpdate = true;
 }
 
 // ============================================================================
@@ -591,6 +1304,16 @@ function animate() {
     if (isAnimating) {
         const currentTime = Date.now();
         const deltaTime = currentTime - lastAnimationTime;
+        
+        // Limitar FPS a 30 para economizar bateria/recursos
+        const targetFPS = 30;
+        const minFrameTime = 1000 / targetFPS;
+        
+        if (deltaTime < minFrameTime) {
+            // Pular frame se muito rápido
+            return;
+        }
+        
         const time = currentTime * 0.001 * animationSpeed; // Pre-calcula tempo
         
         // Calcular FPS e auto-ajustar performance
@@ -601,8 +1324,8 @@ function animate() {
             
             const avgFPS = fpsHistory.reduce((a, b) => a + b, 0) / fpsHistory.length;
             
-            // Auto-enable performance mode se FPS < 30
-            if (avgFPS < 30 && !performanceMode) {
+            // Auto-enable performance mode se FPS < 20
+            if (avgFPS < 20 && !performanceMode) {
                 performanceMode = true;
                 console.log('Auto-enabled performance mode (low FPS detected:', avgFPS.toFixed(1), ')');
             }
@@ -615,55 +1338,62 @@ function animate() {
         // Modo performance: reduzir FPS de animações secundárias
         const skipFrame = performanceMode ? frameCount % 3 === 0 : frameCount % 2 === 0;
         
-        // Rotação suave automática com direção aleatória
-        // Só rotacionar se não houver nó selecionado
-        if (autoRotate && !userInteracting && !selectedNode) {
-            rotationAngle += rotationSpeed;
-            camera.position.x = (Math.cos(rotationAngle) * rotationDirection.x - Math.sin(rotationAngle) * rotationDirection.z) * 600;
-            camera.position.z = (Math.sin(rotationAngle) * rotationDirection.x + Math.cos(rotationAngle) * rotationDirection.z) * 600;
-            camera.lookAt(scene.position);
-        } else if (selectedNode && cameraLookAtTarget) {
-            // Se há nó selecionado, manter câmera olhando para ele
+        // Atualizar movimento dos nós sobre a rede (substituindo rotação da câmera)
+        if (!userInteracting) {
+            updateNodeMovement(deltaTime);
+        }
+        
+        // Manter câmera olhando para o centro ou nó selecionado
+        if (selectedNode && cameraLookAtTarget) {
             camera.lookAt(cameraLookAtTarget);
+        } else {
+            camera.lookAt(scene.position);
         }
 
-        // Pré-calcular valores de pulso que são reutilizados
-        const basePulse = Math.sin(time) * 0.1 * pulseIntensity;
+        // ANIMAÇÕES DESABILITADAS POR PADRÃO PARA PERFORMANCE
+        // Ativar pulso automaticamente apenas quando há seleção
+        const shouldPulse = selectedNode !== null || selectedCards.size > 0;
         
-        // Animação de pulso nos nós
-        nodes.forEach((node, i) => {
-            const pulse = basePulse + 0.9;
-            node.scale.setScalar(pulse);
+        if (shouldPulse && skipFrame) {
+            const basePulse = Math.sin(time * 0.8) * 0.08; // Mais rápido e mais visível
+            const pulse = 1.0 + basePulse; // Varia entre 0.92 e 1.08
             
-            // Só atualizar emissive se não for nó especial
-            if (node !== selectedNode && node !== hoveredNode) {
-                node.material.emissiveIntensity = 0.3 + pulse * 0.15 * pulseIntensity;
+            // Animar APENAS nós selecionados
+            if (selectedNode) {
+                selectedNode.scale.setScalar(pulse * 1.05); // Pulso mais visível no selecionado
             }
             
-            // Animar luz interna - apenas a cada N frames
-            if (skipFrame && node.userData.innerLight) {
-                node.userData.innerLight.intensity = 0.1 + pulse * 0.1 * pulseIntensity;
+            // Animar todos os nós na seleção múltipla
+            if (selectedCards.size > 0) {
+                nodes.forEach(n => {
+                    if (selectedCards.has(n.userData.id)) {
+                        n.scale.setScalar(pulse * 1.05); // Pulso mais visível em todos os selecionados
+                    }
+                });
             }
-        });
-        
-        // Animação de pulso nas linhas - SIMPLIFICADA (todas pulsam junto)
-        // Não aplicar pulso se há seleção múltipla ativa
-        if (skipFrame && pulseIntensity > 0 && selectedCards.size === 0) { // Só animar se pulso não está em 0 e sem seleção ativa
-            const lightPulse = Math.sin(time * 2) * 0.15 * pulseIntensity + 0.85;
             
-            // Usar o mesmo pulso para todas (muito mais rápido)
-            const coloredOpacity = (showAllConnections ? 0.8 : 0.5) * lightPulse;
-            const glowOpacity = (showAllConnections ? 0.6 : 0.4) * lightPulse * 1.5;
-            
-            lines.forEach(line => {
-                // Em modo performance, skip metade das linhas aleatoriamente
-                if (performanceMode && Math.random() > 0.5) return;
+            // Linhas: animar apenas quando há seleção ativa
+            if (selectedCards.size === 0 && selectedNode) {
+                const lightPulse = Math.sin(time * 2) * 0.15 + 0.85;
+                const lineOpacity = (showAllConnections ? 0.6 : 0.4) * lightPulse;
                 
-                line.material.opacity = line.userData.isGlow ? glowOpacity : coloredOpacity;
-            });
+                // Animar apenas linhas conectadas ao nó selecionado
+                lines.forEach(line => {
+                    const isConnected = (line.userData.source === selectedNode || 
+                                       line.userData.target === selectedNode);
+                    if (isConnected) {
+                        line.material.opacity = lineOpacity;
+                    }
+                });
+            }
+        } else if (!shouldPulse && skipFrame) {
+            // Quando não há seleção, garantir que nós voltem ao normal
+            if (selectedNode && selectedNode.scale.x !== 1.0) {
+                selectedNode.scale.setScalar(1.0);
+            }
         }
         
-        // LOD (Level of Detail) - checar apenas a cada 30 frames (~500ms)
+        // LOD (Level of Detail) - checar apenas a cada 30 frames (~1 segundo)
         if (frameCount % 30 === 0) {
             const cameraDistance = camera.position.length();
             const shouldShowLabels = cameraDistance < 800;
@@ -678,7 +1408,7 @@ function animate() {
         }
 
         // Atualizar linhas (só quando necessário)
-        if (hoveredNode !== null || selectedNode !== null || showAllConnections) {
+        if (hoveredNode !== null || selectedNode !== null || showAllConnections || selectedCards.size > 0) {
             updateLines();
         }
         
@@ -692,35 +1422,47 @@ function animate() {
 }
 
 function updateLines() {
-    // Se há seleção múltipla ativa, não atualizar aqui (já controlado em focusOnNode)
-    if (selectedCards.size > 0) {
-        return;
-    }
-    
     // Cache de nós ativos para evitar comparações repetidas
     const activeNodes = new Set();
     if (hoveredNode) activeNodes.add(hoveredNode);
     if (selectedNode) activeNodes.add(selectedNode);
     
-    // Se não há nós ativos e showAllConnections está off, não fazer nada
-    if (activeNodes.size === 0 && !showAllConnections) {
-        return;
-    }
+    // Adicionar nós selecionados (selectedCards)
+    selectedCards.forEach(cardId => {
+        const node = nodes.find(n => n.userData.id === cardId);
+        if (node) activeNodes.add(node);
+    });
+    
+    // Calcular opacidade base baseada no tema e showAllConnections
+    const isDark = !isLightTheme();
+    // Linhas mais grossas e opacas para melhor visibilidade
+    const baseOpacity = isDark ? (showAllConnections ? 0.8 : 0.6) : (showAllConnections ? 1.0 : 0.95);
+    const activeOpacity = 1.0; // Máxima visibilidade quando ativas
+    const activeGlowOpacity = 1.0;
     
     lines.forEach(line => {
-        const isActive = showAllConnections ||
-                        activeNodes.has(line.userData.source) ||
+        const isActive = activeNodes.has(line.userData.source) ||
                         activeNodes.has(line.userData.target);
 
         if (isActive) {
             // Linhas ativas brilham muito mais
             if (!line.userData.isGlow) {
-                line.material.opacity = 0.9;
+                line.material.opacity = activeOpacity;
             } else {
-                line.material.opacity = 0.7;
+                line.material.opacity = activeGlowOpacity;
+            }
+            // Mostrar label da relação se existir
+            if (line.userData.label) {
+                line.userData.label.visible = true;
+            }
+        } else {
+            // Resetar para opacidade base
+            line.material.opacity = baseOpacity;
+            // Ocultar label da relação
+            if (line.userData.label) {
+                line.userData.label.visible = false;
             }
         }
-        // As linhas inativas já têm sua opacidade controlada pela animação de pulso
     });
 }
 
@@ -744,21 +1486,72 @@ function onMouseMove(event) {
     raycaster.setFromCamera(mouse, camera);
     const intersects = raycaster.intersectObjects(nodes);
 
-    // Reset hover anterior
-    if (hoveredNode && hoveredNode !== selectedNode) {
-        hoveredNode.material.emissiveIntensity = 0.3;
-        hoveredNode.scale.setScalar(1);
-        if (hoveredNode.userData.innerLight) {
-            hoveredNode.userData.innerLight.intensity = 0.1;
+    // Reset hover anterior (restaura estado apropriado baseado na iluminação)
+    if (hoveredNode && hoveredNode !== selectedNode && !selectedCards.has(hoveredNode.userData.id)) {
+        const wasIlluminated = hoveredNode.userData.illuminated;
+        const currentOpacity = hoveredNode.material.opacity;
+        
+        if (wasIlluminated) {
+            // Restaurar intensidade baseada no nível de opacidade (profundidade)
+            if (currentOpacity >= CONNECTED_OPACITY_L1) {
+                // Nível 1 - conexão direta
+                hoveredNode.material.emissiveIntensity = 0.5;
+                hoveredNode.scale.setScalar(1.10);
+            } else if (currentOpacity >= CONNECTED_OPACITY_L2) {
+                // Nível 2 - conexão secundária
+                hoveredNode.material.emissiveIntensity = 0.4;
+                hoveredNode.scale.setScalar(1.05);
+            } else if (currentOpacity >= CONNECTED_OPACITY_L3) {
+                // Nível 3 - conexão terciária
+                hoveredNode.material.emissiveIntensity = 0.35;
+                hoveredNode.scale.setScalar(1.02);
+            }
+            if (hoveredNode.userData.innerLight) {
+                hoveredNode.userData.innerLight.intensity = 0.3;
+            }
+        } else {
+            // Não iluminado - voltar ao estado base
+            hoveredNode.material.emissiveIntensity = 0.3;
+            hoveredNode.scale.setScalar(1);
+            if (hoveredNode.userData.innerLight) {
+                hoveredNode.userData.innerLight.intensity = 0.1;
+            }
         }
     }
 
     if (intersects.length > 0) {
         hoveredNode = intersects[0].object;
-        hoveredNode.material.emissiveIntensity = 1.5; // Brilho moderado no hover
-        hoveredNode.scale.setScalar(1.2);
-        if (hoveredNode.userData.innerLight) {
-            hoveredNode.userData.innerLight.intensity = 1.0;
+        // Só aumentar brilho no hover se não for nó selecionado
+        if (!selectedCards.has(hoveredNode.userData.id)) {
+            const wasIlluminated = hoveredNode.userData.illuminated;
+            const currentOpacity = hoveredNode.material.opacity;
+            
+            // Aplicar hover com intensidade apropriada para o nível de conexão
+            if (wasIlluminated) {
+                if (currentOpacity >= CONNECTED_OPACITY_L1) {
+                    // Nível 1 - hover mais intenso
+                    hoveredNode.material.emissiveIntensity = 1.2;
+                    hoveredNode.scale.setScalar(1.25);
+                } else if (currentOpacity >= CONNECTED_OPACITY_L2) {
+                    // Nível 2 - hover médio
+                    hoveredNode.material.emissiveIntensity = 1.0;
+                    hoveredNode.scale.setScalar(1.20);
+                } else if (currentOpacity >= CONNECTED_OPACITY_L3) {
+                    // Nível 3 - hover suave
+                    hoveredNode.material.emissiveIntensity = 0.8;
+                    hoveredNode.scale.setScalar(1.15);
+                }
+                if (hoveredNode.userData.innerLight) {
+                    hoveredNode.userData.innerLight.intensity = 0.8;
+                }
+            } else {
+                // Nó não conectado - hover padrão
+                hoveredNode.material.emissiveIntensity = 1.5;
+                hoveredNode.scale.setScalar(1.2);
+                if (hoveredNode.userData.innerLight) {
+                    hoveredNode.userData.innerLight.intensity = 1.0;
+                }
+            }
         }
         renderer.domElement.style.cursor = 'pointer';
         
@@ -778,11 +1571,20 @@ function onClick(event) {
     // Ignorar eventos se não estiver no modo 3D
     if (viewMode !== '3d') return;
     
+    console.log('onClick - hasDragged:', hasDragged, 'hoveredNode:', hoveredNode);
+    
+    // Ignorar se foi um arrasto (não um clique)
+    if (hasDragged) {
+        hasDragged = false; // Resetar para próximo clique
+        return;
+    }
+    
     // Ignorar cliques na bottom bar
     const controls = document.getElementById('controls');
     if (controls && controls.contains(event.target)) return;
     
     if (hoveredNode) {
+        console.log('Focando nó:', hoveredNode.userData.id);
         // Sempre chamar focusOnNode - ele gerencia a seleção múltipla internamente
         focusOnNode(hoveredNode);
     } else {
@@ -813,10 +1615,11 @@ function onClick(event) {
                 );
             }
             
-            // Retomar rotação automática
+            // Retomar animação e rotação automática
             cameraLookAtTarget = null;
             userInteracting = false;
             autoRotate = true;
+            isAnimating = true;
             
             showNotification('Seleção removida');
         }
@@ -824,7 +1627,15 @@ function onClick(event) {
 }
 
 function onKeyDown(event) {
-    // Ignorar comandos se estiver digitando na busca
+    // H sempre funciona (abrir ajuda), mesmo se estiver digitando na busca
+    if (event.code === 'KeyH' && !event.ctrlKey && !event.metaKey && !event.altKey) {
+        event.preventDefault();
+        event.stopPropagation();
+        toggleHelp();
+        return;
+    }
+    
+    // Ignorar outros comandos se estiver digitando na busca
     if (document.activeElement === searchInput) {
         return;
     }
@@ -840,9 +1651,27 @@ function onKeyDown(event) {
         toggleAnimation();
     }
     
-    // ESC: Resetar seleção
+    // ESC: Fechar modal de ajuda ou resetar seleção
     if (event.code === 'Escape') {
         event.preventDefault();
+        
+        // Primeiro verificar se o modal de ajuda está aberto
+        const helpModal = document.getElementById('help-modal');
+        if (helpModal && helpModal.classList.contains('visible')) {
+            // Fechar modal de ajuda
+            if (typeof (window as any).closeHelp === 'function') {
+                (window as any).closeHelp();
+            } else {
+                helpModal.classList.remove('visible');
+                const container = document.getElementById('container');
+                if (container) {
+                    container.style.pointerEvents = 'auto';
+                }
+            }
+            return;
+        }
+        
+        // Se modal não está aberto, resetar seleção de nós
         if (selectedCards.size > 0 || selectedNode) {
             // Resetar todos os nós selecionados
             nodes.forEach(n => {
@@ -890,10 +1719,22 @@ function onKeyDown(event) {
         toggleViewMode();
     }
     
-    // H: Mostrar/esconder ajuda
-    if (event.code === 'KeyH') {
+    // C: Alternar modo de câmera (dentro/fora do caos)
+    if (event.code === 'KeyC') {
         event.preventDefault();
-        toggleHelp();
+        toggleCameraMode();
+    }
+    
+    // L: Toggle de visibilidade da legenda
+    if (event.code === 'KeyL') {
+        event.preventDefault();
+        toggleLegend();
+    }
+    
+    // S: Toggle da superfície esférica
+    if (event.code === 'KeyS') {
+        event.preventDefault();
+        toggleSphere();
     }
     
     // Teclas numéricas 1-9 e 0: Focar em conceitos específicos
@@ -1035,8 +1876,34 @@ function toggleAnimation() {
     showNotification(isAnimating ? 'Animação retomada' : 'Animação pausada');
 }
 
+function toggleLabels() {
+    labelsVisible = !labelsVisible;
+    
+    // Atualizar visibilidade de todas as labels de nós
+    nodes.forEach(node => {
+        if (node.userData.label) {
+            node.userData.label.visible = labelsVisible;
+        }
+    });
+    
+    // Atualizar visibilidade de todas as labels de linhas
+    lines.forEach(line => {
+        if (line.userData.label) {
+            line.userData.label.visible = labelsVisible;
+        }
+    });
+    
+    showNotification(labelsVisible ? 'Labels ativadas' : 'Labels desativadas');
+}
+
 function resetView() {
-    camera.position.set(0, 0, 600);
+    // Resetar posição da câmera de acordo com o modo atual
+    if (cameraMode === 'inside') {
+        camera.position.set(0, 0, 0); // Centro do caos
+    } else {
+        camera.position.set(0, 0, 900); // Fora do caos
+    }
+    
     camera.lookAt(scene.position);
     cameraLookAtTarget = null;
     autoRotate = true;
@@ -1047,10 +1914,7 @@ function resetView() {
     pulseIntensity = 1.0;
     
     if (selectedNode) {
-        selectedNode.material.emissiveIntensity = 0.3;
-        if (selectedNode.userData.innerLight) {
-            selectedNode.userData.innerLight.intensity = 0.1;
-        }
+        selectedNode.material.opacity = BASE_OPACITY; // Voltar para vidro
         selectedNode.scale.setScalar(1);
         // Resetar nós conectados
         resetConnectedNodes(selectedNode);
@@ -1077,70 +1941,71 @@ function updateStatusIndicator() {
     }, 3000);
 }
 
-// Propagar luz para nós conectados em múltiplos níveis
-function propagateLightToConnected(sourceNode) {
+// Propagar seleção para nós conectados em múltiplos níveis (usando opacidade)
+function propagateLightToConnected(sourceNode, allowedIds = null) {
     const processedIds = new Set([sourceNode.userData.id]);
     const level1Ids = new Set();
     const level2Ids = new Set();
     
-    // Nível 1: Conexões diretas (mais brilhantes)
+    // O riz∅ma propaga-se através de opacidade - vidro tornando-se sólido
+    // A estrutura relacional transcende polaridades
+    
+    // Nível 1: Conexões diretas - muito opacas
     const connectedIds = sourceNode.userData.connections || [];
     connectedIds.forEach(connId => {
+        if (allowedIds && !allowedIds.has(connId)) return;
+        
         const connectedNode = nodes.find(n => n.userData.id === connId);
-        if (connectedNode && connectedNode !== selectedNode) {
+        if (connectedNode && connectedNode !== selectedNode && !selectedCards.has(connId)) {
             level1Ids.add(connId);
             processedIds.add(connId);
             
-            // Iluminar nós conectados diretamente com alta intensidade
-            connectedNode.material.emissiveIntensity = 2.5;
-            if (connectedNode.userData.innerLight) {
-                connectedNode.userData.innerLight.intensity = 2.0;
-            }
-            connectedNode.scale.setScalar(1.15);
+            // Tornar mais opaco (menos vidro, mais sólido)
+            connectedNode.material.opacity = CONNECTED_OPACITY_L1;
+            connectedNode.scale.setScalar(1.10);
+            connectedNode.userData.illuminated = true;
         }
     });
     
-    // Nível 2: Conexões secundárias (médio brilho)
+    // Nível 2: Conexões secundárias - opacidade intermediária
     level1Ids.forEach(level1Id => {
         const level1Node = nodes.find(n => n.userData.id === level1Id);
         if (!level1Node) return;
         
         const secondaryIds = level1Node.userData.connections || [];
         secondaryIds.forEach(secondId => {
-            if (processedIds.has(secondId)) return; // Já processado
+            if (processedIds.has(secondId)) return;
+            if (allowedIds && !allowedIds.has(secondId)) return;
             
             const secondaryNode = nodes.find(n => n.userData.id === secondId);
-            if (secondaryNode && secondaryNode !== selectedNode) {
+            if (secondaryNode && secondaryNode !== selectedNode && !selectedCards.has(secondId)) {
                 level2Ids.add(secondId);
                 processedIds.add(secondId);
                 
-                secondaryNode.material.emissiveIntensity = 1.2;
-                if (secondaryNode.userData.innerLight) {
-                    secondaryNode.userData.innerLight.intensity = 0.8;
-                }
-                secondaryNode.scale.setScalar(1.08);
+                secondaryNode.material.opacity = CONNECTED_OPACITY_L2;
+                secondaryNode.scale.setScalar(1.05);
+                secondaryNode.userData.illuminated = true;
             }
         });
     });
     
-    // Nível 3: Conexões terciárias (baixo brilho)
+    // Nível 3: Conexões terciárias - levemente mais opaco que a base
     level2Ids.forEach(level2Id => {
         const level2Node = nodes.find(n => n.userData.id === level2Id);
         if (!level2Node) return;
         
         const tertiaryIds = level2Node.userData.connections || [];
         tertiaryIds.forEach(thirdId => {
-            if (processedIds.has(thirdId)) return; // Já processado
+            if (processedIds.has(thirdId)) return;
+            if (allowedIds && !allowedIds.has(thirdId)) return;
             
             const tertiaryNode = nodes.find(n => n.userData.id === thirdId);
-            if (tertiaryNode && tertiaryNode !== selectedNode) {
+            if (tertiaryNode && tertiaryNode !== selectedNode && !selectedCards.has(thirdId)) {
                 processedIds.add(thirdId);
                 
-                tertiaryNode.material.emissiveIntensity = 0.6;
-                if (tertiaryNode.userData.innerLight) {
-                    tertiaryNode.userData.innerLight.intensity = 0.4;
-                }
-                tertiaryNode.scale.setScalar(1.04);
+                tertiaryNode.material.opacity = CONNECTED_OPACITY_L3;
+                tertiaryNode.scale.setScalar(1.02);
+                tertiaryNode.userData.illuminated = true;
             }
         });
     });
@@ -1148,14 +2013,14 @@ function propagateLightToConnected(sourceNode) {
 
 // Resetar nós conectados ao estado normal
 function resetConnectedNodes(sourceNode) {
+    // O riz∅ma retorna ao estado de vidro semi-transparente
+    
     // Resetar todos os nós para estado base
     nodes.forEach(node => {
         if (node !== selectedNode && node !== hoveredNode) {
-            node.material.emissiveIntensity = 0.3;
-            if (node.userData.innerLight) {
-                node.userData.innerLight.intensity = 0.1;
-            }
+            node.material.opacity = BASE_OPACITY; // Voltar para vidro semi-transparente
             node.scale.setScalar(1.0);
+            node.userData.illuminated = false;
         }
     });
 }
@@ -1175,9 +2040,10 @@ function focusOnNode(node) {
         );
     }
     
-    // Pausar auto-rotação durante foco
+    // Pausar animação e auto-rotação durante foco
     userInteracting = true;
     autoRotate = false;
+    isAnimating = false;
     
     // Calcular posição ideal da câmera (frente ao nó, olhando para o centro)
     // O nó deve ficar no centro da tela
@@ -1239,6 +2105,9 @@ function focusOnNode(node) {
                 if (selectedCards.size === 0) {
                     selectedNode = null;
                     resetConnectionFilter();
+                    userInteracting = false;
+                    autoRotate = true;
+                    isAnimating = true;
                     showNotification('Seleção removida - mostrando todos os nós');
                     return;
                 }
@@ -1259,19 +2128,19 @@ function focusOnNode(node) {
                         n.material.opacity = 1.0;
                         if (n.userData.label) n.userData.label.material.opacity = 0.9;
                         
-                        // Destacar nós ainda selecionados
+                        // Destacar nós ainda selecionados - totalmente opacos
                         if (selectedCards.has(n.userData.id)) {
-                            n.material.emissiveIntensity = 5.0;
-                            if (n.userData.innerLight) n.userData.innerLight.intensity = 4.0;
+                            n.material.opacity = SELECTED_OPACITY; // Sólido
                             n.scale.setScalar(1.3);
                         }
                     } else {
-                        n.material.opacity = 0.2;
-                        if (n.userData.label) n.userData.label.material.opacity = 0.2;
+                        n.material.opacity = DIMMED_OPACITY; // Muito transparente
+                        if (n.userData.label) n.userData.label.material.opacity = 0.05;
                     }
                 });
                 
                 // Atualizar linhas com destaque para conexões dos nós selecionados
+                const isDark = !isLightTheme();
                 lines.forEach(line => {
                     const sourceId = line.userData.source.userData.id;
                     const targetId = line.userData.target.userData.id;
@@ -1282,12 +2151,24 @@ function focusOnNode(node) {
                         const sourceSelected = selectedCards.has(sourceId);
                         const targetSelected = selectedCards.has(targetId);
                         
-                        if (sourceSelected || targetSelected) {
-                            line.material.opacity = line.userData.isGlow ? 1.0 : 1.0;
-                            line.material.emissiveIntensity = 2.0;
+                        if (sourceSelected && targetSelected) {
+                            // Ambos os nós selecionados - criar gradiente!
+                            const sourceColor = line.userData.source.userData.originalColor;
+                            const targetColor = line.userData.target.userData.originalColor;
+                            updateLineGradient(line, sourceColor, targetColor);
+                            line.material.opacity = 1.0; // Máxima visibilidade
+                        } else if (sourceSelected || targetSelected) {
+                            // Apenas um selecionado - usar cor única
+                            const selectedColor = sourceSelected ? 
+                                line.userData.source.userData.originalColor : 
+                                line.userData.target.userData.originalColor;
+                            resetLineColor(line, selectedColor);
+                            line.material.opacity = 1.0; // Máxima visibilidade
                         } else {
-                            line.material.opacity = line.userData.isGlow ? 0.4 : 0.5;
-                            line.material.emissiveIntensity = 0.5;
+                            // Nenhum selecionado - cor original com menor opacidade
+                            resetLineColor(line, line.userData.originalColor);
+                            const secondaryOpacity = isDark ? 0.5 : 0.85;
+                            line.material.opacity = secondaryOpacity;
                         }
                     } else {
                         line.visible = false;
@@ -1303,18 +2184,13 @@ function focusOnNode(node) {
             
             // Desselecionar nó anterior se não estiver na seleção múltipla
             if (selectedNode && !selectedCards.has(selectedNode.userData.id)) {
-                selectedNode.material.emissiveIntensity = 0.3;
-                if (selectedNode.userData.innerLight) {
-                    selectedNode.userData.innerLight.intensity = 0.1;
-                }
+                selectedNode.material.opacity = BASE_OPACITY; // Voltar para vidro
                 selectedNode.scale.setScalar(1);
             }
             
             selectedNode = node;
-            selectedNode.material.emissiveIntensity = 5.0;
-            if (selectedNode.userData.innerLight) {
-                selectedNode.userData.innerLight.intensity = 4.0;
-            }
+            // Nó selecionado fica totalmente opaco (sólido)
+            selectedNode.material.opacity = SELECTED_OPACITY;
             selectedNode.scale.setScalar(1.3);
             
             // Calcular união de conexões de todos os nós selecionados
@@ -1333,20 +2209,20 @@ function focusOnNode(node) {
                     n.material.opacity = 1.0;
                     if (n.userData.label) n.userData.label.material.opacity = 0.9;
                     
-                    // Destacar nós selecionados
+                    // Destacar nós selecionados - totalmente opacos
                     if (selectedCards.has(n.userData.id)) {
-                        n.material.emissiveIntensity = 5.0;
-                        if (n.userData.innerLight) n.userData.innerLight.intensity = 4.0;
+                        n.material.opacity = SELECTED_OPACITY; // Sólido
                         n.scale.setScalar(1.3);
-                        propagateLightToConnected(n);
+                        propagateLightToConnected(n, allConnectedIds);
                     }
                 } else {
-                    n.material.opacity = 0.2;
-                    if (n.userData.label) n.userData.label.material.opacity = 0.2;
+                    n.material.opacity = DIMMED_OPACITY; // Muito transparente
+                    if (n.userData.label) n.userData.label.material.opacity = 0.05;
                 }
             });
             
             // Atualizar linhas com destaque especial para conexões diretas dos nós selecionados
+            const isDark = !isLightTheme();
             lines.forEach(line => {
                 const sourceId = line.userData.source.userData.id;
                 const targetId = line.userData.target.userData.id;
@@ -1359,14 +2235,24 @@ function focusOnNode(node) {
                     const sourceSelected = selectedCards.has(sourceId);
                     const targetSelected = selectedCards.has(targetId);
                     
-                    if (sourceSelected || targetSelected) {
-                        // Linha conectada a pelo menos um nó selecionado
-                        line.material.opacity = line.userData.isGlow ? 1.0 : 1.0;
-                        line.material.emissiveIntensity = 2.0; // Aumentar brilho
+                    if (sourceSelected && targetSelected) {
+                        // Ambos os nós selecionados - criar gradiente!
+                        const sourceColor = line.userData.source.userData.originalColor;
+                        const targetColor = line.userData.target.userData.originalColor;
+                        updateLineGradient(line, sourceColor, targetColor);
+                        line.material.opacity = 1.0; // Máxima visibilidade
+                    } else if (sourceSelected || targetSelected) {
+                        // Apenas um selecionado - usar cor única
+                        const selectedColor = sourceSelected ? 
+                            line.userData.source.userData.originalColor : 
+                            line.userData.target.userData.originalColor;
+                        resetLineColor(line, selectedColor);
+                        line.material.opacity = 1.0; // Máxima visibilidade
                     } else {
-                        // Linha entre nós visíveis mas não selecionados
-                        line.material.opacity = line.userData.isGlow ? 0.4 : 0.5;
-                        line.material.emissiveIntensity = 0.5;
+                        // Nenhum selecionado - cor original com menor opacidade
+                        resetLineColor(line, line.userData.originalColor);
+                        const secondaryOpacity = isDark ? 0.5 : 0.85;
+                        line.material.opacity = secondaryOpacity;
                     }
                 } else {
                     line.visible = false;
@@ -1455,15 +2341,16 @@ function filterByConnections(node) {
                     n.userData.label.material.opacity = 0.9;
                 }
             } else {
-                // Unconnected nodes: reduced opacity
-                n.material.opacity = 0.2;
+                // Unconnected nodes: reduced opacity para melhor contraste
+                n.material.opacity = 0.08;
                 if (n.userData.label) {
-                    n.userData.label.material.opacity = 0.15;
+                    n.userData.label.material.opacity = 0.05;
                 }
             }
         });
         
         // Filter lines: show only connections involving connected nodes
+        const isDark = !isLightTheme();
         lines.forEach(line => {
             const sourceId = line.userData.source.userData.id;
             const targetId = line.userData.target.userData.id;
@@ -1471,7 +2358,9 @@ function filterByConnections(node) {
             if (connectedIds.has(sourceId) && connectedIds.has(targetId)) {
                 // Both nodes are in the connected set
                 line.visible = true;
-                line.material.opacity = line.userData.isGlow ? 0.6 : 0.8;
+                // Modo claro: maior opacidade
+                const lineOpacity = isDark ? (line.userData.isGlow ? 0.6 : 0.8) : (line.userData.isGlow ? 0.9 : 1.0);
+                line.material.opacity = lineOpacity;
             } else {
                 // At least one node is not connected
                 line.visible = false;
@@ -1502,15 +2391,25 @@ function resetConnectionFilter() {
         }
     });
     
-    // Reset all lines to visible
+    // Reset all lines to visible and remove any gradient effects
+    const isDark = !isLightTheme();
     lines.forEach(line => {
         line.visible = true;
-        line.material.opacity = line.userData.isGlow ? 0.6 : 0.8;
+        
+        // Resetar geometria e cor usando a função apropriada
+        if (line.userData.originalColor) {
+            resetLineColor(line, line.userData.originalColor);
+        }
+        
+        // Modo claro: maior opacidade
+        const lineOpacity = isDark ? (line.userData.isGlow ? 0.6 : 0.8) : (line.userData.isGlow ? 0.9 : 1.0);
+        line.material.opacity = lineOpacity;
     });
     
     // Reset cards if in cards mode
     if (viewMode === 'cards') {
-        renderCards(activeLayerFilter);
+        const layerFilter = activeLayerFilters.size > 0 ? Array.from(activeLayerFilters) : null;
+        renderCards(layerFilter);
     }
 }
 
@@ -1528,26 +2427,39 @@ function toggleLegend() {
     }
 }
 
-// Filtro de camada ativo
-let activeLayerFilter = null;
+// Filtro de camada ativo (suporta múltiplas camadas)
+let activeLayerFilters = new Set();
 let activeConnectionFilter = null;
 
 function setupLegendListeners() {
     const legendItems = document.querySelectorAll('.legend-item');
     
     legendItems.forEach(item => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', (e) => {
             const layer = item.dataset.layer;
             
-            // Toggle filter
-            if (activeLayerFilter === layer) {
-                // Desativar filtro
-                activeLayerFilter = null;
-                legendItems.forEach(i => i.style.opacity = '1');
+            // Toggle filter (permite múltiplas seleções)
+            if (activeLayerFilters.has(layer)) {
+                // Remover da seleção
+                activeLayerFilters.delete(layer);
+                item.classList.remove('active');
+            } else {
+                // Adicionar à seleção
+                activeLayerFilters.add(layer);
+                item.classList.add('active');
+            }
+            
+            // Aplicar filtros
+            if (activeLayerFilters.size === 0) {
+                // Sem filtros - mostrar tudo
+                legendItems.forEach(i => {
+                    i.style.opacity = '1';
+                    i.classList.remove('active');
+                });
                 
                 // Restaurar opacidade de todos os nós
                 nodes.forEach(node => {
-                    node.material.opacity = 1.0;
+                    node.material.opacity = BASE_OPACITY;
                     if (node.userData.label) {
                         node.userData.label.material.opacity = 0.9;
                     }
@@ -1563,166 +2475,124 @@ function setupLegendListeners() {
                     renderCards(null);
                 }
                 
-                showNotification('Filtro removido');
+                showNotification('Filtros removidos');
             } else {
-                // Ativar filtro
-                activeLayerFilter = layer;
+                // Com filtros ativos
                 
-                // Destacar item selecionado
+                // Destacar itens selecionados
                 legendItems.forEach(i => {
-                    i.style.opacity = i.dataset.layer === layer ? '1' : '0.4';
+                    if (activeLayerFilters.has(i.dataset.layer)) {
+                        i.style.opacity = '1';
+                    } else {
+                        i.style.opacity = '0.4';
+                    }
                 });
                 
                 // Filtrar nós
                 nodes.forEach(node => {
-                    if (node.userData.layer === layer) {
-                        node.material.opacity = 1.0;
+                    if (activeLayerFilters.has(node.userData.layer)) {
+                        node.material.opacity = SELECTED_OPACITY;
                         if (node.userData.label) {
                             node.userData.label.material.opacity = 0.9;
                         }
                     } else {
-                        node.material.opacity = 0.15;
+                        node.material.opacity = DIMMED_OPACITY;
                         if (node.userData.label) {
-                            node.userData.label.material.opacity = 0.2;
+                            node.userData.label.material.opacity = 0.05;
                         }
                     }
                 });
                 
-                // Filtrar linhas (mostrar apenas conexões dentro da camada)
+                // Filtrar linhas
+                const isDark = !isLightTheme();
                 lines.forEach(line => {
                     const sourceLayer = line.userData.source.userData.layer;
                     const targetLayer = line.userData.target.userData.layer;
                     
-                    if (sourceLayer === layer && targetLayer === layer) {
+                    const sourceActive = activeLayerFilters.has(sourceLayer);
+                    const targetActive = activeLayerFilters.has(targetLayer);
+                    
+                    if (sourceActive && targetActive) {
+                        // Ambos os nós estão nas camadas ativas
                         line.visible = true;
-                        line.material.opacity = line.userData.isGlow ? 0.6 : 0.8;
-                    } else if (sourceLayer === layer || targetLayer === layer) {
+                        const layerOpacity = isDark ? (line.userData.isGlow ? 0.6 : 0.8) : (line.userData.isGlow ? 0.9 : 1.0);
+                        line.material.opacity = layerOpacity;
+                    } else if (sourceActive || targetActive) {
+                        // Apenas um nó está nas camadas ativas
                         line.visible = true;
-                        line.material.opacity = line.userData.isGlow ? 0.2 : 0.3;
+                        const crossOpacity = isDark ? (line.userData.isGlow ? 0.05 : 0.08) : (line.userData.isGlow ? 0.15 : 0.2);
+                        line.material.opacity = crossOpacity;
                     } else {
+                        // Nenhum nó está nas camadas ativas
                         line.visible = false;
                     }
                 });
                 
-                // Re-renderizar cards com filtro
+                // Re-renderizar cards com filtro (passar array de camadas)
                 if (viewMode === 'cards') {
-                    renderCards(layer);
+                    renderCards(Array.from(activeLayerFilters));
                 }
                 
-                // Contar conceitos na camada
-                const count = nodes.filter(n => n.userData.layer === layer).length;
+                // Contar conceitos nas camadas selecionadas
+                const count = nodes.filter(n => activeLayerFilters.has(n.userData.layer)).length;
                 const layerNames = {
                     'fundacional': 'Fundacional',
                     'ontologica': 'Ontológica',
                     'epistemologica': 'Epistemológica',
                     'politica': 'Política',
+                    'pedagogica': 'Pedagógica',
                     'indigena-comunitaria': 'Indígena-Comunitária',
                     'ecologica-material': 'Ecológica-Material',
+                    'temporal': 'Temporal',
                     'pratica-institucional': 'Prática-Institucional'
                 };
                 
-                showNotification(`Camada: ${layerNames[layer]} (${count} conceitos)`);
+                if (activeLayerFilters.size === 1) {
+                    const layer = Array.from(activeLayerFilters)[0];
+                    showNotification(`Camada: ${layerNames[layer]} (${count} conceitos)`);
+                } else {
+                    const selectedNames = Array.from(activeLayerFilters).map(l => layerNames[l]).join(', ');
+                    showNotification(`${activeLayerFilters.size} camadas selecionadas (${count} conceitos)`);
+                }
             }
         });
     });
 }
 
 function toggleHelp() {
-    let helpPanel = document.getElementById('help-panel');
+    // Usar o modal de ajuda do HTML em vez de criar dinamicamente
+    const helpModal = document.getElementById('help-modal');
     
-    if (!helpPanel) {
-        helpPanel = document.createElement('div');
-        helpPanel.id = 'help-panel';
-        helpPanel.style.cssText = `
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: var(--glass-bg);
-            color: var(--connection);
-            padding: 30px;
-            border-radius: 10px;
-            font-family: 'Courier New', monospace;
-            font-size: 14px;
-            z-index: 10000;
-            max-width: 600px;
-            border: 2px solid var(--connection);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(30px) saturate(180%);
-            -webkit-backdrop-filter: blur(30px) saturate(180%);
-            transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
-        `;
+    if (helpModal) {
+        const isVisible = helpModal.classList.contains('visible');
         
-        // Adicionar estilos para tema claro
-        const style = document.createElement('style');
-        style.textContent = `
-            body.light-theme #help-panel {
-                background: var(--glass-bg) !important;
-                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+        if (isVisible) {
+            // Fechar modal usando a função global
+            if (typeof (window as any).closeHelp === 'function') {
+                (window as any).closeHelp();
+            } else {
+                helpModal.classList.remove('visible');
+                const container = document.getElementById('container');
+                if (container) {
+                    container.style.pointerEvents = 'auto';
+                }
             }
-            body.light-theme #help-panel h3 {
-                color: var(--connection) !important;
-            }
-            body.light-theme #help-panel strong {
-                color: inherit;
-            }
-        `;
-        document.head.appendChild(style);
-        
-        // Detectar tipo de dispositivo
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
-                         window.innerWidth <= 768;
-        
-        if (isMobile) {
-            // Controles para mobile/tablet
-            helpPanel.innerHTML = `
-                <h3 style="margin-top: 0; color: var(--connection);">📱 Controles do Rizoma (Mobile)</h3>
-                <div style="display: grid; grid-template-columns: auto 1fr; gap: 10px 20px; line-height: 1.8; font-size: 13px; color: var(--emergence);">
-                    <strong style="color: var(--hover);">NAVEGAÇÃO</strong><span></span>
-                    <strong>Tocar</strong><span>Selecionar conceito (pausar rotação)</span>
-                    <strong>Tocar novamente</strong><span>Desselecionar (retomar rotação)</span>
-                    <strong>Arrastar (1 dedo)</strong><span>Mover câmera</span>
-                    <strong>Pinça (2 dedos)</strong><span>Zoom in/out</span>
-                    
-                    <strong style="color: var(--connection); margin-top: 10px;">VISUALIZAÇÃO</strong><span></span>
-                    <strong>Botão V</strong><span>Alternar entre modo 3D e Cards</span>
-                    <strong>Botão R</strong><span>Resetar visão</span>
-                    <strong>Botão H</strong><span>Mostrar/Esconder esta ajuda</span>
-                </div>
-                <p style="margin-bottom: 0; margin-top: 20px; text-align: center; opacity: 0.7; font-size: 12px; color: var(--emergence);">
-                    💡 Toque duas vezes em um conceito selecionado para desselecioná-lo e retomar a rotação<br>
-                    Toque em H novamente para fechar
-                </p>
-            `;
         } else {
-            // Controles para desktop
-            helpPanel.innerHTML = `
-                <h3 style="margin-top: 0; color: var(--connection);">⌨️ Controles do Rizoma (Desktop)</h3>
-                <div style="display: grid; grid-template-columns: auto 1fr; gap: 10px 20px; line-height: 1.8; font-size: 13px; color: var(--emergence);">
-                    <strong style="color: var(--hover);">NAVEGAÇÃO</strong><span></span>
-                    <strong>1-9, 0</strong><span>Focar nos conceitos 1-10 (girar grafo)</span>
-                    <strong>Tab</strong><span>Próximo conceito conectado</span>
-                    <strong>Shift+Tab</strong><span>Conceito conectado anterior</span>
-                    <strong>Click</strong><span>Selecionar conceito (pausar rotação)</span>
-                    <strong>Click novamente</strong><span>Desselecionar (retomar rotação)</span>
-                    <strong>Arrastar</strong><span>Mover câmera manualmente</span>
-                    <strong>Scroll</strong><span>Zoom in/out</span>
-                    
-                    <strong style="color: var(--pulse); margin-top: 10px;">VISUALIZAÇÃO</strong><span></span>
-                    <strong>V</strong><span>Alternar entre modo 3D e Cards</span>
-                    <strong>R</strong><span>Resetar visão e configurações</span>
-                    <strong>H</strong><span>Mostrar/Esconder esta ajuda</span>
-                </div>
-                <p style="margin-bottom: 0; margin-top: 20px; text-align: center; opacity: 0.7; font-size: 12px; color: var(--emergence);">
-                    💡 Clique duas vezes em um conceito selecionado para desselecioná-lo e retomar a rotação<br>
-                    Pressione H novamente para fechar
-                </p>
-            `;
+            // Abrir modal usando a função global
+            if (typeof (window as any).openHelp === 'function') {
+                (window as any).openHelp(false);
+            } else {
+                helpModal.classList.add('visible');
+                const container = document.getElementById('container');
+                if (container) {
+                    container.style.pointerEvents = 'none';
+                }
+                const badge = document.getElementById('first-visit-badge');
+                if (badge) {
+                    badge.style.display = 'none';
+                }
+            }
         }
-        
-        document.body.appendChild(helpPanel);
-    } else {
-        helpPanel.remove();
     }
 }
 
@@ -1883,12 +2753,21 @@ function renderCards(layerFilter = null, filteredConcepts = null) {
         // Usar conceitos filtrados por conexão
         conceptsToShow = filteredConcepts;
     } else if (layerFilter) {
-        // Filtrar por camada
-        conceptsToShow = concepts.filter(c => c.layer === layerFilter);
+        // Filtrar por camada(s) - aceita string ou array
+        if (Array.isArray(layerFilter)) {
+            conceptsToShow = concepts.filter(c => layerFilter.includes(c.layer));
+        } else {
+            conceptsToShow = concepts.filter(c => c.layer === layerFilter);
+        }
     } else {
         // Mostrar todos
         conceptsToShow = concepts;
     }
+    
+    // Ordenar por número de conexões (decrescente)
+    conceptsToShow = [...conceptsToShow].sort((a, b) => 
+        b.connections.length - a.connections.length
+    );
     
     conceptsToShow.forEach(concept => {
         const card = document.createElement('div');
@@ -2126,7 +3005,6 @@ function toggleViewMode() {
         container.classList.add('hidden');
         cardsContainer.classList.add('visible');
         searchContainer.classList.add('visible');
-        instructions.style.display = 'none';
         infoPanel.classList.remove('visible');
         
         // Atualizar botão
@@ -2163,7 +3041,6 @@ function toggleViewMode() {
         container.classList.remove('hidden');
         cardsContainer.classList.remove('visible');
         searchContainer.classList.remove('visible');
-        instructions.style.display = 'block';
         
         // Atualizar botão
         if (btnCards) {
@@ -2188,6 +3065,40 @@ function toggleViewMode() {
         showNotification('Modo 3D ativado');
     }
 }
+
+// ============================================================================
+// ALTERNÂNCIA DE MODO DE CÂMERA (DENTRO/FORA DO CAOS)
+// ============================================================================
+
+function toggleCameraMode() {
+    if (cameraMode === 'outside') {
+        // Mudar para dentro do caos
+        cameraMode = 'inside';
+        camera.position.set(0, 0, 0); // Centro do emaranhado
+        showNotification('Modo: Dentro do Caos');
+    } else {
+        // Mudar para fora do caos
+        cameraMode = 'outside';
+        camera.position.set(0, 0, 900); // Visão externa
+        showNotification('Modo: Fora do Caos');
+    }
+    
+    // Atualizar lookAt
+    if (cameraLookAtTarget) {
+        camera.lookAt(cameraLookAtTarget);
+    } else {
+        camera.lookAt(scene.position);
+    }
+}
+
+// ============================================================================
+// EXPOR FUNÇÕES GLOBALMENTE PARA USO NO HTML
+// ============================================================================
+
+(window as any).resetView = resetView;
+(window as any).toggleLegend = toggleLegend;
+(window as any).toggleHelp = toggleHelp;
+(window as any).toggleCameraMode = toggleCameraMode;
 
 // ============================================================================
 // INICIAR

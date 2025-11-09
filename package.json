@@ -1,0 +1,22 @@
+{
+  "name": "revolucao-cibernetica",
+  "version": "1.0.0",
+  "description": "Visualização 3D de conceitos filosóficos relacionais",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "server": "python3 -m http.server 8000",
+    "browser-sync": "browser-sync start --server --files \"dist/**/*.js, *.html, *.css, assets/**/*\" --port 8000 --no-notify --no-open",
+    "dev": "concurrently -k -n \"TS,SYNC\" -c \"cyan,magenta\" \"tsc --watch\" \"npm run browser-sync\""
+  },
+  "devDependencies": {
+    "@types/three": "^0.181.0",
+    "browser-sync": "^3.0.4",
+    "concurrently": "^9.1.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "three": "^0.181.0"
+  }
+}

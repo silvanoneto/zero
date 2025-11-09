@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rizoma de Conceitos | CRIO</title>
+    <title>Riz∅ma de Conceitos | CRIO</title>
     <meta name="description" content="Visualização tridimensional rizomática dos conceitos relacionais do CRIO">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80' fill='%23f0f0f0'>∅</text></svg>">
+    
+    <!-- Import Map para resolver módulos ES -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.181.0/build/three.module.js",
+            "three/": "https://cdn.jsdelivr.net/npm/three@0.181.0/"
+        }
+    }
+    </script>
+    
     <style>
         :root {
             --void: #0a0a0a;
@@ -459,12 +470,26 @@
             align-items: center;
             margin: 8px 0;
             gap: 10px;
-            transition: transform 0.2s;
+            transition: all 0.2s;
             cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 6px;
+            border: 2px solid transparent;
         }
 
         .legend-item:hover {
             transform: translateX(4px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .legend-item.active {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        body.light-theme .legend-item.active {
+            background: rgba(0, 0, 0, 0.05);
+            border-color: rgba(0, 0, 0, 0.2);
         }
 
         .legend-color {
@@ -473,6 +498,12 @@
             border-radius: 4px;
             flex-shrink: 0;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.2s;
+        }
+
+        .legend-item.active .legend-color {
+            box-shadow: 0 0 12px currentColor;
+            transform: scale(1.1);
         }
 
         .legend-label {
@@ -624,46 +655,7 @@
             user-select: none;
         }
 
-        /* Instructions */
-        #instructions {
-            position: absolute;
-            top: 100px;
-            right: 30px;
-            background: rgba(10, 10, 10, 0.3) !important;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 20px;
-            border-radius: 12px;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.9rem;
-            max-width: 300px;
-            z-index: 1000;
-            border: 1px solid rgba(0, 255, 136, 0.1);
-        }
 
-        body.light-theme #instructions {
-            background: rgba(240, 240, 240, 0.3) !important;
-            color: rgba(10, 10, 10, 0.9);
-            border: 1px solid rgba(10, 10, 10, 0.1);
-        }
-
-        #instructions h3 {
-            color: var(--connection);
-            margin: 0 0 10px 0;
-            font-size: 1rem;
-        }
-
-        .instruction-item {
-            margin: 8px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .instruction-icon {
-            color: var(--pulse);
-            font-weight: bold;
-        }
 
         /* Loading */
         #loading {
@@ -703,13 +695,6 @@
                 top: 15px;
                 right: 15px;
             }
-
-            #instructions {
-                top: 70px;
-                right: 15px;
-                font-size: 0.75rem;
-                padding: 10px;
-            }
             
             #legend {
                 bottom: 70px;
@@ -748,6 +733,172 @@
                 padding: 6px 10px !important;
             }
         }
+
+        /* Help Modal */
+        #help-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        #help-modal.visible {
+            display: flex;
+            opacity: 1;
+        }
+
+        .help-content {
+            background: var(--glass-bg);
+            backdrop-filter: blur(25px) saturate(180%);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            border: 1px solid var(--connection);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 600px;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .help-content h2 {
+            color: var(--connection);
+            margin: 0 0 24px 0;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .help-content h3 {
+            color: var(--pulse);
+            margin: 24px 0 16px 0;
+            font-size: 1.2rem;
+        }
+
+        .help-section {
+            margin-bottom: 24px;
+        }
+
+        .help-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin: 12px 0;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        body.light-theme .help-item {
+            background: rgba(10, 10, 10, 0.05);
+        }
+
+        .help-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(4px);
+        }
+
+        .help-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .help-text {
+            flex: 1;
+        }
+
+        .help-text strong {
+            color: var(--connection);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .help-text p {
+            color: var(--emergence);
+            opacity: 0.8;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .help-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--emergence);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .help-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+            border-color: var(--hover);
+        }
+
+        .first-visit-badge {
+            display: inline-block;
+            background: var(--pulse);
+            color: var(--void);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-left: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .help-content {
+                padding: 24px;
+                margin: 20px;
+                max-width: calc(100vw - 40px);
+            }
+
+            .help-content h2 {
+                font-size: 1.4rem;
+            }
+
+            .help-item {
+                gap: 12px;
+            }
+
+            .help-icon {
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -764,29 +915,9 @@
         <div id="search-results"></div>
     </div>
     
-    <div id="loading">∅ → carregando rizoma...</div>
+    <div id="loading">∅ → carregando riz∅ma...</div>
     
-    <div id="title">RIZOMA</div>
-    
-    <div id="instructions">
-        <h3>Controles</h3>
-        <div class="instruction-item">
-            <span class="instruction-icon">🖱️</span>
-            <span>Arrastar para rotacionar</span>
-        </div>
-        <div class="instruction-item">
-            <span class="instruction-icon">🔍</span>
-            <span>Scroll para zoom</span>
-        </div>
-        <div class="instruction-item">
-            <span class="instruction-icon">👆</span>
-            <span>Clique para selecionar</span>
-        </div>
-        <div class="instruction-item">
-            <span class="instruction-icon">⌨️</span>
-            <span>Espaço para pausar | H para ajuda</span>
-        </div>
-    </div>
+    <div id="title">RIZ∅MA</div>
     
     <!-- Indicador de Status -->
     <div id="status-indicator" style="position: fixed; bottom: 80px; right: 20px; color: var(--connection); padding: 12px 16px; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 12px; border: 1px solid var(--connection); opacity: 0; transition: opacity 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s; pointer-events: none; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
@@ -814,32 +945,42 @@
         <div class="legend-item" data-layer="ontologica">
             <div class="legend-color" style="background: #66ccff;"></div>
             <span class="legend-label">Ontológica</span>
-            <span class="legend-count">4</span>
+            <span class="legend-count">11</span>
         </div>
         <div class="legend-item" data-layer="epistemologica">
             <div class="legend-color" style="background: #ff9966;"></div>
             <span class="legend-label">Epistemológica</span>
-            <span class="legend-count">4</span>
+            <span class="legend-count">5</span>
         </div>
         <div class="legend-item" data-layer="politica">
             <div class="legend-color" style="background: #ff6699;"></div>
             <span class="legend-label">Política</span>
-            <span class="legend-count">7</span>
+            <span class="legend-count">13</span>
+        </div>
+        <div class="legend-item" data-layer="pedagogica">
+            <div class="legend-color" style="background: #ff99cc;"></div>
+            <span class="legend-label">Pedagógica</span>
+            <span class="legend-count">4</span>
         </div>
         <div class="legend-item" data-layer="indigena-comunitaria">
-            <div class="legend-color" style="background: #66ff99;"></div>
+            <div class="legend-color" style="background: #99ff99;"></div>
             <span class="legend-label">Indígena-Comunitária</span>
-            <span class="legend-count">7</span>
+            <span class="legend-count">6</span>
         </div>
         <div class="legend-item" data-layer="ecologica-material">
             <div class="legend-color" style="background: #ffcc66;"></div>
             <span class="legend-label">Ecológica-Material</span>
-            <span class="legend-count">6</span>
+            <span class="legend-count">7</span>
+        </div>
+        <div class="legend-item" data-layer="temporal">
+            <div class="legend-color" style="background: #cc99ff;"></div>
+            <span class="legend-label">Temporal</span>
+            <span class="legend-count">7</span>
         </div>
         <div class="legend-item" data-layer="pratica-institucional">
             <div class="legend-color" style="background: #99ccff;"></div>
             <span class="legend-label">Prática-Institucional</span>
-            <span class="legend-count">1</span>
+            <span class="legend-count">11</span>
         </div>
     </div>
     
@@ -854,12 +995,22 @@
             <span class="btn-text">Cards</span>
         </button>
         
+        <button class="control-btn" onclick="toggleCameraMode()">
+            <span class="btn-icon">👁</span>
+            <span class="btn-text">Visão</span>
+        </button>
+        
+        <button class="control-btn" id="sphere-toggle" onclick="toggleSphere()">
+            <span class="btn-icon">○</span>
+            <span class="btn-text">Esfera</span>
+        </button>
+        
         <button class="control-btn" onclick="resetView()">
             <span class="btn-icon">↻</span>
             <span class="btn-text">Resetar</span>
         </button>
         
-        <button class="control-btn" id="btn-help">
+        <button class="control-btn" onclick="toggleHelp()">
             <span class="btn-icon">?</span>
             <span class="btn-text">Ajuda</span>
         </button>
@@ -870,7 +1021,211 @@
         </button>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="rizoma.js"></script>
+    <!-- Help Modal -->
+    <div id="help-modal">
+        <div class="help-content">
+            <button class="help-close" onclick="window.closeHelp()">×</button>
+            <h2>
+                <span>📚</span>
+                Guia de Navegação
+                <span class="first-visit-badge" id="first-visit-badge" style="display: none;">Primeira visita</span>
+            </h2>
+
+            <div class="help-section">
+                <h3>🎮 Controles Principais</h3>
+                <div class="help-item">
+                    <div class="help-icon">🖱️</div>
+                    <div class="help-text">
+                        <strong>Rotacionar</strong>
+                        <p>Clique e arraste para girar o riz∅ma e explorar diferentes ângulos</p>
+                    </div>
+                </div>
+                <div class="help-item">
+                    <div class="help-icon">🔍</div>
+                    <div class="help-text">
+                        <strong>Zoom</strong>
+                        <p>Use a roda do mouse (scroll) para aproximar ou afastar a visualização</p>
+                    </div>
+                </div>
+                <div class="help-item">
+                    <div class="help-icon">👆</div>
+                    <div class="help-text">
+                        <strong>Selecionar Conceito</strong>
+                        <p>Clique em qualquer esfera para ver detalhes e conexões do conceito</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="help-section">
+                <h3>⌨️ Atalhos de Teclado</h3>
+                <div class="help-item">
+                    <div class="help-icon">␣</div>
+                    <div class="help-text">
+                        <strong>Espaço</strong>
+                        <p>Pausar/retomar a rotação automática do riz∅ma</p>
+                    </div>
+                </div>
+                <div class="help-item">
+                    <div class="help-icon">H</div>
+                    <div class="help-text">
+                        <strong>Tecla H</strong>
+                        <p>Abrir/fechar este menu de ajuda</p>
+                    </div>
+                </div>
+                <div class="help-item">
+                    <div class="help-icon">C</div>
+                    <div class="help-text">
+                        <strong>Tecla C</strong>
+                        <p>Alternar entre visualização dentro e fora do emaranhado</p>
+                    </div>
+                </div>
+                <div class="help-item">
+                    <div class="help-icon">V</div>
+                    <div class="help-text">
+                        <strong>Tecla V</strong>
+                        <p>Alternar entre visualização 3D e modo cards (lista)</p>
+                    </div>
+                </div>
+                <div class="help-item">
+                    <div class="help-icon">L</div>
+                    <div class="help-text">
+                        <strong>Tecla L</strong>
+                        <p>Mostrar/ocultar legenda de camadas conceituais</p>
+                    </div>
+                </div>
+                <div class="help-item">
+                    <div class="help-icon">S</div>
+                    <div class="help-text">
+                        <strong>Tecla S</strong>
+                        <p>Mostrar/ocultar superfície esférica de referência</p>
+                    </div>
+                </div>
+                <div class="help-item">
+                    <div class="help-icon">R</div>
+                    <div class="help-text">
+                        <strong>Tecla R</strong>
+                        <p>Resetar a visualização para posição inicial</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="help-section">
+                <h3>🎛️ Painéis e Controles</h3>
+                <div class="help-item">
+                    <div class="help-icon">⬚</div>
+                    <div class="help-text">
+                        <strong>Legenda</strong>
+                        <p>Visualize e filtre conceitos por camadas (Fundacional, Ontológica, etc.)</p>
+                    </div>
+                </div>
+                <div class="help-item">
+                    <div class="help-icon">⊞</div>
+                    <div class="help-text">
+                        <strong>Cards</strong>
+                        <p>Alterne para visualização em lista com busca de conceitos</p>
+                    </div>
+                </div>
+                <div class="help-item">
+                    <div class="help-icon">⚙️</div>
+                    <div class="help-text">
+                        <strong>Ajustes</strong>
+                        <p>Controle velocidade de rotação, intensidade do pulso e tema (claro/escuro)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="help-section">
+                <h3>💡 Dicas</h3>
+                <div class="help-item">
+                    <div class="help-icon">🌐</div>
+                    <div class="help-text">
+                        <strong>Conexões Rizomáticas</strong>
+                        <p>As linhas conectam conceitos relacionados - quanto mais próximos, mais forte a conexão</p>
+                    </div>
+                </div>
+                <div class="help-item">
+                    <div class="help-icon">🎨</div>
+                    <div class="help-text">
+                        <strong>Cores das Camadas</strong>
+                        <p>Cada cor representa uma camada conceitual diferente - use a legenda para identificá-las</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Modal Script -->
+    <script>
+        // Funções de controle do modal de ajuda (expostas globalmente)
+        window.openHelp = function(isFirstVisit = false) {
+            const modal = document.getElementById('help-modal');
+            const badge = document.getElementById('first-visit-badge');
+            const container = document.getElementById('container');
+            
+            if (modal) {
+                modal.classList.add('visible');
+                
+                // Bloquear interações com o canvas/3D
+                if (container) {
+                    container.style.pointerEvents = 'none';
+                }
+                
+                if (isFirstVisit && badge) {
+                    badge.style.display = 'inline-block';
+                } else if (badge) {
+                    badge.style.display = 'none';
+                }
+            }
+        };
+
+        window.closeHelp = function() {
+            const modal = document.getElementById('help-modal');
+            const container = document.getElementById('container');
+            
+            if (modal) {
+                modal.classList.remove('visible');
+                
+                // Restaurar interações com o canvas/3D
+                if (container) {
+                    container.style.pointerEvents = 'auto';
+                }
+            }
+        };
+
+        // Verificar se é a primeira visita
+        function checkFirstVisit() {
+            const hasVisited = localStorage.getItem('rizoma-visited');
+            if (!hasVisited) {
+                // Aguardar um momento após o carregamento para mostrar
+                setTimeout(() => {
+                    window.openHelp(true);
+                }, 1000);
+                localStorage.setItem('rizoma-visited', 'true');
+            }
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            // Verificar primeira visita
+            checkFirstVisit();
+
+            // Fechar modal ao clicar fora
+            const modal = document.getElementById('help-modal');
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        window.closeHelp();
+                    }
+                });
+            }
+
+            // REMOVIDO: Event listener de teclado duplicado
+            // A lógica de teclado (incluindo H e ESC) está implementada em rizoma-full.ts
+            // e não deve ser duplicada aqui para evitar conflitos
+        });
+    </script>
+
+    <!-- TypeScript compilado para ES modules -->
+    <script type="module" src="dist/rizoma-full.js"></script>
 </body>
 </html>

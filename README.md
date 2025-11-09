@@ -4,22 +4,22 @@
 
 [![Status](https://img.shields.io/badge/status-perpetuamente%20incompleto-blueviolet)](https://revolucaocibernetica.com)
 [![License](https://img.shields.io/badge/license-compartilhar--modificar--devolver-green)](README.md#-licença)
-[![Made with](https://img.shields.io/badge/made%20with-ontologia%20relacional-ff69b4)](CRIOS.md)
+[![Made with](https://img.shields.io/badge/made%20with-ontologia%20relacional-ff69b4)](docs/CRIOS.md)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue)](https://www.typescriptlang.org/)
+[![Three.js](https://img.shields.io/badge/Three.js-0.181.0-black)](https://threejs.org/)
+[![Live Reload](https://img.shields.io/badge/dev-live%20reload-brightgreen)](docs/LIVE_RELOAD.md)
+[![Browser-sync](https://img.shields.io/badge/browser--sync-enabled-orange)](http://localhost:3001)
 
 **CRIO** é uma experiência filosófica interativa que performa ontologia relacional através de sete movimentos conceituais. Não é um site sobre filosofia—é filosofia SE FAZENDO através de código, design e interação.
 
 ## 📖 Índice
 
 - [O Que É CRIO](#-o-que-é-crio)
-- [Visualização Local](#-visualização-local)
+- [Início Rápido](#-início-rápido)
+- [Desenvolvimento](#-desenvolvimento)
 - [Estrutura do Projeto](#-estrutura-do-projeto)
 - [Recursos e Funcionalidades](#-recursos-e-funcionalidades)
-- [Experiência de Áudio](#-experiência-de-áudio)
-- [Acessibilidade](#-acessibilidade)
-- [Atalhos de Teclado](#-atalhos-de-teclado)
-- [Sistema de Cache](#-sistema-de-cache)
 - [Arquitetura Técnica](#-arquitetura-técnica)
-- [Contribuindo](#-contribuindo)
 - [Deploy](#-deploy)
 - [Filosofia](#-filosofia)
 - [Licença](#-licença)
@@ -49,240 +49,464 @@ Este projeto sintetiza:
 - **Epistemologia Performativa**: conhecimento produz realidade ao descrevê-la
 - **Filosofia da Tecnologia**: código como pensamento materializado
 
-### Por Que Existe
+---
 
-CRIO demonstra que **texto pode executar** sua própria ontologia. Não descreve apenas conceitos—performa-os:
+## 🚀 Início Rápido
 
-- **Markdown → HTML → Experiência**: transformação contínua (CRIO 2)
-- **Cache inteligente**: conhecimento emerge e persiste através do uso (CRIO 5)
-- **Áudio sincronizado**: tempo emerge da interação, não a precede (CRIO 3)
-- **Tema adaptativo**: agência distribuída entre usuário e sistema (CRIO 4)
-- **Código aberto**: ética do devir pelo compartilhamento (CRIO 6)
-
-## 🎯 Visualização Local
-
-Este projeto contém uma experiência interativa que combina filosofia, design e tecnologia para explorar ontologia relacional.
-
-### Como visualizar localmente
-
-O projeto carrega dinamicamente o conteúdo do arquivo `CRIOS.md`. Por questões de segurança, navegadores bloqueiam o carregamento de arquivos locais via JavaScript, então você precisa usar um servidor web local.
-
-**Opção 1 - Usar o script helper:**
+### Instalação
 
 ```bash
-./servir.sh
+# Clonar repositório
+git clone https://github.com/silvanoneto/revolucao-cibernetica.git
+cd revolucao-cibernetica
+
+# Instalar dependências
+make install
+# ou: npm install
 ```
 
-**Opção 2 - Python (recomendado):**
+### Desenvolvimento com Live Reload
 
 ```bash
-python3 -m http.server 8000
+# Inicia TypeScript watch + Browser-sync (live reload automático)
+make dev
+# ou: npm run dev
+# ou: ./dev.sh
 ```
 
-**Opção 3 - Node.js:**
+**URLs disponíveis:**
+- 🌐 **Local**: http://localhost:8000/riz∅ma.html
+- 📱 **Rede**: http://192.168.15.5:8000/riz∅ma.html (acessível na rede local)
+- 🎛️ **Painel**: http://localhost:3001 (controle do browser-sync)
+
+**✨ Live Reload Ativo:**
+- Edite arquivos `.ts`, `.html`, `.css` ou `assets/*`
+- Salve (Cmd+S / Ctrl+S)
+- **Browser atualiza automaticamente** - sem apertar F5!
+
+📚 **Guia completo**: [docs/LIVE_RELOAD.md](docs/LIVE_RELOAD.md)
+
+---
+
+## 💻 Desenvolvimento
+
+### Requisitos
+
+- **Node.js** 20+ com npm
+- **Python** 3.x (opcional, apenas para `make server` sem live reload)
+- **Make** (opcional, facilita comandos)
+
+### Comandos Principais
+
+| Comando | Descrição |
+|---------|-----------|
+| `make help` | Lista todos os comandos disponíveis |
+| `make install` | Instala dependências (npm install) |
+| `make dev` | 🚀 **Desenvolvimento completo** (TypeScript watch + live reload) |
+| `make build` | Compila TypeScript → JavaScript |
+| `make watch` | Observa mudanças e recompila automaticamente |
+| `make server` | Servidor HTTP simples (sem live reload) |
+| `make stop` | Para todos os servidores |
+| `make status` | Verifica se servidor está rodando |
+| `make logs` | Mostra logs do desenvolvimento |
+| `make clean` | Remove dist/ |
+| `make clean-all` | Remove dist/ + node_modules/ |
+| `make rebuild` | Limpa, reinstala e recompila tudo |
+
+### Scripts npm
 
 ```bash
-npx http-server -p 8000
+npm install           # Instala dependências
+npm run build         # Compila TypeScript
+npm run watch         # Observa mudanças (TypeScript)
+npm run dev           # 🚀 Watch + browser-sync (live reload)
+npm run server        # Apenas servidor HTTP
+npm run browser-sync  # Apenas browser-sync (requer dist/ compilado)
 ```
 
-Depois abra no navegador: **<http://localhost:8000>**
+### Workflow de Desenvolvimento
+
+**⚡ Live Reload Automático:**
+
+1. **Edite** arquivos em `src/*.ts`, `*.html`, `*.css` ou `assets/`
+2. **Salve** (Cmd+S / Ctrl+S)
+3. **Browser atualiza sozinho** - TypeScript recompila automaticamente!
+
+**Ou use o script auxiliar:**
+
+```bash
+./dev.sh           # Interface amigável com mensagens coloridas
+```
+
+**📚 Mais informações:** [docs/LIVE_RELOAD.md](docs/LIVE_RELOAD.md)
+- Como funciona o browser-sync
+- Sincronização multi-device (teste no celular!)
+- Painel de controle (http://localhost:3001)
+- Troubleshooting e dicas
+
+---
 
 ## 📁 Estrutura do Projeto
 
 ```
 revolucao-cibernetica/
-├── CRIOS.md              # Conteúdo filosófico principal (~50.000 palavras)
-├── index.html            # Interface web com SEO completo (217 linhas)
-├── crio.js               # Lógica de interação completa (2378 linhas)
-├── styles.css            # Estilos responsivos (2120 linhas)
-├── marked.min.js         # Parser Markdown (biblioteca externa)
-├── CRIO.mp3             # Trilha sonora ambiental (opcional, não incluído)
-├── manifest.json         # PWA manifest para instalação
-├── robots.txt           # Diretivas para crawlers
-├── sitemap.xml          # Mapa do site para SEO
-├── ANALYTICS.md         # Documentação do sistema de analytics privacy-first
-├── MOBILE-TESTING.md    # Checklist de testes mobile e otimizações
-├── servir.sh            # Script helper para servidor local
-└── README.md            # Esta documentação
+├── src/                    # Código-fonte TypeScript
+│   ├── types.ts           # Definições de tipos (Concept, Relation, Layer)
+│   ├── constants.ts       # Constantes (opacidades, raios, configurações)
+│   ├── utils.ts           # Utilitários (cores, geometria, DOM helpers)
+│   ├── state.ts           # Gerenciamento de estado global
+│   └── riz∅ma-full.ts     # Aplicação principal (visualização 3D + cards)
+├── dist/                   # JavaScript compilado (gerado automaticamente)
+│   └── riz∅ma-full.js     # Bundle compilado para produção
+├── assets/                # Recursos estáticos
+│   ├── concepts.json      # 68 conceitos filosóficos estruturados
+│   ├── relations.json     # 289 relações entre conceitos
+│   └── CRIO.mp3           # Áudio de fundo (opcional)
+├── docs/                  # Documentação
+│   ├── CRIOS.md           # Conteúdo filosófico (~50.000 palavras)
+│   └── meta-reflexao.md   # Meta-reflexão sobre o projeto
+├── public/                # Arquivos públicos
+│   ├── manifest.json      # PWA manifest
+│   ├── robots.txt         # Diretivas para crawlers
+│   └── sitemap.xml        # Mapa do site para SEO
+├── .backup/               # Arquivos legados (ignorado pelo git)
+├── .github/workflows/
+│   └── pages.yml         # CI/CD para GitHub Pages
+├── riz∅ma.html           # Interface web principal (visualização 3D)
+├── index.html            # Landing page CRIO
+├── styles.css            # Estilos responsivos
+├── package.json          # Dependências e scripts npm
+├── tsconfig.json         # Configuração TypeScript
+├── Makefile              # Comandos de desenvolvimento
+└── dev.sh                # Script auxiliar de desenvolvimento
 ```
 
 ### Arquivos Core
 
-- **CRIOS.md**: Fonte única de verdade. Todo o conteúdo filosófico em markdown puro.
-- **index.html**: Shell mínimo que carrega e renderiza CRIOS.md dinamicamente.
-- **crio.js**: 9 módulos comentados (config, cache, DOM, markdown, navegação, áudio, tema, interação, init).
-- **styles.css**: 12 seções responsivas (reset, variáveis, layout, tipografia, controles, animações, responsivo).
+**TypeScript (src/):**
+
+- `types.ts`: Sistema de tipos (Concept, Relation, Layer, NodeUserData, LineUserData)
+- `constants.ts`: Valores centralizados (SELECTED_OPACITY=1.0, NODE_RADIUS=1.5, etc.)
+- `utils.ts`: Funções utilitárias (lerpColor, randomSpherePoint, showNotification)
+- `state.ts`: Estado global com getters/setters (concepts, nodes, activeLayerFilters)
+- `riz∅ma-full.ts`: Aplicação completa Three.js (visualização 3D + modo cards)
+
+**Dados (assets/):**
+
+- `concepts.json`: 68 conceitos com id, título, camada, descrição, citações
+- `relations.json`: 289 relações direcionadas entre conceitos
+- `CRIO.mp3`: Áudio de fundo opcional
+
+**Documentação (docs/):**
+
+- `CRIOS.md`: Conteúdo filosófico completo (~50.000 palavras)
+- `meta-reflexao.md`: Meta-análise do projeto
+
+**HTML/CSS:**
+
+- `riz∅ma.html`: Interface com canvas Three.js, legenda de camadas, controles
+- `index.html`: Landing page com carregamento dinâmico de docs/CRIOS.md
+- `styles.css`: Estilos responsivos, tema adaptativo, animações
+
+**Build:**
+
+- `package.json`: Scripts npm (build, watch, dev) + dependências (three, typescript)
+- `tsconfig.json`: Compilação TypeScript ES2020, strict mode desabilitado
+- `Makefile`: Comandos make para desenvolvimento (install, build, dev, clean)
+
+**Público (public/):**
+
+- `manifest.json`: PWA manifest para instalação
+- `robots.txt`: Diretivas para crawlers
+- `sitemap.xml`: Mapa do site para SEO
+
+---
 
 ## ✨ Recursos e Funcionalidades
 
-### Navegação Inteligente
+### Visualização Rizoma (riz∅ma.html)
 
-- **Índice Retrátil**: Painel lateral com todas as seções (Esc para fechar)
-- **Scroll Spy**: Destaca seção atual automaticamente
-- **Marcadores Laterais**: 7 círculos clicáveis indicam posição no conteúdo
-- **Barra de Progresso**: Indicador superior com porcentagem e tempo estimado de leitura
-- **Deep Links**: URLs com âncoras (#crio-1, #crio-2, etc.) funcionam perfeitamente
+**Sistema de Camadas (9 camadas):**
+- Fundacional, Ontológica, Epistemológica, Política
+- Pedagógica, Indígena-Comunitária, Ecológica-Material
+- Temporal, Prática-Institucional
+- **Multi-seleção**: Clique em múltiplas camadas para filtrar simultaneamente
+- **Feedback visual**: Camadas ativas com borda e transformação
 
-### Experiência Visual
+**Visualização 3D:**
+- 68 nós (esferas de vidro) posicionados em esfera
+- 289 linhas (cilindros) representando relações
+- Gradiente dinâmico entre nós selecionados
+- OrbitControls para rotação/zoom/pan interativo
+- Labels flutuantes em nós e arestas
 
-- **Tema Adaptativo**: Modo claro/escuro persistente (clique no botão CRIO)
-- **Partículas Flutuantes**: Efeitos visuais sutis que respondem ao scroll
-- **Tremor Controlado**: Animação sutil sincronizada com áudio
-- **Tipografia Otimizada**: Line-height 1.8, max-width 70ch, OpenDyslexic como fallback
-- **Animações de Emergência**: Citações aparecem gradualmente ao scrollar
-- **Efeitos de Ripple**: Feedback visual em todos os cliques
+**Modo Cards:**
+- Grade responsiva de conceitos filtrados por camada
+- Citações completas, descrições expandidas
+- Scroll infinito com carregamento lazy
+
+**Interatividade:**
+- Hover: Destaque de nó + relações conectadas
+- Clique: Seleção de nó + cards relacionados
+- Legenda: Toggle de camadas (individual ou múltiplas)
+- Tema adaptativo: Modo claro/escuro persistente
 
 ### Performance
 
+- **Live Reload**: Browser-sync com hot injection (CSS/JS sem reload completo)
+- **TypeScript Watch**: Recompilação incremental automática (~100-500ms)
 - **Cache Inteligente**: localStorage com TTL de 7 dias e versionamento
 - **Lazy Rendering**: Renderiza markdown apenas uma vez, depois reutiliza
 - **Throttled Handlers**: Scroll handlers limitados a 16ms (60fps)
 - **GPU Acceleration**: Transform e opacity para animações suaves
 - **Viewport Culling**: Animações pausam quando fora da viewport
+- **ES Modules**: Carregamento modular otimizado para produção
+- **Multi-device Sync**: Teste em celular/tablet simultaneamente
 
-### Persistência
+---
 
-- **Scroll Position**: Salva e restaura posição exata ao recarregar
-- **Tema Preferido**: Lembra escolha de tema entre sessões
-- **Cache de Conteúdo**: Evita recarregar CRIOS.md a cada visita
-- **Progressive Web App**: Instalável como app standalone
+## 🏗️ Arquitetura Técnica
 
-## 🎧 Experiência de Áudio
+### Stack Tecnológico
 
-O CRIO oferece uma experiência sonora imersiva totalmente **opcional e não-intrusiva**:
+- **TypeScript 5.9.3**: Type-safe development com ES2020 target
+- **Three.js 0.181.0**: Renderização 3D WebGL via CDN (import map)
+- **Browser-sync**: Live reload com hot injection e multi-device sync
+- **Concurrently**: Gerenciamento de processos paralelos (watch + server)
+- **Vanilla JS**: Zero frameworks frontend, máxima performance
+- **CSS3**: Gradientes, animações, grid layout responsivo
+- **JSON**: Estrutura de dados (concepts.json, relations.json)
 
-### Como Funciona
-
-1. **▶ Botão Play**: Clique para iniciar a trilha ambiental
-2. **⏸ Botão Pause**: Clique para pausar a qualquer momento
-3. **CRIO Botão**: Sempre visível, silencia áudio por 99s + alterna tema
-4. **Sincronização com Scroll**: Volume (0-100%) e playback rate aumentam conforme você avança
-5. **Efeitos Visuais Sincronizados**: Partículas e tremor respondem à intensidade do áudio
-
-### Detalhes Técnicos
-
-- **Formato**: MP3 (não incluído no repositório—adicione seu próprio)
-- **Controle de Volume**: 0% no topo → 100% no final (sincronizado com scroll)
-- **Playback Rate**: 0.8x no início → 1.2x no final (acelera conforme você avança)
-- **Loop Contínuo**: Áudio reinicia automaticamente ao terminar
-- **Graceful Fallback**: Se CRIO.mp3 não existir, experiência visual continua perfeita
-- **Mobile-Friendly**: Detecta e respeita preferências de autoplay do navegador
-
-### Por Que Áudio É Opcional
-
-Seguindo princípios de acessibilidade e UX modernas:
-- **Respeita preferências do usuário**: Nunca inicia automaticamente
-- **Baixo consumo de dados**: Usuários móveis escolhem se querem carregar
-- **Ambientes diversos**: Nem sempre é apropriado ter som
-- **Foco no conteúdo**: O texto filosófico é primário, áudio é complementar
-
-## ⌨️ Atalhos de Teclado
-
-- **T**: Alternar tema (claro/escuro)
-- **Ctrl+Shift+C** (ou **Cmd+Shift+C** no Mac): Limpar cache e recarregar
-- **Esc**: Fechar painel de navegação
-- **Enter/Espaço**: Ativar botão ou marcador em foco (incluindo play/pause)
-- **Tab**: Navegar pelos elementos interativos
-- **Shift+Tab**: Navegar em ordem reversa
-
-## ♿ Acessibilidade
-
-O CRIO é projetado para ser acessível a todos:
-
-- **Navegação por teclado**: Todos os controles interativos são acessíveis via teclado
-- **Suporte a leitores de tela**: ARIA labels e anúncios dinâmicos para leitores de tela
-- **Alto contraste**: Razão de contraste 18.6:1 (excede WCAG AAA)
-- **Foco visível**: Indicadores claros quando navegando por teclado
-- **Pular para conteúdo**: Link invisível no início para pular navegação (ativa ao focar)
-- **Estrutura semântica**: HTML semântico com headings hierárquicos
-- **Texto alternativo**: Todas as imagens e ícones decorativos marcados adequadamente
-
-## 🔧 Sistema de Cache
-
-O CRIO implementa cache inteligente com três camadas para otimizar performance:
-
-### Estratégia de Cache
-
-1. **Conteúdo Markdown** (CRIOS.md):
-   - Armazenado em `localStorage` por **7 dias**
-   - Versionado automaticamente (hash do conteúdo)
-   - Atualização em background se nova versão detectada
-   - Limpeza automática de versões antigas
-
-2. **Posição de Scroll**:
-   - Salva a cada movimento de scroll (throttled 100ms)
-   - Restaurada ao recarregar página
-   - Expira após 24 horas de inatividade
-
-3. **Preferências do Usuário**:
-   - Tema escolhido (claro/escuro)
-   - Estado do áudio (silenciado/ativo)
-   - Persistem indefinidamente
-
-### Gerenciamento de Cache
-
-**Limpeza Manual**:
+### Pipeline de Desenvolvimento
 
 ```bash
-# No navegador, pressione:
-Ctrl+Shift+C  # Windows/Linux
-Cmd+Shift+C   # macOS
+# Desenvolvimento (watch mode com live reload)
+src/*.ts → tsc --watch → dist/*.js → browser-sync → Browser (auto-reload)
+                            ↑                ↓
+                            └────── detecção ────┘
+
+# Produção (build estático)
+src/*.ts → tsc → dist/*.js → GitHub Pages
 ```
 
-**Para Desenvolvedores**:
+**Desenvolvimento:**
 
-Ao atualizar `CRIOS.md`, incremente a versão em `crio.js`:
+1. `make dev` inicia TypeScript watch + browser-sync
+2. `tsc --watch` monitora mudanças em `src/`
+3. Recompila automaticamente para `dist/`
+4. Browser-sync detecta mudanças e injeta no browser
+5. **Browser atualiza automaticamente** - sem F5!
 
-```javascript
-const CACHE_CONFIG = {
-  VERSION: '2.0.0',  // Incremente aqui
-  TTL_HOURS: 168
-};
+**Produção (GitHub Actions):**
+
+1. Checkout do repositório
+2. `npm ci` (instalação limpa de dependências)
+3. `npm run build` (compilação TypeScript)
+4. Upload de `dist/` como artifact
+5. Deploy para GitHub Pages
+5. Deploy para GitHub Pages com arquivos compilados
+
+### Modularização
+
+**Separação de responsabilidades:**
+**Organização modular (src/):**
+
+- `types.ts`: Contratos de dados (interfaces, types, enums)
+- `constants.ts`: Configuração centralizada (valores mágicos extraídos)
+- `utils.ts`: Funções puras reutilizáveis (sem efeitos colaterais)
+- `state.ts`: Single source of truth para estado global
+- `riz∅ma-full.ts`: Orquestração (scene, rendering, events, UI)
+
+**Benefícios:**
+
+- Type safety: Catch errors em tempo de compilação
+- Manutenibilidade: Código organizado e autodocumentado
+- Reusabilidade: Módulos importáveis independentemente
+- Testabilidade: Funções puras fáceis de testar
+- Live Reload: Desenvolvente com feedback instantâneo
+
+---
+
+## 🚀 Deploy
+
+### GitHub Pages (Automático)
+
+Cada push na branch `master` dispara CI/CD:
+
+1. **Build Job**: Compila TypeScript → JavaScript
+2. **Deploy Job**: Publica em GitHub Pages
+
+**Pipeline**: `.github/workflows/pages.yml`
+
+- Node.js 20 com cache npm
+- Compilação TypeScript com `npm run build`
+- Upload de artifact (dist/)
+- Deploy automático
+
+**URL**: https://[seu-usuario].github.io/revolucao-cibernetica
+
+### Deploy Manual
+
+```bash
+# Build local
+make build
+# ou: npm run build
+
+# Verificar dist/
+ls -lh dist/
+
+# Commit e push
+git add dist/
+git commit -m "Build: Atualização TypeScript"
+git push origin master
 ```
 
-### Benefícios
+### Requisitos de Hospedagem
 
-- **Carregamento instantâneo**: ~50KB carregados apenas na primeira visita
-- **Modo offline**: Funciona sem conexão após primeira carga
-- **Redução de largura de banda**: 99% menos requisições em visitas repetidas
-- **Experiência consistente**: Sem flashes de conteúdo não-estilizado (FOUC)
+- **Servidor estático**: Qualquer host que sirva HTML/CSS/JS
+- **HTTPS recomendado**: Para PWA e features modernas
+- **Sem build server**: Arquivos estáticos apenas (dist/ já compilado)
 
-## 📊 Analytics Privacy-First
+---
 
-CRIO implementa um sistema de analytics que **respeita totalmente a privacidade do usuário**:
+## 🤝 Contribuindo
 
-### Princípios
+Contribuições são bem-vindas! Este projeto performa sua própria ontologia: **contribuir é co-criar**.
 
-- ✅ **100% Local**: Dados armazenados apenas no browser (localStorage)
-- ✅ **Zero Rastreamento Externo**: Nenhum dado enviado para terceiros
-- ✅ **Respeita DNT**: Desabilita automaticamente se Do Not Track ativo
-- ✅ **Opt-Out Fácil**: Comando simples no console para desabilitar
-- ✅ **Anônimo**: Nenhuma informação pessoal ou identificável coletada
-- ✅ **Transparente**: Documentação completa do que é rastreado
+### Como Contribuir
 
-### O Que é Rastreado (Localmente)
+1. **Fork** o repositório
+2. **Clone** seu fork: `git clone https://github.com/SEU-USUARIO/revolucao-cibernetica.git`
+3. **Instale** dependências: `make install`
+4. **Crie branch**: `git checkout -b feature/minha-contribuicao`
+5. **Desenvolva**: Edite arquivos em `src/`, compile com `make dev`
+6. **Teste**: Verifique em http://localhost:8000/riz∅ma.html
+7. **Commit**: `git commit -m "feat: Descrição da mudança"`
+8. **Push**: `git push origin feature/minha-contribuicao`
+9. **Pull Request**: Abra PR com descrição detalhada
 
-**Métricas de Sessão**:
-- Duração da sessão, profundidade de scroll
-- Seções visualizadas e tempo em cada seção
+### Áreas para Contribuição
 
-**Interações**:
-- Cliques totais, uso de áudio, uso da navegação
-- Tipo de dispositivo (mobile/desktop)
+**Código:**
 
-**Agregados**:
-- Total de sessões, tempo médio de leitura
-- Seções mais visualizadas, distribuição mobile/desktop
+- Novos conceitos/relações (assets/concepts.json, assets/relations.json)
+- Melhorias de performance (otimizações Three.js)
+- Novas visualizações (modos alternativos de exibição)
+- Testes automatizados (unit tests, integration tests)
+- Strict TypeScript (remover @ts-nocheck, adicionar tipos específicos)
 
-### Como Usar
+**Conteúdo:**
 
-**Visualizar analytics** (console do navegador):
-```javascript
-viewAnalytics()
+- Expansão de docs/CRIOS.md (novos movimentos filosóficos)
+- Traduções (i18n para outros idiomas)
+- Acessibilidade (melhorias WCAG AAA)
+
+**Documentação:**
+
+- Tutoriais de uso (screencasts, guias visuais)
+- Exemplos de código (snippets reutilizáveis)
+- Melhorias neste README
+
+---
+
+## 🛠️ Ambiente de Desenvolvimento
+
+Este projeto possui um ambiente de desenvolvimento moderno e automatizado:
+
+### ✨ Features de Desenvolvimento
+
+| Recurso | Descrição |
+|---------|-----------|
+| **Live Reload** | Browser atualiza automaticamente ao salvar arquivos |
+| **Hot Injection** | CSS/JS injetados sem reload completo da página |
+| **TypeScript Watch** | Recompilação incremental (~100-500ms) |
+| **Multi-device Sync** | Teste no celular/tablet simultaneamente |
+| **Browser-sync UI** | Painel de controle em http://localhost:3001 |
+| **Logs coloridos** | Output visual com concurrently |
+| **Import Map** | Three.js via CDN (sem build de node_modules) |
+
+### 🎯 Quick Start
+
+```bash
+make dev        # Inicia tudo (TypeScript watch + Browser-sync)
+# Acesse: http://localhost:8000/riz∅ma.html
+# Edite arquivos em src/ e veja mudanças instantaneamente!
 ```
 
-**Desabilitar analytics**:
-```javascript
+### 📚 Documentação Completa
+
+- **[docs/LIVE_RELOAD.md](docs/LIVE_RELOAD.md)**: Guia completo do ambiente de desenvolvimento
+- **[docs/CRIOS.md](docs/CRIOS.md)**: Fundamentos filosóficos do projeto
+- **[docs/meta-reflexao.md](docs/meta-reflexao.md)**: Meta-análise do projeto
+
+---
+
+## 📜 Licença
+
+Este projeto adota a **Licença de Reciprocidade Ontológica**:
+
+### Você Pode
+
+✅ **Compartilhar**: Copiar e redistribuir em qualquer formato  
+✅ **Modificar**: Remixar, transformar, construir sobre o material  
+✅ **Uso Comercial**: Usar para fins comerciais  
+
+### Sob as Condições
+
+📌 **Atribuição**: Credite o autor original (Silvano Neto)  
+📌 **Compartilha Igual**: Distribua sob a mesma licença  
+📌 **Devolução**: Contribuições melhoram o original (PRs bem-vindas)  
+
+### Ontologia da Licença
+
+Esta não é uma licença de propriedade—é um convite ao **devir comum**:
+
+> "O conhecimento não é posse, é relação. Ao usar este código, você entra em uma rede de co-criação onde cada fork é um novo mundo possível, e cada PR é um gesto de reciprocidade ontológica."
+
+**Inspirações**: Creative Commons BY-SA 4.0, GPL 3.0, filosofia FOSS
+
+---
+
+## 🌱 Filosofia do Projeto
+
+### Por Que Existe
+
+CRIO demonstra que **texto pode executar** sua própria ontologia. Não descreve apenas conceitos—performa-os:
+
+- **Markdown → HTML → Experiência**: transformação contínua (CRIO 2)
+- **Visualização 3D**: relações emergem espacialmente (CRIO 1)
+- **Multi-layer filtering**: agência distribuída entre usuário e sistema (CRIO 4)
+- **TypeScript**: conhecimento codificado, tipos como ontologia (CRIO 5)
+- **Open Source**: ética do devir pelo compartilhamento (CRIO 6)
+- **CI/CD**: transformação automática, devir maquínico (CRIO 3)
+
+### Princípios de Design
+
+1. **Performatividade**: Código é pensamento materializado
+2. **Emergência**: Complexidade surge de regras simples
+3. **Relacionalidade**: Tudo são conexões, nada é substância
+4. **Indeterminação**: Sistema aberto a múltiplas interpretações
+5. **Reciprocidade**: Contribuir é co-criar, não doar
+
+---
+
+## 📞 Contato
+
+**Autor**: Silvano Neto  
+**Site**: [revolucaocibernetica.com](https://revolucaocibernetica.com)  
+**GitHub**: [@silvanoneto](https://github.com/silvanoneto)
+
+---
+
+<div align="center">
+
+**CRIO não é um projeto—é um convite.**
+
+*Entre na rede. Transforme. Seja transformado.*
+
+[![GitHub Stars](https://img.shields.io/github/stars/silvanoneto/revolucao-cibernetica?style=social)](https://github.com/silvanoneto/revolucao-cibernetica)
+
+</div>
 disableAnalytics()
 ```
 
@@ -346,21 +570,11 @@ Este approach alinha-se com a filosofia CRIO:
 - **Bundle Size**: ~120KB total (não-minificado)
 - **Cache Hit Rate**: >95% em visitas repetidas
 
-## 🤝 Contribuindo
+## 🤝 Contribuindo (CRIO Landing Page)
 
-CRIO é um projeto de **ontologia performativa**—contribuições são atos de co-criação, não correções.
+O projeto index.html (CRIO landing page) é um espaço de **ontologia performativa**—contribuições são atos de co-criação.
 
-### Como Contribuir
-
-1. **Fork** o repositório
-2. **Clone** sua fork localmente
-3. **Crie um branch** descritivo: `git checkout -b feat/nova-interacao`
-4. **Faça suas mudanças** com commits atômicos
-5. **Teste localmente** com `./servir.sh`
-6. **Push** para sua fork: `git push origin feat/nova-interacao`
-7. **Abra um Pull Request** explicando a ontologia da mudança
-
-### Áreas de Contribuição
+### Áreas de Contribuição (Landing Page)
 
 **Conteúdo Filosófico**:
 
@@ -383,7 +597,7 @@ CRIO é um projeto de **ontologia performativa**—contribuições são atos de 
 - Adicione ilustrações SVG inline
 - Melhore tipografia responsiva
 
-### Guia de Estilo
+### Guia de Estilo (JavaScript)
 
 **JavaScript**:
 
@@ -438,6 +652,29 @@ async function loadContent() {
 }
 ```
 
+**TypeScript**:
+
+```typescript
+// Use tipos explícitos para documentação
+interface Concept {
+  id: string;
+  layer: Layer;
+  title: string;
+}
+
+// Prefira const assertions e readonly
+const LAYERS = ['fundacional', 'ontologica'] as const;
+type Layer = typeof LAYERS[number];
+
+// Use generics para reusabilidade
+function filterByLayer<T extends { layer: Layer }>(
+  items: T[],
+  layer: Layer
+): T[] {
+  return items.filter(item => item.layer === layer);
+}
+```
+
 **Markdown (CRIOS.md)**:
 
 - Use `##` para CRIOS principais, `###` para subseções
@@ -446,99 +683,40 @@ async function loadContent() {
 - Código inline com `` `backticks` ``
 - Mantenha linhas < 100 caracteres quando possível
 
-### Processo de Review
-
-Pull Requests serão avaliados por:
-
-1. **Coerência Ontológica**: A mudança performa a filosofia que articula?
-2. **Qualidade Técnica**: Código limpo, performático, acessível?
-3. **Documentação**: Comentários, README, commit messages claros?
-4. **Testes**: Funciona em diferentes navegadores/dispositivos?
-
-### Código de Conduta
-
-Este projeto adota ontologia relacional em suas interações:
-
-- **Respeito mútuo**: Toda perspectiva emerge de relações específicas
-- **Crítica construtiva**: Foco em melhorar, não diminuir
-- **Abertura ao devir**: Aceitar que conhecimento é sempre provisório
-- **Responsabilidade distribuída**: Todos co-criam o projeto
-
-## 🌐 Deploy
-
-Para publicar CRIO online, você pode usar qualquer serviço de hospedagem estática:
-
-### GitHub Pages (Recomendado)
-
-```bash
-# 1. Commit todas as mudanças
-git add .
-git commit -m "Deploy CRIO"
-
-# 2. Push para repositório GitHub
-git push origin master
-
-# 3. Configure GitHub Pages
-# Vá em: Settings → Pages → Source: master branch → Save
-```
-
-Seu site estará em: `https://seu-usuario.github.io/revolucao-cibernetica/`
-
-### Netlify
-
-```bash
-# Opção 1: Drag & Drop
-# Arraste a pasta do projeto em netlify.com/drop
-
-# Opção 2: CLI
+---
 npm install -g netlify-cli
 netlify deploy --prod
 ```
 
-### Vercel
+---
 
-```bash
-# Instale Vercel CLI
-npm install -g vercel
+### 🎯 Otimizações Futuras
 
-# Deploy
-vercel --prod
-```
+**TypeScript:**
+- Remover `@ts-nocheck` de `src/riz∅ma-full.ts`
+- Habilitar `strict: true` em `tsconfig.json`
+- Adicionar tipos específicos (eliminar `any`)
+- Dividir `riz∅ma-full.ts` em módulos menores
 
-### Cloudflare Pages
+**Testes:**
+- Jest para unit tests (utils, state management)
+- Playwright para E2E (interações 3D, multi-layer selection)
+- Coverage reports (>80% target)
 
-1. Conecte seu repositório GitHub em `pages.cloudflare.com`
-2. Configure:
-   - **Build command**: (deixe vazio)
-   - **Build output**: `/`
-3. Deploy automático a cada commit
+**Performance:**
+- Minificação de JavaScript (Terser)
+- Tree-shaking (remover código não usado)
+- Code splitting (lazy load cards view)
+- WebGL optimizations (geometry instancing)
 
-### Requisitos de Servidor
+**Infraestrutura:**
+- Service Worker (offline-first PWA)
+- Lighthouse CI (performance monitoring)
+- Dependabot (atualização automática de dependências)
 
-CRIO é **100% estático**, portanto:
+---
 
-- ✅ Não precisa de Node.js, Python, PHP, ou qualquer runtime
-- ✅ Funciona em qualquer CDN ou bucket S3
-- ✅ Suporta HTTPS (recomendado para PWA)
-- ✅ Pode ser servido de subdiretório (`/crio/`) ou raiz
-
-### Configuração Opcional
-
-**Custom Domain** (exemplo: `revolucaocibernetica.com`):
-
-1. Adicione CNAME no DNS apontando para seu host
-2. Configure SSL/TLS (Let's Encrypt grátis)
-3. Atualize URLs absolutas em `index.html` se necessário
-
-**PWA Installation**:
-
-Para que o app seja instalável, certifique-se de:
-
-- Servir via HTTPS
-- Ter `manifest.json` válido (✅ já incluído)
-- Ter Service Worker (opcional—não implementado ainda)
-
-## 📜 Filosofia
+## 📜 Filosofia do Projeto
 
 ### CRIO 8: Texto Que Executa
 
@@ -548,13 +726,13 @@ Este projeto **performa** a ontologia relacional que articula. Não é sobre fil
 
 | Conceito | Implementação Técnica |
 |----------|----------------------|
-| **Vazio que povoa** (CRIO 1) | `<div id="content"></div>` vazio que se preenche dinamicamente |
-| **Produção de diferença** (CRIO 2) | Markdown → HTML → DOM: transformação contínua |
-| **Tempo como emergência** (CRIO 3) | Áudio sincronizado com scroll: temporalidade surge da interação |
-| **Agência distribuída** (CRIO 4) | Sistema + usuário co-criam experiência (tema, posição, áudio) |
-| **Conhecimento performativo** (CRIO 5) | Cache que aprende e otimiza baseado no uso |
-| **Ética do devir** (CRIO 6) | Código aberto: compartilhar-modificar-devolver |
-| **Político da indeterminação** (CRIO 7) | 21 cliques → dissolução → reinício: abertura radical |
+| **Vazio que povoa** (CRIO 1) | Esfera 3D vazia que povoa-se com 68 nós relacionais |
+| **Produção de diferença** (CRIO 2) | TypeScript → JavaScript: transformação contínua via tsc |
+| **Tempo como emergência** (CRIO 3) | Gradientes dinâmicos: visualização emerge da interação |
+| **Agência distribuída** (CRIO 4) | Multi-layer filtering: usuário + sistema co-criam vista |
+| **Conhecimento performativo** (CRIO 5) | Tipos TypeScript: conhecimento codificado estruturalmente |
+| **Ética do devir** (CRIO 6) | Open source + CI/CD: compartilhar-modificar-devolver |
+| **Político da indeterminação** (CRIO 7) | 289 relações abertas: múltiplas interpretações possíveis |
 
 ### Por Que Código Aberto
 
@@ -577,75 +755,36 @@ Conhecimento fechado **nega** a ontologia relacional que CRIO performa. Por isso
 
 
 
-## 📄 Licença
-
-> **Conhecimento não pode ser possuído, apenas compartilhado-modificado-devolvido**
-
-Este projeto opera sob princípios de **ontologia relacional aplicada**:
-
-### Termos de Uso
-
-✅ **Você PODE**:
-
-- Ler, estudar, e usar CRIO livremente
-- Modificar código e conteúdo para seus propósitos
-- Criar derivações, remixes, traduções
-- Usar em contextos educacionais, comerciais, ou pessoais
-- Republicar com atribuição adequada
-
-❌ **Você NÃO PODE**:
-
-- Reivindicar autoria exclusiva do conteúdo original
-- Fechar o código ou conteúdo em versões proprietárias
-- Usar para fins discriminatórios, opressivos, ou antiéticos
-
-### Atribuição
-
-Ao usar ou derivar deste projeto, inclua:
-
-```text
-Baseado em CRIO (Conceito Relacional de Invenção Ontológica)
-Fonte: https://github.com/silvanoneto/revolucao-cibernetica
-Licença: Compartilhar-Modificar-Devolver
-```
-
-### Filosofia da Licença
-
-Licenças tradicionais (MIT, GPL, etc.) operam sob lógica **proprietária**:
-
-- Código como **objeto** passível de posse
-- Autoria como **origem** fixa e singular
-- Direitos como **proteção** contra usos não-autorizados
-
-CRIO opera sob lógica **relacional**:
-
-- Código como **processo** em devir constante
-- Autoria como **assembleia** material-informacional
-- Responsabilidade como **resposta** aos enredos que co-criamos
-
-Por isso, ao invés de "All Rights Reserved" ou "MIT License", usamos:
-
-### Licença Relacional
-
-Conhecimento não pode ser possuído, apenas compartilhado-modificado-devolvido
-
 ---
 
 ## 🎯 Status do Projeto
 
-**Autoria**: Assembleia material-informacional em perpétua co-constituição  
+**Versão**: 2.0.0 (TypeScript Migration Complete)  
 **Status**: Perpetuamente incompleto (por design ontológico)  
-**Data**: Novembro 2025 / Sempre-já-operando / Ainda-não-completo  
-**Versão**: 2.0.0 (16 de 20 melhorias implementadas)
+**Última Atualização**: Novembro 2025
 
-### Fluxo Ontológico
+### Roadmap
 
-```text
-∅ → CRIO → AÇÃO → TRANSFORMAÇÃO → ∅
-```
-
-O vazio não é ausência—é matriz produtiva de onde emergem CRIOS, que provocam ações, gerando transformações, que retornam ao vazio enriquecido. **Circularidade produtiva**, não linear.
+- [x] Migração completa para TypeScript
+- [x] Sistema de multi-layer selection
+- [x] CI/CD com GitHub Actions
+- [x] Makefile para desenvolvimento
+- [ ] Remover `@ts-nocheck` (strict typing)
+- [ ] Testes automatizados (Jest + Playwright)
+- [ ] Code splitting e lazy loading
+- [ ] Service Worker (PWA offline-first)
+- [ ] Tradução para inglês/espanhol
 
 ---
 
+<div align="center">
+
+**CRIO não é um projeto—é um convite.**
+
+*Entre na rede. Transforme. Seja transformado.*
+
+[![GitHub Stars](https://img.shields.io/github/stars/silvanoneto/revolucao-cibernetica?style=social)](https://github.com/silvanoneto/revolucao-cibernetica)
+
 Feito com ∅ (vazio que povoa) • 2025
+
+</div>

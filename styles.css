@@ -721,7 +721,8 @@ body.symbol-takeover {
 
 /* Nav toggle button (now inside audio-ui) */
 .nav-toggle,
-.rizoma-button {
+.riz∅ma-button,
+.font-size-button {
     background: transparent;
     border: 1px solid rgba(255,255,255,0.1);
     color: var(--emergence);
@@ -739,12 +740,36 @@ body.symbol-takeover {
     min-height: 44px;
 }
 
-.rizoma-button {
+.riz∅ma-button {
     font-size: 1.4rem;
     position: relative;
 }
 
-.rizoma-button::after {
+.font-size-button {
+    font-size: 1.3rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.font-size-button::after {
+    content: 'FONTE';
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.65rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    letter-spacing: 0.1em;
+}
+
+.font-size-button:hover::after {
+    opacity: 0.7;
+}
+
+.riz∅ma-button::after {
     content: 'RIZOMA';
     position: absolute;
     bottom: -25px;
@@ -758,24 +783,27 @@ body.symbol-takeover {
     letter-spacing: 0.1em;
 }
 
-.rizoma-button:hover::after {
+.riz∅ma-button:hover::after {
     opacity: 0.7;
 }
 
 .nav-toggle:hover,
-.rizoma-button:hover {
+.riz∅ma-button:hover,
+.font-size-button:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: var(--emergence);
 }
 
 .nav-toggle:focus-visible,
-.rizoma-button:focus-visible {
+.riz∅ma-button:focus-visible,
+.font-size-button:focus-visible {
     outline: 2px solid var(--emergence);
     outline-offset: 2px;
 }
 
 .nav-toggle:active,
-.rizoma-button:active {
+.riz∅ma-button:active,
+.font-size-button:active {
     transform: scale(0.95);
 }
 
@@ -1053,7 +1081,7 @@ body.light-theme .reading-info {
    10. RIZOMA CONCEPT LINKS
    -------------------------------------------- */
 
-.rizoma-link {
+.riz∅ma-link {
     position: relative;
     color: var(--concept-color, var(--connection));
     text-decoration: underline;
@@ -1065,20 +1093,20 @@ body.light-theme .reading-info {
     padding: 0 2px;
 }
 
-.rizoma-link:hover {
+.riz∅ma-link:hover {
     color: var(--concept-color, var(--pulse));
     text-decoration-style: solid;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 2px;
 }
 
-.rizoma-link:focus-visible {
+.riz∅ma-link:focus-visible {
     outline: 2px solid var(--concept-color, var(--connection));
     outline-offset: 2px;
     border-radius: 2px;
 }
 
-.rizoma-link::after {
+.riz∅ma-link::after {
     content: attr(data-concept-desc);
     position: absolute;
     bottom: 100%;
@@ -1098,21 +1126,21 @@ body.light-theme .reading-info {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.rizoma-link:hover::after {
+.riz∅ma-link:hover::after {
     opacity: 1;
     transform: translateX(-50%) translateY(-4px);
 }
 
 /* Light theme adjustments */
-.light-theme .rizoma-link {
+.light-theme .riz∅ma-link {
     color: var(--concept-color, var(--connection));
 }
 
-.light-theme .rizoma-link:hover {
+.light-theme .riz∅ma-link:hover {
     background: rgba(0, 0, 0, 0.05);
 }
 
-.light-theme .rizoma-link::after {
+.light-theme .riz∅ma-link::after {
     background: rgba(255, 255, 255, 0.98);
     color: var(--emergence);
     border-color: var(--concept-color, var(--connection));
@@ -2232,3 +2260,47 @@ pre code {
     }
 }
 
+/* --------------------------------------------
+   15. FONT SIZE FEEDBACK
+   -------------------------------------------- */
+
+.font-size-feedback {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: var(--emergence);
+    color: var(--void);
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    z-index: 10000;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    pointer-events: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--void);
+}
+
+.font-size-feedback.visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Responsive font size feedback */
+@media (max-width: 768px) {
+    .font-size-feedback {
+        font-size: 1.4rem;
+        padding: 1.5rem 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .font-size-feedback {
+        font-size: 1.2rem;
+        padding: 1.2rem 2rem;
+    }
+}
