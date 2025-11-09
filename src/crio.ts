@@ -1027,10 +1027,10 @@ function initAutoScroll(): void {
     autoScrollBtn.innerHTML = '<span aria-hidden="true">⬇</span>';
     autoScrollBtn.title = 'Autoscroll meditativo';
     
-    // Inserir após o botão de navegação
-    const navToggle = document.getElementById('nav-toggle');
-    if (navToggle && navToggle.nextSibling) {
-        audioUI.insertBefore(autoScrollBtn, navToggle.nextSibling);
+    // Inserir após o botão de fonte
+    const fontBtn = document.getElementById('font-size-btn');
+    if (fontBtn && fontBtn.nextSibling) {
+        audioUI.insertBefore(autoScrollBtn, fontBtn.nextSibling);
     } else {
         audioUI.appendChild(autoScrollBtn);
     }
