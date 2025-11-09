@@ -15,11 +15,27 @@
 ## 📖 Índice
 
 - [O Que É CRIO](#-o-que-é-crio)
+  - [Os Sete CRIOS](#os-sete-crios)
+  - [Fundamentação Teórica](#fundamentação-teórica)
 - [Início Rápido](#-início-rápido)
+  - [Instalação](#instalação)
+  - [Desenvolvimento com Live Reload](#desenvolvimento-com-live-reload)
 - [Desenvolvimento](#-desenvolvimento)
+  - [Requisitos](#requisitos)
+  - [Comandos Principais](#comandos-principais)
+  - [Scripts npm](#scripts-npm)
+  - [Workflow de Desenvolvimento](#workflow-de-desenvolvimento)
 - [Estrutura do Projeto](#-estrutura-do-projeto)
+  - [Arquivos Core](#arquivos-core)
 - [Recursos e Funcionalidades](#-recursos-e-funcionalidades)
+  - [Experiência de Leitura CRIO](#experiência-de-leitura-crio-indexhtml)
+  - [Links Coloridos para Conceitos](#links-coloridos-para-conceitos-do-rizoma)
+  - [Referências Bibliográficas](#referências-bibliográficas-referenciashtml)
+  - [Visualização 3D Rizomática](#visualização-3d-rizomática-rizmahtml)
 - [Arquitetura Técnica](#-arquitetura-técnica)
+  - [Stack Tecnológico](#stack-tecnológico)
+  - [Sistema de Dados](#sistema-de-dados)
+  - [Padrões de Código](#padrões-de-código)
 - [Deploy](#-deploy)
 - [Filosofia](#-filosofia)
 - [Licença](#-licença)
@@ -43,6 +59,7 @@
 ### Fundamentação Teórica
 
 Este projeto sintetiza:
+
 - **Ontologia Relacional** (Karen Barad, Bruno Latour, Donna Haraway)
 - **Realismo Agencial** (Karen Barad): agência não é atributo, mas enactment
 - **Teoria Ator-Rede** (Bruno Latour): tudo é relação, nada é substância
@@ -75,11 +92,13 @@ make dev
 ```
 
 **URLs disponíveis:**
-- 🌐 **Local**: http://localhost:8000/riz∅ma.html
-- 📱 **Rede**: http://192.168.15.5:8000/riz∅ma.html (acessível na rede local)
-- 🎛️ **Painel**: http://localhost:3001 (controle do browser-sync)
+
+- 🌐 **Local**: <http://localhost:8000/riz∅ma.html>
+- 📱 **Rede**: Acessível via IP local na porta 8000
+- 🎛️ **Painel**: <http://localhost:3001> (controle do browser-sync)
 
 **✨ Live Reload Ativo:**
+
 - Edite arquivos `.ts`, `.html`, `.css` ou `assets/*`
 - Salve (Cmd+S / Ctrl+S)
 - **Browser atualiza automaticamente** - sem apertar F5!
@@ -139,17 +158,18 @@ npm run browser-sync  # Apenas browser-sync (requer dist/ compilado)
 ```
 
 **📚 Mais informações:** [docs/LIVE_RELOAD.md](docs/LIVE_RELOAD.md)
+
 - Como funciona o browser-sync
 - Sincronização multi-device (teste no celular!)
-- Painel de controle (http://localhost:3001)
+- Painel de controle (<http://localhost:3001>)
 - Troubleshooting e dicas
 
 ---
 
 ## 📁 Estrutura do Projeto
 
-```
-revolucao-cibernetica/
+```text
+zero/
 ├── src/                    # Código-fonte TypeScript
 │   ├── types.ts           # Definições de tipos (Concept, Relation, Layer)
 │   ├── constants.ts       # Constantes (opacidades, raios, configurações)
@@ -233,6 +253,7 @@ revolucao-cibernetica/
 ### Experiência de Leitura CRIO (index.html)
 
 **Menu de Navegação Dinâmico:**
+
 - **Botão hambúrguer animado**: Transformação fluida de ☰ → ✕
 - **Seções numeradas**: Navegação estruturada pelos 7 CRIOS + seções adicionais
 - **Previews contextuais**: Primeiras linhas de cada seção ao passar o mouse
@@ -240,50 +261,72 @@ revolucao-cibernetica/
 - **Sincronização automática**: Menu acompanha posição do scroll
 - **Tema adaptativo**: Ajustes de cores para modo claro/escuro
 
+**Links Coloridos para Conceitos do Rizoma:**
+
+- **Cores dinâmicas**: Cada conceito exibe a cor de sua esfera no rizoma 3D
+- **Adaptação temática**: Cores ajustadas automaticamente para modos claro/escuro
+- **Navegação integrada**: Clique leva ao rizoma com focus no conceito
+- **Tooltips informativos**: Descrições contextuais com quebra de linha responsiva
+- **68 conceitos detectados**: Linkagem automática de termos filosóficos no texto
+
 **Efeitos Visuais Interativos:**
+
 - **Partículas flutuantes**: 30 elementos animados em background
 - **Símbolo do vazio (∅)**: Animação de opacidade e escala baseada no scroll
 - **Tremor progressivo**: Intensidade 0-3 aumenta conforme rolagem (20%-80%)
+  - **Pausa com áudio**: Tremor para quando música toca (caos migra para áudio)
+  - **Redução ao trocar tema**: Diminui temporariamente com retorno gradual (1-9s proporcional)
+  - **Delay final**: 9 segundos de contemplação antes do reset no fim da página
 - **Marcadores laterais**: Indicadores de progresso por seção com preenchimento dinâmico
 - **Auto-scroll meditativo**: Movimento automático suave a 0.5px/frame
 - **Áudio de fundo**: CRIO.mp3 com controles de play/pause
 
 **Performance:**
+
 - **Cache inteligente**: localStorage com TTL de 7 dias para docs/CRIOS.md
 - **Renderização lazy**: Markdown processado uma vez e reutilizado
 - **GPU acceleration**: Transforms e opacity otimizados
 - **Scroll throttling**: Handlers limitados a 16ms (60fps)
 
 **Interatividade:**
+
 - **Ícones de tema**: ☾ (lua) e ☀ (sol) com animação de rotação
 - **Persistência**: Tema e posição de scroll salvos em localStorage
 - **Responsivo**: Layout adaptativo para mobile/tablet/desktop
 - **Links de conceitos**: Palavras-chave linkadas automaticamente ao rizoma
-- **Referências**: Botão 📚 para acessar bibliografia completa
+- **Botão de referências**: ⋯ para acessar bibliografia completa
+- **Texto selecionável**: Compatível com modo leitura do Firefox e outros navegadores
 
 ### Referências Bibliográficas (referencias.html)
 
 **Interface de Busca e Filtro:**
+
 - **Busca em tempo real**: Filtra por autor, título, relevância ou conceitos
 - **Filtros por categoria**: 16 categorias temáticas (fundamentos, vazio, multiplicidade, etc.)
 - **Estatísticas dinâmicas**: Total de referências, categorias, conceitos e filtrados
 - **Layout responsivo**: Grid adaptativo para diferentes tamanhos de tela
+- **Botão de retorno**: Glassmorfismo com blur para voltar aos CRIOS
 
 **Cards de Referência:**
+
 - **Informações completas**: Autor, ano, título, editora/publicação
 - **Relevância contextual**: Explicação de como cada obra relaciona-se com CRIOS
 - **Tags interativas**: Categoria destacada + conceitos vinculados
 - **Efeitos visuais**: Hover com elevação e borda destacada
 
 **Dados Estruturados:**
+
 - 60+ referências bibliográficas fundamentais
 - Categorização temática alinhada aos CRIOS
+- Links para conceitos relacionados do rizoma
+- Organização por tradições filosóficas
 - Vinculação com conceitos do rizoma
 - JSON estruturado para extensibilidade futura
 
 ### Visualização Rizoma (riz∅ma.html)
 
 **Sistema de Camadas (9 camadas):**
+
 - Fundacional, Ontológica, Epistemológica, Política
 - Pedagógica, Indígena-Comunitária, Ecológica-Material
 - Temporal, Prática-Institucional
@@ -291,6 +334,7 @@ revolucao-cibernetica/
 - **Feedback visual**: Camadas ativas com borda e transformação
 
 **Visualização 3D:**
+
 - 68 nós (esferas de vidro) posicionados em esfera
 - 289 linhas (cilindros) representando relações
 - Gradiente dinâmico entre nós selecionados
@@ -298,11 +342,13 @@ revolucao-cibernetica/
 - Labels flutuantes em nós e arestas
 
 **Modo Cards:**
+
 - Grade responsiva de conceitos filtrados por camada
 - Citações completas, descrições expandidas
 - Scroll infinito com carregamento lazy
 
 **Interatividade:**
+
 - Hover: Destaque de nó + relações conectadas
 - Clique: Seleção de nó + cards relacionados
 - Legenda: Toggle de camadas (individual ou múltiplas)
@@ -436,7 +482,7 @@ Contribuições são bem-vindas! Este projeto performa sua própria ontologia: *
 3. **Instale** dependências: `make install`
 4. **Crie branch**: `git checkout -b feature/minha-contribuicao`
 5. **Desenvolva**: Edite arquivos em `src/`, compile com `make dev`
-6. **Teste**: Verifique em http://localhost:8000/riz∅ma.html
+6. **Teste**: Verifique em <http://localhost:8000/riz∅ma.html>
 7. **Commit**: `git commit -m "feat: Descrição da mudança"`
 8. **Push**: `git push origin feature/minha-contribuicao`
 9. **Pull Request**: Abra PR com descrição detalhada
@@ -477,7 +523,7 @@ Este projeto possui um ambiente de desenvolvimento moderno e automatizado:
 | **Hot Injection** | CSS/JS injetados sem reload completo da página |
 | **TypeScript Watch** | Recompilação incremental (~100-500ms) |
 | **Multi-device Sync** | Teste no celular/tablet simultaneamente |
-| **Browser-sync UI** | Painel de controle em http://localhost:3001 |
+| **Browser-sync UI** | Painel de controle em <http://localhost:3001> |
 | **Logs coloridos** | Output visual com concurrently |
 | **Import Map** | Three.js via CDN (sem build de node_modules) |
 
@@ -567,6 +613,7 @@ disableAnalytics()
 ```
 
 **Limpar dados**:
+
 ```javascript
 clearAnalytics()
 ```
@@ -576,6 +623,7 @@ Para documentação completa, veja [ANALYTICS.md](./ANALYTICS.md).
 ### Por Quê?
 
 Este approach alinha-se com a filosofia CRIO:
+
 - **∅ (Vazio)**: Coleta mínima, apenas o essencial
 - **Relacionalidade**: Dados servem a relação conteúdo-leitor
 - **Imanência**: Dados permanecem na experiência, não externalizados
@@ -729,7 +777,7 @@ function filterByLayer<T extends { layer: Layer }>(
 ): T[] {
   return items.filter(item => item.layer === layer);
 }
-```
+```text
 
 **Markdown (CRIOS.md)**:
 
@@ -742,6 +790,7 @@ function filterByLayer<T extends { layer: Layer }>(
 ---
 npm install -g netlify-cli
 netlify deploy --prod
+
 ```
 
 ---

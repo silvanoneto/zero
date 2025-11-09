@@ -19,7 +19,7 @@ interface CacheData {
 // CONSTANTES E CONFIGURAÇÃO
 // ============================================================================
 
-const CACHE_VERSION = '1.0';
+const CACHE_VERSION = '1.1'; // Atualizado para refletir mudanças em CRIOS.md
 const CACHE_DURATION = 7 * 24 * 60 * 60 * 1000; // 7 dias
 const CRIOS_URL = 'docs/CRIOS.md';
 const AUDIO_URL = 'assets/CRIO.mp3';
