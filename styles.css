@@ -1,0 +1,757 @@
+/* ============================================
+   CRIO - Stylesheet
+   Organizado por componentes
+   ============================================ */
+
+/* --------------------------------------------
+   1. RESET & BASE
+   -------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --------------------------------------------
+   2. THEME VARIABLES
+   -------------------------------------------- */
+
+:root {
+    --void: #0a0a0a;
+    --emergence: #f0f0f0;
+    --trace: #666;
+    --glow: rgba(255, 255, 255, 0.1);
+    --particle-glow-inner: rgba(255, 255, 255, 1);
+    --particle-glow-mid: rgba(255, 255, 255, 0.95);
+    --particle-glow-outer: rgba(255, 255, 255, 0.85);
+}
+
+body.light-theme {
+    --void: #f0f0f0;
+    --emergence: #0a0a0a;
+    --trace: #999;
+    --glow: rgba(0, 0, 0, 0.1);
+    --particle-glow-inner: rgba(0, 0, 0, 1);
+    --particle-glow-mid: rgba(0, 0, 0, 0.95);
+    --particle-glow-outer: rgba(0, 0, 0, 0.85);
+}
+
+/* --------------------------------------------
+   3. TYPOGRAPHY & LAYOUT
+   -------------------------------------------- */
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: var(--void);
+    color: var(--emergence);
+    line-height: 1.8;
+    padding: 2rem;
+    min-height: 100vh;
+    cursor: crosshair;
+    transition: background 0.6s ease, color 0.6s ease;
+    overflow-x: hidden;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    --tremor-intensity: 0;
+    animation: tremor 0.1s infinite;
+}
+
+#content {
+    opacity: 0;
+    animation: emerge 2s 1s ease-out forwards;
+}
+
+.loading {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--trace);
+    font-style: italic;
+}
+
+/* Headings */
+h1 {
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin: 3rem 0 1.5rem 0;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--glow);
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin: 2rem 0 1rem 0;
+    color: var(--trace);
+    font-style: italic;
+    text-align: center;
+}
+
+h4, h5, h6 {
+    font-weight: 400;
+    margin: 1.5rem 0 1rem 0;
+    color: var(--emergence);
+    text-align: center;
+}
+
+/* Text Elements */
+p {
+    margin-bottom: 1.2rem;
+    text-align: center;
+    hyphens: auto;
+}
+
+blockquote {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-left: 3px solid var(--emergence);
+    background: rgba(255, 255, 255, 0.02);
+    font-style: italic;
+    color: var(--trace);
+    text-align: center;
+}
+
+#content > blockquote:first-child {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+blockquote p {
+    margin: 0;
+    text-align: center;
+}
+
+strong {
+    font-weight: 600;
+    color: var(--emergence);
+}
+
+em {
+    font-style: italic;
+}
+
+/* Lists */
+ul, ol {
+    margin: 1.5rem 0 1.5rem 2rem;
+}
+
+li {
+    margin-bottom: 0.8rem;
+}
+
+li p {
+    margin-bottom: 0.5rem;
+}
+
+/* Horizontal Rule */
+hr {
+    border: none;
+    border-top: 1px solid var(--glow);
+    margin: 4rem 0;
+    opacity: 0.5;
+}
+
+/* Code */
+code {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+pre {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+}
+
+/* Links */
+a {
+    color: var(--emergence);
+    text-decoration: none;
+    border-bottom: 1px solid var(--glow);
+    transition: border-color 0.3s ease;
+}
+
+a:hover {
+    border-bottom-color: var(--emergence);
+}
+
+/* --------------------------------------------
+   4. ANIMATIONS
+   -------------------------------------------- */
+
+@keyframes emerge {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes tremor {
+    0%, 100% { transform: translate(0, 0); }
+    10% { transform: translate(calc(var(--tremor-intensity) * -1.5px), calc(var(--tremor-intensity) * 1px)); }
+    20% { transform: translate(calc(var(--tremor-intensity) * 1px), calc(var(--tremor-intensity) * -1.5px)); }
+    30% { transform: translate(calc(var(--tremor-intensity) * -1px), calc(var(--tremor-intensity) * -1px)); }
+    40% { transform: translate(calc(var(--tremor-intensity) * 1.5px), calc(var(--tremor-intensity) * 1px)); }
+    50% { transform: translate(calc(var(--tremor-intensity) * -1.5px), calc(var(--tremor-intensity) * 0.5px)); }
+    60% { transform: translate(calc(var(--tremor-intensity) * 1px), calc(var(--tremor-intensity) * 1.5px)); }
+    70% { transform: translate(calc(var(--tremor-intensity) * -1px), calc(var(--tremor-intensity) * -1.5px)); }
+    80% { transform: translate(calc(var(--tremor-intensity) * 1.5px), calc(var(--tremor-intensity) * -1px)); }
+    90% { transform: translate(calc(var(--tremor-intensity) * -1px), calc(var(--tremor-intensity) * 1.5px)); }
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    50.01%, 100% { opacity: 0.3; }
+}
+
+@keyframes pulse-counter {
+    0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+    50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+@keyframes ripple {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
+
+/* --------------------------------------------
+   5. PARTICLES SYSTEM
+   -------------------------------------------- */
+
+@keyframes float {
+    0% { 
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0.8;
+    }
+    25% { 
+        transform: translate(var(--tx1), var(--ty1)) rotate(90deg);
+        opacity: 1;
+    }
+    50% { 
+        transform: translate(var(--tx2), var(--ty2)) rotate(180deg);
+        opacity: 0.9;
+    }
+    75% { 
+        transform: translate(var(--tx3), var(--ty3)) rotate(270deg);
+        opacity: 1;
+    }
+    100% { 
+        transform: translate(0, 0) rotate(360deg);
+        opacity: 0.8;
+    }
+}
+
+@keyframes tremor-particle {
+    0%, 100% { transform: translate(0, 0); }
+    10% { transform: translate(calc(var(--shake-x1) * var(--chaos-intensity, 1)), calc(var(--shake-y1) * var(--chaos-intensity, 1))); }
+    20% { transform: translate(calc(var(--shake-x2) * var(--chaos-intensity, 1)), calc(var(--shake-y2) * var(--chaos-intensity, 1))); }
+    30% { transform: translate(calc(var(--shake-x3) * var(--chaos-intensity, 1)), calc(var(--shake-y3) * var(--chaos-intensity, 1))); }
+    40% { transform: translate(calc(var(--shake-x4) * var(--chaos-intensity, 1)), calc(var(--shake-y4) * var(--chaos-intensity, 1))); }
+    50% { transform: translate(calc(var(--shake-x5) * var(--chaos-intensity, 1)), calc(var(--shake-y5) * var(--chaos-intensity, 1))); }
+    60% { transform: translate(calc(var(--shake-x6) * var(--chaos-intensity, 1)), calc(var(--shake-y6) * var(--chaos-intensity, 1))); }
+    70% { transform: translate(calc(var(--shake-x7) * var(--chaos-intensity, 1)), calc(var(--shake-y7) * var(--chaos-intensity, 1))); }
+    80% { transform: translate(calc(var(--shake-x8) * var(--chaos-intensity, 1)), calc(var(--shake-y8) * var(--chaos-intensity, 1))); }
+    90% { transform: translate(calc(var(--shake-x9) * var(--chaos-intensity, 1)), calc(var(--shake-y9) * var(--chaos-intensity, 1))); }
+}
+
+.particle {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: var(--emergence);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 3s ease-out, box-shadow 0.3s ease, filter 0.3s ease;
+    --chaos-intensity: 1;
+    --glow-intensity: 1;
+    box-shadow: 
+        0 0 calc(80px * var(--glow-intensity)) var(--particle-glow-inner), 
+        0 0 calc(250px * var(--glow-intensity)) var(--particle-glow-mid),
+        0 0 calc(600px * var(--glow-intensity)) var(--particle-glow-outer),
+        0 0 calc(1200px * var(--glow-intensity)) var(--particle-glow-outer);
+    filter: blur(calc(12px * var(--glow-intensity)));
+    mix-blend-mode: screen;
+}
+
+body.light-theme .particle {
+    mix-blend-mode: multiply;
+}
+
+.particle.floating {
+    animation: 
+        float var(--float-duration) infinite ease-in-out,
+        tremor-particle var(--tremor-duration) infinite;
+    animation-duration: calc(var(--float-duration) / var(--speed-multiplier, 1)), var(--tremor-duration);
+}
+
+.particle.stabilized {
+    animation-play-state: paused !important;
+}
+
+/* --------------------------------------------
+   6. VOID SYMBOL
+   -------------------------------------------- */
+
+@keyframes void-tremor {
+    0% { transform: translate(-50%, -50%) translate(0, 0) rotate(0deg) scale(1); }
+    10% { transform: translate(-50%, -50%) translate(-30px, 20px) rotate(-15deg) scale(1.1); }
+    20% { transform: translate(-50%, -50%) translate(25px, -30px) rotate(12deg) scale(0.9); }
+    30% { transform: translate(-50%, -50%) translate(-20px, -25px) rotate(-8deg) scale(1.15); }
+    40% { transform: translate(-50%, -50%) translate(35px, 15px) rotate(20deg) scale(0.85); }
+    50% { transform: translate(-50%, -50%) translate(-25px, 30px) rotate(-18deg) scale(1.2); }
+    60% { transform: translate(-50%, -50%) translate(20px, -20px) rotate(10deg) scale(0.95); }
+    70% { transform: translate(-50%, -50%) translate(-35px, 25px) rotate(-22deg) scale(1.05); }
+    80% { transform: translate(-50%, -50%) translate(30px, -35px) rotate(16deg) scale(1.1); }
+    90% { transform: translate(-50%, -50%) translate(-15px, 20px) rotate(-12deg) scale(0.9); }
+    100% { transform: translate(-50%, -50%) translate(0, 0) rotate(0deg) scale(1); }
+}
+
+@keyframes void-tremor-zoom {
+    0% { transform: translate(-50%, -50%) translate(0, 0) rotate(0deg); }
+    10% { transform: translate(-50%, -50%) translate(-30px, 20px) rotate(-15deg); }
+    20% { transform: translate(-50%, -50%) translate(25px, -30px) rotate(12deg); }
+    30% { transform: translate(-50%, -50%) translate(-20px, -25px) rotate(-8deg); }
+    40% { transform: translate(-50%, -50%) translate(35px, 15px) rotate(20deg); }
+    50% { transform: translate(-50%, -50%) translate(-25px, 30px) rotate(-18deg); }
+    60% { transform: translate(-50%, -50%) translate(20px, -20px) rotate(10deg); }
+    70% { transform: translate(-50%, -50%) translate(-35px, 25px) rotate(-22deg); }
+    80% { transform: translate(-50%, -50%) translate(30px, -35px) rotate(16deg); }
+    90% { transform: translate(-50%, -50%) translate(-15px, 20px) rotate(-12deg); }
+    100% { transform: translate(-50%, -50%) translate(0, 0) rotate(0deg); }
+}
+
+@keyframes void-appear {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes void-zoom {
+    0% { font-size: 20rem; }
+    100% { font-size: 1000rem; }
+}
+
+@keyframes fill-with-symbol-color {
+    0% { background: var(--void); }
+    100% { background: var(--emergence); }
+}
+
+.void-symbol {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20rem;
+    color: var(--emergence);
+    opacity: 0;
+    z-index: 10000;
+    pointer-events: none;
+    text-shadow: 
+        0 0 40px var(--emergence),
+        0 0 80px var(--emergence),
+        0 0 120px var(--emergence);
+    white-space: nowrap;
+}
+
+.void-symbol.active {
+    animation: void-tremor 0.05s infinite, void-appear 3s ease-out forwards;
+    opacity: 1;
+}
+
+.void-symbol.zoom {
+    animation: void-tremor-zoom 0.05s infinite, void-zoom 12s ease-in forwards !important;
+}
+
+body.symbol-takeover {
+    animation: fill-with-symbol-color 12s ease-in forwards;
+}
+
+/* --------------------------------------------
+   7. AUDIO CONTROLS
+   -------------------------------------------- */
+
+.audio-ui {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--glow);
+    color: var(--emergence);
+    padding: 0.5rem 0.6rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    border-radius: 6px;
+    backdrop-filter: blur(4px);
+    z-index: 1200;
+}
+
+.audio-ui button {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.04);
+    color: var(--emergence);
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    min-width: 2.5rem;
+    text-align: center;
+}
+
+.audio-ui .label {
+    font-size: 1rem;
+    color: var(--emergence);
+    min-width: 2.5rem;
+    text-align: center;
+}
+
+.audio-ui .label.blink {
+    animation: blink 1s step-end infinite;
+}
+
+/* --------------------------------------------
+   8. NAVIGATION INDEX
+   -------------------------------------------- */
+
+.nav-toggle {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glow);
+    color: var(--emergence);
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+    z-index: 1100;
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+.nav-toggle:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--emergence);
+}
+
+.nav-toggle.active {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-index {
+    position: fixed;
+    top: 4rem;
+    left: 1rem;
+    max-width: 320px;
+    max-height: calc(100vh - 6rem);
+    background: var(--void);
+    border: 1px solid var(--glow);
+    border-radius: 8px;
+    padding: 1.5rem;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateX(-20px);
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--glow) transparent;
+}
+
+.nav-index::-webkit-scrollbar {
+    width: 6px;
+}
+
+.nav-index::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.nav-index::-webkit-scrollbar-thumb {
+    background: var(--glow);
+    border-radius: 3px;
+}
+
+.nav-index.visible {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+}
+
+.nav-index h3 {
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--glow);
+    color: var(--emergence);
+    text-align: left;
+}
+
+.nav-index ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-index li {
+    margin: 0;
+}
+
+.nav-index a {
+    display: block;
+    padding: 0.6rem 0.8rem;
+    color: var(--emergence);
+    text-decoration: none;
+    border: none;
+    border-left: 2px solid transparent;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.nav-index a:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-left-color: var(--emergence);
+    padding-left: 1rem;
+}
+
+.nav-index a.active {
+    background: rgba(255, 255, 255, 0.08);
+    border-left-color: var(--emergence);
+    font-weight: 500;
+}
+
+.nav-index .intro-link {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* --------------------------------------------
+   9. PROGRESS INDICATORS
+   -------------------------------------------- */
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.05);
+    z-index: 2000;
+    pointer-events: none;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--emergence) 0%, var(--emergence) 100%);
+    width: 0%;
+    transition: width 0.1s ease-out;
+    box-shadow: 0 0 10px var(--emergence);
+}
+
+.progress-markers {
+    position: fixed;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.progress-marker {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid var(--glow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.progress-marker:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.3);
+}
+
+.progress-marker.active {
+    background: var(--emergence);
+    box-shadow: 0 0 10px var(--emergence);
+    transform: scale(1.2);
+}
+
+.progress-marker.completed {
+    background: rgba(255, 255, 255, 0.4);
+    border-color: var(--emergence);
+}
+
+.progress-marker-label {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--void);
+    border: 1px solid var(--glow);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 0.75rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    backdrop-filter: blur(4px);
+}
+
+.progress-marker:hover .progress-marker-label {
+    opacity: 1;
+}
+
+.reading-info {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glow);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    color: var(--trace);
+    backdrop-filter: blur(4px);
+    z-index: 900;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.reading-info.visible {
+    opacity: 1;
+}
+
+/* --------------------------------------------
+   10. CLICK COUNTER FEEDBACK
+   -------------------------------------------- */
+
+.click-counter {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: var(--emergence);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10001;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 20px var(--emergence);
+}
+
+.click-counter.visible {
+    opacity: 1;
+    animation: pulse-counter 0.3s ease-out;
+}
+
+.ripple-effect {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--emergence);
+    pointer-events: none;
+    z-index: 10000;
+    animation: ripple 1s ease-out forwards;
+}
+
+/* --------------------------------------------
+   11. RESPONSIVE (MOBILE)
+   -------------------------------------------- */
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    p {
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .nav-toggle {
+        top: 0.5rem;
+        left: 0.5rem;
+        padding: 0.5rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .nav-index {
+        top: 3.5rem;
+        left: 0.5rem;
+        right: 0.5rem;
+        max-width: none;
+        max-height: 60vh;
+    }
+
+    .progress-markers {
+        display: none;
+    }
+    
+    .progress-bar {
+        height: 4px;
+    }
+
+    .reading-info {
+        bottom: auto;
+        top: 4rem;
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
