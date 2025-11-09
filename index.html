@@ -22,7 +22,9 @@
             --emergence: #f0f0f0;
             --trace: #666;
             --glow: rgba(255, 255, 255, 0.1);
-            --particle-glow: rgba(255, 255, 255, 0.4);
+            --particle-glow-inner: rgba(255, 255, 255, 1);
+            --particle-glow-mid: rgba(255, 255, 255, 0.95);
+            --particle-glow-outer: rgba(255, 255, 255, 0.85);
         }
 
         body.light-theme {
@@ -30,7 +32,9 @@
             --emergence: #0a0a0a;
             --trace: #999;
             --glow: rgba(0, 0, 0, 0.1);
-            --particle-glow: rgba(0, 0, 0, 0.4);
+            --particle-glow-inner: rgba(0, 0, 0, 1);
+            --particle-glow-mid: rgba(0, 0, 0, 0.95);
+            --particle-glow-outer: rgba(0, 0, 0, 0.85);
         }
 
         body {
@@ -40,11 +44,9 @@
             line-height: 1.8;
             padding: 2rem;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             cursor: crosshair;
             transition: background 0.6s ease, color 0.6s ease;
+            overflow-x: hidden;
         }
 
         /* Tremor animation with variable intensity */
@@ -89,6 +91,7 @@
             letter-spacing: 0.05em;
             border-bottom: 1px solid var(--glow);
             padding-bottom: 0.5rem;
+            text-align: center;
         }
 
         h3 {
@@ -97,17 +100,19 @@
             margin: 2rem 0 1rem 0;
             color: var(--trace);
             font-style: italic;
+            text-align: center;
         }
 
         h4, h5, h6 {
             font-weight: 400;
             margin: 1.5rem 0 1rem 0;
             color: var(--emergence);
+            text-align: center;
         }
 
         p {
             margin-bottom: 1.2rem;
-            text-align: justify;
+            text-align: center;
             hyphens: auto;
         }
 
@@ -126,11 +131,12 @@
             background: rgba(255, 255, 255, 0.02);
             font-style: italic;
             color: var(--trace);
+            text-align: center;
         }
 
         blockquote p {
             margin: 0;
-            text-align: left;
+            text-align: center;
         }
 
         strong {
@@ -268,27 +274,101 @@
             50.01%, 100% { opacity: 0.3; }
         }
 
+        /* Símbolo do vazio final */
+        .void-symbol {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20rem;
+            color: var(--emergence);
+            opacity: 0;
+            z-index: 10000;
+            pointer-events: none;
+            text-shadow: 
+                0 0 40px var(--emergence),
+                0 0 80px var(--emergence),
+                0 0 120px var(--emergence);
+            white-space: nowrap;
+        }
+
+        .void-symbol.active {
+            animation: void-tremor 0.05s infinite, void-appear 3s ease-out forwards;
+            opacity: 1;
+        }
+        
+        .void-symbol.zoom {
+            animation: void-tremor-zoom 0.05s infinite, void-zoom 12s ease-in forwards !important;
+        }
+
+        @keyframes void-tremor {
+            0% { transform: translate(-50%, -50%) translate(0, 0) rotate(0deg) scale(1); }
+            10% { transform: translate(-50%, -50%) translate(-30px, 20px) rotate(-15deg) scale(1.1); }
+            20% { transform: translate(-50%, -50%) translate(25px, -30px) rotate(12deg) scale(0.9); }
+            30% { transform: translate(-50%, -50%) translate(-20px, -25px) rotate(-8deg) scale(1.15); }
+            40% { transform: translate(-50%, -50%) translate(35px, 15px) rotate(20deg) scale(0.85); }
+            50% { transform: translate(-50%, -50%) translate(-25px, 30px) rotate(-18deg) scale(1.2); }
+            60% { transform: translate(-50%, -50%) translate(20px, -20px) rotate(10deg) scale(0.95); }
+            70% { transform: translate(-50%, -50%) translate(-35px, 25px) rotate(-22deg) scale(1.05); }
+            80% { transform: translate(-50%, -50%) translate(30px, -35px) rotate(16deg) scale(1.1); }
+            90% { transform: translate(-50%, -50%) translate(-15px, 20px) rotate(-12deg) scale(0.9); }
+            100% { transform: translate(-50%, -50%) translate(0, 0) rotate(0deg) scale(1); }
+        }
+        
+        @keyframes void-tremor-zoom {
+            0% { transform: translate(-50%, -50%) translate(0, 0) rotate(0deg); }
+            10% { transform: translate(-50%, -50%) translate(-30px, 20px) rotate(-15deg); }
+            20% { transform: translate(-50%, -50%) translate(25px, -30px) rotate(12deg); }
+            30% { transform: translate(-50%, -50%) translate(-20px, -25px) rotate(-8deg); }
+            40% { transform: translate(-50%, -50%) translate(35px, 15px) rotate(20deg); }
+            50% { transform: translate(-50%, -50%) translate(-25px, 30px) rotate(-18deg); }
+            60% { transform: translate(-50%, -50%) translate(20px, -20px) rotate(10deg); }
+            70% { transform: translate(-50%, -50%) translate(-35px, 25px) rotate(-22deg); }
+            80% { transform: translate(-50%, -50%) translate(30px, -35px) rotate(16deg); }
+            90% { transform: translate(-50%, -50%) translate(-15px, 20px) rotate(-12deg); }
+            100% { transform: translate(-50%, -50%) translate(0, 0) rotate(0deg); }
+        }
+
+        @keyframes void-appear {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes void-zoom {
+            0% { font-size: 20rem; }
+            100% { font-size: 1000rem; }
+        }
+
+        @keyframes fill-with-symbol-color {
+            0% { background: var(--void); }
+            100% { background: var(--emergence); }
+        }
+
+        body.symbol-takeover {
+            animation: fill-with-symbol-color 12s ease-in forwards;
+        }
+
         /* Partículas de fundo com tremulidade aleatória */
         @keyframes float {
             0% { 
                 transform: translate(0, 0) rotate(0deg);
-                opacity: 0.3;
+                opacity: 0.8;
             }
             25% { 
                 transform: translate(var(--tx1), var(--ty1)) rotate(90deg);
-                opacity: 0.6;
+                opacity: 1;
             }
             50% { 
                 transform: translate(var(--tx2), var(--ty2)) rotate(180deg);
-                opacity: 0.4;
+                opacity: 0.9;
             }
             75% { 
                 transform: translate(var(--tx3), var(--ty3)) rotate(270deg);
-                opacity: 0.6;
+                opacity: 1;
             }
             100% { 
                 transform: translate(0, 0) rotate(360deg);
-                opacity: 0.3;
+                opacity: 0.8;
             }
         }
 
@@ -307,21 +387,33 @@
 
         .particle {
             position: fixed;
-            width: 4px;
-            height: 4px;
+            width: 40px;
+            height: 40px;
             background: var(--emergence);
             border-radius: 50%;
             pointer-events: none;
-            z-index: -1;
-            transition: opacity 3s ease-out, box-shadow 0.6s ease;
+            z-index: 1;
+            transition: opacity 3s ease-out, box-shadow 0.3s ease, filter 0.3s ease;
             --chaos-intensity: 1;
-            box-shadow: 0 0 6px var(--particle-glow), 0 0 12px var(--particle-glow);
+            --glow-intensity: 1;
+            box-shadow: 
+                0 0 calc(80px * var(--glow-intensity)) var(--particle-glow-inner), 
+                0 0 calc(250px * var(--glow-intensity)) var(--particle-glow-mid),
+                0 0 calc(600px * var(--glow-intensity)) var(--particle-glow-outer),
+                0 0 calc(1200px * var(--glow-intensity)) var(--particle-glow-outer);
+            filter: blur(calc(12px * var(--glow-intensity)));
+            mix-blend-mode: screen;
+        }
+        
+        body.light-theme .particle {
+            mix-blend-mode: multiply;
         }
 
         .particle.floating {
             animation: 
                 float var(--float-duration) infinite ease-in-out,
                 tremor-particle var(--tremor-duration) infinite;
+            animation-duration: calc(var(--float-duration) / var(--speed-multiplier, 1)), var(--tremor-duration);
         }
 
         .particle.stabilized {
@@ -343,6 +435,9 @@
         </div>
     </main>
 
+    <!-- Símbolo do vazio -->
+    <div class="void-symbol">∅</div>
+
     <!-- Áudio de fundo -->
     <audio id="bg-audio" src="CRIO.mp3" preload="none"></audio>
 
@@ -353,6 +448,12 @@
     </div>
 
     <script>
+        // Restaurar tema salvo
+        const savedTheme = localStorage.getItem('crio-theme');
+        if (savedTheme === 'light') {
+            document.body.classList.add('light-theme');
+        }
+        
         // Configurar marked para melhor renderização
         marked.setOptions({
             breaks: true,
@@ -371,6 +472,14 @@
                 const content = document.getElementById('content');
                 content.innerHTML = marked.parse(markdown);
                 content.classList.remove('loading');
+                
+                // Restaurar posição de scroll salva
+                const savedPosition = localStorage.getItem('crio-scroll-position');
+                if (savedPosition) {
+                    setTimeout(() => {
+                        window.scrollTo(0, parseInt(savedPosition));
+                    }, 100);
+                }
             })
             .catch(error => {
                 console.error('Erro ao carregar CRIOS.md:', error);
@@ -439,7 +548,7 @@
             }
         }
 
-        createParticles(15);
+        createParticles(10);
 
         // --- Audio background logic ---
         (function() {
@@ -480,6 +589,18 @@
                 const particles = document.querySelectorAll('.particle');
                 particles.forEach(particle => {
                     particle.style.setProperty('--chaos-intensity', chaosIntensity);
+                });
+                
+                // Atualizar intensidade do brilho das partículas (1 a 12x)
+                const glowIntensity = 1 + (scrollPercent * 11); // 1 no topo, 12 no final
+                particles.forEach(particle => {
+                    particle.style.setProperty('--glow-intensity', glowIntensity);
+                });
+                
+                // Atualizar velocidade de movimento das partículas (1 a 5x mais rápido)
+                const speedMultiplier = 1 + (scrollPercent * 4); // 1 no topo, 5 no final
+                particles.forEach(particle => {
+                    particle.style.setProperty('--speed-multiplier', speedMultiplier);
                 });
             }
 
@@ -560,6 +681,11 @@
                 if (_mcc === 4) { _dr(); return; }
                 
                 document.body.classList.toggle('light-theme');
+                
+                // Salvar tema
+                const isLight = document.body.classList.contains('light-theme');
+                localStorage.setItem('crio-theme', isLight ? 'light' : 'dark');
+                
                 holdMute(99);
             });
 
@@ -580,28 +706,63 @@
             audio.addEventListener('play', showUI);
 
             audio.addEventListener('ended', () => {
-                window.close();
+                // Ao terminar, fade para o vazio (esconder conteúdo, manter background)
+                const main = document.querySelector('main');
+                const audioUI = document.querySelector('.audio-ui');
+                const voidSymbol = document.querySelector('.void-symbol');
+                
+                main.style.transition = 'opacity 6s ease-out';
+                main.style.opacity = '0';
+                
+                if (audioUI) {
+                    audioUI.style.transition = 'opacity 6s ease-out';
+                    audioUI.style.opacity = '0';
+                }
+                
+                // Ativar o símbolo do vazio
+                if (voidSymbol) {
+                    voidSymbol.classList.add('active');
+                    
+                    // Após 3 segundos, iniciar o zoom (mantendo active)
+                    setTimeout(() => {
+                        voidSymbol.classList.add('zoom');
+                        // Adicionar classe ao body para iniciar o preenchimento com a cor do símbolo
+                        document.body.classList.add('symbol-takeover');
+                    }, 3000);
+                }
+                
+                // Remover todas as partículas após o fade
                 setTimeout(() => {
-                    _dr();
-                }, 100);
+                    const particles = document.querySelectorAll('.particle');
+                    particles.forEach(particle => {
+                        particle.style.transition = 'opacity 6s ease-out';
+                        particle.style.opacity = '0';
+                    });
+                }, 3000);
+                
+                // Após o zoom completo (12s + 3s de delay + tempo extra), voltar ao início
+                setTimeout(() => {
+                    // Fade out completo
+                    document.body.style.transition = 'opacity 3s ease-out';
+                    document.body.style.opacity = '0';
+                    
+                    setTimeout(() => {
+                        // Resetar tudo e voltar ao topo
+                        window.scrollTo(0, 0);
+                        localStorage.removeItem('crio-scroll-position');
+                        
+                        // Recarregar a página
+                        window.location.reload();
+                    }, 3000);
+                }, 15000); // 3s (delay) + 12s (zoom) = 15s
             });
 
-            // Auto-scroll page based on audio time
+            // Auto-scroll page based on audio time (DESATIVADO - scroll controla áudio)
             let isManualScroll = false;
             let scrollTimeout = null;
             
             function smoothAutoScroll() {
-                if (!audio.paused && !isManualScroll && audio.duration) {
-                    const duration = audio.duration;
-                    const currentTime = audio.currentTime;
-                    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-                    const targetScroll = (currentTime / duration) * scrollHeight;
-                    
-                    window.scrollTo({
-                        top: targetScroll,
-                        behavior: 'smooth'
-                    });
-                }
+                // Desativado - agora o scroll controla o áudio ao invés do contrário
                 requestAnimationFrame(smoothAutoScroll);
             }
             
@@ -618,6 +779,9 @@
                 // Atualizar volume baseado no scroll
                 updateVolumeByScroll();
                 
+                // Salvar posição de scroll
+                localStorage.setItem('crio-scroll-position', window.scrollY);
+                
                 // Se o usuário scrollar e o áudio ainda não iniciou, iniciar
                 if (!hasScrolled && Math.abs(window.scrollY - lastScrollY) > 10) {
                     hasScrolled = true;
@@ -626,18 +790,10 @@
                     }
                 }
                 
-                if (Math.abs(window.scrollY - lastScrollY) > 5) {
-                    isManualScroll = true;
-                    clearTimeout(scrollTimeout);
-                    
-                    if (!audio.paused && audio.duration) {
-                        const newTime = scrollPercent * audio.duration;
-                        audio.currentTime = newTime;
-                    }
-                    
-                    scrollTimeout = setTimeout(() => {
-                        isManualScroll = false;
-                    }, 2000);
+                // Scroll sempre controla o áudio (mesmo que não seja manual)
+                if (audio.duration) {
+                    const newTime = scrollPercent * audio.duration;
+                    audio.currentTime = newTime;
                 }
                 
                 lastScrollY = window.scrollY;
