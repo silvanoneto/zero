@@ -2081,6 +2081,17 @@ body.light-theme .reading-info {
         gap: 0.35rem;
     }
     
+    .nav-toggle {
+        margin: -0.35rem 0.35rem -0.35rem -0.4rem;
+        padding: 0.75rem 0.85rem;
+        min-width: 42px;
+    }
+    
+    .hamburger {
+        width: 20px;
+        height: 16px;
+    }
+    
     .audio-control-btn {
         min-width: 2rem;
         padding: 0.3rem 0.4rem;
@@ -2309,6 +2320,17 @@ body.light-theme .reading-info {
     /* Compact buttons */
     .audio-ui {
         gap: 0.5rem;
+    }
+    
+    .nav-toggle {
+        margin: -0.35rem 0.3rem -0.35rem -0.35rem;
+        padding: 0.7rem 0.75rem;
+        min-width: 40px;
+    }
+    
+    .hamburger {
+        width: 18px;
+        height: 14px;
     }
     
     .play-button,
