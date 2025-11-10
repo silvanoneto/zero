@@ -127,9 +127,9 @@ stats-full: ## Análise completa com distribuições e correlações
 	@echo "  • Super-hubs (≥10 conexões):        $$(cat assets/concepts.json | jq '[.[] | select(.connections | length >= 10)] | length')"
 	@echo ""
 	@echo "📚 COBERTURA BIBLIOGRÁFICA"
-	@echo "  • Conceitos com referências:  $$(cat assets/referencias.json | jq '[.[] | .conceitos[]] | unique | length')"
-	@echo "  • Conceitos sem referências:  $$(cat assets/concepts.json assets/referencias.json | jq -s '.[0] | map(.id) - ([.[1][] | .conceitos[]] | unique) | length')"
-	@echo "  • Média refs/conceito:        $$(cat assets/referencias.json | jq '[.[] | .conceitos | length] | add / length | floor')"
+	@echo "  • Conceitos com referências:  $$(cat assets/referencias.json | jq '[.[] | select(.conceitos != null) | .conceitos[]] | unique | length')"
+	@echo "  • Conceitos sem referências:  $$(cat assets/concepts.json assets/referencias.json | jq -s '(.[0] | map(.id)) - ([.[1][] | select(.conceitos != null) | .conceitos[]] | unique) | length')"
+	@echo "  • Média refs/conceito:        $$(cat assets/referencias.json | jq '[.[] | select(.conceitos != null) | .conceitos | length] | if length > 0 then add / length | floor else 0 end')"
 	@echo ""
 	@echo "⚖️ BALANCEAMENTO ENTRE CAMADAS"
 	@cat assets/concepts.json | jq -r '.[] | .layer' | sort | uniq -c | sort -rn | awk 'BEGIN {max=0} {if($$1>max) max=$$1} {printf "  • %-20s %3d conceitos ", $$2":", $$1; bar=int($$1*30/max); for(i=0;i<bar;i++) printf "█"; printf "\n"}'
