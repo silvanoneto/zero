@@ -160,6 +160,7 @@
       "performatividade",
       "pratityasamutpada",
       "processo",
+      "realismo agencial",
       "transindividual"
     ],
     "layer": "ontologica",
@@ -171,11 +172,13 @@
     "description": "Sistemas que se auto-observam geram realidades que não podem ser totalizadas. Tartarugas ontológicas até o fim. Incompletude de Gödel aplicada à existência - somos verdades que não podemos provar.",
     "connections": [
       "agencia",
+      "anti-fundacionalismo",
       "conhecimento",
       "estratostempo",
       "evento",
       "hauntologia",
       "limite",
+      "loop",
       "memoriacoletiva",
       "multiplicidade",
       "processo",
@@ -1731,20 +1734,6 @@
     "color": "0x66ccff"
   },
   {
-    "id": "intra-ação",
-    "name": "Intra-ação",
-    "description": "Karen Barad: não inter-ação (entre termos pré-existentes), mas intra-ação (co-constituição mútua). Agencial realism: matéria e significado emergem juntos.",
-    "connections": [
-      "agencia",
-      "intracao",
-      "ontologia",
-      "performatividade",
-      "realismo agencial"
-    ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
-  },
-  {
     "id": "capitalismo",
     "name": "Capitalismo",
     "description": "Sistema baseado em acumulação de capital, propriedade privada, trabalho assalariado. Mercadorias fictícias (Polanyi). Extrativismo, cercamentos, despossessão.",
@@ -1874,7 +1863,6 @@
     "description": "Karen Barad: matéria e significado não são separados. Aparatos de medição performam realidade. Ontologia e epistemologia inseparáveis (onto-epistemologia).",
     "connections": [
       "física quântica",
-      "intra-ação",
       "intracao",
       "ontologia",
       "performatividade"
@@ -2290,7 +2278,7 @@
     "description": "Donna Haraway: organismo cibernético. Híbrido humano-máquina. Ciborgue como metáfora ontológica: todos somos híbridos.",
     "connections": [
       "feminismo",
-      "hibridez",
+      "hibridação",
       "não-humanos",
       "tecnologia"
     ],
@@ -2553,19 +2541,6 @@
     "color": "0xff6666"
   },
   {
-    "id": "economia solidária",
-    "name": "Economia Solidária",
-    "description": "Cooperativas, bancos comunitários, moedas locais. Solidariedade vs competição. Reprodução social vs acumulação.",
-    "connections": [
-      "commons",
-      "cooperativa",
-      "moedascomunitarias",
-      "reproducaosocial"
-    ],
-    "layer": "pratica",
-    "color": "0x99ccff"
-  },
-  {
     "id": "Ecuador",
     "name": "Ecuador",
     "description": "Primeira constituição a reconhecer direitos da Pachamama (2008). Buen vivir como princípio constitucional.",
@@ -2742,19 +2717,6 @@
       "dasein",
       "filosofia",
       "ontologia"
-    ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
-  },
-  {
-    "id": "hibridez",
-    "name": "Hibridez",
-    "description": "Mistura, mestiçagem, ciborgue. Fronteiras porosas. Pureza é mito violento. Somos todos híbridos.",
-    "connections": [
-      "ciborgue",
-      "holobionte",
-      "multiespécies",
-      "multiplicidade"
     ],
     "layer": "ontologica",
     "color": "0x66ccff"
@@ -2941,19 +2903,6 @@
     "color": "0x66ccff"
   },
   {
-    "id": "madhyamika",
-    "name": "Madhyamika",
-    "description": "Variante de madhyamaka. Caminho do meio budista. Śūnyatā como via média entre eternalismo e niilismo.",
-    "connections": [
-      "budismo",
-      "madhyamaka",
-      "ontologia",
-      "sunyata"
-    ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
-  },
-  {
     "id": "matemática",
     "name": "Matemática",
     "description": "Padrões formais, estruturas abstratas. Não é reino platônico separado. Matemática é prática humana situada.",
@@ -3061,7 +3010,7 @@
     "description": "Mondragón: maior complexo cooperativo do mundo. Economia solidária em escala. Limites e contradições.",
     "connections": [
       "cooperativa",
-      "economia solidária",
+      "economia-solidaria",
       "governança"
     ],
     "layer": "pratica",
@@ -3193,19 +3142,6 @@
     ],
     "layer": "ontologica",
     "color": "0x66ccff"
-  },
-  {
-    "id": "recursão",
-    "name": "Recursão",
-    "description": "Auto-referência. Função que chama a si mesma. Recursão sem fundamento: turtles all the way down.",
-    "connections": [
-      "anti-fundacionalismo",
-      "loop",
-      "processo",
-      "recursao"
-    ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
   },
   {
     "id": "relatividade conceitual",
@@ -3453,12 +3389,12 @@
     "name": "Kairós",
     "description": "Tempo qualitativo do momento oportuno. Não é chronos (tempo quantitativo linear), mas ocasião propícia, momento de decisão onde futuros se abrem. Temporalidade do evento político.",
     "connections": [
-      "tempo",
-      "evento",
+      "decisão",
       "devir",
-      "potencial",
+      "evento",
       "performatividade",
-      "decisão"
+      "potencial",
+      "tempo"
     ],
     "layer": "temporal",
     "color": "0xff99cc"
@@ -3468,12 +3404,12 @@
     "name": "Cronocracia",
     "description": "Poder sobre o tempo. Quem controla ritmos sociais? Aceleração capitalista versus slow movements. Temporalidades dominantes apagam temporalidades subalternas.",
     "connections": [
-      "tempo",
-      "poder",
-      "capitalismo",
-      "resistencia",
       "biopolitica",
-      "colonialidade"
+      "capitalismo",
+      "colonialidade",
+      "poder",
+      "resistencia",
+      "tempo"
     ],
     "layer": "temporal",
     "color": "0xff99cc"
@@ -3483,12 +3419,12 @@
     "name": "Anacronismo Produtivo",
     "description": "Tempos múltiplos coexistem. Modernidade não substitui outras temporalidades - sobrepõe-se violentamente. Anacronismo revela que 'contemporâneo' é sempre múltiplo.",
     "connections": [
-      "tempo",
-      "hauntologia",
-      "memoriacoletiva",
       "colonialidade",
+      "hauntologia",
       "indigena",
-      "multitemporal"
+      "memoriacoletiva",
+      "multitemporal",
+      "tempo"
     ],
     "layer": "temporal",
     "color": "0xff99cc"
@@ -3498,12 +3434,12 @@
     "name": "Multitemporalidade",
     "description": "Diferentes camadas temporais atravessam o presente. Geológico, biológico, histórico, geracional coexistem. Contra linearidade progressista: tempo é heterocrônico.",
     "connections": [
-      "tempo",
-      "estratostempo",
-      "setimagera",
       "ancestralidade",
+      "estratostempo",
       "geologico",
-      "processo"
+      "processo",
+      "setimagera",
+      "tempo"
     ],
     "layer": "temporal",
     "color": "0xff99cc"
@@ -3513,12 +3449,12 @@
     "name": "Devir-Imperceptível",
     "description": "Deleuze: tornar-se indiscernível, clandestino. Não é desaparecer mas multiplicar conexões até dissolver contornos identitários. Ápice do devir.",
     "connections": [
+      "anatman",
+      "desterritorializacao",
       "devir",
       "multiplicidade",
-      "anatman",
-      "vazio",
       "rizoma",
-      "desterritorializacao"
+      "vazio"
     ],
     "layer": "temporal",
     "color": "0xff99cc"
@@ -3528,12 +3464,12 @@
     "name": "Sincronia sem Síntese",
     "description": "Tempos heterogêneos podem sincronizar-se sem fusão. Como músicos tocam juntos mantendo diferenças. Coordenação relacional versus unificação totalizante.",
     "connections": [
-      "tempo",
-      "multiplicidade",
+      "assemblage",
       "commons",
       "composição",
       "heterogeneidade",
-      "assemblage"
+      "multiplicidade",
+      "tempo"
     ],
     "layer": "temporal",
     "color": "0xff99cc"
@@ -3544,11 +3480,11 @@
     "description": "Levinas: responsabilidade precede liberdade. Não escolhemos ser responsáveis - somos constituídos pela responsabilidade ao Outro. Infinita porque nunca pode ser quitada.",
     "connections": [
       "alteridade",
-      "ética",
-      "vulnerabilidade",
-      "sujeito",
       "ontologia",
-      "reciprocidade"
+      "reciprocidade",
+      "sujeito",
+      "vulnerabilidade",
+      "ética"
     ],
     "layer": "etica",
     "color": "0xffcccc"
@@ -3559,11 +3495,11 @@
     "description": "Derrida: hospitalidade verdadeira não calcula. Acolher o Outro sem condições, sem demanda de identidade ou reciprocidade. Paradoxo: lei da hospitalidade versus leis de hospitalidade.",
     "connections": [
       "alteridade",
-      "ética",
+      "commons",
+      "justiça",
       "reciprocidade",
       "vulnerabilidade",
-      "justiça",
-      "commons"
+      "ética"
     ],
     "layer": "etica",
     "color": "0xffcccc"
@@ -3573,12 +3509,12 @@
     "name": "Justiça-Por-Vir",
     "description": "Derrida: justiça nunca está presente - sempre por vir. Não é direito (calculável), mas excede todo cálculo. Mantém futuro aberto contra totalização.",
     "connections": [
-      "justiça",
-      "ética",
-      "evento",
-      "potencial",
       "devir",
-      "impossível"
+      "evento",
+      "impossível",
+      "justiça",
+      "potencial",
+      "ética"
     ],
     "layer": "etica",
     "color": "0xffcccc"
@@ -3588,12 +3524,12 @@
     "name": "Reparação Histórica",
     "description": "Responsabilidade por violências passadas persiste. Não é compensação individual mas reconhecimento estrutural. Memória ativa que transforma presente.",
     "connections": [
-      "memoriacoletiva",
-      "justiça",
       "ancestralidade",
       "colonialidade",
-      "responsabilidade",
-      "reconciliação"
+      "justiça",
+      "memoriacoletiva",
+      "reconciliação",
+      "responsabilidade"
     ],
     "layer": "etica",
     "color": "0xffcccc"
@@ -3605,10 +3541,10 @@
     "connections": [
       "cuidado",
       "ontologia",
-      "ubuntu",
-      "vulnerabilidade",
       "reciprocidade",
-      "reprodução-social"
+      "reprodução-social",
+      "ubuntu",
+      "vulnerabilidade"
     ],
     "layer": "etica",
     "color": "0xffcccc"
@@ -3618,12 +3554,12 @@
     "name": "Liminaridade",
     "description": "Turner: estado betwixt and between. Nem aqui nem lá. Threshold onde transformação acontece. Rituais habitam liminaridade; movimentos sociais também.",
     "connections": [
-      "threshold",
-      "transformação",
+      "communitas",
       "devir",
       "evento",
-      "communitas",
-      "rito"
+      "rito",
+      "threshold",
+      "transformação"
     ],
     "layer": "ontologica",
     "color": "0x66ccff"
@@ -3633,12 +3569,12 @@
     "name": "Threshold (Limiar)",
     "description": "Zona de indeterminação onde sistemas transitam. Não é linha mas região espessa. Ecological thresholds: pontos de não-retorno. Limiares políticos, ontológicos, éticos.",
     "connections": [
-      "limite",
-      "transformação",
       "bifurcação",
-      "tipping-point",
       "catástrofe",
-      "potencial"
+      "limite",
+      "potencial",
+      "tipping-point",
+      "transformação"
     ],
     "layer": "ontologica",
     "color": "0x66ccff"
@@ -3648,12 +3584,12 @@
     "name": "Tradução Cosmopolítica",
     "description": "Stengers: tradução entre mundos ontologicamente distintos. Não é encontrar equivalências mas criar conexões parciais que respeitam incomensurabilidade.",
     "connections": [
+      "conhecimento",
       "cosmopolitica",
-      "indigena",
-      "ontologia",
       "diplomacia",
       "equivocação",
-      "conhecimento"
+      "indigena",
+      "ontologia"
     ],
     "layer": "epistemica",
     "color": "0xffcc66"
@@ -3663,12 +3599,12 @@
     "name": "Equivocação Controlada",
     "description": "Viveiros de Castro: equívocos não são erros mas diferenças de mundo. Perspectivas distintas não compartilham referentes. Equivocação controlada mantém diferença produtiva.",
     "connections": [
-      "perspectivismo",
-      "traducao-cosmopolitica",
-      "ontologia",
-      "indigena",
       "alteridade",
-      "multinaturalismo"
+      "indigena",
+      "multinaturalismo",
+      "ontologia",
+      "perspectivismo",
+      "traducao-cosmopolitica"
     ],
     "layer": "epistemica",
     "color": "0xffcc66"
@@ -3679,11 +3615,11 @@
     "description": "Brechas no tecido do poder. Não são exteriores mas fissuras internas. Autonomia se constrói nos interstícios, não em pureza separada.",
     "connections": [
       "autonomia",
-      "resistencia",
       "commons",
       "heterotopia",
       "liminaridade",
-      "poder"
+      "poder",
+      "resistencia"
     ],
     "layer": "politica",
     "color": "0xff6666"
@@ -3693,12 +3629,12 @@
     "name": "Bifurcação",
     "description": "Prigogine: ponto onde sistema instável pode tomar múltiplos caminhos. Pequenas flutuações determinam trajetória. Momento de máxima indeterminação e criatividade.",
     "connections": [
-      "threshold",
-      "potencial",
+      "caos",
       "catástrofe",
       "evento",
+      "potencial",
       "processo",
-      "caos"
+      "threshold"
     ],
     "layer": "ontologica",
     "color": "0x66ccff"
@@ -3708,12 +3644,12 @@
     "name": "Tipping Point",
     "description": "Limiar crítico onde mudança incremental torna-se transformação sistêmica. Clima, ecossistemas, movimentos sociais: limiares de não-retorno.",
     "connections": [
-      "threshold",
       "bifurcacao",
       "catástrofe",
-      "transformação",
       "colapso",
-      "emergencia"
+      "emergencia",
+      "threshold",
+      "transformação"
     ],
     "layer": "ontologica",
     "color": "0x66ccff"
@@ -3723,12 +3659,12 @@
     "name": "Heterotopia",
     "description": "Foucault: espaços outros que espelham e contestam espaços reais. Não são utopias (não-lugares) mas lugares efetivamente diferentes. Jardins, cemitérios, teatros, commons.",
     "connections": [
-      "intersticio",
-      "commons",
       "autonomia",
+      "commons",
+      "intersticio",
+      "lugar",
       "pratica",
-      "resistencia",
-      "lugar"
+      "resistencia"
     ],
     "layer": "politica",
     "color": "0xff6666"
@@ -3738,12 +3674,12 @@
     "name": "Communitas",
     "description": "Turner: estrutura social emerge espontaneamente na liminaridade. Não é comunidade institucionalizada mas vínculo direto, igualitário, transitório. Efervescência coletiva.",
     "connections": [
-      "liminaridade",
-      "comunidade",
       "assembleia",
+      "commons",
+      "comunidade",
       "evento",
-      "solidariedade",
-      "commons"
+      "liminaridade",
+      "solidariedade"
     ],
     "layer": "politica",
     "color": "0xff6666"
@@ -3753,27 +3689,27 @@
     "name": "Tempo Geológico",
     "description": "Deep time da Terra. Estratos, erosões, sedimentações operam em escalas que excedem história humana. Antropoceno: humanos como força geológica.",
     "connections": [
-      "multitemporal",
-      "estratostempo",
-      "terra",
       "antropoceno",
       "escala",
-      "temporalidade"
+      "estratostempo",
+      "multitemporal",
+      "temporalidade",
+      "terra"
     ],
     "layer": "temporal",
     "color": "0xff99cc"
   },
   {
-    "id": "escala",
+    "id": "politica-escala",
     "name": "Política de Escala",
     "description": "Escalas não são dadas mas produzidas. Local/global não são níveis fixos mas efeitos de práticas. Tsing: fricção entre escalas gera transformação.",
     "connections": [
-      "politica",
-      "poder",
+      "assemblage",
       "commons",
       "global",
       "local",
-      "assemblage"
+      "poder",
+      "politica"
     ],
     "layer": "politica",
     "color": "0xff6666"
@@ -3783,12 +3719,12 @@
     "name": "Im/possível",
     "description": "Derrida: experiência do impossível como condição de possibilidade. Decisão verdadeira atravessa indecidível. Justiça, perdão, hospitalidade: impossíveis que acontecem.",
     "connections": [
-      "potencial",
+      "decisão",
       "evento",
-      "justica-por-vir",
       "hospitalidade",
+      "justica-por-vir",
       "paradoxo",
-      "decisão"
+      "potencial"
     ],
     "layer": "ontologica",
     "color": "0x66ccff"
@@ -3798,11 +3734,11 @@
     "name": "Decisão",
     "description": "Não é aplicação de regra mas atravessamento do indecidível. Badiou: fidelidade ao evento requer decisões sem garantia. Kierkegaard: salto de fé.",
     "connections": [
-      "evento",
-      "impossível",
-      "fidelidade",
-      "kairos",
       "agencia",
+      "evento",
+      "fidelidade",
+      "impossível",
+      "kairos",
       "responsabilidade"
     ],
     "layer": "ontologica",
@@ -3813,12 +3749,12 @@
     "name": "Paradoxo Produtivo",
     "description": "Contradições que não se resolvem mas geram pensamento. Hospitalidade incondicional versus leis. Democracia por vir versus democracia existente. Habitar tensão.",
     "connections": [
-      "impossível",
-      "recursao",
-      "limite",
       "aporia",
       "dialética",
-      "pensamento"
+      "impossível",
+      "limite",
+      "pensamento",
+      "recursao"
     ],
     "layer": "epistemica",
     "color": "0xffcc66"
@@ -3828,12 +3764,12 @@
     "name": "Mestiçagem Ontológica",
     "description": "Anzaldúa: borderlands onde ontologias mestiçam-se. Não é fusão harmoniosa mas zona de tensão produtiva. Nepantla: estar entre mundos.",
     "connections": [
-      "liminaridade",
-      "traducao-cosmopolitica",
-      "indigena",
-      "heterogeneidade",
       "fronteira",
-      "hibridação"
+      "heterogeneidade",
+      "hibridação",
+      "indigena",
+      "liminaridade",
+      "traducao-cosmopolitica"
     ],
     "layer": "ontologica",
     "color": "0x66ccff"
@@ -3843,11 +3779,11 @@
     "name": "Fronteira Porosa",
     "description": "Não é linha de separação mas zona de contato, fricção, tradução. Fronteiras são produtivas quando porosas. Tsing: friction como encontro transformador.",
     "connections": [
-      "mesticagem-ontologica",
+      "contato",
       "liminaridade",
+      "mesticagem-ontologica",
       "threshold",
       "traducao-cosmopolitica",
-      "contato",
       "zona"
     ],
     "layer": "ontologica",
@@ -3858,12 +3794,16 @@
     "name": "Hibridação",
     "description": "García Canclini: culturas urbanas latino-americanas como híbridos de tradicional/moderno. Não é degeneração mas criatividade. Contra purismos.",
     "connections": [
-      "mesticagem-ontologica",
-      "traducao-cosmopolitica",
-      "modernidade",
-      "indigena",
+      "ciborgue",
+      "criatividade",
       "cultura",
-      "criatividade"
+      "holobionte",
+      "indigena",
+      "mesticagem-ontologica",
+      "modernidade",
+      "multiespécies",
+      "multiplicidade",
+      "traducao-cosmopolitica"
     ],
     "layer": "ontologica",
     "color": "0x66ccff"
@@ -3873,12 +3813,12 @@
     "name": "Aporia",
     "description": "Impasse produtivo. Derrida: aporias não são falhas mas estrutura do pensamento. Caminho sem passagem que ainda assim deve ser atravessado.",
     "connections": [
-      "paradoxo",
+      "desconstrução",
+      "filosofia",
       "impossível",
       "limite",
-      "pensamento",
-      "desconstrução",
-      "filosofia"
+      "paradoxo",
+      "pensamento"
     ],
     "layer": "epistemica",
     "color": "0xffcc66"
@@ -3888,12 +3828,12 @@
     "name": "Zona de Contato",
     "description": "Pratt: espaço social onde culturas díspares encontram-se, chocam-se, entrelaçam-se. Não é harmonia mas negociação contínua em condições de assimetria de poder.",
     "connections": [
-      "fronteira",
-      "traducao-cosmopolitica",
-      "poder",
       "colonialidade",
+      "encontro",
       "fricção",
-      "encontro"
+      "fronteira",
+      "poder",
+      "traducao-cosmopolitica"
     ],
     "layer": "politica",
     "color": "0xff6666"
@@ -3903,12 +3843,12 @@
     "name": "Fricção",
     "description": "Tsing: atrito entre escalas, ontologias, projetos. Fricção não é apenas resistência mas onde conexão heterogênea gera calor, movimento, transformação.",
     "connections": [
-      "zona",
-      "fronteira",
+      "encontro",
       "escala",
+      "fronteira",
       "heterogeneidade",
       "transformação",
-      "encontro"
+      "zona"
     ],
     "layer": "ontologica",
     "color": "0x66ccff"
@@ -3920,10 +3860,10 @@
     "connections": [
       "afeto",
       "composição",
-      "zona",
+      "evento",
       "fricção",
       "intracao",
-      "evento"
+      "zona"
     ],
     "layer": "ontologica",
     "color": "0x66ccff"
@@ -3933,12 +3873,12 @@
     "name": "Zona de Indeterminação",
     "description": "Deleuze: zona onde distinções tornam-se indiscerníveis. Humano/animal, orgânico/inorgânico, vivo/morto. Não confusão mas devir.",
     "connections": [
-      "devir",
-      "liminaridade",
-      "threshold",
       "anatman",
+      "devir",
+      "indiscernível",
+      "liminaridade",
       "multiplicidade",
-      "indiscernível"
+      "threshold"
     ],
     "layer": "ontologica",
     "color": "0x66ccff"
@@ -3948,12 +3888,12 @@
     "name": "Indiscernibilidade",
     "description": "Leibniz invertido: indiscerníveis não são idênticos mas múltiplos em devir. Zona onde diferença opera sem identidade distinta.",
     "connections": [
-      "devir-imperceptivel",
-      "contato",
-      "multiplicidade",
       "anatman",
-      "vazio",
-      "diferença"
+      "contato",
+      "devir-imperceptivel",
+      "diferença",
+      "multiplicidade",
+      "vazio"
     ],
     "layer": "ontologica",
     "color": "0x66ccff"
@@ -3963,11 +3903,11 @@
     "name": "Dualismo Cartesiano",
     "description": "Res cogitans (mente) separada de res extensa (matéria). Sujeito autofundado, átomo-indivíduo anterior às relações. Paradigma superado pela ontologia relacional: não há substância pensante isolada, mas assembleias materiais-informacionais em co-constituição.",
     "connections": [
-      "sujeito",
+      "individualismo",
+      "modernidade",
       "ontologia",
       "separabilidade",
-      "individualismo",
-      "modernidade"
+      "sujeito"
     ],
     "layer": "epistemica",
     "color": "0xffcc66"
@@ -3977,13 +3917,13 @@
     "name": "Dào (道 - Caminho)",
     "description": "Princípio inefável que precede e permeia todas as coisas. Não é ente, mas processo gerador de todos os entes. 'Dao que pode ser nomeado não é o Dao eterno' - apofatismo ontológico. Wú (無 vazio) e Yǒu (有 ser) emergem mutuamente do Dao.",
     "connections": [
-      "vazio",
-      "processo",
+      "apofatismo",
       "ontologia",
-      "wu-wei",
-      "yin-yang",
+      "processo",
       "sunyata",
-      "apofatismo"
+      "vazio",
+      "wu-wei",
+      "yin-yang"
     ],
     "layer": "fundacional",
     "color": "0x9966ff"
@@ -3993,12 +3933,12 @@
     "name": "Wú Wéi (無為 - Não-Ação)",
     "description": "Não é passividade, mas ação alinhada com padrões naturais. Agir sem forçar, fluir com processos emergentes. Eficácia através de não-interferência. Crítica à vontade imperial que impõe ordem artificial.",
     "connections": [
-      "dao",
+      "aceleracionismo",
       "autonomia",
-      "processo",
+      "dao",
       "emergencia",
       "pratica",
-      "aceleracionismo"
+      "processo"
     ],
     "layer": "pratica",
     "color": "0x99ff99"
@@ -4008,12 +3948,12 @@
     "name": "Yīn-Yáng (陰陽)",
     "description": "Dualidade dinâmica não-dualista. Pólos não são opostos fixos mas fases de transformação mútua. Cada um contém semente do outro. Relacionalidade sem síntese dialética - tensão produtiva permanente.",
     "connections": [
+      "complementaridade",
       "dao",
-      "processo",
-      "multiplicidade",
-      "diferença",
       "devir",
-      "complementaridade"
+      "diferença",
+      "multiplicidade",
+      "processo"
     ],
     "layer": "ontologica",
     "color": "0x66ccff"
@@ -4023,12 +3963,12 @@
     "name": "Lǐ (禮 - Ritual/Propriedade)",
     "description": "Não são regras externas impostas, mas cultivo relacional de padrões harmônicos. Ética como coreografia social - identidade emerge de performance de papéis relacionais. Crítica confuciana ao individualismo.",
     "connections": [
-      "performatividade",
-      "normatividade",
-      "reciprocidade",
-      "cuidado",
       "comunidade",
-      "pratica"
+      "cuidado",
+      "normatividade",
+      "performatividade",
+      "pratica",
+      "reciprocidade"
     ],
     "layer": "etica",
     "color": "0xff99cc"
@@ -4038,12 +3978,12 @@
     "name": "Rén (仁 - Humanidade/Benevolência)",
     "description": "Virtude relacional por excelência. Ideograma: pessoa (人) + dois (二) = humanidade emerge entre pessoas. Não é propriedade individual mas qualidade de relações. Ubuntu confuciano.",
     "connections": [
-      "ubuntu",
-      "li-confuciano",
+      "comunidade",
       "cuidado",
+      "li-confuciano",
       "reciprocidade",
       "transindividual",
-      "comunidade"
+      "ubuntu"
     ],
     "layer": "etica",
     "color": "0xff99cc"
@@ -4054,12 +3994,12 @@
     "description": "Não-dualidade radical: Brahman (realidade absoluta) e Ātman (si-mesmo) são idênticos. 'Tat tvam asi' - Tu és Isso. Dissolução de fronteira sujeito-objeto. Māyā (ilusão) não é falsidade mas multiplicidade que vela unidade.",
     "connections": [
       "anatman",
-      "sunyata",
+      "ilusão",
+      "multiplicidade",
       "ontologia",
       "sujeito",
-      "vazio",
-      "multiplicidade",
-      "ilusão"
+      "sunyata",
+      "vazio"
     ],
     "layer": "fundacional",
     "color": "0x9966ff"
@@ -4069,12 +4009,12 @@
     "name": "Sankofa (Akan - Gana)",
     "description": "Pássaro mítico que voa para frente olhando para trás, ovo precioso no bico. 'Não é tabu voltar e buscar o que esqueceu'. Futuro se constrói recuperando sabedoria ancestral. Temporalidade não-linear africana - passado habita presente.",
     "connections": [
-      "tempo",
-      "hauntologia",
       "ancestralidade",
-      "memoria",
       "futuro",
+      "hauntologia",
+      "memoria",
       "recursao",
+      "tempo",
       "ubuntu"
     ],
     "layer": "temporal",
@@ -4085,13 +4025,13 @@
     "name": "Ujamaa (Swahili - Familyhood)",
     "description": "Socialismo africano de Nyerere (Tanzânia). Não é coletivismo imposto mas extensão de valores comunitários tradicionais. Produção cooperativa, propriedade comunal, autodeterminação. Commons africanos contra colonial-capitalismo.",
     "connections": [
-      "ubuntu",
-      "commons",
-      "autonomia",
-      "cooperativas",
-      "comunidade",
       "anticolonial",
-      "reciprocidade"
+      "autonomia",
+      "commons",
+      "comunidade",
+      "cooperativas",
+      "reciprocidade",
+      "ubuntu"
     ],
     "layer": "politica",
     "color": "0xff6666"
@@ -4101,13 +4041,13 @@
     "name": "Mana (Polinésia/Melanésia)",
     "description": "Poder espiritual que flui através de pessoas, lugares, objetos. Não é propriedade mas intensidade relacional. Chefes têm mana não por essência mas por relações que cultivam. Ontologia de intensidades distribuídas, não substâncias localizadas.",
     "connections": [
-      "poder",
-      "ontologia",
-      "intensidade",
-      "processo",
       "distribuído",
-      "terra",
-      "sacralidade"
+      "intensidade",
+      "ontologia",
+      "poder",
+      "processo",
+      "sacralidade",
+      "terra"
     ],
     "layer": "ontologica",
     "color": "0x66ccff"
@@ -4117,13 +4057,13 @@
     "name": "Onto-Epistemologia",
     "description": "Ontologia e epistemologia não são âmbitos separados. Ser-relacional implica conhecer-relacional: co-constituição de mundo e saber. Barad: aparatos de medição não revelam propriedades preexistentes - performam configurações específicas. Haraway: saberes situados não são perspectivas sobre realidade independente, mas co-produções de mundos. Onto-epistemologia dissolve fronteira sujeito/objeto.",
     "connections": [
-      "ontologia",
-      "conhecimento-situado",
       "agencia",
+      "conhecimento-situado",
+      "intra-acao",
+      "ontologia",
       "performatividade",
-      "relacionalismo-epistemico",
       "praticas",
-      "intra-acao"
+      "relacionalismo-epistemico"
     ],
     "layer": "epistemica",
     "color": "0xffcc66"
@@ -4133,14 +4073,14 @@
     "name": "Sócio-Ecologia",
     "description": "Metabolismo sociedade-natureza como co-constituição, não externalidade. Fischer-Kowalski: fluxos materiais e energéticos atravessam fronteira porosa entre 'social' e 'natural'. Ecologia política: conflitos ambientais são disputas por configurações metabólicas. Não há economia sem ecologia, nem ecossistema sem história. Conceito-ponte para superar dualismo sociedade/natureza.",
     "connections": [
-      "metabolismo-social",
-      "ecologia-politica",
-      "natureza",
-      "terra",
-      "extrativismo",
       "capitalismo",
       "commons",
-      "praticas"
+      "ecologia-politica",
+      "extrativismo",
+      "metabolismo-social",
+      "natureza",
+      "praticas",
+      "terra"
     ],
     "layer": "ecologica",
     "color": "0x66ff99"
@@ -4150,14 +4090,14 @@
     "name": "Crono-Política",
     "description": "Tempo não é moldura neutra da política - é terreno de disputa. Capitalismo impõe temporalidades: aceleração produtivista, just-in-time, obsolescência programada, dívida como colonização do futuro. Resistências configuram outros tempos: lentidão estratégica, tempos cíclicos indígenas, greve como suspensão, futuridade queer. Sharma: diferença temporal constitui hierarquias raciais/coloniais. Política é também luta por heterocronia.",
     "connections": [
-      "tempo",
-      "capitalismo",
       "aceleracao",
-      "devir",
-      "revolucao",
       "bifurcacao",
+      "capitalismo",
+      "devir",
       "poder",
-      "resistencia"
+      "resistencia",
+      "revolucao",
+      "tempo"
     ],
     "layer": "temporal",
     "color": "0xff99cc"
@@ -4167,13 +4107,13 @@
     "name": "Metabolismo Social",
     "description": "Fluxos materiais e energéticos entre sociedade e natureza. Não há economia sem ecologia - toda produção é transformação metabólica. Marx: ruptura metabólica do capitalismo (nutrientes urbanos não retornam ao solo). Fischer-Kowalski: análise de fluxo de materiais (MFA) quantifica metabolismo. Giorgos Kallis: decrescimento como redução metabólica planejada. Diferentes modos de produção = diferentes regimes metabólicos.",
     "connections": [
-      "socio-ecologia",
       "capitalismo",
-      "terra",
-      "extrativismo",
       "decrescimento",
       "ecologia-politica",
-      "natureza"
+      "extrativismo",
+      "natureza",
+      "socio-ecologia",
+      "terra"
     ],
     "layer": "ecologica",
     "color": "0x66ff99"
@@ -4183,13 +4123,13 @@
     "name": "Soberania Alimentar",
     "description": "Via Campesina (1996): direito de povos a alimentos culturalmente apropriados, produzidos de forma ecológica e sustentável, e de definir seus próprios sistemas alimentares. Não é apenas segurança alimentar (quantidade) - é autonomia sobre produção, distribuição, consumo. Confronta agronegócio, sementes patenteadas, monoculturas. Articula camponeses, indígenas, urbanos. Soberania metabólica.",
     "connections": [
-      "terra",
-      "indigena",
-      "commons",
-      "reciprocidade",
       "autonomia",
+      "commons",
+      "indigena",
+      "praticas",
+      "reciprocidade",
       "resistencia",
-      "praticas"
+      "terra"
     ],
     "layer": "pratica",
     "color": "0xff9966"
@@ -4200,12 +4140,12 @@
     "description": "Mudança climática não é problema técnico - é injustiça estrutural. Sul Global emite menos, sofre mais. Comunidades racializadas, indígenas, pobres na linha de frente. Dívida climática: Norte deve reparações ao Sul. Mary Robinson: direitos humanos + clima. Movimentos: climate justice now, Blockadia. Não basta mitigação técnica - exige redistribuição radical, descolonização, reparações.",
     "connections": [
       "capitalismo",
+      "ecologia-politica",
       "extrativismo",
       "indigena",
+      "poder",
       "resistencia",
-      "terra",
-      "ecologia-politica",
-      "poder"
+      "terra"
     ],
     "layer": "politica",
     "color": "0xff6666"
@@ -4215,13 +4155,15 @@
     "name": "Economia Solidária",
     "description": "Organização econômica baseada em autogestão, democracia, reciprocidade, não acumulação. Singer: contradiz lógica capitalista - propriedade coletiva dos meios de produção, repartição igualitária. Cooperativas, bancos comunitários, trocas solidárias, moedas sociais. Não é caridade nem mercado - é terceira via. Gibson-Graham: economia diversa já existe, capitalismo não é totalidade.",
     "connections": [
-      "commons",
-      "reciprocidade",
+      "alternativas",
       "autonomia",
-      "moedascomunitarias",
+      "commons",
+      "cooperativa",
       "cooperativas",
+      "moedascomunitarias",
       "praticas",
-      "alternativas"
+      "reciprocidade",
+      "reproducaosocial"
     ],
     "layer": "pratica",
     "color": "0xff9966"
@@ -4231,13 +4173,13 @@
     "name": "Infraestrutura Comum",
     "description": "Sistemas materiais de reprodução social geridos coletivamente. Não são apenas 'serviços públicos' - são commoning infraestrutural. Água, energia, transporte, comunicação, cuidado. Elinor Ostrom: gestão comum funciona quando comunidades criam regras. Keller Easterling: infraestrutura como software - codifica possibilidades. Lutas: remunicipalização de água (Nápoles), redes mesh comunitárias, creches autogestionadas.",
     "connections": [
-      "commons",
-      "praticas",
       "autonomia",
-      "tecnologiaconvivial",
+      "commons",
+      "cuidado",
+      "praticas",
       "reciprocidade",
-      "terra",
-      "cuidado"
+      "tecnologiaconvivial",
+      "terra"
     ],
     "layer": "pratica",
     "color": "0xff9966"
@@ -4247,12 +4189,12 @@
     "name": "Biomimética",
     "description": "Aprender de 3.8 bilhões de anos de evolução. Janine Benyus: natureza como modelo, medida, mentora. Não é apenas copiar formas - é aprender estratégias: eficiência energética, circularidade material, adaptação local, auto-organização. Exemplos: velcro (sementes de bardana), trem-bala (bico de martim-pescador), concreto autorreparador (conchas marinhas). Design regenerativo, não apenas sustentável.",
     "connections": [
-      "natureza",
-      "tecnologiaconvivial",
-      "regeneracao",
       "ecologia",
+      "natureza",
+      "praticas",
       "processo",
-      "praticas"
+      "regeneracao",
+      "tecnologiaconvivial"
     ],
     "layer": "ecologica",
     "color": "0x66ff99"
@@ -4262,13 +4204,13 @@
     "name": "Agroecologia",
     "description": "Agricultura como ecossistema, não fábrica. Miguel Altieri: integra ecologia + conhecimentos tradicionais + justiça social. Policultivo, rotação, consórcio, agrofloresta - aumentam biodiversidade, ciclam nutrientes, regulam pragas. Vandana Shiva: soberania de sementes. Não é apenas técnica agrícola - é movimento político contra agrotóxicos, transgênicos, latifúndio. MST, Via Campesina.",
     "connections": [
-      "terra",
-      "soberania-alimentar",
-      "indigena",
       "biodiversidade",
+      "indigena",
       "metabolismo-social",
       "praticas",
-      "resistencia"
+      "resistencia",
+      "soberania-alimentar",
+      "terra"
     ],
     "layer": "ecologica",
     "color": "0x66ff99"
@@ -4278,12 +4220,12 @@
     "name": "Permacultura",
     "description": "Design de sistemas humanos sustentáveis. Bill Mollison/David Holmgren (Austrália, 1970s): permanente + agricultura + cultura. 3 éticas: cuidado com terra, cuidado com pessoas, partilha justa. 12 princípios: observar e interagir, capturar e armazenar energia, ciclos de feedback, usar bordas, integrar não segregar. Não é jardinagem - é filosofia de design aplicável a economia, comunidade, arquitetura.",
     "connections": [
-      "terra",
-      "regeneracao",
       "agroecologia",
+      "autonomia",
       "commons",
       "praticas",
-      "autonomia"
+      "regeneracao",
+      "terra"
     ],
     "layer": "ecologica",
     "color": "0x66ff99"
@@ -4293,13 +4235,13 @@
     "name": "Regeneração Ecológica",
     "description": "Além de sustentabilidade (manter status quo) - restaurar vitalidade de sistemas degradados. Não é volta a estado primitivo pristino, mas co-evolução adaptativa. Reflorestamento (Wangari Maathai, Green Belt Movement), restauração de rios, renaturalização urbana, rewilding. Indigenous land management: queimadas controladas aborígenes. Regeneração é processo, não produto final.",
     "connections": [
-      "terra",
       "biodiversidade",
       "indigena",
-      "processo",
-      "tempo",
       "praticas",
-      "sucessao-ecologica"
+      "processo",
+      "sucessao-ecologica",
+      "tempo",
+      "terra"
     ],
     "layer": "ecologica",
     "color": "0x66ff99"
@@ -4309,12 +4251,12 @@
     "name": "Ciclos Biogeoquímicos",
     "description": "Circularidade planetária de elementos vitais: carbono, nitrogênio, fósforo, água. Lynn Margulis: Gaia como sistema autorregulado de ciclos acoplados. Não há linearidade - tudo retorna. Capitalismo rompe ciclos: extração unidirecional, poluição como externalidade. Antropoceno: perturbação de ciclos (ciclo do carbono, nitrogênio via fertilizantes). Economia circular aprende de ciclos biogeoquímicos.",
     "connections": [
-      "natureza",
+      "ecologia",
       "metabolismo-social",
-      "terra",
+      "natureza",
       "processo",
       "tempo",
-      "ecologia"
+      "terra"
     ],
     "layer": "ecologica",
     "color": "0x66ff99"
@@ -4324,12 +4266,12 @@
     "name": "Sucessão Ecológica",
     "description": "Tempo ecológico como processo direcional. Comunidades pioneiras (líquens, gramíneas) modificam ambiente, possibilitam espécies subsequentes. Não é teleológico - é contingente. Clímax não é estabilidade permanente - é equilíbrio dinâmico sujeito a perturbações. Anna Tsing: ruínas capitalistas como landscapes de sucessão. Regeneração trabalha com sucessão, não contra.",
     "connections": [
-      "tempo",
+      "biodiversidade",
+      "ecologia",
+      "natureza",
       "processo",
       "regeneracao",
-      "biodiversidade",
-      "natureza",
-      "ecologia"
+      "tempo"
     ],
     "layer": "ecologica",
     "color": "0x66ff99"
@@ -4339,12 +4281,12 @@
     "name": "Mutualismo Ecológico",
     "description": "Interdependência como princípio ecológico fundante. Não é altruísmo - é co-constituição de nicho. Micorrizas (fungos-raízes), polinização, fixação de nitrogênio (rhizobium-leguminosas), líquens (alga-fungo). Lynn Margulis: simbiogênese - evolução por cooperação, não apenas competição. Kropotkin: ajuda mútua é fator evolutivo tão importante quanto competição. Mutualismo desafia individualismo metodológico.",
     "connections": [
-      "simbiose",
-      "micorriza",
-      "reciprocidade",
-      "processo",
       "biodiversidade",
-      "holobionte"
+      "holobionte",
+      "micorriza",
+      "processo",
+      "reciprocidade",
+      "simbiose"
     ],
     "layer": "ecologica",
     "color": "0x66ff99"

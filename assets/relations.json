@@ -4188,31 +4188,25 @@
     "description": "Filosofia Africana constitui Descolonização"
   },
   {
-    "from": "intra-ação",
+    "from": "intracao",
     "to": "intracao",
     "name": "forma-se por",
     "description": "Intra-ação compõe Intra-ação (Barad)"
   },
   {
-    "from": "intra-ação",
+    "from": "intracao",
     "to": "agencia",
     "name": "se organiza em",
     "description": "Intra-ação compõe Agência"
   },
   {
-    "from": "intra-ação",
+    "from": "intracao",
     "to": "performatividade",
     "name": "compõe-se com",
     "description": "Intra-ação compõe Performatividade"
   },
   {
-    "from": "intra-ação",
-    "to": "ontologia",
-    "name": "estrutura-se através de",
-    "description": "Intra-ação compõe Ontologia Relacional Universal"
-  },
-  {
-    "from": "intra-ação",
+    "from": "intracao",
     "to": "realismo agencial",
     "name": "agencia através de",
     "description": "Intra-ação compõe Realismo Agencial"
@@ -4504,12 +4498,6 @@
     "to": "intracao",
     "name": "agencia através de",
     "description": "Realismo Agencial compõe Intra-ação (Barad)"
-  },
-  {
-    "from": "realismo agencial",
-    "to": "intra-ação",
-    "name": "agencia através de",
-    "description": "Realismo Agencial compõe Intra-ação"
   },
   {
     "from": "realismo agencial",
@@ -5317,7 +5305,7 @@
   },
   {
     "from": "ciborgue",
-    "to": "hibridez",
+    "to": "hibridação",
     "name": "estrutura-se através de",
     "description": "Ciborgue compõe Hibridez"
   },
@@ -5790,25 +5778,25 @@
     "description": "Economia Ecológica disputa Sustentabilidade"
   },
   {
-    "from": "economia solidária",
+    "from": "economia-solidaria",
     "to": "cooperativa",
     "name": "implementa",
     "description": "Economia Solidária implementa Cooperativas"
   },
   {
-    "from": "economia solidária",
+    "from": "economia-solidaria",
     "to": "moedascomunitarias",
     "name": "implementa",
     "description": "Economia Solidária implementa Moeda Comunitária"
   },
   {
-    "from": "economia solidária",
+    "from": "economia-solidaria",
     "to": "commons",
     "name": "efetiva",
     "description": "Economia Solidária efetiva Commons"
   },
   {
-    "from": "economia solidária",
+    "from": "economia-solidaria",
     "to": "reproducaosocial",
     "name": "efetiva",
     "description": "Economia Solidária efetiva Reprodução Social"
@@ -6144,25 +6132,25 @@
     "description": "Heidegger entrelaça-se com Filosofia"
   },
   {
-    "from": "hibridez",
+    "from": "hibridação",
     "to": "ciborgue",
     "name": "se organiza em",
     "description": "Hibridez compõe Ciborgue"
   },
   {
-    "from": "hibridez",
+    "from": "hibridação",
     "to": "multiespécies",
     "name": "articula-se com",
     "description": "Hibridez articula-se com Multiespécies"
   },
   {
-    "from": "hibridez",
+    "from": "hibridação",
     "to": "holobionte",
     "name": "simbiosa com",
     "description": "Hibridez compõe Holobionte"
   },
   {
-    "from": "hibridez",
+    "from": "hibridação",
     "to": "multiplicidade",
     "name": "constrói-se com",
     "description": "Hibridez compõe Multiplicidade Sem Fusão"
@@ -6498,28 +6486,22 @@
     "description": "Lugar entrelaça-se com Conhecimento"
   },
   {
-    "from": "madhyamika",
+    "from": "madhyamaka",
     "to": "madhyamaka",
     "name": "propicia",
     "description": "Madhyamika possibilita Madhyamaka"
   },
   {
-    "from": "madhyamika",
+    "from": "madhyamaka",
     "to": "sunyata",
     "name": "viabiliza",
     "description": "Madhyamika possibilita Śūnyatā (Vacuidade)"
   },
   {
-    "from": "madhyamika",
+    "from": "madhyamaka",
     "to": "budismo",
     "name": "torna possível",
     "description": "Madhyamika possibilita Budismo"
-  },
-  {
-    "from": "madhyamika",
-    "to": "ontologia",
-    "name": "emerge em",
-    "description": "Madhyamika emerge em Ontologia Relacional Universal"
   },
   {
     "from": "matemática",
@@ -6709,7 +6691,7 @@
   },
   {
     "from": "País Basco",
-    "to": "economia solidária",
+    "to": "economia-solidaria",
     "name": "implementa",
     "description": "País Basco implementa Economia Solidária"
   },
@@ -6942,25 +6924,25 @@
     "description": "Reconhecimento compõe Intersubjetividade"
   },
   {
-    "from": "recursão",
+    "from": "recursao",
     "to": "recursao",
     "name": "torna possível",
     "description": "Recursão possibilita Recursão Sem Fundamento"
   },
   {
-    "from": "recursão",
+    "from": "recursao",
     "to": "anti-fundacionalismo",
     "name": "faculta",
     "description": "Recursão possibilita Anti-Fundacionalismo"
   },
   {
-    "from": "recursão",
+    "from": "recursao",
     "to": "loop",
     "name": "propicia",
     "description": "Recursão possibilita Loop"
   },
   {
-    "from": "recursão",
+    "from": "recursao",
     "to": "processo",
     "name": "emerge em",
     "description": "Recursão emerge em Processo (Whitehead)"
@@ -7608,22 +7590,10 @@
     "description": "Actantes compõem redes de ator-rede"
   },
   {
-    "from": "ator-rede",
-    "to": "redes",
-    "name": "constitui",
-    "description": "Teoria ator-rede constitui ontologia de redes"
-  },
-  {
     "from": "agencia",
     "to": "afeto",
     "name": "modula-se por",
     "description": "Agência se modula por afetos spinozistas"
-  },
-  {
-    "from": "afeto",
-    "to": "composicao",
-    "name": "potencializa",
-    "description": "Afeto possibilita composições potencializadoras"
   },
   {
     "from": "sujeito",
@@ -7744,12 +7714,6 @@
     "to": "cosmopolitica",
     "name": "pratica",
     "description": "Pensamento indígena pratica cosmopolítica"
-  },
-  {
-    "from": "placethought",
-    "to": "terra",
-    "name": "pensa através de",
-    "description": "Place-thought pensa através da terra"
   },
   {
     "from": "terra",
@@ -8077,12 +8041,12 @@
   },
   {
     "from": "cooperativa",
-    "to": "economia solidária",
+    "to": "economia-solidaria",
     "name": "agencia através de",
     "description": "Cooperativas compõem economia solidária"
   },
   {
-    "from": "economia solidária",
+    "from": "economia-solidaria",
     "to": "reciprocidade",
     "name": "pratica",
     "description": "Economia solidária pratica reciprocidade"
@@ -8334,12 +8298,6 @@
     "description": "Hauntologia pensa espectralidade do tempo"
   },
   {
-    "from": "hauntologia",
-    "to": "tempo",
-    "name": "desconjunta",
-    "description": "Hauntologia desconjunta o tempo"
-  },
-  {
     "from": "futuridadequeer",
     "to": "normatividade",
     "name": "resiste a",
@@ -8479,12 +8437,12 @@
   },
   {
     "from": "ciborgue",
-    "to": "hibridez",
+    "to": "hibridação",
     "name": "encarna",
     "description": "Ciborgue encarna hibridez humano-máquina"
   },
   {
-    "from": "hibridez",
+    "from": "hibridação",
     "to": "identidade",
     "name": "dissolve",
     "description": "Hibridez dissolve identidades puras"
@@ -9550,12 +9508,6 @@
     "to": "ideologia",
     "name": "efetiva",
     "description": "Misrecognition efetiva ideologia através de internalização"
-  },
-  {
-    "from": "objetividade",
-    "to": "conhecimento",
-    "name": "problematiza",
-    "description": "Objetividade problemática - conhecimento é sempre situado"
   },
   {
     "from": "objetividade",
