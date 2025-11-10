@@ -887,6 +887,7 @@ function updateLineColors() {
 
 /**
  * Aplica forças de mola nas arestas para manter distâncias min/max
+ * PONDERADO: Considera o peso dos nós (número de conexões) para inércia
  */
 function applyEdgeSpringForces(SPHERE_RADIUS) {
     const springForces = new Map(); // Map<nodeId, Vector3>
@@ -919,12 +920,22 @@ function applyEdgeSpringForces(SPHERE_RADIUS) {
             if (force !== 0) {
                 direction.normalize().multiplyScalar(force);
                 
-                // Aplicar força igual e oposta aos dois nós (Lei de Newton)
+                // Pesos dos nós (número de conexões)
+                const sourceWeight = Math.max(1, sourceNode.userData.connections?.length || 1);
+                const targetWeight = Math.max(1, targetNode.userData.connections?.length || 1);
+                
+                // Distribuir força inversamente proporcional ao peso (maior peso = menor movimento)
+                // Simula inércia: nós com mais conexões são mais "pesados" e movem menos
+                const totalWeight = sourceWeight + targetWeight;
+                const sourceRatio = targetWeight / totalWeight; // Nó target mais pesado = source move mais
+                const targetRatio = sourceWeight / totalWeight; // Nó source mais pesado = target move mais
+                
+                // Aplicar força proporcional aos pesos (Lei de Newton: F = ma, logo a = F/m)
                 const sourceForce = springForces.get(sourceNode.userData.id);
                 const targetForce = springForces.get(targetNode.userData.id);
                 
-                if (sourceForce) sourceForce.add(direction);
-                if (targetForce) targetForce.sub(direction);
+                if (sourceForce) sourceForce.add(direction.clone().multiplyScalar(sourceRatio));
+                if (targetForce) targetForce.sub(direction.clone().multiplyScalar(targetRatio));
             }
         }
     });
@@ -944,10 +955,14 @@ function applyEdgeSpringForces(SPHERE_RADIUS) {
 /**
  * Calcula força de repulsão entre nós (antigravidade)
  * OTIMIZADO: Verifica apenas vizinhos próximos usando grid espacial
+ * PONDERADO: Considera o peso do nó (número de conexões) - nós mais conectados repelem mais
  */
 function applyRepulsionForces(node, allNodes, SPHERE_RADIUS) {
     const repulsionForce = new THREE.Vector3(0, 0, 0);
     let repulsionCount = 0;
+    
+    // Peso do nó atual (número de conexões)
+    const nodeWeight = (node.userData.connections?.length || 1);
     
     // Otimização: limitar número de verificações
     for (let i = 0; i < allNodes.length && repulsionCount < 5; i++) {
@@ -961,8 +976,14 @@ function applyRepulsionForces(node, allNodes, SPHERE_RADIUS) {
             const direction = new THREE.Vector3().subVectors(node.position, otherNode.position);
             direction.normalize();
             
+            // Peso do outro nó (número de conexões)
+            const otherWeight = (otherNode.userData.connections?.length || 1);
+            
             // Força inversamente proporcional à distância
-            const strength = REPULSION_FORCE * (1 - distance / REPULSION_DISTANCE);
+            // Multiplicada pela raiz quadrada da soma dos pesos (simula massa em física)
+            // Usa sqrt para evitar que hubs dominem excessivamente
+            const combinedWeight = Math.sqrt(nodeWeight + otherWeight);
+            const strength = REPULSION_FORCE * (1 - distance / REPULSION_DISTANCE) * combinedWeight * 0.3;
             direction.multiplyScalar(strength);
             
             repulsionForce.add(direction);
