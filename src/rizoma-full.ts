@@ -187,15 +187,10 @@ async function loadRelations() {
 function centerOnMostConnectedNode() {
     if (nodes.length === 0 || concepts.length === 0) return;
     
-    // Encontrar o conceito "processo" especificamente
-    let targetConcept = concepts.find(c => c.id === 'processo');
-    
-    // Se não encontrar "processo", usar o com mais conexões
-    if (!targetConcept) {
-        targetConcept = concepts.reduce((prev, current) => 
-            (current.connections.length > prev.connections.length) ? current : prev
-        );
-    }
+    // Encontrar o conceito com mais conexões
+    const targetConcept = concepts.reduce((prev, current) => 
+        (current.connections.length > prev.connections.length) ? current : prev
+    );
     
     // Encontrar o nó correspondente
     const targetNode = nodes.find(n => n.userData.id === targetConcept.id);
@@ -211,7 +206,7 @@ function centerOnMostConnectedNode() {
         const direction = nodePos.clone().normalize();
         
         if (cameraMode === 'outside') {
-            // Câmera olha de fora para o nó
+            // Câmera olha de fora para o nó no centro da tela
             camera.position.copy(direction.multiplyScalar(cameraDistance));
             camera.lookAt(nodePos);
         } else {
@@ -222,7 +217,7 @@ function centerOnMostConnectedNode() {
         
         cameraLookAtTarget = nodePos;
         
-        console.log(`📍 Câmera apontada para "${targetConcept.name}" (${targetConcept.connections.length} conexões)`);
+        console.log(`📍 Câmera centralizada em "${targetConcept.name}" (${targetConcept.connections.length} conexões)`);
     }
 }
 

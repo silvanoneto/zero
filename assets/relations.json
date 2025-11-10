@@ -9280,5 +9280,473 @@
     "to": "vazio",
     "name": "aproxima-se do",
     "description": "Indiscernibilidade aproxima-se do vazio como campo indiferenciado"
+  },
+  {
+    "from": "virtualidade",
+    "to": "potencial",
+    "name": "é",
+    "description": "Virtualidade é potencial não-atualizado mas real (Deleuze)"
+  },
+  {
+    "from": "virtualidade",
+    "to": "devir",
+    "name": "abre",
+    "description": "Virtualidade abre campo de devires possíveis"
+  },
+  {
+    "from": "virtualidade",
+    "to": "vazio",
+    "name": "habita",
+    "description": "Virtualidade habita vazio como plenitude de possíveis"
+  },
+  {
+    "from": "virtualidade",
+    "to": "bifurcacao",
+    "name": "se atualiza em",
+    "description": "Virtualidade se atualiza em bifurcações do processo"
+  },
+  {
+    "from": "campo",
+    "to": "ontologia",
+    "name": "fundamenta",
+    "description": "Campo fundamenta ontologia relacional na física moderna"
+  },
+  {
+    "from": "campo",
+    "to": "emaranhamento",
+    "name": "permite",
+    "description": "Campo quântico permite emaranhamento não-local"
+  },
+  {
+    "from": "campo",
+    "to": "vazio",
+    "name": "emerge de",
+    "description": "Campo emerge de flutuações do vazio quântico"
+  },
+  {
+    "from": "conjunto vazio",
+    "to": "vazio",
+    "name": "formaliza",
+    "description": "Conjunto vazio formaliza matematicamente o vazio fundacional"
+  },
+  {
+    "from": "conjunto vazio",
+    "to": "recursao",
+    "name": "gera",
+    "description": "Conjunto vazio gera números através de recursão (Cantor)"
+  },
+  {
+    "from": "conjunto vazio",
+    "to": "fundamento",
+    "name": "é",
+    "description": "Conjunto vazio é fundamento de toda matemática"
+  },
+  {
+    "from": "caos",
+    "to": "bifurcacao",
+    "name": "produz",
+    "description": "Caos produz bifurcações em sistemas longe do equilíbrio"
+  },
+  {
+    "from": "caos",
+    "to": "tipping-point",
+    "name": "desencadeia",
+    "description": "Caos pode desencadear tipping points sistêmicos"
+  },
+  {
+    "from": "caos",
+    "to": "emergencia",
+    "name": "possibilita",
+    "description": "Caos possibilita emergência de novas ordens"
+  },
+  {
+    "from": "caos",
+    "to": "potencial",
+    "name": "contém",
+    "description": "Caos contém potencial de múltiplas atualizações"
+  },
+  {
+    "from": "lugar",
+    "to": "terra",
+    "name": "se enraíza na",
+    "description": "Lugar se enraíza na Terra como materialidade situada"
+  },
+  {
+    "from": "lugar",
+    "to": "groundednormativity",
+    "name": "fundamenta",
+    "description": "Lugar fundamenta grounded normativity - ética territorial"
+  },
+  {
+    "from": "lugar",
+    "to": "pensamento-lugar",
+    "name": "pensa através de",
+    "description": "Lugar não é contentor mas pensa através de relações (pensamento-lugar)"
+  },
+  {
+    "from": "lugar",
+    "to": "heterotopia",
+    "name": "pode ser",
+    "description": "Lugar pode se tornar heterotopia - espaço outro contestador"
+  },
+  {
+    "from": "loop",
+    "to": "recursao",
+    "name": "opera via",
+    "description": "Loop opera via recursão - retorno que transforma"
+  },
+  {
+    "from": "loop",
+    "to": "feedback",
+    "name": "cria",
+    "description": "Loop cria feedback que amplifica ou estabiliza processos"
+  },
+  {
+    "from": "loop",
+    "to": "autopoiese",
+    "name": "sustenta",
+    "description": "Loop sustenta autopoiese - auto-produção circular"
+  },
+  {
+    "from": "Bell",
+    "to": "ontologia",
+    "name": "revoluciona",
+    "description": "Teorema de Bell revoluciona ontologia ao provar não-localidade"
+  },
+  {
+    "from": "Bell",
+    "to": "realismo",
+    "name": "problematiza",
+    "description": "Bell problematiza realismo local de Einstein"
+  },
+  {
+    "from": "Bell",
+    "to": "separabilidade",
+    "name": "refuta",
+    "description": "Bell refuta separabilidade de sistemas entrelaçados"
+  },
+  {
+    "from": "circunscrição",
+    "to": "limite",
+    "name": "estabelece",
+    "description": "Circunscrição estabelece limites políticos e territoriais"
+  },
+  {
+    "from": "circunscrição",
+    "to": "fronteira",
+    "name": "traça",
+    "description": "Circunscrição traça fronteiras de inclusão/exclusão"
+  },
+  {
+    "from": "circunscrição",
+    "to": "poder",
+    "name": "exerce",
+    "description": "Circunscrição exerce poder ao definir quem pertence"
+  },
+  {
+    "from": "cooptação",
+    "to": "poder",
+    "name": "neutraliza via",
+    "description": "Cooptação neutraliza resistência absorvendo-a no poder"
+  },
+  {
+    "from": "cooptação",
+    "to": "resistencia",
+    "name": "captura",
+    "description": "Cooptação captura movimentos de resistência"
+  },
+  {
+    "from": "cooptação",
+    "to": "capitalismo",
+    "name": "opera em",
+    "description": "Cooptação opera no capitalismo tardio (crítica vira marketing)"
+  },
+  {
+    "from": "crédito mútuo",
+    "to": "commons",
+    "name": "financia",
+    "description": "Crédito mútuo financia commons sem intermediação bancária"
+  },
+  {
+    "from": "crédito mútuo",
+    "to": "reciprocidade",
+    "name": "pratica",
+    "description": "Crédito mútuo pratica reciprocidade econômica direta"
+  },
+  {
+    "from": "crédito mútuo",
+    "to": "cooperativas",
+    "name": "sustenta",
+    "description": "Crédito mútuo sustenta cooperativas de produção"
+  },
+  {
+    "from": "crimes de guerra",
+    "to": "necropolítica",
+    "name": "exemplificam",
+    "description": "Crimes de guerra exemplificam necropolítica - poder de decidir quem morre"
+  },
+  {
+    "from": "crimes de guerra",
+    "to": "terror",
+    "name": "utilizam",
+    "description": "Crimes de guerra utilizam terror como tática política"
+  },
+  {
+    "from": "crimes de guerra",
+    "to": "tribunais",
+    "name": "são julgados por",
+    "description": "Crimes de guerra são julgados por tribunais internacionais"
+  },
+  {
+    "from": "determinismo",
+    "to": "indeterminação",
+    "name": "contrasta com",
+    "description": "Determinismo contrasta com indeterminação quântica"
+  },
+  {
+    "from": "determinismo",
+    "to": "livre-arbítrio",
+    "name": "ameaça",
+    "description": "Determinismo ameaça concepções clássicas de livre-arbítrio"
+  },
+  {
+    "from": "determinismo",
+    "to": "bifurcacao",
+    "name": "se rompe em",
+    "description": "Determinismo se rompe em bifurcações caóticas"
+  },
+  {
+    "from": "física",
+    "to": "ontologia",
+    "name": "informa",
+    "description": "Física quântica informa ontologia relacional contemporânea"
+  },
+  {
+    "from": "física",
+    "to": "campo",
+    "name": "estuda",
+    "description": "Física estuda campos como entidades relacionais fundamentais"
+  },
+  {
+    "from": "física",
+    "to": "emaranhamento",
+    "name": "descobre",
+    "description": "Física descobre emaranhamento como fenômeno não-local"
+  },
+  {
+    "from": "misrecognition",
+    "to": "violencia-simbolica",
+    "name": "opera via",
+    "description": "Misrecognition opera via violência simbólica (Bourdieu)"
+  },
+  {
+    "from": "misrecognition",
+    "to": "poder",
+    "name": "naturaliza",
+    "description": "Misrecognition naturaliza relações de poder como legítimas"
+  },
+  {
+    "from": "misrecognition",
+    "to": "ideologia",
+    "name": "efetiva",
+    "description": "Misrecognition efetiva ideologia através de internalização"
+  },
+  {
+    "from": "objetividade",
+    "to": "conhecimento",
+    "name": "problematiza",
+    "description": "Objetividade problemática - conhecimento é sempre situado"
+  },
+  {
+    "from": "objetividade",
+    "to": "perspectivismo",
+    "name": "contrasta com",
+    "description": "Objetividade contrasta com perspectivismo - múltiplas verdades"
+  },
+  {
+    "from": "objetividade",
+    "to": "situado",
+    "name": "se reconstitui como",
+    "description": "Objetividade se reconstitui como conhecimento situado (Haraway)"
+  },
+  {
+    "from": "País Basco",
+    "to": "cooperativas",
+    "name": "exemplifica em",
+    "description": "País Basco exemplifica cooperativismo em Mondragón"
+  },
+  {
+    "from": "País Basco",
+    "to": "autonomia",
+    "name": "busca",
+    "description": "País Basco busca autonomia política e cultural"
+  },
+  {
+    "from": "País Basco",
+    "to": "pratica",
+    "name": "experimenta",
+    "description": "País Basco experimenta práticas de economia solidária"
+  },
+  {
+    "from": "programação",
+    "to": "software livre",
+    "name": "cria",
+    "description": "Programação cria software livre como commons digital"
+  },
+  {
+    "from": "programação",
+    "to": "protocolos abertos",
+    "name": "implementa",
+    "description": "Programação implementa protocolos abertos para interoperabilidade"
+  },
+  {
+    "from": "programação",
+    "to": "criptografia",
+    "name": "utiliza",
+    "description": "Programação utiliza criptografia para privacidade e segurança"
+  },
+  {
+    "from": "radiação",
+    "to": "vazio",
+    "name": "emerge do",
+    "description": "Radiação Hawking emerge do vazio quântico"
+  },
+  {
+    "from": "radiação",
+    "to": "campo",
+    "name": "propaga-se via",
+    "description": "Radiação propaga-se via campo eletromagnético"
+  },
+  {
+    "from": "radiação",
+    "to": "emaranhamento",
+    "name": "pode gerar",
+    "description": "Radiação pode gerar pares entrelaçados de partículas"
+  },
+  {
+    "from": "realismo",
+    "to": "ontologia",
+    "name": "pressupõe",
+    "description": "Realismo pressupõe ontologia de entidades independentes"
+  },
+  {
+    "from": "realismo",
+    "to": "Bell",
+    "name": "é desafiado por",
+    "description": "Realismo local é desafiado pelo Teorema de Bell"
+  },
+  {
+    "from": "realismo",
+    "to": "intracao",
+    "name": "se reformula via",
+    "description": "Realismo se reformula via intra-ação (realismo agencial)"
+  },
+  {
+    "from": "relatividade conceitual",
+    "to": "perspectivismo",
+    "name": "ressoa com",
+    "description": "Relatividade conceitual ressoa com perspectivismo ameríndio"
+  },
+  {
+    "from": "relatividade conceitual",
+    "to": "equivocacao",
+    "name": "opera via",
+    "description": "Relatividade conceitual opera via equivocação controlada"
+  },
+  {
+    "from": "relatividade conceitual",
+    "to": "traducao-cosmopolitica",
+    "name": "exige",
+    "description": "Relatividade conceitual exige tradução cosmopolítica"
+  },
+  {
+    "from": "resiliência",
+    "to": "adaptação",
+    "name": "permite",
+    "description": "Resiliência permite adaptação a perturbações ecológicas"
+  },
+  {
+    "from": "resiliência",
+    "to": "threshold",
+    "name": "opera antes de",
+    "description": "Resiliência opera antes de threshold de colapso"
+  },
+  {
+    "from": "resiliência",
+    "to": "regeneração",
+    "name": "possibilita",
+    "description": "Resiliência possibilita regeneração após distúrbios"
+  },
+  {
+    "from": "retrocausalidade",
+    "to": "tempo",
+    "name": "inverte",
+    "description": "Retrocausalidade inverte flecha temporal clássica"
+  },
+  {
+    "from": "retrocausalidade",
+    "to": "indeterminação",
+    "name": "deriva de",
+    "description": "Retrocausalidade deriva de indeterminação quântica"
+  },
+  {
+    "from": "retrocausalidade",
+    "to": "hauntologia",
+    "name": "ressoa com",
+    "description": "Retrocausalidade ressoa com hauntologia - futuro afeta passado"
+  },
+  {
+    "from": "sistemas",
+    "to": "complexidade",
+    "name": "estudados pela",
+    "description": "Sistemas complexos estudados por teoria da complexidade"
+  },
+  {
+    "from": "sistemas",
+    "to": "emergencia",
+    "name": "exibem",
+    "description": "Sistemas exibem emergência de propriedades não-redutíveis"
+  },
+  {
+    "from": "sistemas",
+    "to": "autopoiese",
+    "name": "podem ser",
+    "description": "Sistemas podem ser autopoiéticos - auto-produtores"
+  },
+  {
+    "from": "switching",
+    "to": "bifurcacao",
+    "name": "opera como",
+    "description": "Switching opera como bifurcação entre estados discretos"
+  },
+  {
+    "from": "switching",
+    "to": "threshold",
+    "name": "atravessa",
+    "description": "Switching atravessa thresholds de mudança de estado"
+  },
+  {
+    "from": "switching",
+    "to": "decisão",
+    "name": "requer",
+    "description": "Switching requer decisão entre alternativas"
+  },
+  {
+    "from": "terror",
+    "to": "necropolítica",
+    "name": "instrumentaliza",
+    "description": "Terror instrumentaliza morte para controle populacional"
+  },
+  {
+    "from": "terror",
+    "to": "medo",
+    "name": "produz",
+    "description": "Terror produz medo generalizado como tática política"
+  },
+  {
+    "from": "terror",
+    "to": "totalitarismo",
+    "name": "caracteriza",
+    "description": "Terror caracteriza regimes totalitários (Arendt)"
   }
 ]
