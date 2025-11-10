@@ -476,16 +476,6 @@ Tecnologias digitais não são ferramentas neutras nem forças deterministas. S�
 
 5. Governança híbrida presencial-digital é necessária reconhecendo trade-offs de cada modo
 
-# CRIO: Quando Achar e Criar São o Mesmo Movimento - VERSÃO EXPANDIDA
-
-> "Não encontramos o que já estava ali. Produzimos o que emerge no gesto de procurar. Toda descoberta é invenção; toda arqueologia é arquitetura."
-
----
-
-## ADIÇÕES CRÍTICAS A PARTIR DA ANÁLISE
-
-Esta versão expandida desenvolve três tensões produtivas identificadas como subdesenvolvidas, mantendo a estrutura original enquanto adiciona instrumentos práticos específicos solicitados pela análise crítica.
-
 ---
 
 ## CRIO 11: UNIVERSALIZAÇÃO E PRIVILÉGIO MATERIAL
