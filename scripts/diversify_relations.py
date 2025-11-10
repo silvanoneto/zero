@@ -54,13 +54,13 @@ def diversify_emancipa(relation, index):
     if any(word in to_id for word in ['autonomia', 'commons', 'decrescimento', 'cooperativas']):
         return 'se transforma via'
     
-    # Distribuição circular para máxima diversidade
+    # MUDANÇA: Distribuição circular para TODOS os casos restantes
     options = [
-        'emancipa-se por meio de',
         'liberta-se por',
         'autonomiza-se via',
         'se desprende através de',
-        'transcende por meio de'
+        'transcende por meio de',
+        'se emancipa em'
     ]
     return options[index % len(options)]
 
@@ -102,13 +102,13 @@ def diversify_compoe(relation, index):
     if any(word in from_id for word in ['devir', 'processo', 'ocasioes']):
         return 'desdobra-se em'
     
-    # Distribuição circular para máxima diversidade
+    # MUDANÇA: Distribuição circular para TODOS os casos restantes
     options = [
-        'co-compõe',
         'compõe-se com',
         'estrutura-se através de',
         'constrói-se com',
-        'forma-se por'
+        'forma-se por',
+        'se organiza em'
     ]
     return options[index % len(options)]
 
@@ -154,17 +154,17 @@ def main():
     for i, rel in enumerate(relations):
         original = rel['name']
         
-        if rel['name'] == 'emancipa-se via':
+        if rel['name'] in ['emancipa-se via', 'emancipa-se por meio de']:
             rel['name'] = diversify_emancipa(rel, i)
             if rel['name'] != original:
                 changes['emancipa-se via'] += 1
         
-        elif rel['name'] == 'compõe':
+        elif rel['name'] in ['compõe', 'co-compõe']:
             rel['name'] = diversify_compoe(rel, i)
             if rel['name'] != original:
                 changes['compõe'] += 1
         
-        elif rel['name'] == 'possibilita':
+        elif rel['name'] in ['possibilita', 'viabiliza']:
             rel['name'] = diversify_possibilita(rel, i)
             if rel['name'] != original:
                 changes['possibilita'] += 1
