@@ -1983,5 +1983,55 @@
       "emergência",
       "limiar crítico"
     ]
+  },
+  {
+    "id": "hayles-1999",
+    "categoria": "ontológica",
+    "autor": "Hayles, N. Katherine",
+    "ano": 1999,
+    "titulo": "How We Became Posthuman: Virtual Bodies in Cybernetics, Literature, and Informatics",
+    "editora": "University of Chicago Press",
+    "relevancia": "Crítica ao sujeito liberal humanista. Humano sempre foi pós-humano - assembleia de informação e materialidade. Cibernética revela constituição relacional do sujeito.",
+    "conceitos": [
+      "sujeito",
+      "cartesianismo",
+      "informacao",
+      "assembleia",
+      "feedback",
+      "autopoiese"
+    ]
+  },
+  {
+    "id": "foucault-1966",
+    "categoria": "epistemica",
+    "autor": "Foucault, Michel",
+    "ano": 1966,
+    "titulo": "Les Mots et les Choses",
+    "editora": "Gallimard",
+    "relevancia": "A morte do homem: sujeito moderno é construção epistêmica recente (séc. XIX). 'O homem é uma invenção cuja recente data a arqueologia de nosso pensamento mostra facilmente. E talvez o fim próximo.'",
+    "conceitos": [
+      "sujeito",
+      "cartesianismo",
+      "episteme",
+      "arqueologia do saber",
+      "subjetivação"
+    ]
+  },
+  {
+    "id": "simondon-1958",
+    "categoria": "ontológica",
+    "autor": "Simondon, Gilbert",
+    "ano": 1958,
+    "titulo": "L'individuation à la lumière des notions de forme et d'information",
+    "editora": "Jérôme Millon",
+    "relevancia": "Indivíduo não é dado, mas resultado de individuação. Pré-individual (campo metaestável) precede e excede indivíduo. Transindividual dissolve dicotomia indivíduo/coletivo.",
+    "conceitos": [
+      "transindividual",
+      "sujeito",
+      "individuação",
+      "metaestabilidade",
+      "pré-individual",
+      "informacao"
+    ]
   }
 ]

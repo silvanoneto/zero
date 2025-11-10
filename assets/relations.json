@@ -14,7 +14,7 @@
   {
     "from": "vazio",
     "to": "multiplicidade",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "O vazio como campo de possibilidades gera multiplicidade"
   },
   {
@@ -344,7 +344,7 @@
   {
     "from": "afeto",
     "to": "composicao",
-    "name": "possibilita",
+    "name": "potencializa",
     "description": "Afeto possibilita composições potencializadoras"
   },
   {
@@ -422,7 +422,7 @@
   {
     "from": "sunyata",
     "to": "anatman",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Śūnyatā (Vacuidade) possibilita Anātman (Não-Eu)"
   },
   {
@@ -470,7 +470,7 @@
   {
     "from": "ontologia",
     "to": "intracao",
-    "name": "compõe",
+    "name": "fundamenta-se em",
     "description": "Ontologia Relacional Universal compõe Intra-ação (Barad)"
   },
   {
@@ -482,13 +482,13 @@
   {
     "from": "ontologia",
     "to": "multiplicidade",
-    "name": "compõe",
+    "name": "fundamenta-se em",
     "description": "Ontologia Relacional Universal compõe Multiplicidade Sem Fusão"
   },
   {
     "from": "multiplicidade",
     "to": "holobionte",
-    "name": "compõe",
+    "name": "simbiosa com",
     "description": "Multiplicidade Sem Fusão compõe Holobionte"
   },
   {
@@ -518,13 +518,13 @@
   {
     "from": "processo",
     "to": "intracao",
-    "name": "compõe",
+    "name": "fundamenta-se em",
     "description": "Processo (Whitehead) compõe Intra-ação (Barad)"
   },
   {
     "from": "processo",
     "to": "holobionte",
-    "name": "compõe",
+    "name": "fundamenta-se em",
     "description": "Processo (Whitehead) compõe Holobionte"
   },
   {
@@ -548,7 +548,7 @@
   {
     "from": "ocasioes",
     "to": "devir",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Ocasiões de Experiência compõe Devir (Deleuze)"
   },
   {
@@ -560,7 +560,7 @@
   {
     "from": "ocasioes",
     "to": "intracao",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Ocasiões de Experiência compõe Intra-ação (Barad)"
   },
   {
@@ -584,7 +584,7 @@
   {
     "from": "devir",
     "to": "composicao",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Devir (Deleuze) compõe Composição de Corpos"
   },
   {
@@ -602,7 +602,7 @@
   {
     "from": "devir",
     "to": "corposemorgaos",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Devir (Deleuze) compõe Corpo sem Órgãos"
   },
   {
@@ -776,7 +776,7 @@
   {
     "from": "evento",
     "to": "corposemorgaos",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Evento (Badiou) emancipa-se via Corpo sem Órgãos"
   },
   {
@@ -794,7 +794,7 @@
   {
     "from": "vulnerabilidade",
     "to": "afeto",
-    "name": "emancipa-se via",
+    "name": "reconstitui-se por",
     "description": "Vulnerabilidade emancipa-se via Afeto Spinozista"
   },
   {
@@ -812,13 +812,13 @@
   {
     "from": "vulnerabilidade",
     "to": "reproducaosocial",
-    "name": "emancipa-se via",
+    "name": "reconstitui-se por",
     "description": "Vulnerabilidade emancipa-se via Reprodução Social"
   },
   {
     "from": "vulnerabilidade",
     "to": "necropolitica",
-    "name": "emancipa-se via",
+    "name": "reconstitui-se por",
     "description": "Vulnerabilidade emancipa-se via Necropolítica"
   },
   {
@@ -830,13 +830,13 @@
   {
     "from": "precariedade",
     "to": "limite",
-    "name": "emancipa-se via",
+    "name": "reconstitui-se por",
     "description": "Precariedade emancipa-se via Limite"
   },
   {
     "from": "precariedade",
     "to": "normatividade",
-    "name": "emancipa-se via",
+    "name": "reconstitui-se por",
     "description": "Precariedade emancipa-se via Normatividade Relacional"
   },
   {
@@ -848,13 +848,13 @@
   {
     "from": "precariedade",
     "to": "despossessao",
-    "name": "emancipa-se via",
+    "name": "reconstitui-se por",
     "description": "Precariedade emancipa-se via Despossessão"
   },
   {
     "from": "normatividade",
     "to": "limite",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Normatividade Relacional emancipa-se via Limite"
   },
   {
@@ -896,7 +896,7 @@
   {
     "from": "ubuntu",
     "to": "cuidado",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Ubuntu compõe Ética do Cuidado"
   },
   {
@@ -1016,7 +1016,7 @@
   {
     "from": "whanaungatanga",
     "to": "cuidado",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Whanaungatanga compõe Ética do Cuidado"
   },
   {
@@ -1028,7 +1028,7 @@
   {
     "from": "reciprocidade",
     "to": "decrescimento",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Reciprocidade emancipa-se via Decrescimento"
   },
   {
@@ -1052,7 +1052,7 @@
   {
     "from": "commons",
     "to": "decrescimento",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Commons possibilitam decrescimento"
   },
   {
@@ -1106,7 +1106,7 @@
   {
     "from": "decrescimento",
     "to": "acumulacaoprimitiva",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Decrescimento emancipa-se via Acumulação Primitiva"
   },
   {
@@ -1472,7 +1472,7 @@
   {
     "from": "protocoloaberto",
     "to": "reciprocidade",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Protocolos possibilitam reciprocidade"
   },
   {
@@ -1490,7 +1490,7 @@
   {
     "from": "criptografia",
     "to": "tecnologiaconvivial",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Criptografia possibilita convivialidade"
   },
   {
@@ -1532,7 +1532,7 @@
   {
     "from": "arterelacional",
     "to": "composicao",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Arte compõe corpos relacionais"
   },
   {
@@ -1640,7 +1640,7 @@
   {
     "from": "despossessao",
     "to": "commons",
-    "name": "emancipa-se via",
+    "name": "reconstitui-se por",
     "description": "Despossessão emancipa-se via Commons"
   },
   {
@@ -1736,25 +1736,25 @@
   {
     "from": "sunyata",
     "to": "vazio",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Śūnyatā (Vacuidade) possibilita Vazio Que Povoa"
   },
   {
     "from": "anatman",
     "to": "vazio",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Anātman (Não-Eu) possibilita Vazio Que Povoa"
   },
   {
     "from": "anatman",
     "to": "sunyata",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Anātman (Não-Eu) possibilita Śūnyatā (Vacuidade)"
   },
   {
     "from": "pratityasamutpada",
     "to": "sunyata",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Pratītyasamutpāda possibilita Śūnyatā (Vacuidade)"
   },
   {
@@ -1784,7 +1784,7 @@
   {
     "from": "multiplicidade",
     "to": "ontologia",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Multiplicidade Sem Fusão compõe Ontologia Relacional Universal"
   },
   {
@@ -1808,37 +1808,37 @@
   {
     "from": "processo",
     "to": "ontologia",
-    "name": "compõe",
+    "name": "fundamenta-se em",
     "description": "Processo (Whitehead) compõe Ontologia Relacional Universal"
   },
   {
     "from": "processo",
     "to": "multiplicidade",
-    "name": "compõe",
+    "name": "fundamenta-se em",
     "description": "Processo (Whitehead) compõe Multiplicidade Sem Fusão"
   },
   {
     "from": "ocasioes",
     "to": "processo",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Ocasiões de Experiência compõe Processo (Whitehead)"
   },
   {
     "from": "devir",
     "to": "processo",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Devir (Deleuze) compõe Processo (Whitehead)"
   },
   {
     "from": "devir",
     "to": "ocasioes",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Devir (Deleuze) compõe Ocasiões de Experiência"
   },
   {
     "from": "intracao",
     "to": "ontologia",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Intra-ação (Barad) compõe Ontologia Relacional Universal"
   },
   {
@@ -1850,7 +1850,7 @@
   {
     "from": "intracao",
     "to": "processo",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Intra-ação (Barad) compõe Processo (Whitehead)"
   },
   {
@@ -1904,7 +1904,7 @@
   {
     "from": "agencia",
     "to": "intracao",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Agência Distribuída emancipa-se via Intra-ação (Barad)"
   },
   {
@@ -1916,7 +1916,7 @@
   {
     "from": "sujeito",
     "to": "multiplicidade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Sujeito compõe Multiplicidade Sem Fusão"
   },
   {
@@ -1928,13 +1928,13 @@
   {
     "from": "performatividade",
     "to": "intracao",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Performatividade compõe Intra-ação (Barad)"
   },
   {
     "from": "performatividade",
     "to": "sujeito",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Performatividade compõe Sujeito"
   },
   {
@@ -1958,31 +1958,31 @@
   {
     "from": "evento",
     "to": "sujeito",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Evento (Badiou) emancipa-se via Sujeito"
   },
   {
     "from": "evento",
     "to": "performatividade",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Evento (Badiou) emancipa-se via Performatividade"
   },
   {
     "from": "evento",
     "to": "limite",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Evento (Badiou) emancipa-se via Limite"
   },
   {
     "from": "precariedade",
     "to": "evento",
-    "name": "emancipa-se via",
+    "name": "reconstitui-se por",
     "description": "Precariedade emancipa-se via Evento (Badiou)"
   },
   {
     "from": "normatividade",
     "to": "precariedade",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Normatividade Relacional emancipa-se via Precariedade"
   },
   {
@@ -2006,7 +2006,7 @@
   {
     "from": "indigena",
     "to": "conhecimento",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Pensamento Indígena compõe Conhecimento"
   },
   {
@@ -2024,7 +2024,7 @@
   {
     "from": "placethought",
     "to": "conhecimento",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Place-Thought compõe Conhecimento"
   },
   {
@@ -2054,7 +2054,7 @@
   {
     "from": "whanaungatanga",
     "to": "conhecimento",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Whanaungatanga compõe Conhecimento"
   },
   {
@@ -2066,7 +2066,7 @@
   {
     "from": "reciprocidade",
     "to": "vulnerabilidade",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Reciprocidade emancipa-se via Vulnerabilidade"
   },
   {
@@ -2096,7 +2096,7 @@
   {
     "from": "commons",
     "to": "reciprocidade",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Commons emancipa-se via Reciprocidade"
   },
   {
@@ -2114,13 +2114,13 @@
   {
     "from": "decrescimento",
     "to": "commons",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Decrescimento emancipa-se via Commons"
   },
   {
     "from": "decrescimento",
     "to": "reciprocidade",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Decrescimento emancipa-se via Reciprocidade"
   },
   {
@@ -2246,7 +2246,7 @@
   {
     "from": "composicao",
     "to": "afeto",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Composição de Corpos compõe Afeto Spinozista"
   },
   {
@@ -2294,13 +2294,13 @@
   {
     "from": "riz∅ma",
     "to": "multiplicidade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Rizoma compõe Multiplicidade Sem Fusão"
   },
   {
     "from": "riz∅ma",
     "to": "redesmiceliais",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Rizoma compõe Redes Micelianas"
   },
   {
@@ -2318,7 +2318,7 @@
   {
     "from": "riz∅ma",
     "to": "devir",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Rizoma compõe Devir (Deleuze)"
   },
   {
@@ -2372,13 +2372,13 @@
   {
     "from": "acumulacaoprimitiva",
     "to": "decrescimento",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Acumulação Primitiva emancipa-se via Decrescimento"
   },
   {
     "from": "despossessao",
     "to": "acumulacaoprimitiva",
-    "name": "emancipa-se via",
+    "name": "reconstitui-se por",
     "description": "Despossessão emancipa-se via Acumulação Primitiva"
   },
   {
@@ -2396,7 +2396,7 @@
   {
     "from": "despossessao",
     "to": "precariedade",
-    "name": "emancipa-se via",
+    "name": "reconstitui-se por",
     "description": "Despossessão emancipa-se via Precariedade"
   },
   {
@@ -2504,31 +2504,31 @@
   {
     "from": "corposemorgaos",
     "to": "devir",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Corpo sem Órgãos compõe Devir (Deleuze)"
   },
   {
     "from": "corposemorgaos",
     "to": "multiplicidade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Corpo sem Órgãos compõe Multiplicidade Sem Fusão"
   },
   {
     "from": "corposemorgaos",
     "to": "afeto",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Corpo sem Órgãos compõe Afeto Spinozista"
   },
   {
     "from": "corposemorgaos",
     "to": "composicao",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Corpo sem Órgãos compõe Composição de Corpos"
   },
   {
     "from": "corposemorgaos",
     "to": "riz∅ma",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Corpo sem Órgãos compõe Rizoma"
   },
   {
@@ -2540,31 +2540,31 @@
   {
     "from": "transindividual",
     "to": "multiplicidade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Transindividual compõe Multiplicidade Sem Fusão"
   },
   {
     "from": "transindividual",
     "to": "sujeito",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Transindividual compõe Sujeito"
   },
   {
     "from": "transindividual",
     "to": "ontologia",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Transindividual compõe Ontologia Relacional Universal"
   },
   {
     "from": "transindividual",
     "to": "processo",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Transindividual compõe Processo (Whitehead)"
   },
   {
     "from": "transindividual",
     "to": "intracao",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Transindividual compõe Intra-ação (Barad)"
   },
   {
@@ -2582,25 +2582,25 @@
   {
     "from": "reproducaosocial",
     "to": "vulnerabilidade",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Reprodução Social emancipa-se via Vulnerabilidade"
   },
   {
     "from": "reproducaosocial",
     "to": "despossessao",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Reprodução Social emancipa-se via Despossessão"
   },
   {
     "from": "reproducaosocial",
     "to": "acumulacaoprimitiva",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Reprodução Social emancipa-se via Acumulação Primitiva"
   },
   {
     "from": "reproducaosocial",
     "to": "reciprocidade",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Reprodução Social emancipa-se via Reciprocidade"
   },
   {
@@ -2612,13 +2612,13 @@
   {
     "from": "necropolitica",
     "to": "precariedade",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Necropolítica emancipa-se via Precariedade"
   },
   {
     "from": "necropolitica",
     "to": "vulnerabilidade",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Necropolítica emancipa-se via Vulnerabilidade"
   },
   {
@@ -2630,19 +2630,19 @@
   {
     "from": "necropolitica",
     "to": "acumulacaoprimitiva",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Necropolítica emancipa-se via Acumulação Primitiva"
   },
   {
     "from": "necropolitica",
     "to": "despossessao",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Necropolítica emancipa-se via Despossessão"
   },
   {
     "from": "necropolitica",
     "to": "evento",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Necropolítica emancipa-se via Evento (Badiou)"
   },
   {
@@ -2738,25 +2738,25 @@
   {
     "from": "física quântica",
     "to": "RQM",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Física Quântica possibilita RQM (Relational Quantum Mechanics)"
   },
   {
     "from": "física quântica",
     "to": "emaranhamento",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Física Quântica possibilita Emaranhamento Quântico"
   },
   {
     "from": "física quântica",
     "to": "não-localidade",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Física Quântica possibilita Não-Localidade"
   },
   {
     "from": "física quântica",
     "to": "fatos relativos",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Física Quântica possibilita Fatos Relativos"
   },
   {
@@ -2780,7 +2780,7 @@
   {
     "from": "governança",
     "to": "commons",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Governança emancipa-se via Commons"
   },
   {
@@ -2810,25 +2810,25 @@
   {
     "from": "governança",
     "to": "democracia",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Governança emancipa-se via Democracia"
   },
   {
     "from": "governança",
     "to": "descentralização",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Governança emancipa-se via Descentralização"
   },
   {
     "from": "RQM",
     "to": "física quântica",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "RQM (Relational Quantum Mechanics) possibilita Física Quântica"
   },
   {
     "from": "RQM",
     "to": "fatos relativos",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "RQM (Relational Quantum Mechanics) possibilita Fatos Relativos"
   },
   {
@@ -2840,13 +2840,13 @@
   {
     "from": "RQM",
     "to": "relacionalidade",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "RQM (Relational Quantum Mechanics) possibilita Relacionalismo"
   },
   {
     "from": "RQM",
     "to": "anti-fundacionalismo",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "RQM (Relational Quantum Mechanics) possibilita Anti-Fundacionalismo"
   },
   {
@@ -2858,13 +2858,13 @@
   {
     "from": "política",
     "to": "poder",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Política emancipa-se via Poder"
   },
   {
     "from": "política",
     "to": "democracia",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Política emancipa-se via Democracia"
   },
   {
@@ -2882,19 +2882,19 @@
   {
     "from": "política",
     "to": "evento",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Política emancipa-se via Evento (Badiou)"
   },
   {
     "from": "política",
     "to": "sujeito",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Política emancipa-se via Sujeito"
   },
   {
     "from": "política",
     "to": "governança",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Política emancipa-se via Governança"
   },
   {
@@ -2906,7 +2906,7 @@
   {
     "from": "direitos da natureza",
     "to": "Pachamama",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Direitos da Natureza emancipa-se via Pachamama"
   },
   {
@@ -2918,19 +2918,19 @@
   {
     "from": "direitos da natureza",
     "to": "personalidade jurídica",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Direitos da Natureza emancipa-se via Personalidade Jurídica"
   },
   {
     "from": "direitos da natureza",
     "to": "indigena",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Direitos da Natureza emancipa-se via Pensamento Indígena"
   },
   {
     "from": "direitos da natureza",
     "to": "não-humanos",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Direitos da Natureza emancipa-se via Não-Humanos"
   },
   {
@@ -2960,31 +2960,31 @@
   {
     "from": "agencia",
     "to": "afeto",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Agência compõe Afeto Spinozista"
   },
   {
     "from": "agencia",
     "to": "não-humanos",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Agência compõe Não-Humanos"
   },
   {
     "from": "economia",
     "to": "capitalismo",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Economia emancipa-se via Capitalismo"
   },
   {
     "from": "economia",
     "to": "mercadorias fictícias",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Economia emancipa-se via Mercadorias Fictícias"
   },
   {
     "from": "economia",
     "to": "commons",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Economia emancipa-se via Commons"
   },
   {
@@ -2996,7 +2996,7 @@
   {
     "from": "economia",
     "to": "decrescimento",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Economia emancipa-se via Decrescimento"
   },
   {
@@ -3044,7 +3044,7 @@
   {
     "from": "super-humeanismo",
     "to": "RQM",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Super-Humeanismo possibilita RQM (Relational Quantum Mechanics)"
   },
   {
@@ -3056,25 +3056,25 @@
   {
     "from": "super-humeanismo",
     "to": "relacionalidade",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Super-Humeanismo possibilita Relacionalismo"
   },
   {
     "from": "super-humeanismo",
     "to": "fundamentos",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Super-Humeanismo possibilita Fundamentos"
   },
   {
     "from": "super-humeanismo",
     "to": "física quântica",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Super-Humeanismo possibilita Física Quântica"
   },
   {
     "from": "personalidade jurídica",
     "to": "direitos da natureza",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Personalidade Jurídica emancipa-se via Direitos da Natureza"
   },
   {
@@ -3086,7 +3086,7 @@
   {
     "from": "personalidade jurídica",
     "to": "não-humanos",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Personalidade Jurídica emancipa-se via Não-Humanos"
   },
   {
@@ -3098,7 +3098,7 @@
   {
     "from": "personalidade jurídica",
     "to": "Pachamama",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Personalidade Jurídica emancipa-se via Pachamama"
   },
   {
@@ -3110,7 +3110,7 @@
   {
     "from": "performatividade",
     "to": "gênero",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Performatividade compõe Gênero"
   },
   {
@@ -3134,25 +3134,25 @@
   {
     "from": "heterarquia",
     "to": "riz∅ma",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Heterarquia emancipa-se via Rizoma"
   },
   {
     "from": "heterarquia",
     "to": "agencia",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Heterarquia emancipa-se via Agência"
   },
   {
     "from": "heterarquia",
     "to": "descentralização",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Heterarquia emancipa-se via Descentralização"
   },
   {
     "from": "heterarquia",
     "to": "commons",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Heterarquia emancipa-se via Commons"
   },
   {
@@ -3194,19 +3194,19 @@
   {
     "from": "descolonização",
     "to": "indigena",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Descolonização emancipa-se via Pensamento Indígena"
   },
   {
     "from": "descolonização",
     "to": "epistemicídio",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Descolonização emancipa-se via Epistemicídio"
   },
   {
     "from": "descolonização",
     "to": "ressurgência",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Descolonização emancipa-se via Ressurgência"
   },
   {
@@ -3224,7 +3224,7 @@
   {
     "from": "descolonização",
     "to": "despossessao",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Descolonização emancipa-se via Despossessão"
   },
   {
@@ -3236,7 +3236,7 @@
   {
     "from": "decrescimento",
     "to": "economia",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Decrescimento emancipa-se via Economia"
   },
   {
@@ -3248,7 +3248,7 @@
   {
     "from": "consciência",
     "to": "consciência coletiva",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Consciência compõe Consciência Coletiva"
   },
   {
@@ -3260,19 +3260,19 @@
   {
     "from": "consciência",
     "to": "processo",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Consciência compõe Processo (Whitehead)"
   },
   {
     "from": "consciência",
     "to": "sujeito",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Consciência compõe Sujeito"
   },
   {
     "from": "consciência",
     "to": "intersubjetividade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Consciência compõe Intersubjetividade"
   },
   {
@@ -3320,25 +3320,25 @@
   {
     "from": "poder",
     "to": "política",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Poder emancipa-se via Política"
   },
   {
     "from": "poder",
     "to": "agencia",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Poder emancipa-se via Agência"
   },
   {
     "from": "poder",
     "to": "necropolitica",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Poder emancipa-se via Necropolítica"
   },
   {
     "from": "poder",
     "to": "governança",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Poder emancipa-se via Governança"
   },
   {
@@ -3350,31 +3350,31 @@
   {
     "from": "poder",
     "to": "evento",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Poder emancipa-se via Evento (Badiou)"
   },
   {
     "from": "madhyamaka",
     "to": "sunyata",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Madhyamaka possibilita Śūnyatā (Vacuidade)"
   },
   {
     "from": "madhyamaka",
     "to": "nagarjuna",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Madhyamaka possibilita Nāgārjuna"
   },
   {
     "from": "madhyamaka",
     "to": "vazio",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Madhyamaka possibilita Vazio Que Povoa"
   },
   {
     "from": "madhyamaka",
     "to": "budismo",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Madhyamaka possibilita Budismo"
   },
   {
@@ -3398,7 +3398,7 @@
   {
     "from": "Māori",
     "to": "indigena",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Māori compõe Pensamento Indígena"
   },
   {
@@ -3446,25 +3446,25 @@
   {
     "from": "intersubjetividade",
     "to": "transindividual",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Intersubjetividade compõe Transindividual"
   },
   {
     "from": "intersubjetividade",
     "to": "sujeito",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Intersubjetividade compõe Sujeito"
   },
   {
     "from": "intersubjetividade",
     "to": "ontologia",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Intersubjetividade compõe Ontologia Relacional Universal"
   },
   {
     "from": "intersubjetividade",
     "to": "consciência coletiva",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Intersubjetividade compõe Consciência Coletiva"
   },
   {
@@ -3476,55 +3476,55 @@
   {
     "from": "identidade",
     "to": "sujeito",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Identidade compõe Sujeito"
   },
   {
     "from": "identidade",
     "to": "performatividade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Identidade compõe Performatividade"
   },
   {
     "from": "identidade",
     "to": "multiplicidade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Identidade compõe Multiplicidade Sem Fusão"
   },
   {
     "from": "identidade",
     "to": "processo",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Identidade compõe Processo (Whitehead)"
   },
   {
     "from": "identidade",
     "to": "devir",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Identidade compõe Devir (Deleuze)"
   },
   {
     "from": "buen vivir",
     "to": "indigena",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Buen Vivir emancipa-se via Pensamento Indígena"
   },
   {
     "from": "buen vivir",
     "to": "Pachamama",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Buen Vivir emancipa-se via Pachamama"
   },
   {
     "from": "buen vivir",
     "to": "commons",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Buen Vivir emancipa-se via Commons"
   },
   {
     "from": "buen vivir",
     "to": "decrescimento",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Buen Vivir emancipa-se via Decrescimento"
   },
   {
@@ -3536,55 +3536,55 @@
   {
     "from": "budismo",
     "to": "sunyata",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Budismo possibilita Śūnyatā (Vacuidade)"
   },
   {
     "from": "budismo",
     "to": "pratityasamutpada",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Budismo possibilita Pratītyasamutpāda"
   },
   {
     "from": "budismo",
     "to": "anatman",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Budismo possibilita Anātman (Não-Eu)"
   },
   {
     "from": "budismo",
     "to": "madhyamaka",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Budismo possibilita Madhyamaka"
   },
   {
     "from": "budismo",
     "to": "nagarjuna",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Budismo possibilita Nāgārjuna"
   },
   {
     "from": "budismo",
     "to": "vazio",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Budismo possibilita Vazio Que Povoa"
   },
   {
     "from": "violência simbólica",
     "to": "poder",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Violência Simbólica emancipa-se via Poder"
   },
   {
     "from": "violência simbólica",
     "to": "epistemicídio",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Violência Simbólica emancipa-se via Epistemicídio"
   },
   {
     "from": "violência simbólica",
     "to": "descolonização",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Violência Simbólica emancipa-se via Descolonização"
   },
   {
@@ -3602,13 +3602,13 @@
   {
     "from": "vácuo",
     "to": "vazio",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Vácuo Quântico possibilita Vazio Que Povoa"
   },
   {
     "from": "vácuo",
     "to": "física quântica",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Vácuo Quântico possibilita Física Quântica"
   },
   {
@@ -3656,7 +3656,7 @@
   {
     "from": "ressurgência",
     "to": "indigena",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Ressurgência emancipa-se via Pensamento Indígena"
   },
   {
@@ -3668,13 +3668,13 @@
   {
     "from": "ressurgência",
     "to": "descolonização",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Ressurgência emancipa-se via Descolonização"
   },
   {
     "from": "ressurgência",
     "to": "evento",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Ressurgência emancipa-se via Evento (Badiou)"
   },
   {
@@ -3722,13 +3722,13 @@
   {
     "from": "relações",
     "to": "pratityasamutpada",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Relações possibilita Pratītyasamutpāda"
   },
   {
     "from": "relações",
     "to": "relacionalidade",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Relações possibilita Relacionalismo"
   },
   {
@@ -3746,7 +3746,7 @@
   {
     "from": "relacionalidade",
     "to": "relações",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Relacionalidade possibilita Relações"
   },
   {
@@ -3764,25 +3764,25 @@
   {
     "from": "relacionalidade",
     "to": "pratityasamutpada",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Relacionalidade possibilita Pratītyasamutpāda"
   },
   {
     "from": "propriedade",
     "to": "commons",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Propriedade emancipa-se via Commons"
   },
   {
     "from": "propriedade",
     "to": "despossessao",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Propriedade emancipa-se via Despossessão"
   },
   {
     "from": "propriedade",
     "to": "acumulacaoprimitiva",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Propriedade emancipa-se via Acumulação Primitiva"
   },
   {
@@ -3800,19 +3800,19 @@
   {
     "from": "pluralismo",
     "to": "ontologia",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Pluralismo compõe Ontologia Relacional Universal"
   },
   {
     "from": "pluralismo",
     "to": "cosmopolitica",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Pluralismo compõe Cosmopolítica"
   },
   {
     "from": "pluralismo",
     "to": "indigena",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Pluralismo compõe Pensamento Indígena"
   },
   {
@@ -3824,7 +3824,7 @@
   {
     "from": "pluralismo",
     "to": "multiplicidade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Pluralismo compõe Multiplicidade Sem Fusão"
   },
   {
@@ -3842,7 +3842,7 @@
   {
     "from": "Pachamama",
     "to": "indigena",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Pachamama compõe Pensamento Indígena"
   },
   {
@@ -3854,7 +3854,7 @@
   {
     "from": "Pachamama",
     "to": "cosmopolitica",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Pachamama compõe Cosmopolítica"
   },
   {
@@ -3884,25 +3884,25 @@
   {
     "from": "nagarjuna",
     "to": "madhyamaka",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Nāgārjuna possibilita Madhyamaka"
   },
   {
     "from": "nagarjuna",
     "to": "sunyata",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Nāgārjuna possibilita Śūnyatā (Vacuidade)"
   },
   {
     "from": "nagarjuna",
     "to": "budismo",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Nāgārjuna possibilita Budismo"
   },
   {
     "from": "nagarjuna",
     "to": "vazio",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Nāgārjuna possibilita Vazio Que Povoa"
   },
   {
@@ -3920,19 +3920,19 @@
   {
     "from": "democracia",
     "to": "confederalismo",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Democracia emancipa-se via Confederalismo Democrático"
   },
   {
     "from": "democracia",
     "to": "governança",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Democracia emancipa-se via Governança"
   },
   {
     "from": "democracia",
     "to": "política",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Democracia emancipa-se via Política"
   },
   {
@@ -3944,19 +3944,19 @@
   {
     "from": "descentralização",
     "to": "heterarquia",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Descentralização emancipa-se via Heterarquia"
   },
   {
     "from": "descentralização",
     "to": "agencia",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Descentralização emancipa-se via Agência"
   },
   {
     "from": "descentralização",
     "to": "confederalismo",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Descentralização emancipa-se via Confederalismo Democrático"
   },
   {
@@ -3968,19 +3968,19 @@
   {
     "from": "descentralização",
     "to": "governança",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Descentralização emancipa-se via Governança"
   },
   {
     "from": "desigualdade",
     "to": "capitalismo",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Desigualdade emancipa-se via Capitalismo"
   },
   {
     "from": "desigualdade",
     "to": "acumulacaoprimitiva",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Desigualdade emancipa-se via Acumulação Primitiva"
   },
   {
@@ -3998,31 +3998,31 @@
   {
     "from": "desigualdade",
     "to": "classe",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Desigualdade emancipa-se via Classe"
   },
   {
     "from": "emaranhamento",
     "to": "física quântica",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Emaranhamento Quântico possibilita Física Quântica"
   },
   {
     "from": "emaranhamento",
     "to": "não-localidade",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Emaranhamento Quântico possibilita Não-Localidade"
   },
   {
     "from": "emaranhamento",
     "to": "relações",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Emaranhamento Quântico possibilita Relações"
   },
   {
     "from": "emaranhamento",
     "to": "RQM",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Emaranhamento Quântico possibilita RQM (Relational Quantum Mechanics)"
   },
   {
@@ -4058,37 +4058,37 @@
   {
     "from": "escala",
     "to": "processo",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Escala compõe Processo (Whitehead)"
   },
   {
     "from": "escala",
     "to": "emergência",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Escala compõe Emergência"
   },
   {
     "from": "escala",
     "to": "holobionte",
-    "name": "compõe",
+    "name": "simbiosa com",
     "description": "Escala compõe Holobionte"
   },
   {
     "from": "escala",
     "to": "limite",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Escala compõe Limite"
   },
   {
     "from": "espaço-tempo",
     "to": "tempo",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Espaço-Tempo possibilita Tempo Entrelaçado"
   },
   {
     "from": "espaço-tempo",
     "to": "física quântica",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Espaço-Tempo possibilita Física Quântica"
   },
   {
@@ -4100,19 +4100,19 @@
   {
     "from": "espaço-tempo",
     "to": "relações",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Espaço-Tempo possibilita Relações"
   },
   {
     "from": "fatos relativos",
     "to": "RQM",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Fatos Relativos possibilita RQM (Relational Quantum Mechanics)"
   },
   {
     "from": "fatos relativos",
     "to": "física quântica",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Fatos Relativos possibilita Física Quântica"
   },
   {
@@ -4124,31 +4124,31 @@
   {
     "from": "fatos relativos",
     "to": "relacionalidade",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Fatos Relativos possibilita Relacionalismo"
   },
   {
     "from": "fatos relativos",
     "to": "anti-fundacionalismo",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Fatos Relativos possibilita Anti-Fundacionalismo"
   },
   {
     "from": "feminismo",
     "to": "gênero",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Feminismo emancipa-se via Gênero"
   },
   {
     "from": "feminismo",
     "to": "performatividade",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Feminismo emancipa-se via Performatividade"
   },
   {
     "from": "feminismo",
     "to": "vulnerabilidade",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Feminismo emancipa-se via Vulnerabilidade"
   },
   {
@@ -4160,7 +4160,7 @@
   {
     "from": "feminismo",
     "to": "reproducaosocial",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Feminismo emancipa-se via Reprodução Social"
   },
   {
@@ -4172,13 +4172,13 @@
   {
     "from": "filosofia africana",
     "to": "ontologia",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Filosofia Africana compõe Ontologia Relacional Universal"
   },
   {
     "from": "filosofia africana",
     "to": "indigena",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Filosofia Africana compõe Pensamento Indígena"
   },
   {
@@ -4190,37 +4190,37 @@
   {
     "from": "intra-ação",
     "to": "intracao",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Intra-ação compõe Intra-ação (Barad)"
   },
   {
     "from": "intra-ação",
     "to": "agencia",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Intra-ação compõe Agência"
   },
   {
     "from": "intra-ação",
     "to": "performatividade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Intra-ação compõe Performatividade"
   },
   {
     "from": "intra-ação",
     "to": "ontologia",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Intra-ação compõe Ontologia Relacional Universal"
   },
   {
     "from": "intra-ação",
     "to": "realismo agencial",
-    "name": "compõe",
+    "name": "agencia através de",
     "description": "Intra-ação compõe Realismo Agencial"
   },
   {
     "from": "capitalismo",
     "to": "acumulacaoprimitiva",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Capitalismo emancipa-se via Acumulação Primitiva"
   },
   {
@@ -4232,19 +4232,19 @@
   {
     "from": "capitalismo",
     "to": "mercadorias fictícias",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Capitalismo emancipa-se via Mercadorias Fictícias"
   },
   {
     "from": "capitalismo",
     "to": "despossessao",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Capitalismo emancipa-se via Despossessão"
   },
   {
     "from": "capitalismo",
     "to": "economia",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Capitalismo emancipa-se via Economia"
   },
   {
@@ -4256,19 +4256,19 @@
   {
     "from": "confederalismo",
     "to": "descentralização",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Confederalismo Democrático emancipa-se via Descentralização"
   },
   {
     "from": "confederalismo",
     "to": "democracia",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Confederalismo Democrático emancipa-se via Democracia"
   },
   {
     "from": "confederalismo",
     "to": "municipalismo",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Confederalismo Democrático emancipa-se via Municipalismo"
   },
   {
@@ -4280,7 +4280,7 @@
   {
     "from": "cosmopolitica",
     "to": "não-humanos",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Cosmopolítica emancipa-se via Não-Humanos"
   },
   {
@@ -4292,19 +4292,19 @@
   {
     "from": "cosmopolitica",
     "to": "pluralismo",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Cosmopolítica emancipa-se via Pluralismo"
   },
   {
     "from": "anti-fundacionalismo",
     "to": "recursao",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Anti-Fundacionalismo possibilita Recursão Sem Fundamento"
   },
   {
     "from": "anti-fundacionalismo",
     "to": "RQM",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Anti-Fundacionalismo possibilita RQM (Relational Quantum Mechanics)"
   },
   {
@@ -4316,13 +4316,13 @@
   {
     "from": "anti-fundacionalismo",
     "to": "vazio",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Anti-Fundacionalismo possibilita Vazio Que Povoa"
   },
   {
     "from": "anti-fundacionalismo",
     "to": "madhyamaka",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Anti-Fundacionalismo possibilita Madhyamaka"
   },
   {
@@ -4358,7 +4358,7 @@
   {
     "from": "gênero",
     "to": "performatividade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Gênero compõe Performatividade"
   },
   {
@@ -4376,13 +4376,13 @@
   {
     "from": "gênero",
     "to": "holobionte",
-    "name": "compõe",
+    "name": "simbiosa com",
     "description": "Gênero compõe Holobionte"
   },
   {
     "from": "gênero",
     "to": "sujeito",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Gênero compõe Sujeito"
   },
   {
@@ -4394,13 +4394,13 @@
   {
     "from": "não-humanos",
     "to": "actantes",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Não-Humanos compõe Actantes"
   },
   {
     "from": "não-humanos",
     "to": "cosmopolitica",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Não-Humanos compõe Cosmopolítica"
   },
   {
@@ -4412,31 +4412,31 @@
   {
     "from": "não-humanos",
     "to": "agencia",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Não-Humanos compõe Agência"
   },
   {
     "from": "não-localidade",
     "to": "emaranhamento",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Não-Localidade possibilita Emaranhamento Quântico"
   },
   {
     "from": "não-localidade",
     "to": "física quântica",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Não-Localidade possibilita Física Quântica"
   },
   {
     "from": "não-localidade",
     "to": "relações",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Não-Localidade possibilita Relações"
   },
   {
     "from": "não-localidade",
     "to": "RQM",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Não-Localidade possibilita RQM (Relational Quantum Mechanics)"
   },
   {
@@ -4472,25 +4472,25 @@
   {
     "from": "relacionalidade",
     "to": "RQM",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Relacionalismo possibilita RQM (Relational Quantum Mechanics)"
   },
   {
     "from": "epistemicídio",
     "to": "descolonização",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Epistemicídio emancipa-se via Descolonização"
   },
   {
     "from": "epistemicídio",
     "to": "indigena",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Epistemicídio emancipa-se via Pensamento Indígena"
   },
   {
     "from": "epistemicídio",
     "to": "violência simbólica",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Epistemicídio emancipa-se via Violência Simbólica"
   },
   {
@@ -4502,25 +4502,25 @@
   {
     "from": "realismo agencial",
     "to": "intracao",
-    "name": "compõe",
+    "name": "agencia através de",
     "description": "Realismo Agencial compõe Intra-ação (Barad)"
   },
   {
     "from": "realismo agencial",
     "to": "intra-ação",
-    "name": "compõe",
+    "name": "agencia através de",
     "description": "Realismo Agencial compõe Intra-ação"
   },
   {
     "from": "realismo agencial",
     "to": "performatividade",
-    "name": "compõe",
+    "name": "agencia através de",
     "description": "Realismo Agencial compõe Performatividade"
   },
   {
     "from": "realismo agencial",
     "to": "ontologia",
-    "name": "compõe",
+    "name": "agencia através de",
     "description": "Realismo Agencial compõe Ontologia Relacional Universal"
   },
   {
@@ -4562,13 +4562,13 @@
   {
     "from": "mercadorias fictícias",
     "to": "capitalismo",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Mercadorias Fictícias emancipa-se via Capitalismo"
   },
   {
     "from": "mercadorias fictícias",
     "to": "economia",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Mercadorias Fictícias emancipa-se via Economia"
   },
   {
@@ -4580,7 +4580,7 @@
   {
     "from": "mercadorias fictícias",
     "to": "acumulacaoprimitiva",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Mercadorias Fictícias emancipa-se via Acumulação Primitiva"
   },
   {
@@ -4592,13 +4592,13 @@
   {
     "from": "consciência coletiva",
     "to": "consciência",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Consciência Coletiva compõe Consciência"
   },
   {
     "from": "consciência coletiva",
     "to": "transindividual",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Consciência Coletiva compõe Transindividual"
   },
   {
@@ -4616,7 +4616,7 @@
   {
     "from": "consciência coletiva",
     "to": "sujeito",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Consciência Coletiva compõe Sujeito"
   },
   {
@@ -4652,7 +4652,7 @@
   {
     "from": "autonomia",
     "to": "agencia",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Autonomia emancipa-se via Agência"
   },
   {
@@ -4676,7 +4676,7 @@
   {
     "from": "autonomia",
     "to": "municipalismo",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Autonomia emancipa-se via Municipalismo"
   },
   {
@@ -4730,7 +4730,7 @@
   {
     "from": "municipalismo",
     "to": "confederalismo",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Municipalismo emancipa-se via Confederalismo Democrático"
   },
   {
@@ -4742,37 +4742,37 @@
   {
     "from": "municipalismo",
     "to": "democracia",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Municipalismo emancipa-se via Democracia"
   },
   {
     "from": "municipalismo",
     "to": "descentralização",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Municipalismo emancipa-se via Descentralização"
   },
   {
     "from": "actantes",
     "to": "não-humanos",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Actantes compõe Não-Humanos"
   },
   {
     "from": "actantes",
     "to": "agencia",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Actantes compõe Agência"
   },
   {
     "from": "actantes",
     "to": "ator-rede",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Actantes compõe Teoria Ator-Rede"
   },
   {
     "from": "actantes",
     "to": "cosmopolitica",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Actantes compõe Cosmopolítica"
   },
   {
@@ -4832,43 +4832,43 @@
   {
     "from": "ocasioes",
     "to": "ocasiões",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Ocasiões de Experiência possibilita Ocasiões"
   },
   {
     "from": "emergência",
     "to": "processo",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Emergência compõe Processo (Whitehead)"
   },
   {
     "from": "emergência",
     "to": "escala",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Emergência compõe Escala"
   },
   {
     "from": "emergência",
     "to": "holobionte",
-    "name": "compõe",
+    "name": "simbiosa com",
     "description": "Emergência compõe Holobionte"
   },
   {
     "from": "emergência",
     "to": "consciência coletiva",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Emergência compõe Consciência Coletiva"
   },
   {
     "from": "origem dependente",
     "to": "pratityasamutpada",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Origem Dependente possibilita Pratītyasamutpāda"
   },
   {
     "from": "origem dependente",
     "to": "budismo",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Origem Dependente possibilita Budismo"
   },
   {
@@ -4880,25 +4880,25 @@
   {
     "from": "origem dependente",
     "to": "relações",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Origem Dependente possibilita Relações"
   },
   {
     "from": "ator-rede",
     "to": "actantes",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Teoria Ator-Rede compõe Actantes"
   },
   {
     "from": "ator-rede",
     "to": "não-humanos",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Teoria Ator-Rede compõe Não-Humanos"
   },
   {
     "from": "ator-rede",
     "to": "agencia",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Teoria Ator-Rede compõe Agência"
   },
   {
@@ -4922,31 +4922,31 @@
   {
     "from": "virtualidade",
     "to": "devir",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Virtualidade compõe Devir (Deleuze)"
   },
   {
     "from": "classe",
     "to": "capitalismo",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Classe emancipa-se via Capitalismo"
   },
   {
     "from": "classe",
     "to": "desigualdade",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Classe emancipa-se via Desigualdade"
   },
   {
     "from": "classe",
     "to": "acumulacaoprimitiva",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Classe emancipa-se via Acumulação Primitiva"
   },
   {
     "from": "classe",
     "to": "política",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Classe emancipa-se via Política"
   },
   {
@@ -5000,7 +5000,7 @@
   {
     "from": "loop",
     "to": "recursao",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Loop possibilita Recursão Sem Fundamento"
   },
   {
@@ -5012,13 +5012,13 @@
   {
     "from": "loop",
     "to": "espaço-tempo",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Loop possibilita Espaço-Tempo"
   },
   {
     "from": "ocasiões",
     "to": "ocasioes",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Ocasiões possibilita Ocasiões de Experiência"
   },
   {
@@ -5030,19 +5030,19 @@
   {
     "from": "ocasiões",
     "to": "tempo",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Ocasiões possibilita Tempo Entrelaçado"
   },
   {
     "from": "ocasiões",
     "to": "evento",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Ocasiões possibilita Evento (Badiou)"
   },
   {
     "from": "ação",
     "to": "agencia",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Ação compõe Agência"
   },
   {
@@ -5054,7 +5054,7 @@
   {
     "from": "ação",
     "to": "performatividade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Ação compõe Performatividade"
   },
   {
@@ -5096,25 +5096,25 @@
   {
     "from": "alternativas",
     "to": "capitalismo",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Alternativas emancipa-se via Capitalismo"
   },
   {
     "from": "alternativas",
     "to": "commons",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Alternativas emancipa-se via Commons"
   },
   {
     "from": "alternativas",
     "to": "decrescimento",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Alternativas emancipa-se via Decrescimento"
   },
   {
     "from": "alternativas",
     "to": "buen vivir",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Alternativas emancipa-se via Buen Vivir"
   },
   {
@@ -5126,19 +5126,19 @@
   {
     "from": "apropriação",
     "to": "propriedade",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Apropriação emancipa-se via Propriedade"
   },
   {
     "from": "apropriação",
     "to": "despossessao",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Apropriação emancipa-se via Despossessão"
   },
   {
     "from": "apropriação",
     "to": "capitalismo",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Apropriação emancipa-se via Capitalismo"
   },
   {
@@ -5168,7 +5168,7 @@
   {
     "from": "autopoiese",
     "to": "processo",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Autopoiese compõe Processo (Whitehead)"
   },
   {
@@ -5180,13 +5180,13 @@
   {
     "from": "autopoiese",
     "to": "emergência",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Autopoiese compõe Emergência"
   },
   {
     "from": "autopoiese",
     "to": "sistemas",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Autopoiese compõe Sistemas"
   },
   {
@@ -5216,67 +5216,67 @@
   {
     "from": "Bell",
     "to": "não-localidade",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Teorema de Bell possibilita Não-Localidade"
   },
   {
     "from": "Bell",
     "to": "emaranhamento",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Teorema de Bell possibilita Emaranhamento Quântico"
   },
   {
     "from": "Bell",
     "to": "física quântica",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Teorema de Bell possibilita Física Quântica"
   },
   {
     "from": "campo",
     "to": "vazio",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Campo possibilita Vazio Que Povoa"
   },
   {
     "from": "campo",
     "to": "física quântica",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Campo possibilita Física Quântica"
   },
   {
     "from": "campo",
     "to": "poder",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Campo possibilita Poder"
   },
   {
     "from": "caos",
     "to": "emergência",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Caos compõe Emergência"
   },
   {
     "from": "caos",
     "to": "ordem",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Caos compõe Ordem"
   },
   {
     "from": "caos",
     "to": "processo",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Caos compõe Processo (Whitehead)"
   },
   {
     "from": "CARE",
     "to": "indigena",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Princípios CARE emancipa-se via Pensamento Indígena"
   },
   {
     "from": "CARE",
     "to": "governança",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Princípios CARE emancipa-se via Governança"
   },
   {
@@ -5318,7 +5318,7 @@
   {
     "from": "ciborgue",
     "to": "hibridez",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Ciborgue compõe Hibridez"
   },
   {
@@ -5330,7 +5330,7 @@
   {
     "from": "ciborgue",
     "to": "não-humanos",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Ciborgue compõe Não-Humanos"
   },
   {
@@ -5342,19 +5342,19 @@
   {
     "from": "circunscrição",
     "to": "limite",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Circunscrição emancipa-se via Limite"
   },
   {
     "from": "circunscrição",
     "to": "poder",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Circunscrição emancipa-se via Poder"
   },
   {
     "from": "circunscrição",
     "to": "lugar",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Circunscrição emancipa-se via Lugar"
   },
   {
@@ -5432,31 +5432,31 @@
   {
     "from": "colonialismo",
     "to": "capitalismo",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Colonialismo emancipa-se via Capitalismo"
   },
   {
     "from": "colonialismo",
     "to": "epistemicídio",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Colonialismo emancipa-se via Epistemicídio"
   },
   {
     "from": "colonialismo",
     "to": "descolonização",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Colonialismo emancipa-se via Descolonização"
   },
   {
     "from": "colonialismo",
     "to": "acumulacaoprimitiva",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Colonialismo emancipa-se via Acumulação Primitiva"
   },
   {
     "from": "colonialismo",
     "to": "necropolitica",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Colonialismo emancipa-se via Necropolítica"
   },
   {
@@ -5498,7 +5498,7 @@
   {
     "from": "comunidade",
     "to": "intersubjetividade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Comunidade compõe Intersubjetividade"
   },
   {
@@ -5510,7 +5510,7 @@
   {
     "from": "conjunto vazio",
     "to": "vazio",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Conjunto Vazio possibilita Vazio Que Povoa"
   },
   {
@@ -5522,49 +5522,49 @@
   {
     "from": "conjunto vazio",
     "to": "fundamentos",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Conjunto Vazio possibilita Fundamentos"
   },
   {
     "from": "constituição",
     "to": "direitos da natureza",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Constituição emancipa-se via Direitos da Natureza"
   },
   {
     "from": "constituição",
     "to": "Pachamama",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Constituição emancipa-se via Pachamama"
   },
   {
     "from": "constituição",
     "to": "buen vivir",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Constituição emancipa-se via Buen Vivir"
   },
   {
     "from": "constituição",
     "to": "política",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Constituição emancipa-se via Política"
   },
   {
     "from": "cooptação",
     "to": "capitalismo",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Cooptação emancipa-se via Capitalismo"
   },
   {
     "from": "cooptação",
     "to": "commons",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Cooptação emancipa-se via Commons"
   },
   {
     "from": "cooptação",
     "to": "apropriação",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Cooptação emancipa-se via Apropriação"
   },
   {
@@ -5612,43 +5612,43 @@
   {
     "from": "criação",
     "to": "devir",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Criação compõe Devir (Deleuze)"
   },
   {
     "from": "criação",
     "to": "processo",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Criação compõe Processo (Whitehead)"
   },
   {
     "from": "criação",
     "to": "emergência",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Criação compõe Emergência"
   },
   {
     "from": "criação",
     "to": "virtualidade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Criação compõe Virtualidade"
   },
   {
     "from": "crimes de guerra",
     "to": "necropolitica",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Crimes de Guerra emancipa-se via Necropolítica"
   },
   {
     "from": "crimes de guerra",
     "to": "violência simbólica",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Crimes de Guerra emancipa-se via Violência Simbólica"
   },
   {
     "from": "crimes de guerra",
     "to": "terror",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Crimes de Guerra emancipa-se via Terror"
   },
   {
@@ -5678,25 +5678,25 @@
   {
     "from": "dasein",
     "to": "Heidegger",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Dasein compõe Heidegger"
   },
   {
     "from": "dasein",
     "to": "ontologia",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Dasein compõe Ontologia Relacional Universal"
   },
   {
     "from": "dasein",
     "to": "Mitsein",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Dasein compõe Mitsein"
   },
   {
     "from": "dasein",
     "to": "lugar",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Dasein compõe Lugar"
   },
   {
@@ -5708,7 +5708,7 @@
   {
     "from": "determinismo",
     "to": "física quântica",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Determinismo possibilita Física Quântica"
   },
   {
@@ -5774,13 +5774,13 @@
   {
     "from": "economia ecológica",
     "to": "decrescimento",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Economia Ecológica emancipa-se via Decrescimento"
   },
   {
     "from": "economia ecológica",
     "to": "limite",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Economia Ecológica emancipa-se via Limite"
   },
   {
@@ -5864,7 +5864,7 @@
   {
     "from": "emoção",
     "to": "afeto",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Emoção compõe Afeto Spinozista"
   },
   {
@@ -5876,13 +5876,13 @@
   {
     "from": "emoção",
     "to": "holobionte",
-    "name": "compõe",
+    "name": "simbiosa com",
     "description": "Emoção compõe Holobionte"
   },
   {
     "from": "emoção",
     "to": "consciência",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Emoção compõe Consciência"
   },
   {
@@ -5912,19 +5912,19 @@
   {
     "from": "fact-nets",
     "to": "RQM",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Fact-Nets possibilita RQM (Relational Quantum Mechanics)"
   },
   {
     "from": "fact-nets",
     "to": "fatos relativos",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Fact-Nets possibilita Fatos Relativos"
   },
   {
     "from": "fact-nets",
     "to": "relacionalidade",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Fact-Nets possibilita Relacionalismo"
   },
   {
@@ -5942,7 +5942,7 @@
   {
     "from": "fidelidade",
     "to": "sujeito",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Fidelidade compõe Sujeito"
   },
   {
@@ -5984,7 +5984,7 @@
   {
     "from": "finitude",
     "to": "limite",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Finitude compõe Limite"
   },
   {
@@ -6002,19 +6002,19 @@
   {
     "from": "finitude",
     "to": "dasein",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Finitude compõe Dasein"
   },
   {
     "from": "física",
     "to": "física quântica",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Física possibilita Física Quântica"
   },
   {
     "from": "física",
     "to": "espaço-tempo",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Física possibilita Espaço-Tempo"
   },
   {
@@ -6050,7 +6050,7 @@
   {
     "from": "flutuação",
     "to": "vácuo",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Flutuação possibilita Vácuo Quântico"
   },
   {
@@ -6068,7 +6068,7 @@
   {
     "from": "flutuação",
     "to": "física quântica",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Flutuação possibilita Física Quântica"
   },
   {
@@ -6098,43 +6098,43 @@
   {
     "from": "fundamentos",
     "to": "anti-fundacionalismo",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Fundamentos possibilita Anti-Fundacionalismo"
   },
   {
     "from": "fundamentos",
     "to": "recursao",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Fundamentos possibilita Recursão Sem Fundamento"
   },
   {
     "from": "fundamentos",
     "to": "vazio",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Fundamentos possibilita Vazio Que Povoa"
   },
   {
     "from": "fundamentos",
     "to": "madhyamaka",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Fundamentos possibilita Madhyamaka"
   },
   {
     "from": "Heidegger",
     "to": "dasein",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Heidegger compõe Dasein"
   },
   {
     "from": "Heidegger",
     "to": "Mitsein",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Heidegger compõe Mitsein"
   },
   {
     "from": "Heidegger",
     "to": "ontologia",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Heidegger compõe Ontologia Relacional Universal"
   },
   {
@@ -6146,7 +6146,7 @@
   {
     "from": "hibridez",
     "to": "ciborgue",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Hibridez compõe Ciborgue"
   },
   {
@@ -6158,13 +6158,13 @@
   {
     "from": "hibridez",
     "to": "holobionte",
-    "name": "compõe",
+    "name": "simbiosa com",
     "description": "Hibridez compõe Holobionte"
   },
   {
     "from": "hibridez",
     "to": "multiplicidade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Hibridez compõe Multiplicidade Sem Fusão"
   },
   {
@@ -6224,13 +6224,13 @@
   {
     "from": "imaginário",
     "to": "sociedade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Imaginário compõe Sociedade"
   },
   {
     "from": "imaginário",
     "to": "criação",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Imaginário compõe Criação"
   },
   {
@@ -6284,13 +6284,13 @@
   {
     "from": "incompletude",
     "to": "fundamentos",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Incompletude possibilita Fundamentos"
   },
   {
     "from": "individualismo",
     "to": "capitalismo",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Individualismo emancipa-se via Capitalismo"
   },
   {
@@ -6302,13 +6302,13 @@
   {
     "from": "individualismo",
     "to": "ontologia",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Individualismo emancipa-se via Ontologia Relacional Universal"
   },
   {
     "from": "individualismo",
     "to": "sujeito",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Individualismo emancipa-se via Sujeito"
   },
   {
@@ -6320,19 +6320,19 @@
   {
     "from": "instituição",
     "to": "governança",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Instituição emancipa-se via Governança"
   },
   {
     "from": "instituição",
     "to": "poder",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Instituição emancipa-se via Poder"
   },
   {
     "from": "instituição",
     "to": "imaginário",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Instituição emancipa-se via Imaginário"
   },
   {
@@ -6368,7 +6368,7 @@
   {
     "from": "libertação",
     "to": "descolonização",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Libertação emancipa-se via Descolonização"
   },
   {
@@ -6434,7 +6434,7 @@
   {
     "from": "livre-arbítrio",
     "to": "agencia",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Livre-Arbítrio compõe Agência"
   },
   {
@@ -6446,13 +6446,13 @@
   {
     "from": "livre-arbítrio",
     "to": "responsabilidade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Livre-Arbítrio compõe Responsabilidade"
   },
   {
     "from": "livre-arbítrio",
     "to": "liberdade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Livre-Arbítrio compõe Liberdade"
   },
   {
@@ -6500,19 +6500,19 @@
   {
     "from": "madhyamika",
     "to": "madhyamaka",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Madhyamika possibilita Madhyamaka"
   },
   {
     "from": "madhyamika",
     "to": "sunyata",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Madhyamika possibilita Śūnyatā (Vacuidade)"
   },
   {
     "from": "madhyamika",
     "to": "budismo",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Madhyamika possibilita Budismo"
   },
   {
@@ -6548,43 +6548,43 @@
   {
     "from": "misrecognition",
     "to": "violência simbólica",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Misrecognition emancipa-se via Violência Simbólica"
   },
   {
     "from": "misrecognition",
     "to": "poder",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Misrecognition emancipa-se via Poder"
   },
   {
     "from": "misrecognition",
     "to": "reconhecimento",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Misrecognition emancipa-se via Reconhecimento"
   },
   {
     "from": "Mitsein",
     "to": "dasein",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Mitsein compõe Dasein"
   },
   {
     "from": "Mitsein",
     "to": "Heidegger",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Mitsein compõe Heidegger"
   },
   {
     "from": "Mitsein",
     "to": "intersubjetividade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Mitsein compõe Intersubjetividade"
   },
   {
     "from": "Mitsein",
     "to": "ontologia",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Mitsein compõe Ontologia Relacional Universal"
   },
   {
@@ -6638,25 +6638,25 @@
   {
     "from": "novo-materialismo",
     "to": "realismo agencial",
-    "name": "compõe",
+    "name": "agencia através de",
     "description": "Novo-Materialismo compõe Realismo Agencial"
   },
   {
     "from": "novo-materialismo",
     "to": "intracao",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Novo-Materialismo compõe Intra-ação (Barad)"
   },
   {
     "from": "novo-materialismo",
     "to": "agencia",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Novo-Materialismo compõe Agência"
   },
   {
     "from": "novo-materialismo",
     "to": "ontologia",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Novo-Materialismo compõe Ontologia Relacional Universal"
   },
   {
@@ -6680,25 +6680,25 @@
   {
     "from": "ordem",
     "to": "emergência",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Ordem compõe Emergência"
   },
   {
     "from": "ordem",
     "to": "caos",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Ordem compõe Caos"
   },
   {
     "from": "ordem",
     "to": "autopoiese",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Ordem compõe Autopoiese"
   },
   {
     "from": "ordem",
     "to": "processo",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Ordem compõe Processo (Whitehead)"
   },
   {
@@ -6740,7 +6740,7 @@
   {
     "from": "parentesco",
     "to": "ontologia",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Parentesco compõe Ontologia Relacional Universal"
   },
   {
@@ -6794,13 +6794,13 @@
   {
     "from": "política ontológica",
     "to": "performatividade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Política Ontológica compõe Performatividade"
   },
   {
     "from": "política ontológica",
     "to": "ontologia",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Política Ontológica compõe Ontologia Relacional Universal"
   },
   {
@@ -6860,19 +6860,19 @@
   {
     "from": "radiação",
     "to": "física quântica",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Radiação possibilita Física Quântica"
   },
   {
     "from": "radiação",
     "to": "espaço-tempo",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Radiação possibilita Espaço-Tempo"
   },
   {
     "from": "radiação",
     "to": "termodinâmica",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Radiação possibilita Termodinâmica"
   },
   {
@@ -6920,7 +6920,7 @@
   {
     "from": "reconhecimento",
     "to": "sujeito",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Reconhecimento compõe Sujeito"
   },
   {
@@ -6932,31 +6932,31 @@
   {
     "from": "reconhecimento",
     "to": "justiça",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Reconhecimento compõe Justiça"
   },
   {
     "from": "reconhecimento",
     "to": "intersubjetividade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Reconhecimento compõe Intersubjetividade"
   },
   {
     "from": "recursão",
     "to": "recursao",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Recursão possibilita Recursão Sem Fundamento"
   },
   {
     "from": "recursão",
     "to": "anti-fundacionalismo",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Recursão possibilita Anti-Fundacionalismo"
   },
   {
     "from": "recursão",
     "to": "loop",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Recursão possibilita Loop"
   },
   {
@@ -7004,13 +7004,13 @@
   {
     "from": "retrocausalidade",
     "to": "física quântica",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Retrocausalidade possibilita Física Quântica"
   },
   {
     "from": "retrocausalidade",
     "to": "tempo",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Retrocausalidade possibilita Tempo Entrelaçado"
   },
   {
@@ -7046,55 +7046,55 @@
   {
     "from": "sistemas",
     "to": "autopoiese",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Sistemas compõe Autopoiese"
   },
   {
     "from": "sistemas",
     "to": "emergência",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Sistemas compõe Emergência"
   },
   {
     "from": "sistemas",
     "to": "processo",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Sistemas compõe Processo (Whitehead)"
   },
   {
     "from": "soberania",
     "to": "poder",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Soberania emancipa-se via Poder"
   },
   {
     "from": "soberania",
     "to": "necropolitica",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Soberania emancipa-se via Necropolítica"
   },
   {
     "from": "soberania",
     "to": "CARE",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Soberania emancipa-se via Princípios CARE"
   },
   {
     "from": "soberania",
     "to": "indigena",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Soberania emancipa-se via Pensamento Indígena"
   },
   {
     "from": "socialismo",
     "to": "economia",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Socialismo emancipa-se via Economia"
   },
   {
     "from": "socialismo",
     "to": "commons",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Socialismo emancipa-se via Commons"
   },
   {
@@ -7106,19 +7106,19 @@
   {
     "from": "socialismo",
     "to": "capitalismo",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Socialismo emancipa-se via Capitalismo"
   },
   {
     "from": "sociedade",
     "to": "transindividual",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Sociedade compõe Transindividual"
   },
   {
     "from": "sociedade",
     "to": "imaginário",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Sociedade compõe Imaginário"
   },
   {
@@ -7130,19 +7130,19 @@
   {
     "from": "sociedade",
     "to": "comunidade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Sociedade compõe Comunidade"
   },
   {
     "from": "subjetivação",
     "to": "sujeito",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Subjetivação compõe Sujeito"
   },
   {
     "from": "subjetivação",
     "to": "performatividade",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Subjetivação compõe Performatividade"
   },
   {
@@ -7160,13 +7160,13 @@
   {
     "from": "sul global",
     "to": "descolonização",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Sul Global emancipa-se via Descolonização"
   },
   {
     "from": "sul global",
     "to": "indigena",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Sul Global emancipa-se via Pensamento Indígena"
   },
   {
@@ -7184,31 +7184,31 @@
   {
     "from": "switching",
     "to": "RQM",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Switching possibilita RQM (Relational Quantum Mechanics)"
   },
   {
     "from": "switching",
     "to": "fatos relativos",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Switching possibilita Fatos Relativos"
   },
   {
     "from": "switching",
     "to": "relacionalidade",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Switching possibilita Relacionalismo"
   },
   {
     "from": "termodinâmica",
     "to": "física",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Termodinâmica possibilita Física"
   },
   {
     "from": "termodinâmica",
     "to": "tempo",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Termodinâmica possibilita Tempo Entrelaçado"
   },
   {
@@ -7226,31 +7226,31 @@
   {
     "from": "terror",
     "to": "totalitarismo",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Terror emancipa-se via Totalitarismo"
   },
   {
     "from": "terror",
     "to": "necropolitica",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Terror emancipa-se via Necropolítica"
   },
   {
     "from": "terror",
     "to": "violência simbólica",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Terror emancipa-se via Violência Simbólica"
   },
   {
     "from": "totalitarismo",
     "to": "terror",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Totalitarismo emancipa-se via Terror"
   },
   {
     "from": "totalitarismo",
     "to": "política",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Totalitarismo emancipa-se via Política"
   },
   {
@@ -7262,7 +7262,7 @@
   {
     "from": "totalitarismo",
     "to": "limite",
-    "name": "emancipa-se via",
+    "name": "emancipa-se por meio de",
     "description": "Totalitarismo emancipa-se via Limite"
   },
   {
@@ -7304,13 +7304,13 @@
   {
     "from": "transformação",
     "to": "processo",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Transformação compõe Processo (Whitehead)"
   },
   {
     "from": "transformação",
     "to": "devir",
-    "name": "compõe",
+    "name": "co-compõe",
     "description": "Transformação compõe Devir (Deleuze)"
   },
   {
@@ -7532,7 +7532,7 @@
   {
     "from": "loop",
     "to": "autopoiese",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Loops autorreferenciais possibilitam autopoiese"
   },
   {
@@ -7622,7 +7622,7 @@
   {
     "from": "afeto",
     "to": "composicao",
-    "name": "possibilita",
+    "name": "potencializa",
     "description": "Afeto possibilita composições potencializadoras"
   },
   {
@@ -8078,7 +8078,7 @@
   {
     "from": "cooperativa",
     "to": "economia solidária",
-    "name": "compõe",
+    "name": "agencia através de",
     "description": "Cooperativas compõem economia solidária"
   },
   {
@@ -8150,7 +8150,7 @@
   {
     "from": "softwarelivre",
     "to": "colaboração",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Software livre possibilita colaboração distribuída"
   },
   {
@@ -8732,7 +8732,7 @@
   {
     "from": "sincronia",
     "to": "commons",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Sincronia sem fusão possibilita commons não totalizantes"
   },
   {
@@ -8834,7 +8834,7 @@
   {
     "from": "reparacao",
     "to": "reconciliação",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Reparação possibilita reconciliação não-superficial"
   },
   {
@@ -8870,7 +8870,7 @@
   {
     "from": "liminaridade",
     "to": "transformação",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Liminaridade possibilita transformação radical"
   },
   {
@@ -8972,7 +8972,7 @@
   {
     "from": "intersticio",
     "to": "resistencia",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Interstícios possibilitam resistência não-frontal"
   },
   {
@@ -9212,7 +9212,7 @@
   {
     "from": "zona",
     "to": "encontro",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Zona de contato possibilita encontros transformadores"
   },
   {
@@ -9236,7 +9236,7 @@
   {
     "from": "encontro",
     "to": "composição",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Encontro possibilita composição de corpos"
   },
   {
@@ -9356,7 +9356,7 @@
   {
     "from": "caos",
     "to": "emergencia",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Caos possibilita emergência de novas ordens"
   },
   {
@@ -9674,7 +9674,7 @@
   {
     "from": "resiliência",
     "to": "regeneração",
-    "name": "possibilita",
+    "name": "viabiliza",
     "description": "Resiliência possibilita regeneração após distúrbios"
   },
   {
@@ -9748,5 +9748,71 @@
     "to": "totalitarismo",
     "name": "caracteriza",
     "description": "Terror caracteriza regimes totalitários (Arendt)"
+  },
+  {
+    "from": "sujeito",
+    "to": "assembleia",
+    "name": "é",
+    "description": "Sujeito é assembleia material-informacional em perpétua co-constituição"
+  },
+  {
+    "from": "sujeito",
+    "to": "feedback",
+    "name": "opera em",
+    "description": "Sujeito opera em circuitos de feedback recursivos em múltiplas ordens"
+  },
+  {
+    "from": "sujeito",
+    "to": "holobionte",
+    "name": "se constitui como",
+    "description": "Morte do sujeito cartesiano revela constituição como holobionte - assembleia simbiótica"
+  },
+  {
+    "from": "sujeito",
+    "to": "anatman",
+    "name": "realiza",
+    "description": "Dissolução do átomo-indivíduo realiza anātman - ausência de eu fixo"
+  },
+  {
+    "from": "sujeito",
+    "to": "recursao",
+    "name": "se auto-produz via",
+    "description": "Sujeito se auto-produz via recursão - feedback que transforma a cada ciclo"
+  },
+  {
+    "from": "sujeito",
+    "to": "informacao",
+    "name": "integra",
+    "description": "Sujeito integra materialidade e informação em padrões dinâmicos"
+  },
+  {
+    "from": "sujeito",
+    "to": "autopoiese",
+    "name": "exemplifica",
+    "description": "Sujeito exemplifica autopoiese - sistema que se auto-produz continuamente"
+  },
+  {
+    "from": "sujeito",
+    "to": "devir",
+    "name": "é sempre",
+    "description": "Sujeito não é substância mas devir - processo de transformação contínua"
+  },
+  {
+    "from": "multiplicidade",
+    "to": "sujeito",
+    "name": "constitui",
+    "description": "Multiplicidades interdependentes constituem sujeito como padrão emergente"
+  },
+  {
+    "from": "transindividual",
+    "to": "sujeito",
+    "name": "funda",
+    "description": "Transindividual funda sujeito - individualidade emerge de campo relacional"
+  },
+  {
+    "from": "cartesianismo",
+    "to": "sujeito",
+    "name": "é superado por",
+    "description": "Cartesianismo (res cogitans separada) é superado por sujeito relacional"
   }
 ]

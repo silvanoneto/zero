@@ -263,7 +263,7 @@
   {
     "id": "sujeito",
     "name": "Sujeito Relacional",
-    "description": "Não substância isolada, mas nó de relações. Subjetivação (Foucault): tornar-se sujeito é processo político. Agência sem agente prévio.",
+    "description": "A morte do sujeito cartesiano é revelação ontológica: somos assembleias materiais-informacionais em perpétua co-constituição. Dissolução do átomo-indivíduo reconhece multiplicidades interdependentes operando em circuitos de feedback recursivos, em múltiplas ordens. Subjetivação (Foucault): tornar-se sujeito é processo político. Agência sem agente prévio.",
     "connections": [
       "agencia",
       "evento",
@@ -3957,5 +3957,19 @@
     ],
     "layer": "ontologica",
     "color": "0x66ccff"
+  },
+  {
+    "id": "cartesianismo",
+    "name": "Dualismo Cartesiano",
+    "description": "Res cogitans (mente) separada de res extensa (matéria). Sujeito autofundado, átomo-indivíduo anterior às relações. Paradigma superado pela ontologia relacional: não há substância pensante isolada, mas assembleias materiais-informacionais em co-constituição.",
+    "connections": [
+      "sujeito",
+      "ontologia",
+      "separabilidade",
+      "individualismo",
+      "modernidade"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
   }
 ]
