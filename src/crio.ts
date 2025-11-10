@@ -25,6 +25,25 @@ const CRIOS_URL = 'docs/CRIOS.md';
 const AUDIO_URL = 'assets/CRIO.mp3';
 const CONCEPTS_URL = 'assets/concepts.json';
 
+// CORES POR CAMADA (sincronizado com rizoma-full.ts)
+const LAYER_COLORS: Record<string, number> = {
+    'ontologica': 0x66ccff,    // Azul claro
+    'politica': 0xff6666,      // Vermelho
+    'pratica': 0x99ccff,       // Azul mais claro
+    'fundacional': 0x9966ff,   // Roxo
+    'epistemica': 0xff9966,    // Laranja
+    'ecologica': 0x66ff99,     // Verde
+    'temporal': 0xcccccc,      // Cinza
+    'etica': 0xffff66          // Amarelo
+};
+
+/**
+ * Obtém a cor de um conceito baseado na sua camada
+ */
+function getColorForLayer(layer: string): number {
+    return LAYER_COLORS[layer] || 0xffffff; // Branco como fallback
+}
+
 // Estado global
 let concepts: Concept[] = [];
 
@@ -92,7 +111,14 @@ async function loadConcepts(): Promise<void> {
             throw new Error(`HTTP ${response.status}: ${response.statusText}`);
         }
         
-        concepts = await response.json();
+        const data = await response.json();
+        
+        // Atribuir cores baseadas na camada
+        concepts = data.map((concept: any) => ({
+            ...concept,
+            color: getColorForLayer(concept.layer)
+        }));
+        
         console.log(`${concepts.length} conceitos carregados com sucesso`);
     } catch (error) {
         console.error('Erro ao carregar conceitos:', error);

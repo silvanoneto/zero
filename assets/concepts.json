@@ -12,8 +12,7 @@
       "sunyata",
       "tempo"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "sunyata",
@@ -26,8 +25,7 @@
       "pratityasamutpada",
       "vazio"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "anatman",
@@ -40,8 +38,7 @@
       "sunyata",
       "vazio"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "pratityasamutpada",
@@ -54,8 +51,7 @@
       "processo",
       "sunyata"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "ontologia",
@@ -70,8 +66,7 @@
       "transindividual",
       "ubuntu"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "multiplicidade",
@@ -89,8 +84,7 @@
       "transindividual",
       "vazio"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "processo",
@@ -110,8 +104,7 @@
       "transindividual",
       "vazio"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "ocasioes",
@@ -126,8 +119,7 @@
       "tempo",
       "vazio"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "devir",
@@ -145,8 +137,7 @@
       "tempo",
       "vazio"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "intracao",
@@ -163,8 +154,7 @@
       "realismo agencial",
       "transindividual"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "recursao",
@@ -184,8 +174,7 @@
       "processo",
       "vazio"
     ],
-    "layer": "epistemica",
-    "color": "0xff9966"
+    "layer": "epistemica"
   },
   {
     "id": "conhecimento",
@@ -206,8 +195,7 @@
       "whakapapa",
       "whanaungatanga"
     ],
-    "layer": "epistemica",
-    "color": "0xff9966"
+    "layer": "epistemica"
   },
   {
     "id": "tempo",
@@ -225,8 +213,7 @@
       "setimagera",
       "vazio"
     ],
-    "layer": "epistemica",
-    "color": "0xff9966"
+    "layer": "epistemica"
   },
   {
     "id": "limite",
@@ -243,8 +230,7 @@
       "tempo",
       "vazio"
     ],
-    "layer": "epistemica",
-    "color": "0xff9966"
+    "layer": "epistemica"
   },
   {
     "id": "agencia",
@@ -260,8 +246,7 @@
       "recursao",
       "sujeito"
     ],
-    "layer": "politica",
-    "color": "0xff6699"
+    "layer": "politica"
   },
   {
     "id": "sujeito",
@@ -276,8 +261,7 @@
       "sujeito",
       "transindividual"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "performatividade",
@@ -293,8 +277,7 @@
       "pratica",
       "sujeito"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "evento",
@@ -311,8 +294,7 @@
       "sujeito",
       "tempo"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "vulnerabilidade",
@@ -327,8 +309,7 @@
       "reproducaosocial",
       "ubuntu"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "precariedade",
@@ -343,8 +324,7 @@
       "normatividade",
       "vulnerabilidade"
     ],
-    "layer": "politica",
-    "color": "0xff6699"
+    "layer": "politica"
   },
   {
     "id": "normatividade",
@@ -358,8 +338,7 @@
       "precariedade",
       "vulnerabilidade"
     ],
-    "layer": "politica",
-    "color": "0xff6699"
+    "layer": "politica"
   },
   {
     "id": "ubuntu",
@@ -374,8 +353,7 @@
       "vulnerabilidade",
       "whanaungatanga"
     ],
-    "layer": "ontologica",
-    "color": "0x99ff99"
+    "layer": "ontologica"
   },
   {
     "id": "indigena",
@@ -393,8 +371,7 @@
       "ubuntu",
       "whanaungatanga"
     ],
-    "layer": "ontologica",
-    "color": "0x99ff99"
+    "layer": "ontologica"
   },
   {
     "id": "placethought",
@@ -409,8 +386,7 @@
       "placethought",
       "terra"
     ],
-    "layer": "ontologica",
-    "color": "0x99ff99"
+    "layer": "ontologica"
   },
   {
     "id": "groundednormativity",
@@ -425,8 +401,7 @@
       "reciprocidade",
       "terra"
     ],
-    "layer": "ontologica",
-    "color": "0x99ff99"
+    "layer": "ontologica"
   },
   {
     "id": "ressurgencia",
@@ -439,8 +414,7 @@
       "indigena",
       "terra"
     ],
-    "layer": "ontologica",
-    "color": "0x66ff99"
+    "layer": "ontologica"
   },
   {
     "id": "whanaungatanga",
@@ -454,8 +428,7 @@
       "placethought",
       "ubuntu"
     ],
-    "layer": "ontologica",
-    "color": "0x99ff99"
+    "layer": "ontologica"
   },
   {
     "id": "reciprocidade",
@@ -470,8 +443,7 @@
       "ubuntu",
       "vulnerabilidade"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "terra",
@@ -489,8 +461,7 @@
       "simbiose",
       "terra"
     ],
-    "layer": "ecologica",
-    "color": "0xffcc66"
+    "layer": "ecologica"
   },
   {
     "id": "commons",
@@ -506,8 +477,7 @@
       "softwarelivre",
       "terra"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "cosmopolitica",
@@ -525,8 +495,7 @@
       "terra",
       "whanaungatanga"
     ],
-    "layer": "ecologica",
-    "color": "0xffcc66"
+    "layer": "ecologica"
   },
   {
     "id": "decrescimento",
@@ -542,8 +511,7 @@
       "reciprocidade",
       "terra"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "holobionte",
@@ -558,8 +526,7 @@
       "simbiose",
       "vulnerabilidade"
     ],
-    "layer": "ecologica",
-    "color": "0xffcc66"
+    "layer": "ecologica"
   },
   {
     "id": "simbiose",
@@ -573,8 +540,7 @@
       "reciprocidade",
       "terra"
     ],
-    "layer": "ecologica",
-    "color": "0xffcc66"
+    "layer": "ecologica"
   },
   {
     "id": "micorriza",
@@ -588,8 +554,7 @@
       "simbiose",
       "terra"
     ],
-    "layer": "ecologica",
-    "color": "0xffcc66"
+    "layer": "ecologica"
   },
   {
     "id": "redesmiceliais",
@@ -604,8 +569,7 @@
       "simbiose",
       "terra"
     ],
-    "layer": "ecologica",
-    "color": "0xffcc66"
+    "layer": "ecologica"
   },
   {
     "id": "extrativismo",
@@ -622,8 +586,7 @@
       "reproducaosocial",
       "terra"
     ],
-    "layer": "ecologica",
-    "color": "0xffcc66"
+    "layer": "ecologica"
   },
   {
     "id": "pratica",
@@ -639,8 +602,7 @@
       "sujeito",
       "tempo"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "cooperativa",
@@ -656,8 +618,7 @@
       "pratica",
       "reciprocidade"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "assembleia",
@@ -670,8 +631,7 @@
       "pratica",
       "sujeito"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "tecnologiaconvivial",
@@ -685,8 +645,7 @@
       "pratica",
       "softwarelivre"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "moedascomunitarias",
@@ -700,8 +659,7 @@
       "pratica",
       "reciprocidade"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "bancostempo",
@@ -714,8 +672,7 @@
       "normatividade",
       "reciprocidade"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "circuloscultura",
@@ -728,8 +685,7 @@
       "performatividade",
       "pratica"
     ],
-    "layer": "pratica",
-    "color": "0xff99cc"
+    "layer": "pratica"
   },
   {
     "id": "afeto",
@@ -743,8 +699,7 @@
       "processo",
       "vulnerabilidade"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "composicao",
@@ -758,8 +713,7 @@
       "multiplicidade",
       "vulnerabilidade"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "softwarelivre",
@@ -772,8 +726,7 @@
       "reciprocidade",
       "tecnologiaconvivial"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "protocoloaberto",
@@ -787,8 +740,7 @@
       "softwarelivre",
       "tecnologiaconvivial"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "criptografia",
@@ -801,8 +753,7 @@
       "tecnologiaconvivial",
       "vulnerabilidade"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "arterelacional",
@@ -816,8 +767,7 @@
       "performatividade",
       "pratica"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "educacaopopular",
@@ -832,8 +782,7 @@
       "performatividade",
       "sujeito"
     ],
-    "layer": "pratica",
-    "color": "0xff99cc"
+    "layer": "pratica"
   },
   {
     "id": "pedagogiaautonomia",
@@ -846,8 +795,7 @@
       "normatividade",
       "vulnerabilidade"
     ],
-    "layer": "pratica",
-    "color": "0xff99cc"
+    "layer": "pratica"
   },
   {
     "id": "desescolarizacao",
@@ -860,8 +808,7 @@
       "reciprocidade",
       "tecnologiaconvivial"
     ],
-    "layer": "pratica",
-    "color": "0xff99cc"
+    "layer": "pratica"
   },
   {
     "id": "riz∅ma",
@@ -877,8 +824,7 @@
       "protocoloaberto",
       "redesmiceliais"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "cuidado",
@@ -893,8 +839,7 @@
       "vulnerabilidade",
       "whanaungatanga"
     ],
-    "layer": "epistemica",
-    "color": "0xff9966"
+    "layer": "epistemica"
   },
   {
     "id": "acumulacaoprimitiva",
@@ -909,8 +854,7 @@
       "necropolitica",
       "reproducaosocial"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "despossessao",
@@ -925,8 +869,7 @@
       "precariedade",
       "reproducaosocial"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "memoriacoletiva",
@@ -942,8 +885,7 @@
       "sujeito",
       "tempo"
     ],
-    "layer": "temporal",
-    "color": "0xcc99ff"
+    "layer": "temporal"
   },
   {
     "id": "ancestralidade",
@@ -960,8 +902,7 @@
       "ubuntu",
       "whakapapa"
     ],
-    "layer": "temporal",
-    "color": "0xcc99ff"
+    "layer": "temporal"
   },
   {
     "id": "hauntologia",
@@ -974,8 +915,7 @@
       "recursao",
       "tempo"
     ],
-    "layer": "temporal",
-    "color": "0xcc99ff"
+    "layer": "temporal"
   },
   {
     "id": "afrofuturismo",
@@ -990,8 +930,7 @@
       "performatividade",
       "tempo"
     ],
-    "layer": "temporal",
-    "color": "0xcc99ff"
+    "layer": "temporal"
   },
   {
     "id": "setimagera",
@@ -1005,8 +944,7 @@
       "tempo",
       "terra"
     ],
-    "layer": "temporal",
-    "color": "0xcc99ff"
+    "layer": "temporal"
   },
   {
     "id": "corposemorgaos",
@@ -1020,8 +958,7 @@
       "multiplicidade",
       "riz∅ma"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "transindividual",
@@ -1035,8 +972,7 @@
       "sujeito",
       "ubuntu"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "reproducaosocial",
@@ -1050,8 +986,7 @@
       "reciprocidade",
       "vulnerabilidade"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "necropolitica",
@@ -1065,8 +1000,7 @@
       "precariedade",
       "vulnerabilidade"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "estratostempo",
@@ -1079,8 +1013,7 @@
       "recursao",
       "tempo"
     ],
-    "layer": "temporal",
-    "color": "0xcc99ff"
+    "layer": "temporal"
   },
   {
     "id": "futuridadequeer",
@@ -1094,8 +1027,7 @@
       "performatividade",
       "tempo"
     ],
-    "layer": "temporal",
-    "color": "0xcc99ff"
+    "layer": "temporal"
   },
   {
     "id": "crítica",
@@ -1108,8 +1040,7 @@
       "política",
       "ética"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "física quântica",
@@ -1123,8 +1054,7 @@
       "ontologia",
       "processo"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "governança",
@@ -1139,8 +1069,7 @@
       "descentralização",
       "pratica"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "RQM",
@@ -1154,8 +1083,7 @@
       "processo",
       "relacionalidade"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "política",
@@ -1170,8 +1098,7 @@
       "pratica",
       "sujeito"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "direitos da natureza",
@@ -1185,8 +1112,7 @@
       "personalidade jurídica",
       "terra"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "economia",
@@ -1200,8 +1126,7 @@
       "extrativismo",
       "mercadorias fictícias"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "ecologia",
@@ -1215,8 +1140,7 @@
       "simbiose",
       "terra"
     ],
-    "layer": "ecologica",
-    "color": "0x66ff99"
+    "layer": "ecologica"
   },
   {
     "id": "super-humeanismo",
@@ -1229,8 +1153,7 @@
       "ontologia",
       "relacionalidade"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "personalidade jurídica",
@@ -1243,8 +1166,7 @@
       "não-humanos",
       "terra"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "heterarquia",
@@ -1257,8 +1179,7 @@
       "descentralização",
       "riz∅ma"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "ética",
@@ -1271,8 +1192,7 @@
       "responsabilidade",
       "vulnerabilidade"
     ],
-    "layer": "etica",
-    "color": "0xffcccc"
+    "layer": "etica"
   },
   {
     "id": "descolonização",
@@ -1286,8 +1206,7 @@
       "indigena",
       "ressurgência"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "consciência",
@@ -1300,8 +1219,7 @@
       "processo",
       "sujeito"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "tecnologia",
@@ -1314,8 +1232,7 @@
       "softwarelivre",
       "tecnologiaconvivial"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "poder",
@@ -1329,8 +1246,7 @@
       "política",
       "pratica"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "madhyamaka",
@@ -1343,8 +1259,7 @@
       "sunyata",
       "vazio"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "Māori",
@@ -1357,8 +1272,7 @@
       "whakapapa",
       "whanaungatanga"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "justiça",
@@ -1371,8 +1285,7 @@
       "vulnerabilidade",
       "ética"
     ],
-    "layer": "etica",
-    "color": "0xffcccc"
+    "layer": "etica"
   },
   {
     "id": "intersubjetividade",
@@ -1385,8 +1298,7 @@
       "transindividual",
       "ubuntu"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "identidade",
@@ -1399,8 +1311,7 @@
       "processo",
       "sujeito"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "buen vivir",
@@ -1413,8 +1324,7 @@
       "decrescimento",
       "indigena"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "budismo",
@@ -1428,8 +1338,7 @@
       "sunyata",
       "vazio"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "violência simbólica",
@@ -1442,8 +1351,7 @@
       "epistemicídio",
       "poder"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "vácuo",
@@ -1455,8 +1363,7 @@
       "vazio",
       "virtualidade"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "sustentabilidade",
@@ -1469,8 +1376,7 @@
       "limite",
       "setimagera"
     ],
-    "layer": "etica",
-    "color": "0xffcccc"
+    "layer": "etica"
   },
   {
     "id": "ressurgência",
@@ -1482,8 +1388,7 @@
       "groundednormativity",
       "indigena"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "responsabilidade",
@@ -1496,8 +1401,7 @@
       "reciprocidade",
       "vulnerabilidade"
     ],
-    "layer": "etica",
-    "color": "0xffcccc"
+    "layer": "etica"
   },
   {
     "id": "relações",
@@ -1510,8 +1414,7 @@
       "processo",
       "relacionalidade"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "relacionalidade",
@@ -1525,8 +1428,7 @@
       "relações",
       "ubuntu"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "propriedade",
@@ -1539,8 +1441,7 @@
       "extrativismo",
       "terra"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "pluralismo",
@@ -1553,8 +1454,7 @@
       "ontologia",
       "relacionalidade"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "Pachamama",
@@ -1567,8 +1467,7 @@
       "indigena",
       "terra"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "neurociência",
@@ -1580,8 +1479,7 @@
       "holobionte",
       "processo"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "nagarjuna",
@@ -1594,8 +1492,7 @@
       "sunyata",
       "vazio"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "democracia",
@@ -1608,8 +1505,7 @@
       "política",
       "pratica"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "descentralização",
@@ -1622,8 +1518,7 @@
       "heterarquia",
       "protocoloaberto"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "desigualdade",
@@ -1636,8 +1531,7 @@
       "extrativismo",
       "justiça"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "emaranhamento",
@@ -1650,8 +1544,7 @@
       "ontologia",
       "relações"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "epistemologia",
@@ -1663,8 +1556,7 @@
       "ontologia",
       "pratica"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "escala",
@@ -1676,8 +1568,7 @@
       "limite",
       "processo"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "espaço-tempo",
@@ -1689,8 +1580,7 @@
       "relações",
       "tempo"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "fatos relativos",
@@ -1703,8 +1593,7 @@
       "ontologia",
       "relacionalidade"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "feminismo",
@@ -1717,8 +1606,7 @@
       "reproducaosocial",
       "vulnerabilidade"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "filosofia africana",
@@ -1730,8 +1618,7 @@
       "ontologia",
       "ubuntu"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "capitalismo",
@@ -1744,8 +1631,7 @@
       "extrativismo",
       "mercadorias fictícias"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "confederalismo",
@@ -1758,8 +1644,7 @@
       "descentralização",
       "municipalismo"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "anti-fundacionalismo",
@@ -1772,8 +1657,7 @@
       "recursao",
       "vazio"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "antropocentrismo",
@@ -1786,8 +1670,7 @@
       "multiespécies",
       "não-humanos"
     ],
-    "layer": "politica",
-    "color": "0xffcc66"
+    "layer": "politica"
   },
   {
     "id": "gênero",
@@ -1800,8 +1683,7 @@
       "performatividade",
       "sujeito"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "não-humanos",
@@ -1814,8 +1696,7 @@
       "direitos da natureza",
       "multiespécies"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "não-localidade",
@@ -1827,8 +1708,7 @@
       "física quântica",
       "relações"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "multiespécies",
@@ -1841,8 +1721,7 @@
       "não-humanos",
       "simbiose"
     ],
-    "layer": "ecologica",
-    "color": "0x66ff99"
+    "layer": "ecologica"
   },
   {
     "id": "epistemicídio",
@@ -1854,8 +1733,7 @@
       "indigena",
       "violência simbólica"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "realismo agencial",
@@ -1867,8 +1745,7 @@
       "ontologia",
       "performatividade"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "liberdade",
@@ -1880,8 +1757,7 @@
       "responsabilidade",
       "vulnerabilidade"
     ],
-    "layer": "etica",
-    "color": "0xffcccc"
+    "layer": "etica"
   },
   {
     "id": "mercadorias fictícias",
@@ -1893,8 +1769,7 @@
       "economia",
       "terra"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "consciência coletiva",
@@ -1907,8 +1782,7 @@
       "sujeito",
       "transindividual"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "autonomia",
@@ -1921,8 +1795,7 @@
       "municipalismo",
       "pedagogiaautonomia"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "espécies companheiras",
@@ -1934,8 +1807,7 @@
       "não-humanos",
       "simbiose"
     ],
-    "layer": "ecologica",
-    "color": "0x66ff99"
+    "layer": "ecologica"
   },
   {
     "id": "Rojava",
@@ -1947,8 +1819,7 @@
       "democracia",
       "municipalismo"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "municipalismo",
@@ -1960,8 +1831,7 @@
       "democracia",
       "descentralização"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "actantes",
@@ -1973,8 +1843,7 @@
       "cosmopolitica",
       "não-humanos"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "whakapapa",
@@ -1987,8 +1856,7 @@
       "indigena",
       "ontologia"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "autogestão",
@@ -2000,8 +1868,7 @@
       "cooperativa",
       "pratica"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "emergência",
@@ -2013,8 +1880,7 @@
       "holobionte",
       "processo"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "origem dependente",
@@ -2026,8 +1892,7 @@
       "pratityasamutpada",
       "relações"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "ator-rede",
@@ -2039,8 +1904,7 @@
       "não-humanos",
       "redes"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "virtualidade",
@@ -2051,8 +1915,7 @@
       "vazio",
       "vácuo"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "classe",
@@ -2064,8 +1927,7 @@
       "desigualdade",
       "política"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "redes",
@@ -2077,8 +1939,7 @@
       "redesmiceliais",
       "riz∅ma"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "biodiversidade",
@@ -2090,8 +1951,7 @@
       "multiespécies",
       "simbiose"
     ],
-    "layer": "ecologica",
-    "color": "0x66ff99"
+    "layer": "ecologica"
   },
   {
     "id": "loop",
@@ -2102,8 +1962,7 @@
       "processo",
       "recursao"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "ocasiões",
@@ -2115,8 +1974,7 @@
       "processo",
       "tempo"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "ação",
@@ -2128,8 +1986,7 @@
       "performatividade",
       "pratica"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "alteridade",
@@ -2141,8 +1998,7 @@
       "vulnerabilidade",
       "ética"
     ],
-    "layer": "etica",
-    "color": "0xffcccc"
+    "layer": "etica"
   },
   {
     "id": "alternativas",
@@ -2155,8 +2011,7 @@
       "decrescimento",
       "imaginação"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "apropriação",
@@ -2168,8 +2023,7 @@
       "extrativismo",
       "propriedade"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "arqueologia",
@@ -2181,8 +2035,7 @@
       "crítica",
       "história"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "autopoiese",
@@ -2194,8 +2047,7 @@
       "processo",
       "sistemas"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "barcelona",
@@ -2207,8 +2059,7 @@
       "municipalismo",
       "tecnologiaconvivial"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "Bell",
@@ -2219,8 +2070,7 @@
       "física quântica",
       "não-localidade"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "campo",
@@ -2231,8 +2081,7 @@
       "poder",
       "vazio"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "caos",
@@ -2243,8 +2092,7 @@
       "ordem",
       "processo"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "CARE",
@@ -2256,8 +2104,7 @@
       "indigena",
       "responsabilidade"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "Chiapas",
@@ -2269,8 +2116,7 @@
       "indigena",
       "municipalismo"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "ciborgue",
@@ -2282,8 +2128,7 @@
       "não-humanos",
       "tecnologia"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "circunscrição",
@@ -2294,8 +2139,7 @@
       "lugar",
       "poder"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "clima",
@@ -2307,8 +2151,7 @@
       "ecologia",
       "justiça"
     ],
-    "layer": "ecologica",
-    "color": "0x66ff99"
+    "layer": "ecologica"
   },
   {
     "id": "colaboração",
@@ -2320,8 +2163,7 @@
       "cooperativa",
       "reciprocidade"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "Colombia",
@@ -2333,8 +2175,7 @@
       "indigena",
       "rio"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "colonialismo",
@@ -2347,8 +2188,7 @@
       "epistemicídio",
       "necropolitica"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "compartilhamento",
@@ -2360,8 +2200,7 @@
       "reciprocidade",
       "softwarelivre"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "comunidade",
@@ -2373,8 +2212,7 @@
       "reciprocidade",
       "ubuntu"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "conjunto vazio",
@@ -2385,8 +2223,7 @@
       "matemática",
       "vazio"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "constituição",
@@ -2398,8 +2235,7 @@
       "direitos da natureza",
       "política"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "cooptação",
@@ -2410,8 +2246,7 @@
       "capitalismo",
       "commons"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "coordenação",
@@ -2423,8 +2258,7 @@
       "heterarquia",
       "protocoloaberto"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "crédito mútuo",
@@ -2435,8 +2269,7 @@
       "moedascomunitarias",
       "reciprocidade"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "criação",
@@ -2448,8 +2281,7 @@
       "processo",
       "virtualidade"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "crimes de guerra",
@@ -2460,8 +2292,7 @@
       "terror",
       "violência simbólica"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "dados",
@@ -2473,8 +2304,7 @@
       "governança",
       "indigena"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "dasein",
@@ -2486,8 +2316,7 @@
       "lugar",
       "ontologia"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "determinismo",
@@ -2498,8 +2327,7 @@
       "física quântica",
       "livre-arbítrio"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "diálogo",
@@ -2511,8 +2339,7 @@
       "educacaopopular",
       "pratica"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "duração",
@@ -2524,8 +2351,7 @@
       "processo",
       "tempo"
     ],
-    "layer": "temporal",
-    "color": "0xcc99ff"
+    "layer": "temporal"
   },
   {
     "id": "economia ecológica",
@@ -2537,8 +2363,7 @@
       "limite",
       "sustentabilidade"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "Ecuador",
@@ -2550,8 +2375,7 @@
       "constituição",
       "direitos da natureza"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "educação",
@@ -2563,8 +2387,7 @@
       "educacaopopular",
       "pedagogiaautonomia"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "emoção",
@@ -2576,8 +2399,7 @@
       "holobionte",
       "neurociência"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "evolução",
@@ -2589,8 +2411,7 @@
       "simbiose",
       "tempo"
     ],
-    "layer": "ecologica",
-    "color": "0x66ff99"
+    "layer": "ecologica"
   },
   {
     "id": "fact-nets",
@@ -2602,8 +2423,7 @@
       "redes",
       "relacionalidade"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "fidelidade",
@@ -2615,8 +2435,7 @@
       "sujeito",
       "verdade"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "filosofia",
@@ -2628,8 +2447,7 @@
       "filosofia africana",
       "indigena"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "finitude",
@@ -2641,8 +2459,7 @@
       "tempo",
       "vulnerabilidade"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "física",
@@ -2653,8 +2470,7 @@
       "física quântica",
       "ontologia"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "floresta",
@@ -2666,8 +2482,7 @@
       "micorriza",
       "terra"
     ],
-    "layer": "ecologica",
-    "color": "0x66ff99"
+    "layer": "ecologica"
   },
   {
     "id": "flutuação",
@@ -2679,8 +2494,7 @@
       "física quântica",
       "vácuo"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "formalização",
@@ -2692,8 +2506,7 @@
       "lógica",
       "matemática"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "fundamentos",
@@ -2705,8 +2518,7 @@
       "recursao",
       "vazio"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "Heidegger",
@@ -2718,8 +2530,7 @@
       "filosofia",
       "ontologia"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "história",
@@ -2731,8 +2542,7 @@
       "memoriacoletiva",
       "tempo"
     ],
-    "layer": "temporal",
-    "color": "0xcc99ff"
+    "layer": "temporal"
   },
   {
     "id": "imaginação",
@@ -2744,8 +2554,7 @@
       "capitalismo",
       "futuridadequeer"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "imaginário",
@@ -2757,8 +2566,7 @@
       "instituição",
       "sociedade"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "implementação",
@@ -2770,8 +2578,7 @@
       "limite",
       "pratica"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "incompletude",
@@ -2783,8 +2590,7 @@
       "limite",
       "matemática"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "individualismo",
@@ -2796,8 +2602,7 @@
       "sujeito",
       "ubuntu"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "instituição",
@@ -2809,8 +2614,7 @@
       "poder",
       "pratica"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "Kenya",
@@ -2822,8 +2626,7 @@
       "reciprocidade",
       "ubuntu"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "libertação",
@@ -2835,8 +2638,7 @@
       "liberdade",
       "pratica"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "liderança",
@@ -2848,8 +2650,7 @@
       "descentralização",
       "governança"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "linguagem",
@@ -2861,8 +2662,7 @@
       "poder",
       "tradução"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "livre-arbítrio",
@@ -2874,8 +2674,7 @@
       "liberdade",
       "responsabilidade"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "lógica",
@@ -2887,8 +2686,7 @@
       "matemática",
       "ontologia"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "lugar",
@@ -2899,8 +2697,7 @@
       "placethought",
       "terra"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "matemática",
@@ -2912,8 +2709,7 @@
       "incompletude",
       "lógica"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "misrecognition",
@@ -2924,8 +2720,7 @@
       "reconhecimento",
       "violência simbólica"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "Mitsein",
@@ -2937,8 +2732,7 @@
       "intersubjetividade",
       "ontologia"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "narrativa",
@@ -2950,8 +2744,7 @@
       "imaginário",
       "performatividade"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "natureza",
@@ -2963,8 +2756,7 @@
       "ecologia",
       "multiespécies"
     ],
-    "layer": "ecologica",
-    "color": "0x66ff99"
+    "layer": "ecologica"
   },
   {
     "id": "novo-materialismo",
@@ -2976,8 +2768,7 @@
       "ontologia",
       "realismo agencial"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "objetividade",
@@ -2988,8 +2779,7 @@
       "epistemologia",
       "responsabilidade"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "ordem",
@@ -3001,8 +2791,7 @@
       "emergência",
       "processo"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "País Basco",
@@ -3013,8 +2802,7 @@
       "economia-solidaria",
       "governança"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "parentesco",
@@ -3026,8 +2814,7 @@
       "ontologia",
       "whakapapa"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "pedagogia",
@@ -3039,8 +2826,7 @@
       "pedagogiaautonomia",
       "pratica"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "perdão",
@@ -3052,8 +2838,7 @@
       "ubuntu",
       "vulnerabilidade"
     ],
-    "layer": "etica",
-    "color": "0xffcccc"
+    "layer": "etica"
   },
   {
     "id": "política ontológica",
@@ -3065,8 +2850,7 @@
       "performatividade",
       "política"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "pragmatismo",
@@ -3078,8 +2862,7 @@
       "pratica",
       "verdade"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "programação",
@@ -3090,8 +2873,7 @@
       "softwarelivre",
       "tecnologia"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "radiação",
@@ -3102,8 +2884,7 @@
       "física quântica",
       "termodinâmica"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "realismo",
@@ -3114,8 +2895,7 @@
       "ontologia",
       "realismo agencial"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "reconciliação",
@@ -3127,8 +2907,7 @@
       "ubuntu",
       "vulnerabilidade"
     ],
-    "layer": "etica",
-    "color": "0xffcccc"
+    "layer": "etica"
   },
   {
     "id": "reconhecimento",
@@ -3140,8 +2919,7 @@
       "misrecognition",
       "sujeito"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "relatividade conceitual",
@@ -3152,8 +2930,7 @@
       "epistemologia",
       "ontologia"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "resiliência",
@@ -3164,8 +2941,7 @@
       "sustentabilidade",
       "vulnerabilidade"
     ],
-    "layer": "ecologica",
-    "color": "0x66ff99"
+    "layer": "ecologica"
   },
   {
     "id": "retrocausalidade",
@@ -3176,8 +2952,7 @@
       "processo",
       "tempo"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "rio",
@@ -3189,8 +2964,7 @@
       "personalidade jurídica",
       "terra"
     ],
-    "layer": "pratica",
-    "color": "0x99ccff"
+    "layer": "pratica"
   },
   {
     "id": "sistemas",
@@ -3201,8 +2975,7 @@
       "emergência",
       "processo"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "soberania",
@@ -3214,8 +2987,7 @@
       "necropolitica",
       "poder"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "socialismo",
@@ -3227,8 +2999,7 @@
       "cooperativa",
       "economia"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "sociedade",
@@ -3240,8 +3011,7 @@
       "instituição",
       "transindividual"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "subjetivação",
@@ -3253,8 +3023,7 @@
       "pratica",
       "sujeito"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "sul global",
@@ -3266,8 +3035,7 @@
       "indigena",
       "justiça"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "switching",
@@ -3278,8 +3046,7 @@
       "fatos relativos",
       "relacionalidade"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "termodinâmica",
@@ -3291,8 +3058,7 @@
       "processo",
       "tempo"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "terror",
@@ -3303,8 +3069,7 @@
       "totalitarismo",
       "violência simbólica"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "totalitarismo",
@@ -3316,8 +3081,7 @@
       "política",
       "terror"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "tradução",
@@ -3329,8 +3093,7 @@
       "linguagem",
       "poder"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "transformação",
@@ -3342,8 +3105,7 @@
       "pratica",
       "processo"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "valores",
@@ -3355,8 +3117,7 @@
       "pratica",
       "ética"
     ],
-    "layer": "etica",
-    "color": "0xffcccc"
+    "layer": "etica"
   },
   {
     "id": "verdade",
@@ -3368,8 +3129,7 @@
       "evento",
       "fidelidade"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "vida",
@@ -3381,8 +3141,7 @@
       "multiespécies",
       "processo"
     ],
-    "layer": "ecologica",
-    "color": "0x66ff99"
+    "layer": "ecologica"
   },
   {
     "id": "kairos",
@@ -3396,8 +3155,7 @@
       "potencial",
       "tempo"
     ],
-    "layer": "temporal",
-    "color": "0xff99cc"
+    "layer": "temporal"
   },
   {
     "id": "cronocracia",
@@ -3411,8 +3169,7 @@
       "resistencia",
       "tempo"
     ],
-    "layer": "temporal",
-    "color": "0xff99cc"
+    "layer": "temporal"
   },
   {
     "id": "anacronia",
@@ -3426,8 +3183,7 @@
       "multitemporal",
       "tempo"
     ],
-    "layer": "temporal",
-    "color": "0xff99cc"
+    "layer": "temporal"
   },
   {
     "id": "multitemporal",
@@ -3441,8 +3197,7 @@
       "setimagera",
       "tempo"
     ],
-    "layer": "temporal",
-    "color": "0xff99cc"
+    "layer": "temporal"
   },
   {
     "id": "devir-imperceptivel",
@@ -3456,8 +3211,7 @@
       "rizoma",
       "vazio"
     ],
-    "layer": "temporal",
-    "color": "0xff99cc"
+    "layer": "temporal"
   },
   {
     "id": "sincronia",
@@ -3471,8 +3225,7 @@
       "multiplicidade",
       "tempo"
     ],
-    "layer": "temporal",
-    "color": "0xff99cc"
+    "layer": "temporal"
   },
   {
     "id": "responsabilidade-infinita",
@@ -3486,8 +3239,7 @@
       "vulnerabilidade",
       "ética"
     ],
-    "layer": "etica",
-    "color": "0xffcccc"
+    "layer": "etica"
   },
   {
     "id": "hospitalidade",
@@ -3501,8 +3253,7 @@
       "vulnerabilidade",
       "ética"
     ],
-    "layer": "etica",
-    "color": "0xffcccc"
+    "layer": "etica"
   },
   {
     "id": "justica-por-vir",
@@ -3516,8 +3267,7 @@
       "potencial",
       "ética"
     ],
-    "layer": "etica",
-    "color": "0xffcccc"
+    "layer": "etica"
   },
   {
     "id": "reparacao",
@@ -3531,8 +3281,7 @@
       "reconciliação",
       "responsabilidade"
     ],
-    "layer": "etica",
-    "color": "0xffcccc"
+    "layer": "etica"
   },
   {
     "id": "cuidado-como-ontologia",
@@ -3546,8 +3295,7 @@
       "ubuntu",
       "vulnerabilidade"
     ],
-    "layer": "etica",
-    "color": "0xffcccc"
+    "layer": "etica"
   },
   {
     "id": "liminaridade",
@@ -3561,8 +3309,7 @@
       "threshold",
       "transformação"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "threshold",
@@ -3576,8 +3323,7 @@
       "tipping-point",
       "transformação"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "traducao-cosmopolitica",
@@ -3591,8 +3337,7 @@
       "indigena",
       "ontologia"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "equivocacao",
@@ -3606,8 +3351,7 @@
       "perspectivismo",
       "traducao-cosmopolitica"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "intersticio",
@@ -3621,8 +3365,7 @@
       "poder",
       "resistencia"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "bifurcacao",
@@ -3636,8 +3379,7 @@
       "processo",
       "threshold"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "tipping-point",
@@ -3651,8 +3393,7 @@
       "threshold",
       "transformação"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "heterotopia",
@@ -3666,8 +3407,7 @@
       "pratica",
       "resistencia"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "communitas",
@@ -3681,8 +3421,7 @@
       "liminaridade",
       "solidariedade"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "geologico",
@@ -3696,8 +3435,7 @@
       "temporalidade",
       "terra"
     ],
-    "layer": "temporal",
-    "color": "0xff99cc"
+    "layer": "temporal"
   },
   {
     "id": "politica-escala",
@@ -3711,8 +3449,7 @@
       "poder",
       "politica"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "impossível",
@@ -3726,8 +3463,7 @@
       "paradoxo",
       "potencial"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "decisão",
@@ -3741,8 +3477,7 @@
       "kairos",
       "responsabilidade"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "paradoxo",
@@ -3756,8 +3491,7 @@
       "pensamento",
       "recursao"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "mesticagem-ontologica",
@@ -3771,8 +3505,7 @@
       "liminaridade",
       "traducao-cosmopolitica"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "fronteira",
@@ -3786,8 +3519,7 @@
       "traducao-cosmopolitica",
       "zona"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "hibridação",
@@ -3805,8 +3537,7 @@
       "multiplicidade",
       "traducao-cosmopolitica"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "aporia",
@@ -3820,8 +3551,7 @@
       "paradoxo",
       "pensamento"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "zona",
@@ -3835,8 +3565,7 @@
       "poder",
       "traducao-cosmopolitica"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "fricção",
@@ -3850,8 +3579,7 @@
       "transformação",
       "zona"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "encontro",
@@ -3865,8 +3593,7 @@
       "intracao",
       "zona"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "contato",
@@ -3880,8 +3607,7 @@
       "multiplicidade",
       "threshold"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "indiscernível",
@@ -3895,8 +3621,7 @@
       "multiplicidade",
       "vazio"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "cartesianismo",
@@ -3909,8 +3634,7 @@
       "separabilidade",
       "sujeito"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "dao",
@@ -3925,8 +3649,7 @@
       "wu-wei",
       "yin-yang"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "wu-wei",
@@ -3940,8 +3663,7 @@
       "pratica",
       "processo"
     ],
-    "layer": "pratica",
-    "color": "0x99ff99"
+    "layer": "pratica"
   },
   {
     "id": "yin-yang",
@@ -3955,8 +3677,7 @@
       "multiplicidade",
       "processo"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "li-confuciano",
@@ -3970,8 +3691,7 @@
       "pratica",
       "reciprocidade"
     ],
-    "layer": "etica",
-    "color": "0xff99cc"
+    "layer": "etica"
   },
   {
     "id": "ren",
@@ -3985,8 +3705,7 @@
       "transindividual",
       "ubuntu"
     ],
-    "layer": "etica",
-    "color": "0xff99cc"
+    "layer": "etica"
   },
   {
     "id": "brahman-atman",
@@ -4001,8 +3720,7 @@
       "sunyata",
       "vazio"
     ],
-    "layer": "fundacional",
-    "color": "0x9966ff"
+    "layer": "fundacional"
   },
   {
     "id": "sankofa",
@@ -4017,8 +3735,7 @@
       "tempo",
       "ubuntu"
     ],
-    "layer": "temporal",
-    "color": "0xcc99ff"
+    "layer": "temporal"
   },
   {
     "id": "ujamaa",
@@ -4033,8 +3750,7 @@
       "reciprocidade",
       "ubuntu"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "mana",
@@ -4049,8 +3765,7 @@
       "sacralidade",
       "terra"
     ],
-    "layer": "ontologica",
-    "color": "0x66ccff"
+    "layer": "ontologica"
   },
   {
     "id": "onto-epistemologia",
@@ -4065,8 +3780,7 @@
       "praticas",
       "relacionalismo-epistemico"
     ],
-    "layer": "epistemica",
-    "color": "0xffcc66"
+    "layer": "epistemica"
   },
   {
     "id": "socio-ecologia",
@@ -4082,8 +3796,7 @@
       "praticas",
       "terra"
     ],
-    "layer": "ecologica",
-    "color": "0x66ff99"
+    "layer": "ecologica"
   },
   {
     "id": "crono-politica",
@@ -4099,8 +3812,7 @@
       "revolucao",
       "tempo"
     ],
-    "layer": "temporal",
-    "color": "0xff99cc"
+    "layer": "temporal"
   },
   {
     "id": "metabolismo-social",
@@ -4115,8 +3827,7 @@
       "socio-ecologia",
       "terra"
     ],
-    "layer": "ecologica",
-    "color": "0x66ff99"
+    "layer": "ecologica"
   },
   {
     "id": "soberania-alimentar",
@@ -4131,8 +3842,7 @@
       "resistencia",
       "terra"
     ],
-    "layer": "pratica",
-    "color": "0xff9966"
+    "layer": "pratica"
   },
   {
     "id": "justica-climatica",
@@ -4147,8 +3857,7 @@
       "resistencia",
       "terra"
     ],
-    "layer": "politica",
-    "color": "0xff6666"
+    "layer": "politica"
   },
   {
     "id": "economia-solidaria",
@@ -4165,8 +3874,7 @@
       "reciprocidade",
       "reproducaosocial"
     ],
-    "layer": "pratica",
-    "color": "0xff9966"
+    "layer": "pratica"
   },
   {
     "id": "infraestrutura-comum",
@@ -4181,8 +3889,7 @@
       "tecnologiaconvivial",
       "terra"
     ],
-    "layer": "pratica",
-    "color": "0xff9966"
+    "layer": "pratica"
   },
   {
     "id": "biomimetica",
@@ -4196,8 +3903,7 @@
       "regeneracao",
       "tecnologiaconvivial"
     ],
-    "layer": "ecologica",
-    "color": "0x66ff99"
+    "layer": "ecologica"
   },
   {
     "id": "agroecologia",
@@ -4212,8 +3918,7 @@
       "soberania-alimentar",
       "terra"
     ],
-    "layer": "ecologica",
-    "color": "0x66ff99"
+    "layer": "ecologica"
   },
   {
     "id": "permacultura",
@@ -4227,8 +3932,7 @@
       "regeneracao",
       "terra"
     ],
-    "layer": "ecologica",
-    "color": "0x66ff99"
+    "layer": "ecologica"
   },
   {
     "id": "regeneracao",
@@ -4243,8 +3947,7 @@
       "tempo",
       "terra"
     ],
-    "layer": "ecologica",
-    "color": "0x66ff99"
+    "layer": "ecologica"
   },
   {
     "id": "ciclos-biogeoquimicos",
@@ -4258,8 +3961,7 @@
       "tempo",
       "terra"
     ],
-    "layer": "ecologica",
-    "color": "0x66ff99"
+    "layer": "ecologica"
   },
   {
     "id": "sucessao-ecologica",
@@ -4273,8 +3975,7 @@
       "regeneracao",
       "tempo"
     ],
-    "layer": "ecologica",
-    "color": "0x66ff99"
+    "layer": "ecologica"
   },
   {
     "id": "mutualismo",
@@ -4288,7 +3989,6 @@
       "reciprocidade",
       "simbiose"
     ],
-    "layer": "ecologica",
-    "color": "0x66ff99"
+    "layer": "ecologica"
   }
 ]

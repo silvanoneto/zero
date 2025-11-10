@@ -110,6 +110,25 @@ let repulsionCounter = 0; // Contador para aplicar repulsão com menos frequênc
 let minConnections = Infinity;
 let maxConnections = 0;
 
+// CORES POR CAMADA
+const LAYER_COLORS = {
+    'ontologica': 0x66ccff,    // Azul claro
+    'politica': 0xff6666,      // Vermelho
+    'pratica': 0x99ccff,       // Azul mais claro
+    'fundacional': 0x9966ff,   // Roxo
+    'epistemica': 0xff9966,    // Laranja
+    'ecologica': 0x66ff99,     // Verde
+    'temporal': 0xcccccc,      // Cinza
+    'etica': 0xffff66          // Amarelo
+};
+
+/**
+ * Obtém a cor de um conceito baseado na sua camada
+ */
+function getColorForLayer(layer: string): number {
+    return LAYER_COLORS[layer] || 0xffffff; // Branco como fallback
+}
+
 // ============================================================================
 
 // Detectar dispositivo fraco automaticamente
@@ -155,10 +174,10 @@ async function loadConcepts() {
         const response = await fetch('assets/concepts.json');
         const data = await response.json();
         
-        // Converter strings hexadecimais para números
+        // Atribuir cores baseadas na camada (não mais no JSON)
         concepts = data.map(concept => ({
             ...concept,
-            color: parseInt(concept.color, 16)
+            color: getColorForLayer(concept.layer)
         }));
         
         console.log(`${concepts.length} conceitos carregados de assets/concepts.json`);
