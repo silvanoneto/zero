@@ -10390,5 +10390,269 @@
     "to": "cuidado",
     "name": "provê",
     "description": "Infraestrutura comum provê cuidado - creches, saúde, apoio mútuo"
+  },
+  {
+    "from": "biomimetica",
+    "to": "natureza",
+    "name": "aprende de",
+    "description": "Biomimética aprende de natureza - 3.8 bilhões de anos de evolução"
+  },
+  {
+    "from": "biomimetica",
+    "to": "tecnologiaconvivial",
+    "name": "inspira",
+    "description": "Biomimética inspira tecnologias conviviais - escala humana, eficiência natural"
+  },
+  {
+    "from": "biomimetica",
+    "to": "regeneracao",
+    "name": "orienta",
+    "description": "Biomimética orienta regeneração - design regenerativo, não apenas sustentável"
+  },
+  {
+    "from": "biomimetica",
+    "to": "ecologia",
+    "name": "fundamenta-se em",
+    "description": "Biomimética fundamenta-se em ecologia - estratégias sistêmicas, não formas isoladas"
+  },
+  {
+    "from": "biomimetica",
+    "to": "processo",
+    "name": "compreende como",
+    "description": "Biomimética compreende natureza como processo - adaptação, auto-organização"
+  },
+  {
+    "from": "biomimetica",
+    "to": "praticas",
+    "name": "se materializa em",
+    "description": "Biomimética se materializa em práticas concretas de design"
+  },
+  {
+    "from": "agroecologia",
+    "to": "terra",
+    "name": "cuida de",
+    "description": "Agroecologia cuida de terra - solo vivo, não substrato inerte"
+  },
+  {
+    "from": "agroecologia",
+    "to": "soberania-alimentar",
+    "name": "pratica",
+    "description": "Agroecologia pratica soberania alimentar - autonomia produtiva"
+  },
+  {
+    "from": "agroecologia",
+    "to": "indigena",
+    "name": "integra conhecimentos de",
+    "description": "Agroecologia integra conhecimentos indígenas - saberes milenares agrícolas"
+  },
+  {
+    "from": "agroecologia",
+    "to": "biodiversidade",
+    "name": "cultiva",
+    "description": "Agroecologia cultiva biodiversidade - policultivo, consórcios, agrofloresta"
+  },
+  {
+    "from": "agroecologia",
+    "to": "metabolismo-social",
+    "name": "reconecta",
+    "description": "Agroecologia reconecta metabolismo social - ciclos de nutrientes fechados"
+  },
+  {
+    "from": "agroecologia",
+    "to": "praticas",
+    "name": "se efetiva em",
+    "description": "Agroecologia se efetiva em práticas camponesas cotidianas"
+  },
+  {
+    "from": "agroecologia",
+    "to": "resistencia",
+    "name": "manifesta",
+    "description": "Agroecologia manifesta resistência - contra agrotóxicos, transgênicos, latifúndio"
+  },
+  {
+    "from": "permacultura",
+    "to": "terra",
+    "name": "cuida de",
+    "description": "Permacultura cuida de terra - primeira ética fundacional"
+  },
+  {
+    "from": "permacultura",
+    "to": "regeneracao",
+    "name": "pratica",
+    "description": "Permacultura pratica regeneração - restaurar sistemas degradados"
+  },
+  {
+    "from": "permacultura",
+    "to": "agroecologia",
+    "name": "dialoga com",
+    "description": "Permacultura dialoga com agroecologia - design + ecologia + tradição"
+  },
+  {
+    "from": "permacultura",
+    "to": "commons",
+    "name": "promove",
+    "description": "Permacultura promove commons - partilha justa como ética"
+  },
+  {
+    "from": "permacultura",
+    "to": "praticas",
+    "name": "se materializa em",
+    "description": "Permacultura se materializa em práticas de design regenerativo"
+  },
+  {
+    "from": "permacultura",
+    "to": "autonomia",
+    "name": "constrói",
+    "description": "Permacultura constrói autonomia - sistemas autossuficientes resilientes"
+  },
+  {
+    "from": "regeneracao",
+    "to": "terra",
+    "name": "restaura",
+    "description": "Regeneração restaura terra - vitalidade de sistemas degradados"
+  },
+  {
+    "from": "regeneracao",
+    "to": "biodiversidade",
+    "name": "recupera",
+    "description": "Regeneração recupera biodiversidade - reflorestamento, renaturalização"
+  },
+  {
+    "from": "regeneracao",
+    "to": "indigena",
+    "name": "aprende de",
+    "description": "Regeneração aprende de povos indígenas - manejo ancestral de territórios"
+  },
+  {
+    "from": "regeneracao",
+    "to": "processo",
+    "name": "é",
+    "description": "Regeneração é processo contínuo - não produto final fixo"
+  },
+  {
+    "from": "regeneracao",
+    "to": "tempo",
+    "name": "exige",
+    "description": "Regeneração exige tempo ecológico - décadas, séculos"
+  },
+  {
+    "from": "regeneracao",
+    "to": "praticas",
+    "name": "se efetiva em",
+    "description": "Regeneração se efetiva em práticas de restauração ecológica"
+  },
+  {
+    "from": "regeneracao",
+    "to": "sucessao-ecologica",
+    "name": "trabalha com",
+    "description": "Regeneração trabalha com sucessão ecológica - não contra processos naturais"
+  },
+  {
+    "from": "ciclos-biogeoquimicos",
+    "to": "natureza",
+    "name": "constitui",
+    "description": "Ciclos biogeoquímicos constituem natureza - circularidade planetária"
+  },
+  {
+    "from": "ciclos-biogeoquimicos",
+    "to": "metabolismo-social",
+    "name": "é rompido por",
+    "description": "Ciclos biogeoquímicos são rompidos por metabolismo capitalista - linearidade destrutiva"
+  },
+  {
+    "from": "ciclos-biogeoquimicos",
+    "to": "terra",
+    "name": "atravessa",
+    "description": "Ciclos biogeoquímicos atravessam terra - carbono, nitrogênio, fósforo, água"
+  },
+  {
+    "from": "ciclos-biogeoquimicos",
+    "to": "processo",
+    "name": "é",
+    "description": "Ciclos biogeoquímicos são processos - não há linearidade, tudo retorna"
+  },
+  {
+    "from": "ciclos-biogeoquimicos",
+    "to": "tempo",
+    "name": "opera em",
+    "description": "Ciclos biogeoquímicos operam em múltiplas escalas temporais"
+  },
+  {
+    "from": "ciclos-biogeoquimicos",
+    "to": "ecologia",
+    "name": "estrutura",
+    "description": "Ciclos biogeoquímicos estruturam ecologia - base material de ecossistemas"
+  },
+  {
+    "from": "sucessao-ecologica",
+    "to": "tempo",
+    "name": "manifesta",
+    "description": "Sucessão ecológica manifesta tempo ecológico - processo direcional contingente"
+  },
+  {
+    "from": "sucessao-ecologica",
+    "to": "processo",
+    "name": "é",
+    "description": "Sucessão ecológica é processo - transformação de comunidades bióticas"
+  },
+  {
+    "from": "sucessao-ecologica",
+    "to": "regeneracao",
+    "name": "guia",
+    "description": "Sucessão ecológica guia regeneração - pioneiras preparam terreno"
+  },
+  {
+    "from": "sucessao-ecologica",
+    "to": "biodiversidade",
+    "name": "aumenta",
+    "description": "Sucessão ecológica aumenta biodiversidade - complexificação gradual"
+  },
+  {
+    "from": "sucessao-ecologica",
+    "to": "natureza",
+    "name": "revela",
+    "description": "Sucessão ecológica revela natureza como devir - não equilíbrio estático"
+  },
+  {
+    "from": "sucessao-ecologica",
+    "to": "ecologia",
+    "name": "estrutura",
+    "description": "Sucessão ecológica estrutura ecologia - conceito-chave de dinâmica ecossistêmica"
+  },
+  {
+    "from": "mutualismo",
+    "to": "simbiose",
+    "name": "exemplifica",
+    "description": "Mutualismo exemplifica simbiose - interdependência benéfica recíproca"
+  },
+  {
+    "from": "mutualismo",
+    "to": "micorriza",
+    "name": "se manifesta em",
+    "description": "Mutualismo se manifesta em micorrizas - fungos-raízes co-constituídos"
+  },
+  {
+    "from": "mutualismo",
+    "to": "reciprocidade",
+    "name": "opera por",
+    "description": "Mutualismo opera por reciprocidade ecológica - trocas mutuamente benéficas"
+  },
+  {
+    "from": "mutualismo",
+    "to": "processo",
+    "name": "é",
+    "description": "Mutualismo é processo - co-constituição contínua de nicho"
+  },
+  {
+    "from": "mutualismo",
+    "to": "biodiversidade",
+    "name": "sustenta",
+    "description": "Mutualismo sustenta biodiversidade - redes de interdependência"
+  },
+  {
+    "from": "mutualismo",
+    "to": "holobionte",
+    "name": "fundamenta",
+    "description": "Mutualismo fundamenta holobionte - organismo como ecossistema"
   }
 ]

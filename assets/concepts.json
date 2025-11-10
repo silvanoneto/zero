@@ -4241,5 +4241,112 @@
     ],
     "layer": "pratica",
     "color": "0xff9966"
+  },
+  {
+    "id": "biomimetica",
+    "name": "Biomimética",
+    "description": "Aprender de 3.8 bilhões de anos de evolução. Janine Benyus: natureza como modelo, medida, mentora. Não é apenas copiar formas - é aprender estratégias: eficiência energética, circularidade material, adaptação local, auto-organização. Exemplos: velcro (sementes de bardana), trem-bala (bico de martim-pescador), concreto autorreparador (conchas marinhas). Design regenerativo, não apenas sustentável.",
+    "connections": [
+      "natureza",
+      "tecnologiaconvivial",
+      "regeneracao",
+      "ecologia",
+      "processo",
+      "praticas"
+    ],
+    "layer": "ecologica",
+    "color": "0x66ff99"
+  },
+  {
+    "id": "agroecologia",
+    "name": "Agroecologia",
+    "description": "Agricultura como ecossistema, não fábrica. Miguel Altieri: integra ecologia + conhecimentos tradicionais + justiça social. Policultivo, rotação, consórcio, agrofloresta - aumentam biodiversidade, ciclam nutrientes, regulam pragas. Vandana Shiva: soberania de sementes. Não é apenas técnica agrícola - é movimento político contra agrotóxicos, transgênicos, latifúndio. MST, Via Campesina.",
+    "connections": [
+      "terra",
+      "soberania-alimentar",
+      "indigena",
+      "biodiversidade",
+      "metabolismo-social",
+      "praticas",
+      "resistencia"
+    ],
+    "layer": "ecologica",
+    "color": "0x66ff99"
+  },
+  {
+    "id": "permacultura",
+    "name": "Permacultura",
+    "description": "Design de sistemas humanos sustentáveis. Bill Mollison/David Holmgren (Austrália, 1970s): permanente + agricultura + cultura. 3 éticas: cuidado com terra, cuidado com pessoas, partilha justa. 12 princípios: observar e interagir, capturar e armazenar energia, ciclos de feedback, usar bordas, integrar não segregar. Não é jardinagem - é filosofia de design aplicável a economia, comunidade, arquitetura.",
+    "connections": [
+      "terra",
+      "regeneracao",
+      "agroecologia",
+      "commons",
+      "praticas",
+      "autonomia"
+    ],
+    "layer": "ecologica",
+    "color": "0x66ff99"
+  },
+  {
+    "id": "regeneracao",
+    "name": "Regeneração Ecológica",
+    "description": "Além de sustentabilidade (manter status quo) - restaurar vitalidade de sistemas degradados. Não é volta a estado primitivo pristino, mas co-evolução adaptativa. Reflorestamento (Wangari Maathai, Green Belt Movement), restauração de rios, renaturalização urbana, rewilding. Indigenous land management: queimadas controladas aborígenes. Regeneração é processo, não produto final.",
+    "connections": [
+      "terra",
+      "biodiversidade",
+      "indigena",
+      "processo",
+      "tempo",
+      "praticas",
+      "sucessao-ecologica"
+    ],
+    "layer": "ecologica",
+    "color": "0x66ff99"
+  },
+  {
+    "id": "ciclos-biogeoquimicos",
+    "name": "Ciclos Biogeoquímicos",
+    "description": "Circularidade planetária de elementos vitais: carbono, nitrogênio, fósforo, água. Lynn Margulis: Gaia como sistema autorregulado de ciclos acoplados. Não há linearidade - tudo retorna. Capitalismo rompe ciclos: extração unidirecional, poluição como externalidade. Antropoceno: perturbação de ciclos (ciclo do carbono, nitrogênio via fertilizantes). Economia circular aprende de ciclos biogeoquímicos.",
+    "connections": [
+      "natureza",
+      "metabolismo-social",
+      "terra",
+      "processo",
+      "tempo",
+      "ecologia"
+    ],
+    "layer": "ecologica",
+    "color": "0x66ff99"
+  },
+  {
+    "id": "sucessao-ecologica",
+    "name": "Sucessão Ecológica",
+    "description": "Tempo ecológico como processo direcional. Comunidades pioneiras (líquens, gramíneas) modificam ambiente, possibilitam espécies subsequentes. Não é teleológico - é contingente. Clímax não é estabilidade permanente - é equilíbrio dinâmico sujeito a perturbações. Anna Tsing: ruínas capitalistas como landscapes de sucessão. Regeneração trabalha com sucessão, não contra.",
+    "connections": [
+      "tempo",
+      "processo",
+      "regeneracao",
+      "biodiversidade",
+      "natureza",
+      "ecologia"
+    ],
+    "layer": "ecologica",
+    "color": "0x66ff99"
+  },
+  {
+    "id": "mutualismo",
+    "name": "Mutualismo Ecológico",
+    "description": "Interdependência como princípio ecológico fundante. Não é altruísmo - é co-constituição de nicho. Micorrizas (fungos-raízes), polinização, fixação de nitrogênio (rhizobium-leguminosas), líquens (alga-fungo). Lynn Margulis: simbiogênese - evolução por cooperação, não apenas competição. Kropotkin: ajuda mútua é fator evolutivo tão importante quanto competição. Mutualismo desafia individualismo metodológico.",
+    "connections": [
+      "simbiose",
+      "micorriza",
+      "reciprocidade",
+      "processo",
+      "biodiversidade",
+      "holobionte"
+    ],
+    "layer": "ecologica",
+    "color": "0x66ff99"
   }
 ]

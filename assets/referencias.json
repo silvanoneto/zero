@@ -2333,5 +2333,143 @@
       "poder",
       "autonomia"
     ]
+  },
+  {
+    "id": "benyus-1997",
+    "categoria": "biomimética",
+    "autor": "Benyus, Janine M.",
+    "ano": 1997,
+    "titulo": "Biomimicry: Innovation Inspired by Nature",
+    "editora": "William Morrow",
+    "relevancia": "Biomimética como disciplina: aprender de 3.8 bilhões de anos de evolução. Natureza como modelo (imitar estratégias), medida (avaliar sustentabilidade) e mentora (mudar visão de mundo). Não é copiar formas - é aprender princípios: eficiência energética, circularidade material, adaptação local, química verde, auto-organização.",
+    "conceitos": [
+      "biomimetica",
+      "natureza",
+      "regeneracao",
+      "ecologia"
+    ]
+  },
+  {
+    "id": "altieri-1995",
+    "categoria": "agroecologia",
+    "autor": "Altieri, Miguel A.",
+    "ano": 1995,
+    "titulo": "Agroecology: The Science of Sustainable Agriculture",
+    "editora": "Westview Press",
+    "relevancia": "Agroecologia como ciência + movimento + prática. Integra ecologia, conhecimentos tradicionais e justiça social. Policultivo, rotação, consórcio aumentam biodiversidade, ciclam nutrientes, regulam pragas sem agrotóxicos. Crítica à revolução verde - monoculturas dependentes de insumos químicos. Soberania alimentar como horizonte.",
+    "conceitos": [
+      "agroecologia",
+      "terra",
+      "soberania-alimentar",
+      "biodiversidade",
+      "metabolismo-social"
+    ]
+  },
+  {
+    "id": "shiva-1991",
+    "categoria": "agroecologia",
+    "autor": "Shiva, Vandana",
+    "ano": 1991,
+    "titulo": "The Violence of the Green Revolution",
+    "editora": "Zed Books",
+    "relevancia": "Revolução verde como violência ecológica e epistêmica. Monoculturas destroem biodiversidade, químicos contaminam água, sementes híbridas/transgênicas patenteadas destroem autonomia camponesa. Soberania de sementes (seed sovereignty) - sementes como commons, não propriedade intelectual. Agroecologia como resistência.",
+    "conceitos": [
+      "agroecologia",
+      "soberania-alimentar",
+      "biodiversidade",
+      "resistencia",
+      "commons"
+    ]
+  },
+  {
+    "id": "mollison-1988",
+    "categoria": "permacultura",
+    "autor": "Mollison, Bill",
+    "ano": 1988,
+    "titulo": "Permaculture: A Designers' Manual",
+    "editora": "Tagari Publications",
+    "relevancia": "Manual fundacional da permacultura. 3 éticas: earth care, people care, fair share. 12 princípios de design: observar e interagir, capturar energia, ciclos de feedback, usar bordas, integrar não segregar, usar soluções pequenas e lentas. Não é jardinagem - é filosofia de design aplicável a todos sistemas humanos.",
+    "conceitos": [
+      "permacultura",
+      "terra",
+      "regeneracao",
+      "commons",
+      "autonomia"
+    ]
+  },
+  {
+    "id": "holmgren-2002",
+    "categoria": "permacultura",
+    "autor": "Holmgren, David",
+    "ano": 2002,
+    "titulo": "Permaculture: Principles and Pathways Beyond Sustainability",
+    "editora": "Holmgren Design Services",
+    "relevancia": "Co-fundador da permacultura atualiza princípios para era de descida energética (energy descent). Além de sustentabilidade (manter) - regeneração (restaurar). Permacultura como resposta a pico do petróleo, mudança climática, colapso ecológico. Design como ferramenta de transição pós-carbono.",
+    "conceitos": [
+      "permacultura",
+      "regeneracao",
+      "decrescimento",
+      "terra"
+    ]
+  },
+  {
+    "id": "maathai-2006",
+    "categoria": "regeneração",
+    "autor": "Maathai, Wangari",
+    "ano": 2006,
+    "titulo": "Unbowed: A Memoir",
+    "editora": "Knopf",
+    "relevancia": "Green Belt Movement (Quênia, 1977): plantio de 51 milhões de árvores por mulheres. Reflorestamento como ecologia + empoderamento + democracia. Regeneração não é volta ao pristino - é co-evolução adaptativa. Nobel da Paz 2004. Regeneração ecológica é inseparável de justiça social e gênero.",
+    "conceitos": [
+      "regeneracao",
+      "terra",
+      "resistencia",
+      "praticas"
+    ]
+  },
+  {
+    "id": "margulis-1998",
+    "categoria": "ciclos-biogeoquímicos",
+    "autor": "Margulis, Lynn; Sagan, Dorion",
+    "ano": 1998,
+    "titulo": "What Is Life?",
+    "editora": "University of California Press",
+    "relevancia": "Gaia como sistema de ciclos biogeoquímicos acoplados e autorregulados. Vida não se adapta passivamente a ambiente - co-cria condições planetárias. Ciclos de carbono, nitrogênio, enxofre, oxigênio são mediados por microorganismos. Simbiogênese: evolução por cooperação. Circularidade planetária.",
+    "conceitos": [
+      "ciclos-biogeoquimicos",
+      "natureza",
+      "mutualismo",
+      "processo"
+    ]
+  },
+  {
+    "id": "tsing-2015",
+    "categoria": "sucessão-ecológica",
+    "autor": "Tsing, Anna Lowenhaupt",
+    "ano": 2015,
+    "titulo": "The Mushroom at the End of the World",
+    "editora": "Princeton University Press",
+    "relevancia": "Matsutake em ruínas capitalistas - sucessão ecológica em paisagens perturbadas. Não há clímax estável - há assemblages precárias. Sucessão como processo contingente, não teleológico. 'Artes de viver em ruínas capitalistas' - habitar antropoceno sem garantias. Colaborações interespecíficas.",
+    "conceitos": [
+      "sucessao-ecologica",
+      "mutualismo",
+      "tempo",
+      "processo"
+    ]
+  },
+  {
+    "id": "kropotkin-1902",
+    "categoria": "mutualismo",
+    "autor": "Kropotkin, Piotr",
+    "ano": 1902,
+    "titulo": "Mutual Aid: A Factor of Evolution",
+    "editora": "Heinemann",
+    "relevancia": "Ajuda mútua é fator evolutivo tão importante quanto competição. Crítica ao darwinismo social que enfatiza apenas luta. Exemplos de mutualismo: formigas, abelhas, mamíferos sociais, comunidades humanas. Anarquismo como extensão de princípio cooperativo natural. Kropotkin + Margulis: evolução por cooperação.",
+    "conceitos": [
+      "mutualismo",
+      "reciprocidade",
+      "simbiose",
+      "processo"
+    ]
   }
 ]
