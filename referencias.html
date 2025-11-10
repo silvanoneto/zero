@@ -12,8 +12,12 @@
     
     <!-- Reader Mode Support -->
     <meta property="article:published_time" content="2025-11-09T00:00:00Z">
+    <meta property="article:modified_time" content="2025-11-09T00:00:00Z">
     <meta property="article:author" content="Revolução Cibernética">
     <meta property="article:section" content="Referências">
+    <meta property="article:tag" content="Filosofia">
+    <meta property="article:tag" content="Referências Bibliográficas">
+    <meta property="article:tag" content="Ontologia Relacional">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://revolucaocibernetica.com/referencias.html">
@@ -220,6 +224,16 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             font-family: inherit;
             font-weight: 500;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .period-preset-btn .count {
+            font-size: 0.75rem;
+            opacity: 0.6;
+            font-weight: 400;
         }
 
         .period-preset-btn:hover {
@@ -232,6 +246,33 @@
             background: linear-gradient(135deg, rgba(153, 102, 255, 0.25), rgba(102, 204, 255, 0.25));
             color: var(--emergence);
             border-color: var(--emergence);
+        }
+
+        .period-preset-btn.active .count {
+            opacity: 0.8;
+        }
+
+        body.light-theme .period-preset-btn {
+            background: rgba(10, 10, 10, 0.03);
+            border-color: rgba(10, 10, 10, 0.1);
+        }
+
+        body.light-theme .period-preset-btn:hover {
+            background: rgba(10, 10, 10, 0.08);
+            border-color: rgba(102, 102, 255, 0.4);
+        }
+
+        body.light-theme .period-preset-btn.active {
+            background: linear-gradient(135deg, rgba(102, 102, 255, 0.2), rgba(51, 153, 255, 0.2));
+        }
+
+        body.light-theme .period-range {
+            background: rgba(10, 10, 10, 0.1);
+        }
+
+        body.light-theme .period-display span {
+            background: rgba(102, 102, 255, 0.15);
+            border-color: rgba(102, 102, 255, 0.3);
         }
 
         .filter-buttons {
@@ -648,10 +689,25 @@
 
             .period-display {
                 font-size: 0.85rem;
+                flex-wrap: wrap;
+                gap: 0.3rem;
             }
 
             .period-display span {
                 padding: 0.25rem 0.6rem;
+            }
+
+            .period-presets {
+                gap: 0.4rem;
+            }
+
+            .period-preset-btn {
+                padding: 0.5rem 0.8rem;
+                font-size: 0.8rem;
+            }
+
+            .period-preset-btn .count {
+                font-size: 0.7rem;
             }
 
             .tag {
@@ -720,7 +776,8 @@
                         min="1600" 
                         max="2025" 
                         value="1600"
-                        step="1"
+                        step="5"
+                        aria-label="Ano inicial do período"
                     >
                     <input 
                         type="range" 
@@ -729,7 +786,8 @@
                         min="1600" 
                         max="2025" 
                         value="2025"
-                        step="1"
+                        step="5"
+                        aria-label="Ano final do período"
                     >
                     <div class="period-display">
                         <span id="year-min-display">1600</span>
@@ -739,13 +797,15 @@
                 </div>
             </div>
             <div class="period-group">
-                <div class="filter-label">Períodos Predefinidos</div>
+                <div class="filter-label">📖 Períodos Filosóficos</div>
                 <div class="period-presets">
-                    <button class="period-preset-btn" onclick="setPeriod(1600, 2025)">Todos</button>
-                    <button class="period-preset-btn" onclick="setPeriod(1600, 1900)">Clássicos</button>
-                    <button class="period-preset-btn" onclick="setPeriod(1900, 1970)">Séc. XX Início</button>
-                    <button class="period-preset-btn" onclick="setPeriod(1970, 2000)">Séc. XX Fim</button>
-                    <button class="period-preset-btn" onclick="setPeriod(2000, 2025)">Contemporâneos</button>
+                    <button class="period-preset-btn active" onclick="setPeriod(1600, 2025)" title="Todas as referências">Todos</button>
+                    <button class="period-preset-btn" onclick="setPeriod(1600, 1800)" title="Racionalismo e Empirismo">Modernos</button>
+                    <button class="period-preset-btn" onclick="setPeriod(1780, 1900)" title="Kant, Hegel, Nietzsche">Idealismo</button>
+                    <button class="period-preset-btn" onclick="setPeriod(1900, 1950)" title="Fenomenologia, Existencialismo">Séc. XX Early</button>
+                    <button class="period-preset-btn" onclick="setPeriod(1950, 1990)" title="Estruturalismo, Pós-estruturalismo">Pós-Guerra</button>
+                    <button class="period-preset-btn" onclick="setPeriod(1990, 2010)" title="Ontologia relacional emerge">Virada Relacional</button>
+                    <button class="period-preset-btn" onclick="setPeriod(2010, 2025)" title="Desenvolvimentos mais recentes">Últimas Décadas</button>
                 </div>
             </div>
         </div>
@@ -845,7 +905,11 @@
             document.querySelectorAll('.period-preset-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
-            event.target.classList.add('active');
+            
+            // Marcar o botão clicado como ativo
+            if (event && event.target) {
+                event.target.classList.add('active');
+            }
             
             renderReferencias();
         }
@@ -906,6 +970,43 @@
                 btn.dataset.category = cat;
                 btn.onclick = () => setFilter(cat);
                 container.appendChild(btn);
+            });
+            
+            // Atualizar contadores de períodos
+            updatePeriodCounts();
+        }
+
+        // Atualizar contadores de referências por período
+        function updatePeriodCounts() {
+            const periods = [
+                { min: 1600, max: 2025, selector: 0 },
+                { min: 1600, max: 1800, selector: 1 },
+                { min: 1780, max: 1900, selector: 2 },
+                { min: 1900, max: 1950, selector: 3 },
+                { min: 1950, max: 1990, selector: 4 },
+                { min: 1990, max: 2010, selector: 5 },
+                { min: 2010, max: 2025, selector: 6 }
+            ];
+
+            const buttons = document.querySelectorAll('.period-preset-btn');
+            
+            periods.forEach(({ min, max, selector }) => {
+                const count = referencias.filter(r => {
+                    const year = extractYear(r.ano);
+                    return year >= min && year <= max;
+                }).length;
+                
+                const btn = buttons[selector];
+                if (btn) {
+                    // Encontrar ou criar span de contagem
+                    let countSpan = btn.querySelector('.count');
+                    if (!countSpan) {
+                        countSpan = document.createElement('span');
+                        countSpan.className = 'count';
+                        btn.appendChild(countSpan);
+                    }
+                    countSpan.textContent = `(${count})`;
+                }
             });
         }
 
