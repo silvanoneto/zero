@@ -2033,5 +2033,119 @@
       "pré-individual",
       "informacao"
     ]
+  },
+  {
+    "id": "laozi-tao",
+    "categoria": "ontológica",
+    "autor": "Lǎozǐ (老子)",
+    "ano": -400,
+    "titulo": "Dàodéjīng (道德經)",
+    "editora": "Tradições orais compiladas séc. IV AEC",
+    "relevancia": "Texto fundacional do Daoísmo. 'Dao que pode ser dito não é o Dao eterno'. Wú (vazio) e wú wéi (não-ação) como princípios ontológicos e políticos. Crítica ao governo coercitivo.",
+    "conceitos": [
+      "dao",
+      "wu-wei",
+      "vazio",
+      "processo",
+      "ontologia",
+      "autonomia"
+    ]
+  },
+  {
+    "id": "analectos-confucio",
+    "categoria": "ética",
+    "autor": "Kǒngzǐ (孔子 - Confúcio)",
+    "ano": -479,
+    "titulo": "Lúnyǔ (論語 - Analectos)",
+    "editora": "Compilado por discípulos pós-morte",
+    "relevancia": "Fundamento da ética relacional confuciana. Rén (仁 benevolência), Lǐ (禮 ritual), Jūnzǐ (君子 pessoa exemplar) como virtudes relacionais. Identidade emerge de performance de papéis sociais.",
+    "conceitos": [
+      "ren",
+      "li-confuciano",
+      "reciprocidade",
+      "performatividade",
+      "cuidado"
+    ]
+  },
+  {
+    "id": "shankara-vedanta",
+    "categoria": "ontológica",
+    "autor": "Ādi Śaṅkara (आदि शङ्कर)",
+    "ano": 788,
+    "titulo": "Vivekacūḍāmaṇi (विवेकचूडामणि)",
+    "editora": "Advaita Vedanta (não-dualismo)",
+    "relevancia": "Sistemização do Advaita Vedanta. Brahman-Ātman identidade: realidade última e si-mesmo são não-duais. Māyā (ilusão) como véu da multiplicidade sobre unidade.",
+    "conceitos": [
+      "brahman-atman",
+      "ontologia",
+      "não-dualidade",
+      "sujeito",
+      "multiplicidade"
+    ]
+  },
+  {
+    "id": "nyerere-1968",
+    "categoria": "política",
+    "autor": "Nyerere, Julius",
+    "ano": 1968,
+    "titulo": "Ujamaa: Essays on Socialism",
+    "editora": "Oxford University Press",
+    "relevancia": "Ujamaa como socialismo africano - não importação soviética mas extensão de valores tradicionais. Família estendida como modelo econômico. Autodeterminação contra neocolonialismo.",
+    "conceitos": [
+      "ujamaa",
+      "ubuntu",
+      "commons",
+      "autonomia",
+      "anticolonial",
+      "cooperativas"
+    ]
+  },
+  {
+    "id": "temple-akan",
+    "categoria": "temporal",
+    "autor": "Temple, Placide",
+    "ano": 1945,
+    "titulo": "La Philosophie Bantoue",
+    "editora": "Présence Africaine",
+    "relevancia": "Primeira sistematização de filosofia africana (controversa por autor belga). Sankofa como epistemologia temporal Akan: futuro construído recuperando passado. Tempo cíclico não-linear.",
+    "conceitos": [
+      "sankofa",
+      "tempo",
+      "ancestralidade",
+      "ubuntu",
+      "africana"
+    ]
+  },
+  {
+    "id": "sahlins-1985",
+    "categoria": "ontológica",
+    "autor": "Sahlins, Marshall",
+    "ano": 1985,
+    "titulo": "Islands of History",
+    "editora": "University of Chicago Press",
+    "relevancia": "Mana como poder relacional polinésio. Não é substância mística mas intensidade de relações cultivadas. Chefes têm mana através de generosidade - poder como distribuição, não acumulação.",
+    "conceitos": [
+      "mana",
+      "poder",
+      "reciprocidade",
+      "ontologia",
+      "distribuído"
+    ]
+  },
+  {
+    "id": "hall-ames-1987",
+    "categoria": "ontológica",
+    "autor": "Hall, David L.; Ames, Roger T.",
+    "ano": 1987,
+    "titulo": "Thinking Through Confucius",
+    "editora": "SUNY Press",
+    "relevancia": "Confucionismo como ontologia relacional processual. Contraste com substancialismo grego. Rén como 'tornar-se humano com outros' - identidade transitiva não substantiva.",
+    "conceitos": [
+      "ren",
+      "li-confuciano",
+      "ontologia",
+      "processo",
+      "transindividual"
+    ]
   }
 ]

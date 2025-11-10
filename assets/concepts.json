@@ -3971,5 +3971,145 @@
     ],
     "layer": "epistemica",
     "color": "0xffcc66"
+  },
+  {
+    "id": "dao",
+    "name": "Dào (道 - Caminho)",
+    "description": "Princípio inefável que precede e permeia todas as coisas. Não é ente, mas processo gerador de todos os entes. 'Dao que pode ser nomeado não é o Dao eterno' - apofatismo ontológico. Wú (無 vazio) e Yǒu (有 ser) emergem mutuamente do Dao.",
+    "connections": [
+      "vazio",
+      "processo",
+      "ontologia",
+      "wu-wei",
+      "yin-yang",
+      "sunyata",
+      "apofatismo"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "wu-wei",
+    "name": "Wú Wéi (無為 - Não-Ação)",
+    "description": "Não é passividade, mas ação alinhada com padrões naturais. Agir sem forçar, fluir com processos emergentes. Eficácia através de não-interferência. Crítica à vontade imperial que impõe ordem artificial.",
+    "connections": [
+      "dao",
+      "autonomia",
+      "processo",
+      "emergencia",
+      "pratica",
+      "aceleracionismo"
+    ],
+    "layer": "pratica",
+    "color": "0x99ff99"
+  },
+  {
+    "id": "yin-yang",
+    "name": "Yīn-Yáng (陰陽)",
+    "description": "Dualidade dinâmica não-dualista. Pólos não são opostos fixos mas fases de transformação mútua. Cada um contém semente do outro. Relacionalidade sem síntese dialética - tensão produtiva permanente.",
+    "connections": [
+      "dao",
+      "processo",
+      "multiplicidade",
+      "diferença",
+      "devir",
+      "complementaridade"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
+  },
+  {
+    "id": "li-confuciano",
+    "name": "Lǐ (禮 - Ritual/Propriedade)",
+    "description": "Não são regras externas impostas, mas cultivo relacional de padrões harmônicos. Ética como coreografia social - identidade emerge de performance de papéis relacionais. Crítica confuciana ao individualismo.",
+    "connections": [
+      "performatividade",
+      "normatividade",
+      "reciprocidade",
+      "cuidado",
+      "comunidade",
+      "pratica"
+    ],
+    "layer": "etica",
+    "color": "0xff99cc"
+  },
+  {
+    "id": "ren",
+    "name": "Rén (仁 - Humanidade/Benevolência)",
+    "description": "Virtude relacional por excelência. Ideograma: pessoa (人) + dois (二) = humanidade emerge entre pessoas. Não é propriedade individual mas qualidade de relações. Ubuntu confuciano.",
+    "connections": [
+      "ubuntu",
+      "li-confuciano",
+      "cuidado",
+      "reciprocidade",
+      "transindividual",
+      "comunidade"
+    ],
+    "layer": "etica",
+    "color": "0xff99cc"
+  },
+  {
+    "id": "brahman-atman",
+    "name": "Brahman-Ātman (Vedanta)",
+    "description": "Não-dualidade radical: Brahman (realidade absoluta) e Ātman (si-mesmo) são idênticos. 'Tat tvam asi' - Tu és Isso. Dissolução de fronteira sujeito-objeto. Māyā (ilusão) não é falsidade mas multiplicidade que vela unidade.",
+    "connections": [
+      "anatman",
+      "sunyata",
+      "ontologia",
+      "sujeito",
+      "vazio",
+      "multiplicidade",
+      "ilusão"
+    ],
+    "layer": "fundacional",
+    "color": "0x9966ff"
+  },
+  {
+    "id": "sankofa",
+    "name": "Sankofa (Akan - Gana)",
+    "description": "Pássaro mítico que voa para frente olhando para trás, ovo precioso no bico. 'Não é tabu voltar e buscar o que esqueceu'. Futuro se constrói recuperando sabedoria ancestral. Temporalidade não-linear africana - passado habita presente.",
+    "connections": [
+      "tempo",
+      "hauntologia",
+      "ancestralidade",
+      "memoria",
+      "futuro",
+      "recursao",
+      "ubuntu"
+    ],
+    "layer": "temporal",
+    "color": "0xcc99ff"
+  },
+  {
+    "id": "ujamaa",
+    "name": "Ujamaa (Swahili - Familyhood)",
+    "description": "Socialismo africano de Nyerere (Tanzânia). Não é coletivismo imposto mas extensão de valores comunitários tradicionais. Produção cooperativa, propriedade comunal, autodeterminação. Commons africanos contra colonial-capitalismo.",
+    "connections": [
+      "ubuntu",
+      "commons",
+      "autonomia",
+      "cooperativas",
+      "comunidade",
+      "anticolonial",
+      "reciprocidade"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "mana",
+    "name": "Mana (Polinésia/Melanésia)",
+    "description": "Poder espiritual que flui através de pessoas, lugares, objetos. Não é propriedade mas intensidade relacional. Chefes têm mana não por essência mas por relações que cultivam. Ontologia de intensidades distribuídas, não substâncias localizadas.",
+    "connections": [
+      "poder",
+      "ontologia",
+      "intensidade",
+      "processo",
+      "distribuído",
+      "terra",
+      "sacralidade"
+    ],
+    "layer": "ontologica",
+    "color": "0x66ccff"
   }
 ]

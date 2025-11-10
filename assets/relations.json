@@ -9814,5 +9814,203 @@
     "to": "sujeito",
     "name": "é superado por",
     "description": "Cartesianismo (res cogitans separada) é superado por sujeito relacional"
+  },
+  {
+    "from": "dao",
+    "to": "vazio",
+    "name": "emerge de",
+    "description": "Dao emerge de Wú (無 vazio) - vazio generativo que precede ser"
+  },
+  {
+    "from": "dao",
+    "to": "pratityasamutpada",
+    "name": "converge com",
+    "description": "Dao converge com pratītyasamutpāda - relacionalidade fundacional"
+  },
+  {
+    "from": "dao",
+    "to": "processo",
+    "name": "é",
+    "description": "Dao não é ente mas processo - devir que gera todos os devires"
+  },
+  {
+    "from": "wu-wei",
+    "to": "autonomia",
+    "name": "pratica",
+    "description": "Wú wéi pratica autonomia como alinhamento com padrões emergentes"
+  },
+  {
+    "from": "wu-wei",
+    "to": "aceleracionismo",
+    "name": "problematiza",
+    "description": "Wú wéi problematiza aceleracionismo - eficácia vem de não-forçar"
+  },
+  {
+    "from": "wu-wei",
+    "to": "commons",
+    "name": "cultiva",
+    "description": "Wú wéi cultiva commons através de governança não-coercitiva"
+  },
+  {
+    "from": "yin-yang",
+    "to": "diferença",
+    "name": "articula",
+    "description": "Yīn-yáng articula diferença como dualidade produtiva não-sintética"
+  },
+  {
+    "from": "yin-yang",
+    "to": "devir",
+    "name": "é modelo de",
+    "description": "Yīn-yáng é modelo de devir - transformação mútua contínua"
+  },
+  {
+    "from": "yin-yang",
+    "to": "complementaridade",
+    "name": "exemplifica",
+    "description": "Yīn-yáng exemplifica complementaridade quântica - pólos inseparáveis"
+  },
+  {
+    "from": "li-confuciano",
+    "to": "performatividade",
+    "name": "antecipa",
+    "description": "Lǐ antecipa performatividade - identidade como prática relacional"
+  },
+  {
+    "from": "li-confuciano",
+    "to": "normatividade",
+    "name": "cultiva",
+    "description": "Lǐ cultiva normatividade relacional através de ritual"
+  },
+  {
+    "from": "li-confuciano",
+    "to": "cuidado",
+    "name": "pratica",
+    "description": "Lǐ pratica ética do cuidado como cultivo de relações harmônicas"
+  },
+  {
+    "from": "ren",
+    "to": "ubuntu",
+    "name": "ressoa com",
+    "description": "Rén ressoa com ubuntu - humanidade como fenômeno relacional"
+  },
+  {
+    "from": "ren",
+    "to": "transindividual",
+    "name": "é",
+    "description": "Rén é transindividual confuciano - virtude emerge entre pessoas"
+  },
+  {
+    "from": "ren",
+    "to": "reciprocidade",
+    "name": "fundamenta-se em",
+    "description": "Rén fundamenta-se em reciprocidade - 己所不欲,勿施於人"
+  },
+  {
+    "from": "brahman-atman",
+    "to": "anatman",
+    "name": "dialoga com",
+    "description": "Brahman-Ātman (não-dualidade) dialoga com anātman (não-eu) - caminhos distintos"
+  },
+  {
+    "from": "brahman-atman",
+    "to": "sunyata",
+    "name": "contrasta com",
+    "description": "Brahman (plenitude) contrasta com śūnyatā (vacuidade) - debates históricos"
+  },
+  {
+    "from": "brahman-atman",
+    "to": "ontologia",
+    "name": "contribui para",
+    "description": "Vedanta contribui para ontologia relacional - sujeito-objeto não-dual"
+  },
+  {
+    "from": "sankofa",
+    "to": "hauntologia",
+    "name": "ressoa com",
+    "description": "Sankofa ressoa com hauntologia - passado assombra e possibilita futuro"
+  },
+  {
+    "from": "sankofa",
+    "to": "tempo",
+    "name": "reconceituaLiza",
+    "description": "Sankofa reconceitualiza tempo - futuro construído recuperando passado"
+  },
+  {
+    "from": "sankofa",
+    "to": "ancestralidade",
+    "name": "honra",
+    "description": "Sankofa honra ancestralidade como sabedoria viva no presente"
+  },
+  {
+    "from": "ujamaa",
+    "to": "commons",
+    "name": "implementa",
+    "description": "Ujamaa implementa commons africanos - propriedade comunal tradicional"
+  },
+  {
+    "from": "ujamaa",
+    "to": "ubuntu",
+    "name": "emerge de",
+    "description": "Ujamaa emerge de ubuntu - economia da interdependência"
+  },
+  {
+    "from": "ujamaa",
+    "to": "cooperativas",
+    "name": "organiza-se em",
+    "description": "Ujamaa organiza-se em cooperativas de produção familiar"
+  },
+  {
+    "from": "ujamaa",
+    "to": "anticolonial",
+    "name": "é prática",
+    "description": "Ujamaa é prática anticolonial - autodeterminação econômica"
+  },
+  {
+    "from": "mana",
+    "to": "poder",
+    "name": "reconceituaLiza",
+    "description": "Mana reconceitualiza poder - não propriedade mas intensidade relacional"
+  },
+  {
+    "from": "mana",
+    "to": "ontologia",
+    "name": "fundamenta",
+    "description": "Mana fundamenta ontologia de intensidades distribuídas"
+  },
+  {
+    "from": "mana",
+    "to": "terra",
+    "name": "flui através de",
+    "description": "Mana flui através de terra - lugares têm poder espiritual"
+  },
+  {
+    "from": "indigena",
+    "to": "dao",
+    "name": "dialoga com",
+    "description": "Cosmologias indígenas dialogam com Daoísmo - relacionalidade não-ocidental"
+  },
+  {
+    "from": "indigena",
+    "to": "mana",
+    "name": "compartilha",
+    "description": "Pensamento indígena compartilha noção de poder distribuído (mana/orenda)"
+  },
+  {
+    "from": "ontologia",
+    "to": "dao",
+    "name": "aprende de",
+    "description": "Ontologia relacional aprende de Dao - processo precede substância"
+  },
+  {
+    "from": "ontologia",
+    "to": "brahman-atman",
+    "name": "aprende de",
+    "description": "Ontologia relacional aprende de Vedanta - não-dualidade sujeito-objeto"
+  },
+  {
+    "from": "reciprocidade",
+    "to": "ren",
+    "name": "é cultivada por",
+    "description": "Reciprocidade é cultivada por rén - virtude confuciana relacional"
   }
 ]
