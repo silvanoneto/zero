@@ -10654,5 +10654,161 @@
     "to": "holobionte",
     "name": "fundamenta",
     "description": "Mutualismo fundamenta holobionte - organismo como ecossistema"
+  },
+  {
+    "from": "sucessao-ecologica",
+    "to": "memoriacoletiva",
+    "name": "inscreve",
+    "description": "Sucessão ecológica inscreve memória coletiva - paisagem como arquivo temporal"
+  },
+  {
+    "from": "sucessao-ecologica",
+    "to": "ancestralidade",
+    "name": "carrega",
+    "description": "Sucessão ecológica carrega ancestralidade - espécies pioneiras legam condições"
+  },
+  {
+    "from": "ciclos-biogeoquimicos",
+    "to": "duração",
+    "name": "manifesta",
+    "description": "Ciclos biogeoquímicos manifestam duração - tempos profundos planetários"
+  },
+  {
+    "from": "regeneracao",
+    "to": "futuridadequeer",
+    "name": "pratica",
+    "description": "Regeneração pratica futuridade queer - futuros além de reprodução heteronormativa"
+  },
+  {
+    "from": "biodiversidade",
+    "to": "multiplicidade",
+    "name": "é",
+    "description": "Biodiversidade é multiplicidade - diferença sem fusão no domínio ecológico"
+  },
+  {
+    "from": "responsabilidade",
+    "to": "cuidado",
+    "name": "se efetiva em",
+    "description": "Responsabilidade ética se efetiva em práticas de cuidado"
+  },
+  {
+    "from": "responsabilidade",
+    "to": "infraestrutura-comum",
+    "name": "exige",
+    "description": "Responsabilidade exige infraestrutura comum - sistemas de reprodução social compartilhados"
+  },
+  {
+    "from": "justiça",
+    "to": "soberania-alimentar",
+    "name": "se materializa em",
+    "description": "Justiça se materializa em soberania alimentar - direito à autodeterminação"
+  },
+  {
+    "from": "justiça",
+    "to": "economia-solidaria",
+    "name": "orienta",
+    "description": "Justiça orienta economia solidária - repartição igualitária, não acumulação"
+  },
+  {
+    "from": "sustentabilidade",
+    "to": "regeneracao",
+    "name": "é superada por",
+    "description": "Sustentabilidade é superada por regeneração - não apenas manter, mas restaurar"
+  },
+  {
+    "from": "sustentabilidade",
+    "to": "agroecologia",
+    "name": "se pratica em",
+    "description": "Sustentabilidade se pratica em agroecologia - ciclagem de nutrientes, biodiversidade"
+  },
+  {
+    "from": "alteridade",
+    "to": "cosmopolitica",
+    "name": "fundamenta",
+    "description": "Alteridade fundamenta cosmopolítica - reconhecimento de outros modos de existência"
+  },
+  {
+    "from": "alteridade",
+    "to": "indigena",
+    "name": "reconhece em",
+    "description": "Alteridade reconhece em povos indígenas - ontologias radicalmente outras"
+  },
+  {
+    "from": "ontologia",
+    "to": "cosmopolitica",
+    "name": "fundamenta",
+    "description": "Ontologia relacional fundamenta cosmopolítica - realidades múltiplas em fricção"
+  },
+  {
+    "from": "ontologia",
+    "to": "resistencia",
+    "name": "habilita",
+    "description": "Ontologia relacional habilita resistência - sujeito não substancial pode se transformar"
+  },
+  {
+    "from": "vazio",
+    "to": "bifurcacao",
+    "name": "possibilita",
+    "description": "Vazio fundacional possibilita bifurcação - indeterminação abre futuros alternativos"
+  },
+  {
+    "from": "pratityasamutpada",
+    "to": "commons",
+    "name": "fundamenta",
+    "description": "Pratītyasamutpāda fundamenta commons - origem dependente implica gestão compartilhada"
+  },
+  {
+    "from": "pratityasamutpada",
+    "to": "reciprocidade",
+    "name": "exige",
+    "description": "Pratītyasamutpāda exige reciprocidade - co-dependência é recíproca por natureza"
+  },
+  {
+    "from": "memoriacoletiva",
+    "to": "terra",
+    "name": "se inscreve em",
+    "description": "Memória coletiva se inscreve em terra - território como arquivo vivo"
+  },
+  {
+    "from": "ancestralidade",
+    "to": "agroecologia",
+    "name": "transmite",
+    "description": "Ancestralidade transmite agroecologia - saberes agrícolas milenares"
+  },
+  {
+    "from": "kairos",
+    "to": "revolucao",
+    "name": "é",
+    "description": "Kairos é revolução - tempo oportuno de ruptura transformadora"
+  },
+  {
+    "from": "duração",
+    "to": "regeneracao",
+    "name": "sustenta",
+    "description": "Duração sustenta regeneração - tempo profundo de restauração ecológica"
+  },
+  {
+    "from": "afrofuturismo",
+    "to": "alternativas",
+    "name": "imagina",
+    "description": "Afrofuturismo imagina alternativas - futuros negros fora do realismo capitalista"
+  },
+  {
+    "from": "perdão",
+    "to": "reconciliação",
+    "name": "habilita",
+    "description": "Perdão habilita reconciliação - restauração de relações rompidas"
+  },
+  {
+    "from": "reconciliação",
+    "to": "commons",
+    "name": "reconstrói",
+    "description": "Reconciliação reconstrói commons - gestão compartilhada requer confiança restaurada"
+  },
+  {
+    "from": "valores",
+    "to": "permacultura",
+    "name": "se concretizam em",
+    "description": "Valores éticos se concretizam em permacultura - earth care, people care, fair share"
   }
 ]
