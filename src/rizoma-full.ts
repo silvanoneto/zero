@@ -97,10 +97,10 @@ const WALK_SPEED = 0.002; // Velocidade base de caminhada (reduzida de 0.005)
 const MAX_VELOCITY = 3.0; // Velocidade máxima absoluta por frame (unidades de distância)
 const PATH_CHANGE_INTERVAL = 3000; // Trocar de direção a cada 3 segundos
 const REPULSION_FORCE = 15; // Força de repulsão entre nós (antigravidade) - reduzido
-const REPULSION_DISTANCE = 50; // Distância mínima antes de aplicar repulsão - aumentado para mais espaço
+const REPULSION_DISTANCE = 80; // Distância mínima antes de aplicar repulsão - aumentado para mais espaço (era 50)
 
 // LIMITES DE ARESTA (MOLAS ELÁSTICAS)
-const MIN_EDGE_LENGTH = 40; // Distância mínima - aumentada para mais espaço
+const MIN_EDGE_LENGTH = 50; // Distância mínima - aumentada para mais espaço (era 40)
 const MAX_EDGE_LENGTH = 400; // Distância máxima - dobrada para permitir arestas mais longas que percorrem o globo
 const SPRING_STRENGTH = 0.08; // Força da "mola" reduzida para maior elasticidade
 let lastPathChange = 0;
