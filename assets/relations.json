@@ -10012,5 +10012,173 @@
     "to": "ren",
     "name": "é cultivada por",
     "description": "Reciprocidade é cultivada por rén - virtude confuciana relacional"
+  },
+  {
+    "from": "onto-epistemologia",
+    "to": "ontologia",
+    "name": "radicaliza",
+    "description": "Onto-epistemologia radicaliza ontologia relacional: ser e conhecer são inseparáveis"
+  },
+  {
+    "from": "onto-epistemologia",
+    "to": "relacionalismo-epistemico",
+    "name": "fundamenta-se em",
+    "description": "Onto-epistemologia fundamenta-se em relacionalismo epistêmico"
+  },
+  {
+    "from": "onto-epistemologia",
+    "to": "conhecimento-situado",
+    "name": "opera via",
+    "description": "Onto-epistemologia opera via conhecimentos situados - co-produção mundo-saber"
+  },
+  {
+    "from": "onto-epistemologia",
+    "to": "intra-acao",
+    "name": "manifesta-se em",
+    "description": "Onto-epistemologia manifesta-se em intra-ações - agenciamento mútuo matéria-significado"
+  },
+  {
+    "from": "onto-epistemologia",
+    "to": "performatividade",
+    "name": "reconhece",
+    "description": "Onto-epistemologia reconhece performatividade - conhecer não representa mas configura"
+  },
+  {
+    "from": "onto-epistemologia",
+    "to": "praticas",
+    "name": "se efetiva em",
+    "description": "Onto-epistemologia se efetiva em práticas concretas de fazer-conhecer"
+  },
+  {
+    "from": "vazio",
+    "to": "onto-epistemologia",
+    "name": "possibilita",
+    "description": "Vazio fundacional possibilita onto-epistemologia - indeterminação precede distinções"
+  },
+  {
+    "from": "agencia",
+    "to": "onto-epistemologia",
+    "name": "é reconfigurada por",
+    "description": "Agência é reconfigurada por onto-epistemologia - não é propriedade mas efeito relacional"
+  },
+  {
+    "from": "socio-ecologia",
+    "to": "metabolismo-social",
+    "name": "conceitualiza",
+    "description": "Sócio-ecologia conceitualiza metabolismo sociedade-natureza"
+  },
+  {
+    "from": "socio-ecologia",
+    "to": "ecologia-politica",
+    "name": "se expressa como",
+    "description": "Sócio-ecologia se expressa como ecologia política - metabolismo é campo de disputa"
+  },
+  {
+    "from": "socio-ecologia",
+    "to": "terra",
+    "name": "reconecta com",
+    "description": "Sócio-ecologia reconecta sociedade com terra - supera dualismo"
+  },
+  {
+    "from": "socio-ecologia",
+    "to": "natureza",
+    "name": "redefine",
+    "description": "Sócio-ecologia redefine natureza - não é recurso mas co-constituição"
+  },
+  {
+    "from": "socio-ecologia",
+    "to": "capitalismo",
+    "name": "diagnostica",
+    "description": "Sócio-ecologia diagnostica capitalismo como ruptura metabólica"
+  },
+  {
+    "from": "socio-ecologia",
+    "to": "extrativismo",
+    "name": "critica",
+    "description": "Sócio-ecologia critica extrativismo - metabolismo unidirecional destrutivo"
+  },
+  {
+    "from": "socio-ecologia",
+    "to": "commons",
+    "name": "fortalece",
+    "description": "Sócio-ecologia fortalece commons - gestão compartilhada de metabolismos"
+  },
+  {
+    "from": "socio-ecologia",
+    "to": "praticas",
+    "name": "se materializa em",
+    "description": "Sócio-ecologia se materializa em práticas de co-existência"
+  },
+  {
+    "from": "buen-vivir",
+    "to": "socio-ecologia",
+    "name": "exemplifica",
+    "description": "Buen vivir exemplifica sócio-ecologia - cosmovisão integradora"
+  },
+  {
+    "from": "indigena",
+    "to": "socio-ecologia",
+    "name": "ensina",
+    "description": "Pensamento indígena ensina sócio-ecologia - reciprocidade com mais-que-humanos"
+  },
+  {
+    "from": "crono-politica",
+    "to": "tempo",
+    "name": "politiza",
+    "description": "Crono-política politiza tempo - não é moldura neutra mas campo de batalha"
+  },
+  {
+    "from": "crono-politica",
+    "to": "capitalismo",
+    "name": "denuncia",
+    "description": "Crono-política denuncia capitalismo - imposição de temporalidade única"
+  },
+  {
+    "from": "crono-politica",
+    "to": "aceleracao",
+    "name": "analisa",
+    "description": "Crono-política analisa aceleração como estratégia de dominação"
+  },
+  {
+    "from": "crono-politica",
+    "to": "poder",
+    "name": "revela",
+    "description": "Crono-política revela poder temporal - quem controla ritmos controla vida"
+  },
+  {
+    "from": "crono-politica",
+    "to": "resistencia",
+    "name": "identifica em",
+    "description": "Crono-política identifica resistência em heterocronia - multiplicidade temporal"
+  },
+  {
+    "from": "crono-politica",
+    "to": "revolucao",
+    "name": "reconhece em",
+    "description": "Crono-política reconhece em revolução - ruptura temporal radical"
+  },
+  {
+    "from": "crono-politica",
+    "to": "bifurcacao",
+    "name": "opera por",
+    "description": "Crono-política opera por bifurcações - aberturas de futuros alternativos"
+  },
+  {
+    "from": "crono-politica",
+    "to": "devir",
+    "name": "afirma",
+    "description": "Crono-política afirma devir - tempo aberto contra determinismo"
+  },
+  {
+    "from": "sankofa",
+    "to": "crono-politica",
+    "name": "ensina",
+    "description": "Sankofa ensina crono-política - passado é recurso para futuro"
+  },
+  {
+    "from": "memoria",
+    "to": "crono-politica",
+    "name": "alimenta",
+    "description": "Memória alimenta crono-política - disputa sobre passado configura futuro"
   }
 ]

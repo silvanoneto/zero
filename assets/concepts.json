@@ -4111,5 +4111,55 @@
     ],
     "layer": "ontologica",
     "color": "0x66ccff"
+  },
+  {
+    "id": "onto-epistemologia",
+    "name": "Onto-Epistemologia",
+    "description": "Ontologia e epistemologia não são âmbitos separados. Ser-relacional implica conhecer-relacional: co-constituição de mundo e saber. Barad: aparatos de medição não revelam propriedades preexistentes - performam configurações específicas. Haraway: saberes situados não são perspectivas sobre realidade independente, mas co-produções de mundos. Onto-epistemologia dissolve fronteira sujeito/objeto.",
+    "connections": [
+      "ontologia",
+      "conhecimento-situado",
+      "agencia",
+      "performatividade",
+      "relacionalismo-epistemico",
+      "praticas",
+      "intra-acao"
+    ],
+    "layer": "epistemica",
+    "color": "0xffcc66"
+  },
+  {
+    "id": "socio-ecologia",
+    "name": "Sócio-Ecologia",
+    "description": "Metabolismo sociedade-natureza como co-constituição, não externalidade. Fischer-Kowalski: fluxos materiais e energéticos atravessam fronteira porosa entre 'social' e 'natural'. Ecologia política: conflitos ambientais são disputas por configurações metabólicas. Não há economia sem ecologia, nem ecossistema sem história. Conceito-ponte para superar dualismo sociedade/natureza.",
+    "connections": [
+      "metabolismo-social",
+      "ecologia-politica",
+      "natureza",
+      "terra",
+      "extrativismo",
+      "capitalismo",
+      "commons",
+      "praticas"
+    ],
+    "layer": "ecologica",
+    "color": "0x66ff99"
+  },
+  {
+    "id": "crono-politica",
+    "name": "Crono-Política",
+    "description": "Tempo não é moldura neutra da política - é terreno de disputa. Capitalismo impõe temporalidades: aceleração produtivista, just-in-time, obsolescência programada, dívida como colonização do futuro. Resistências configuram outros tempos: lentidão estratégica, tempos cíclicos indígenas, greve como suspensão, futuridade queer. Sharma: diferença temporal constitui hierarquias raciais/coloniais. Política é também luta por heterocronia.",
+    "connections": [
+      "tempo",
+      "capitalismo",
+      "aceleracao",
+      "devir",
+      "revolucao",
+      "bifurcacao",
+      "poder",
+      "resistencia"
+    ],
+    "layer": "temporal",
+    "color": "0xff99cc"
   }
 ]

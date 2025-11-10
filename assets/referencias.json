@@ -2147,5 +2147,69 @@
       "processo",
       "transindividual"
     ]
+  },
+  {
+    "id": "barad-2007",
+    "categoria": "onto-epistemológica",
+    "autor": "Barad, Karen",
+    "ano": 2007,
+    "titulo": "Meeting the Universe Halfway: Quantum Physics and the Entanglement of Matter and Meaning",
+    "editora": "Duke University Press",
+    "relevancia": "Onto-epistemologia agencial realista: ser e conhecer são inseparáveis. Aparatos de medição não revelam propriedades preexistentes, mas performam configurações (cortes agenciais). Intra-ação substitui interação - relata não preexistem relações. Matéria e significado co-emergem.",
+    "conceitos": [
+      "onto-epistemologia",
+      "intra-acao",
+      "performatividade",
+      "agencia",
+      "relacionalismo-epistemico"
+    ]
+  },
+  {
+    "id": "fischer-kowalski-1998",
+    "categoria": "ecológica",
+    "autor": "Fischer-Kowalski, Marina",
+    "ano": 1998,
+    "titulo": "Society's Metabolism: The Intellectual History of Materials Flow Analysis",
+    "publicacao": "Journal of Industrial Ecology, 2(1)",
+    "relevancia": "Metabolismo social como fluxos materiais e energéticos atravessando fronteira sociedade-natureza. Não há economia sem ecologia. Conceito fundador da ecologia social austríaca - análise de fluxo de materiais (MFA) como método empírico.",
+    "conceitos": [
+      "socio-ecologia",
+      "metabolismo-social",
+      "ecologia-politica",
+      "capitalismo",
+      "terra"
+    ]
+  },
+  {
+    "id": "sharma-2014",
+    "categoria": "temporal-política",
+    "autor": "Sharma, Sarah",
+    "ano": 2014,
+    "titulo": "In the Meantime: Temporality and Cultural Politics",
+    "editora": "Duke University Press",
+    "relevancia": "Crono-política como diferença temporal constituindo hierarquias. Aceleração/desaceleração são distribuídas desigualmente por raça, gênero, classe. 'Poder temporal': quem controla ritmos controla vidas. Crítica à aceleração como universal - produz 'recalibrations' temporais racializadas.",
+    "conceitos": [
+      "crono-politica",
+      "tempo",
+      "poder",
+      "aceleracao",
+      "capitalismo"
+    ]
+  },
+  {
+    "id": "martinez-alier-2002",
+    "categoria": "ecológica",
+    "autor": "Martínez-Alier, Joan",
+    "ano": 2002,
+    "titulo": "The Environmentalism of the Poor: A Study of Ecological Conflicts and Valuation",
+    "editora": "Edward Elgar",
+    "relevancia": "Ecologia política como sócio-ecologia conflitual. Conflitos ambientais são disputas distributivas por configurações metabólicas. 'Linguagens de valoração' incomensurável - não há métrica universal para comparar água sagrada e commodities. Ambientalismo dos pobres como resistência metabólica.",
+    "conceitos": [
+      "socio-ecologia",
+      "ecologia-politica",
+      "metabolismo-social",
+      "extrativismo",
+      "resistencia"
+    ]
   }
 ]
