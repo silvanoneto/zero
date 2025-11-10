@@ -13,8 +13,15 @@
     
     <!-- Reader Mode Support -->
     <meta property="article:published_time" content="2025-11-09T00:00:00Z">
+    <meta property="article:modified_time" content="2025-11-09T00:00:00Z">
     <meta property="article:author" content="Revolução Cibernética">
     <meta property="article:section" content="Filosofia">
+    <meta property="article:tag" content="Ontologia Relacional">
+    <meta property="article:tag" content="CRIO">
+    <meta property="article:tag" content="Filosofia">
+    <meta name="parsely-type" content="post">
+    <meta name="parsely-section" content="Filosofia">
+    <meta name="parsely-link" content="https://revolucaocibernetica.com/">
     
     <meta name="theme-color" content="#000000">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -193,7 +200,13 @@
     </nav>
 
     <main id="main-content" role="main">
-        <article>
+        <article itemscope itemtype="http://schema.org/Article">
+        <!-- Schema.org metadata for reader mode -->
+        <meta itemprop="author" content="Revolução Cibernética">
+        <meta itemprop="datePublished" content="2025-11-09">
+        <meta itemprop="inLanguage" content="pt-BR">
+        <meta itemprop="description" content="Uma experiência filosófica interativa explorando ontologia relacional através de oito CRIOS">
+        
         <!-- Loading Skeleton (shown during initial load) -->
         <div id="skeleton-loader" class="skeleton-loader" aria-hidden="true">
             <div class="skeleton-header">
@@ -223,7 +236,7 @@
         </div>
 
         <!-- Actual Content (populated dynamically) -->
-        <div id="content" class="loading" aria-live="polite" aria-busy="true" style="display: none;">
+        <div id="content" class="loading" itemprop="articleBody" aria-live="polite" aria-busy="true" style="display: none;">
             ∅ → carregando CRIO...
         </div>
         </article>

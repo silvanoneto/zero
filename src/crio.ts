@@ -19,7 +19,7 @@ interface CacheData {
 // CONSTANTES E CONFIGURAÇÃO
 // ============================================================================
 
-const CACHE_VERSION = '1.1'; // Atualizado para refletir mudanças em CRIOS.md
+const CACHE_VERSION = '2.0'; // Atualizado para refletir mudanças em CRIOS.md
 const CACHE_DURATION = 7 * 24 * 60 * 60 * 1000; // 7 dias
 const CRIOS_URL = 'docs/CRIOS.md';
 const AUDIO_URL = 'assets/CRIO.mp3';
@@ -201,7 +201,14 @@ function renderContent(markdown: string): void {
         });
         
         // Renderizar markdown
-        const html = (window as any).marked.parse(markdown);
+        let html = (window as any).marked.parse(markdown);
+        
+        // Adicionar classes semânticas para modo de leitura
+        html = html
+            .replace(/<h1>/g, '<h1 itemprop="headline">')
+            .replace(/<h2>/g, '<h2 itemprop="alternativeHeadline">')
+            .replace(/<p>/g, '<p itemprop="text">')
+            .replace(/<blockquote>/g, '<blockquote itemprop="citation">');
         
         // Ocultar skeleton e mostrar conteúdo
         if (skeletonDiv) {
