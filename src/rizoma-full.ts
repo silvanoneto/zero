@@ -106,6 +106,10 @@ const SPRING_STRENGTH = 0.08; // Força da "mola" reduzida para maior elasticida
 let lastPathChange = 0;
 let repulsionCounter = 0; // Contador para aplicar repulsão com menos frequência
 
+// NORMALIZAÇÃO DE PESO (para repulsão entre 0 e 1)
+let minConnections = Infinity;
+let maxConnections = 0;
+
 // ============================================================================
 
 // Detectar dispositivo fraco automaticamente
@@ -301,6 +305,9 @@ async function init() {
 
     // Criar nós em distribuição esférica
     createNodes();
+    
+    // Calcular min/max conexões para normalização
+    calculateConnectionRange();
     
     // Criar conexões
     createConnections();
@@ -504,14 +511,60 @@ function createNodes() {
     // Geometria compartilhada com menos segmentos para melhor performance
     const sharedGeometry = new THREE.SphereGeometry(20, 16, 16); // Reduz de 32 para 16 segmentos
 
-    concepts.forEach((concept, i) => {
-        // Distribuição Fibonacci Sphere para evitar aglomeração
-        const phi = Math.acos(1 - 2 * (i + 0.5) / concepts.length);
-        const theta = Math.PI * (1 + Math.sqrt(5)) * i;
+    // Agrupar conceitos por camada para criar clusters iniciais
+    const conceptsByLayer = new Map();
+    concepts.forEach(concept => {
+        const layer = concept.layer || 'undefined';
+        if (!conceptsByLayer.has(layer)) {
+            conceptsByLayer.set(layer, []);
+        }
+        conceptsByLayer.get(layer).push(concept);
+    });
 
-        const x = radius * Math.sin(phi) * Math.cos(theta);
-        const y = radius * Math.sin(phi) * Math.sin(theta);
-        const z = radius * Math.cos(phi);
+    // Definir posições centrais para cada camada (distribuídas ao redor da esfera)
+    const layerCenters = new Map();
+    const layers = Array.from(conceptsByLayer.keys());
+    layers.forEach((layer, idx) => {
+        const phi = Math.acos(1 - 2 * (idx + 0.5) / layers.length);
+        const theta = Math.PI * (1 + Math.sqrt(5)) * idx;
+        
+        layerCenters.set(layer, {
+            x: Math.sin(phi) * Math.cos(theta),
+            y: Math.sin(phi) * Math.sin(theta),
+            z: Math.cos(phi)
+        });
+    });
+
+    console.log(`🎨 Criando ${layers.length} clusters por camada:`, layers);
+
+    concepts.forEach((concept, i) => {
+        const layer = concept.layer || 'undefined';
+        const layerConcepts = conceptsByLayer.get(layer);
+        const layerIndex = layerConcepts.indexOf(concept);
+        
+        // Centro do cluster da camada
+        const center = layerCenters.get(layer);
+        
+        // Distribuição Fibonacci dentro do cluster (esfera menor ao redor do centro)
+        const clusterRadius = 0.4; // 40% do raio total para cada cluster
+        const phi = Math.acos(1 - 2 * (layerIndex + 0.5) / layerConcepts.length);
+        const theta = Math.PI * (1 + Math.sqrt(5)) * layerIndex;
+        
+        // Posição local dentro do cluster
+        const localX = clusterRadius * Math.sin(phi) * Math.cos(theta);
+        const localY = clusterRadius * Math.sin(phi) * Math.sin(theta);
+        const localZ = clusterRadius * Math.cos(phi);
+        
+        // Posição global: centro do cluster + offset local, projetado na esfera
+        const x = (center.x + localX) * radius;
+        const y = (center.y + localY) * radius;
+        const z = (center.z + localZ) * radius;
+        
+        // Normalizar para manter na superfície da esfera
+        const length = Math.sqrt(x * x + y * y + z * z);
+        const finalX = (x / length) * radius;
+        const finalY = (y / length) * radius;
+        const finalZ = (z / length) * radius;
 
         // Cores e intensidades neutras - independente do tema
         // O riz∅ma transcende polaridades (luz/trevas)
@@ -529,8 +582,9 @@ function createNodes() {
             emissiveIntensity: 0.2
         });
 
+        
         const sphere = new THREE.Mesh(sharedGeometry, material);
-        sphere.position.set(x, y, z);
+        sphere.position.set(finalX, finalY, finalZ);
         sphere.scale.setScalar(1.0); // Inicializar com escala normal
         
         // DESABILITAR FRUSTUM CULLING - nós sempre visíveis
@@ -541,7 +595,8 @@ function createNodes() {
             ...concept,
             originalColor: concept.color,
             originalEmissive: 0.3,
-            originalPosition: new THREE.Vector3(x, y, z) // Salvar posição original da esfera Fibonacci
+            originalPosition: new THREE.Vector3(finalX, finalY, finalZ), // Salvar posição inicial do cluster
+            layerCenter: center // Salvar centro do cluster para referência
         };
 
         scene.add(sphere);
@@ -555,6 +610,36 @@ function createNodes() {
     });
     
     console.log('✅ Nós criados:', nodes.length, 'esferas adicionadas à cena');
+}
+
+// ============================================================================
+// CÁLCULO DE RANGE DE CONEXÕES
+// ============================================================================
+
+/**
+ * Calcula min/max número de conexões para normalização da repulsão
+ */
+function calculateConnectionRange() {
+    minConnections = Infinity;
+    maxConnections = 0;
+    
+    nodes.forEach(node => {
+        const connCount = node.userData.connections?.length || 0;
+        minConnections = Math.min(minConnections, connCount);
+        maxConnections = Math.max(maxConnections, connCount);
+    });
+    
+    console.log(`📊 Range de conexões: ${minConnections} - ${maxConnections}`);
+}
+
+/**
+ * Normaliza o número de conexões para um valor entre 0 e 1
+ * 0 = mínimo de conexões (repulsão mínima)
+ * 1 = máximo de conexões (repulsão máxima)
+ */
+function normalizeConnectionWeight(connectionCount) {
+    if (maxConnections === minConnections) return 0.5; // Todos têm mesmo peso
+    return (connectionCount - minConnections) / (maxConnections - minConnections);
 }
 
 // ============================================================================
@@ -955,14 +1040,15 @@ function applyEdgeSpringForces(SPHERE_RADIUS) {
 /**
  * Calcula força de repulsão entre nós (antigravidade)
  * OTIMIZADO: Verifica apenas vizinhos próximos usando grid espacial
- * PONDERADO: Considera o peso do nó (número de conexões) - nós mais conectados repelem mais
+ * NORMALIZADO: Repulsão varia de 0 (min conexões) a 1 (max conexões)
  */
 function applyRepulsionForces(node, allNodes, SPHERE_RADIUS) {
     const repulsionForce = new THREE.Vector3(0, 0, 0);
     let repulsionCount = 0;
     
-    // Peso do nó atual (número de conexões)
-    const nodeWeight = (node.userData.connections?.length || 1);
+    // Peso normalizado do nó atual (0 a 1)
+    const nodeConnectionCount = node.userData.connections?.length || 0;
+    const nodeWeightNormalized = normalizeConnectionWeight(nodeConnectionCount);
     
     // Otimização: limitar número de verificações
     for (let i = 0; i < allNodes.length && repulsionCount < 5; i++) {
@@ -976,14 +1062,18 @@ function applyRepulsionForces(node, allNodes, SPHERE_RADIUS) {
             const direction = new THREE.Vector3().subVectors(node.position, otherNode.position);
             direction.normalize();
             
-            // Peso do outro nó (número de conexões)
-            const otherWeight = (otherNode.userData.connections?.length || 1);
+            // Peso normalizado do outro nó (0 a 1)
+            const otherConnectionCount = otherNode.userData.connections?.length || 0;
+            const otherWeightNormalized = normalizeConnectionWeight(otherConnectionCount);
             
-            // Força inversamente proporcional à distância
-            // Multiplicada pela raiz quadrada da soma dos pesos (simula massa em física)
-            // Usa sqrt para evitar que hubs dominem excessivamente
-            const combinedWeight = Math.sqrt(nodeWeight + otherWeight);
-            const strength = REPULSION_FORCE * (1 - distance / REPULSION_DISTANCE) * combinedWeight * 0.3;
+            // Força combinada: média dos pesos normalizados
+            // Varia de 0 (ambos têm mínimo de conexões) a 1 (ambos têm máximo)
+            const combinedWeightNormalized = (nodeWeightNormalized + otherWeightNormalized) / 2;
+            
+            // Força de repulsão proporcional à distância e peso combinado
+            // Multiplicador 0.5 para calibração (ajustar conforme necessário)
+            const distanceFactor = (1 - distance / REPULSION_DISTANCE);
+            const strength = REPULSION_FORCE * distanceFactor * (0.3 + combinedWeightNormalized * 0.7);
             direction.multiplyScalar(strength);
             
             repulsionForce.add(direction);
