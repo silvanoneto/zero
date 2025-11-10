@@ -4161,5 +4161,85 @@
     ],
     "layer": "temporal",
     "color": "0xff99cc"
+  },
+  {
+    "id": "metabolismo-social",
+    "name": "Metabolismo Social",
+    "description": "Fluxos materiais e energéticos entre sociedade e natureza. Não há economia sem ecologia - toda produção é transformação metabólica. Marx: ruptura metabólica do capitalismo (nutrientes urbanos não retornam ao solo). Fischer-Kowalski: análise de fluxo de materiais (MFA) quantifica metabolismo. Giorgos Kallis: decrescimento como redução metabólica planejada. Diferentes modos de produção = diferentes regimes metabólicos.",
+    "connections": [
+      "socio-ecologia",
+      "capitalismo",
+      "terra",
+      "extrativismo",
+      "decrescimento",
+      "ecologia-politica",
+      "natureza"
+    ],
+    "layer": "ecologica",
+    "color": "0x66ff99"
+  },
+  {
+    "id": "soberania-alimentar",
+    "name": "Soberania Alimentar",
+    "description": "Via Campesina (1996): direito de povos a alimentos culturalmente apropriados, produzidos de forma ecológica e sustentável, e de definir seus próprios sistemas alimentares. Não é apenas segurança alimentar (quantidade) - é autonomia sobre produção, distribuição, consumo. Confronta agronegócio, sementes patenteadas, monoculturas. Articula camponeses, indígenas, urbanos. Soberania metabólica.",
+    "connections": [
+      "terra",
+      "indigena",
+      "commons",
+      "reciprocidade",
+      "autonomia",
+      "resistencia",
+      "praticas"
+    ],
+    "layer": "pratica",
+    "color": "0xff9966"
+  },
+  {
+    "id": "justica-climatica",
+    "name": "Justiça Climática",
+    "description": "Mudança climática não é problema técnico - é injustiça estrutural. Sul Global emite menos, sofre mais. Comunidades racializadas, indígenas, pobres na linha de frente. Dívida climática: Norte deve reparações ao Sul. Mary Robinson: direitos humanos + clima. Movimentos: climate justice now, Blockadia. Não basta mitigação técnica - exige redistribuição radical, descolonização, reparações.",
+    "connections": [
+      "capitalismo",
+      "extrativismo",
+      "indigena",
+      "resistencia",
+      "terra",
+      "ecologia-politica",
+      "poder"
+    ],
+    "layer": "politica",
+    "color": "0xff6666"
+  },
+  {
+    "id": "economia-solidaria",
+    "name": "Economia Solidária",
+    "description": "Organização econômica baseada em autogestão, democracia, reciprocidade, não acumulação. Singer: contradiz lógica capitalista - propriedade coletiva dos meios de produção, repartição igualitária. Cooperativas, bancos comunitários, trocas solidárias, moedas sociais. Não é caridade nem mercado - é terceira via. Gibson-Graham: economia diversa já existe, capitalismo não é totalidade.",
+    "connections": [
+      "commons",
+      "reciprocidade",
+      "autonomia",
+      "moedascomunitarias",
+      "cooperativas",
+      "praticas",
+      "alternativas"
+    ],
+    "layer": "pratica",
+    "color": "0xff9966"
+  },
+  {
+    "id": "infraestrutura-comum",
+    "name": "Infraestrutura Comum",
+    "description": "Sistemas materiais de reprodução social geridos coletivamente. Não são apenas 'serviços públicos' - são commoning infraestrutural. Água, energia, transporte, comunicação, cuidado. Elinor Ostrom: gestão comum funciona quando comunidades criam regras. Keller Easterling: infraestrutura como software - codifica possibilidades. Lutas: remunicipalização de água (Nápoles), redes mesh comunitárias, creches autogestionadas.",
+    "connections": [
+      "commons",
+      "praticas",
+      "autonomia",
+      "tecnologiaconvivial",
+      "reciprocidade",
+      "terra",
+      "cuidado"
+    ],
+    "layer": "pratica",
+    "color": "0xff9966"
   }
 ]

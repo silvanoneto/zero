@@ -10180,5 +10180,215 @@
     "to": "crono-politica",
     "name": "alimenta",
     "description": "Memória alimenta crono-política - disputa sobre passado configura futuro"
+  },
+  {
+    "from": "metabolismo-social",
+    "to": "socio-ecologia",
+    "name": "fundamenta",
+    "description": "Metabolismo social fundamenta sócio-ecologia - fluxos materiais-energéticos"
+  },
+  {
+    "from": "metabolismo-social",
+    "to": "capitalismo",
+    "name": "diagnostica ruptura em",
+    "description": "Metabolismo social diagnostica ruptura metabólica no capitalismo - extração sem retorno"
+  },
+  {
+    "from": "metabolismo-social",
+    "to": "terra",
+    "name": "atravessa",
+    "description": "Metabolismo social atravessa terra - fronteira porosa sociedade-natureza"
+  },
+  {
+    "from": "metabolismo-social",
+    "to": "extrativismo",
+    "name": "revela",
+    "description": "Metabolismo social revela extrativismo como unidirecionalidade destrutiva"
+  },
+  {
+    "from": "metabolismo-social",
+    "to": "decrescimento",
+    "name": "orienta",
+    "description": "Metabolismo social orienta decrescimento - redução metabólica planejada"
+  },
+  {
+    "from": "metabolismo-social",
+    "to": "ecologia-politica",
+    "name": "politiza",
+    "description": "Metabolismo social politiza ecologia - fluxos são disputados"
+  },
+  {
+    "from": "metabolismo-social",
+    "to": "natureza",
+    "name": "reconecta com",
+    "description": "Metabolismo social reconecta com natureza - co-constituição material"
+  },
+  {
+    "from": "soberania-alimentar",
+    "to": "terra",
+    "name": "defende",
+    "description": "Soberania alimentar defende terra como commons, não commodity"
+  },
+  {
+    "from": "soberania-alimentar",
+    "to": "indigena",
+    "name": "aprende de",
+    "description": "Soberania alimentar aprende de conhecimentos indígenas - agricultura relacional"
+  },
+  {
+    "from": "soberania-alimentar",
+    "to": "commons",
+    "name": "pratica",
+    "description": "Soberania alimentar pratica commoning - gestão coletiva de sistemas alimentares"
+  },
+  {
+    "from": "soberania-alimentar",
+    "to": "reciprocidade",
+    "name": "opera por",
+    "description": "Soberania alimentar opera por reciprocidade - trocas de sementes, mutirões"
+  },
+  {
+    "from": "soberania-alimentar",
+    "to": "autonomia",
+    "name": "constrói",
+    "description": "Soberania alimentar constrói autonomia - autodeterminação alimentar"
+  },
+  {
+    "from": "soberania-alimentar",
+    "to": "resistencia",
+    "name": "manifesta",
+    "description": "Soberania alimentar manifesta resistência ao agronegócio e monoculturas"
+  },
+  {
+    "from": "soberania-alimentar",
+    "to": "praticas",
+    "name": "se efetiva em",
+    "description": "Soberania alimentar se efetiva em práticas agroecológicas concretas"
+  },
+  {
+    "from": "justica-climatica",
+    "to": "capitalismo",
+    "name": "confronta",
+    "description": "Justiça climática confronta capitalismo fóssil - responsabilidade histórica"
+  },
+  {
+    "from": "justica-climatica",
+    "to": "extrativismo",
+    "name": "denuncia",
+    "description": "Justiça climática denuncia extrativismo - emissões coloniais"
+  },
+  {
+    "from": "justica-climatica",
+    "to": "indigena",
+    "name": "centraliza",
+    "description": "Justiça climática centraliza povos indígenas - guardiões territoriais"
+  },
+  {
+    "from": "justica-climatica",
+    "to": "resistencia",
+    "name": "articula",
+    "description": "Justiça climática articula resistências - Blockadia, climate justice now"
+  },
+  {
+    "from": "justica-climatica",
+    "to": "terra",
+    "name": "defende",
+    "description": "Justiça climática defende terra contra megaprojetos e carbon offsetting"
+  },
+  {
+    "from": "justica-climatica",
+    "to": "ecologia-politica",
+    "name": "radicaliza",
+    "description": "Justiça climática radicaliza ecologia política - clima é questão de justiça"
+  },
+  {
+    "from": "justica-climatica",
+    "to": "poder",
+    "name": "redistribui",
+    "description": "Justiça climática redistribui poder - dívida climática, reparações"
+  },
+  {
+    "from": "economia-solidaria",
+    "to": "commons",
+    "name": "pratica",
+    "description": "Economia solidária pratica commons - propriedade coletiva, gestão compartilhada"
+  },
+  {
+    "from": "economia-solidaria",
+    "to": "reciprocidade",
+    "name": "fundamenta-se em",
+    "description": "Economia solidária fundamenta-se em reciprocidade, não acumulação"
+  },
+  {
+    "from": "economia-solidaria",
+    "to": "autonomia",
+    "name": "constrói",
+    "description": "Economia solidária constrói autonomia - autogestão produtiva"
+  },
+  {
+    "from": "economia-solidaria",
+    "to": "moedascomunitarias",
+    "name": "utiliza",
+    "description": "Economia solidária utiliza moedas comunitárias - circulação local"
+  },
+  {
+    "from": "economia-solidaria",
+    "to": "cooperativas",
+    "name": "organiza-se em",
+    "description": "Economia solidária organiza-se em cooperativas - um membro, um voto"
+  },
+  {
+    "from": "economia-solidaria",
+    "to": "praticas",
+    "name": "se materializa em",
+    "description": "Economia solidária se materializa em práticas concretas de troca e produção"
+  },
+  {
+    "from": "economia-solidaria",
+    "to": "alternativas",
+    "name": "exemplifica",
+    "description": "Economia solidária exemplifica alternativas ao capitalismo - já existe"
+  },
+  {
+    "from": "infraestrutura-comum",
+    "to": "commons",
+    "name": "materializa",
+    "description": "Infraestrutura comum materializa commons - sistemas físicos compartilhados"
+  },
+  {
+    "from": "infraestrutura-comum",
+    "to": "praticas",
+    "name": "sustenta",
+    "description": "Infraestrutura comum sustenta práticas de reprodução social"
+  },
+  {
+    "from": "infraestrutura-comum",
+    "to": "autonomia",
+    "name": "habilita",
+    "description": "Infraestrutura comum habilita autonomia - controle coletivo de sistemas vitais"
+  },
+  {
+    "from": "infraestrutura-comum",
+    "to": "tecnologiaconvivial",
+    "name": "incorpora",
+    "description": "Infraestrutura comum incorpora tecnologias conviviais - escala humana"
+  },
+  {
+    "from": "infraestrutura-comum",
+    "to": "reciprocidade",
+    "name": "opera por",
+    "description": "Infraestrutura comum opera por reciprocidade - gestão compartilhada"
+  },
+  {
+    "from": "infraestrutura-comum",
+    "to": "terra",
+    "name": "enraíza-se em",
+    "description": "Infraestrutura comum enraíza-se em terra - recursos territorializados"
+  },
+  {
+    "from": "infraestrutura-comum",
+    "to": "cuidado",
+    "name": "provê",
+    "description": "Infraestrutura comum provê cuidado - creches, saúde, apoio mútuo"
   }
 ]

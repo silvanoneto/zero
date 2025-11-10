@@ -2211,5 +2211,127 @@
       "extrativismo",
       "resistencia"
     ]
+  },
+  {
+    "id": "marx-1867",
+    "categoria": "metabolismo",
+    "autor": "Marx, Karl",
+    "ano": 1867,
+    "titulo": "O Capital, Volume I",
+    "editora": "Dietz Verlag",
+    "relevancia": "Ruptura metabólica (metabolic rift): capitalismo rompe metabolismo sociedade-natureza. Nutrientes extraídos de solos rurais para cidades não retornam - depleção ecológica. Crítica ecológica pioneira do capital como apropriação unilateral da natureza. John Bellamy Foster recupera em 'Marx's Ecology' (2000).",
+    "conceitos": [
+      "metabolismo-social",
+      "capitalismo",
+      "extrativismo",
+      "terra"
+    ]
+  },
+  {
+    "id": "via-campesina-1996",
+    "categoria": "soberania-alimentar",
+    "autor": "Via Campesina",
+    "ano": 1996,
+    "titulo": "Food Sovereignty: A Future Without Hunger",
+    "publicacao": "Declaração de Roma - World Food Summit",
+    "relevancia": "Cunhagem do termo 'soberania alimentar': direito de povos a alimentos culturalmente apropriados e de definir seus próprios sistemas alimentares. Confronta securitização neoliberal da fome com autodeterminação camponesa. Movimentos de 182 organizações de 81 países.",
+    "conceitos": [
+      "soberania-alimentar",
+      "terra",
+      "autonomia",
+      "resistencia",
+      "indigena"
+    ]
+  },
+  {
+    "id": "robinson-2018",
+    "categoria": "justiça-climática",
+    "autor": "Robinson, Mary",
+    "ano": 2018,
+    "titulo": "Climate Justice: Hope, Resilience, and the Fight for a Sustainable Future",
+    "editora": "Bloomsbury",
+    "relevancia": "Justiça climática como convergência direitos humanos + clima. Ex-presidente da Irlanda e Alta Comissária de Direitos Humanos da ONU articula: mudança climática afeta desigualmente, quem menos emitiu sofre mais. Dívida climática: Norte deve reparações ao Sul. Vozes de linha de frente (indígenas, ilhas do Pacífico).",
+    "conceitos": [
+      "justica-climatica",
+      "indigena",
+      "poder",
+      "resistencia"
+    ]
+  },
+  {
+    "id": "klein-2014",
+    "categoria": "justiça-climática",
+    "autor": "Klein, Naomi",
+    "ano": 2014,
+    "titulo": "This Changes Everything: Capitalism vs. The Climate",
+    "editora": "Simon & Schuster",
+    "relevancia": "Crise climática não é problema técnico isolado - é confronto entre capitalismo extrativista e habitabilidade planetária. Blockadia: movimentos territoriais bloqueando megaprojetos fósseis (Keystone XL, fracking). Não basta mitigação - exige transformação econômica radical, justiça racial/colonial.",
+    "conceitos": [
+      "justica-climatica",
+      "capitalismo",
+      "extrativismo",
+      "resistencia",
+      "terra"
+    ]
+  },
+  {
+    "id": "singer-2002",
+    "categoria": "economia-solidária",
+    "autor": "Singer, Paul",
+    "ano": 2002,
+    "titulo": "Introdução à Economia Solidária",
+    "editora": "Fundação Perseu Abramo",
+    "relevancia": "Economia solidária como modo de produção alternativo ao capitalismo. Propriedade coletiva dos meios de produção + autogestão + repartição igualitária. Não é setor marginal - é outro princípio organizador. Cooperativas, bancos comunitários, trocas solidárias. Secretaria Nacional de Economia Solidária (Brasil, 2003-2016).",
+    "conceitos": [
+      "economia-solidaria",
+      "commons",
+      "cooperativas",
+      "autonomia",
+      "reciprocidade"
+    ]
+  },
+  {
+    "id": "gibson-graham-2006",
+    "categoria": "economia-diversa",
+    "autor": "Gibson-Graham, J.K.",
+    "ano": 2006,
+    "titulo": "A Postcapitalist Politics",
+    "editora": "University of Minnesota Press",
+    "relevancia": "Economia diversa já existe: capitalismo não é totalidade. Iceberg econômico - parte visível (mercado capitalista) esconde vastidão submarina (trocas, cuidado, commons, cooperativas). Performatividade econômica: nomear alternativas as fortalece. 'Weak theory' - renunciar determinismo para abrir possibilidade.",
+    "conceitos": [
+      "economia-solidaria",
+      "alternativas",
+      "commons",
+      "praticas"
+    ]
+  },
+  {
+    "id": "ostrom-1990",
+    "categoria": "commons",
+    "autor": "Ostrom, Elinor",
+    "ano": 1990,
+    "titulo": "Governing the Commons: The Evolution of Institutions for Collective Action",
+    "editora": "Cambridge University Press",
+    "relevancia": "Gestão comum funciona - refuta 'tragédia dos comuns' de Hardin. Comunidades auto-organizam regras para governar recursos compartilhados (água, pastagens, florestas, pesca). 8 princípios de design institucional. Nobel de Economia 2009. Fundamenta infraestrutura comum como viável.",
+    "conceitos": [
+      "infraestrutura-comum",
+      "commons",
+      "autonomia",
+      "praticas"
+    ]
+  },
+  {
+    "id": "easterling-2014",
+    "categoria": "infraestrutura",
+    "autor": "Easterling, Keller",
+    "ano": 2014,
+    "titulo": "Extrastatecraft: The Power of Infrastructure Space",
+    "editora": "Verso",
+    "relevancia": "Infraestrutura como software - codifica possibilidades e impossibilidades. Não são apenas objetos físicos mas 'medium' ativo que organiza atividades. Zonas econômicas especiais, redes logísticas, cabos submarinos. Poder infraestrutural opera sob radar político tradicional. Infraestrutura comum como contra-código.",
+    "conceitos": [
+      "infraestrutura-comum",
+      "poder",
+      "autonomia"
+    ]
   }
 ]
