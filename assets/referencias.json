@@ -2471,5 +2471,227 @@
       "simbiose",
       "processo"
     ]
+  },
+  {
+    "id": "zuboff-2019",
+    "categoria": "tecnologia-digital",
+    "autor": "Zuboff, Shoshana",
+    "ano": 2019,
+    "titulo": "The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power",
+    "editora": "PublicAffairs",
+    "relevancia": "Crítica fundamental ao capitalismo de vigilância. Plataformas digitais extraem 'excedente comportamental' como matéria-prima para 'produtos de predição' vendidos em 'mercados de comportamento futuro'. Relacionalidade cooptada por dataficação.",
+    "conceitos": [
+      "capitalismo de vigilância",
+      "excedente comportamental",
+      "dataficação",
+      "tecnologia digital",
+      "cooptação"
+    ]
+  },
+  {
+    "id": "ibn-arabi-1165",
+    "categoria": "misticismo-islâmico",
+    "autor": "Ibn Arabi, Muhyiddin",
+    "ano": 1165,
+    "titulo": "Al-Futuhat al-Makkiyya (The Meccan Revelations)",
+    "relevancia": "Nafas al-Rahman (respiração do Compassivo) como processo contínuo de manifestação. Waḥdat al-wujūd (unidade da existência) onde multiplicidade manifesta emerge de unidade virtual. Tajallī (auto-revelação divina) articula relacionalidade não-dualista no contexto islâmico medieval.",
+    "conceitos": [
+      "nafas al-Rahman",
+      "waḥdat al-wujūd",
+      "tajallī",
+      "misticismo islâmico",
+      "não-dualidade"
+    ]
+  },
+  {
+    "id": "eckhart-1260",
+    "categoria": "misticismo-cristão",
+    "autor": "Eckhart, Meister",
+    "ano": 1260,
+    "titulo": "Sermões e Tratados",
+    "relevancia": "Gottheit (divindade) como 'deserto' divino além de todas determinações, incluindo distinção entre Deus e criação. Navegou tensões perigosas entre ortodoxia católica e experiência mística direta de não-dualidade. Processado por heresia, demonstrando perigos políticos de ontologias relacionais radicais.",
+    "conceitos": [
+      "Gottheit",
+      "misticismo cristão",
+      "não-dualidade",
+      "deserto divino",
+      "heresia"
+    ]
+  },
+  {
+    "id": "simard-finding-mother-tree",
+    "categoria": "ecologia",
+    "autor": "Simard, Suzanne",
+    "ano": 2021,
+    "titulo": "Finding the Mother Tree: Discovering the Wisdom of the Forest",
+    "editora": "Knopf",
+    "relevancia": "Documentação científica sobre 'wood wide web' - redes miceliais fúngicas conectando árvores em florestas. Árvores-mãe nutrem descendentes e suportam comunidade inteira. Floresta como superorganismo colaborativo, não coleção de indivíduos competindo.",
+    "conceitos": [
+      "wood wide web",
+      "redes miceliais",
+      "árvores-mãe",
+      "cooperação florestal",
+      "ecologia relacional"
+    ]
+  },
+  {
+    "id": "gilbert-holobiont",
+    "categoria": "biologia",
+    "autor": "Gilbert, Scott F., Sapp, Jan & Tauber, Alfred I.",
+    "ano": 2012,
+    "titulo": "A Symbiotic View of Life: We Have Never Been Individuals",
+    "publicacao": "The Quarterly Review of Biology, 87(4)",
+    "relevancia": "Argumentam que 'todos animais e plantas são holobiontes' - ecossistemas em si mesmos. Não há organismo singular separado de simbiontes. Seleção natural opera em nível de holobionte, não organismo individual. Dissolução biológica de fronteiras entre self e outro.",
+    "conceitos": [
+      "holobionte",
+      "simbiose",
+      "microbioma",
+      "multiespécies",
+      "ecologia"
+    ]
+  },
+  {
+    "id": "rockstrom-planetary-boundaries",
+    "categoria": "ecologia",
+    "autor": "Rockström, Johan et al.",
+    "ano": 2009,
+    "titulo": "Planetary Boundaries: Exploring the Safe Operating Space for Humanity",
+    "publicacao": "Ecology and Society, 14(2)",
+    "relevancia": "Identificação de nove limites planetários: mudança climática, perda de biodiversidade, ciclos biogeoquímicos, mudanças no uso da terra, uso de água doce, acidificação oceânica, depleção de ozônio, carga de aerossóis, introdução de entidades novas. Quatro já ultrapassados. Limites como condições constitutivas de vida.",
+    "conceitos": [
+      "limites planetários",
+      "Antropoceno",
+      "sustentabilidade",
+      "ecologia",
+      "Terra"
+    ]
+  },
+  {
+    "id": "illich-1973",
+    "categoria": "filosofia-tecnologia",
+    "autor": "Illich, Ivan",
+    "ano": 1973,
+    "titulo": "Tools for Conviviality",
+    "editora": "Harper & Row",
+    "relevancia": "Limites de convivialidade: ferramentas são conviviais quando ampliam autonomia dentro de limites sustentáveis. Ferramentas tornam-se contraproducentes quando ultrapassam limites críticos - automóveis produzem congestionamento, medicina hiperdesenvolvida produz iatrogênese, educação escolarizada produz estupidez certificada.",
+    "conceitos": [
+      "convivialidade",
+      "contraproducência",
+      "iatrogênese",
+      "limites",
+      "autonomia"
+    ]
+  },
+  {
+    "id": "posina-roy-category-theory",
+    "categoria": "budismo-matemática",
+    "autor": "Posina, Vamsi & Roy, Subhadip",
+    "ano": 2020,
+    "titulo": "Category Theory and Buddhist Philosophy: Parallels Between Śūnyatā and Mathematical Structures",
+    "publicacao": "Journal of Indian Philosophy",
+    "relevancia": "Exploram paralelos formais entre teoria de categorias matemática e ontologia budista de śūnyatā. Convergências estruturais entre vacuidade como ausência de substancialidade e estruturas categoriais sem fundamento último.",
+    "conceitos": [
+      "teoria de categorias",
+      "śūnyatā",
+      "budismo",
+      "matemática",
+      "formalização"
+    ]
+  },
+  {
+    "id": "perezts-ubuntu-leadership",
+    "categoria": "ubuntu",
+    "autor": "Pérezts, Maribel, Russon, John-Anthony & Painter, Martin",
+    "ano": 2020,
+    "titulo": "Ubuntu Leadership: A Value-Based Approach",
+    "publicacao": "Journal of Business Ethics",
+    "relevancia": "Aplicação de Ubuntu à liderança organizacional baseada em valores, contrastando com individualismo gerencial. Liderança emerge relacionalmente através de comunidade, não reside em indivíduo heroico.",
+    "conceitos": [
+      "ubuntu",
+      "liderança",
+      "organizações",
+      "valores",
+      "relacionalidade"
+    ]
+  },
+  {
+    "id": "udah-ubuntu-social-work",
+    "categoria": "ubuntu",
+    "autor": "Udah, Hyacinth & Singh, Priya",
+    "ano": 2019,
+    "titulo": "Ubuntu Philosophy and Social Work Practice with Displaced Communities",
+    "publicacao": "Journal of Social Work",
+    "relevancia": "Aplicação de Ubuntu ao trabalho social com comunidades deslocadas. Enfatiza restauração de relacionalidades rompidas por violência e deslocamento forçado.",
+    "conceitos": [
+      "ubuntu",
+      "trabalho social",
+      "deslocamento",
+      "refugiados",
+      "relacionalidade"
+    ]
+  },
+  {
+    "id": "mugumbate-ubuntu-risk",
+    "categoria": "ubuntu",
+    "autor": "Mugumbate, Jacob & Chereni, Admire",
+    "ano": 2019,
+    "titulo": "Using African Ubuntu Theory in Social Work with Children in Zimbabwe",
+    "publicacao": "African Journal of Social Work, 9(1)",
+    "relevancia": "Aplicação de Ubuntu à gestão de risco e trabalho social com crianças. Ubuntu como framework para proteção que enfatiza responsabilidade comunitária coletiva versus individualização de risco.",
+    "conceitos": [
+      "ubuntu",
+      "gestão de risco",
+      "trabalho social",
+      "crianças",
+      "África"
+    ]
+  },
+  {
+    "id": "loomio-platform",
+    "categoria": "tecnologia-digital",
+    "autor": "Loomio Cooperative",
+    "ano": 2012,
+    "titulo": "Loomio: Decision-Making Platform",
+    "publicacao": "https://www.loomio.com",
+    "relevancia": "Plataforma de decisões por consenso assíncrono. Permite participação em fusos horários diferentes, favorece reflexão. Limitações: viés textual, assincronicidade pode prolongar decisões indefinidamente.",
+    "conceitos": [
+      "plataforma digital",
+      "consenso",
+      "decisão coletiva",
+      "assíncrono",
+      "governança"
+    ]
+  },
+  {
+    "id": "decidim-platform",
+    "categoria": "tecnologia-digital",
+    "autor": "Decidim Team",
+    "ano": 2016,
+    "titulo": "Decidim: Participatory Democracy Platform",
+    "publicacao": "https://decidim.org",
+    "relevancia": "Plataforma de orçamento participativo em escala municipal. Escalabilidade e transparência como vantagens. Limitações: participação não-representativa (viés de classe média), decisões permanecem consultivas.",
+    "conceitos": [
+      "plataforma digital",
+      "orçamento participativo",
+      "democracia participativa",
+      "municipal",
+      "governança"
+    ]
+  },
+  {
+    "id": "polis-platform",
+    "categoria": "tecnologia-digital",
+    "autor": "Pol.is Team",
+    "ano": 2012,
+    "titulo": "Pol.is: Real-time Opinion Mapping",
+    "publicacao": "https://pol.is",
+    "relevancia": "Mapeamento de opinião em larga escala. Escala massiva e visualização elegante como vantagens. Limitações: reduz complexidade a binário (concordo/discordo), não há deliberação genuína.",
+    "conceitos": [
+      "plataforma digital",
+      "mapeamento de opinião",
+      "visualização",
+      "escala",
+      "governança"
+    ]
   }
 ]

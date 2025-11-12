@@ -3990,5 +3990,948 @@
       "simbiose"
     ],
     "layer": "ecologica"
+  },
+  {
+    "id": "wahdat-al-wujud",
+    "name": "Waḥdat al-Wujūd",
+    "description": "Ibn Arabi: Unidade da existência onde multiplicidade manifesta emerge de unidade virtual. Criação e criador não são separados - realidade emerge perpetuamente através de auto-revelação divina (tajallī).",
+    "connections": [
+      "vazio",
+      "sunyata",
+      "nafas-al-rahman",
+      "tajalli",
+      "ontologia",
+      "multiplicidade"
+    ],
+    "layer": "fundacional"
+  },
+  {
+    "id": "nafas-al-rahman",
+    "name": "Nafas al-Rahman",
+    "description": "Respiração do Compassivo. Processo contínuo de manifestação divina onde criação não é evento único mas respiração perpétua. Relacionalidade como movimento ontológico fundamental.",
+    "connections": [
+      "wahdat-al-wujud",
+      "processo",
+      "vazio",
+      "devir"
+    ],
+    "layer": "fundacional"
+  },
+  {
+    "id": "tajalli",
+    "name": "Tajallī",
+    "description": "Auto-revelação divina. Realidade como desvelamento contínuo, não substância fixa. Convergência islâmica com conceitos de processo e devir.",
+    "connections": [
+      "wahdat-al-wujud",
+      "devir",
+      "processo",
+      "evento"
+    ],
+    "layer": "fundacional"
+  },
+  {
+    "id": "gottheit",
+    "name": "Gottheit",
+    "description": "Mestre Eckhart: Divindade como 'deserto' divino além de todas determinações, incluindo distinção entre Deus e criação. Experiência mística direta de não-dualidade que custou acusação de heresia.",
+    "connections": [
+      "vazio",
+      "sunyata",
+      "wahdat-al-wujud",
+      "ontologia"
+    ],
+    "layer": "fundacional"
+  },
+  {
+    "id": "teoria-categorias",
+    "name": "Teoria de Categorias",
+    "description": "Posina & Roy: Paralelos formais entre estruturas matemáticas categoriais e ontologia budista de śūnyatā. Vacuidade como ausência de substancialidade encontra eco em estruturas sem fundamento último.",
+    "connections": [
+      "sunyata",
+      "recursao",
+      "vazio",
+      "ontologia"
+    ],
+    "layer": "fundacional"
+  },
+  {
+    "id": "aporia-fundamentacao",
+    "name": "Aporia da Fundamentação",
+    "description": "Tensão irredutível: se tudo surge do vazio, vazio não se torna causa primeira? Se relacionalidade é primária, não é novo fundamento metafísico? Reconhecer honestamente sem resolver artificialmente.",
+    "connections": [
+      "vazio",
+      "recursao",
+      "ontologia",
+      "limite"
+    ],
+    "layer": "fundacional"
+  },
+  {
+    "id": "anti-fundacionalismo",
+    "name": "Anti-fundacionalismo Coerentista",
+    "description": "Rovelli: mesmo fato de que relação existe é relativo a outro sistema observador, ad infinitum. Não há nível último de descrição, nenhuma 'view from nowhere' absoluta.",
+    "connections": [
+      "recursao",
+      "aporia-fundamentacao",
+      "intracao",
+      "ontologia"
+    ],
+    "layer": "fundacional"
+  },
+  {
+    "id": "iteracao-irrestrita",
+    "name": "Iteração Irrestrita",
+    "description": "Processo recursivo sem fundamento último. Cada descrição pode ser descrita por outra descrição, indefinidamente. Base filosófica da Mecânica Quântica Relacional.",
+    "connections": [
+      "recursao",
+      "anti-fundacionalismo",
+      "intracao"
+    ],
+    "layer": "fundacional"
+  },
+  {
+    "id": "aporia-determinacao",
+    "name": "Aporia da Determinação",
+    "description": "Ação coordenada requer escolhas definitivas ('este caminho, não aquele'), enquanto relacionalidade requer abertura à indeterminação. Consenso Quaker, supermajoria, delegação revogável são modos de negociação, não resolução.",
+    "connections": [
+      "recursao",
+      "assembleia",
+      "decisao-coletiva",
+      "limite"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "aporia-transparencia",
+    "name": "Aporia da Transparência",
+    "description": "Prestação de contas requer visibilidade, mas privacidade protege autonomia. Observabilidade total cria conformidade opressiva; opacidade total facilita abuso. Distribuição é sempre política.",
+    "connections": [
+      "recursao",
+      "poder",
+      "vigilancia",
+      "limite",
+      "auditoria-transparencia"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "aporia-temporal",
+    "name": "Aporia Temporal",
+    "description": "Urgência exige ação imediata, mas processo relacional requer tempo para consulta ampla. Como evitar que toda decisão seja declarada emergencial para contornar processos? Particularmente aguda em crises climáticas.",
+    "connections": [
+      "recursao",
+      "tempo",
+      "decisao-coletiva",
+      "crise-climatica"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "aporia-expertise",
+    "name": "Aporia da Expertise",
+    "description": "Decisões complexas requerem conhecimento especializado, mas democratização requer participação independente de expertise. Como integrar sem criar aristocratismo epistemológico? Como evitar que expertise mascare interesses?",
+    "connections": [
+      "recursao",
+      "conhecimento",
+      "assembleia",
+      "educacao-popular"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "godel-incompletude",
+    "name": "Teorema de Incompletude de Gödel",
+    "description": "Sistemas formais suficientemente poderosos não podem provar própria consistência sem apelar a sistema mais poderoso. Incompletude essencial revela natureza de sistemas auto-referenciais.",
+    "connections": [
+      "recursao",
+      "limite",
+      "conhecimento",
+      "aporia-fundamentacao"
+    ],
+    "layer": "fundacional"
+  },
+  {
+    "id": "conselho-setima-geracao",
+    "name": "Conselho de Sétima Geração",
+    "description": "Haudenosaunee: decisões devem considerar impacto até sétima geração futura. Versão revisada: assembleia inteira assume responsabilidade temporal através de análise obrigatória, não conselho permanente de anciãos.",
+    "connections": [
+      "tempo",
+      "pensamento-indigena",
+      "setima-geracao",
+      "analise-temporal",
+      "futuras-geracoes"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "analise-temporal",
+    "name": "Análise Temporal Obrigatória",
+    "description": "Grupo rotativo de cinco membros (sorteio) produz documento sobre: pontos de irreversibilidade, dependências de trajetória, externalidades temporais, incertezas irredutíveis. Não possui veto, apenas obriga reflexão.",
+    "connections": [
+      "conselho-setima-geracao",
+      "tempo",
+      "irreversibilidade",
+      "assembleia"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "supermajoria-temporal",
+    "name": "Supermajoria Temporal",
+    "description": "Decisões que afetam longo prazo requerem 2/3 em vez de maioria simples. Futuro não pode votar mas merece peso institucional ampliado. Minoria de 1/3 pode bloquear se apresentar alternativa.",
+    "connections": [
+      "conselho-setima-geracao",
+      "tempo",
+      "assembleia",
+      "futuras-geracoes"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "irreversibilidade",
+    "name": "Pontos de Irreversibilidade",
+    "description": "Momentos onde decisão torna impossível reverter curso sem custos catastróficos. Identificá-los permite escolhas conscientes sobre que caminhos sem volta aceitar.",
+    "connections": [
+      "analise-temporal",
+      "limite",
+      "tempo",
+      "reversibilidade"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "dependencias-trajetoria",
+    "name": "Dependências de Trajetória",
+    "description": "Como decisão atual constrange ou habilita decisões futuras. Path dependency: escolhas criam momentum que torna certas trajetórias mais prováveis, outras impossíveis.",
+    "connections": [
+      "analise-temporal",
+      "tempo",
+      "processo",
+      "irreversibilidade"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "limites-planetarios",
+    "name": "Limites Planetários",
+    "description": "Rockström: nove fronteiras da Terra - mudança climática, biodiversidade, ciclos biogeoquímicos, uso da terra, água doce, acidificação oceânica, ozônio, aerossóis, entidades novas. Quatro já ultrapassados. Limites não são obstáculos mas condições de vida.",
+    "connections": [
+      "limite",
+      "terra",
+      "decrescimento",
+      "crise-climatica",
+      "antropoceno"
+    ],
+    "layer": "ecologica"
+  },
+  {
+    "id": "iatrogenia",
+    "name": "Iatrogênese",
+    "description": "Illich: dano causado por intervenção médica. Medicina hiperdesenvolvida produz doença através de tratamento. Metáfora para contraproducência de instituições que ultrapassam limites conviviais.",
+    "connections": [
+      "contraprodutividade",
+      "limite",
+      "tecnologias-conviviais"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "contraprodutividade",
+    "name": "Contraproducência",
+    "description": "Illich: ferramentas se tornam contraproducentes quando ultrapassam limites críticos. Automóveis prometem mobilidade mas produzem congestionamento. Educação escolarizada produz estupidez certificada.",
+    "connections": [
+      "iatrogenia",
+      "limite",
+      "tecnologias-conviviais",
+      "desescolarizacao"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "triangulacao-epistemologica",
+    "name": "Triangulação Epistemológica",
+    "description": "Decisão passa por três filtros: coerência ecológica (ciência + conhecimento tradicional), legitimidade social (consentimento informado), viabilidade material (fluxos de matéria/energia).",
+    "connections": [
+      "conhecimento",
+      "pensamento-indigena",
+      "terra",
+      "cosmopolitica",
+      "decisao-coletiva"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "matriz-incomensurabilidades",
+    "name": "Matriz de Incomensurabilidades",
+    "description": "Valores frequentemente não se comensuram através de métrica comum. Reconhecer escolha como política sobre tipo de mundo, não técnica sobre maximização de utilidade.",
+    "connections": [
+      "decisao-coletiva",
+      "normatividade",
+      "assembleia",
+      "cosmopolitica"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "infraestrutura-reversibilidade",
+    "name": "Infraestrutura de Reversibilidade",
+    "description": "Estruturar decisões para permitir revisão sem catástrofe. Cláusulas de sunset, monitoramento contínuo, checkpoints obrigatórios, protocolos de saída sem penalidade desproporcional.",
+    "connections": [
+      "reversibilidade",
+      "limite",
+      "assembleia",
+      "clausulas-sunset"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "clausulas-sunset",
+    "name": "Cláusulas de Sunset",
+    "description": "Políticas requerem renovação explícita após período determinado. Evita perpetuação automática de decisões que perderam justificativa. Permite aprendizado institucional.",
+    "connections": [
+      "infraestrutura-reversibilidade",
+      "tempo",
+      "assembleia",
+      "reversibilidade"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "pre-condicoes-materiais",
+    "name": "Pré-Condições Materiais",
+    "description": "Governança relacional não opera no vácuo mas requer recursos distribuídos desigualmente: tempo, espaço, infraestrutura, segurança material, capacitação. Reconhecer sem naturalizar escassez.",
+    "connections": [
+      "classe",
+      "desigualdade",
+      "ecologia-praticas",
+      "relacionalidade-sobrevivencia",
+      "relacionalidade-institucional"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "requisitos-temporais",
+    "name": "Requisitos Temporais da Participação",
+    "description": "Cecosesola: 3.000 encontros/ano = 120h/pessoa. Viável se participação é trabalho remunerado. Inviável com empregos precários, múltiplos trabalhos, cuidado não-remunerado desproporcional.",
+    "connections": [
+      "pre-condicoes-materiais",
+      "classe",
+      "genero",
+      "cooperativas",
+      "assembleia"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "capacidade-absorver-fracasso",
+    "name": "Capacidade de Absorver Fracasso",
+    "description": "Experimentação institucional requer poder falhar sem consequências catastróficas. Cooperativa de classe média pode experimentar; comunidades próximas a margem de sobrevivência não podem assumir tais riscos.",
+    "connections": [
+      "pre-condicoes-materiais",
+      "classe",
+      "relacionalidade-institucional",
+      "experimentacao"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "capitalismo-vigilancia",
+    "name": "Capitalismo de Vigilância",
+    "description": "Zuboff: plataformas digitais extraem 'excedente comportamental' como matéria-prima para 'produtos de predição' vendidos em 'mercados de comportamento futuro'. Relacionalidade cooptada por dataficação.",
+    "connections": [
+      "dataficacao",
+      "excedente-comportamental",
+      "plataformas-digitais",
+      "extrativismo",
+      "vigilancia"
+    ],
+    "layer": "digital"
+  },
+  {
+    "id": "excedente-comportamental",
+    "name": "Excedente Comportamental",
+    "description": "Dados gerados por interações que excedem necessidade de melhorar serviço. Apropriados unilateralmente por corporações e transformados em produtos de predição.",
+    "connections": [
+      "capitalismo-vigilancia",
+      "dataficacao",
+      "extrativismo",
+      "apropriacao-valor"
+    ],
+    "layer": "digital"
+  },
+  {
+    "id": "produtos-predicao",
+    "name": "Produtos de Predição",
+    "description": "Excedente comportamental transformado em previsões sobre comportamento futuro, vendidas em mercados B2B. Núcleo econômico do capitalismo de vigilância.",
+    "connections": [
+      "capitalismo-vigilancia",
+      "excedente-comportamental",
+      "mercados-comportamento"
+    ],
+    "layer": "digital"
+  },
+  {
+    "id": "mercados-comportamento",
+    "name": "Mercados de Comportamento Futuro",
+    "description": "Compradores adquirem probabilidades de comportamentos futuros de usuários. Invisível para quem é vendido. Assimetria radical de conhecimento e poder.",
+    "connections": [
+      "capitalismo-vigilancia",
+      "produtos-predicao",
+      "assimetria-poder"
+    ],
+    "layer": "digital"
+  },
+  {
+    "id": "dataficacao",
+    "name": "Dataficação",
+    "description": "Transformação de relações, afetos, comportamentos em dados quantificáveis, apropriáveis, comercializáveis. Redução de qualidades relacionais a métricas extraíveis.",
+    "connections": [
+      "capitalismo-vigilancia",
+      "excedente-comportamental",
+      "plataformas-digitais",
+      "extrativismo"
+    ],
+    "layer": "digital"
+  },
+  {
+    "id": "plataformas-federadas",
+    "name": "Plataformas Federadas",
+    "description": "Mastodon, Matrix, Diaspora, PeerTube: arquiteturas descentralizadas com servidores independentes que interoperam via protocolos abertos. Alternativa a monopólios, mas com limitações estruturais.",
+    "connections": [
+      "protocolos-abertos",
+      "software-livre",
+      "commons",
+      "agencia-distribuida"
+    ],
+    "layer": "digital"
+  },
+  {
+    "id": "loomio",
+    "name": "Loomio",
+    "description": "Plataforma de decisões por consenso assíncrono. Vantagens: fusos horários diferentes, reflexão. Limitações: viés textual, assincronicidade pode prolongar decisões indefinidamente.",
+    "connections": [
+      "decisao-coletiva",
+      "consenso",
+      "plataformas-digitais",
+      "assembleia"
+    ],
+    "layer": "digital"
+  },
+  {
+    "id": "decidim",
+    "name": "Decidim",
+    "description": "Plataforma de orçamento participativo municipal. Escalabilidade e transparência. Limitações: participação não-representativa (viés classe média), decisões permanecem consultivas.",
+    "connections": [
+      "orcamento-participativo",
+      "assembleia",
+      "plataformas-digitais",
+      "classe"
+    ],
+    "layer": "digital"
+  },
+  {
+    "id": "polis",
+    "name": "Pol.is",
+    "description": "Mapeamento de opinião em larga escala. Escala massiva, visualização elegante. Limitações: reduz complexidade a binário (concordo/discordo), não há deliberação genuína.",
+    "connections": [
+      "decisao-coletiva",
+      "plataformas-digitais",
+      "visualizacao"
+    ],
+    "layer": "digital"
+  },
+  {
+    "id": "ia-quasi-actante",
+    "name": "IA como Quasi-Actante",
+    "description": "IA nem ferramenta passiva nem agente autônomo. Participa de configurações relacionais exercendo agência distribuída, mas constituída e constrangida por decisões humanas de design, treinamento, deployment.",
+    "connections": [
+      "agencia-distribuida",
+      "intracao",
+      "tecnologia",
+      "intencionalidade-derivada"
+    ],
+    "layer": "digital"
+  },
+  {
+    "id": "intencionalidade-derivada",
+    "name": "Intencionalidade Derivada vs Original",
+    "description": "IA possui intencionalidade derivada (significado vem de usuários) ou pode desenvolver intencionalidade original (significado próprio)? Pergunta pragmática: quando tratar IA como actante habilita melhores práticas?",
+    "connections": [
+      "ia-quasi-actante",
+      "agencia-distribuida",
+      "conhecimento"
+    ],
+    "layer": "digital"
+  },
+  {
+    "id": "blockchain-trustless",
+    "name": "Blockchain e Tecnologias Trustless",
+    "description": "Promessa de coordenação peer-to-peer via código verificável. Crítica: 'trustless' é atomístico porque elimina necessidade de confiança social. Imutabilidade contradiz reversibilidade adaptativa.",
+    "connections": [
+      "daos",
+      "atomismo-criptografico",
+      "tecnologia",
+      "reversibilidade"
+    ],
+    "layer": "digital"
+  },
+  {
+    "id": "daos",
+    "name": "DAOs",
+    "description": "Organizações Autônomas Descentralizadas. 'One token one vote' são plutocracias puras. Linguagem de descentralização mascara centralização de poder econômico e técnico.",
+    "connections": [
+      "blockchain-trustless",
+      "atomismo-criptografico",
+      "poder",
+      "desigualdade"
+    ],
+    "layer": "digital"
+  },
+  {
+    "id": "atomismo-criptografico",
+    "name": "Atomismo Criptográfico",
+    "description": "Substituição de confiança social por garantias criptográficas. Permite transações entre estranhos anônimos sem construir relacionalidade. Anonimato impede accountability relacional.",
+    "connections": [
+      "blockchain-trustless",
+      "daos",
+      "reciprocidade",
+      "confianca"
+    ],
+    "layer": "digital"
+  },
+  {
+    "id": "transparencia-assimetrica",
+    "name": "Transparência Assimétrica Radical",
+    "description": "Usuários monitorados intensivamente (cliques, movimentos, atenção, expressões faciais, localização). Algoritmos que determinam visibilidade permanecem opacos, protegidos como segredos comerciais.",
+    "connections": [
+      "capitalismo-vigilancia",
+      "plataformas-digitais",
+      "poder",
+      "aporia-transparencia",
+      "auditoria-transparencia"
+    ],
+    "layer": "digital"
+  },
+  {
+    "id": "lock-in-social",
+    "name": "Lock-in Social",
+    "description": "Efeitos de rede criam dependência: valor da plataforma aumenta com número de usuários, tornando custoso sair. Dados não podem ser completamente deletados ou exportados facilmente.",
+    "connections": [
+      "plataformas-digitais",
+      "reversibilidade",
+      "poder"
+    ],
+    "layer": "digital"
+  },
+  {
+    "id": "apropriacao-valor-digital",
+    "name": "Apropriação de Valor Digital",
+    "description": "Valor econômico gerado por interações sociais capturado por acionistas que não participaram de produção. Usuários criam todo conteúdo sem compensação monetária.",
+    "connections": [
+      "capitalismo-vigilancia",
+      "extrativismo",
+      "commons",
+      "apropriacao-valor"
+    ],
+    "layer": "digital"
+  },
+  {
+    "id": "ecologia-praticas",
+    "name": "Ecologia de Práticas Relacionais",
+    "description": "Pluralidade legítima de modos relacionais apropriados a diferentes contextos materiais, conectados via solidariedade horizontal sem hierarquia epistemológica. Não evolutiva, mas contextual.",
+    "connections": [
+      "relacionalidade-sobrevivencia",
+      "relacionalidade-institucional",
+      "relacionalidade-resistencia",
+      "solidariedade-horizontal"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "relacionalidade-sobrevivencia",
+    "name": "Relacionalidade de Sobrevivência",
+    "description": "Opera em escassez extrema com stakes existenciais. Redes informais densas, delegação tácita, processos rápidos, solidariedade prática. Não é primitiva mas racionalmente adequada. Possui sabedoria sobre interdependência radical.",
+    "connections": [
+      "ecologia-praticas",
+      "pre-condicoes-materiais",
+      "classe",
+      "reciprocidade",
+      "solidariedade"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "relacionalidade-institucional",
+    "name": "Relacionalidade Institucional",
+    "description": "Opera em segurança material relativa. Estruturas formais elaboradas, deliberação estendida, planejamento longo prazo, infraestrutura tecnológica, expertise especializada. Permite experimentação sistemática mas depende de privilégio.",
+    "connections": [
+      "ecologia-praticas",
+      "cooperativas",
+      "pre-condicoes-materiais",
+      "classe",
+      "experimentacao"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "relacionalidade-resistencia",
+    "name": "Relacionalidade de Resistência",
+    "description": "Opera sob opressão ativa. Semi-clandestinidade, horizontalidade deliberada, práticas prefigurativas, solidariedade internacionalista, memória coletiva de resistências. Mantém viva possibilidade de alternativa sob hostilidade.",
+    "connections": [
+      "ecologia-praticas",
+      "ressurgencia-indigena",
+      "evento",
+      "solidariedade",
+      "memoria-coletiva"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "aporia-universalizacao",
+    "name": "Aporia da Universalização",
+    "description": "Se relacionalidade é condição ontológica universal, por que institucionalização consciente depende de condições materiais privilegiadas? Contradição performativa entre universalidade ontológica e implementação privilegiada.",
+    "connections": [
+      "ontologia",
+      "pre-condicoes-materiais",
+      "classe",
+      "ecologia-praticas"
+    ],
+    "layer": "fundacional"
+  },
+  {
+    "id": "solidariedade-horizontal",
+    "name": "Solidariedade Horizontal",
+    "description": "Reconhecer interdependências materiais concretas entre práticas relacionais. Não hierarquizar como estágios evolutivos. Redistribuição, compartilhamento, transferência bidirecional, advocacy, proteção mútua.",
+    "connections": [
+      "ecologia-praticas",
+      "relacionalidade-sobrevivencia",
+      "relacionalidade-institucional",
+      "relacionalidade-resistencia",
+      "reciprocidade"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "redistribuicao-recursos",
+    "name": "Redistribuição de Recursos Excedentes",
+    "description": "Cooperativas afluentes destinam porcentagem de excedente para apoiar organizações em comunidades precarizadas. Não caridade paternalista mas reconhecimento de dívida material.",
+    "connections": [
+      "solidariedade-horizontal",
+      "cooperativas",
+      "classe",
+      "reciprocidade"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "transferencia-bidirecional",
+    "name": "Transferência de Conhecimento Bidirecional",
+    "description": "Não apenas capacitação unidirecional de privilegiados ensinando precários. Aprendizado mútuo onde saberes de sobrevivência e resistência informam práticas institucionais.",
+    "connections": [
+      "solidariedade-horizontal",
+      "conhecimento",
+      "educacao-popular",
+      "classe"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "aporia-escala",
+    "name": "Aporia da Escala",
+    "description": "Coordenação em escala planetária pode ser ontologicamente impossível sem hierarquias? Relacionalidade pode ser fundamental mas politicamente inadequada para escala sistêmica? Experimentação honesta sem garantias.",
+    "connections": [
+      "escala-sistemica",
+      "federalismo-subsidiario",
+      "recursao",
+      "limite"
+    ],
+    "layer": "fundacional"
+  },
+  {
+    "id": "escala-somatica",
+    "name": "Escala Somática",
+    "description": "Corpo individual como holobionte: trilhões de células e micróbios em simbiose radical. Governança por coordenação química, neural, imunológica com mínima mediação consciente. Relacionalidade quase automática.",
+    "connections": [
+      "holobionte",
+      "multiplicidade",
+      "simbiose",
+      "corpo"
+    ],
+    "layer": "ecologica"
+  },
+  {
+    "id": "escala-intersticial",
+    "name": "Escala Intersticial",
+    "description": "Até 500 pessoas. Reconhecimento mútuo direto - todos podem conhecer rostos e nomes. Governança por encontros presenciais onde cada voz pode ser ouvida. Multiplicidade mantém rostos identificáveis.",
+    "connections": [
+      "assembleia",
+      "comunidade",
+      "federalismo-subsidiario",
+      "escala-regional"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "escala-regional",
+    "name": "Escala Regional",
+    "description": "Até 50.000 pessoas. Requer delegação rotativa e representação revogável. Cecosesola: 3.000 encontros anuais em múltiplos níveis. Estruturas federadas conectam círculos menores sem centralizar poder.",
+    "connections": [
+      "escala-intersticial",
+      "federacao",
+      "cooperativas",
+      "escala-sistemica"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "escala-sistemica",
+    "name": "Escala Sistêmica",
+    "description": "Global. Capitalismo coordena via abstrações (preços, dinheiro, commodities) que suprimem relacionalidade concreta. Alternativas podem requerer ontologias híbridas com mecanismos de abstração não-totalizantes.",
+    "connections": [
+      "aporia-escala",
+      "federalismo-subsidiario",
+      "estrategia-escala-dupla",
+      "capitalismo"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "federalismo-subsidiario",
+    "name": "Federalismo Subsidiário Radical",
+    "description": "Decisões no nível mais local possível. Regional apenas quando local inadequado, global apenas quando regional inadequado. Federação de federações com poder de veto distribuído, rotatividade obrigatória.",
+    "connections": [
+      "escala-sistemica",
+      "subsidiariedade",
+      "federacao",
+      "assembleia"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "subsidiariedade",
+    "name": "Princípio de Subsidiariedade Máxima",
+    "description": "Delegar para cima apenas o absolutamente necessário. Preservar autonomia local máxima. Centralizar apenas funções que genuinamente requerem coordenação ampla.",
+    "connections": [
+      "federalismo-subsidiario",
+      "autonomia",
+      "descentralizacao"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "federacao-federacoes",
+    "name": "Federação de Federações",
+    "description": "Regiões autônomas federam-se em redes maiores apenas para questões que requerem coordenação ampla: clima, migrações, pandemias, comércio justo. Não estado mundial mas rede de redes.",
+    "connections": [
+      "federalismo-subsidiario",
+      "federacao",
+      "escala-sistemica",
+      "cosmopolitica"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "veto-distribuido",
+    "name": "Poder de Veto Distribuído",
+    "description": "Qualquer região pode bloquear decisões federais que violam princípios relacionais acordados. Não pode bloquear simplesmente por discordância. Proteção contra centralização sem paralisia.",
+    "connections": [
+      "federalismo-subsidiario",
+      "assembleia",
+      "decisao-coletiva"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "rotatividade-obrigatoria",
+    "name": "Rotatividade Obrigatória",
+    "description": "Representantes em níveis federais superiores: mandatos curtos, rotativos, revogáveis, sorteados entre pool com experiência em governança regional. Evita oligarquização.",
+    "connections": [
+      "federalismo-subsidiario",
+      "assembleia",
+      "democracia",
+      "sorteio"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "estrategia-escala-dupla",
+    "name": "Estratégia de Escala Dupla",
+    "description": "Opera simultaneamente: (1) escala intersticial-regional construindo ecologia densa de instituições relacionais alternativas, (2) escala sistêmica-global transformando parâmetros via regulação e redistribuição.",
+    "connections": [
+      "escala-intersticial",
+      "escala-sistemica",
+      "cooperativas",
+      "commons",
+      "decrescimento"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "matriz-distribuicao-poder",
+    "name": "Matriz de Distribuição de Poder",
+    "description": "Toolkit: quem pode realmente reconfigurar organização? Para 10 decisões mais importantes: quem iniciou, quem deliberou, quem vetou, quem influenciou, quem implementou. Mapear padrões de centralização.",
+    "connections": [
+      "poder",
+      "assembleia",
+      "agencia-distribuida",
+      "auditoria"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "auditoria-transparencia",
+    "name": "Auditoria de Transparência Assimétrica",
+    "description": "Toolkit: quem pode ver dentro de quem? Matriz comparando o que membros veem (decisões, finanças, avaliações) vs o que lideranças veem de membros (desempenho, opiniões, dados pessoais).",
+    "connections": [
+      "aporia-transparencia",
+      "transparencia-assimetrica",
+      "poder",
+      "vigilancia"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "indice-reversibilidade",
+    "name": "Índice de Reversibilidade",
+    "description": "Toolkit: podemos mudar de ideia sem catástrofe? Avaliar estruturas por temporalidade (renovação), custo de saída, dependências criadas. Score alto = adaptabilidade, score baixo = rigidez.",
+    "connections": [
+      "reversibilidade",
+      "infraestrutura-reversibilidade",
+      "clausulas-sunset",
+      "experimentacao"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "rastreamento-apropriacao",
+    "name": "Rastreamento de Apropriação de Valor",
+    "description": "Toolkit: quem captura valor produzido coletivamente? Mapear produção de valor (econômico, social, político, epistêmico, cultural) e sua captura. Avaliar equidade via assembleia.",
+    "connections": [
+      "apropriacao-valor",
+      "commons",
+      "cooperativas",
+      "extrativismo"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "teste-coerencia-performativa",
+    "name": "Teste de Coerência Performativa",
+    "description": "Toolkit: práticas contradizem princípios declarados? Para cada princípio: última vez que agimos consistentemente, inconsistentemente, proporção, razões de contradição. Hipocrisia é negação sistemática, não contradição ocasional.",
+    "connections": [
+      "performatividade",
+      "normatividade",
+      "assembleia",
+      "honestidade"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "protocolo-inclusao-neurodiversa",
+    "name": "Protocolo de Inclusão Neurodiversa",
+    "description": "Toolkit: processos excluem modos de cognição? Mapear modos de participação (presencial, virtual, síncrono, assíncrono, oral, escrito, visual, corporal). Criar menu de participação onde cada pessoa escolhe.",
+    "connections": [
+      "assembleia",
+      "acessibilidade",
+      "diversidade",
+      "participacao"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "assembleia-acelerada",
+    "name": "Assembleia Acelerada de Futuridade",
+    "description": "Protocolo escassez: 90 minutos máximo. Círculo de anciãos (3 pessoas sorteadas) compartilha memórias históricas. Visualização coletiva de futuro. Identificação de irreversibilidades. Decisão por maioria qualificada.",
+    "connections": [
+      "conselho-setima-geracao",
+      "relacionalidade-sobrevivencia",
+      "assembleia",
+      "tempo"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "rodizio-recursos",
+    "name": "Rodízio de Recursos Não-Monetários",
+    "description": "Protocolo escassez: mapeamento trimestral de recursos compartilháveis (habilidades, ferramentas, espaço, tempo, conhecimento). Economia de dádiva com reciprocidade difusa, não troca direta.",
+    "connections": [
+      "relacionalidade-sobrevivencia",
+      "reciprocidade",
+      "economia-dadiva",
+      "commons"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "economia-dadiva-difusa",
+    "name": "Economia de Dádiva com Reciprocidade Difusa",
+    "description": "Contribuo hoje sem expectativa de retorno direto, confiando que quando precisar, comunidade responderá. Não do ut des (te dou X para receber Y) mas circulação generalizada.",
+    "connections": [
+      "rodizio-recursos",
+      "reciprocidade",
+      "confianca",
+      "commons"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "consentimento-tacito",
+    "name": "Consentimento Tácito",
+    "description": "Protocolo escassez: decisões assumidas aprovadas se anunciadas 48h antes sem objeção registrada e sem irreversibilidades sérias. Qualquer pessoa pode pausar. Proteções contra abuso.",
+    "connections": [
+      "relacionalidade-sobrevivencia",
+      "consenso",
+      "assembleia",
+      "reversibilidade"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "circulo-anciaos",
+    "name": "Círculo de Anciãos",
+    "description": "Protocolo escassez: resolução de conflitos. 3 pessoas sorteadas de pool (>5 anos comunidade, não envolvidas, percebidas como justas). Facilitam diálogo, não decidem quem está certo. Objetivo: restaurar relacionamento.",
+    "connections": [
+      "relacionalidade-sobrevivencia",
+      "conflito",
+      "memoria-coletiva",
+      "justica-restaurativa"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "observacao-sensorial",
+    "name": "Observação Sensorial Coletiva",
+    "description": "Protocolo escassez: incluir terra sem expertise ecológica. Caminhada coletiva observando plantas, animais, água, relações. Círculo compartilha memórias de como área era antes. Princípio precautório simplificado.",
+    "connections": [
+      "relacionalidade-sobrevivencia",
+      "terra",
+      "cosmopolitica",
+      "pensamento-indigena",
+      "conhecimento-situado"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "narrativas-experimentacao",
+    "name": "Narrativas de Experimentação",
+    "description": "Protocolo escassez: documentação oral vs métricas formais. Antes: articular 3-5 sinais qualitativos de sucesso. Durante: mensalmente 3 pessoas sorteadas contam história do mês. Depois: avaliar coletivamente.",
+    "connections": [
+      "relacionalidade-sobrevivencia",
+      "experimentacao",
+      "conhecimento-situado",
+      "oralidade"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "micro-experimentacao",
+    "name": "Micro-Experimentação",
+    "description": "Experimentação em pequena escala com baixo risco. Permite aprendizado sem requerer recursos massivos ou capacidade de absorver grandes fracassos. Iteração rápida.",
+    "connections": [
+      "experimentacao",
+      "relacionalidade-sobrevivencia",
+      "capacidade-absorver-fracasso",
+      "praxis"
+    ],
+    "layer": "pratica"
   }
 ]

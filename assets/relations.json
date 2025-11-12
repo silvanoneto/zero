@@ -10762,5 +10762,1481 @@
     "to": "permacultura",
     "name": "se concretizam em",
     "description": "Valores éticos se concretizam em permacultura - earth care, people care, fair share"
+  },
+  {
+    "from": "wahdat-al-wujud",
+    "to": "vazio",
+    "name": "converge com",
+    "description": "Unidade da existência islâmica converge com vacuidade budista"
+  },
+  {
+    "from": "wahdat-al-wujud",
+    "to": "sunyata",
+    "name": "dialoga com",
+    "description": "Ibn Arabi e Nagarjuna compartilham rejeição de substancialismo"
+  },
+  {
+    "from": "wahdat-al-wujud",
+    "to": "ontologia",
+    "name": "propõe",
+    "description": "Waḥdat al-wujūd propõe ontologia não-dualista"
+  },
+  {
+    "from": "nafas-al-rahman",
+    "to": "processo",
+    "name": "exemplifica",
+    "description": "Respiração do Compassivo exemplifica processo"
+  },
+  {
+    "from": "nafas-al-rahman",
+    "to": "wahdat-al-wujud",
+    "name": "manifesta",
+    "description": "Respiração divina manifesta unidade"
+  },
+  {
+    "from": "tajalli",
+    "to": "devir",
+    "name": "é modo de",
+    "description": "Auto-revelação divina é modo de devir"
+  },
+  {
+    "from": "tajalli",
+    "to": "wahdat-al-wujud",
+    "name": "atualiza",
+    "description": "Tajallī atualiza waḥdat al-wujūd"
+  },
+  {
+    "from": "gottheit",
+    "to": "vazio",
+    "name": "corresponde a",
+    "description": "Deserto divino de Eckhart corresponde a vazio"
+  },
+  {
+    "from": "gottheit",
+    "to": "sunyata",
+    "name": "ecoa",
+    "description": "Gottheit ecoa śūnyatā"
+  },
+  {
+    "from": "teoria-categorias",
+    "to": "sunyata",
+    "name": "formaliza",
+    "description": "Teoria de categorias formaliza śūnyatā"
+  },
+  {
+    "from": "teoria-categorias",
+    "to": "recursao",
+    "name": "matematiza",
+    "description": "Categorias matematizam recursão"
+  },
+  {
+    "from": "aporia-fundamentacao",
+    "to": "vazio",
+    "name": "questiona",
+    "description": "Aporia questiona vazio"
+  },
+  {
+    "from": "aporia-fundamentacao",
+    "to": "recursao",
+    "name": "expõe limite de",
+    "description": "Aporia expõe limite de recursão"
+  },
+  {
+    "from": "aporia-fundamentacao",
+    "to": "ontologia",
+    "name": "desestabiliza",
+    "description": "Relacionalidade primária não vira fundamento?"
+  },
+  {
+    "from": "anti-fundacionalismo",
+    "to": "recursao",
+    "name": "radicaliza",
+    "description": "Nenhum nível último"
+  },
+  {
+    "from": "anti-fundacionalismo",
+    "to": "intracao",
+    "name": "fundamenta-se",
+    "description": "Rovelli: relação é relativa"
+  },
+  {
+    "from": "iteracao-irrestrita",
+    "to": "recursao",
+    "name": "operacionaliza",
+    "description": "Cada descrição descrita indefinidamente"
+  },
+  {
+    "from": "iteracao-irrestrita",
+    "to": "anti-fundacionalismo",
+    "name": "sustenta",
+    "description": "Base da MQR"
+  },
+  {
+    "from": "aporia-determinacao",
+    "to": "recursao",
+    "name": "emerge de",
+    "description": "Tensão escolha vs abertura"
+  },
+  {
+    "from": "aporia-determinacao",
+    "to": "assembleia",
+    "name": "constrange",
+    "description": "Consenso é negociação"
+  },
+  {
+    "from": "aporia-transparencia",
+    "to": "poder",
+    "name": "revela",
+    "description": "Visibilidade é política"
+  },
+  {
+    "from": "aporia-transparencia",
+    "to": "vigilancia",
+    "name": "conecta-se a",
+    "description": "Observabilidade total opressiva"
+  },
+  {
+    "from": "aporia-temporal",
+    "to": "tempo",
+    "name": "emerge de",
+    "description": "Urgência vs processo"
+  },
+  {
+    "from": "aporia-temporal",
+    "to": "crise-climatica",
+    "name": "intensifica-se",
+    "description": "Urgência climática aguda"
+  },
+  {
+    "from": "aporia-expertise",
+    "to": "conhecimento",
+    "name": "questiona",
+    "description": "Expertise sem aristocratismo?"
+  },
+  {
+    "from": "aporia-expertise",
+    "to": "assembleia",
+    "name": "desafia",
+    "description": "Democratização vs expertise"
+  },
+  {
+    "from": "godel-incompletude",
+    "to": "recursao",
+    "name": "demonstra",
+    "description": "Incompletude de auto-referência"
+  },
+  {
+    "from": "godel-incompletude",
+    "to": "limite",
+    "name": "estabelece",
+    "description": "Sistemas não provam consistência"
+  },
+  {
+    "from": "conselho-setima-geracao",
+    "to": "tempo",
+    "name": "estende",
+    "description": "Sete gerações futuras"
+  },
+  {
+    "from": "conselho-setima-geracao",
+    "to": "pensamento-indigena",
+    "name": "deriva de",
+    "description": "Sabedoria Haudenosaunee"
+  },
+  {
+    "from": "analise-temporal",
+    "to": "conselho-setima-geracao",
+    "name": "operacionaliza",
+    "description": "Grupo rotativo com documento"
+  },
+  {
+    "from": "analise-temporal",
+    "to": "irreversibilidade",
+    "name": "identifica",
+    "description": "Pontos sem volta"
+  },
+  {
+    "from": "supermajoria-temporal",
+    "to": "assembleia",
+    "name": "modifica",
+    "description": "2/3 para longo prazo"
+  },
+  {
+    "from": "irreversibilidade",
+    "to": "limite",
+    "name": "marca",
+    "description": "Decisões sem volta"
+  },
+  {
+    "from": "dependencias-trajetoria",
+    "to": "tempo",
+    "name": "manifesta",
+    "description": "Path dependency"
+  },
+  {
+    "from": "limites-planetarios",
+    "to": "terra",
+    "name": "definem",
+    "description": "Nove fronteiras"
+  },
+  {
+    "from": "limites-planetarios",
+    "to": "decrescimento",
+    "name": "exigem",
+    "description": "Quatro ultrapassadas"
+  },
+  {
+    "from": "iatrogenia",
+    "to": "contraprodutividade",
+    "name": "exemplifica",
+    "description": "Medicina produz doença"
+  },
+  {
+    "from": "contraprodutividade",
+    "to": "limite",
+    "name": "resulta de",
+    "description": "Ultrapassar limites"
+  },
+  {
+    "from": "triangulacao-epistemologica",
+    "to": "conhecimento",
+    "name": "integra",
+    "description": "Três tipos conhecimento"
+  },
+  {
+    "from": "matriz-incomensurabilidades",
+    "to": "normatividade",
+    "name": "confronta",
+    "description": "Valores não comensuram"
+  },
+  {
+    "from": "infraestrutura-reversibilidade",
+    "to": "clausulas-sunset",
+    "name": "inclui",
+    "description": "Renovação obrigatória"
+  },
+  {
+    "from": "clausulas-sunset",
+    "to": "reversibilidade",
+    "name": "facilitam",
+    "description": "Evita perpetuação"
+  },
+  {
+    "from": "pre-condicoes-materiais",
+    "to": "classe",
+    "name": "distribuem-se",
+    "description": "Desigualdade temporal"
+  },
+  {
+    "from": "requisitos-temporais",
+    "to": "genero",
+    "name": "excluem por",
+    "description": "Cuidado desproporcional"
+  },
+  {
+    "from": "capacidade-absorver-fracasso",
+    "to": "experimentacao",
+    "name": "condiciona",
+    "description": "Fracasso requer margem"
+  },
+  {
+    "from": "capitalismo-vigilancia",
+    "to": "dataficacao",
+    "name": "opera via",
+    "description": "Relações viram dados"
+  },
+  {
+    "from": "capitalismo-vigilancia",
+    "to": "vigilancia",
+    "name": "sistematiza",
+    "description": "Monitoramento como negócio"
+  },
+  {
+    "from": "excedente-comportamental",
+    "to": "produtos-predicao",
+    "name": "vira",
+    "description": "Previsões comportamentais"
+  },
+  {
+    "from": "mercados-comportamento",
+    "to": "poder",
+    "name": "concentram",
+    "description": "Assimetria de conhecimento"
+  },
+  {
+    "from": "dataficacao",
+    "to": "relacionalidade",
+    "name": "reduz",
+    "description": "Qualidades viram métricas"
+  },
+  {
+    "from": "plataformas-federadas",
+    "to": "commons",
+    "name": "operacionalizam",
+    "description": "Infraestrutura compartilhada"
+  },
+  {
+    "from": "loomio",
+    "to": "consenso",
+    "name": "facilita",
+    "description": "Consenso assíncrono"
+  },
+  {
+    "from": "decidim",
+    "to": "classe",
+    "name": "reflete viés",
+    "description": "Viés classe média"
+  },
+  {
+    "from": "polis",
+    "to": "decisao-coletiva",
+    "name": "limita",
+    "description": "Reduz a binário"
+  },
+  {
+    "from": "ia-quasi-actante",
+    "to": "agencia-distribuida",
+    "name": "exemplifica",
+    "description": "Nem ferramenta nem agente"
+  },
+  {
+    "from": "blockchain-trustless",
+    "to": "reversibilidade",
+    "name": "contradiz",
+    "description": "Imutabilidade problemática"
+  },
+  {
+    "from": "daos",
+    "to": "poder",
+    "name": "centralizam",
+    "description": "Plutocracia digital"
+  },
+  {
+    "from": "atomismo-criptografico",
+    "to": "confianca",
+    "name": "substitui",
+    "description": "Criptografia vs social"
+  },
+  {
+    "from": "transparencia-assimetrica",
+    "to": "vigilancia",
+    "name": "opera como",
+    "description": "Usuários monitorados"
+  },
+  {
+    "from": "lock-in-social",
+    "to": "poder",
+    "name": "concentra",
+    "description": "Dependência estrutural"
+  },
+  {
+    "from": "apropriacao-valor-digital",
+    "to": "extrativismo",
+    "name": "é",
+    "description": "Extrativismo digital"
+  },
+  {
+    "from": "ecologia-praticas",
+    "to": "relacionalidade-sobrevivencia",
+    "name": "inclui",
+    "description": "Contextualmente adequada"
+  },
+  {
+    "from": "ecologia-praticas",
+    "to": "relacionalidade-institucional",
+    "name": "inclui",
+    "description": "Materialmente privilegiada"
+  },
+  {
+    "from": "ecologia-praticas",
+    "to": "relacionalidade-resistencia",
+    "name": "inclui",
+    "description": "Sob hostilidade"
+  },
+  {
+    "from": "relacionalidade-sobrevivencia",
+    "to": "reciprocidade",
+    "name": "fundamenta-se",
+    "description": "Interdependência radical"
+  },
+  {
+    "from": "relacionalidade-institucional",
+    "to": "cooperativas",
+    "name": "manifesta-se",
+    "description": "Estruturas elaboradas"
+  },
+  {
+    "from": "relacionalidade-resistencia",
+    "to": "memoria-coletiva",
+    "name": "preserva",
+    "description": "Resistências históricas"
+  },
+  {
+    "from": "aporia-universalizacao",
+    "to": "ontologia",
+    "name": "questiona",
+    "description": "Contradição performativa"
+  },
+  {
+    "from": "solidariedade-horizontal",
+    "to": "ecologia-praticas",
+    "name": "conecta",
+    "description": "Transferências bidirecionais"
+  },
+  {
+    "from": "redistribuicao-recursos",
+    "to": "classe",
+    "name": "confronta",
+    "description": "Dívida material"
+  },
+  {
+    "from": "transferencia-bidirecional",
+    "to": "educacao-popular",
+    "name": "realiza",
+    "description": "Aprendizado mútuo"
+  },
+  {
+    "from": "aporia-escala",
+    "to": "recursao",
+    "name": "emerge de",
+    "description": "Escala pode exigir abstração"
+  },
+  {
+    "from": "escala-somatica",
+    "to": "holobionte",
+    "name": "manifesta-se",
+    "description": "Corpo simbiose"
+  },
+  {
+    "from": "holobionte",
+    "to": "multiplicidade",
+    "name": "incorpora",
+    "description": "Organismo é ecossistema"
+  },
+  {
+    "from": "escala-intersticial",
+    "to": "assembleia",
+    "name": "permite",
+    "description": "Até 500 pessoas"
+  },
+  {
+    "from": "escala-regional",
+    "to": "federacao",
+    "name": "requer",
+    "description": "Delegação rotativa"
+  },
+  {
+    "from": "escala-sistemica",
+    "to": "capitalismo",
+    "name": "coordena-se via",
+    "description": "Abstrações totalizantes"
+  },
+  {
+    "from": "federalismo-subsidiario",
+    "to": "subsidiariedade",
+    "name": "fundamenta-se",
+    "description": "Decisões locais"
+  },
+  {
+    "from": "subsidiariedade",
+    "to": "autonomia",
+    "name": "preserva",
+    "description": "Autonomia local"
+  },
+  {
+    "from": "federacao-federacoes",
+    "to": "cosmopolitica",
+    "name": "aproxima-se",
+    "description": "Rede de redes"
+  },
+  {
+    "from": "veto-distribuido",
+    "to": "assembleia",
+    "name": "protege",
+    "description": "Bloqueio sem paralisia"
+  },
+  {
+    "from": "rotatividade-obrigatoria",
+    "to": "sorteio",
+    "name": "utiliza",
+    "description": "Pool com experiência"
+  },
+  {
+    "from": "estrategia-escala-dupla",
+    "to": "escala-intersticial",
+    "name": "opera em",
+    "description": "Ecologia densa"
+  },
+  {
+    "from": "estrategia-escala-dupla",
+    "to": "escala-sistemica",
+    "name": "opera em",
+    "description": "Transformar parâmetros"
+  },
+  {
+    "from": "matriz-distribuicao-poder",
+    "to": "poder",
+    "name": "mapeia",
+    "description": "Quem realmente decide?"
+  },
+  {
+    "from": "auditoria-transparencia",
+    "to": "vigilancia",
+    "name": "detecta",
+    "description": "Assimetrias visibilidade"
+  },
+  {
+    "from": "indice-reversibilidade",
+    "to": "reversibilidade",
+    "name": "quantifica",
+    "description": "Mudar sem catástrofe?"
+  },
+  {
+    "from": "rastreamento-apropriacao",
+    "to": "commons",
+    "name": "protege",
+    "description": "Visibilidade sobre captura"
+  },
+  {
+    "from": "teste-coerencia-performativa",
+    "to": "honestidade",
+    "name": "requer",
+    "description": "Hipocrisia vs contradição"
+  },
+  {
+    "from": "protocolo-inclusao-neurodiversa",
+    "to": "acessibilidade",
+    "name": "operacionaliza",
+    "description": "Modos de cognição"
+  },
+  {
+    "from": "assembleia-acelerada",
+    "to": "relacionalidade-sobrevivencia",
+    "name": "adapta-se",
+    "description": "90 min em escassez"
+  },
+  {
+    "from": "rodizio-recursos",
+    "to": "commons",
+    "name": "cria",
+    "description": "Recursos compartilháveis"
+  },
+  {
+    "from": "economia-dadiva-difusa",
+    "to": "reciprocidade",
+    "name": "pratica",
+    "description": "Circulação generalizada"
+  },
+  {
+    "from": "consentimento-tacito",
+    "to": "consenso",
+    "name": "acelera",
+    "description": "Assumido sem objeção"
+  },
+  {
+    "from": "circulo-anciaos",
+    "to": "justica-restaurativa",
+    "name": "pratica",
+    "description": "Restaurar relacionamento"
+  },
+  {
+    "from": "observacao-sensorial",
+    "to": "cosmopolitica",
+    "name": "democratiza",
+    "description": "Terra sem expertise"
+  },
+  {
+    "from": "narrativas-experimentacao",
+    "to": "oralidade",
+    "name": "privilegia",
+    "description": "Histórias orais"
+  },
+  {
+    "from": "micro-experimentacao",
+    "to": "experimentacao",
+    "name": "viabiliza",
+    "description": "Baixo risco iterativo"
+  },
+  {
+    "from": "wahdat-al-wujud",
+    "to": "multiplicidade",
+    "name": "relaciona-se com",
+    "description": "wahdat-al-wujud relaciona-se com multiplicidade"
+  },
+  {
+    "from": "nafas-al-rahman",
+    "to": "vazio",
+    "name": "relaciona-se com",
+    "description": "nafas-al-rahman relaciona-se com vazio"
+  },
+  {
+    "from": "nafas-al-rahman",
+    "to": "devir",
+    "name": "relaciona-se com",
+    "description": "nafas-al-rahman relaciona-se com devir"
+  },
+  {
+    "from": "tajalli",
+    "to": "processo",
+    "name": "articula-se com",
+    "description": "tajalli articula-se com processo"
+  },
+  {
+    "from": "tajalli",
+    "to": "evento",
+    "name": "relaciona-se com",
+    "description": "tajalli relaciona-se com evento"
+  },
+  {
+    "from": "gottheit",
+    "to": "wahdat-al-wujud",
+    "name": "relaciona-se com",
+    "description": "gottheit relaciona-se com wahdat-al-wujud"
+  },
+  {
+    "from": "gottheit",
+    "to": "ontologia",
+    "name": "relaciona-se com",
+    "description": "gottheit relaciona-se com ontologia"
+  },
+  {
+    "from": "teoria-categorias",
+    "to": "vazio",
+    "name": "relaciona-se com",
+    "description": "teoria-categorias relaciona-se com vazio"
+  },
+  {
+    "from": "teoria-categorias",
+    "to": "ontologia",
+    "name": "relaciona-se com",
+    "description": "teoria-categorias relaciona-se com ontologia"
+  },
+  {
+    "from": "aporia-fundamentacao",
+    "to": "limite",
+    "name": "reconhece",
+    "description": "aporia-fundamentacao reconhece limite"
+  },
+  {
+    "from": "anti-fundacionalismo",
+    "to": "aporia-fundamentacao",
+    "name": "relaciona-se com",
+    "description": "anti-fundacionalismo relaciona-se com aporia-fundamentacao"
+  },
+  {
+    "from": "iteracao-irrestrita",
+    "to": "intracao",
+    "name": "emerge em",
+    "description": "iteracao-irrestrita emerge em intracao"
+  },
+  {
+    "from": "aporia-determinacao",
+    "to": "limite",
+    "name": "reconhece",
+    "description": "aporia-determinacao reconhece limite"
+  },
+  {
+    "from": "aporia-transparencia",
+    "to": "recursao",
+    "name": "incorpora",
+    "description": "aporia-transparencia incorpora recursao"
+  },
+  {
+    "from": "aporia-transparencia",
+    "to": "limite",
+    "name": "reconhece",
+    "description": "aporia-transparencia reconhece limite"
+  },
+  {
+    "from": "aporia-transparencia",
+    "to": "auditoria-transparencia",
+    "name": "relaciona-se com",
+    "description": "aporia-transparencia relaciona-se com auditoria-transparencia"
+  },
+  {
+    "from": "aporia-temporal",
+    "to": "recursao",
+    "name": "incorpora",
+    "description": "aporia-temporal incorpora recursao"
+  },
+  {
+    "from": "aporia-expertise",
+    "to": "recursao",
+    "name": "incorpora",
+    "description": "aporia-expertise incorpora recursao"
+  },
+  {
+    "from": "godel-incompletude",
+    "to": "conhecimento",
+    "name": "mobiliza",
+    "description": "godel-incompletude mobiliza conhecimento"
+  },
+  {
+    "from": "godel-incompletude",
+    "to": "aporia-fundamentacao",
+    "name": "relaciona-se com",
+    "description": "godel-incompletude relaciona-se com aporia-fundamentacao"
+  },
+  {
+    "from": "analise-temporal",
+    "to": "tempo",
+    "name": "temporaliza",
+    "description": "analise-temporal temporaliza tempo"
+  },
+  {
+    "from": "analise-temporal",
+    "to": "assembleia",
+    "name": "informa",
+    "description": "analise-temporal informa assembleia"
+  },
+  {
+    "from": "supermajoria-temporal",
+    "to": "conselho-setima-geracao",
+    "name": "relaciona-se com",
+    "description": "supermajoria-temporal relaciona-se com conselho-setima-geracao"
+  },
+  {
+    "from": "supermajoria-temporal",
+    "to": "tempo",
+    "name": "temporaliza",
+    "description": "supermajoria-temporal temporaliza tempo"
+  },
+  {
+    "from": "irreversibilidade",
+    "to": "tempo",
+    "name": "temporaliza",
+    "description": "irreversibilidade temporaliza tempo"
+  },
+  {
+    "from": "dependencias-trajetoria",
+    "to": "analise-temporal",
+    "name": "relaciona-se com",
+    "description": "dependencias-trajetoria relaciona-se com analise-temporal"
+  },
+  {
+    "from": "dependencias-trajetoria",
+    "to": "processo",
+    "name": "articula-se com",
+    "description": "dependencias-trajetoria articula-se com processo"
+  },
+  {
+    "from": "dependencias-trajetoria",
+    "to": "irreversibilidade",
+    "name": "relaciona-se com",
+    "description": "dependencias-trajetoria relaciona-se com irreversibilidade"
+  },
+  {
+    "from": "limites-planetarios",
+    "to": "limite",
+    "name": "reconhece",
+    "description": "limites-planetarios reconhece limite"
+  },
+  {
+    "from": "iatrogenia",
+    "to": "limite",
+    "name": "reconhece",
+    "description": "iatrogenia reconhece limite"
+  },
+  {
+    "from": "contraprodutividade",
+    "to": "desescolarizacao",
+    "name": "relaciona-se com",
+    "description": "contraprodutividade relaciona-se com desescolarizacao"
+  },
+  {
+    "from": "triangulacao-epistemologica",
+    "to": "terra",
+    "name": "relaciona-se com",
+    "description": "triangulacao-epistemologica relaciona-se com terra"
+  },
+  {
+    "from": "triangulacao-epistemologica",
+    "to": "cosmopolitica",
+    "name": "relaciona-se com",
+    "description": "triangulacao-epistemologica relaciona-se com cosmopolitica"
+  },
+  {
+    "from": "matriz-incomensurabilidades",
+    "to": "assembleia",
+    "name": "informa",
+    "description": "matriz-incomensurabilidades informa assembleia"
+  },
+  {
+    "from": "matriz-incomensurabilidades",
+    "to": "cosmopolitica",
+    "name": "relaciona-se com",
+    "description": "matriz-incomensurabilidades relaciona-se com cosmopolitica"
+  },
+  {
+    "from": "infraestrutura-reversibilidade",
+    "to": "limite",
+    "name": "reconhece",
+    "description": "infraestrutura-reversibilidade reconhece limite"
+  },
+  {
+    "from": "infraestrutura-reversibilidade",
+    "to": "assembleia",
+    "name": "informa",
+    "description": "infraestrutura-reversibilidade informa assembleia"
+  },
+  {
+    "from": "clausulas-sunset",
+    "to": "tempo",
+    "name": "temporaliza",
+    "description": "clausulas-sunset temporaliza tempo"
+  },
+  {
+    "from": "clausulas-sunset",
+    "to": "assembleia",
+    "name": "informa",
+    "description": "clausulas-sunset informa assembleia"
+  },
+  {
+    "from": "pre-condicoes-materiais",
+    "to": "desigualdade",
+    "name": "reproduz",
+    "description": "pre-condicoes-materiais reproduz desigualdade"
+  },
+  {
+    "from": "pre-condicoes-materiais",
+    "to": "ecologia-praticas",
+    "name": "relaciona-se com",
+    "description": "pre-condicoes-materiais relaciona-se com ecologia-praticas"
+  },
+  {
+    "from": "pre-condicoes-materiais",
+    "to": "relacionalidade-sobrevivencia",
+    "name": "relaciona-se com",
+    "description": "pre-condicoes-materiais relaciona-se com relacionalidade-sobrevivencia"
+  },
+  {
+    "from": "pre-condicoes-materiais",
+    "to": "relacionalidade-institucional",
+    "name": "relaciona-se com",
+    "description": "pre-condicoes-materiais relaciona-se com relacionalidade-institucional"
+  },
+  {
+    "from": "requisitos-temporais",
+    "to": "pre-condicoes-materiais",
+    "name": "relaciona-se com",
+    "description": "requisitos-temporais relaciona-se com pre-condicoes-materiais"
+  },
+  {
+    "from": "requisitos-temporais",
+    "to": "classe",
+    "name": "atravessado por",
+    "description": "requisitos-temporais atravessado por classe"
+  },
+  {
+    "from": "requisitos-temporais",
+    "to": "assembleia",
+    "name": "informa",
+    "description": "requisitos-temporais informa assembleia"
+  },
+  {
+    "from": "capacidade-absorver-fracasso",
+    "to": "pre-condicoes-materiais",
+    "name": "relaciona-se com",
+    "description": "capacidade-absorver-fracasso relaciona-se com pre-condicoes-materiais"
+  },
+  {
+    "from": "capacidade-absorver-fracasso",
+    "to": "classe",
+    "name": "atravessado por",
+    "description": "capacidade-absorver-fracasso atravessado por classe"
+  },
+  {
+    "from": "capacidade-absorver-fracasso",
+    "to": "relacionalidade-institucional",
+    "name": "relaciona-se com",
+    "description": "capacidade-absorver-fracasso relaciona-se com relacionalidade-institucional"
+  },
+  {
+    "from": "capitalismo-vigilancia",
+    "to": "excedente-comportamental",
+    "name": "relaciona-se com",
+    "description": "capitalismo-vigilancia relaciona-se com excedente-comportamental"
+  },
+  {
+    "from": "capitalismo-vigilancia",
+    "to": "extrativismo",
+    "name": "resiste a",
+    "description": "capitalismo-vigilancia resiste a extrativismo"
+  },
+  {
+    "from": "excedente-comportamental",
+    "to": "capitalismo-vigilancia",
+    "name": "relaciona-se com",
+    "description": "excedente-comportamental relaciona-se com capitalismo-vigilancia"
+  },
+  {
+    "from": "excedente-comportamental",
+    "to": "dataficacao",
+    "name": "relaciona-se com",
+    "description": "excedente-comportamental relaciona-se com dataficacao"
+  },
+  {
+    "from": "excedente-comportamental",
+    "to": "extrativismo",
+    "name": "resiste a",
+    "description": "excedente-comportamental resiste a extrativismo"
+  },
+  {
+    "from": "produtos-predicao",
+    "to": "capitalismo-vigilancia",
+    "name": "relaciona-se com",
+    "description": "produtos-predicao relaciona-se com capitalismo-vigilancia"
+  },
+  {
+    "from": "produtos-predicao",
+    "to": "mercados-comportamento",
+    "name": "relaciona-se com",
+    "description": "produtos-predicao relaciona-se com mercados-comportamento"
+  },
+  {
+    "from": "mercados-comportamento",
+    "to": "capitalismo-vigilancia",
+    "name": "relaciona-se com",
+    "description": "mercados-comportamento relaciona-se com capitalismo-vigilancia"
+  },
+  {
+    "from": "mercados-comportamento",
+    "to": "produtos-predicao",
+    "name": "relaciona-se com",
+    "description": "mercados-comportamento relaciona-se com produtos-predicao"
+  },
+  {
+    "from": "dataficacao",
+    "to": "excedente-comportamental",
+    "name": "relaciona-se com",
+    "description": "dataficacao relaciona-se com excedente-comportamental"
+  },
+  {
+    "from": "dataficacao",
+    "to": "extrativismo",
+    "name": "resiste a",
+    "description": "dataficacao resiste a extrativismo"
+  },
+  {
+    "from": "loomio",
+    "to": "assembleia",
+    "name": "informa",
+    "description": "loomio informa assembleia"
+  },
+  {
+    "from": "decidim",
+    "to": "assembleia",
+    "name": "informa",
+    "description": "decidim informa assembleia"
+  },
+  {
+    "from": "ia-quasi-actante",
+    "to": "intracao",
+    "name": "emerge em",
+    "description": "ia-quasi-actante emerge em intracao"
+  },
+  {
+    "from": "ia-quasi-actante",
+    "to": "tecnologia",
+    "name": "questiona",
+    "description": "ia-quasi-actante questiona tecnologia"
+  },
+  {
+    "from": "ia-quasi-actante",
+    "to": "intencionalidade-derivada",
+    "name": "relaciona-se com",
+    "description": "ia-quasi-actante relaciona-se com intencionalidade-derivada"
+  },
+  {
+    "from": "intencionalidade-derivada",
+    "to": "ia-quasi-actante",
+    "name": "relaciona-se com",
+    "description": "intencionalidade-derivada relaciona-se com ia-quasi-actante"
+  },
+  {
+    "from": "intencionalidade-derivada",
+    "to": "conhecimento",
+    "name": "mobiliza",
+    "description": "intencionalidade-derivada mobiliza conhecimento"
+  },
+  {
+    "from": "blockchain-trustless",
+    "to": "daos",
+    "name": "relaciona-se com",
+    "description": "blockchain-trustless relaciona-se com daos"
+  },
+  {
+    "from": "blockchain-trustless",
+    "to": "atomismo-criptografico",
+    "name": "relaciona-se com",
+    "description": "blockchain-trustless relaciona-se com atomismo-criptografico"
+  },
+  {
+    "from": "blockchain-trustless",
+    "to": "tecnologia",
+    "name": "questiona",
+    "description": "blockchain-trustless questiona tecnologia"
+  },
+  {
+    "from": "daos",
+    "to": "blockchain-trustless",
+    "name": "relaciona-se com",
+    "description": "daos relaciona-se com blockchain-trustless"
+  },
+  {
+    "from": "daos",
+    "to": "atomismo-criptografico",
+    "name": "relaciona-se com",
+    "description": "daos relaciona-se com atomismo-criptografico"
+  },
+  {
+    "from": "daos",
+    "to": "desigualdade",
+    "name": "reproduz",
+    "description": "daos reproduz desigualdade"
+  },
+  {
+    "from": "atomismo-criptografico",
+    "to": "blockchain-trustless",
+    "name": "relaciona-se com",
+    "description": "atomismo-criptografico relaciona-se com blockchain-trustless"
+  },
+  {
+    "from": "atomismo-criptografico",
+    "to": "daos",
+    "name": "relaciona-se com",
+    "description": "atomismo-criptografico relaciona-se com daos"
+  },
+  {
+    "from": "atomismo-criptografico",
+    "to": "reciprocidade",
+    "name": "fundamenta",
+    "description": "atomismo-criptografico fundamenta reciprocidade"
+  },
+  {
+    "from": "transparencia-assimetrica",
+    "to": "capitalismo-vigilancia",
+    "name": "relaciona-se com",
+    "description": "transparencia-assimetrica relaciona-se com capitalismo-vigilancia"
+  },
+  {
+    "from": "transparencia-assimetrica",
+    "to": "poder",
+    "name": "expõe",
+    "description": "transparencia-assimetrica expõe poder"
+  },
+  {
+    "from": "transparencia-assimetrica",
+    "to": "aporia-transparencia",
+    "name": "relaciona-se com",
+    "description": "transparencia-assimetrica relaciona-se com aporia-transparencia"
+  },
+  {
+    "from": "transparencia-assimetrica",
+    "to": "auditoria-transparencia",
+    "name": "relaciona-se com",
+    "description": "transparencia-assimetrica relaciona-se com auditoria-transparencia"
+  },
+  {
+    "from": "apropriacao-valor-digital",
+    "to": "capitalismo-vigilancia",
+    "name": "relaciona-se com",
+    "description": "apropriacao-valor-digital relaciona-se com capitalismo-vigilancia"
+  },
+  {
+    "from": "apropriacao-valor-digital",
+    "to": "commons",
+    "name": "relaciona-se com",
+    "description": "apropriacao-valor-digital relaciona-se com commons"
+  },
+  {
+    "from": "relacionalidade-sobrevivencia",
+    "to": "pre-condicoes-materiais",
+    "name": "relaciona-se com",
+    "description": "relacionalidade-sobrevivencia relaciona-se com pre-condicoes-materiais"
+  },
+  {
+    "from": "relacionalidade-sobrevivencia",
+    "to": "classe",
+    "name": "atravessado por",
+    "description": "relacionalidade-sobrevivencia atravessado por classe"
+  },
+  {
+    "from": "relacionalidade-institucional",
+    "to": "pre-condicoes-materiais",
+    "name": "relaciona-se com",
+    "description": "relacionalidade-institucional relaciona-se com pre-condicoes-materiais"
+  },
+  {
+    "from": "relacionalidade-institucional",
+    "to": "classe",
+    "name": "atravessado por",
+    "description": "relacionalidade-institucional atravessado por classe"
+  },
+  {
+    "from": "relacionalidade-resistencia",
+    "to": "evento",
+    "name": "relaciona-se com",
+    "description": "relacionalidade-resistencia relaciona-se com evento"
+  },
+  {
+    "from": "aporia-universalizacao",
+    "to": "pre-condicoes-materiais",
+    "name": "relaciona-se com",
+    "description": "aporia-universalizacao relaciona-se com pre-condicoes-materiais"
+  },
+  {
+    "from": "aporia-universalizacao",
+    "to": "classe",
+    "name": "atravessado por",
+    "description": "aporia-universalizacao atravessado por classe"
+  },
+  {
+    "from": "aporia-universalizacao",
+    "to": "ecologia-praticas",
+    "name": "relaciona-se com",
+    "description": "aporia-universalizacao relaciona-se com ecologia-praticas"
+  },
+  {
+    "from": "solidariedade-horizontal",
+    "to": "relacionalidade-sobrevivencia",
+    "name": "relaciona-se com",
+    "description": "solidariedade-horizontal relaciona-se com relacionalidade-sobrevivencia"
+  },
+  {
+    "from": "solidariedade-horizontal",
+    "to": "relacionalidade-institucional",
+    "name": "relaciona-se com",
+    "description": "solidariedade-horizontal relaciona-se com relacionalidade-institucional"
+  },
+  {
+    "from": "solidariedade-horizontal",
+    "to": "relacionalidade-resistencia",
+    "name": "relaciona-se com",
+    "description": "solidariedade-horizontal relaciona-se com relacionalidade-resistencia"
+  },
+  {
+    "from": "solidariedade-horizontal",
+    "to": "reciprocidade",
+    "name": "fundamenta",
+    "description": "solidariedade-horizontal fundamenta reciprocidade"
+  },
+  {
+    "from": "redistribuicao-recursos",
+    "to": "solidariedade-horizontal",
+    "name": "relaciona-se com",
+    "description": "redistribuicao-recursos relaciona-se com solidariedade-horizontal"
+  },
+  {
+    "from": "redistribuicao-recursos",
+    "to": "reciprocidade",
+    "name": "fundamenta",
+    "description": "redistribuicao-recursos fundamenta reciprocidade"
+  },
+  {
+    "from": "transferencia-bidirecional",
+    "to": "solidariedade-horizontal",
+    "name": "relaciona-se com",
+    "description": "transferencia-bidirecional relaciona-se com solidariedade-horizontal"
+  },
+  {
+    "from": "transferencia-bidirecional",
+    "to": "conhecimento",
+    "name": "mobiliza",
+    "description": "transferencia-bidirecional mobiliza conhecimento"
+  },
+  {
+    "from": "transferencia-bidirecional",
+    "to": "classe",
+    "name": "atravessado por",
+    "description": "transferencia-bidirecional atravessado por classe"
+  },
+  {
+    "from": "aporia-escala",
+    "to": "escala-sistemica",
+    "name": "relaciona-se com",
+    "description": "aporia-escala relaciona-se com escala-sistemica"
+  },
+  {
+    "from": "aporia-escala",
+    "to": "federalismo-subsidiario",
+    "name": "relaciona-se com",
+    "description": "aporia-escala relaciona-se com federalismo-subsidiario"
+  },
+  {
+    "from": "aporia-escala",
+    "to": "limite",
+    "name": "reconhece",
+    "description": "aporia-escala reconhece limite"
+  },
+  {
+    "from": "escala-somatica",
+    "to": "multiplicidade",
+    "name": "relaciona-se com",
+    "description": "escala-somatica relaciona-se com multiplicidade"
+  },
+  {
+    "from": "escala-somatica",
+    "to": "simbiose",
+    "name": "relaciona-se com",
+    "description": "escala-somatica relaciona-se com simbiose"
+  },
+  {
+    "from": "escala-intersticial",
+    "to": "comunidade",
+    "name": "escala em",
+    "description": "escala-intersticial escala em comunidade"
+  },
+  {
+    "from": "escala-intersticial",
+    "to": "federalismo-subsidiario",
+    "name": "relaciona-se com",
+    "description": "escala-intersticial relaciona-se com federalismo-subsidiario"
+  },
+  {
+    "from": "escala-intersticial",
+    "to": "escala-regional",
+    "name": "relaciona-se com",
+    "description": "escala-intersticial relaciona-se com escala-regional"
+  },
+  {
+    "from": "escala-regional",
+    "to": "escala-intersticial",
+    "name": "relaciona-se com",
+    "description": "escala-regional relaciona-se com escala-intersticial"
+  },
+  {
+    "from": "escala-regional",
+    "to": "escala-sistemica",
+    "name": "relaciona-se com",
+    "description": "escala-regional relaciona-se com escala-sistemica"
+  },
+  {
+    "from": "escala-sistemica",
+    "to": "aporia-escala",
+    "name": "relaciona-se com",
+    "description": "escala-sistemica relaciona-se com aporia-escala"
+  },
+  {
+    "from": "escala-sistemica",
+    "to": "federalismo-subsidiario",
+    "name": "relaciona-se com",
+    "description": "escala-sistemica relaciona-se com federalismo-subsidiario"
+  },
+  {
+    "from": "federalismo-subsidiario",
+    "to": "escala-sistemica",
+    "name": "relaciona-se com",
+    "description": "federalismo-subsidiario relaciona-se com escala-sistemica"
+  },
+  {
+    "from": "federalismo-subsidiario",
+    "to": "assembleia",
+    "name": "informa",
+    "description": "federalismo-subsidiario informa assembleia"
+  },
+  {
+    "from": "federacao-federacoes",
+    "to": "federalismo-subsidiario",
+    "name": "relaciona-se com",
+    "description": "federacao-federacoes relaciona-se com federalismo-subsidiario"
+  },
+  {
+    "from": "federacao-federacoes",
+    "to": "escala-sistemica",
+    "name": "relaciona-se com",
+    "description": "federacao-federacoes relaciona-se com escala-sistemica"
+  },
+  {
+    "from": "veto-distribuido",
+    "to": "federalismo-subsidiario",
+    "name": "relaciona-se com",
+    "description": "veto-distribuido relaciona-se com federalismo-subsidiario"
+  },
+  {
+    "from": "rotatividade-obrigatoria",
+    "to": "federalismo-subsidiario",
+    "name": "relaciona-se com",
+    "description": "rotatividade-obrigatoria relaciona-se com federalismo-subsidiario"
+  },
+  {
+    "from": "rotatividade-obrigatoria",
+    "to": "assembleia",
+    "name": "informa",
+    "description": "rotatividade-obrigatoria informa assembleia"
+  },
+  {
+    "from": "rotatividade-obrigatoria",
+    "to": "democracia",
+    "name": "fortalece",
+    "description": "rotatividade-obrigatoria fortalece democracia"
+  },
+  {
+    "from": "estrategia-escala-dupla",
+    "to": "commons",
+    "name": "relaciona-se com",
+    "description": "estrategia-escala-dupla relaciona-se com commons"
+  },
+  {
+    "from": "estrategia-escala-dupla",
+    "to": "decrescimento",
+    "name": "relaciona-se com",
+    "description": "estrategia-escala-dupla relaciona-se com decrescimento"
+  },
+  {
+    "from": "matriz-distribuicao-poder",
+    "to": "assembleia",
+    "name": "informa",
+    "description": "matriz-distribuicao-poder informa assembleia"
+  },
+  {
+    "from": "auditoria-transparencia",
+    "to": "aporia-transparencia",
+    "name": "relaciona-se com",
+    "description": "auditoria-transparencia relaciona-se com aporia-transparencia"
+  },
+  {
+    "from": "auditoria-transparencia",
+    "to": "transparencia-assimetrica",
+    "name": "relaciona-se com",
+    "description": "auditoria-transparencia relaciona-se com transparencia-assimetrica"
+  },
+  {
+    "from": "auditoria-transparencia",
+    "to": "poder",
+    "name": "expõe",
+    "description": "auditoria-transparencia expõe poder"
+  },
+  {
+    "from": "indice-reversibilidade",
+    "to": "infraestrutura-reversibilidade",
+    "name": "relaciona-se com",
+    "description": "indice-reversibilidade relaciona-se com infraestrutura-reversibilidade"
+  },
+  {
+    "from": "indice-reversibilidade",
+    "to": "clausulas-sunset",
+    "name": "relaciona-se com",
+    "description": "indice-reversibilidade relaciona-se com clausulas-sunset"
+  },
+  {
+    "from": "rastreamento-apropriacao",
+    "to": "extrativismo",
+    "name": "resiste a",
+    "description": "rastreamento-apropriacao resiste a extrativismo"
+  },
+  {
+    "from": "teste-coerencia-performativa",
+    "to": "performatividade",
+    "name": "testa",
+    "description": "teste-coerencia-performativa testa performatividade"
+  },
+  {
+    "from": "teste-coerencia-performativa",
+    "to": "normatividade",
+    "name": "avalia",
+    "description": "teste-coerencia-performativa avalia normatividade"
+  },
+  {
+    "from": "teste-coerencia-performativa",
+    "to": "assembleia",
+    "name": "informa",
+    "description": "teste-coerencia-performativa informa assembleia"
+  },
+  {
+    "from": "protocolo-inclusao-neurodiversa",
+    "to": "assembleia",
+    "name": "informa",
+    "description": "protocolo-inclusao-neurodiversa informa assembleia"
+  },
+  {
+    "from": "assembleia-acelerada",
+    "to": "conselho-setima-geracao",
+    "name": "relaciona-se com",
+    "description": "assembleia-acelerada relaciona-se com conselho-setima-geracao"
+  },
+  {
+    "from": "assembleia-acelerada",
+    "to": "assembleia",
+    "name": "informa",
+    "description": "assembleia-acelerada informa assembleia"
+  },
+  {
+    "from": "assembleia-acelerada",
+    "to": "tempo",
+    "name": "temporaliza",
+    "description": "assembleia-acelerada temporaliza tempo"
+  },
+  {
+    "from": "rodizio-recursos",
+    "to": "relacionalidade-sobrevivencia",
+    "name": "relaciona-se com",
+    "description": "rodizio-recursos relaciona-se com relacionalidade-sobrevivencia"
+  },
+  {
+    "from": "rodizio-recursos",
+    "to": "reciprocidade",
+    "name": "fundamenta",
+    "description": "rodizio-recursos fundamenta reciprocidade"
+  },
+  {
+    "from": "economia-dadiva-difusa",
+    "to": "rodizio-recursos",
+    "name": "relaciona-se com",
+    "description": "economia-dadiva-difusa relaciona-se com rodizio-recursos"
+  },
+  {
+    "from": "economia-dadiva-difusa",
+    "to": "commons",
+    "name": "relaciona-se com",
+    "description": "economia-dadiva-difusa relaciona-se com commons"
+  },
+  {
+    "from": "consentimento-tacito",
+    "to": "relacionalidade-sobrevivencia",
+    "name": "relaciona-se com",
+    "description": "consentimento-tacito relaciona-se com relacionalidade-sobrevivencia"
+  },
+  {
+    "from": "consentimento-tacito",
+    "to": "assembleia",
+    "name": "informa",
+    "description": "consentimento-tacito informa assembleia"
+  },
+  {
+    "from": "circulo-anciaos",
+    "to": "relacionalidade-sobrevivencia",
+    "name": "relaciona-se com",
+    "description": "circulo-anciaos relaciona-se com relacionalidade-sobrevivencia"
+  },
+  {
+    "from": "observacao-sensorial",
+    "to": "relacionalidade-sobrevivencia",
+    "name": "relaciona-se com",
+    "description": "observacao-sensorial relaciona-se com relacionalidade-sobrevivencia"
+  },
+  {
+    "from": "observacao-sensorial",
+    "to": "terra",
+    "name": "relaciona-se com",
+    "description": "observacao-sensorial relaciona-se com terra"
+  },
+  {
+    "from": "narrativas-experimentacao",
+    "to": "relacionalidade-sobrevivencia",
+    "name": "relaciona-se com",
+    "description": "narrativas-experimentacao relaciona-se com relacionalidade-sobrevivencia"
+  },
+  {
+    "from": "micro-experimentacao",
+    "to": "relacionalidade-sobrevivencia",
+    "name": "relaciona-se com",
+    "description": "micro-experimentacao relaciona-se com relacionalidade-sobrevivencia"
+  },
+  {
+    "from": "micro-experimentacao",
+    "to": "capacidade-absorver-fracasso",
+    "name": "relaciona-se com",
+    "description": "micro-experimentacao relaciona-se com capacidade-absorver-fracasso"
   }
 ]
