@@ -515,6 +515,23 @@ a:hover {
     border-bottom-color: var(--emergence);
 }
 
+/* Centralização de conteúdo */
+div[align="center"] {
+    text-align: center;
+}
+
+div[align="center"] ul,
+div[align="center"] ol {
+    list-style-position: inside;
+    text-align: center;
+    padding: 0;
+}
+
+div[align="center"] li {
+    text-align: center;
+    margin: 0.5em 0;
+}
+
 /* --------------------------------------------
    4. ANIMATIONS
    -------------------------------------------- */
