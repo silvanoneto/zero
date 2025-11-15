@@ -1009,6 +1009,11 @@ body.light-theme .void-message {
     font-size: 1rem;
 }
 
+.void-button,
+.livro-button {
+    font-size: 1.1rem;
+}
+
 .font-size-button {
     font-size: 1rem;
     font-weight: bold;
@@ -1048,6 +1053,42 @@ body.light-theme .void-message {
 }
 
 .referencias-button:hover::after {
+    opacity: 0.7;
+}
+
+.void-button::after {
+    content: 'CRIO';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.65rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    letter-spacing: 0.1em;
+}
+
+.void-button:hover::after {
+    opacity: 0.7;
+}
+
+.livro-button::after {
+    content: 'LIVRO';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.65rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    letter-spacing: 0.1em;
+}
+
+.livro-button:hover::after {
     opacity: 0.7;
 }
 
