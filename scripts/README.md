@@ -229,5 +229,4 @@ make validate
 ---
 
 **Última atualização:** Novembro 2025  
-**Versão da ontologia:** 1.0.0  
 **Conceitos:** 246 | **Relações:** 1231 | **Camadas:** 8

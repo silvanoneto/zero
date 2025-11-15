@@ -4152,7 +4152,7 @@
   {
     "id": "conselho-setima-geracao",
     "name": "Conselho de Sétima Geração",
-    "description": "Haudenosaunee: decisões devem considerar impacto até sétima geração futura. Versão revisada: assembleia inteira assume responsabilidade temporal através de análise obrigatória, não conselho permanente de anciãos.",
+    "description": "Haudenosaunee: decisões devem considerar impacto até sétima geração futura. Proposta revisada: assembleia inteira assume responsabilidade temporal através de análise obrigatória, não conselho permanente de anciãos.",
     "connections": [
       "tempo",
       "pensamento-indigena",
@@ -4933,5 +4933,155 @@
       "praxis"
     ],
     "layer": "pratica"
+  },
+  {
+    "id": "instrumentalizacao-universal",
+    "name": "Instrumentalização Universal",
+    "description": "Tendência sistêmica de reduzir todas relações a meio-fim utilitário, transformando vínculos em transações e pessoas em recursos. Problema central da modernidade capitalista.",
+    "color": "0xff4444",
+    "references": ["heidegger-1927", "adorno-horkheimer-1944", "marcuse-1964"],
+    "connections": [
+      "violencia-sistemica",
+      "cooptacao",
+      "dominacao-estrutural",
+      "capitalismo",
+      "reificacao"
+    ],
+    "layer": "politica"
+  },
+  {
+    "id": "advocacy-politica",
+    "name": "Advocacy Política",
+    "description": "Prática de defender direitos e interesses de grupos marginalizados através de mobilização, representação e pressão sobre estruturas de poder. Essencial para transformação institucional.",
+    "color": "0xff6b9d",
+    "references": ["freire-1968", "hooks-2000"],
+    "connections": [
+      "mobilizacao-coletiva",
+      "representacao-politica",
+      "justica-social",
+      "empoderamento",
+      "praxis"
+    ],
+    "layer": "pratica"
+  },
+  {
+    "id": "antagonismo-relacional",
+    "name": "Antagonismo Relacional",
+    "description": "Conflito constitutivo entre diferentes modos de relacionalidade. Não é oposição entre entidades pré-existentes mas tensão ontológica entre diferentes padrões de emergência relacional.",
+    "color": "0xcc5555",
+    "references": ["laclau-mouffe-1985", "ranciere-1999"],
+    "connections": [
+      "conflito-constitutivo",
+      "pluralismo-agonistico",
+      "hegemonia",
+      "diferenca-ontologica",
+      "multiplicidade"
+    ],
+    "layer": "politica"
+  },
+  {
+    "id": "cooptacao-neoliberal",
+    "name": "Cooptação Neoliberal",
+    "description": "Apropriação de linguagens e práticas emancipatórias pelo capitalismo, transformando crítica em mercadoria e resistência em marca. Mecanismo sofisticado de neutralização.",
+    "color": "0xff3366",
+    "references": ["boltanski-chiapello-1999", "fisher-2009"],
+    "connections": [
+      "cooptacao",
+      "capitalismo",
+      "violencia-sistemica",
+      "realismo-capitalista",
+      "instrumentalizacao-universal"
+    ],
+    "layer": "politica"
+  },
+  {
+    "id": "humildade-epistemologica",
+    "name": "Humildade Epistemológica",
+    "description": "Reconhecimento dos limites do próprio conhecimento e abertura para outras formas de saber. Essencial para diálogo intercultural e descolonização epistemológica.",
+    "color": "0x66bbff",
+    "references": ["santos-2007", "mignolo-2011"],
+    "connections": [
+      "epistemologia-situada",
+      "pluralismo-epistemico",
+      "decolonialidade",
+      "dialogo-intercultural",
+      "abertura-radical"
+    ],
+    "layer": "epistemica"
+  },
+  {
+    "id": "neurodiversidade",
+    "name": "Neurodiversidade",
+    "description": "Variação natural nos modos de processamento neurológico e cognitivo. Desafia normalização patologizante, afirmando diferença como multiplicidade constitutiva.",
+    "color": "0x9966ff",
+    "references": ["singer-1998", "chapman-2020"],
+    "connections": [
+      "multiplicidade",
+      "diferenca-ontologica",
+      "singularizacao",
+      "anti-normatividade",
+      "diversidade-constitutiva"
+    ],
+    "layer": "ontologica"
+  },
+  {
+    "id": "recursao-ontologica",
+    "name": "Recursão Ontológica",
+    "description": "Processo pelo qual relações produzem entidades que retroalimentam novas relações. Auto-referência constitutiva sem origem ou fundamento final.",
+    "color": "0x8844ff",
+    "references": ["godel-1931", "hofstadter-1979", "luhmann-1984"],
+    "connections": [
+      "emergencia",
+      "autopoiese",
+      "circularidade-produtiva",
+      "relacionalidade-constitutiva",
+      "processo-sem-fundamento"
+    ],
+    "layer": "ontologica"
+  },
+  {
+    "id": "resistencia-relacional",
+    "name": "Resistência Relacional",
+    "description": "Oposição que emerge das próprias práticas relacionais, não como negação mas como afirmação de outros modos de existir. Resistir é criar alternativas ontológicas.",
+    "color": "0xff5577",
+    "references": ["foucault-1982", "deleuze-guattari-1987", "scott-1985"],
+    "connections": [
+      "resistencia",
+      "criacao-ontologica",
+      "praxis",
+      "autonomia-relacional",
+      "poder-constituinte"
+    ],
+    "layer": "politica"
+  },
+  {
+    "id": "solidariedade-estrutural",
+    "name": "Solidariedade Estrutural",
+    "description": "Interdependência constitutiva que conecta lutas aparentemente distintas. Reconhecimento de que opressões são co-produzidas sistemicamente.",
+    "color": "0xff7799",
+    "references": ["combahee-1977", "crenshaw-1989", "taylor-2017"],
+    "connections": [
+      "interseccionalidade",
+      "coalicao-afetiva",
+      "justica-social",
+      "interdependencia-radical",
+      "mobilizacao-coletiva"
+    ],
+    "layer": "politica"
+  },
+  {
+    "id": "transformacao-sistemica",
+    "name": "Transformação Sistêmica",
+    "description": "Mudança que afeta padrões relacionais fundamentais, não apenas elementos isolados. Requer alteração de lógicas operacionais e pressupostos ontológicos.",
+    "color": "0xff9944",
+    "references": ["meadows-1999", "wright-2010"],
+    "connections": [
+      "mudanca-paradigmatica",
+      "revolucao-ontologica",
+      "transicao-civilizacional",
+      "experimentacao",
+      "praxis"
+    ],
+    "layer": "politica"
   }
 ]

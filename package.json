@@ -1,6 +1,5 @@
 {
   "name": "revolucao-cibernetica",
-  "version": "2.0.0",
   "description": "Visualização 3D de conceitos filosóficos relacionais",
   "type": "module",
   "scripts": {
@@ -11,12 +10,14 @@
     "dev": "concurrently -k -n \"TS,SYNC\" -c \"cyan,magenta\" \"tsc --watch\" \"npm run browser-sync\""
   },
   "devDependencies": {
+    "@types/jszip": "^3.4.0",
     "@types/three": "^0.181.0",
     "browser-sync": "^3.0.4",
     "concurrently": "^9.1.2",
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "jszip": "^3.10.1",
     "three": "^0.181.0"
   }
 }

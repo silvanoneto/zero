@@ -502,14 +502,17 @@ async function init() {
  * Check URL hash and focus on concept if present
  */
 function checkUrlHashAndFocus() {
-    const hash = window.location.hash.substring(1); // Remove '#'
+    const hash = decodeURIComponent(window.location.hash.substring(1)); // Remove '#' e decode
     if (hash) {
+        console.log('Hash decodificado:', hash);
         // Aguardar um pouco para garantir que os nós foram criados
         setTimeout(() => {
             const targetNode = nodes.find(node => node.userData.id === hash);
             if (targetNode) {
                 focusOnNode(targetNode);
                 showNotification(`Focando em: ${targetNode.userData.name}`);
+            } else {
+                console.warn(`Nó não encontrado para hash: ${hash}`);
             }
         }, 500);
     }

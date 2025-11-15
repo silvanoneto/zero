@@ -190,6 +190,81 @@ h1 {
     line-height: 1.2;
 }
 
+/* Divisórias especiais para headers de PARTE/SEÇÃO */
+h1:not(:first-of-type) {
+    margin-top: 6rem;
+    padding-top: 4rem;
+    position: relative;
+}
+
+h1:not(:first-of-type)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--glow) 20%,
+        var(--emergence) 50%,
+        var(--glow) 80%,
+        transparent
+    );
+    opacity: 0.8;
+}
+
+h1:not(:first-of-type)::after {
+    content: '◈';
+    position: absolute;
+    top: -0.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--emergence);
+    font-size: 1.5rem;
+    opacity: 0.9;
+    text-shadow: 0 0 10px var(--glow);
+}
+
+/* Títulos de PARTE com estilo destacado */
+h1[id^="parte-"],
+h1:has(+ hr) {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.02) 0%,
+        rgba(255, 255, 255, 0.05) 50%,
+        rgba(255, 255, 255, 0.02) 100%
+    );
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.light-theme h1:not(:first-of-type)::before {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(10, 10, 10, 0.2) 20%,
+        rgba(10, 10, 10, 0.4) 50%,
+        rgba(10, 10, 10, 0.2) 80%,
+        transparent
+    );
+}
+
+body.light-theme h1[id^="parte-"],
+body.light-theme h1:has(+ hr) {
+    background: linear-gradient(
+        135deg,
+        rgba(10, 10, 10, 0.02) 0%,
+        rgba(10, 10, 10, 0.05) 50%,
+        rgba(10, 10, 10, 0.02) 100%
+    );
+    border-color: rgba(10, 10, 10, 0.1);
+}
+
 h2 {
     font-size: clamp(1.5rem, 5vw, 1.8rem);
     font-weight: 400;
@@ -219,15 +294,49 @@ h4, h5, h6 {
     line-height: 1.4;
 }
 
+/* Font Size Controls */
+body.font-small {
+    font-size: 14px;
+}
+
+body.font-medium {
+    font-size: 16px;
+}
+
+body.font-large {
+    font-size: 18px;
+}
+
+body.font-small p,
+body.font-small li {
+    line-height: 1.8;
+}
+
+body.font-large p,
+body.font-large li {
+    line-height: 2.0;
+}
+
 /* Text Elements */
 p {
     margin-bottom: 1.5rem;
-    text-align: center;
+    text-align: justify;
+    text-justify: inter-word;
     hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
     max-width: 75ch; /* Optimal line length for readability */
     margin-left: auto;
     margin-right: auto;
     line-height: 1.9;
+}
+
+/* Table of Contents - no justification */
+.toc p {
+    text-align: center;
+    hyphens: none;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
 }
 
 /* Lists for better readability */
@@ -235,10 +344,12 @@ ul, ol {
     margin: 1.5rem 0;
     padding-left: 2rem;
     line-height: 1.9;
+    text-align: justify;
 }
 
 li {
     margin-bottom: 0.75rem;
+    text-align: justify;
 }
 
 /* Emphasis and strong */
@@ -253,7 +364,7 @@ strong {
 }
 
 /* Links - accessible styles */
-a {
+a:not(.riz∅ma-link) {
     color: var(--emergence);
     text-decoration: underline;
     text-decoration-thickness: 1px;
@@ -261,12 +372,12 @@ a {
     transition: all 0.3s ease;
 }
 
-a:hover {
+a:not(.riz∅ma-link):hover {
     text-decoration-thickness: 2px;
     opacity: 0.8;
 }
 
-a:focus-visible {
+a:not(.riz∅ma-link):focus-visible {
     outline: 2px solid var(--emergence);
     outline-offset: 4px;
     border-radius: 2px;
@@ -465,6 +576,11 @@ ul, ol {
     margin: 1.5rem 0 1.5rem 2rem;
 }
 
+/* Nested lists */
+ul ul, ol ol, ul ol, ol ul {
+    margin: 0.5rem 0 0.5rem 2rem;
+}
+
 li {
     margin-bottom: 0.8rem;
 }
@@ -476,9 +592,79 @@ li p {
 /* Horizontal Rule */
 hr {
     border: none;
-    border-top: 1px solid var(--glow);
-    margin: 4rem 0;
-    opacity: 0.5;
+    height: 1px;
+    background: transparent;
+    margin: 6rem auto;
+    position: relative;
+    max-width: 100%;
+}
+
+/* Divisória decorativa com ornamento central */
+hr::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--glow) 20%,
+        var(--emergence) 50%,
+        var(--glow) 80%,
+        transparent
+    );
+    transform: translateY(-50%);
+    opacity: 0.6;
+}
+
+/* Ornamento central */
+hr::after {
+    content: '◈';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--emergence);
+    font-size: 1.5rem;
+    opacity: 0.9;
+    background: var(--void);
+    padding: 0 1rem;
+    text-shadow: 0 0 20px var(--glow);
+    z-index: 1;
+}
+
+body.light-theme hr::after {
+    background: #f5f5f5;
+    text-shadow: 0 0 15px rgba(0, 170, 102, 0.3);
+}
+
+@media (max-width: 768px) {
+    hr {
+        max-width: 90%;
+    }
+    
+    hr::before,
+    hr::after {
+        font-size: 1rem;
+        left: -1.5rem;
+    }
+    
+    hr::after {
+        right: -1.5rem;
+    }
+}
+
+body.light-theme hr {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(10, 10, 10, 0.2) 20%,
+        rgba(10, 10, 10, 0.4) 50%,
+        rgba(10, 10, 10, 0.2) 80%,
+        transparent
+    );
 }
 
 /* Code */
@@ -503,15 +689,109 @@ pre code {
     padding: 0;
 }
 
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background: var(--glow);
+    color: var(--void);
+    font-weight: 600;
+}
+
+th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid var(--emergence);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+td {
+    padding: 0.875rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Alternating row colors for better readability */
+tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+tbody tr:nth-child(even):hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+/* Responsive tables - horizontal scroll on mobile */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    th, td {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* Light theme adjustments for tables */
+body.light-theme table {
+    background: rgba(10, 10, 10, 0.02);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme th {
+    background: rgba(10, 10, 10, 0.05);
+    border-bottom-color: var(--emergence);
+}
+
+body.light-theme td {
+    border-bottom-color: rgba(10, 10, 10, 0.08);
+}
+
+body.light-theme tbody tr:hover {
+    background: rgba(10, 10, 10, 0.05);
+}
+
+body.light-theme tbody tr:nth-child(even) {
+    background: rgba(10, 10, 10, 0.02);
+}
+
+body.light-theme tbody tr:nth-child(even):hover {
+    background: rgba(10, 10, 10, 0.06);
+}
+
 /* Links */
-a {
+a:not(.riz∅ma-link) {
     color: var(--emergence);
     text-decoration: none;
     border-bottom: 1px solid var(--glow);
     transition: border-color 0.3s ease;
 }
 
-a:hover {
+a:not(.riz∅ma-link):hover {
     border-bottom-color: var(--emergence);
 }
 
@@ -910,15 +1190,16 @@ body.light-theme .void-message {
     position: fixed;
     left: 1rem;
     bottom: 1rem;
-    background: rgba(255,255,255,0.03);
+    background: rgba(255,255,255,0.02);
     border: 1px solid var(--glow);
     color: var(--emergence);
-    padding: 0.5rem 0.6rem;
+    padding: 0.5rem;
     display: inline-flex;
     gap: 0.5rem;
     align-items: center;
+    justify-content: flex-start;
     border-radius: 6px;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(8px);
     z-index: 1000;
     opacity: 1;
     transition: opacity 0.3s ease;
@@ -929,12 +1210,15 @@ body.light-theme .void-message {
 .nav-toggle,
 .riz∅ma-button,
 .referencias-button,
+.void-button,
+.livro-button,
 .font-size-button,
+.export-button,
 .auto-scroll-button {
     background: transparent;
     border: 1px solid rgba(255,255,255,0.1);
     color: var(--emergence);
-    padding: 0.4rem 0.6rem;
+    padding: 0.3rem;
     border-radius: 4px;
     cursor: pointer;
     font-family: inherit;
@@ -946,21 +1230,12 @@ body.light-theme .void-message {
     justify-content: center;
     min-width: 36px;
     min-height: 36px;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
     position: relative;
-}
-
-/* Botão de menu integrado à barra */
-.nav-toggle {
-    background: rgba(255, 255, 255, 0.05);
-    border-left: 1px solid var(--glow);
-    border-top: none;
-    border-bottom: none;
-    border-right: none;
-    border-radius: 0;
-    margin: 0 0 0 0.5rem;
-    padding: 0.4rem 0.6rem;
-    min-width: 40px;
-    min-height: 36px;
+    box-sizing: border-box;
+    overflow: visible;
 }
 
 /* Hamburger Menu Animation */
@@ -969,8 +1244,9 @@ body.light-theme .void-message {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 20px;
-    height: 16px;
+    gap: 3px;
+    width: 18px;
+    height: 14px;
     position: relative;
 }
 
@@ -980,37 +1256,27 @@ body.light-theme .void-message {
     background: var(--emergence);
     border-radius: 2px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: absolute;
-    left: 0;
-}
-
-.hamburger-line:nth-child(1) {
-    top: 0;
-}
-
-.hamburger-line:nth-child(2) {
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.hamburger-line:nth-child(3) {
-    bottom: 0;
 }
 
 /* Hamburger active state (X) */
+.nav-toggle[aria-expanded="true"] .hamburger {
+    gap: 0;
+    justify-content: center;
+}
+
 .nav-toggle[aria-expanded="true"] .hamburger-line:nth-child(1) {
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg);
+    transform: rotate(45deg) translateY(0px);
+    position: absolute;
 }
 
 .nav-toggle[aria-expanded="true"] .hamburger-line:nth-child(2) {
     opacity: 0;
-    transform: translateY(-50%) scaleX(0);
+    transform: scaleX(0);
 }
 
 .nav-toggle[aria-expanded="true"] .hamburger-line:nth-child(3) {
-    bottom: 50%;
-    transform: translateY(50%) rotate(-45deg);
+    transform: rotate(-45deg) translateY(0px);
+    position: absolute;
 }
 
 .nav-toggle:hover .hamburger-line {
@@ -1026,7 +1292,11 @@ body.light-theme .void-message {
     font-size: 1rem;
 }
 
-.void-button,
+.void-button {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
 .livro-button {
     font-size: 1.1rem;
 }
@@ -1036,7 +1306,10 @@ body.light-theme .void-message {
     font-weight: bold;
 }
 
-/* Legendas dos botões (tooltips) - na ordem da UI */
+.export-button {
+    font-size: 1rem;
+}
+
 .riz∅ma-button::after {
     content: 'RIZOMA';
     position: absolute;
@@ -1056,7 +1329,7 @@ body.light-theme .void-message {
 }
 
 .referencias-button::after {
-    content: 'REFERÊNCIAS';
+    content: 'REFS';
     position: absolute;
     top: -30px;
     left: 50%;
@@ -1074,7 +1347,7 @@ body.light-theme .void-message {
 }
 
 .void-button::after {
-    content: 'CRIO';
+    content: 'CRIOS';
     position: absolute;
     top: -30px;
     left: 50%;
@@ -1128,7 +1401,7 @@ body.light-theme .void-message {
 }
 
 .auto-scroll-button::after {
-    content: 'SCROLL';
+    content: 'AUTO';
     position: absolute;
     top: -30px;
     left: 50%;
@@ -1145,8 +1418,8 @@ body.light-theme .void-message {
     opacity: 0.7;
 }
 
-.play-button::after {
-    content: 'ÁUDIO';
+.export-button::after {
+    content: 'EXPORT';
     position: absolute;
     top: -30px;
     left: 50%;
@@ -1159,86 +1432,48 @@ body.light-theme .void-message {
     letter-spacing: 0.1em;
 }
 
-.play-button:hover::after {
-    opacity: 0.7;
-}
-
-.mute-button::after {
-    content: 'TEMA';
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.65rem;
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-    letter-spacing: 0.1em;
-}
-
-.mute-button:hover::after {
-    opacity: 0.7;
-}
-
-.nav-toggle::after {
-    content: 'MENU';
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.65rem;
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-    letter-spacing: 0.1em;
-}
-
-.nav-toggle:hover::after {
+.export-button:hover::after {
     opacity: 0.7;
 }
 
 .nav-toggle:hover,
 .riz∅ma-button:hover,
 .referencias-button:hover,
+.void-button:hover,
 .font-size-button:hover,
+.export-button:hover,
 .auto-scroll-button:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: var(--emergence);
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
-.nav-toggle:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-left-color: var(--glow);
-    transform: none;
-}
-
 .nav-toggle[aria-expanded="true"] {
     background: rgba(255, 255, 255, 0.1);
-    border-left-color: var(--emergence);
+    border-color: var(--emergence);
 }
 
 .nav-toggle[aria-expanded="true"]:hover {
     background: rgba(255, 255, 255, 0.12);
-    transform: none;
 }
 
 .nav-toggle:focus-visible,
 .riz∅ma-button:focus-visible,
+.referencias-button:focus-visible,
+.void-button:focus-visible,
 .font-size-button:focus-visible,
+.export-button:focus-visible,
 .auto-scroll-button:focus-visible {
     outline: 2px solid var(--emergence);
     outline-offset: 2px;
 }
 
-.nav-toggle:active {
-    background: rgba(255, 255, 255, 0.15);
-}
-
+.nav-toggle:active,
 .riz∅ma-button:active,
+.referencias-button:active,
+.void-button:active,
 .font-size-button:active,
+.export-button:active,
 .auto-scroll-button:active {
     transform: scale(0.95);
 }
@@ -1260,13 +1495,13 @@ body.light-theme .void-message {
     }
 }
 
-/* Play and mute buttons */
+/* Play and mute buttons - mesmo estilo dos demais */
 .play-button,
 .mute-button {
     background: transparent;
     border: 1px solid rgba(255,255,255,0.1);
     color: var(--emergence);
-    padding: 0.6rem 0.8rem;
+    padding: 0.3rem;
     border-radius: 4px;
     cursor: pointer;
     font-family: inherit;
@@ -1274,18 +1509,23 @@ body.light-theme .void-message {
     line-height: 1;
     text-align: center;
     transition: all 0.3s ease;
-    min-width: 44px;
-    min-height: 44px;
+    min-width: 36px;
+    min-height: 36px;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    box-sizing: border-box;
 }
 
 .play-button:hover,
 .mute-button:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: var(--emergence);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
 .play-button:focus-visible,
@@ -1300,7 +1540,7 @@ body.light-theme .void-message {
 }
 
 .mute-button {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: normal;
     line-height: 1;
 }
@@ -1311,7 +1551,7 @@ body.light-theme .void-message {
 
 .theme-icon {
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     transition: all 0.3s ease;
 }
 
@@ -1336,6 +1576,10 @@ body:not(.light-theme) .theme-icon {
     white-space: nowrap;
 }
 
+.audio-status:empty {
+    display: none;
+}
+
 /* --------------------------------------------
    8. NAVIGATION INDEX
    -------------------------------------------- */
@@ -1344,17 +1588,17 @@ body:not(.light-theme) .theme-icon {
 
 .nav-index {
     position: fixed;
-    bottom: 5rem;
-    right: 1rem;
-    max-width: 320px;
-    max-height: calc(100vh - 7rem);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    max-width: 480px;
+    max-height: 80vh;
     background: var(--void);
     border: 1px solid var(--glow);
     border-radius: 8px;
-    padding: 1.5rem;
+    padding: 2rem;
     z-index: 999;
     opacity: 0;
-    transform: translateX(30px) scale(0.95);
     pointer-events: none;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(10px);
@@ -1379,29 +1623,39 @@ body:not(.light-theme) .theme-icon {
 
 .nav-index.visible {
     opacity: 1;
-    transform: translateX(0) scale(1);
+    transform: translate(-50%, -50%) scale(1);
     pointer-events: all;
-    animation: menuSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: menuCenterIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@keyframes menuSlideIn {
+/* Mobile adjustments for nav-index */
+@media (max-width: 768px) {
+    .nav-index {
+        max-width: calc(100vw - 3rem);
+        max-height: 85vh;
+        padding: 1.5rem;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+    
+    .nav-index.visible {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes menuCenterIn {
     0% {
         opacity: 0;
-        transform: translateX(30px) scale(0.9);
+        transform: translate(-50%, -50%) scale(0.9);
     }
     50% {
-        transform: translateX(-5px) scale(1.02);
+        transform: translate(-50%, -50%) scale(1.02);
     }
     100% {
         opacity: 1;
-        transform: translateX(0) scale(1);
+        transform: translate(-50%, -50%) scale(1);
     }
-}
-
-.nav-index.visible {
-    opacity: 1;
-    transform: translateX(0);
-    pointer-events: all;
 }
 
 .nav-index h3 {
@@ -1410,7 +1664,7 @@ body:not(.light-theme) .theme-icon {
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--glow);
     color: var(--emergence);
-    text-align: left;
+    text-align: center;
 }
 
 .nav-index ul {
@@ -1423,6 +1677,7 @@ body:not(.light-theme) .theme-icon {
     margin: 0;
     position: relative;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
 }
 
 .nav-index li.active {
@@ -1446,6 +1701,8 @@ body:not(.light-theme) .theme-icon {
     line-height: 1.4;
     position: relative;
     overflow: hidden;
+    align-items: center;
+    text-align: center;
 }
 
 .nav-number {
@@ -1948,13 +2205,6 @@ body.light-theme .reading-info {
     .crio-quote.quote-emphasized .quote-decorator {
         font-size: 2.5rem;
     }
-    
-    .nav-toggle {
-        top: 0.75rem;
-        left: 0.75rem;
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
-    }
 
     .nav-index {
         top: 4rem;
@@ -2083,22 +2333,45 @@ body.light-theme .reading-info {
     /* Audio controls on mobile - bottom left */
     .audio-ui {
         left: 0.5rem;
+        right: 0.5rem;
         bottom: 0.5rem;
-        padding: 0.4rem 0.5rem;
-        gap: 0.4rem;
+        padding: 0.3rem 0.4rem;
+        gap: 0.2rem;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
     }
     
     .nav-toggle,
+    .riz∅ma-button,
+    .referencias-button,
+    .void-button,
+    .livro-button,
+    .font-size-button,
+    .auto-scroll-button,
     .play-button,
     .mute-button {
-        min-width: 44px;
-        min-height: 44px;
-        padding: 0.5rem;
-        font-size: 1rem;
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        min-height: 32px;
+        padding: 0.25rem;
+        font-size: 0.9rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+    
+    .hamburger {
+        width: 16px;
+        height: 12px;
     }
     
     .mute-button {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
     }
 
     .nav-index {
@@ -2164,14 +2437,6 @@ body.light-theme .reading-info {
     .crio-quote.quote-emphasized .quote-decorator {
         font-size: 1.6rem;
     }
-    
-    .nav-toggle {
-        top: 0.35rem;
-        left: 0.35rem;
-        padding: 0.4rem 0.7rem;
-        font-size: 0.8rem;
-        gap: 0.3rem;
-    }
 
     .nav-index {
         top: 3rem;
@@ -2204,20 +2469,43 @@ body.light-theme .reading-info {
     
     .audio-ui {
         left: 0.5rem;
+        right: 0.5rem;
         bottom: 0.5rem;
-        padding: 0.35rem 0.4rem;
-        gap: 0.35rem;
+        padding: 0.25rem 0.3rem;
+        gap: 0.15rem;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
     }
     
-    .nav-toggle {
-        margin: -0.35rem -0.4rem -0.35rem 0.35rem;
-        padding: 0.75rem 0.85rem;
-        min-width: 42px;
+    .nav-toggle,
+    .riz∅ma-button,
+    .referencias-button,
+    .void-button,
+    .livro-button,
+    .font-size-button,
+    .auto-scroll-button,
+    .mute-button {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        min-height: 30px;
+        padding: 0.2rem;
+        font-size: 0.85rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
     }
     
     .hamburger {
-        width: 20px;
-        height: 16px;
+        width: 14px;
+        height: 10px;
+    }
+    
+    .mute-button {
+        font-size: 0.65rem;
     }
     
     .audio-control-btn {
@@ -2413,10 +2701,6 @@ body.light-theme .reading-info {
         padding-right: max(0px, env(safe-area-inset-right));
     }
     
-    .nav-toggle {
-        left: max(1rem, calc(1rem + env(safe-area-inset-left)));
-    }
-    
     .theme-toggle {
         right: max(1rem, calc(1rem + env(safe-area-inset-right)));
     }
@@ -2450,12 +2734,6 @@ body.light-theme .reading-info {
         gap: 0.5rem;
     }
     
-    .nav-toggle {
-        margin: -0.35rem -0.35rem -0.35rem 0.3rem;
-        padding: 0.7rem 0.75rem;
-        min-width: 40px;
-    }
-    
     .hamburger {
         width: 18px;
         height: 14px;
@@ -2481,6 +2759,36 @@ body.light-theme .reading-info {
     .crio-quote {
         padding: 1rem;
         margin: 1.5rem 0;
+    }
+}
+
+/* Specific adjustments for 412x915 and similar resolutions */
+@media (min-width: 390px) and (max-width: 430px) {
+    .audio-ui {
+        left: 0.5rem;
+        bottom: 0.5rem;
+        padding: 0.4rem 0.4rem;
+        gap: 0.35rem;
+    }
+    
+    .nav-toggle,
+    .riz∅ma-button,
+    .referencias-button,
+    .void-button,
+    .livro-button,
+    .font-size-button,
+    .auto-scroll-button,
+    .play-button,
+    .mute-button {
+        min-width: 42px;
+        min-height: 42px;
+        padding: 0.45rem;
+        margin: 0;
+    }
+    
+    .hamburger {
+        width: 18px;
+        height: 14px;
     }
 }
 

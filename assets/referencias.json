@@ -2693,5 +2693,274 @@
       "escala",
       "governança"
     ]
+  },
+  {
+    "id": "adorno-horkheimer-1944",
+    "categoria": "crítica",
+    "autor": "Adorno, Theodor W. & Horkheimer, Max",
+    "ano": "1944/1947",
+    "titulo": "Dialectic of Enlightenment",
+    "editora": "Stanford University Press",
+    "relevancia": "Razão instrumental transforma iluminismo em dominação. Instrumentalização universal como lógica da modernidade capitalista.",
+    "conceitos": [
+      "instrumentalizacao-universal",
+      "razao-instrumental",
+      "dominacao-estrutural",
+      "reificacao"
+    ]
+  },
+  {
+    "id": "marcuse-1964",
+    "categoria": "crítica",
+    "autor": "Marcuse, Herbert",
+    "ano": 1964,
+    "titulo": "One-Dimensional Man: Studies in the Ideology of Advanced Industrial Society",
+    "editora": "Beacon Press",
+    "relevancia": "Sociedade industrial avançada elimina dimensão crítica através de integração totalitária. Instrumentalização se estende à própria consciência.",
+    "conceitos": [
+      "instrumentalizacao-universal",
+      "dominacao-estrutural",
+      "fechamento-totalitario",
+      "integracao-sistemica"
+    ]
+  },
+  {
+    "id": "hooks-2000",
+    "categoria": "praxis",
+    "autor": "hooks, bell",
+    "ano": 2000,
+    "titulo": "Feminism is for Everybody: Passionate Politics",
+    "editora": "South End Press",
+    "relevancia": "Feminismo como movimento político para todas as pessoas. Advocacy que conecta teoria e prática, academia e movimento social.",
+    "conceitos": [
+      "advocacy-politica",
+      "praxis",
+      "feminismo-interseccional",
+      "mobilizacao-coletiva"
+    ]
+  },
+  {
+    "id": "laclau-mouffe-1985",
+    "categoria": "política",
+    "autor": "Laclau, Ernesto & Mouffe, Chantal",
+    "ano": 1985,
+    "titulo": "Hegemony and Socialist Strategy: Towards a Radical Democratic Politics",
+    "editora": "Verso",
+    "relevancia": "Hegemonia como articulação contingente. Antagonismo constitutivo do político. Impossibilidade de sociedade plenamente reconciliada.",
+    "conceitos": [
+      "hegemonia",
+      "antagonismo-relacional",
+      "pluralismo-agonistico",
+      "contingencia-radical"
+    ]
+  },
+  {
+    "id": "ranciere-1999",
+    "categoria": "política",
+    "autor": "Rancière, Jacques",
+    "ano": 1999,
+    "titulo": "Disagreement: Politics and Philosophy",
+    "editora": "University of Minnesota Press",
+    "relevancia": "Política emerge do dissenso, não do consenso. Desentendimento como condição do político, não defeito a ser superado.",
+    "conceitos": [
+      "dissenso",
+      "antagonismo-relacional",
+      "pluralismo-agonistico",
+      "ruptura-politica"
+    ]
+  },
+  {
+    "id": "boltanski-chiapello-1999",
+    "categoria": "crítica",
+    "autor": "Boltanski, Luc & Chiapello, Ève",
+    "ano": "1999/2005",
+    "titulo": "The New Spirit of Capitalism",
+    "editora": "Verso",
+    "relevancia": "Capitalismo se renova incorporando suas críticas. Autonomia e autenticidade dos anos 60 transformadas em flexibilidade e empreendedorismo.",
+    "conceitos": [
+      "cooptacao-neoliberal",
+      "capitalismo",
+      "flexibilizacao",
+      "novo-espirito-capitalista"
+    ]
+  },
+  {
+    "id": "santos-2007",
+    "categoria": "epistemologia",
+    "autor": "Santos, Boaventura de Sousa",
+    "ano": 2007,
+    "titulo": "Beyond Abyssal Thinking: From Global Lines to Ecologies of Knowledges",
+    "publicacao": "Review (Fernand Braudel Center), 30(1), 45-89",
+    "relevancia": "Epistemologias do Sul. Linha abissal separa conhecimento científico de saberes colonizados. Propõe ecologias de conhecimentos.",
+    "conceitos": [
+      "epistemologia-situada",
+      "pluralismo-epistemico",
+      "decolonialidade",
+      "humildade-epistemologica"
+    ]
+  },
+  {
+    "id": "mignolo-2011",
+    "categoria": "decolonialidade",
+    "autor": "Mignolo, Walter D.",
+    "ano": 2011,
+    "titulo": "The Darker Side of Western Modernity: Global Futures, Decolonial Options",
+    "editora": "Duke University Press",
+    "relevancia": "Opção decolonial como desobediência epistêmica. Modernidade/colonialidade como matriz inseparável.",
+    "conceitos": [
+      "decolonialidade",
+      "pluralismo-epistemico",
+      "humildade-epistemologica",
+      "epistemologia-fronteiriça"
+    ]
+  },
+  {
+    "id": "singer-1998",
+    "categoria": "neurodiversidade",
+    "autor": "Singer, Judy",
+    "ano": 1998,
+    "titulo": "Odd People In: The Birth of Community Amongst People on the Autistic Spectrum",
+    "publicacao": "Tese, University of Technology Sydney",
+    "relevancia": "Cunhou o termo 'neurodiversidade'. Variação neurológica como diversidade humana natural, não patologia.",
+    "conceitos": [
+      "neurodiversidade",
+      "multiplicidade",
+      "anti-normatividade",
+      "diversidade-constitutiva"
+    ]
+  },
+  {
+    "id": "chapman-2020",
+    "categoria": "neurodiversidade",
+    "autor": "Chapman, Robert",
+    "ano": 2020,
+    "titulo": "The Reality of Autism: On the Metaphysics of Disorder and Diversity",
+    "publicacao": "Philosophical Psychology, 33(6), 799-819",
+    "relevancia": "Análise filosófica de autismo como diferença ontológica, não déficit. Questiona distinção doença/diversidade.",
+    "conceitos": [
+      "neurodiversidade",
+      "diferenca-ontologica",
+      "multiplicidade",
+      "singularizacao"
+    ]
+  },
+  {
+    "id": "hofstadter-1979",
+    "categoria": "recursão",
+    "autor": "Hofstadter, Douglas",
+    "ano": 1979,
+    "titulo": "Gödel, Escher, Bach: An Eternal Golden Braid",
+    "editora": "Basic Books",
+    "relevancia": "Exploração de loops estranhos e auto-referência em matemática, arte e música. Recursão como fonte de significado e consciência.",
+    "conceitos": [
+      "recursao-ontologica",
+      "auto-referencia",
+      "emergencia",
+      "circularidade-produtiva"
+    ]
+  },
+  {
+    "id": "luhmann-1984",
+    "categoria": "sistemas",
+    "autor": "Luhmann, Niklas",
+    "ano": "1984/1995",
+    "titulo": "Social Systems",
+    "editora": "Stanford University Press",
+    "relevancia": "Sistemas sociais como autopoiéticos. Fechamento operacional e abertura cognitiva. Comunicação cria comunicação.",
+    "conceitos": [
+      "autopoiese",
+      "recursao-ontologica",
+      "fechamento-operacional",
+      "emergencia-sistemica"
+    ]
+  },
+  {
+    "id": "scott-1985",
+    "categoria": "resistência",
+    "autor": "Scott, James C.",
+    "ano": 1985,
+    "titulo": "Weapons of the Weak: Everyday Forms of Peasant Resistance",
+    "editora": "Yale University Press",
+    "relevancia": "Resistência cotidiana através de pequenos atos: sabotagem, dissimulação, evasão. Infrapolítica dos subordinados.",
+    "conceitos": [
+      "resistencia-relacional",
+      "resistencia-cotidiana",
+      "infrapolitica",
+      "agencia-subordinada"
+    ]
+  },
+  {
+    "id": "combahee-1977",
+    "categoria": "feminismo",
+    "autor": "Combahee River Collective",
+    "ano": 1977,
+    "titulo": "A Black Feminist Statement",
+    "relevancia": "Fundamento da interseccionalidade. Sistemas de opressão são interligados e co-produzidos.",
+    "conceitos": [
+      "interseccionalidade",
+      "solidariedade-estrutural",
+      "feminismo-negro",
+      "opressoes-entrelaçadas"
+    ]
+  },
+  {
+    "id": "crenshaw-1989",
+    "categoria": "feminismo",
+    "autor": "Crenshaw, Kimberlé",
+    "ano": 1989,
+    "titulo": "Demarginalizing the Intersection of Race and Sex: A Black Feminist Critique of Antidiscrimination Doctrine",
+    "publicacao": "University of Chicago Legal Forum, 1989(1), Article 8",
+    "relevancia": "Cunhou o termo 'interseccionalidade'. Opressões não são aditivas mas constitutivamente entrelaçadas.",
+    "conceitos": [
+      "interseccionalidade",
+      "solidariedade-estrutural",
+      "justica-social",
+      "identidades-entrelaçadas"
+    ]
+  },
+  {
+    "id": "taylor-2017",
+    "categoria": "feminismo",
+    "autor": "Taylor, Keeanga-Yamahtta",
+    "ano": 2017,
+    "titulo": "How We Get Free: Black Feminism and the Combahee River Collective",
+    "editora": "Haymarket Books",
+    "relevancia": "Atualização de Combahee para contexto contemporâneo. Solidariedade estrutural como base para coalizões políticas.",
+    "conceitos": [
+      "solidariedade-estrutural",
+      "interseccionalidade",
+      "coalicao-politica",
+      "feminismo-negro"
+    ]
+  },
+  {
+    "id": "meadows-1999",
+    "categoria": "sistemas",
+    "autor": "Meadows, Donella H.",
+    "ano": 1999,
+    "titulo": "Leverage Points: Places to Intervene in a System",
+    "publicacao": "The Sustainability Institute",
+    "relevancia": "Hierarquia de pontos de alavancagem em sistemas. Mudar paradigmas (pressupostos ontológicos) é mais efetivo que ajustar parâmetros.",
+    "conceitos": [
+      "transformacao-sistemica",
+      "mudanca-paradigmatica",
+      "pontos-alavancagem",
+      "pensamento-sistemico"
+    ]
+  },
+  {
+    "id": "wright-2010",
+    "categoria": "política",
+    "autor": "Wright, Erik Olin",
+    "ano": 2010,
+    "titulo": "Envisioning Real Utopias",
+    "editora": "Verso",
+    "relevancia": "Utopias reais: instituições que prefiguram alternativas ao capitalismo dentro do próprio capitalismo. Transformação através de experimentação.",
+    "conceitos": [
+      "transformacao-sistemica",
+      "experimentacao",
+      "utopias-reais",
+      "prefiguracao"
+    ]
   }
 ]

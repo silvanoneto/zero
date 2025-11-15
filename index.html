@@ -45,7 +45,7 @@
     <link rel="canonical" href="https://revolucaocibernetica.com/">
     
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80' fill='%23f0f0f0'>⛪</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80' fill='%23f0f0f0'>∞</text></svg>">
     
     <!-- Robots & Crawlers -->
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -65,9 +65,12 @@
     <!-- Marked.js para renderizar markdown -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" onerror="handleMarkedLoadError()"></script>
     
+    <!-- JSZip para exportar EPUB -->
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    
     <!-- 
         CRIO uses intelligent caching via localStorage to improve performance.
-        Content is cached for 7 days with version checking.
+        Content is cached for 7 days.
         Press Ctrl+Shift+C (or Cmd+Shift+C on Mac) to clear cache and reload.
     -->
     
@@ -162,9 +165,6 @@
         <button class="riz∅ma-button" onclick="window.location.href='riz∅ma.html'" aria-label="Abrir riz∅ma de conceitos">
             <span aria-hidden="true">◈</span>
         </button>
-        <button class="referencias-button" onclick="window.location.href='referencias.html'" aria-label="Ver referências bibliográficas">
-            <span aria-hidden="true">⋯</span>
-        </button>
         <button class="void-button" onclick="window.location.href='∅.html'" aria-label="Ir para CRIO: Ontologia Relacional">
             <span aria-hidden="true">∅</span>
         </button>
@@ -175,6 +175,9 @@
             <span id="mute-label" aria-hidden="true">
                 <span class="theme-icon">☾</span>
             </span>
+        </button>
+        <button class="export-button" id="export-btn" aria-label="Exportar como EPUB">
+            <span aria-hidden="true">📄</span>
         </button>
         <button class="nav-toggle" id="nav-toggle" aria-label="Alternar índice de navegação" aria-expanded="false" aria-controls="nav-index">
             <span class="hamburger" aria-hidden="true">
@@ -232,7 +235,7 @@
 
         <!-- Actual Content (populated dynamically) -->
         <div id="content" class="loading" itemprop="articleBody" aria-live="polite" aria-busy="true" style="display: none;">
-            ⛪ → carregando livro...
+            ∞ → carregando livro...
         </div>
         </article>
     </main>

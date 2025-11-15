@@ -10,7 +10,6 @@ import type { Concept } from './types';
 // ============================================================================
 
 interface CacheData {
-    version: string;
     timestamp: number;
     content: string;
 }
@@ -19,7 +18,6 @@ interface CacheData {
 // CONSTANTES E CONFIGURAÇÃO
 // ============================================================================
 
-const CACHE_VERSION = '2.0'; // Atualizado para refletir mudanças em CRIOS.md
 const CACHE_DURATION = 7 * 24 * 60 * 60 * 1000; // 7 dias
 const CRIOS_URL = 'docs/CRIOS.md';
 const AUDIO_URL = 'assets/CRIO.mp3';
@@ -59,7 +57,7 @@ function getCachedContent(): string | null {
         const data: CacheData = JSON.parse(cached);
         const now = Date.now();
         
-        if (data.version !== CACHE_VERSION || (now - data.timestamp) > CACHE_DURATION) {
+        if ((now - data.timestamp) > CACHE_DURATION) {
             localStorage.removeItem('crio-content');
             return null;
         }
@@ -74,7 +72,6 @@ function getCachedContent(): string | null {
 function setCachedContent(content: string): void {
     try {
         const data: CacheData = {
-            version: CACHE_VERSION,
             timestamp: Date.now(),
             content: content
         };
@@ -569,7 +566,7 @@ function generateConceptVariations(name: string): string[] {
         variations.push(normalized);
     }
     
-    // Se tiver parênteses, adicionar versão sem parênteses
+    // Se tiver parênteses, adicionar alternativa sem parênteses
     const withoutParens = name.replace(/\s*\([^)]*\)\s*/g, '').trim();
     if (withoutParens !== name && withoutParens.length > 0) {
         variations.push(withoutParens);
@@ -581,7 +578,7 @@ function generateConceptVariations(name: string): string[] {
         variations.push(firstWord);
     }
     
-    // Adicionar versão singular/plural simples
+    // Adicionar forma singular/plural simples
     if (name.endsWith('s') && !name.endsWith('ss')) {
         variations.push(name.slice(0, -1));
     } else if (!name.endsWith('s')) {

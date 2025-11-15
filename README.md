@@ -864,7 +864,6 @@ Conhecimento fechado **nega** a ontologia relacional que CRIO performa. Por isso
 
 ## 🎯 Status do Projeto
 
-**Versão**: 2.0.0 (TypeScript Migration Complete)  
 **Status**: Perpetuamente incompleto (por design ontológico)  
 **Última Atualização**: Novembro 2025
 
