@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre Igrejas e Casas de Charlatanismo | Ontologia Relacional</title>
+    <meta name="description" content="Uma ontologia relacional da instrumentalização e da autenticidade.">
+    <meta name="author" content="Revolução Cibernética">
+    
+    <!-- Reader Mode Support -->
+    <meta property="article:published_time" content="2025-11-15T00:00:00Z">
+    <meta property="article:modified_time" content="2025-11-15T00:00:00Z">
+    <meta property="article:author" content="Revolução Cibernética">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <style>
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            font-family: Georgia, serif;
+            line-height: 1.6;
+        }
+        
+        #content {
+            opacity: 1 !important;
+        }
+    </style>
+</head>
+<body>
+    <article id="content" itemscope itemtype="http://schema.org/Book">
+        <p>Carregando...</p>
+    </article>
+    
+    <script>
+        // Carregar e renderizar imediatamente
+        fetch('…_.md')
+            .then(response => response.text())
+            .then(markdown => {
+                if (typeof marked !== 'undefined') {
+                    document.getElementById('content').innerHTML = marked.parse(markdown);
+                } else {
+                    document.getElementById('content').innerHTML = '<pre>' + markdown + '</pre>';
+                }
+            })
+            .catch(error => {
+                document.getElementById('content').innerHTML = '<p>Erro ao carregar: ' + error + '</p>';
+            });
+    </script>
+</body>
+</html>

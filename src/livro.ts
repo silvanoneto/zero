@@ -47,6 +47,14 @@ async function loadLivroContent(): Promise<void> {
         return;
     }
 
+    // Se o conteúdo já existe (para reader mode), não recarregar
+    if (contentDiv.children.length > 0 && !contentDiv.classList.contains('loading')) {
+        console.log('Content already loaded, skipping fetch');
+        await loadConceptsAndActivateLinks();
+        initializeNavigation();
+        return;
+    }
+
     try {
         // Carregar o arquivo markdown (com cache-busting)
         const timestamp = new Date().getTime();
