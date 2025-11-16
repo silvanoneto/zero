@@ -185,15 +185,15 @@ stats: ## Mostra estatísticas detalhadas da ontologia
 	@cat assets/concepts.json | jq -r '.[] | .layer' | sort | uniq -c | sort -rn | awk '{printf "  • %-20s %3d conceitos\n", $$2":", $$1}'
 	@echo ""
 	@echo "🔗 CONECTIVIDADE"
-	@echo "  • Média de conexões:      $$(cat assets/concepts.json | jq '[.[] | .connections | length] | add / length | floor')"
-	@echo "  • Conceito mais conectado: $$(cat assets/concepts.json | jq -r 'max_by(.connections | length) | "\(.name) (\(.connections | length) conexões)"')"
-	@echo "  • Conceito menos conectado: $$(cat assets/concepts.json | jq -r 'min_by(.connections | length) | "\(.name) (\(.connections | length) conexões)"')"
+	@echo "  • Média de conexões:      $$(python3 scripts/calculate_connections.py stats)"
+	@echo "  • Conceito mais conectado: $$(python3 scripts/calculate_connections.py max)"
+	@echo "  • Conceito menos conectado: $$(python3 scripts/calculate_connections.py min)"
 	@echo ""
 	@echo "🌐 TOP 10 HUBS (conceitos mais conectados)"
-	@cat assets/concepts.json | jq -r '.[] | "\(.connections | length):\(.name)"' | sort -rn | head -10 | awk -F: '{printf "  %2d. %-40s %2d conexões\n", NR, $$2, $$1}'
+	@python3 scripts/calculate_connections.py hubs 10 | awk '{printf "  %s\n", $$0}'
 	@echo ""
 	@echo "📉 CONCEITOS SUB-CONECTADOS (≤ 3 conexões)"
-	@cat assets/concepts.json | jq -r '.[] | select(.connections | length <= 3) | "\(.connections | length):\(.name)"' | sort -n | wc -l | xargs -I {} echo "  • Total: {} conceitos"
+	@echo "  • Total: $$(python3 scripts/calculate_connections.py underconnected 3) conceitos"
 	@echo ""
 	@echo "🔀 TOP 10 TIPOS DE RELAÇÃO MAIS USADOS"
 	@cat assets/relations.json | jq -r '.[].name' | sort | uniq -c | sort -rn | head -10 | awk '{printf "  %2d. %-35s %3d usos\n", NR, $$2, $$1}'
@@ -225,7 +225,7 @@ stats-full: ## Análise completa com distribuições e correlações
 	@make stats
 	@echo ""
 	@echo "📊 DISTRIBUIÇÃO DE CONECTIVIDADE"
-	@cat assets/concepts.json | jq -r '[.[] | .connections | length] | group_by(.) | map({conexoes: .[0], conceitos: length}) | .[] | "\(.conexoes):\(.conceitos)"' | sort -t: -k1 -n | awk -F: '{printf "  • %2d conexões: %3d conceitos ", $$1, $$2; for(i=0;i<$$2/2;i++) printf "█"; printf "\n"}'
+	@python3 scripts/calculate_connections.py distribution | awk '{printf "  • %s ", $$0; for(i=0;i<$$4/2;i++) printf "█"; printf "\n"}'
 	@echo ""
 	@echo "🌍 DIVERSIDADE GEOGRÁFICA/CULTURAL"
 	@echo "  • Conceitos budistas:     $$(cat assets/concepts.json | jq '[.[] | select(.id | test("anatman|sunyata|pratityasamutpada"))] | length')"
@@ -235,10 +235,10 @@ stats-full: ## Análise completa com distribuições e correlações
 	@echo "  • Conceitos indígenas:    $$(cat assets/concepts.json | jq '[.[] | select(.id | test("indigena|mana|groundednormativity"))] | length')"
 	@echo ""
 	@echo "🔬 ANÁLISE DE QUALIDADE"
-	@echo "  • Conceitos isolados (0 conexões): $$(cat assets/concepts.json | jq '[.[] | select((.connections | length) == 0)] | length')"
-	@echo "  • Conceitos frágeis (1-2 conexões): $$(cat assets/concepts.json | jq '[.[] | select((.connections | length) <= 2 and (.connections | length) > 0)] | length')"
-	@echo "  • Conceitos bem conectados (≥5):    $$(cat assets/concepts.json | jq '[.[] | select((.connections | length) >= 5)] | length')"
-	@echo "  • Super-hubs (≥10 conexões):        $$(cat assets/concepts.json | jq '[.[] | select((.connections | length) >= 10)] | length')"
+	@echo "  • Conceitos isolados (0 conexões): $$(python3 scripts/calculate_connections.py underconnected 0)"
+	@echo "  • Conceitos frágeis (1-2 conexões): $$(python3 scripts/calculate_connections.py underconnected 2)"
+	@echo "  • Conceitos bem conectados (≥5):    $$(python3 -c "from scripts.calculate_connections import calculate_connections; print(sum(1 for d in calculate_connections().values() if d['connection_count'] >= 5))")"
+	@echo "  • Super-hubs (≥10 conexões):        $$(python3 -c "from scripts.calculate_connections import calculate_connections; print(sum(1 for d in calculate_connections().values() if d['connection_count'] >= 10))")"
 	@echo ""
 	@echo "📚 COBERTURA BIBLIOGRÁFICA"
 	@echo "  • Conceitos com referências:  $$(cat assets/referencias.json | jq '[.[] | select(.conceitos != null) | .conceitos[]] | unique | length')"

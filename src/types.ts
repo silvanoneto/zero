@@ -5,7 +5,6 @@ export interface Concept {
   id: string;
   name: string;
   description: string;
-  connections: string[];
   layer: Layer;
   color: number | string;
 }

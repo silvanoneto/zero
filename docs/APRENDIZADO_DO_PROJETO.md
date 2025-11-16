@@ -2,7 +2,7 @@
 
 > **Síntese do conhecimento acumulado na construção de uma ontologia relacional performativa**
 > 
-> *Data: Novembro de 2025*
+> *Última atualização: 16 de novembro de 2025*
 
 ---
 
@@ -11,11 +11,12 @@
 Este documento sintetiza o aprendizado acumulado ao longo do desenvolvimento do projeto **CRIO** (Conceito Relacional de Invenção Ontológica) - uma experiência filosófica que não apenas descreve ontologia relacional, mas a **performa** através de código, visualização 3D e estrutura de dados.
 
 **Escopo atual:**
-- **567 conceitos** organizados em 8 camadas ontológicas
-- **4.296 relações** semânticas tipificadas
-- Visualização 3D interativa (riz∅ma.html)
+- **727 conceitos** organizados em 8 camadas → 32 subcamadas semânticas
+- **7.064 relações** semânticas tipificadas (boosted)
+- Visualização 3D interativa com filtros hierárquicos (riz∅ma.html)
 - Experiência de leitura fluida (index.html)
 - Sistema de referências acadêmicas integrado
+- Interface de filtragem por grupos e subcamadas colapsáveis
 
 ---
 
@@ -40,7 +41,46 @@ Este documento sintetiza o aprendizado acumulado ao longo do desenvolvimento do 
 - Conceitos temporais redistribuídos (ocasiões, ressurgência, tempo)
 - **Razão max/min: 2.0x** (melhoria total de 81%)
 
-**Distribuição final (567 conceitos):**
+### 1.2 Subdivisão Semântica em 32 Subcamadas (Nov 2025)
+
+**Motivação:**
+- 101 conceitos com ≤5 conexões (sub-conectados)
+- Necessidade de granularidade visual e conceitual
+- Manter estrutura não-hierárquica (rizomática)
+
+**Sistema de 4 variações por camada:**
+- **0: Geral** - Conceitos abstratos, teóricos, fundamentos
+- **1: Relacional** - Conexões, vínculos, redes, interdependências  
+- **2: Prática** - Aplicação, ação, institucional, métodos
+- **3: Mista** - Conceitos híbridos, transversais, integrados
+
+**Distribuição final (727 conceitos em 32 subcamadas):**
+
+```
+ONTOLÓGICA    154 (21.2%)  ████████████████████████████████████
+├─ geral       XX          ████████
+├─ relacional  XX          ██████
+├─ prática     XX          ████████
+└─ mista       XX          ██████
+
+POLÍTICA      103 (14.2%)  ████████████████████████
+├─ subcamadas distribuídas semanticamente
+
+FUNDACIONAL    98 (13.5%)  ███████████████████████
+EPISTEMICA     87 (12.0%)  ██████████████████████
+PRATICA        82 (11.3%)  █████████████████████
+TEMPORAL       73 (10.0%)  ███████████████████
+ECOLOGICA      67 (9.2%)   ██████████████████
+ETICA          63 (8.7%)   ████████████████
+```
+
+**Boost de conectividade:**
+- Antes: 101 conceitos sub-conectados (≤5 conexões)
+- Depois: 0 conceitos sub-conectados
+- +212 novas relações semânticas via algoritmo de friends-of-friends
+- Total: 7.064 relações (vs 6.852 anteriores)
+
+**Distribuição final (727 conceitos em 8 camadas base):**
 
 ```
 politica       97 (17.1%)  ████████████████████████████████
@@ -742,7 +782,45 @@ clean:            # Remove arquivos gerados
    - Além de busca textual, buscar por similaridade conceitual
    - Sugerir conceitos relacionados baseado em embeddings
 
-### 9.4 Experimentações Futuras
+### 9.4 Interface de Filtragem Hierárquica (Nov 2025)
+
+**Painel de Legenda Colapsável:**
+
+Sistema de grupos expansíveis com 8 famílias e 32 subcamadas:
+
+```
+▶ ONTOLÓGICA (154)      [Clique p/ ativar todas]
+  └─ [expandido]
+     • Geral (25)       [Clique p/ filtrar]
+     • Relacional (9)
+     • Prática (31)
+     • Mista (22)
+```
+
+**Funcionalidades implementadas:**
+
+1. **Dupla função dos headers:**
+   - Clique na seta (▶/▼): Expande/colapsa visualmente
+   - Clique no nome/cor: Ativa/desativa todas as 4 subcamadas como filtro
+
+2. **Filtros combinados:**
+   - Múltiplas subcamadas selecionáveis simultaneamente
+   - Visual destacado quando grupo inteiro está ativo
+   - Contadores dinâmicos (individual + total do grupo)
+
+3. **Visibilidade de relações graduada:**
+   - Relações internas (ambos nós ativos): Opacidade total
+   - Relações cruzadas (um nó ativo): Opacidade baixa (mostra conexões externas)
+   - Relações externas: Ocultas
+
+**Impacto UX:**
+
+- Navegação mais intuitiva entre níveis de abstração
+- Exploração de conexões entre camadas mantendo contexto
+- Redução de sobrecarga visual com colapso padrão
+- Descoberta de conceitos híbridos (subcamada "Mista")
+
+### 9.5 Experimentações Futuras
 
 **Direções especulativas:**
 

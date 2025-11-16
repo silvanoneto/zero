@@ -2962,5 +2962,433 @@
       "utopias-reais",
       "prefiguracao"
     ]
+  },
+  {
+    "id": "maturana-varela-1980",
+    "categoria": "fundamentos",
+    "autor": "Maturana, Humberto & Varela, Francisco",
+    "ano": 1980,
+    "titulo": "Autopoiesis and Cognition: The Realization of the Living",
+    "editora": "D. Reidel Publishing Company",
+    "relevancia": "Autopoiese: sistemas vivos produzem continuamente os componentes que os constituem. A célula produz a membrana que contém o processo que produz os componentes. Sistema que se fecha sobre si mesmo, definindo sua própria identidade e fronteira. Fundamento para teoria de sistemas auto-organizadores e recursão sem fundamento.",
+    "conceitos": [
+      "autopoiese",
+      "recursao-ontologica",
+      "auto-organizacao",
+      "sistemas vivos",
+      "fechamento operacional"
+    ]
+  },
+  {
+    "id": "maturana-varela-1987",
+    "categoria": "fundamentos",
+    "autor": "Maturana, Humberto & Varela, Francisco",
+    "ano": 1987,
+    "titulo": "The Tree of Knowledge: The Biological Roots of Human Understanding",
+    "editora": "Shambhala",
+    "relevancia": "Cognição como enação: conhecer é fazer emergir um mundo. Não há representação de realidade pré-existente, mas co-criação de mundo através de acoplamento estrutural. Observador e observado são co-determinados.",
+    "conceitos": [
+      "enacao",
+      "acoplamento estrutural",
+      "cognição",
+      "autopoiese",
+      "observador"
+    ]
+  },
+  {
+    "id": "foerster-1979",
+    "categoria": "fundamentos",
+    "autor": "von Foerster, Heinz",
+    "ano": 1979,
+    "titulo": "Cybernetics of Cybernetics",
+    "publicacao": "Em Communication and Control in Society. Gordon and Breach",
+    "relevancia": "Cibernética de segunda ordem: observação dos sistemas que observam. A questão não é 'o que é o sistema?' mas 'como este observador constrói a realidade que observa?'. Inclui o observador na equação. Recursão fundamental: não há visão objetiva de fora do sistema.",
+    "conceitos": [
+      "cibernética de segunda ordem",
+      "observador",
+      "recursao-ontologica",
+      "auto-referencia",
+      "construção da realidade"
+    ]
+  },
+  {
+    "id": "foerster-1984",
+    "categoria": "epistemológica",
+    "autor": "von Foerster, Heinz",
+    "ano": 1984,
+    "titulo": "On Constructing a Reality",
+    "publicacao": "Em The Invented Reality. W.W. Norton",
+    "relevancia": "Construtivismo radical: realidade é construída, não descoberta. 'Objetividade é a ilusão de que observações podem ser feitas sem observador.' Auto-observação produz paradoxos produtivos.",
+    "conceitos": [
+      "construtivismo",
+      "epistemologia",
+      "observador",
+      "realidade construída",
+      "paradoxo"
+    ]
+  },
+  {
+    "id": "haudenosaunee-great-law",
+    "categoria": "indígena",
+    "autor": "Haudenosaunee Confederacy",
+    "ano": "c. 1142",
+    "titulo": "Gayanashagowa (The Great Law of Peace)",
+    "relevancia": "Grande Lei da Paz da Confederação Iroquesa. Princípio da Sétima Geração: 'Em cada decisão, devemos considerar o impacto em nossos descendentes até a sétima geração.' Responsabilidade temporal como fundamento de governança. Uma das constituições democráticas mais antigas do mundo.",
+    "conceitos": [
+      "sétima geração",
+      "responsabilidade temporal",
+      "governança indígena",
+      "Haudenosaunee",
+      "tempo entrelaçado"
+    ]
+  },
+  {
+    "id": "lyons-1980",
+    "categoria": "indígena",
+    "autor": "Lyons, Oren",
+    "ano": 1980,
+    "titulo": "An Iroquois Perspective",
+    "publicacao": "Em American Indian Environments: Ecological Issues in Native American History",
+    "relevancia": "Articulação contemporânea do princípio da Sétima Geração por líder Onondaga. 'Não herdamos a terra de nossos ancestrais, tomamos emprestado de nossos filhos.' Responsabilidade intergeracional como ontologia política.",
+    "conceitos": [
+      "sétima geração",
+      "responsabilidade temporal",
+      "Haudenosaunee",
+      "intergeracional",
+      "indígena"
+    ]
+  },
+  {
+    "id": "scholz-2016",
+    "categoria": "tecnologia",
+    "autor": "Scholz, Trebor",
+    "ano": 2016,
+    "titulo": "Platform Cooperativism: Challenging the Corporate Sharing Economy",
+    "editora": "Rosa Luxemburg Stiftung",
+    "relevancia": "Cooperativismo de plataforma: alternativa ao capitalismo de vigilância. Plataformas digitais possuídas e governadas por usuários e trabalhadores. Democracia digital + propriedade coletiva + soberania de dados. Exemplos: Stocksy (fotografia), Resonate (música), Fairbnb (hospedagem).",
+    "conceitos": [
+      "cooperativismo de plataforma",
+      "economia digital",
+      "soberania de dados",
+      "propriedade coletiva",
+      "alternativas digitais"
+    ]
+  },
+  {
+    "id": "scholz-schneider-2017",
+    "categoria": "tecnologia",
+    "autor": "Scholz, Trebor & Schneider, Nathan (eds.)",
+    "ano": 2017,
+    "titulo": "Ours to Hack and to Own: The Rise of Platform Cooperativism",
+    "editora": "OR Books",
+    "relevancia": "Coletânea sobre cooperativismo de plataforma. Modelos de propriedade coletiva para economia digital. Contraponto ao extrativismo de dados das Big Tech. Governança democrática de infraestrutura digital.",
+    "conceitos": [
+      "cooperativismo de plataforma",
+      "governança digital",
+      "propriedade coletiva",
+      "infraestrutura comum",
+      "tecnologia"
+    ]
+  },
+  {
+    "id": "mastodon-fediverso",
+    "categoria": "tecnologia",
+    "autor": "Rochko, Eugen & Fediverso Community",
+    "ano": 2016,
+    "titulo": "Mastodon and the Fediverse: Decentralized Social Networks",
+    "publicacao": "https://joinmastodon.org",
+    "relevancia": "Fediverso: rede de plataformas independentes que interoperam via ActivityPub. Mastodon (microblog), PeerTube (vídeo), Pixelfed (imagens). Distribuição de poder de reconfiguração: se não gosta das regras do seu servidor, migra para outro levando seguidores ou cria o seu. Alternativa à centralização das Big Tech.",
+    "conceitos": [
+      "fediverso",
+      "descentralização",
+      "interoperabilidade",
+      "ActivityPub",
+      "alternativas digitais"
+    ]
+  },
+  {
+    "id": "sasson-kodak-1975",
+    "categoria": "praxis",
+    "autor": "Sasson, Steven",
+    "ano": 1975,
+    "titulo": "Kodak Digital Camera Invention",
+    "relevancia": "Engenheiro da Kodak inventa primeira câmera digital. Liderança vê como ameaça ao modelo de negócios baseado em filme/químicos e engaveta a invenção. Empresa entra em conformidade com próprio paradigma, recusando questionar fundamentos. Resultado: falência em 2012 quando paradigma digital superou analógico. Exemplo paradigmático de recursão fechada e morte paradigmática.",
+    "conceitos": [
+      "recursao-ontologica",
+      "rigidez paradigmática",
+      "inovação",
+      "transformação",
+      "casa de charlatanismo"
+    ]
+  },
+  {
+    "id": "netflix-transformation",
+    "categoria": "praxis",
+    "autor": "Hastings, Reed & Netflix",
+    "ano": "2007-presente",
+    "titulo": "Netflix Streaming Transformation",
+    "relevancia": "Netflix começa como aluguel de DVDs, mas experimenta com streaming mesmo no auge do sucesso, canibalizando próprio negócio. Capacidade de auto-observação e transformação (recursão aberta) permite não apenas sobreviver à morte do DVD mas liderar nova era. Contraste com Kodak: disposição para divergir do próprio sucesso, inovar processos ritualísticos, questionar paradigma.",
+    "conceitos": [
+      "recursao-ontologica",
+      "plasticidade",
+      "inovação",
+      "transformação",
+      "igreja autêntica"
+    ]
+  },
+  {
+    "id": "deepwater-horizon-2010",
+    "categoria": "ética",
+    "autor": "BP & US Government",
+    "ano": 2010,
+    "titulo": "Deepwater Horizon Oil Spill and Valuation",
+    "relevancia": "Explosão de plataforma Deepwater Horizon despeja 5 milhões de barris no Golfo do México. Análise custo-benefício: atribuir valor monetário a pelicanos, pântanos, comunidades de pesca. Oceano, vida marinha, água tratados como recursos passivos em planilha contábil. Exemplo paradigmático de Terra como objeto a ser danificado e compensado financeiramente versus Terra como sujeito relacional.",
+    "conceitos": [
+      "direitos da natureza",
+      "instrumentalização",
+      "Terra como recurso",
+      "extrativismo",
+      "ecologia"
+    ]
+  },
+  {
+    "id": "srnicek-2017",
+    "categoria": "tecnologia",
+    "autor": "Srnicek, Nick",
+    "ano": 2017,
+    "titulo": "Platform Capitalism",
+    "editora": "Polity Press",
+    "relevancia": "Análise do capitalismo de plataforma. Plataformas digitais (Google, Facebook, Amazon, Uber) controlam infraestrutura e extraem dados como matéria-prima. Efeitos de rede criam monopólios naturais. Modelo extrativista aplicado a relações sociais.",
+    "conceitos": [
+      "capitalismo de plataforma",
+      "dados como matéria-prima",
+      "efeitos de rede",
+      "monopólio digital",
+      "extrativismo"
+    ]
+  },
+  {
+    "id": "maturana-varela-1980",
+    "categoria": "biologia-cognição",
+    "autor": "Maturana, Humberto & Varela, Francisco",
+    "ano": 1980,
+    "titulo": "Autopoiesis and Cognition: The Realization of the Living",
+    "editora": "D. Reidel Publishing Company",
+    "relevancia": "Conceito fundacional de autopoiese: sistemas vivos produzem continuamente os componentes que os constituem. Fechamento operacional - não há inputs/outputs mas acoplamento estrutural. Organização circular recursiva define fronteiras e autonomia da vida.",
+    "conceitos": [
+      "autopoiese",
+      "acoplamento estrutural",
+      "fechamento operacional",
+      "organização viva",
+      "autonomia"
+    ]
+  },
+  {
+    "id": "maturana-varela-1987",
+    "categoria": "biologia-cognição",
+    "autor": "Maturana, Humberto & Varela, Francisco",
+    "ano": 1987,
+    "titulo": "The Tree of Knowledge: The Biological Roots of Human Understanding",
+    "editora": "Shambhala",
+    "relevancia": "Enação: conhecer é fazer emergir um mundo através de acoplamento estrutural. Não há representação de realidade pré-existente - cognição é ação incorporada. Embodied cognition - mente não está na cabeça mas distribuída no corpo-ambiente. Observador e observado co-determinam-se.",
+    "conceitos": [
+      "enação",
+      "acoplamento estrutural",
+      "embodied cognition",
+      "co-determinação",
+      "deriva estrutural"
+    ]
+  },
+  {
+    "id": "simondon-1958",
+    "categoria": "filosofia-ontologia",
+    "autor": "Simondon, Gilbert",
+    "ano": 1958,
+    "titulo": "Du mode d'existence des objets techniques / L'individuation à la lumière des notions de forme et d'information",
+    "editora": "Aubier",
+    "relevancia": "Transindividual dissolve dicotomia indivíduo/coletivo. Pré-individual (campo metaestável) precede e excede indivíduo. Individuação psíquica e coletiva são simultâneas - não há indivíduo primeiro para depois se associar. Relação constitui os termos. Processo de individuação contínua.",
+    "conceitos": [
+      "transindividual",
+      "pré-individual",
+      "individuação",
+      "metaestabilidade",
+      "campo pré-individual"
+    ]
+  },
+  {
+    "id": "fischer-kowalski-1998",
+    "categoria": "ecologia-social",
+    "autor": "Fischer-Kowalski, Marina",
+    "ano": 1998,
+    "titulo": "Society's Metabolism: The Intellectual History of Materials Flow Analysis",
+    "publicacao": "Journal of Industrial Ecology, 2(1)",
+    "relevancia": "Metabolismo social: fluxos materiais e energéticos atravessando fronteira sociedade-natureza. Não há economia sem ecologia - toda produção é transformação metabólica. Medição em toneladas/joules revela base material da 'economia imaterial'.",
+    "conceitos": [
+      "metabolismo social",
+      "fluxos materiais",
+      "fluxos energéticos",
+      "interface sociedade-natureza",
+      "análise de fluxo de materiais"
+    ]
+  },
+  {
+    "id": "marx-1867",
+    "categoria": "economia-política",
+    "autor": "Marx, Karl",
+    "ano": 1867,
+    "titulo": "Das Kapital: Kritik der politischen Ökonomie",
+    "editora": "Verlag von Otto Meissner",
+    "relevancia": "Ruptura metabólica (metabolic rift): capitalismo rompe metabolismo sociedade-natureza. Nutrientes extraídos de solo rural não retornam - acumulam-se como poluição urbana. Separação cidade/campo cria rupturas sistêmicas. Base da ecologia marxista.",
+    "conceitos": [
+      "ruptura metabólica",
+      "metabolismo social",
+      "acumulação primitiva",
+      "mais-valia",
+      "separação cidade-campo"
+    ]
+  },
+  {
+    "id": "agamben-1995",
+    "categoria": "filosofia-tempo",
+    "autor": "Agamben, Giorgio",
+    "ano": 1995,
+    "titulo": "Il tempo che resta: Un commento alla Lettera ai Romani",
+    "editora": "Bollati Boringhieri",
+    "relevancia": "Kairós: tempo messiânico, oportuno, qualitativo. Não chronos (tempo cronológico linear) mas momento de ruptura e possibilidade. Tempo da ação revolucionária. 'Tempo que resta' - urgência que interrompe continuidade vazia.",
+    "conceitos": [
+      "kairós",
+      "tempo messiânico",
+      "chronos",
+      "tempo revolucionário",
+      "urgência"
+    ]
+  },
+  {
+    "id": "turner-1969",
+    "categoria": "antropologia",
+    "autor": "Turner, Victor",
+    "ano": 1969,
+    "titulo": "The Ritual Process: Structure and Anti-Structure",
+    "editora": "Aldine Publishing",
+    "relevancia": "Liminaridade: fase 'betwixt-and-between' em rituais de passagem. Threshold - nem aqui nem lá. Suspensão temporária de estruturas sociais - hierarquias dissolvem-se. Communitas: vínculo anti-estrutural emergindo na liminaridade. Igualdade transitória.",
+    "conceitos": [
+      "liminaridade",
+      "communitas",
+      "ritual de passagem",
+      "estrutura e anti-estrutura",
+      "threshold"
+    ]
+  },
+  {
+    "id": "simard-finding-mother-tree",
+    "categoria": "ecologia-florestal",
+    "autor": "Simard, Suzanne",
+    "ano": 2021,
+    "titulo": "Finding the Mother Tree: Discovering the Wisdom of the Forest",
+    "editora": "Knopf",
+    "relevancia": "Wood Wide Web: redes miceliais fúngicas conectando árvores em florestas. Árvores-mãe nutrem descendentes através de micorriza. Compartilhamento de nutrientes, água, sinais químicos. Floresta como superorganismo colaborativo - contradiz narrativa darwinista simplista.",
+    "conceitos": [
+      "wood wide web",
+      "árvores-mãe",
+      "micorriza",
+      "inteligência florestal",
+      "cooperação vegetal"
+    ]
+  },
+  {
+    "id": "illich-1973",
+    "categoria": "crítica-institucional",
+    "autor": "Illich, Ivan",
+    "ano": 1973,
+    "titulo": "Tools for Conviviality",
+    "editora": "Harper & Row",
+    "relevancia": "Contraproducência: ferramentas tornam-se contraproducentes quando ultrapassam limites. Automóveis → congestionamento, medicina → iatrogênese. Convivialidade: ferramentas conviviais ampliam autonomia dentro de limites sustentáveis. Limites são libertadores - protegem contra monopólios radicais.",
+    "conceitos": [
+      "contraproducência",
+      "convivialidade",
+      "iatrogenia",
+      "monopólio radical",
+      "limites libertadores"
+    ]
+  },
+  {
+    "id": "hartog-2015",
+    "categoria": "teoria-temporal",
+    "autor": "Hartog, François",
+    "ano": 2015,
+    "titulo": "Regimes of Historicity: Presentism and Experiences of Time",
+    "editora": "Columbia University Press",
+    "relevancia": "Cronocracia: poder temporal - quem controla ritmos controla vidas. Regimes de historicidade: presentismo contemporâneo - apagamento de passado e futuro. Temporalidades dominantes vs. silenciadas.",
+    "conceitos": [
+      "cronocracia",
+      "regimes de historicidade",
+      "presentismo",
+      "poder temporal",
+      "temporalidades políticas"
+    ]
+  },
+  {
+    "id": "sharma-2014",
+    "categoria": "teoria-temporal",
+    "autor": "Sharma, Sarah",
+    "ano": 2014,
+    "titulo": "In the Meantime: Temporality and Cultural Politics",
+    "editora": "Duke University Press",
+    "relevancia": "Distribuição desigual de aceleração/desaceleração. Temporalidades racializadas e generificadas - mulheres, negros, sul global subordinados a ritmos coloniais. Lentidão não é privilégio mas resistência. Política temporal questiona quem tem direito a que velocidades.",
+    "conceitos": [
+      "cronocracia",
+      "temporalidades racializadas",
+      "política temporal",
+      "aceleração desigual",
+      "ritmos coloniais"
+    ]
+  },
+  {
+    "id": "margulis-1998",
+    "categoria": "biologia-evolução",
+    "autor": "Margulis, Lynn",
+    "ano": 1998,
+    "titulo": "Symbiotic Planet: A New Look at Evolution",
+    "editora": "Basic Books",
+    "relevancia": "Ciclos biogeoquímicos mediados por microorganismos. Vida não habita Terra - produz Terra através de metabolismo coletivo. Gaia como processo metabólico planetário. Simbiose como motor da evolução.",
+    "conceitos": [
+      "ciclos biogeoquímicos",
+      "Gaia",
+      "simbiose",
+      "metabolismo planetário",
+      "microorganismos"
+    ]
+  },
+  {
+    "id": "rockstrom-planetary-boundaries",
+    "categoria": "ciência-climática",
+    "autor": "Rockström, Johan et al.",
+    "ano": 2009,
+    "titulo": "A safe operating space for humanity",
+    "publicacao": "Nature, 461",
+    "relevancia": "Limites planetários: 9 limites - clima, biodiversidade, ciclos N/P, uso de água, mudança de uso do solo, acidificação oceânica, ozônio, aerossóis, poluição química. 4 já ultrapassados. Limites não são externos - são condições constitutivas de vida.",
+    "conceitos": [
+      "limites planetários",
+      "Antropoceno",
+      "espaço operacional seguro",
+      "limiares planetários",
+      "estabilidade do sistema Terra"
+    ]
+  },
+  {
+    "id": "gilbert-holobiont",
+    "categoria": "biologia-simbiose",
+    "autor": "Gilbert, Scott F. et al.",
+    "ano": 2012,
+    "titulo": "A Symbiotic View of Life: We Have Never Been Individuals",
+    "publicacao": "The Quarterly Review of Biology, 87(4)",
+    "relevancia": "Todos animais e plantas são holobiontes. Seleção natural opera em nível de holobionte, não indivíduo. Dissolução biológica de fronteiras self/outro - mais células bacterianas que humanas. Identidade como assembleia multiespécie.",
+    "conceitos": [
+      "holobionte",
+      "simbiose",
+      "seleção multinível",
+      "identidade multiespécie",
+      "microbioma"
+    ]
   }
 ]

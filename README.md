@@ -12,6 +12,26 @@
 
 **CRIO** é uma experiência filosófica interativa que performa ontologia relacional através de sete movimentos conceituais. Não é um site sobre filosofia—é filosofia SE FAZENDO através de código, design e interação.
 
+## 🆕 Atualizações Recentes (Nov 2025)
+
+### Subdivisão Semântica em 32 Subcamadas
+
+- **727 conceitos** organizados em 8 camadas → **32 subcamadas** semânticas
+- **7.064 relações** (boosted +212 conexões semânticas)
+- **Interface hierárquica colapsável** com grupos e subcamadas
+- **Filtragem por família completa** ou subcamadas individuais
+- **Sistema de cores graduado** (escuro → claro) por variação conceitual
+
+**4 variações por camada:**
+
+- 🔹 **Geral**: Conceitos abstratos, teóricos, fundamentos
+- 🔸 **Relacional**: Conexões, vínculos, redes, interdependências
+- 🔹 **Prática**: Aplicação, ação, institucional, métodos
+- 🔸 **Mista**: Conceitos híbridos, transversais, integrados
+
+Ver [SUBDIVISAO_SEMANTICA_CAMADAS.md](docs/SUBDIVISAO_SEMANTICA_CAMADAS.md) para detalhes completos.
+
+
 ## 📖 Índice
 
 - [O Que É CRIO](#-o-que-é-crio)
@@ -327,13 +347,27 @@ zero/
 
 ### Visualização Rizoma (riz∅ma.html)
 
+**Interface de Filtragem Hierárquica:**
+
+- **32 subcamadas semânticas**: 8 famílias × 4 variações (Geral/Relacional/Prática/Mista)
+- **Grupos colapsáveis**: Clique na seta (▸) para expandir/colapsar famílias
+- **Filtros em dois níveis**:
+  - **Cabeçalho de grupo**: Clique ativa/desativa todas as 4 subcamadas da família
+  - **Subcamadas individuais**: Clique ativa/desativa variação específica
+- **Contadores dinâmicos**: Total de conceitos por subcamada e grupo
+- **Sistema de cores graduado**: Escuro → claro (Geral → Relacional → Prática → Mista)
+- **Visibilidade de relações**:
+  - **Opacidade total**: Conexões entre conceitos ativos
+  - **Opacidade baixa**: Conexões entre ativo e inativo (contexto)
+  - **Oculto**: Conexões apenas entre inativos
+
 **API Interativa do Console (Rizoma Toolkit):**
 
 Abra o console do navegador (F12) e explore o rizoma programaticamente:
 
 ```javascript
 // Informação e Estatísticas
-rizoma.info()          // Visão geral do rizoma (567 conceitos, 8 camadas)
+rizoma.info()          // Visão geral do rizoma (727 conceitos, 32 subcamadas)
 rizoma.stats()         // Estatísticas detalhadas (conexões, hubs, pontes)
 rizoma.stats(true)     // Modo live: atualiza estatísticas a cada segundo
 rizoma.help()          // Lista todos os comandos disponíveis

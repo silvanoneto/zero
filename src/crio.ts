@@ -25,21 +25,78 @@ const CONCEPTS_URL = 'assets/concepts.json';
 
 // CORES POR CAMADA (sincronizado com rizoma-full.ts)
 const LAYER_COLORS: Record<string, number> = {
-    'ontologica': 0x66ccff,    // Azul claro
-    'politica': 0xff6666,      // Vermelho
-    'pratica': 0x99ccff,       // Azul mais claro
-    'fundacional': 0x9966ff,   // Roxo
-    'epistemica': 0xff9966,    // Laranja
-    'ecologica': 0x66ff99,     // Verde
-    'temporal': 0xcccccc,      // Cinza
-    'etica': 0xffff66          // Amarelo
+    // Camadas base (mantidas para compatibilidade)
+    'ontologica': 0x66ccff,
+    'politica': 0xff6666,
+    'pratica': 0x99ccff,
+    'fundacional': 0x9966ff,
+    'epistemica': 0xff9966,
+    'ecologica': 0x66ff99,
+    'temporal': 0xcccccc,
+    'etica': 0xffff66,
+    
+    // Subcamadas ontologica (azul claro: escuro → claro)
+    'ontologica-0': 0x3399ff,  // Geral - azul escuro
+    'ontologica-1': 0x4db8ff,  // Relacional - azul médio-escuro
+    'ontologica-2': 0x66ccff,  // Prática - azul médio-claro
+    'ontologica-3': 0x99ddff,  // Mista - azul claro
+    
+    // Subcamadas politica (vermelho: escuro → claro)
+    'politica-0': 0xcc3333,    // Geral - vermelho escuro
+    'politica-1': 0xff4d4d,    // Relacional - vermelho médio-escuro
+    'politica-2': 0xff6666,    // Prática - vermelho médio-claro
+    'politica-3': 0xff9999,    // Mista - vermelho claro
+    
+    // Subcamadas pratica (azul muito claro: escuro → claro)
+    'pratica-0': 0x6699ff,     // Geral - azul escuro
+    'pratica-1': 0x80bdff,     // Relacional - azul médio-escuro
+    'pratica-2': 0x99ccff,     // Prática - azul médio-claro
+    'pratica-3': 0xcce6ff,     // Mista - azul claro
+    
+    // Subcamadas fundacional (roxo: escuro → claro)
+    'fundacional-0': 0x6633cc,  // Geral - roxo escuro
+    'fundacional-1': 0x8052ff,  // Relacional - roxo médio-escuro
+    'fundacional-2': 0x9966ff,  // Prática - roxo médio-claro
+    'fundacional-3': 0xc299ff,  // Mista - roxo claro
+    
+    // Subcamadas epistemica (laranja: escuro → claro)
+    'epistemica-0': 0xcc6633,   // Geral - laranja escuro
+    'epistemica-1': 0xff8552,   // Relacional - laranja médio-escuro
+    'epistemica-2': 0xff9966,   // Prática - laranja médio-claro
+    'epistemica-3': 0xffc299,   // Mista - laranja claro
+    
+    // Subcamadas ecologica (verde: escuro → claro)
+    'ecologica-0': 0x33cc66,    // Geral - verde escuro
+    'ecologica-1': 0x52ff85,    // Relacional - verde médio-escuro
+    'ecologica-2': 0x66ff99,    // Prática - verde médio-claro
+    'ecologica-3': 0x99ffc2,    // Mista - verde claro
+    
+    // Subcamadas temporal (cinza: escuro → claro)
+    'temporal-0': 0x999999,     // Geral - cinza escuro
+    'temporal-1': 0xb8b8b8,     // Relacional - cinza médio-escuro
+    'temporal-2': 0xcccccc,     // Prática - cinza médio-claro
+    'temporal-3': 0xe0e0e0,     // Mista - cinza claro
+    
+    // Subcamadas etica (amarelo: escuro → claro)
+    'etica-0': 0xcccc33,        // Geral - amarelo escuro
+    'etica-1': 0xffff4d,        // Relacional - amarelo médio-escuro
+    'etica-2': 0xffff66,        // Prática - amarelo médio-claro
+    'etica-3': 0xffff99         // Mista - amarelo claro
 };
 
 /**
  * Obtém a cor de um conceito baseado na sua camada
+ * Suporta subcamadas com variações cromáticas
  */
 function getColorForLayer(layer: string): number {
-    return LAYER_COLORS[layer] || 0xffffff; // Branco como fallback
+    // Tenta match exato primeiro
+    if (LAYER_COLORS[layer]) {
+        return LAYER_COLORS[layer];
+    }
+    
+    // Se é uma subcamada não mapeada, usa a cor base
+    const baseLayer = layer.split('-')[0];
+    return LAYER_COLORS[baseLayer] || 0xffffff; // Branco como fallback
 }
 
 // Estado global
