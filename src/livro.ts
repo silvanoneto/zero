@@ -48,8 +48,9 @@ async function loadLivroContent(): Promise<void> {
     }
 
     try {
-        // Carregar o arquivo markdown
-        const response = await fetch('…_.md');
+        // Carregar o arquivo markdown (com cache-busting)
+        const timestamp = new Date().getTime();
+        const response = await fetch(`…_.md?v=${timestamp}`);
         
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
