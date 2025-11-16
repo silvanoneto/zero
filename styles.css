@@ -1776,6 +1776,83 @@ body:not(.light-theme) .theme-icon {
     text-align: center;
 }
 
+.nav-index h4 {
+    font-size: 0.85rem;
+    margin: 1.5rem 0 0.75rem 0;
+    color: var(--emergence);
+    text-align: center;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.nav-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 1.5rem 0;
+}
+
+body.light-theme .nav-divider {
+    border-top-color: rgba(10, 10, 10, 0.1);
+}
+
+/* Navigation Action Buttons */
+.nav-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.nav-action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.8rem 0.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: var(--emergence);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-size: 0.85rem;
+}
+
+.nav-action-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--emergence);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-action-btn:active {
+    transform: translateY(0);
+}
+
+.nav-action-icon {
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.nav-action-text {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    letter-spacing: 0.02em;
+}
+
+body.light-theme .nav-action-btn {
+    background: rgba(10, 10, 10, 0.03);
+    border-color: rgba(10, 10, 10, 0.1);
+}
+
+body.light-theme .nav-action-btn:hover {
+    background: rgba(10, 10, 10, 0.08);
+    border-color: var(--emergence);
+}
+
 .nav-index ul {
     list-style: none;
     margin: 0;
