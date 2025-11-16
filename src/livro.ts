@@ -70,9 +70,10 @@ async function loadLivroContent(): Promise<void> {
         // Ocultar skeleton loader e mostrar conteúdo
         if (skeletonLoader) {
             skeletonLoader.style.display = 'none';
+            skeletonLoader.setAttribute('aria-hidden', 'true');
         }
-        contentDiv.style.display = 'block';
         contentDiv.classList.remove('loading');
+        contentDiv.classList.add('loaded');
         contentDiv.setAttribute('aria-busy', 'false');
         
         // Carregar conceitos e inicializar links

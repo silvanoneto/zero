@@ -136,11 +136,14 @@ main.high-tremor {
 }
 
 #content {
-    opacity: 0;
-    animation: emerge 2s 1s ease-out forwards;
+    opacity: 1;
     user-select: text;
     -webkit-user-select: text;
     -moz-user-select: text;
+}
+
+#content.loaded {
+    animation: emerge 2s ease-out forwards;
 }
 
 /* Permitir seleção de texto em elementos de conteúdo */
@@ -164,6 +167,7 @@ main.high-tremor {
     padding: 4rem 2rem;
     color: var(--trace);
     font-style: italic;
+    min-height: 200px;
 }
 
 /* Headings - accessible focus styles */
