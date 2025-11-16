@@ -2269,17 +2269,47 @@ body.light-theme .reading-info {
     h1 {
         font-size: 2rem;
         line-height: 1.2;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* Ajustar espaçamento dos headers de PARTE/SEÇÃO */
+    h1:not(:first-of-type) {
+        margin-top: 3rem !important;
+        padding-top: 2rem !important;
+    }
+
+    /* Decoradores responsivos */
+    h1:not(:first-of-type)::before {
+        width: 120px !important;
+    }
+
+    h1:not(:first-of-type)::after {
+        font-size: 1.2rem !important;
+        top: -0.6rem !important;
+    }
+
+    /* Títulos de PARTE com padding reduzido */
+    h1[id^="parte-"],
+    h1:has(+ hr) {
+        padding: 1.25rem 0.75rem !important;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
     }
 
     h2 {
         font-size: 1.5rem;
         margin: 2.5rem 0 1.25rem 0;
         line-height: 1.3;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
     
     h3 {
         font-size: 1.2rem;
         line-height: 1.4;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
     
     /* Adjust quotes for mobile */
@@ -2407,15 +2437,47 @@ body.light-theme .reading-info {
 
     h1 {
         font-size: 1.75rem;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+
+    /* Ajustar ainda mais espaçamento em telas muito pequenas */
+    h1:not(:first-of-type) {
+        margin-top: 2.5rem !important;
+        padding-top: 1.5rem !important;
+    }
+
+    /* Decoradores menores */
+    h1:not(:first-of-type)::before {
+        width: 80px !important;
+        height: 2px !important;
+    }
+
+    h1:not(:first-of-type)::after {
+        font-size: 1rem !important;
+        top: -0.5rem !important;
+    }
+
+    /* Títulos de PARTE compactos */
+    h1[id^="parte-"],
+    h1:has(+ hr) {
+        padding: 1rem 0.5rem !important;
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        border-radius: 8px;
     }
 
     h2 {
         font-size: 1.3rem;
         margin: 2rem 0 1rem 0;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
     }
     
     h3 {
         font-size: 1.1rem;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
     }
     
     /* Compact quotes for small screens */
