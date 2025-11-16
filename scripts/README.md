@@ -79,6 +79,52 @@ make balance-check
 
 ---
 
+### `balance_verbs.py`
+**Script de balanceamento de verbos semânticos**
+
+Equilibra a distribuição de verbos nas relações, diversificando verbos sobre-utilizados:
+
+- 📊 Análise de distribuição de verbos (antes/depois)
+- 🔄 Diversificação contextual baseada em camadas ontológicas
+- ⚖️  Eliminação de verbos genéricos super-concentrados
+- ✨ Aumento de riqueza semântica do rizoma
+- 🎯 Adaptação de verbos ao contexto das relações
+
+**Uso:**
+```bash
+python3 scripts/balance_verbs.py
+# ou via Make
+make balance-verbs
+# ou como parte de
+make ontology
+```
+
+**O que faz:**
+- Identifica verbos sobre-utilizados (>5% do total)
+- Diversifica "relaciona-se com" em variantes contextuais:
+  - Fundacionais: fundamenta-se em, emerge de, condiciona
+  - Ontológicas: constitui, articula-se com, entrelaça-se com
+  - Epistêmicas: conhece através de, questiona, dialoga com
+  - Políticas: mobiliza, resiste a, emancipa-se via
+  - Éticas: cuida de, responsabiliza-se por, acolhe
+  - Temporais: desdobra-se em, evolui para, atualiza
+  - Ecológicas: simbiosa com, co-habita, flui em
+  - Práticas: implementa, pratica, performa
+
+**Critérios de avaliação:**
+- < 5%: ✅ EXCELENTE - Bem distribuído
+- 5-10%: ✅ BOM - Uso moderado
+- 10-15%: ⚠️  ACEITÁVEL - Ainda dominante
+- > 15%: ❌ REQUER ATENÇÃO - Muito concentrado
+
+**Quando usar:**
+- Após adicionar muitas relações genéricas
+- Para melhorar especificidade semântica
+- Antes de publicar/compartilhar a ontologia
+- Periodicamente para manter qualidade
+
+---
+
 ## 🎯 Comandos Make
 
 ```bash

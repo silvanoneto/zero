@@ -55,10 +55,26 @@ fix-relations: ## Corrige relações quebradas após mesclas
 	@echo "🔧 Corrigindo relações..."
 	@python3 scripts/fix_relations.py
 
-ontology: validate ## Alias para validate
+ontology: balance-verbs validate ## Equilibra verbos e valida ontologia
 
 balance-check: ## Analisa balanceamento das camadas ontológicas
 	@python3 scripts/analyze_balance.py
+
+balance-verbs: ## Equilibra verbos nas relações (diversifica verbos sobre-utilizados)
+	@echo "⚖️  Equilibrando verbos nas relações..."
+	@python3 scripts/balance_verbs.py
+
+normalize-connectivity: ## Normaliza distribuição de conectividade (aproxima gaussiana)
+	@echo "📊 Normalizando distribuição de conectividade..."
+	@python3 scripts/normalize_connectivity.py
+
+normalize-dry-run: ## Simula normalização sem salvar mudanças
+	@echo "🔍 Simulando normalização (dry-run)..."
+	@python3 scripts/normalize_connectivity.py --dry-run
+
+analyze-clusters: ## Analisa e demarca clusters para visualização no rizoma
+	@echo "🎨 Analisando clusters..."
+	@python3 scripts/analyze_clusters.py
 
 stats: ## Mostra estatísticas detalhadas da ontologia
 	@echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
@@ -137,12 +153,7 @@ stats-full: ## Análise completa com distribuições e correlações
 	@echo ""
 	@echo "⚖️ BALANCEAMENTO ENTRE CAMADAS"
 	@cat assets/concepts.json | jq -r '.[] | .layer' | sort | uniq -c | sort -rn | awk 'BEGIN {max=0} {if($$1>max) max=$$1} {printf "  • %-20s %3d conceitos ", $$2":", $$1; bar=int($$1*30/max); for(i=0;i<bar;i++) printf "█"; printf "\n"}'
-	@python3 -c "import json; from collections import Counter; \
-	with open('assets/concepts.json', 'r', encoding='utf-8') as f: concepts = json.load(f); \
-	counts = list(Counter(c['layer'] for c in concepts).values()); \
-	ratio = max(counts) / min(counts); \
-	status = '✅ BOM' if ratio < 3 else '⚠️  MODERADO' if ratio < 5 else '❌ CRÍTICO'; \
-	print(f'  Razão max/min: {ratio:.2f}x {status}')"
+	@python3 -c "import json; from collections import Counter; f = open('assets/concepts.json', 'r', encoding='utf-8'); concepts = json.load(f); f.close(); counts = list(Counter(c['layer'] for c in concepts).values()); ratio = max(counts) / min(counts); status = '✅ BOM' if ratio < 3 else '⚠️  MODERADO' if ratio < 5 else '❌ CRÍTICO'; print(f'  Razão max/min: {ratio:.2f}x {status}')"
 	@echo ""
 	@echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 

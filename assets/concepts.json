@@ -27,7 +27,11 @@
       "ontologia",
       "pratityasamutpada",
       "vazio",
-      "madhyamaka"
+      "madhyamaka",
+      "mereologia",
+      "paradoxo-mentiroso",
+      "indecidibilidade",
+      "criticidade"
     ],
     "layer": "fundacional"
   },
@@ -40,7 +44,12 @@
       "multiplicidade",
       "processo",
       "sunyata",
-      "vazio"
+      "vazio",
+      "mereologia",
+      "paradoxo-mentiroso",
+      "indecidibilidade",
+      "entropia",
+      "criticidade"
     ],
     "layer": "fundacional"
   },
@@ -55,7 +64,10 @@
       "processo",
       "sunyata",
       "commons",
-      "reciprocidade"
+      "reciprocidade",
+      "entropia",
+      "sorites",
+      "modi"
     ],
     "layer": "fundacional"
   },
@@ -127,7 +139,10 @@
       "ocasiões",
       "processo",
       "tempo",
-      "vazio"
+      "vazio",
+      "periodicidade",
+      "devir-animal",
+      "presentismo"
     ],
     "layer": "temporal"
   },
@@ -300,7 +315,9 @@
       "gênero",
       "intracao",
       "pratica",
-      "sujeito"
+      "sujeito",
+      "harambee",
+      "ori"
     ],
     "layer": "ontologica"
   },
@@ -335,7 +352,9 @@
       "reciprocidade",
       "reproducaosocial",
       "ubuntu",
-      "precariedade"
+      "precariedade",
+      "sensivel",
+      "compaixao"
     ],
     "layer": "etica"
   },
@@ -351,7 +370,9 @@
       "necropolitica",
       "normatividade",
       "vulnerabilidade",
-      "responsabilidade"
+      "responsabilidade",
+      "regime-estetico",
+      "amizade-politica"
     ],
     "layer": "etica"
   },
@@ -366,7 +387,10 @@
       "performatividade",
       "precariedade",
       "vulnerabilidade",
-      "pluralismo"
+      "pluralismo",
+      "sorites",
+      "dissipacao",
+      "eternal-objects"
     ],
     "layer": "fundacional"
   },
@@ -419,7 +443,11 @@
       "groundednormativity",
       "indigena",
       "ontologia",
-      "terra"
+      "terra",
+      "harambee",
+      "ujima",
+      "encruzilhada",
+      "axe"
     ],
     "layer": "ontologica"
   },
@@ -436,7 +464,8 @@
       "reciprocidade",
       "terra",
       "ressurgencia",
-      "autonomia"
+      "autonomia",
+      "maieutica"
     ],
     "layer": "epistemica"
   },
@@ -451,7 +480,10 @@
       "indigena",
       "terra",
       "transformação",
-      "descolonização"
+      "descolonização",
+      "devir-animal",
+      "devir-mulher",
+      "perdurantismo"
     ],
     "layer": "temporal"
   },
@@ -466,7 +498,10 @@
       "ontologia",
       "placethought",
       "ubuntu",
-      "whakapapa"
+      "whakapapa",
+      "cataphasis",
+      "aporia-expertise",
+      "palavra-ordem"
     ],
     "layer": "epistemica"
   },
@@ -574,7 +609,8 @@
       "simbiose",
       "vulnerabilidade",
       "espécies companheiras",
-      "identidade"
+      "identidade",
+      "facilitacao"
     ],
     "layer": "ecologica"
   },
@@ -589,7 +625,10 @@
       "multiplicidade",
       "reciprocidade",
       "terra",
-      "mutualismo"
+      "mutualismo",
+      "cascata-trofica",
+      "climax",
+      "sucessao-primaria"
     ],
     "layer": "ecologica"
   },
@@ -604,7 +643,10 @@
       "redesmiceliais",
       "simbiose",
       "terra",
-      "floresta"
+      "floresta",
+      "cascata-trofica",
+      "climax",
+      "gaia"
     ],
     "layer": "ecologica"
   },
@@ -661,7 +703,8 @@
       "processo",
       "sujeito",
       "tempo",
-      "transformação"
+      "transformação",
+      "kairos"
     ],
     "layer": "temporal"
   },
@@ -678,7 +721,8 @@
       "pratica",
       "reciprocidade",
       "economia-solidaria",
-      "autogestão"
+      "autogestão",
+      "escala-intersticial"
     ],
     "layer": "pratica"
   },
@@ -691,7 +735,12 @@
       "evento",
       "performatividade",
       "pratica",
-      "sujeito"
+      "sujeito",
+      "proletarizacao",
+      "tecnicidade",
+      "crédito mútuo",
+      "auditoria-transparencia",
+      "hypomnemata"
     ],
     "layer": "pratica"
   },
@@ -705,7 +754,11 @@
       "desescolarizacao",
       "limite",
       "pratica",
-      "softwarelivre"
+      "softwarelivre",
+      "tecnicidade",
+      "crédito mútuo",
+      "auditoria-transparencia",
+      "transindividuacao"
     ],
     "layer": "pratica"
   },
@@ -721,7 +774,9 @@
       "pratica",
       "reciprocidade",
       "economia",
-      "crédito mútuo"
+      "crédito mútuo",
+      "protensao",
+      "retencao-primaria"
     ],
     "layer": "pratica"
   },
@@ -735,7 +790,11 @@
       "moedascomunitarias",
       "normatividade",
       "reciprocidade",
-      "economia"
+      "economia",
+      "estranhamento",
+      "ressentimento",
+      "amor-fati",
+      "montagem"
     ],
     "layer": "etica"
   },
@@ -749,7 +808,11 @@
       "educacaopopular",
       "performatividade",
       "pratica",
-      "diálogo"
+      "diálogo",
+      "aporia-expertise",
+      "abducao",
+      "falibilismo",
+      "pedagogia"
     ],
     "layer": "epistemica"
   },
@@ -765,7 +828,9 @@
       "processo",
       "vulnerabilidade",
       "emoção",
-      "poder"
+      "poder",
+      "ujima",
+      "ase"
     ],
     "layer": "ontologica"
   },
@@ -779,7 +844,10 @@
       "corposemorgaos",
       "holobionte",
       "multiplicidade",
-      "vulnerabilidade"
+      "vulnerabilidade",
+      "ujima",
+      "encruzilhada",
+      "egbe"
     ],
     "layer": "ontologica"
   },
@@ -794,7 +862,10 @@
       "reciprocidade",
       "tecnologiaconvivial",
       "compartilhamento",
-      "colaboração"
+      "colaboração",
+      "abducao",
+      "falibilismo",
+      "relatividade conceitual"
     ],
     "layer": "epistemica"
   },
@@ -845,7 +916,9 @@
       "evento",
       "performatividade",
       "pratica",
-      "intersubjetividade"
+      "intersubjetividade",
+      "protensao",
+      "retencao"
     ],
     "layer": "pratica"
   },
@@ -861,7 +934,8 @@
       "pedagogiaautonomia",
       "performatividade",
       "sujeito",
-      "pedagogia"
+      "pedagogia",
+      "hermeneutica"
     ],
     "layer": "epistemica"
   },
@@ -875,7 +949,10 @@
       "educacaopopular",
       "normatividade",
       "vulnerabilidade",
-      "liberdade"
+      "liberdade",
+      "hermeneutica",
+      "epoché",
+      "paradigma"
     ],
     "layer": "epistemica"
   },
@@ -890,7 +967,9 @@
       "reciprocidade",
       "tecnologiaconvivial",
       "autonomia",
-      "instituição"
+      "instituição",
+      "epoché",
+      "paradigma"
     ],
     "layer": "epistemica"
   },
@@ -922,7 +1001,10 @@
       "reproducaosocial",
       "ubuntu",
       "vulnerabilidade",
-      "whanaungatanga"
+      "whanaungatanga",
+      "estranhamento",
+      "ressentimento",
+      "reparacao"
     ],
     "layer": "etica"
   },
@@ -937,7 +1019,10 @@
       "extrativismo",
       "groundednormativity",
       "necropolitica",
-      "reproducaosocial"
+      "reproducaosocial",
+      "maquina-guerra",
+      "aparelho-captura",
+      "imperio"
     ],
     "layer": "politica"
   },
@@ -954,7 +1039,8 @@
       "precariedade",
       "reproducaosocial",
       "colonialismo",
-      "terra"
+      "terra",
+      "micro-politica"
     ],
     "layer": "politica"
   },
@@ -1003,7 +1089,11 @@
       "limite",
       "memoriacoletiva",
       "recursao",
-      "tempo"
+      "tempo",
+      "devir-mulher",
+      "ucronia",
+      "crono-politica",
+      "pre-condicoes-materiais"
     ],
     "layer": "temporal"
   },
@@ -1037,7 +1127,8 @@
       "tempo",
       "terra",
       "responsabilidade",
-      "sustentabilidade"
+      "sustentabilidade",
+      "ucronia"
     ],
     "layer": "temporal"
   },
@@ -1051,7 +1142,8 @@
       "devir",
       "evento",
       "multiplicidade",
-      "riz∅ma"
+      "riz∅ma",
+      "egbe"
     ],
     "layer": "ontologica"
   },
@@ -1080,7 +1172,10 @@
       "extrativismo",
       "reciprocidade",
       "vulnerabilidade",
-      "feminismo"
+      "feminismo",
+      "maquina-guerra",
+      "aparelho-captura",
+      "linha-fuga"
     ],
     "layer": "politica"
   },
@@ -1096,7 +1191,8 @@
       "precariedade",
       "vulnerabilidade",
       "terror",
-      "soberania"
+      "soberania",
+      "maquina-guerra"
     ],
     "layer": "politica"
   },
@@ -1109,7 +1205,9 @@
       "memoriacoletiva",
       "processo",
       "recursao",
-      "tempo"
+      "tempo",
+      "duração",
+      "kairos"
     ],
     "layer": "temporal"
   },
@@ -1137,7 +1235,11 @@
       "epistemologia",
       "performatividade",
       "política",
-      "ética"
+      "ética",
+      "incomensurabilidade",
+      "anarquismo-epistemologico",
+      "programa-investigacao",
+      "tacit-knowledge"
     ],
     "layer": "epistemica"
   },
@@ -1151,7 +1253,8 @@
       "fatos relativos",
       "não-localidade",
       "ontologia",
-      "processo"
+      "processo",
+      "dissipacao"
     ],
     "layer": "fundacional"
   },
@@ -1166,7 +1269,9 @@
       "cosmopolitica",
       "democracia",
       "descentralização",
-      "pratica"
+      "pratica",
+      "aparelho-captura",
+      "vida-nua"
     ],
     "layer": "politica"
   },
@@ -1195,7 +1300,9 @@
       "governança",
       "poder",
       "pratica",
-      "sujeito"
+      "sujeito",
+      "aparelho-captura",
+      "vida-nua"
     ],
     "layer": "politica"
   },
@@ -1209,7 +1316,10 @@
       "indigena",
       "não-humanos",
       "personalidade jurídica",
-      "terra"
+      "terra",
+      "multidao",
+      "governamentalidade",
+      "disciplina"
     ],
     "layer": "politica"
   },
@@ -1223,7 +1333,10 @@
       "cooperativa",
       "decrescimento",
       "extrativismo",
-      "mercadorias fictícias"
+      "mercadorias fictícias",
+      "multidao",
+      "governamentalidade",
+      "disciplina"
     ],
     "layer": "politica"
   },
@@ -1237,7 +1350,8 @@
       "micorriza",
       "multiespécies",
       "simbiose",
-      "terra"
+      "terra",
+      "umwelt"
     ],
     "layer": "ecologica"
   },
@@ -1305,7 +1419,12 @@
       "normatividade",
       "reciprocidade",
       "responsabilidade",
-      "vulnerabilidade"
+      "vulnerabilidade",
+      "amor-fati",
+      "parrhesia",
+      "cuidado-si",
+      "sublime",
+      "cuidado-como-ontologia"
     ],
     "layer": "etica"
   },
@@ -1319,7 +1438,10 @@
       "extrativismo",
       "groundednormativity",
       "indigena",
-      "ressurgência"
+      "ressurgência",
+      "molecular-molar",
+      "guerra-posicao",
+      "macro-politica"
     ],
     "layer": "politica"
   },
@@ -1350,7 +1472,8 @@
       "limite",
       "protocoloaberto",
       "softwarelivre",
-      "tecnologiaconvivial"
+      "tecnologiaconvivial",
+      "retencao-secundaria"
     ],
     "layer": "pratica"
   },
@@ -1364,7 +1487,9 @@
       "governança",
       "necropolitica",
       "política",
-      "pratica"
+      "pratica",
+      "molecular-molar",
+      "resistencia-molecular"
     ],
     "layer": "politica"
   },
@@ -1415,7 +1540,9 @@
       "vulnerabilidade",
       "ética",
       "soberania-alimentar",
-      "economia-solidaria"
+      "economia-solidaria",
+      "parrhesia",
+      "cuidado-si"
     ],
     "layer": "etica"
   },
@@ -1428,7 +1555,9 @@
       "ontologia",
       "sujeito",
       "transindividual",
-      "ubuntu"
+      "ubuntu",
+      "identidade",
+      "Pachamama"
     ],
     "layer": "ontologica"
   },
@@ -1441,7 +1570,9 @@
       "multiplicidade",
       "performatividade",
       "processo",
-      "sujeito"
+      "sujeito",
+      "intersubjetividade",
+      "escala"
     ],
     "layer": "ontologica"
   },
@@ -1503,7 +1634,9 @@
       "física quântica",
       "processo",
       "vazio",
-      "virtualidade"
+      "virtualidade",
+      "não-localidade",
+      "origem dependente"
     ],
     "layer": "fundacional"
   },
@@ -1531,7 +1664,11 @@
       "descolonização",
       "evento",
       "groundednormativity",
-      "indigena"
+      "indigena",
+      "guerra-posicao",
+      "macro-politica",
+      "destituicao",
+      "resistencia-molecular"
     ],
     "layer": "politica"
   },
@@ -1545,7 +1682,10 @@
       "intracao",
       "reciprocidade",
       "vulnerabilidade",
-      "infraestrutura-comum"
+      "infraestrutura-comum",
+      "sublime",
+      "choque",
+      "crueldade"
     ],
     "layer": "etica"
   },
@@ -1590,7 +1730,8 @@
       "commons",
       "despossessao",
       "extrativismo",
-      "terra"
+      "terra",
+      "destituicao"
     ],
     "layer": "politica"
   },
@@ -1617,7 +1758,9 @@
       "cosmopolitica",
       "direitos da natureza",
       "indigena",
-      "terra"
+      "terra",
+      "intersubjetividade",
+      "não-humanos"
     ],
     "layer": "ontologica"
   },
@@ -1666,7 +1809,9 @@
       "confederalismo",
       "governança",
       "política",
-      "pratica"
+      "pratica",
+      "feminismo",
+      "capitalismo"
     ],
     "layer": "politica"
   },
@@ -1711,7 +1856,9 @@
       "física quântica",
       "não-localidade",
       "ontologia",
-      "relações"
+      "relações",
+      "Bell",
+      "física"
     ],
     "layer": "fundacional"
   },
@@ -1723,7 +1870,12 @@
       "conhecimento",
       "crítica",
       "ontologia",
-      "pratica"
+      "pratica",
+      "incomensurabilidade",
+      "anarquismo-epistemologico",
+      "programa-investigacao",
+      "tacit-knowledge",
+      "significante"
     ],
     "layer": "epistemica"
   },
@@ -1736,7 +1888,9 @@
       "holobionte",
       "limite",
       "processo",
-      "fricção"
+      "fricção",
+      "identidade",
+      "consciência coletiva"
     ],
     "layer": "ontologica"
   },
@@ -1748,7 +1902,9 @@
       "física quântica",
       "processo",
       "relações",
-      "tempo"
+      "tempo",
+      "história",
+      "devir-menor"
     ],
     "layer": "temporal"
   },
@@ -1779,7 +1935,9 @@
       "gênero",
       "performatividade",
       "reproducaosocial",
-      "vulnerabilidade"
+      "vulnerabilidade",
+      "democracia",
+      "antropocentrismo"
     ],
     "layer": "politica"
   },
@@ -1791,7 +1949,9 @@
       "descolonização",
       "indigena",
       "ontologia",
-      "ubuntu"
+      "ubuntu",
+      "actantes",
+      "emergência"
     ],
     "layer": "ontologica"
   },
@@ -1804,7 +1964,9 @@
       "despossessao",
       "economia",
       "extrativismo",
-      "mercadorias fictícias"
+      "mercadorias fictícias",
+      "democracia",
+      "autonomia"
     ],
     "layer": "politica"
   },
@@ -1850,7 +2012,9 @@
       "direitos da natureza",
       "holobionte",
       "multiespécies",
-      "não-humanos"
+      "não-humanos",
+      "feminismo",
+      "alternativas"
     ],
     "layer": "politica"
   },
@@ -1877,7 +2041,9 @@
       "agencia",
       "cosmopolitica",
       "direitos da natureza",
-      "multiespécies"
+      "multiespécies",
+      "Pachamama",
+      "caos"
     ],
     "layer": "ontologica"
   },
@@ -1889,7 +2055,9 @@
       "RQM",
       "emaranhamento",
       "física quântica",
-      "relações"
+      "relações",
+      "vácuo",
+      "ocasiões"
     ],
     "layer": "fundacional"
   },
@@ -1902,7 +2070,9 @@
       "espécies companheiras",
       "holobionte",
       "não-humanos",
-      "simbiose"
+      "simbiose",
+      "biodiversidade",
+      "floresta"
     ],
     "layer": "ecologica"
   },
@@ -1950,7 +2120,10 @@
       "agencia",
       "autonomia",
       "responsabilidade",
-      "vulnerabilidade"
+      "vulnerabilidade",
+      "choque",
+      "crueldade",
+      "reprodutibilidade"
     ],
     "layer": "etica"
   },
@@ -1980,7 +2153,9 @@
       "consciência",
       "memoriacoletiva",
       "sujeito",
-      "transindividual"
+      "transindividual",
+      "escala",
+      "lugar"
     ],
     "layer": "ontologica"
   },
@@ -1993,7 +2168,9 @@
       "autogestão",
       "liberdade",
       "municipalismo",
-      "pedagogiaautonomia"
+      "pedagogiaautonomia",
+      "capitalismo",
+      "libertação"
     ],
     "layer": "politica"
   },
@@ -2010,7 +2187,8 @@
       "natureza",
       "intersubjetividade",
       "devir-imperceptivel",
-      "tajalli"
+      "tajalli",
+      "comensalismo"
     ],
     "layer": "ecologica"
   },
@@ -2023,7 +2201,11 @@
       "confederalismo",
       "democracia",
       "municipalismo",
-      "feminismo"
+      "feminismo",
+      "retencao",
+      "algoritmo",
+      "blockchain",
+      "retencao-secundaria"
     ],
     "layer": "pratica"
   },
@@ -2052,7 +2234,9 @@
       "agencia",
       "ator-rede",
       "cosmopolitica",
-      "não-humanos"
+      "não-humanos",
+      "filosofia africana",
+      "virtualidade"
     ],
     "layer": "ontologica"
   },
@@ -2065,7 +2249,11 @@
       "ancestralidade",
       "conhecimento",
       "indigena",
-      "ontologia"
+      "ontologia",
+      "significante",
+      "signo",
+      "regime-signos",
+      "gramatologia"
     ],
     "layer": "epistemica"
   },
@@ -2081,7 +2269,8 @@
       "democracia",
       "colaboração",
       "governança",
-      "economia-solidaria"
+      "economia-solidaria",
+      "algoritmo"
     ],
     "layer": "pratica"
   },
@@ -2093,7 +2282,9 @@
       "consciência coletiva",
       "escala",
       "holobionte",
-      "processo"
+      "processo",
+      "filosofia africana",
+      "ação"
     ],
     "layer": "ontologica"
   },
@@ -2105,7 +2296,9 @@
       "budismo",
       "ontologia",
       "pratityasamutpada",
-      "relações"
+      "relações",
+      "vácuo",
+      "determinismo"
     ],
     "layer": "fundacional"
   },
@@ -2134,7 +2327,9 @@
       "devir",
       "vazio",
       "vácuo",
-      "bifurcacao"
+      "bifurcacao",
+      "actantes",
+      "comunidade"
     ],
     "layer": "ontologica"
   },
@@ -2146,7 +2341,9 @@
       "acumulacaoprimitiva",
       "capitalismo",
       "desigualdade",
-      "política"
+      "política",
+      "apropriação",
+      "constituição"
     ],
     "layer": "politica"
   },
@@ -2176,7 +2373,9 @@
       "holobionte",
       "multiespécies",
       "simbiose",
-      "multiplicidade"
+      "multiplicidade",
+      "soberania-alimentar",
+      "biomimetica"
     ],
     "layer": "ecologica"
   },
@@ -2205,7 +2404,9 @@
       "evento",
       "ocasioes",
       "processo",
-      "tempo"
+      "tempo",
+      "não-localidade",
+      "fact-nets"
     ],
     "layer": "fundacional"
   },
@@ -2217,7 +2418,9 @@
       "agencia",
       "evento",
       "performatividade",
-      "pratica"
+      "pratica",
+      "emergência",
+      "criação"
     ],
     "layer": "ontologica"
   },
@@ -2249,7 +2452,9 @@
       "capitalismo",
       "commons",
       "decrescimento",
-      "imaginação"
+      "imaginação",
+      "antropocentrismo",
+      "libertação"
     ],
     "layer": "politica"
   },
@@ -2261,7 +2466,9 @@
       "capitalismo",
       "despossessao",
       "extrativismo",
-      "propriedade"
+      "propriedade",
+      "classe",
+      "instituição"
     ],
     "layer": "politica"
   },
@@ -2308,7 +2515,9 @@
       "commons",
       "governança",
       "municipalismo",
-      "tecnologiaconvivial"
+      "tecnologiaconvivial",
+      "blockchain",
+      "mnemotecnica"
     ],
     "layer": "pratica"
   },
@@ -2321,7 +2530,9 @@
       "física quântica",
       "não-localidade",
       "ontologia",
-      "realismo"
+      "realismo",
+      "física",
+      "imanencia"
     ],
     "layer": "fundacional"
   },
@@ -2349,7 +2560,9 @@
       "ordem",
       "processo",
       "bifurcacao",
-      "tipping-point"
+      "tipping-point",
+      "não-humanos",
+      "mesticagem-ontologica"
     ],
     "layer": "ontologica"
   },
@@ -2446,7 +2659,10 @@
       "assembleia",
       "commons",
       "cooperativa",
-      "reciprocidade"
+      "reciprocidade",
+      "mnemotecnica",
+      "solidariedade-horizontal",
+      "terreiro"
     ],
     "layer": "pratica"
   },
@@ -2495,7 +2711,10 @@
       "reciprocidade",
       "softwarelivre",
       "aporia-expertise",
-      "ujamaa"
+      "ujamaa",
+      "signo",
+      "regime-signos",
+      "gramatologia"
     ],
     "layer": "epistemica"
   },
@@ -2507,7 +2726,9 @@
       "commons",
       "intersubjetividade",
       "reciprocidade",
-      "ubuntu"
+      "ubuntu",
+      "virtualidade",
+      "dasein"
     ],
     "layer": "ontologica"
   },
@@ -2536,7 +2757,9 @@
       "Pachamama",
       "buen vivir",
       "direitos da natureza",
-      "política"
+      "política",
+      "classe",
+      "excedente-comportamental"
     ],
     "layer": "politica"
   },
@@ -2581,7 +2804,10 @@
     "connections": [
       "commons",
       "moedascomunitarias",
-      "reciprocidade"
+      "reciprocidade",
+      "pharmakon",
+      "assembleia",
+      "tecnologiaconvivial"
     ],
     "layer": "pratica"
   },
@@ -2593,7 +2819,9 @@
       "devir",
       "emergência",
       "processo",
-      "virtualidade"
+      "virtualidade",
+      "ação",
+      "fidelidade"
     ],
     "layer": "ontologica"
   },
@@ -2638,7 +2866,9 @@
       "Heidegger",
       "Mitsein",
       "lugar",
-      "ontologia"
+      "ontologia",
+      "comunidade",
+      "finitude"
     ],
     "layer": "ontologica"
   },
@@ -2650,7 +2880,9 @@
       "agencia",
       "física quântica",
       "livre-arbítrio",
-      "bifurcacao"
+      "bifurcacao",
+      "origem dependente",
+      "incompletude"
     ],
     "layer": "fundacional"
   },
@@ -2662,7 +2894,12 @@
       "circuloscultura",
       "conhecimento",
       "educacaopopular",
-      "pratica"
+      "pratica",
+      "constelacao",
+      "pragmatica",
+      "inteligencia-bergson",
+      "apophasis",
+      "indice-semiotico"
     ],
     "layer": "epistemica"
   },
@@ -2675,7 +2912,9 @@
       "estratostempo",
       "processo",
       "tempo",
-      "regeneracao"
+      "regeneracao",
+      "crono-politica",
+      "pre-condicoes-materiais"
     ],
     "layer": "temporal"
   },
@@ -2755,7 +2994,9 @@
       "holobionte",
       "processo",
       "simbiose",
-      "tempo"
+      "tempo",
+      "natureza",
+      "resiliência"
     ],
     "layer": "ecologica"
   },
@@ -2767,7 +3008,9 @@
       "RQM",
       "fatos relativos",
       "redes",
-      "relacionalidade"
+      "relacionalidade",
+      "ocasiões",
+      "nafas-al-rahman"
     ],
     "layer": "fundacional"
   },
@@ -2779,7 +3022,9 @@
       "evento",
       "pratica",
       "sujeito",
-      "verdade"
+      "verdade",
+      "criação",
+      "finitude"
     ],
     "layer": "ontologica"
   },
@@ -2808,7 +3053,9 @@
       "dasein",
       "limite",
       "tempo",
-      "vulnerabilidade"
+      "vulnerabilidade",
+      "fidelidade",
+      "Heidegger"
     ],
     "layer": "ontologica"
   },
@@ -2821,7 +3068,9 @@
       "física quântica",
       "ontologia",
       "campo",
-      "emaranhamento"
+      "emaranhamento",
+      "Bell",
+      "realismo"
     ],
     "layer": "fundacional"
   },
@@ -2834,7 +3083,9 @@
       "holobionte",
       "micorriza",
       "terra",
-      "redes"
+      "redes",
+      "multiespécies",
+      "permacultura"
     ],
     "layer": "ecologica"
   },
@@ -2863,7 +3114,12 @@
       "incompletude",
       "limite",
       "lógica",
-      "matemática"
+      "matemática",
+      "constelacao",
+      "pragmatica",
+      "inteligencia-bergson",
+      "apophasis",
+      "indice-semiotico"
     ],
     "layer": "epistemica"
   },
@@ -2892,7 +3148,9 @@
       "Mitsein",
       "dasein",
       "filosofia",
-      "ontologia"
+      "ontologia",
+      "finitude",
+      "imaginário"
     ],
     "layer": "ontologica"
   },
@@ -2904,7 +3162,9 @@
       "ancestralidade",
       "hauntologia",
       "memoriacoletiva",
-      "tempo"
+      "tempo",
+      "espaço-tempo",
+      "cronotopo"
     ],
     "layer": "temporal"
   },
@@ -2916,7 +3176,9 @@
       "afrofuturismo",
       "alternativas",
       "capitalismo",
-      "futuridadequeer"
+      "futuridadequeer",
+      "icone",
+      "simbolo-semiotico"
     ],
     "layer": "epistemica"
   },
@@ -2928,7 +3190,9 @@
       "criação",
       "imaginação",
       "instituição",
-      "sociedade"
+      "sociedade",
+      "Heidegger",
+      "livre-arbítrio"
     ],
     "layer": "ontologica"
   },
@@ -2957,7 +3221,9 @@
       "formalização",
       "fundamentos",
       "limite",
-      "matemática"
+      "matemática",
+      "determinismo",
+      "teoria-categorias"
     ],
     "layer": "fundacional"
   },
@@ -2986,7 +3252,9 @@
       "governança",
       "imaginário",
       "poder",
-      "pratica"
+      "pratica",
+      "apropriação",
+      "quilombo"
     ],
     "layer": "politica"
   },
@@ -2998,7 +3266,9 @@
       "commons",
       "filosofia africana",
       "reciprocidade",
-      "ubuntu"
+      "ubuntu",
+      "liderança",
+      "programação"
     ],
     "layer": "pratica"
   },
@@ -3011,7 +3281,9 @@
       "educacaopopular",
       "liberdade",
       "pratica",
-      "autonomia"
+      "autonomia",
+      "alternativas",
+      "zona"
     ],
     "layer": "politica"
   },
@@ -3023,7 +3295,9 @@
       "assembleia",
       "autonomia",
       "descentralização",
-      "governança"
+      "governança",
+      "Kenya",
+      "rio"
     ],
     "layer": "pratica"
   },
@@ -3035,7 +3309,9 @@
       "conhecimento",
       "performatividade",
       "poder",
-      "tradução"
+      "tradução",
+      "icone",
+      "simbolo-semiotico"
     ],
     "layer": "epistemica"
   },
@@ -3047,7 +3323,9 @@
       "agencia",
       "determinismo",
       "liberdade",
-      "responsabilidade"
+      "responsabilidade",
+      "imaginário",
+      "Mitsein"
     ],
     "layer": "ontologica"
   },
@@ -3075,7 +3353,9 @@
       "placethought",
       "terra",
       "groundednormativity",
-      "heterotopia"
+      "heterotopia",
+      "consciência coletiva",
+      "encontro"
     ],
     "layer": "ontologica"
   },
@@ -3120,7 +3400,9 @@
       "Heidegger",
       "dasein",
       "intersubjetividade",
-      "ontologia"
+      "ontologia",
+      "livre-arbítrio",
+      "ordem"
     ],
     "layer": "ontologica"
   },
@@ -3133,7 +3415,9 @@
       "história",
       "imaginário",
       "performatividade",
-      "identidade"
+      "identidade",
+      "pedagogia",
+      "relatividade conceitual"
     ],
     "layer": "epistemica"
   },
@@ -3145,7 +3429,9 @@
       "comunidade",
       "direitos da natureza",
       "ecologia",
-      "multiespécies"
+      "multiespécies",
+      "evolução",
+      "vida"
     ],
     "layer": "ecologica"
   },
@@ -3190,7 +3476,9 @@
       "autopoiese",
       "caos",
       "emergência",
-      "processo"
+      "processo",
+      "Mitsein",
+      "política ontológica"
     ],
     "layer": "ontologica"
   },
@@ -3238,7 +3526,9 @@
       "educacaopopular",
       "pedagogiaautonomia",
       "pratica",
-      "transformação"
+      "transformação",
+      "narrativa",
+      "circuloscultura"
     ],
     "layer": "epistemica"
   },
@@ -3267,7 +3557,9 @@
       "direitos da natureza",
       "ontologia",
       "performatividade",
-      "política"
+      "política",
+      "ordem",
+      "subjetivação"
     ],
     "layer": "ontologica"
   },
@@ -3296,7 +3588,9 @@
       "protocoloaberto",
       "softwarelivre",
       "tecnologia",
-      "criptografia"
+      "criptografia",
+      "Kenya",
+      "aporia-transparencia"
     ],
     "layer": "pratica"
   },
@@ -3323,7 +3617,9 @@
       "ontologia",
       "realismo agencial",
       "Bell",
-      "intracao"
+      "intracao",
+      "física",
+      "repeticao"
     ],
     "layer": "fundacional"
   },
@@ -3336,7 +3632,8 @@
       "perdão",
       "ubuntu",
       "vulnerabilidade",
-      "commons"
+      "commons",
+      "reprodutibilidade"
     ],
     "layer": "etica"
   },
@@ -3366,7 +3663,9 @@
       "epistemologia",
       "ontologia",
       "equivocacao",
-      "traducao-cosmopolitica"
+      "traducao-cosmopolitica",
+      "narrativa",
+      "softwarelivre"
     ],
     "layer": "epistemica"
   },
@@ -3378,7 +3677,9 @@
       "ecologia",
       "sustentabilidade",
       "vulnerabilidade",
-      "threshold"
+      "threshold",
+      "evolução",
+      "nicho"
     ],
     "layer": "ecologica"
   },
@@ -3407,7 +3708,9 @@
       "cosmopolitica",
       "direitos da natureza",
       "personalidade jurídica",
-      "terra"
+      "terra",
+      "liderança",
+      "ecologia-praticas"
     ],
     "layer": "pratica"
   },
@@ -3486,7 +3789,9 @@
       "performatividade",
       "poder",
       "pratica",
-      "sujeito"
+      "sujeito",
+      "política ontológica",
+      "ori"
     ],
     "layer": "ontologica"
   },
@@ -3579,7 +3884,9 @@
       "conhecimento",
       "descolonização",
       "linguagem",
-      "poder"
+      "poder",
+      "verdade",
+      "aporia"
     ],
     "layer": "epistemica"
   },
@@ -3626,7 +3933,9 @@
       "conhecimento",
       "epistemologia",
       "evento",
-      "fidelidade"
+      "fidelidade",
+      "tradução",
+      "circulo-hermeneutico"
     ],
     "layer": "epistemica"
   },
@@ -3638,7 +3947,9 @@
       "autopoiese",
       "holobionte",
       "multiespécies",
-      "processo"
+      "processo",
+      "natureza",
+      "keystone"
     ],
     "layer": "ecologica"
   },
@@ -3651,7 +3962,9 @@
       "devir",
       "evento",
       "performatividade",
-      "tempo"
+      "tempo",
+      "estratostempo",
+      "pratica"
     ],
     "layer": "temporal"
   },
@@ -3806,7 +4119,9 @@
       "justiça",
       "memoriacoletiva",
       "reconciliação",
-      "responsabilidade"
+      "responsabilidade",
+      "cuidado-como-ontologia",
+      "cuidado"
     ],
     "layer": "etica"
   },
@@ -3819,7 +4134,9 @@
       "ontologia",
       "reciprocidade",
       "ubuntu",
-      "vulnerabilidade"
+      "vulnerabilidade",
+      "reparacao",
+      "ética"
     ],
     "layer": "etica"
   },
@@ -4066,7 +4383,9 @@
       "hibridação",
       "indigena",
       "liminaridade",
-      "traducao-cosmopolitica"
+      "traducao-cosmopolitica",
+      "caos",
+      "neurodiversidade"
     ],
     "layer": "ontologica"
   },
@@ -4114,7 +4433,9 @@
       "filosofia",
       "impossível",
       "limite",
-      "paradoxo"
+      "paradoxo",
+      "tradução",
+      "significado"
     ],
     "layer": "epistemica"
   },
@@ -4127,7 +4448,9 @@
       "fricção",
       "fronteira",
       "poder",
-      "traducao-cosmopolitica"
+      "traducao-cosmopolitica",
+      "libertação",
+      "resistencia-relacional"
     ],
     "layer": "politica"
   },
@@ -4158,7 +4481,9 @@
       "evento",
       "fricção",
       "intracao",
-      "zona"
+      "zona",
+      "lugar",
+      "axe"
     ],
     "layer": "ontologica"
   },
@@ -4412,7 +4737,9 @@
       "capitalismo",
       "devir",
       "poder",
-      "tempo"
+      "tempo",
+      "duração",
+      "hauntologia"
     ],
     "layer": "temporal"
   },
@@ -4444,7 +4771,9 @@
       "commons",
       "indigena",
       "reciprocidade",
-      "terra"
+      "terra",
+      "biodiversidade",
+      "gaia"
     ],
     "layer": "ecologica"
   },
@@ -4509,7 +4838,9 @@
       "natureza",
       "processo",
       "regeneracao",
-      "tecnologiaconvivial"
+      "tecnologiaconvivial",
+      "biodiversidade",
+      "umwelt"
     ],
     "layer": "ecologica"
   },
@@ -4540,7 +4871,9 @@
       "autonomia",
       "commons",
       "regeneracao",
-      "terra"
+      "terra",
+      "floresta",
+      "comensalismo"
     ],
     "layer": "ecologica"
   },
@@ -4636,7 +4969,9 @@
       "wahdat-al-wujud",
       "processo",
       "vazio",
-      "devir"
+      "devir",
+      "fact-nets",
+      "aporia-fundamentacao"
     ],
     "layer": "fundacional"
   },
@@ -4682,7 +5017,9 @@
       "sunyata",
       "recursao",
       "vazio",
-      "ontologia"
+      "ontologia",
+      "incompletude",
+      "aporia-universalizacao"
     ],
     "layer": "fundacional"
   },
@@ -4694,7 +5031,9 @@
       "vazio",
       "recursao",
       "ontologia",
-      "limite"
+      "limite",
+      "nafas-al-rahman",
+      "aporia-escala"
     ],
     "layer": "fundacional"
   },
@@ -4755,7 +5094,9 @@
       "recursao",
       "poder",
       "limite",
-      "auditoria-transparencia"
+      "auditoria-transparencia",
+      "programação",
+      "relacionalidade-sobrevivencia"
     ],
     "layer": "pratica"
   },
@@ -4781,7 +5122,10 @@
     "connections": [
       "recursao",
       "conhecimento",
-      "assembleia"
+      "assembleia",
+      "lebenswelt",
+      "whanaungatanga",
+      "circuloscultura"
     ],
     "layer": "epistemica"
   },
@@ -4841,7 +5185,10 @@
     "connections": [
       "conselho-setima-geracao",
       "tempo",
-      "assembleia"
+      "assembleia",
+      "periodicidade",
+      "devir-animal",
+      "devir-mulher"
     ],
     "layer": "temporal"
   },
@@ -4998,7 +5345,9 @@
       "desigualdade",
       "ecologia-praticas",
       "relacionalidade-sobrevivencia",
-      "relacionalidade-institucional"
+      "relacionalidade-institucional",
+      "duração",
+      "hauntologia"
     ],
     "layer": "temporal"
   },
@@ -5058,7 +5407,9 @@
       "capitalismo-vigilancia",
       "dataficacao",
       "extrativismo",
-      "produtos-predicao"
+      "produtos-predicao",
+      "constituição",
+      "hegemonia"
     ],
     "layer": "politica"
   },
@@ -5304,7 +5655,9 @@
       "relacionalidade-sobrevivencia",
       "relacionalidade-institucional",
       "relacionalidade-resistencia",
-      "solidariedade-horizontal"
+      "solidariedade-horizontal",
+      "rio",
+      "escala-intersticial"
     ],
     "layer": "pratica"
   },
@@ -5316,7 +5669,9 @@
       "ecologia-praticas",
       "pre-condicoes-materiais",
       "classe",
-      "reciprocidade"
+      "reciprocidade",
+      "aporia-transparencia",
+      "hypomnemata"
     ],
     "layer": "pratica"
   },
@@ -5359,7 +5714,9 @@
       "ontologia",
       "pre-condicoes-materiais",
       "classe",
-      "ecologia-praticas"
+      "ecologia-praticas",
+      "teoria-categorias",
+      "potencia"
     ],
     "layer": "fundacional"
   },
@@ -5372,7 +5729,9 @@
       "relacionalidade-sobrevivencia",
       "relacionalidade-institucional",
       "relacionalidade-resistencia",
-      "reciprocidade"
+      "reciprocidade",
+      "colaboração",
+      "transindividuacao"
     ],
     "layer": "pratica"
   },
@@ -5416,7 +5775,9 @@
       "escala-sistemica",
       "federalismo-subsidiario",
       "recursao",
-      "limite"
+      "limite",
+      "aporia-fundamentacao",
+      "nexus"
     ],
     "layer": "fundacional"
   },
@@ -5444,7 +5805,9 @@
       "assembleia",
       "comunidade",
       "federalismo-subsidiario",
-      "escala-regional"
+      "escala-regional",
+      "ecologia-praticas",
+      "cooperativa"
     ],
     "layer": "pratica"
   },
@@ -5597,7 +5960,10 @@
     "connections": [
       "aporia-transparencia",
       "transparencia-assimetrica",
-      "poder"
+      "poder",
+      "pharmakon",
+      "assembleia",
+      "tecnologiaconvivial"
     ],
     "layer": "pratica"
   },
@@ -5898,7 +6264,9 @@
       "economia",
       "constituição",
       "tajalli",
-      "redesmiceliais"
+      "redesmiceliais",
+      "mesticagem-ontologica",
+      "ase"
     ],
     "layer": "ontologica"
   },
@@ -5937,7 +6305,9 @@
       "autonomia",
       "poder",
       "micro-politica",
-      "linha-fuga"
+      "linha-fuga",
+      "zona",
+      "excecao"
     ],
     "layer": "politica"
   },
@@ -6023,7 +6393,9 @@
       "plano-imanencia",
       "ontologia",
       "vazio",
-      "processo"
+      "processo",
+      "Bell",
+      "intensidade"
     ],
     "layer": "fundacional"
   },
@@ -6344,7 +6716,9 @@
       "devir",
       "tempo",
       "intensidade",
-      "processo"
+      "processo",
+      "realismo",
+      "haecceidade"
     ],
     "layer": "fundacional"
   },
@@ -6357,7 +6731,9 @@
       "virtualidade",
       "atualizacao",
       "concrescence",
-      "plano-imanencia"
+      "plano-imanencia",
+      "imanencia",
+      "dobra"
     ],
     "layer": "fundacional"
   },
@@ -6370,7 +6746,9 @@
       "intensidade",
       "individuacao",
       "devir",
-      "plano-imanencia"
+      "plano-imanencia",
+      "repeticao",
+      "monada"
     ],
     "layer": "fundacional"
   },
@@ -6383,7 +6761,9 @@
       "plano-imanencia",
       "diferenca",
       "multiplicidade",
-      "virtualidade"
+      "virtualidade",
+      "intensidade",
+      "univocidade"
     ],
     "layer": "fundacional"
   },
@@ -6396,7 +6776,9 @@
       "perspectivismo",
       "diferenca",
       "multiplicidade",
-      "relacionalidade"
+      "relacionalidade",
+      "haecceidade",
+      "conatus"
     ],
     "layer": "fundacional"
   },
@@ -6409,7 +6791,9 @@
       "imanencia",
       "plano-imanencia",
       "ontologia",
-      "multiplicidade"
+      "multiplicidade",
+      "dobra",
+      "modi"
     ],
     "layer": "fundacional"
   },
@@ -6421,7 +6805,9 @@
       "conatus",
       "afeto",
       "imanencia",
-      "autonomia"
+      "autonomia",
+      "aporia-universalizacao",
+      "criatividade"
     ],
     "layer": "fundacional"
   },
@@ -6434,7 +6820,9 @@
       "afeto",
       "imanencia",
       "devir",
-      "processo"
+      "processo",
+      "monada",
+      "eternal-objects"
     ],
     "layer": "fundacional"
   },
@@ -6447,7 +6835,9 @@
       "potencia",
       "anatman",
       "multiplicidade",
-      "diferenca"
+      "diferenca",
+      "univocidade",
+      "pratityasamutpada"
     ],
     "layer": "fundacional"
   },
@@ -6459,7 +6849,9 @@
       "ocasioes",
       "processo",
       "concrescence",
-      "prehension"
+      "prehension",
+      "aporia-escala",
+      "extensao"
     ],
     "layer": "fundacional"
   },
@@ -6472,7 +6864,9 @@
       "processo",
       "virtualidade",
       "potencia",
-      "concrescence"
+      "concrescence",
+      "conatus",
+      "normatividade"
     ],
     "layer": "fundacional"
   },
@@ -6484,7 +6878,9 @@
       "processo",
       "concrescence",
       "devir",
-      "diferenca"
+      "diferenca",
+      "potencia",
+      "extensao"
     ],
     "layer": "fundacional"
   },
@@ -6496,7 +6892,9 @@
       "processo",
       "ocasioes",
       "nexus",
-      "concrescence"
+      "concrescence",
+      "criatividade",
+      "consistencia"
     ],
     "layer": "fundacional"
   },
@@ -6508,7 +6906,9 @@
       "concrescence",
       "ocasioes",
       "processo",
-      "criatividade"
+      "criatividade",
+      "extensao",
+      "differance"
     ],
     "layer": "fundacional"
   },
@@ -6521,7 +6921,9 @@
       "clima",
       "ecologia",
       "holobionte",
-      "simbiose"
+      "simbiose",
+      "soberania-alimentar",
+      "micorriza"
     ],
     "layer": "ecologica"
   },
@@ -6534,7 +6936,9 @@
       "multiespécies",
       "corporificacao",
       "lugar",
-      "ontologia"
+      "ontologia",
+      "biomimetica",
+      "ecologia"
     ],
     "layer": "ecologica"
   },
@@ -6546,7 +6950,9 @@
       "umwelt",
       "autopoiese",
       "enacao",
-      "ecologia"
+      "ecologia",
+      "resiliência",
+      "edge-effect"
     ],
     "layer": "ecologica"
   },
@@ -6558,7 +6964,9 @@
       "cascata-trofica",
       "ecologia",
       "biodiversidade",
-      "redes"
+      "redes",
+      "vida",
+      "facilitacao"
     ],
     "layer": "ecologica"
   },
@@ -6569,7 +6977,10 @@
     "connections": [
       "keystone",
       "ecologia",
-      "redes"
+      "redes",
+      "climax",
+      "simbiose",
+      "micorriza"
     ],
     "layer": "ecologica"
   },
@@ -6581,7 +6992,9 @@
       "limite",
       "heterotopia",
       "biodiversidade",
-      "ecologia"
+      "ecologia",
+      "nicho",
+      "sucessao-primaria"
     ],
     "layer": "ecologica"
   },
@@ -6593,7 +7006,9 @@
       "simbiose",
       "ecologia",
       "reciprocidade",
-      "ajuda-mutua"
+      "ajuda-mutua",
+      "keystone",
+      "holobionte"
     ],
     "layer": "ecologica"
   },
@@ -6606,7 +7021,9 @@
       "facilitacao",
       "ecologia",
       "multiespécies",
-      "reciprocidade"
+      "reciprocidade",
+      "permacultura",
+      "espécies companheiras"
     ],
     "layer": "ecologica"
   },
@@ -6618,7 +7035,9 @@
       "devir",
       "diferenca",
       "multiplicidade",
-      "linha-fuga"
+      "linha-fuga",
+      "espaço-tempo",
+      "aeternitas"
     ],
     "layer": "temporal"
   },
@@ -6630,7 +7049,9 @@
       "tempo",
       "heterotopia",
       "narrativa",
-      "diferenca"
+      "diferenca",
+      "história",
+      "sincronia-diacronia"
     ],
     "layer": "temporal"
   },
@@ -6642,7 +7063,9 @@
       "tempo",
       "aion",
       "imanencia",
-      "virtualidade"
+      "virtualidade",
+      "devir-menor",
+      "presentismo"
     ],
     "layer": "temporal"
   },
@@ -6653,7 +7076,10 @@
     "connections": [
       "tempo",
       "repeticao",
-      "processo"
+      "processo",
+      "supermajoria-temporal",
+      "ucronia",
+      "ocasioes"
     ],
     "layer": "temporal"
   },
@@ -6665,7 +7091,9 @@
       "tempo",
       "processo",
       "linguagem",
-      "significante"
+      "significante",
+      "cronotopo",
+      "perdurantismo"
     ],
     "layer": "temporal"
   },
@@ -6676,7 +7104,10 @@
     "connections": [
       "ubuntu",
       "quilombo",
-      "reciprocidade"
+      "reciprocidade",
+      "placethought",
+      "afeto",
+      "composicao"
     ],
     "layer": "ontologica"
   },
@@ -6688,7 +7119,9 @@
       "ujima",
       "ubuntu",
       "autonomia",
-      "prefiguracao"
+      "prefiguracao",
+      "instituição",
+      "biopolitica"
     ],
     "layer": "politica"
   },
@@ -6701,7 +7134,9 @@
       "ubuntu",
       "potencia",
       "relacionalidade",
-      "processo"
+      "processo",
+      "encontro",
+      "placethought"
     ],
     "layer": "ontologica"
   },
@@ -6714,7 +7149,9 @@
       "quilombo",
       "lugar",
       "comunidade",
-      "corporificacao"
+      "corporificacao",
+      "colaboração",
+      "retencao-primaria"
     ],
     "layer": "pratica"
   },
@@ -6725,7 +7162,10 @@
     "connections": [
       "axe",
       "limite",
-      "devir"
+      "devir",
+      "harambee",
+      "placethought",
+      "composicao"
     ],
     "layer": "ontologica"
   },
@@ -6737,7 +7177,9 @@
       "axe",
       "individuacao",
       "anatman",
-      "relacionalidade"
+      "relacionalidade",
+      "subjetivação",
+      "performatividade"
     ],
     "layer": "ontologica"
   },
@@ -6748,7 +7190,10 @@
     "connections": [
       "falibilismo",
       "criatividade",
-      "conhecimento"
+      "conhecimento",
+      "lebenswelt",
+      "circuloscultura",
+      "softwarelivre"
     ],
     "layer": "epistemica"
   },
@@ -6759,7 +7204,10 @@
     "connections": [
       "abducao",
       "pragmatismo",
-      "verdade"
+      "verdade",
+      "lebenswelt",
+      "circuloscultura",
+      "softwarelivre"
     ],
     "layer": "epistemica"
   },
@@ -6770,7 +7218,10 @@
     "connections": [
       "linguagem",
       "conhecimento",
-      "circulo-hermeneutico"
+      "circulo-hermeneutico",
+      "lebenswelt",
+      "educacaopopular",
+      "pedagogiaautonomia"
     ],
     "layer": "epistemica"
   },
@@ -6782,7 +7233,9 @@
       "hermeneutica",
       "recursao",
       "linguagem",
-      "tempo"
+      "tempo",
+      "verdade",
+      "maieutica"
     ],
     "layer": "epistemica"
   },
@@ -6793,7 +7246,10 @@
     "connections": [
       "lebenswelt",
       "reducao-eidetica",
-      "conhecimento"
+      "conhecimento",
+      "performativo",
+      "pedagogiaautonomia",
+      "desescolarizacao"
     ],
     "layer": "epistemica"
   },
@@ -6803,7 +7259,11 @@
     "description": "Mundo da vida pré-científico - horizonte de toda experiência. Ciência pressupõe Lebenswelt mas o esquece. Retorno ao solo pré-teórico.",
     "connections": [
       "corporificacao",
-      "conhecimento"
+      "conhecimento",
+      "aporia-expertise",
+      "abducao",
+      "falibilismo",
+      "hermeneutica"
     ],
     "layer": "epistemica"
   },
@@ -6814,7 +7274,10 @@
     "connections": [
       "incomensurabilidade",
       "ontologia",
-      "conhecimento"
+      "conhecimento",
+      "performativo",
+      "pedagogiaautonomia",
+      "desescolarizacao"
     ],
     "layer": "epistemica"
   },
@@ -6825,7 +7288,10 @@
     "connections": [
       "paradigma",
       "perspectivismo",
-      "ontologia"
+      "ontologia",
+      "performativo",
+      "crítica",
+      "epistemologia"
     ],
     "layer": "epistemica"
   },
@@ -6836,7 +7302,10 @@
     "connections": [
       "pluralismo",
       "incomensurabilidade",
-      "autonomia"
+      "autonomia",
+      "performativo",
+      "crítica",
+      "epistemologia"
     ],
     "layer": "epistemica"
   },
@@ -6847,7 +7316,10 @@
     "connections": [
       "paradigma",
       "falibilismo",
-      "conhecimento"
+      "conhecimento",
+      "trace",
+      "crítica",
+      "epistemologia"
     ],
     "layer": "epistemica"
   },
@@ -6858,7 +7330,10 @@
     "connections": [
       "corporificacao",
       "pratica",
-      "enacao"
+      "enacao",
+      "trace",
+      "crítica",
+      "epistemologia"
     ],
     "layer": "epistemica"
   },
@@ -6870,7 +7345,9 @@
       "poder",
       "macro-politica",
       "consenso",
-      "guerra-posicao"
+      "guerra-posicao",
+      "excedente-comportamental",
+      "imperio"
     ],
     "layer": "politica"
   },
@@ -6882,7 +7359,9 @@
       "poder",
       "governamentalidade",
       "disciplina",
-      "vida"
+      "vida",
+      "quilombo",
+      "micro-politica"
     ],
     "layer": "politica"
   },
@@ -6895,7 +7374,9 @@
       "biopolitica",
       "necropolitica",
       "poder",
-      "vida-nua"
+      "vida-nua",
+      "resistencia-relacional",
+      "contra-poder"
     ],
     "layer": "politica"
   },
@@ -6906,7 +7387,10 @@
     "connections": [
       "excecao",
       "biopolitica",
-      "soberania"
+      "soberania",
+      "panoptico",
+      "governança",
+      "política"
     ],
     "layer": "politica"
   },
@@ -6917,7 +7401,10 @@
     "connections": [
       "multiplicidade",
       "diferenca",
-      "autonomia"
+      "autonomia",
+      "panoptico",
+      "direitos da natureza",
+      "economia"
     ],
     "layer": "politica"
   },
@@ -6929,7 +7416,9 @@
       "multidao",
       "poder",
       "redes",
-      "soberania"
+      "soberania",
+      "hegemonia",
+      "acumulacaoprimitiva"
     ],
     "layer": "politica"
   },
@@ -6940,7 +7429,10 @@
     "connections": [
       "biopolitica",
       "poder",
-      "disciplina"
+      "disciplina",
+      "panoptico",
+      "direitos da natureza",
+      "economia"
     ],
     "layer": "politica"
   },
@@ -6951,7 +7443,10 @@
     "connections": [
       "biopolitica",
       "governamentalidade",
-      "poder"
+      "poder",
+      "industria-cultural",
+      "direitos da natureza",
+      "economia"
     ],
     "layer": "politica"
   },
@@ -6961,7 +7456,11 @@
     "description": "Arquitetura de vigilância - ver sem ser visto. Interiorização da vigilância - sujeito vigia a si mesmo. Diagrama de poder moderno.",
     "connections": [
       "disciplina",
-      "poder"
+      "poder",
+      "vida-nua",
+      "multidao",
+      "governamentalidade",
+      "molecular-molar"
     ],
     "layer": "politica"
   },
@@ -6972,7 +7471,10 @@
     "connections": [
       "diferenca",
       "intensidade",
-      "micro-politica"
+      "micro-politica",
+      "panoptico",
+      "descolonização",
+      "poder"
     ],
     "layer": "politica"
   },
@@ -6984,7 +7486,9 @@
       "molecular-molar",
       "prefiguracao",
       "afeto",
-      "autonomia"
+      "autonomia",
+      "biopolitica",
+      "despossessao"
     ],
     "layer": "politica"
   },
@@ -6995,7 +7499,10 @@
     "connections": [
       "hegemonia",
       "prefiguracao",
-      "poder"
+      "poder",
+      "industria-cultural",
+      "descolonização",
+      "ressurgência"
     ],
     "layer": "politica"
   },
@@ -7006,7 +7513,10 @@
     "connections": [
       "vontade-potencia",
       "ma-consciencia",
-      "poder"
+      "poder",
+      "imperativo-categorico",
+      "bancostempo",
+      "cuidado"
     ],
     "layer": "etica"
   },
@@ -7018,7 +7528,9 @@
       "ressentimento",
       "potencia",
       "devir",
-      "criatividade"
+      "criatividade",
+      "eterno-retorno",
+      "piedade"
     ],
     "layer": "etica"
   },
@@ -7030,7 +7542,9 @@
       "vontade-potencia",
       "tempo",
       "repeticao",
-      "amor-fati"
+      "amor-fati",
+      "compaixao",
+      "amizade-politica"
     ],
     "layer": "etica"
   },
@@ -7041,7 +7555,10 @@
     "connections": [
       "eterno-retorno",
       "vontade-potencia",
-      "vida"
+      "vida",
+      "imperativo-categorico",
+      "bancostempo",
+      "ética"
     ],
     "layer": "etica"
   },
@@ -7052,7 +7569,10 @@
     "connections": [
       "verdade",
       "cuidado-si",
-      "liberdade"
+      "liberdade",
+      "imperativo-categorico",
+      "ética",
+      "justiça"
     ],
     "layer": "etica"
   },
@@ -7063,7 +7583,10 @@
     "connections": [
       "parrhesia",
       "liberdade",
-      "pratica"
+      "pratica",
+      "imperativo-categorico",
+      "ética",
+      "justiça"
     ],
     "layer": "etica"
   },
@@ -7073,7 +7596,11 @@
     "description": "Age segundo máxima que possas querer como lei universal. Autonomia da razão prática. Trata humanidade como fim, nunca apenas como meio. Ética formal, não material.",
     "connections": [
       "autonomia",
-      "responsabilidade"
+      "responsabilidade",
+      "ressentimento",
+      "amor-fati",
+      "parrhesia",
+      "cuidado-si"
     ],
     "layer": "etica"
   },
@@ -7083,7 +7610,11 @@
     "description": "Ética do caráter, não de regras. Virtude como meio-termo entre extremos. Phronesis (sabedoria prática) para julgar situações. Eudaimonia como florescimento.",
     "connections": [
       "phronesis",
-      "pratica"
+      "pratica",
+      "sublime",
+      "dissensao",
+      "aura",
+      "alegoria"
     ],
     "layer": "etica"
   },
@@ -7093,7 +7624,11 @@
     "description": "Prudência - saber o que fazer em situação particular. Não é episteme (ciência) nem techne (técnica). Deliberação sobre bem viver. Inteligência situacional.",
     "connections": [
       "etica-virtude",
-      "pratica"
+      "pratica",
+      "dissensao",
+      "aura",
+      "alegoria",
+      "choque"
     ],
     "layer": "etica"
   },
@@ -7103,7 +7638,11 @@
     "description": "Remédio e veneno simultaneamente. Escrita para Platão, técnica para Stiegler. Ambivalência constitutiva da tecnologia. Não há solução técnica - toda técnica é problema.",
     "connections": [
       "tecnologia",
-      "grammatizacao"
+      "grammatizacao",
+      "crédito mútuo",
+      "auditoria-transparencia",
+      "protensao",
+      "retencao"
     ],
     "layer": "pratica"
   },
@@ -7113,7 +7652,11 @@
     "description": "Discretização de fluxos contínuos - escrita, notação musical, código digital. Técnica de reprodução que transforma processo em produto. Proletarização do saber.",
     "connections": [
       "pharmakon",
-      "tecnologia"
+      "tecnologia",
+      "organologia",
+      "proletarizacao",
+      "tecnicidade",
+      "algoritmo"
     ],
     "layer": "pratica"
   },
@@ -7124,7 +7667,10 @@
     "connections": [
       "tempo",
       "retencao",
-      "tecnologia"
+      "tecnologia",
+      "pharmakon",
+      "moedascomunitarias",
+      "arterelacional"
     ],
     "layer": "pratica"
   },
@@ -7135,7 +7681,10 @@
     "connections": [
       "protensao",
       "tempo",
-      "tecnologia"
+      "tecnologia",
+      "pharmakon",
+      "arterelacional",
+      "Rojava"
     ],
     "layer": "pratica"
   },
@@ -7145,7 +7694,11 @@
     "description": "Co-evolução de órgãos fisiológicos, técnicos e sociais. Não há humano sem técnica. Órgãos técnicos externalizam funções biológicas. Antropogênese é tecnogênese.",
     "connections": [
       "tecnologia",
-      "corporificacao"
+      "corporificacao",
+      "grammatizacao",
+      "proletarizacao",
+      "tecnicidade",
+      "blockchain"
     ],
     "layer": "pratica"
   },
@@ -7155,7 +7708,11 @@
     "description": "Perda de saber-fazer (proletarização de produtores), saber-viver (consumidores), saber-pensar (espírito). Grammatização separa saber de executor. Contra-tendência: contribuição.",
     "connections": [
       "grammatizacao",
-      "tecnologia"
+      "tecnologia",
+      "organologia",
+      "retencao-secundaria",
+      "mnemotecnica",
+      "assembleia"
     ],
     "layer": "pratica"
   },
@@ -7165,7 +7722,11 @@
     "description": "Modo de ser próprio do objeto técnico. Não é instrumentalidade - é concretização. Objeto técnico evolui para coerência interna. Convergência de funções.",
     "connections": [
       "tecnologia",
-      "individuacao"
+      "individuacao",
+      "grammatizacao",
+      "organologia",
+      "assembleia",
+      "tecnologiaconvivial"
     ],
     "layer": "pratica"
   },
@@ -7176,7 +7737,10 @@
     "connections": [
       "tecnologia",
       "poder",
-      "governamentalidade"
+      "governamentalidade",
+      "grammatizacao",
+      "Rojava",
+      "autogestão"
     ],
     "layer": "pratica"
   },
@@ -7187,7 +7751,10 @@
     "connections": [
       "tecnologia",
       "criptografia",
-      "autonomia"
+      "autonomia",
+      "organologia",
+      "Rojava",
+      "barcelona"
     ],
     "layer": "pratica"
   },
@@ -7198,7 +7765,10 @@
     "connections": [
       "significado",
       "signo",
-      "linguagem"
+      "linguagem",
+      "trace",
+      "epistemologia",
+      "whakapapa"
     ],
     "layer": "epistemica"
   },
@@ -7210,7 +7780,9 @@
       "significante",
       "signo",
       "linguagem",
-      "diferenca"
+      "diferenca",
+      "aporia",
+      "palavra-ordem"
     ],
     "layer": "epistemica"
   },
@@ -7221,7 +7793,10 @@
     "connections": [
       "significante",
       "significado",
-      "linguagem"
+      "linguagem",
+      "reducao-eidetica",
+      "whakapapa",
+      "compartilhamento"
     ],
     "layer": "epistemica"
   },
@@ -7232,7 +7807,10 @@
     "connections": [
       "signo",
       "significante",
-      "multiplicidade"
+      "multiplicidade",
+      "trace",
+      "whakapapa",
+      "compartilhamento"
     ],
     "layer": "epistemica"
   },
@@ -7242,7 +7820,11 @@
     "description": "Enunciado que faz ao dizer - não descreve, executa. 'Eu prometo', 'declaro aberta'. Condições de felicidade vs verdade. Linguagem como ação.",
     "connections": [
       "linguagem",
-      "poder"
+      "poder",
+      "epoché",
+      "paradigma",
+      "incomensurabilidade",
+      "anarquismo-epistemologico"
     ],
     "layer": "epistemica"
   },
@@ -7253,7 +7835,10 @@
     "connections": [
       "differance",
       "linguagem",
-      "pharmakon"
+      "pharmakon",
+      "reducao-eidetica",
+      "whakapapa",
+      "compartilhamento"
     ],
     "layer": "epistemica"
   },
@@ -7265,7 +7850,9 @@
       "diferenca",
       "tempo",
       "gramatologia",
-      "signo"
+      "signo",
+      "consistencia",
+      "neguentropia"
     ],
     "layer": "fundacional"
   },
@@ -7275,7 +7862,11 @@
     "description": "Marca de ausência - presença do ausente. Signo sempre remete a outro signo - nunca presença plena. Economia do rastro contra metafísica da presença.",
     "connections": [
       "differance",
-      "signo"
+      "signo",
+      "programa-investigacao",
+      "tacit-knowledge",
+      "significante",
+      "regime-signos"
     ],
     "layer": "epistemica"
   },
@@ -7286,7 +7877,10 @@
     "connections": [
       "limite",
       "estranhamento",
-      "sensivel"
+      "sensivel",
+      "etica-virtude",
+      "ética",
+      "responsabilidade"
     ],
     "layer": "etica"
   },
@@ -7296,7 +7890,11 @@
     "description": "Dissenso não é desacordo - é reconfiguração do sensível. Política começa quando parte que não tem parte fala. Partilha do sensível - quem pode ser visto/ouvido.",
     "connections": [
       "poder",
-      "prefiguracao"
+      "prefiguracao",
+      "etica-virtude",
+      "phronesis",
+      "mimesis",
+      "ma-consciencia"
     ],
     "layer": "etica"
   },
@@ -7306,7 +7904,11 @@
     "description": "Autenticidade da obra de arte - aqui e agora único. Reprodução técnica destrói aura. Perda da aura democratiza ou empobrece? Ambivalência política da técnica.",
     "connections": [
       "tecnologia",
-      "pharmakon"
+      "pharmakon",
+      "etica-virtude",
+      "phronesis",
+      "mimesis",
+      "ma-consciencia"
     ],
     "layer": "etica"
   },
@@ -7316,7 +7918,11 @@
     "description": "Símbolo quebrado - ruínas de significado. Não é símbolo orgânico - é fragmento. Drama barroco como alegoria da história. Melancolia vs símbolo romântico.",
     "connections": [
       "tempo",
-      "narrativa"
+      "narrativa",
+      "etica-virtude",
+      "phronesis",
+      "crueldade",
+      "inimizade"
     ],
     "layer": "etica"
   },
@@ -7327,7 +7933,10 @@
     "connections": [
       "tecnologia",
       "estranhamento",
-      "devir"
+      "devir",
+      "phronesis",
+      "responsabilidade",
+      "liberdade"
     ],
     "layer": "etica"
   },
@@ -7338,7 +7947,10 @@
     "connections": [
       "verdade",
       "conhecimento",
-      "multiplicidade"
+      "multiplicidade",
+      "reducao-eidetica",
+      "diálogo",
+      "formalização"
     ],
     "layer": "epistemica"
   },
@@ -7348,7 +7960,11 @@
     "description": "Não é imitação - é afinidade não-conceitual. Arte como conhecimento mimético. Ratio instrumental reprime mimesis. Reconciliação não-dominadora com natureza.",
     "connections": [
       "natureza",
-      "conhecimento"
+      "conhecimento",
+      "dissensao",
+      "aura",
+      "inimizade",
+      "hospitalidade-absoluta"
     ],
     "layer": "etica"
   },
@@ -7358,7 +7974,11 @@
     "description": "Produção industrial de cultura - padronização, pseudo-individualização. Não é cultura popular - é cultura de massas produzida de cima. Iluminismo como dominação.",
     "connections": [
       "poder",
-      "capitalismo"
+      "capitalismo",
+      "disciplina",
+      "guerra-posicao",
+      "macro-politica",
+      "destituicao"
     ],
     "layer": "politica"
   },
@@ -7369,7 +7989,10 @@
     "connections": [
       "paradoxo",
       "incompletude",
-      "limite"
+      "limite",
+      "paraconsistencia",
+      "sunyata",
+      "anatman"
     ],
     "layer": "fundacional"
   },
@@ -7380,7 +8003,10 @@
     "connections": [
       "incompletude",
       "limite",
-      "paradoxo"
+      "paradoxo",
+      "paraconsistencia",
+      "sunyata",
+      "anatman"
     ],
     "layer": "fundacional"
   },
@@ -7390,7 +8016,11 @@
     "description": "Lógica que tolera contradições sem trivializar. Contradição não implica tudo (ex contradictione sequitur quodlibet). Lógicas não-clássicas brasileiras.",
     "connections": [
       "consistencia",
-      "limite"
+      "limite",
+      "paradoxo-mentiroso",
+      "indecidibilidade",
+      "vagueza",
+      "conjunto-fuzzy"
     ],
     "layer": "fundacional"
   },
@@ -7400,7 +8030,11 @@
     "description": "Predicados sem fronteiras precisas. Um grão não faz monte - quando começa? Lógica fuzzy vs epistemicismo vs supervaloracionismo. Limites imprecisos.",
     "connections": [
       "limite",
-      "linguagem"
+      "linguagem",
+      "paraconsistencia",
+      "conjunto-fuzzy",
+      "entropia",
+      "atrator"
     ],
     "layer": "fundacional"
   },
@@ -7410,7 +8044,11 @@
     "description": "Pertinência gradual - não binária. Elemento pertence com grau 0 a 1. Lógica de vagueza. Aplicação em controle, IA, decisão.",
     "connections": [
       "vagueza",
-      "ontologia"
+      "ontologia",
+      "paraconsistencia",
+      "atrator",
+      "fractal",
+      "renormalizacao"
     ],
     "layer": "fundacional"
   },
@@ -7421,7 +8059,10 @@
     "connections": [
       "tempo",
       "ordem",
-      "irreversibilidade"
+      "irreversibilidade",
+      "vagueza",
+      "anatman",
+      "pratityasamutpada"
     ],
     "layer": "fundacional"
   },
@@ -7431,7 +8072,11 @@
     "description": "Estado para qual sistema dinâmico tende. Ponto fixo, ciclo limite, atrator estranho (caótico). Bacia de atração - região que converge. Estabilidade dinâmica.",
     "connections": [
       "caos",
-      "processo"
+      "processo",
+      "vagueza",
+      "conjunto-fuzzy",
+      "fractal",
+      "renormalizacao"
     ],
     "layer": "fundacional"
   },
@@ -7441,7 +8086,11 @@
     "description": "Auto-similaridade em diferentes escalas. Dimensão não-inteira. Costa tem dimensão ~1.26. Mandelbrot: geometria da natureza. Complexidade em simplicidade.",
     "connections": [
       "escala",
-      "recursao"
+      "recursao",
+      "conjunto-fuzzy",
+      "atrator",
+      "topos",
+      "funtor"
     ],
     "layer": "fundacional"
   },
@@ -7451,7 +8100,11 @@
     "description": "Técnica para lidar com infinitos em teoria quântica de campos. Mudança de escala revela estrutura. Grupo de renormalização - simetria de escala. Universalidade de transições de fase.",
     "connections": [
       "escala",
-      "processo"
+      "processo",
+      "conjunto-fuzzy",
+      "atrator",
+      "topos",
+      "funtor"
     ],
     "layer": "fundacional"
   },
@@ -7462,7 +8115,10 @@
     "connections": [
       "devir",
       "devir-menor",
-      "multiplicidade"
+      "multiplicidade",
+      "supermajoria-temporal",
+      "ocasioes",
+      "ressurgencia"
     ],
     "layer": "temporal"
   },
@@ -7473,7 +8129,10 @@
     "connections": [
       "devir",
       "devir-menor",
-      "molecular-molar"
+      "molecular-molar",
+      "supermajoria-temporal",
+      "ressurgencia",
+      "hauntologia"
     ],
     "layer": "temporal"
   },
@@ -7484,7 +8143,10 @@
     "connections": [
       "tempo",
       "virtualidade",
-      "heterocronia"
+      "heterocronia",
+      "periodicidade",
+      "hauntologia",
+      "setimagera"
     ],
     "layer": "temporal"
   },
@@ -7496,7 +8158,9 @@
       "tempo",
       "aion",
       "ontologia",
-      "perdurantismo"
+      "perdurantismo",
+      "aeternitas",
+      "ocasioes"
     ],
     "layer": "temporal"
   },
@@ -7508,7 +8172,9 @@
       "tempo",
       "presentismo",
       "ontologia",
-      "processo"
+      "processo",
+      "sincronia-diacronia",
+      "ressurgencia"
     ],
     "layer": "temporal"
   },
@@ -7518,7 +8184,11 @@
     "description": "Swahili: 'todos juntos'. Mobilização coletiva, esforço comunitário. Lema do Quênia pós-independência. Trabalho cooperativo não-hierárquico.",
     "connections": [
       "ujima",
-      "ubuntu"
+      "ubuntu",
+      "encruzilhada",
+      "egbe",
+      "performatividade",
+      "placethought"
     ],
     "layer": "ontologica"
   },
@@ -7529,7 +8199,10 @@
     "connections": [
       "ori",
       "axe",
-      "ubuntu"
+      "ubuntu",
+      "harambee",
+      "composicao",
+      "corposemorgaos"
     ],
     "layer": "ontologica"
   },
@@ -7542,7 +8215,9 @@
       "performativo",
       "potencia",
       "ori",
-      "ubuntu"
+      "ubuntu",
+      "neurodiversidade",
+      "afeto"
     ],
     "layer": "ontologica"
   },
@@ -7553,7 +8228,10 @@
     "connections": [
       "performativo",
       "linguagem",
-      "palavra-ordem"
+      "palavra-ordem",
+      "reducao-eidetica",
+      "diálogo",
+      "formalização"
     ],
     "layer": "epistemica"
   },
@@ -7563,7 +8241,11 @@
     "description": "Método fenomenológico - redução ao eidos (essência). Da facticidade à possibilidade essencial. Variação imaginativa para captar invariante.",
     "connections": [
       "epoché",
-      "conhecimento"
+      "conhecimento",
+      "signo",
+      "gramatologia",
+      "constelacao",
+      "pragmatica"
     ],
     "layer": "epistemica"
   },
@@ -7573,7 +8255,11 @@
     "description": "Conhecimento imediato da duração - não espacializante. Simpatia que nos transporta ao interior. Contra inteligência que espacializa.",
     "connections": [
       "tempo",
-      "inteligencia-bergson"
+      "inteligencia-bergson",
+      "dialectica",
+      "apophasis",
+      "cataphasis",
+      "indice-semiotico"
     ],
     "layer": "epistemica"
   },
@@ -7584,7 +8270,10 @@
     "connections": [
       "intuicao-bergson",
       "tempo",
-      "pragmatismo"
+      "pragmatismo",
+      "dialectica",
+      "diálogo",
+      "formalização"
     ],
     "layer": "epistemica"
   },
@@ -7596,7 +8285,9 @@
       "pedagogia",
       "autonomia",
       "dialectica",
-      "devir"
+      "devir",
+      "circulo-hermeneutico",
+      "groundednormativity"
     ],
     "layer": "epistemica"
   },
@@ -7606,7 +8297,11 @@
     "description": "Movimento de tese-antítese-síntese (Hegel). Contradição produtiva. Negação da negação. Aufhebung - superar conservando.",
     "connections": [
       "processo",
-      "maieutica"
+      "maieutica",
+      "intuicao-bergson",
+      "inteligencia-bergson",
+      "cataphasis",
+      "icone"
     ],
     "layer": "epistemica"
   },
@@ -7617,7 +8312,10 @@
     "connections": [
       "limite",
       "linguagem",
-      "cataphasis"
+      "cataphasis",
+      "intuicao-bergson",
+      "diálogo",
+      "formalização"
     ],
     "layer": "epistemica"
   },
@@ -7627,7 +8325,11 @@
     "description": "Dizer Deus por afirmação - belo, bom, ser. Via positiva. Complementar à apophasis. Tensão entre dizer e não-dizer.",
     "connections": [
       "apophasis",
-      "linguagem"
+      "linguagem",
+      "intuicao-bergson",
+      "dialectica",
+      "simbolo-semiotico",
+      "whanaungatanga"
     ],
     "layer": "epistemica"
   },
@@ -7639,7 +8341,9 @@
       "tempo",
       "facilitacao",
       "climax",
-      "devir"
+      "devir",
+      "edge-effect",
+      "simbiose"
     ],
     "layer": "ecologica"
   },
@@ -7650,7 +8354,10 @@
     "connections": [
       "sucessao-primaria",
       "sucessao-ecologica",
-      "processo"
+      "processo",
+      "cascata-trofica",
+      "simbiose",
+      "micorriza"
     ],
     "layer": "ecologica"
   },
@@ -7661,7 +8368,10 @@
     "connections": [
       "micro-politica",
       "molecular-molar",
-      "poder"
+      "poder",
+      "industria-cultural",
+      "descolonização",
+      "ressurgência"
     ],
     "layer": "politica"
   },
@@ -7674,7 +8384,9 @@
       "autonomia",
       "prefiguracao",
       "micro-politica",
-      "destituicao"
+      "destituicao",
+      "excecao",
+      "soberania-popular"
     ],
     "layer": "politica"
   },
@@ -7685,7 +8397,10 @@
     "connections": [
       "potencia",
       "contra-poder",
-      "poder"
+      "poder",
+      "industria-cultural",
+      "ressurgência",
+      "propriedade"
     ],
     "layer": "politica"
   },
@@ -7698,7 +8413,9 @@
       "multidao",
       "poder",
       "potencia",
-      "democracia"
+      "democracia",
+      "contra-poder",
+      "linha-fuga"
     ],
     "layer": "politica"
   },
@@ -7709,7 +8426,10 @@
     "connections": [
       "micro-politica",
       "molecular-molar",
-      "linha-fuga"
+      "linha-fuga",
+      "maquina-guerra",
+      "poder",
+      "ressurgência"
     ],
     "layer": "politica"
   },
@@ -7722,7 +8442,9 @@
       "molecular-molar",
       "resistencia-molecular",
       "maquina-guerra",
-      "aparelho-captura"
+      "aparelho-captura",
+      "soberania-popular",
+      "reproducaosocial"
     ],
     "layer": "politica"
   },
@@ -7732,7 +8454,11 @@
     "description": "Exterioridade ao Estado - não nasce dele. Nômade vs sedentário. Estado captura máquina de guerra e a torna militar. Devir contra ser.",
     "connections": [
       "aparelho-captura",
-      "linha-fuga"
+      "linha-fuga",
+      "resistencia-molecular",
+      "acumulacaoprimitiva",
+      "reproducaosocial",
+      "necropolitica"
     ],
     "layer": "politica"
   },
@@ -7742,7 +8468,11 @@
     "description": "Estado como máquina que captura fluxos - terra, trabalho, moeda. Estriamento contra espaço liso. Sobrecodificação contra código nômade.",
     "connections": [
       "maquina-guerra",
-      "linha-fuga"
+      "linha-fuga",
+      "acumulacaoprimitiva",
+      "reproducaosocial",
+      "governança",
+      "política"
     ],
     "layer": "politica"
   },
@@ -7755,7 +8485,9 @@
       "individuacao",
       "tecnologia",
       "organologia",
-      "retencao-terciaria"
+      "retencao-terciaria",
+      "solidariedade-horizontal",
+      "tecnologiaconvivial"
     ],
     "layer": "pratica"
   },
@@ -7783,7 +8515,9 @@
       "protensao",
       "tempo",
       "retencao-secundaria",
-      "retencao-terciaria"
+      "retencao-terciaria",
+      "terreiro",
+      "moedascomunitarias"
     ],
     "layer": "pratica"
   },
@@ -7794,7 +8528,10 @@
     "connections": [
       "retencao-primaria",
       "retencao-terciaria",
-      "tempo"
+      "tempo",
+      "proletarizacao",
+      "tecnologia",
+      "Rojava"
     ],
     "layer": "pratica"
   },
@@ -7805,7 +8542,10 @@
     "connections": [
       "hypomnemata",
       "tecnologia",
-      "retencao-terciaria"
+      "retencao-terciaria",
+      "proletarizacao",
+      "barcelona",
+      "colaboração"
     ],
     "layer": "pratica"
   },
@@ -7817,7 +8557,9 @@
       "cuidado-si",
       "mnemotecnica",
       "tecnologia",
-      "retencao-terciaria"
+      "retencao-terciaria",
+      "relacionalidade-sobrevivencia",
+      "assembleia"
     ],
     "layer": "pratica"
   },
@@ -7827,7 +8569,11 @@
     "description": "Interiorização da crueldade - voltar contra si instinto de liberdade. Culpa, pecado. Origem da moralidade. Doença do animal tornado doméstico.",
     "connections": [
       "ressentimento",
-      "crueldade"
+      "crueldade",
+      "dissensao",
+      "aura",
+      "hospitalidade-absoluta",
+      "sensivel"
     ],
     "layer": "etica"
   },
@@ -7838,7 +8584,10 @@
     "connections": [
       "ma-consciencia",
       "devir",
-      "piedade"
+      "piedade",
+      "alegoria",
+      "responsabilidade",
+      "liberdade"
     ],
     "layer": "etica"
   },
@@ -7850,7 +8599,9 @@
       "compaixao",
       "ressentimento",
       "afeto",
-      "crueldade"
+      "crueldade",
+      "vontade-potencia",
+      "montagem"
     ],
     "layer": "etica"
   },
@@ -7862,7 +8613,9 @@
       "piedade",
       "afeto",
       "ubuntu",
-      "alteridade"
+      "alteridade",
+      "eterno-retorno",
+      "vulnerabilidade"
     ],
     "layer": "etica"
   },
@@ -7874,7 +8627,9 @@
       "comunidade",
       "afeto",
       "democracia",
-      "inimizade"
+      "inimizade",
+      "eterno-retorno",
+      "precariedade"
     ],
     "layer": "etica"
   },
@@ -7884,7 +8639,11 @@
     "description": "Constituição política pelo antagonismo. Schmitt: amigo-inimigo como distinção política. Mouffe: agonismo vs antagonismo.",
     "connections": [
       "amizade-politica",
-      "poder"
+      "poder",
+      "alegoria",
+      "mimesis",
+      "sensivel",
+      "regime-estetico"
     ],
     "layer": "etica"
   },
@@ -7894,7 +8653,11 @@
     "description": "Acolher sem condições - sem perguntar nome. Impossível mas necessária. Contra hospitalidade condicional (leis). Aporia da hospitalidade.",
     "connections": [
       "hospitalidade",
-      "alteridade"
+      "alteridade",
+      "mimesis",
+      "ma-consciencia",
+      "regime-estetico",
+      "reprodutibilidade"
     ],
     "layer": "etica"
   },
@@ -7905,7 +8668,10 @@
     "connections": [
       "signo",
       "icone",
-      "simbolo-semiotico"
+      "simbolo-semiotico",
+      "intuicao-bergson",
+      "diálogo",
+      "formalização"
     ],
     "layer": "epistemica"
   },
@@ -7916,7 +8682,10 @@
     "connections": [
       "signo",
       "indice-semiotico",
-      "simbolo-semiotico"
+      "simbolo-semiotico",
+      "dialectica",
+      "imaginação",
+      "linguagem"
     ],
     "layer": "epistemica"
   },
@@ -7927,7 +8696,10 @@
     "connections": [
       "signo",
       "icone",
-      "indice-semiotico"
+      "indice-semiotico",
+      "cataphasis",
+      "imaginação",
+      "linguagem"
     ],
     "layer": "epistemica"
   },
@@ -7939,7 +8711,9 @@
       "performativo",
       "linguagem",
       "regime-signos",
-      "pragmatica"
+      "pragmatica",
+      "significado",
+      "whanaungatanga"
     ],
     "layer": "epistemica"
   },
@@ -7949,7 +8723,11 @@
     "description": "Partilha do sensível - distribuição de lugares, tempos, formas de atividade. Quem pode ser visto, ouvido. Política como reconfiguração.",
     "connections": [
       "dissensao",
-      "regime-estetico"
+      "regime-estetico",
+      "ma-consciencia",
+      "inimizade",
+      "estranhamento",
+      "vulnerabilidade"
     ],
     "layer": "etica"
   },
@@ -7959,7 +8737,11 @@
     "description": "Regime de arte - não subordinado a hierarquias. Contra regime representativo (mimesis hierárquica). Igualdade de temas, anonimato.",
     "connections": [
       "sensivel",
-      "dissensao"
+      "dissensao",
+      "inimizade",
+      "hospitalidade-absoluta",
+      "estranhamento",
+      "precariedade"
     ],
     "layer": "etica"
   },
@@ -7970,7 +8752,10 @@
     "connections": [
       "aura",
       "tecnologia",
-      "montagem"
+      "montagem",
+      "hospitalidade-absoluta",
+      "liberdade",
+      "reconciliação"
     ],
     "layer": "etica"
   },
@@ -7982,7 +8767,9 @@
       "choque",
       "dialectica",
       "reprodutibilidade",
-      "estranhamento"
+      "estranhamento",
+      "piedade",
+      "bancostempo"
     ],
     "layer": "etica"
   },
@@ -7992,7 +8779,11 @@
     "description": "Verfremdungseffekt - tornar estranho o familiar. Interromper identificação, revelar construção. Teatro épico vs dramático. Distanciamento crítico.",
     "connections": [
       "dialectica",
-      "montagem"
+      "montagem",
+      "sensivel",
+      "regime-estetico",
+      "bancostempo",
+      "cuidado"
     ],
     "layer": "etica"
   },
@@ -8002,7 +8793,11 @@
     "description": "Categoria com lógica interna - 'universo matemático'. Generaliza teoria de conjuntos. Múltiplas lógicas, múltiplos topoi.",
     "connections": [
       "funtor",
-      "ontologia"
+      "ontologia",
+      "fractal",
+      "renormalizacao",
+      "mereologia",
+      "sorites"
     ],
     "layer": "fundacional"
   },
@@ -8012,7 +8807,11 @@
     "description": "Morfismo entre categorias - preserva estrutura. Não mapeia objetos - mapeia toda estrutura. Abstração de segunda ordem.",
     "connections": [
       "topos",
-      "multiplicidade"
+      "multiplicidade",
+      "fractal",
+      "renormalizacao",
+      "mereologia",
+      "dissipacao"
     ],
     "layer": "fundacional"
   },
@@ -8022,7 +8821,11 @@
     "description": "Lógica de partes e todos. Não assume átomos - apenas relação parte-todo. Alternativa a teoria de conjuntos. Whitehead usa.",
     "connections": [
       "ontologia",
-      "sorites"
+      "sorites",
+      "topos",
+      "funtor",
+      "sunyata",
+      "anatman"
     ],
     "layer": "fundacional"
   },
@@ -8033,7 +8836,10 @@
     "connections": [
       "vagueza",
       "paradoxo",
-      "mereologia"
+      "mereologia",
+      "topos",
+      "pratityasamutpada",
+      "normatividade"
     ],
     "layer": "fundacional"
   },
@@ -8045,7 +8851,9 @@
       "entropia",
       "ordem",
       "vida",
-      "dissipacao"
+      "dissipacao",
+      "differance",
+      "criticidade"
     ],
     "layer": "fundacional"
   },
@@ -8056,7 +8864,10 @@
     "connections": [
       "entropia",
       "neguentropia",
-      "ordem"
+      "ordem",
+      "funtor",
+      "normatividade",
+      "física quântica"
     ],
     "layer": "fundacional"
   },
@@ -8068,7 +8879,9 @@
       "caos",
       "ordem",
       "dissipacao",
-      "neguentropia"
+      "neguentropia",
+      "sunyata",
+      "anatman"
     ],
     "layer": "fundacional"
   }

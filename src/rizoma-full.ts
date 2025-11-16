@@ -33,6 +33,7 @@ if (savedTheme === 'light') {
 // Conceitos e relações serão carregados dos arquivos JSON
 let concepts = [];
 let relations = []; // Nomes das relações entre conceitos
+let clusterMetadata = null; // Metadados de clusters para visualização
 
 // ============================================================================
 // VARIÁVEIS GLOBAIS
@@ -137,16 +138,51 @@ const LAYER_COLORS = {
  * Obtém a cor de um conceito baseado na sua camada
  */
 function getColorForLayer(layer: string): number {
+    // Usar cores dos cluster metadata se disponíveis
+    if (clusterMetadata?.layer_clusters?.[layer]?.color) {
+        return parseInt(clusterMetadata.layer_clusters[layer].color.replace('#', '0x'));
+    }
+    // Fallback para cores estáticas
     return LAYER_COLORS[layer] || 0xffffff; // Branco como fallback
+}
+
+/**
+ * Verifica se um conceito é um hub (nó central) dentro de seu cluster
+ */
+function isHub(conceptId: string, layer: string): boolean {
+    if (!clusterMetadata?.layer_clusters?.[layer]?.hubs) return false;
+    return clusterMetadata.layer_clusters[layer].hubs.some(hub => hub.id === conceptId);
+}
+
+/**
+ * Verifica se um conceito é uma ponte (bridge) entre camadas
+ */
+function isBridge(conceptId: string): boolean {
+    if (!clusterMetadata?.bridges) return false;
+    return clusterMetadata.bridges.some(bridge => bridge.id === conceptId);
+}
+
+/**
+ * Obtém o cluster score de um conceito (para dimensionamento de hubs)
+ */
+function getClusterScore(conceptId: string, layer: string): number {
+    if (!clusterMetadata?.layer_clusters?.[layer]?.hubs) return 0;
+    const hub = clusterMetadata.layer_clusters[layer].hubs.find(h => h.id === conceptId);
+    return hub?.cluster_score || 0;
 }
 
 // ============================================================================
 
-// Detectar dispositivo fraco automaticamente
-if (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4) {
+// Detectar dispositivo fraco automaticamente (apenas se tiver 2 cores ou menos)
+if (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2) {
     performanceMode = true;
-    console.log('Performance mode enabled (low-end device detected)');
 }
+
+// Intervalo para atualização em tempo real de stats
+let statsInterval: number | null = null;
+
+// Flag para controlar se mouse está sobre UI
+let isMouseOverUI = false;
 
 const infoPanel = document.getElementById('info-panel');
 const loading = document.getElementById('loading');
@@ -190,10 +226,8 @@ async function loadConcepts() {
             ...concept,
             color: getColorForLayer(concept.layer)
         }));
-        
-        console.log(`${concepts.length} conceitos carregados de assets/concepts.json`);
     } catch (error) {
-        console.error('Erro ao carregar assets/concepts.json:', error);
+        console.error('❌ Erro ao carregar assets/concepts.json:', error);
         loading.innerHTML = '<p style="color: #ff0066;">Erro ao carregar conceitos. Verifique o arquivo assets/concepts.json</p>';
     }
 }
@@ -202,12 +236,21 @@ async function loadRelations() {
     try {
         const response = await fetch('assets/relations.json');
         relations = await response.json();
-        
-        console.log(`${relations.length} relações carregadas de assets/relations.json`);
     } catch (error) {
-        console.error('Erro ao carregar assets/relations.json:', error);
+        console.error('❌ Erro ao carregar assets/relations.json:', error);
         // Relações são opcionais, então não bloqueia o app
         relations = [];
+    }
+}
+
+async function loadClusterMetadata() {
+    try {
+        const response = await fetch('assets/cluster_metadata.json');
+        clusterMetadata = await response.json();
+    } catch (error) {
+        console.error('❌ Erro ao carregar assets/cluster_metadata.json:', error);
+        // Cluster metadata é opcional para retrocompatibilidade
+        clusterMetadata = null;
     }
 }
 
@@ -250,8 +293,6 @@ function centerOnMostConnectedNode() {
         }
         
         cameraLookAtTarget = nodePos;
-        
-        console.log(`📍 Câmera centralizada em "${targetConcept.name}" (${targetConcept.connections.length} conexões)`);
     }
 }
 
@@ -259,9 +300,10 @@ async function init() {
     // Carregar conceitos e relações primeiro
     await loadConcepts();
     await loadRelations();
+    await loadClusterMetadata();
     
     if (concepts.length === 0) {
-        console.error('Nenhum conceito carregado. Abortando inicialização.');
+        console.error('❌ Nenhum conceito carregado. Abortando inicialização.');
         return;
     }
     // Scene com cores baseadas no tema
@@ -279,7 +321,7 @@ async function init() {
         1,
         2000
     );
-    camera.position.z = 600;
+    camera.position.z = 900; // Mesma posição do modo 'outside'
 
     // Renderer com otimizações
     renderer = new THREE.WebGLRenderer({ 
@@ -367,15 +409,102 @@ async function init() {
     directionalLight2.position.set(-1, -0.5, -1);
     scene.add(directionalLight2);
 
-    // Event listeners
+    // ====================================================================
+    // BLOQUEIO DE EVENTOS SOBRE UI - DEVE VIR ANTES DOS OUTROS LISTENERS
+    // ====================================================================
+    
+    // Configurar listeners de mouseenter/mouseleave nos painéis
+    [infoPanel, cardsContainer, searchContainer].forEach(panel => {
+        if (panel) {
+            panel.addEventListener('mouseenter', () => {
+                isMouseOverUI = true;
+                controls.enabled = false;
+            });
+            panel.addEventListener('mouseleave', () => {
+                isMouseOverUI = false;
+                controls.enabled = true;
+            });
+        }
+    });
+    
+    // Interceptar eventos quando mouse sobre UI (capture phase)
+    window.addEventListener('wheel', (e) => {
+        if (isMouseOverUI) {
+            e.stopImmediatePropagation();
+        }
+    }, { capture: true, passive: false });
+    
+    window.addEventListener('mousedown', (e) => {
+        if (isMouseOverUI) {
+            e.stopImmediatePropagation();
+        }
+    }, { capture: true });
+    
+    window.addEventListener('mouseup', (e) => {
+        if (isMouseOverUI) {
+            e.stopImmediatePropagation();
+        }
+    }, { capture: true });
+    
+    window.addEventListener('mousemove', (e) => {
+        if (isMouseOverUI) {
+            e.stopImmediatePropagation();
+        }
+    }, { capture: true });
+    
+    window.addEventListener('touchstart', (e) => {
+        if (isMouseOverUI) {
+            e.stopImmediatePropagation();
+        }
+    }, { capture: true, passive: false });
+    
+    window.addEventListener('touchmove', (e) => {
+        if (isMouseOverUI) {
+            e.stopImmediatePropagation();
+        }
+    }, { capture: true, passive: false });
+    
+    window.addEventListener('touchend', (e) => {
+        if (isMouseOverUI) {
+            e.stopImmediatePropagation();
+        }
+    }, { capture: true });
+    
+    window.addEventListener('gesturestart', (e) => {
+        if (isMouseOverUI) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+        }
+    }, { capture: true, passive: false });
+    
+    window.addEventListener('gesturechange', (e) => {
+        if (isMouseOverUI) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+        }
+    }, { capture: true, passive: false });
+    
+    window.addEventListener('gestureend', (e) => {
+        if (isMouseOverUI) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+        }
+    }, { capture: true, passive: false });
+
+    // ====================================================================
+    // EVENT LISTENERS NORMAIS (vêm depois dos bloqueadores)
+    // ====================================================================
+    
     window.addEventListener('resize', onWindowResize);
     window.addEventListener('mousemove', onMouseMove);
     window.addEventListener('touchmove', onTouchMove, { passive: true });
-    window.addEventListener('click', onClick);
     window.addEventListener('keydown', onKeyDown);
 
     // Event listeners para busca
     searchInput.addEventListener('input', handleSearch);
+
+    // Click no canvas 3D (não em window para evitar conflito com UI)
+    renderer.domElement.addEventListener('click', onClick);
 
     // Controles de câmera agora gerenciados pelo OrbitControls
     // Mantemos apenas o tracking de drag para distinguir clique de arrasto
@@ -444,11 +573,11 @@ async function init() {
                     // Clicou no vazio - desmarcar tudo
                     if (selectedCards.size > 0 || selectedNode) {
                         nodes.forEach(n => {
-                            n.material.emissiveIntensity = 0.3;
+                            n.material.emissiveIntensity = n.userData.originalEmissive || 0.2;
                             if (n.userData.innerLight) {
                                 n.userData.innerLight.intensity = 0.1;
                             }
-                            n.scale.setScalar(1);
+                            n.scale.setScalar(n.userData.baseScale || 1); // Preservar escala de hub
                             resetConnectedNodes(n);
                         });
                         
@@ -515,15 +644,12 @@ async function init() {
 function checkUrlHashAndFocus() {
     const hash = decodeURIComponent(window.location.hash.substring(1)); // Remove '#' e decode
     if (hash) {
-        console.log('Hash decodificado:', hash);
         // Aguardar um pouco para garantir que os nós foram criados
         setTimeout(() => {
             const targetNode = nodes.find(node => node.userData.id === hash);
             if (targetNode) {
                 focusOnNode(targetNode);
                 showNotification(`Focando em: ${targetNode.userData.name}`);
-            } else {
-                console.warn(`Nó não encontrado para hash: ${hash}`);
             }
         }, 500);
     }
@@ -539,8 +665,6 @@ window.addEventListener('hashchange', checkUrlHashAndFocus);
 function createNodes() {
     const radius = 300; // Raio da esfera de distribuição
     
-    console.log('🔵 createNodes() chamado - Total de conceitos:', concepts.length);
-    
     // Geometria compartilhada com menos segmentos para melhor performance
     const sharedGeometry = new THREE.SphereGeometry(20, 16, 16); // Reduz de 32 para 16 segmentos
 
@@ -555,36 +679,55 @@ function createNodes() {
     });
 
     const layers = Array.from(conceptsByLayer.keys());
-    console.log(`🎨 Distribuindo ${concepts.length} conceitos em ${layers.length} camadas:`, 
-                Array.from(conceptsByLayer.entries()).map(([l, c]) => `${l}:${c.length}`).join(', '));
 
     // DISTRIBUIÇÃO HÍBRIDA: Clusters por camada com raio proporcional ao número de conceitos
-    // Calcular raio do cluster baseado na proporção de conceitos
-    const calculateClusterRadius = (layerSize: number, totalSize: number): number => {
+    // Calcular raio do cluster baseado na proporção de conceitos e densidade da camada
+    const calculateClusterRadius = (layerSize: number, totalSize: number, layer: string): number => {
         // Raio proporcional à raiz cúbica do número de conceitos (volume esférico)
         // Volume de esfera = 4/3 * π * r³
         // Para distribuir área uniformemente: r ∝ ³√(n)
         const proportion = Math.cbrt(layerSize / totalSize);
-        return proportion * 0.85; // 85% do raio máximo para evitar sobreposição
+        
+        // Ajustar baseado na densidade do cluster (se disponível)
+        let densityFactor = 1.0;
+        if (clusterMetadata?.layer_clusters?.[layer]?.density) {
+            const density = clusterMetadata.layer_clusters[layer].density;
+            // Densidade alta = raio menor (mais compacto)
+            // Densidade baixa = raio maior (mais espalhado)
+            // Inverter: densidade 0.345 → fator 0.7, densidade 0.122 → fator 1.3
+            densityFactor = 1.0 / (0.5 + density); // Range aproximado: 0.74 a 1.47
+        }
+        
+        // Raio mínimo de 0.3 para evitar clusters muito pequenos que causam NaN
+        const calculatedRadius = proportion * 0.85 * densityFactor;
+        return Math.max(0.3, calculatedRadius); // Garantir raio mínimo
     };
 
-    // Posicionar centros dos clusters uniformemente na esfera usando Fibonacci
+    // Posicionar centros dos clusters uniformemente na esfera usando Fibonacci melhorado
     const layerCenters = new Map();
+    
+    // Usar Fibonacci sphere com golden ratio para máxima uniformidade
+    const goldenRatio = (1 + Math.sqrt(5)) / 2;
+    
     layers.forEach((layer, idx) => {
-        const phi = Math.acos(1 - 2 * (idx + 0.5) / layers.length);
-        const theta = Math.PI * (1 + Math.sqrt(5)) * idx;
+        // Fibonacci sphere melhorado
+        const i = idx + 0.5;
+        const phi = Math.acos(1 - 2 * i / layers.length);
+        const theta = 2 * Math.PI * i / goldenRatio;
         
         const layerSize = conceptsByLayer.get(layer).length;
-        const clusterRadius = calculateClusterRadius(layerSize, concepts.length);
+        const clusterRadius = calculateClusterRadius(layerSize, concepts.length, layer);
+        
+        // Obter densidade do cluster se disponível
+        const density = clusterMetadata?.layer_clusters?.[layer]?.density || 0;
         
         layerCenters.set(layer, {
             x: Math.sin(phi) * Math.cos(theta),
             y: Math.sin(phi) * Math.sin(theta),
             z: Math.cos(phi),
-            radius: clusterRadius
+            radius: clusterRadius,
+            density: density
         });
-        
-        console.log(`  📍 ${layer}: ${layerSize} conceitos, raio do cluster: ${(clusterRadius * 100).toFixed(1)}%`);
     });
 
     concepts.forEach((concept, i) => {
@@ -596,29 +739,87 @@ function createNodes() {
         const center = layerCenters.get(layer);
         const clusterRadius = center.radius;
         
-        // Distribuição Fibonacci DENTRO do cluster com raio proporcional
-        const phi = Math.acos(1 - 2 * (layerIndex + 0.5) / layerConcepts.length);
-        const theta = Math.PI * (1 + Math.sqrt(5)) * layerIndex;
+        // DISTRIBUIÇÃO MELHORADA: Fibonacci sphere com jitter controlado
+        // Usar golden ratio para distribuição mais uniforme
+        const goldenRatio = (1 + Math.sqrt(5)) / 2;
+        const goldenAngle = 2 * Math.PI / (goldenRatio * goldenRatio);
+        
+        // Índice normalizado [0, 1]
+        const t = layerIndex / Math.max(1, layerConcepts.length - 1);
+        
+        // Ângulo polar com pequeno jitter para evitar padrões regulares
+        const jitter = (Math.random() - 0.5) * 0.05; // ±2.5% de variação
+        const phi = Math.acos(1 - 2 * (t + jitter));
+        
+        // Ângulo azimutal usando golden angle
+        const theta = goldenAngle * layerIndex;
+        
+        // Raio com variação baseada na densidade (hubs mais centrais, bridges mais periféricos)
+        let radiusMultiplier = clusterRadius;
+        if (isHub(concept.id, layer)) {
+            // Hubs tendem ao centro do cluster (80-100% do raio)
+            radiusMultiplier *= 0.8 + Math.random() * 0.2;
+        } else if (isBridge(concept.id)) {
+            // Bridges tendem à periferia (90-110% do raio)
+            radiusMultiplier *= 0.9 + Math.random() * 0.2;
+        } else {
+            // Nós normais distribuídos uniformemente (70-100% do raio)
+            radiusMultiplier *= 0.7 + Math.random() * 0.3;
+        }
         
         // Posição local dentro do cluster (esfera menor)
-        const localX = clusterRadius * Math.sin(phi) * Math.cos(theta);
-        const localY = clusterRadius * Math.sin(phi) * Math.sin(theta);
-        const localZ = clusterRadius * Math.cos(phi);
+        const localX = radiusMultiplier * Math.sin(phi) * Math.cos(theta);
+        const localY = radiusMultiplier * Math.sin(phi) * Math.sin(theta);
+        const localZ = radiusMultiplier * Math.cos(phi);
         
-        // Posição global: centro do cluster + offset local, projetado na esfera
-        const x = (center.x + localX) * radius;
-        const y = (center.y + localY) * radius;
-        const z = (center.z + localZ) * radius;
+        // Posição global: centro do cluster + offset local
+        let x = (center.x + localX) * radius;
+        let y = (center.y + localY) * radius;
+        let z = (center.z + localZ) * radius;
         
-        // Normalizar para manter na superfície da esfera
-        const length = Math.sqrt(x * x + y * y + z * z);
-        const finalX = (x / length) * radius;
-        const finalY = (y / length) * radius;
-        const finalZ = (z / length) * radius;
+        // Normalização suave para manter na superfície esférica sem distorcer muito
+        const currentLength = Math.sqrt(x * x + y * y + z * z);
+        const targetLength = radius;
+        const epsilon = 0.001;
+        
+        let finalX, finalY, finalZ;
+        
+        // Verificar se a posição calculada é válida
+        if (currentLength < epsilon || !isFinite(currentLength)) {
+            // Posição no centro ou inválida - usar Fibonacci simples como fallback
+            const fallbackPhi = Math.acos(1 - 2 * i / concepts.length);
+            const fallbackTheta = 2 * Math.PI * i / ((1 + Math.sqrt(5)) / 2);
+            finalX = radius * Math.sin(fallbackPhi) * Math.cos(fallbackTheta);
+            finalY = radius * Math.sin(fallbackPhi) * Math.sin(fallbackTheta);
+            finalZ = radius * Math.cos(fallbackPhi);
+        } else {
+            // Interpolar entre posição calculada e projeção perfeita (90% projeção, 10% liberdade)
+            const normalizedX = (x / currentLength) * targetLength;
+            const normalizedY = (y / currentLength) * targetLength;
+            const normalizedZ = (z / currentLength) * targetLength;
+            
+            const blend = 0.9; // 90% de aderência à esfera
+            finalX = normalizedX * blend + x * (1 - blend);
+            finalY = normalizedY * blend + y * (1 - blend);
+            finalZ = normalizedZ * blend + z * (1 - blend);
+        }
 
         // Cores e intensidades neutras - independente do tema
         // O riz∅ma transcende polaridades (luz/trevas)
         const nodeColor = concept.color;
+        
+        // Detectar se é hub ou bridge
+        const hubStatus = isHub(concept.id, layer);
+        const bridgeStatus = isBridge(concept.id);
+        const clusterScore = getClusterScore(concept.id, layer);
+        
+        // Ajustar tamanho baseado em status de hub (hubs são maiores)
+        const baseScale = 1.0;
+        const hubScale = hubStatus ? 1.0 + (clusterScore * 0.5) : 1.0; // Até 50% maior para hubs fortes
+        const nodeScale = baseScale * hubScale;
+        
+        // Ajustar emissividade para hubs (mais brilhantes)
+        const emissiveIntensity = hubStatus ? 0.4 : 0.2;
         
         // Material tipo vidro colorizado - transparente e reflexivo
         // Temporariamente usando MeshStandardMaterial para melhor compatibilidade
@@ -629,24 +830,42 @@ function createNodes() {
             transparent: true,
             opacity: BASE_OPACITY,
             emissive: nodeColor,
-            emissiveIntensity: 0.2
+            emissiveIntensity: emissiveIntensity
         });
 
         
         const sphere = new THREE.Mesh(sharedGeometry, material);
-        sphere.position.set(finalX, finalY, finalZ);
-        sphere.scale.setScalar(1.0); // Inicializar com escala normal
+        
+        // Validar que não temos NaN
+        if (!isFinite(finalX) || !isFinite(finalY) || !isFinite(finalZ)) {
+            // Fallback silencioso: posição simples na esfera
+            const fallbackPhi = Math.acos(1 - 2 * i / concepts.length);
+            const fallbackTheta = 2 * Math.PI * i / ((1 + Math.sqrt(5)) / 2);
+            sphere.position.set(
+                radius * Math.sin(fallbackPhi) * Math.cos(fallbackTheta),
+                radius * Math.sin(fallbackPhi) * Math.sin(fallbackTheta),
+                radius * Math.cos(fallbackPhi)
+            );
+        } else {
+            sphere.position.set(finalX, finalY, finalZ);
+        }
+        
+        sphere.scale.setScalar(nodeScale); // Aplicar escala baseada em hub status
         
         // DESABILITAR FRUSTUM CULLING - nós sempre visíveis
         sphere.frustumCulled = false;
         
-        // Dados customizados
+        // Dados customizados (usar posição do sphere que já foi validada)
         sphere.userData = {
             ...concept,
             originalColor: concept.color,
-            originalEmissive: 0.3,
-            originalPosition: new THREE.Vector3(finalX, finalY, finalZ), // Posição inicial na esfera
-            layerCenter: center // Centro do cluster para referência visual
+            originalEmissive: emissiveIntensity,
+            originalPosition: sphere.position.clone(), // Usar posição validada do sphere
+            layerCenter: center, // Centro do cluster para referência visual
+            isHub: hubStatus,
+            isBridge: bridgeStatus,
+            clusterScore: clusterScore,
+            baseScale: nodeScale
         };
 
         scene.add(sphere);
@@ -659,7 +878,78 @@ function createNodes() {
         createLabel(concept.name, sphere);
     });
     
-    console.log('✅ Nós criados:', nodes.length, 'esferas adicionadas à cena');
+    // Aplicar relaxamento para melhorar distribuição
+    applyForceDirectedRelaxation(3); // 3 iterações de relaxamento
+}
+
+/**
+ * Aplica relaxamento baseado em forças para melhorar distribuição espacial
+ * Evita sobreposições mantendo a estrutura de clusters
+ */
+function applyForceDirectedRelaxation(iterations: number = 3) {
+    const radius = 300;
+    const minDistance = 35; // Distância mínima entre nós (ajustável)
+    const repulsionStrength = 0.3; // Força de repulsão
+    const epsilon = 0.001; // Evitar divisão por zero
+    
+    for (let iter = 0; iter < iterations; iter++) {
+        const forces = new Map(); // Armazena forças acumuladas para cada nó
+        
+        // Inicializar forças
+        nodes.forEach(node => {
+            forces.set(node.userData.id, new THREE.Vector3(0, 0, 0));
+        });
+        
+        // Calcular forças de repulsão entre nós próximos
+        for (let i = 0; i < nodes.length; i++) {
+            for (let j = i + 1; j < nodes.length; j++) {
+                const nodeA = nodes[i];
+                const nodeB = nodes[j];
+                
+                // Calcular distância
+                const delta = new THREE.Vector3().subVectors(nodeA.position, nodeB.position);
+                const distance = delta.length();
+                
+                // Aplicar repulsão se muito próximos (evitar divisão por zero)
+                if (distance < minDistance && distance > epsilon) {
+                    const repulsion = repulsionStrength * (minDistance - distance) / distance;
+                    const forceDir = delta.normalize();
+                    
+                    // Verificar se normalize() não gerou NaN
+                    if (isFinite(forceDir.x) && isFinite(forceDir.y) && isFinite(forceDir.z)) {
+                        forceDir.multiplyScalar(repulsion);
+                        
+                        // Aplicar força
+                        const forceA = forces.get(nodeA.userData.id);
+                        const forceB = forces.get(nodeB.userData.id);
+                        
+                        forceA.add(forceDir);
+                        forceB.sub(forceDir);
+                    }
+                }
+            }
+        }
+        
+        // Aplicar forças e reprojetar na esfera
+        nodes.forEach(node => {
+            const force = forces.get(node.userData.id);
+            
+            if (force && force.length() > epsilon) {
+                // Adicionar força à posição
+                node.position.add(force);
+                
+                // Reprojetar na superfície da esfera
+                const length = node.position.length();
+                if (length > epsilon) {
+                    node.position.normalize().multiplyScalar(radius);
+                    
+                    // Atualizar posição original também
+                    node.userData.originalPosition.copy(node.position);
+                }
+            }
+        });
+    }
+    
 }
 
 // ============================================================================
@@ -678,8 +968,6 @@ function calculateConnectionRange() {
         minConnections = Math.min(minConnections, connCount);
         maxConnections = Math.max(maxConnections, connCount);
     });
-    
-    console.log(`📊 Range de conexões: ${minConnections} - ${maxConnections}`);
 }
 
 /**
@@ -794,10 +1082,21 @@ function createConnections() {
             const targetNode = nodes.find(n => n.userData.id === connId);
             
             if (sourceNode && targetNode && concept.id < connId) {
+                // Detectar se esta é uma conexão de ponte (cross-layer)
+                const isCrossLayer = sourceNode.userData.layer !== targetNode.userData.layer;
+                const sourceBridge = sourceNode.userData.isBridge;
+                const targetBridge = targetNode.userData.isBridge;
+                const isBridgeConnection = isCrossLayer && (sourceBridge || targetBridge);
+                
                 // Criar linha usando LineSegments (muito mais leve)
                 const isDark = !isLightTheme();
                 // Modo claro: opacidade completa para melhor visibilidade
-                const lineOpacity = isDark ? (showAllConnections ? 0.8 : 0.6) : (showAllConnections ? 1.0 : 1.0);
+                let lineOpacity = isDark ? (showAllConnections ? 0.8 : 0.6) : (showAllConnections ? 1.0 : 1.0);
+                
+                // Aumentar opacidade para conexões de ponte
+                if (isBridgeConnection) {
+                    lineOpacity = Math.min(1.0, lineOpacity * 1.3);
+                }
                 
                 // Cor da linha: mistura das cores dos dois nós conectados
                 const sourceColor = new THREE.Color(sourceNode.userData.originalColor);
@@ -809,18 +1108,34 @@ function createConnections() {
                     lineColor.multiplyScalar(0.7); // Reduz brilho em 30% no modo claro
                 }
                 
+                // Para pontes, adicionar destaque visual (cor mais intensa)
+                if (isBridgeConnection) {
+                    lineColor.multiplyScalar(1.2); // Aumentar intensidade em 20%
+                }
+                
                 const material = new THREE.LineBasicMaterial({
                     color: lineColor,
                     transparent: true,
                     opacity: lineOpacity,
                     blending: isLightTheme() ? THREE.NormalBlending : THREE.AdditiveBlending,
-                    linewidth: 2 // Nota: linewidth > 1 não funciona em todos os browsers
+                    linewidth: isBridgeConnection ? 3 : 2 // Linhas mais grossas para pontes
                 });
 
                 // Usar geometria de linha simples (BufferGeometry)
+                const sourcePos = sourceNode.userData.originalPosition || sourceNode.position;
+                const targetPos = targetNode.userData.originalPosition || targetNode.position;
+                
+                // Validar que as posições são válidas
+                const isSourceValid = isFinite(sourcePos.x) && isFinite(sourcePos.y) && isFinite(sourcePos.z);
+                const isTargetValid = isFinite(targetPos.x) && isFinite(targetPos.y) && isFinite(targetPos.z);
+                
+                if (!isSourceValid || !isTargetValid) {
+                    return; // Pular esta conexão silenciosamente
+                }
+                
                 const points = [
-                    sourceNode.userData.originalPosition.clone(),
-                    targetNode.userData.originalPosition.clone()
+                    sourcePos.clone(),
+                    targetPos.clone()
                 ];
                 
                 const geometry = new THREE.BufferGeometry().setFromPoints(points);
@@ -838,6 +1153,8 @@ function createConnections() {
                     from: concept.id,
                     to: connId,
                     isConnection: true,
+                    isBridge: isBridgeConnection,
+                    isCrossLayer: isCrossLayer,
                     relationName: relation ? relation.name : null,
                     relationDescription: relation ? relation.description : null,
                     originalColor: lineColor // Salvar a cor misturada como original
@@ -1304,7 +1621,6 @@ function initializeNodeMovement() {
             });
         }
     });
-    console.log(`🚶 Inicializado movimento para ${nodeMovement.size} nós sobre a rede`);
 }
 
 /**
@@ -1580,6 +1896,15 @@ function resetLineColor(line, color) {
     const sourcePos = line.userData.source.position;
     const targetPos = line.userData.target.position;
     
+    // Validar posições antes de criar geometria
+    const isSourceValid = isFinite(sourcePos.x) && isFinite(sourcePos.y) && isFinite(sourcePos.z);
+    const isTargetValid = isFinite(targetPos.x) && isFinite(targetPos.y) && isFinite(targetPos.z);
+    
+    if (!isSourceValid || !isTargetValid) {
+        console.warn('⚠️ Posições inválidas ao resetar linha, pulando');
+        return; // Não atualizar geometria inválida
+    }
+    
     // Voltar para geometria de linha simples (BufferGeometry com 2 pontos)
     const points = [sourcePos.clone(), targetPos.clone()];
     
@@ -1631,10 +1956,9 @@ function animate() {
             
             const avgFPS = fpsHistory.reduce((a, b) => a + b, 0) / fpsHistory.length;
             
-            // Auto-enable performance mode se FPS < 20
-            if (avgFPS < 20 && !performanceMode) {
+            // Auto-enable performance mode apenas se FPS < 15 (muito baixo)
+            if (avgFPS < 15 && !performanceMode) {
                 performanceMode = true;
-                console.log('Auto-enabled performance mode (low FPS detected:', avgFPS.toFixed(1), ')');
             }
             
             lastFPSCheck = currentTime;
@@ -1695,8 +2019,8 @@ function animate() {
             }
         } else if (!shouldPulse && skipFrame) {
             // Quando não há seleção, garantir que nós voltem ao normal
-            if (selectedNode && selectedNode.scale.x !== 1.0) {
-                selectedNode.scale.setScalar(1.0);
+            if (selectedNode && selectedNode.scale.x !== (selectedNode.userData.baseScale || 1.0)) {
+                selectedNode.scale.setScalar(selectedNode.userData.baseScale || 1.0);
             }
         }
         
@@ -1821,23 +2145,23 @@ function performRaycast() {
             if (currentOpacity >= CONNECTED_OPACITY_L1) {
                 // Nível 1 - conexão direta
                 hoveredNode.material.emissiveIntensity = 0.5;
-                hoveredNode.scale.setScalar(1.10);
+                hoveredNode.scale.setScalar((hoveredNode.userData.baseScale || 1.0) * 1.10);
             } else if (currentOpacity >= CONNECTED_OPACITY_L2) {
                 // Nível 2 - conexão secundária
                 hoveredNode.material.emissiveIntensity = 0.4;
-                hoveredNode.scale.setScalar(1.05);
+                hoveredNode.scale.setScalar((hoveredNode.userData.baseScale || 1.0) * 1.05);
             } else if (currentOpacity >= CONNECTED_OPACITY_L3) {
                 // Nível 3 - conexão terciária
                 hoveredNode.material.emissiveIntensity = 0.35;
-                hoveredNode.scale.setScalar(1.02);
+                hoveredNode.scale.setScalar((hoveredNode.userData.baseScale || 1.0) * 1.02);
             }
             if (hoveredNode.userData.innerLight) {
                 hoveredNode.userData.innerLight.intensity = 0.3;
             }
         } else {
             // Não iluminado - voltar ao estado base
-            hoveredNode.material.emissiveIntensity = 0.3;
-            hoveredNode.scale.setScalar(1);
+            hoveredNode.material.emissiveIntensity = hoveredNode.userData.originalEmissive || 0.2;
+            hoveredNode.scale.setScalar(hoveredNode.userData.baseScale || 1);
             if (hoveredNode.userData.innerLight) {
                 hoveredNode.userData.innerLight.intensity = 0.1;
             }
@@ -1856,15 +2180,15 @@ function performRaycast() {
                 if (currentOpacity >= CONNECTED_OPACITY_L1) {
                     // Nível 1 - hover mais intenso
                     hoveredNode.material.emissiveIntensity = 1.2;
-                    hoveredNode.scale.setScalar(1.25);
+                    hoveredNode.scale.setScalar((hoveredNode.userData.baseScale || 1.0) * 1.25);
                 } else if (currentOpacity >= CONNECTED_OPACITY_L2) {
                     // Nível 2 - hover médio
                     hoveredNode.material.emissiveIntensity = 1.0;
-                    hoveredNode.scale.setScalar(1.20);
+                    hoveredNode.scale.setScalar((hoveredNode.userData.baseScale || 1.0) * 1.20);
                 } else if (currentOpacity >= CONNECTED_OPACITY_L3) {
                     // Nível 3 - hover suave
                     hoveredNode.material.emissiveIntensity = 0.8;
-                    hoveredNode.scale.setScalar(1.15);
+                    hoveredNode.scale.setScalar((hoveredNode.userData.baseScale || 1.0) * 1.15);
                 }
                 if (hoveredNode.userData.innerLight) {
                     hoveredNode.userData.innerLight.intensity = 0.8;
@@ -1872,7 +2196,7 @@ function performRaycast() {
             } else {
                 // Nó não conectado - hover padrão
                 hoveredNode.material.emissiveIntensity = 1.5;
-                hoveredNode.scale.setScalar(1.2);
+                hoveredNode.scale.setScalar((hoveredNode.userData.baseScale || 1.0) * 1.2);
                 if (hoveredNode.userData.innerLight) {
                     hoveredNode.userData.innerLight.intensity = 1.0;
                 }
@@ -1896,8 +2220,6 @@ function onClick(event) {
     // Ignorar eventos se não estiver no modo 3D
     if (viewMode !== '3d') return;
     
-    console.log('onClick - hasDragged:', hasDragged, 'hoveredNode:', hoveredNode);
-    
     // Ignorar se foi um arrasto (não um clique)
     if (hasDragged) {
         hasDragged = false; // Resetar para próximo clique
@@ -1909,7 +2231,6 @@ function onClick(event) {
     if (controls && controls.contains(event.target)) return;
     
     if (hoveredNode) {
-        console.log('Focando nó:', hoveredNode.userData.id);
         // Sempre chamar focusOnNode - ele gerencia a seleção múltipla internamente
         focusOnNode(hoveredNode);
     } else {
@@ -1917,11 +2238,11 @@ function onClick(event) {
         if (selectedCards.size > 0 || selectedNode) {
             // Resetar todos os nós selecionados
             nodes.forEach(n => {
-                n.material.emissiveIntensity = 0.3;
+                n.material.emissiveIntensity = n.userData.originalEmissive || 0.2;
                 if (n.userData.innerLight) {
                     n.userData.innerLight.intensity = 0.1;
                 }
-                n.scale.setScalar(1);
+                n.scale.setScalar(n.userData.baseScale || 1); // Preservar escala de hub
                 resetConnectedNodes(n);
             });
             
@@ -2000,11 +2321,11 @@ function onKeyDown(event) {
         if (selectedCards.size > 0 || selectedNode) {
             // Resetar todos os nós selecionados
             nodes.forEach(n => {
-                n.material.emissiveIntensity = 0.3;
+                n.material.emissiveIntensity = n.userData.originalEmissive || 0.2;
                 if (n.userData.innerLight) {
                     n.userData.innerLight.intensity = 0.1;
                 }
-                n.scale.setScalar(1);
+                n.scale.setScalar(n.userData.baseScale || 1); // Preservar escala de hub
                 resetConnectedNodes(n);
             });
             
@@ -2160,13 +2481,66 @@ function updateInfoPanel(data) {
     infoPanel.style.setProperty('--info-color', colorHex);
     
     const connectionsList = document.getElementById('concept-connections');
-    const connectedNames = data.connections
-        .map(id => concepts.find(c => c.id === id)?.name)
-        .filter(Boolean);
     
-    connectionsList.innerHTML = connectedNames.length > 0
-        ? `<strong>Conectado a:</strong> ${connectedNames.join(' • ')}`
-        : '';
+    if (data.connections && data.connections.length > 0) {
+        // Criar lista clicável de conexões
+        const connectionsHTML = data.connections
+            .map(connId => {
+                const connectedConcept = concepts.find(c => c.id === connId);
+                if (!connectedConcept) return null;
+                
+                const relation = relations.find(r => 
+                    (r.source === data.id && r.target === connId) ||
+                    (r.source === connId && r.target === data.id)
+                );
+                
+                const relationName = relation?.name || '';
+                const layer = connectedConcept.camada || connectedConcept.layer;
+                
+                return `
+                    <div class="connection-item" data-concept-id="${connId}" style="
+                        cursor: pointer;
+                        padding: 8px 12px;
+                        margin: 4px 0;
+                        background: var(--glass-bg);
+                        border-radius: 8px;
+                        border-left: 3px solid ${colorHex};
+                        transition: all 0.2s ease;
+                    " onmouseover="this.style.background='var(--glass-hover)'; this.style.transform='translateX(4px)'" 
+                       onmouseout="this.style.background='var(--glass-bg)'; this.style.transform='translateX(0)'">
+                        <div style="font-weight: 600; color: var(--text-primary);">${connectedConcept.name}</div>
+                        <div style="font-size: 0.85em; color: var(--text-secondary); margin-top: 2px;">
+                            ${relationName ? `<span style="color: ${colorHex};">→ ${relationName}</span> • ` : ''}
+                            <span style="opacity: 0.7;">${layer}</span>
+                        </div>
+                    </div>
+                `;
+            })
+            .filter(Boolean)
+            .join('');
+        
+        connectionsList.innerHTML = `
+            <strong style="display: block; margin-bottom: 8px; color: var(--text-primary);">
+                🔗 Conexões (${data.connections.length}):
+            </strong>
+            <div style="max-height: 300px; overflow-y: auto; padding-right: 8px;">
+                ${connectionsHTML}
+            </div>
+        `;
+        
+        // Adicionar event listeners para navegação
+        connectionsList.querySelectorAll('.connection-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const conceptId = item.getAttribute('data-concept-id');
+                const targetNode = nodes.find(n => n.userData.id === conceptId);
+                if (targetNode) {
+                    focusOnNode(targetNode);
+                }
+            });
+        });
+    } else {
+        connectionsList.innerHTML = '<span style="color: var(--text-secondary); opacity: 0.7;">Sem conexões</span>';
+    }
     
     infoPanel.classList.add('visible');
 }
@@ -2240,7 +2614,7 @@ function resetView() {
     
     if (selectedNode) {
         selectedNode.material.opacity = BASE_OPACITY; // Voltar para vidro
-        selectedNode.scale.setScalar(1);
+        selectedNode.scale.setScalar(selectedNode.userData.baseScale || 1); // Preservar escala de hub
         // Resetar nós conectados
         resetConnectedNodes(selectedNode);
         selectedNode = null;
@@ -2297,7 +2671,7 @@ function propagateLightToConnected(sourceNode, allowedIds = null) {
             
             // Tornar mais opaco (menos vidro, mais sólido)
             connectedNode.material.opacity = CONNECTED_OPACITY_L1;
-            connectedNode.scale.setScalar(1.10);
+            connectedNode.scale.setScalar((connectedNode.userData.baseScale || 1.0) * 1.10);
             connectedNode.userData.illuminated = true;
         }
     });
@@ -2318,7 +2692,7 @@ function propagateLightToConnected(sourceNode, allowedIds = null) {
                 processedIds.add(secondId);
                 
                 secondaryNode.material.opacity = CONNECTED_OPACITY_L2;
-                secondaryNode.scale.setScalar(1.05);
+                secondaryNode.scale.setScalar((secondaryNode.userData.baseScale || 1.0) * 1.05);
                 secondaryNode.userData.illuminated = true;
             }
         });
@@ -2339,7 +2713,7 @@ function propagateLightToConnected(sourceNode, allowedIds = null) {
                 processedIds.add(thirdId);
                 
                 tertiaryNode.material.opacity = CONNECTED_OPACITY_L3;
-                tertiaryNode.scale.setScalar(1.02);
+                tertiaryNode.scale.setScalar((tertiaryNode.userData.baseScale || 1.0) * 1.02);
                 tertiaryNode.userData.illuminated = true;
             }
         });
@@ -2354,7 +2728,7 @@ function resetConnectedNodes(sourceNode) {
     nodes.forEach(node => {
         if (node !== selectedNode && node !== hoveredNode) {
             node.material.opacity = BASE_OPACITY; // Voltar para vidro semi-transparente
-            node.scale.setScalar(1.0);
+            node.scale.setScalar(node.userData.baseScale || 1.0); // Preservar escala de hub
             node.userData.illuminated = false;
         }
     });
@@ -2430,11 +2804,11 @@ function focusOnNode(node) {
             if (selectedCards.has(nodeId)) {
                 // Desmarcar este nó
                 selectedCards.delete(nodeId);
-                node.material.emissiveIntensity = 0.3;
+                node.material.emissiveIntensity = node.userData.originalEmissive || 0.2;
                 if (node.userData.innerLight) {
                     node.userData.innerLight.intensity = 0.1;
                 }
-                node.scale.setScalar(1);
+                node.scale.setScalar(node.userData.baseScale || 1); // Preservar escala de hub
                 
                 // Se não há mais nós selecionados, resetar tudo
                 if (selectedCards.size === 0) {
@@ -2466,7 +2840,7 @@ function focusOnNode(node) {
                         // Destacar nós ainda selecionados - totalmente opacos
                         if (selectedCards.has(n.userData.id)) {
                             n.material.opacity = SELECTED_OPACITY; // Sólido
-                            n.scale.setScalar(1.3);
+                            n.scale.setScalar((n.userData.baseScale || 1.0) * 1.3);
                         }
                     } else {
                         n.material.opacity = DIMMED_OPACITY; // Muito transparente
@@ -2520,13 +2894,13 @@ function focusOnNode(node) {
             // Desselecionar nó anterior se não estiver na seleção múltipla
             if (selectedNode && !selectedCards.has(selectedNode.userData.id)) {
                 selectedNode.material.opacity = BASE_OPACITY; // Voltar para vidro
-                selectedNode.scale.setScalar(1);
+                selectedNode.scale.setScalar(selectedNode.userData.baseScale || 1); // Preservar escala de hub
             }
             
             selectedNode = node;
             // Nó selecionado fica totalmente opaco (sólido)
             selectedNode.material.opacity = SELECTED_OPACITY;
-            selectedNode.scale.setScalar(1.3);
+            selectedNode.scale.setScalar((selectedNode.userData.baseScale || 1.0) * 1.3);
             
             // Calcular união de conexões de todos os nós selecionados
             const allConnectedIds = new Set();
@@ -2547,7 +2921,7 @@ function focusOnNode(node) {
                     // Destacar nós selecionados - totalmente opacos
                     if (selectedCards.has(n.userData.id)) {
                         n.material.opacity = SELECTED_OPACITY; // Sólido
-                        n.scale.setScalar(1.3);
+                        n.scale.setScalar((n.userData.baseScale || 1.0) * 1.3);
                         propagateLightToConnected(n, allConnectedIds);
                     }
                 } else {
@@ -3573,6 +3947,454 @@ function toggleCameraMode() {
 (window as any).toggleLegend = toggleLegend;
 (window as any).toggleHelp = toggleHelp;
 (window as any).toggleCameraMode = toggleCameraMode;
+
+// ============================================================================
+// API INTERATIVA DO CONSOLE - RIZOMA TOOLKIT 🌐
+// ============================================================================
+
+interface RizomaAPI {
+    // Informações
+    info(): void;
+    stats(live?: boolean): void;
+    help(): void;
+    
+    // Navegação
+    goto(conceptName: string): void;
+    random(): void;
+    findHub(): void;
+    findBridge(): void;
+    
+    // Visualização
+    toggleMode(): void;
+    reset(): void;
+    explode(factor?: number): void;
+    collapse(): void;
+    
+    // Análise
+    analyze(conceptName: string): void;
+    layers(): void;
+    bridges(): void;
+    hubs(): void;
+    
+    // Easter eggs / Funções secretas
+    matrix(): void;
+    disco(): void;
+    breathe(): void;
+    constellation(): void;
+}
+
+const rizoma: RizomaAPI = {
+    info: () => {
+        const uniqueLayers = [...new Set(concepts.map(c => c.camada || c.layer))];
+        console.log(`
+╔═══════════════════════════════════════════════════════════════╗
+║                   🌐 RIZOMA - Ontologia Relacional            ║
+╠═══════════════════════════════════════════════════════════════╣
+║  Bem-vindo à interface interativa do Rizoma! 🎉               ║
+║                                                               ║
+║  📊 Conceitos: ${concepts.length}                                          ║
+║  🔗 Relações: ${relations.length}                                        ║
+║  🎨 Camadas: ${uniqueLayers.length}                                            ║
+║  🌉 Pontes: ${clusterMetadata?.bridges?.length || 0}                                           ║
+║                                                               ║
+║  Digite rizoma.help() para ver comandos disponíveis          ║
+╚═══════════════════════════════════════════════════════════════╝
+        `);
+    },
+    
+    stats: (live: boolean = false) => {
+        const showStats = () => {
+            const uniqueLayers = [...new Set(concepts.map(c => c.camada || c.layer))];
+            const layerStats = uniqueLayers.map(layer => {
+                const count = concepts.filter(c => (c.camada || c.layer) === layer).length;
+                const density = clusterMetadata?.layer_clusters?.[layer]?.density || 0;
+                return `  ${layer}: ${count} conceitos (densidade: ${(density * 100).toFixed(1)}%)`;
+            }).join('\n');
+            
+            // Calcular FPS médio
+            const avgFPS = fpsHistory.length > 0 
+                ? (fpsHistory.reduce((a, b) => a + b, 0) / fpsHistory.length).toFixed(1)
+                : 'N/A';
+            
+            const statsText = `
+📈 Estatísticas do Rizoma (${new Date().toLocaleTimeString()}):
+${layerStats}
+
+🎯 Modo de câmera: ${cameraMode === 'outside' ? 'Fora do Caos' : 'Dentro do Caos'}
+⚡ Performance: ${performanceMode ? 'Alto desempenho' : 'Normal'}
+📊 FPS médio: ${avgFPS}
+🎬 Animação: ${isAnimating ? 'Ativa' : 'Pausada'}
+            `;
+            
+            if (live) {
+                console.clear();
+                console.log(statsText);
+                console.log('🔄 Atualizando a cada segundo... (use rizoma.stats(false) para parar)');
+            } else {
+                console.log(statsText);
+            }
+        };
+        
+        // Se já está rodando live stats, parar
+        if (statsInterval !== null) {
+            clearInterval(statsInterval);
+            statsInterval = null;
+            console.log('⏹️ Atualização em tempo real parada.');
+            return;
+        }
+        
+        // Mostrar stats inicial
+        showStats();
+        
+        // Se live = true, configurar intervalo
+        if (live) {
+            statsInterval = window.setInterval(showStats, 1000);
+            console.log('✅ Modo live ativado! As estatísticas serão atualizadas a cada segundo.');
+        }
+    },
+    
+    help: () => {
+        console.log(`
+🌟 Comandos disponíveis no Rizoma Toolkit:
+
+📖 INFORMAÇÃO:
+   rizoma.info()          - Informações sobre o Rizoma
+   rizoma.stats()         - Estatísticas detalhadas
+   rizoma.stats(true)     - 🔄 Estatísticas em tempo real!
+   rizoma.help()          - Esta mensagem (você está aqui! 👋)
+
+🧭 NAVEGAÇÃO:
+   rizoma.goto("nome")    - Navegar para um conceito específico
+   rizoma.random()        - Ir para um conceito aleatório
+   rizoma.findHub()       - Encontrar um hub (conceito central)
+   rizoma.findBridge()    - Encontrar uma ponte entre camadas
+
+👁️ VISUALIZAÇÃO:
+   rizoma.toggleMode()    - Alternar entre dentro/fora do caos
+   rizoma.reset()         - Resetar visualização
+   rizoma.explode(2.5)    - Expandir o rizoma (fator opcional)
+   rizoma.collapse()      - Colapsar ao estado normal
+
+🔬 ANÁLISE:
+   rizoma.analyze("nome") - Análise detalhada de um conceito
+   rizoma.layers()        - Informações sobre as camadas
+   rizoma.bridges()       - Lista todas as pontes
+   rizoma.hubs()          - Lista todos os hubs
+
+✨ EASTER EGGS (descubra por conta própria!):
+   rizoma.matrix()
+   rizoma.disco()
+   rizoma.breathe()
+   rizoma.constellation()
+
+💡 Dica: Use TAB para autocompletar comandos!
+🔄 Dica: Use rizoma.stats(true) para atualização em tempo real!
+        `);
+    },
+    
+    goto: (conceptName: string) => {
+        const concept = concepts.find(c => 
+            c.name.toLowerCase().includes(conceptName.toLowerCase())
+        );
+        
+        if (!concept) {
+            console.log(`❌ Conceito "${conceptName}" não encontrado. Que tal tentar rizoma.random()?`);
+            return;
+        }
+        
+        const node = nodes.find(n => n.userData.id === concept.id);
+        if (node) {
+            // Focar no nó (destaca conexões e atualiza painel)
+            focusOnNode(node);
+            
+            // Posicionar câmera
+            camera.position.copy(node.position);
+            camera.position.z += 100;
+            camera.lookAt(node.position);
+            
+            // Contar conexões reais do nó
+            const connectionCount = lines.filter(line => 
+                line.userData.from === concept.id || line.userData.to === concept.id
+            ).length;
+            
+            const layer = concept.camada || concept.layer;
+            console.log(`✅ Navegando para "${concept.name}" (${layer})`);
+            if (connectionCount > 0) {
+                console.log(`   🔗 ${connectionCount} ${connectionCount === 1 ? 'conexão' : 'conexões'}`);
+            }
+        }
+    },
+    
+    random: () => {
+        const concept = concepts[Math.floor(Math.random() * concepts.length)];
+        console.log(`🎲 Escolhendo aleatoriamente...`);
+        rizoma.goto(concept.name);
+    },
+    
+    findHub: () => {
+        // Procurar em todas as camadas por um hub
+        let hubConcept = null;
+        for (const concept of concepts) {
+            const layer = concept.camada || concept.layer;
+            if (clusterMetadata?.layer_clusters?.[layer]?.hubs?.includes(concept.id)) {
+                hubConcept = concept;
+                break;
+            }
+        }
+        
+        if (hubConcept) {
+            console.log(`🎯 Hub encontrado!`);
+            rizoma.goto(hubConcept.name);
+        } else {
+            console.log(`🤔 Nenhum hub marcado nos metadados. Procurando conceito mais conectado...`);
+            rizoma.random();
+        }
+    },
+    
+    findBridge: () => {
+        if (clusterMetadata?.bridges && clusterMetadata.bridges.length > 0) {
+            const bridge = clusterMetadata.bridges[Math.floor(Math.random() * clusterMetadata.bridges.length)];
+            const concept = concepts.find(c => c.id === bridge.id);
+            if (concept) {
+                console.log(`🌉 Ponte encontrada! Conecta ${bridge.layers_connected} camadas`);
+                rizoma.goto(concept.name);
+            }
+        } else {
+            console.log(`🤷 Nenhuma ponte identificada nos metadados.`);
+        }
+    },
+    
+    toggleMode: () => {
+        toggleCameraMode();
+        console.log(`🔄 Modo alternado para: ${cameraMode === 'outside' ? 'Fora do Caos 🌍' : 'Dentro do Caos 🌀'}`);
+    },
+    
+    reset: () => {
+        resetView();
+        console.log(`🔄 Visualização resetada. Bem-vindo de volta! 👋`);
+    },
+    
+    explode: (factor: number = 2.0) => {
+        nodes.forEach(node => {
+            node.position.multiplyScalar(factor);
+        });
+        console.log(`💥 Rizoma expandido ${factor}x! Use rizoma.collapse() para reverter.`);
+    },
+    
+    collapse: () => {
+        resetView();
+        console.log(`🎯 Rizoma colapsado ao estado normal.`);
+    },
+    
+    analyze: (conceptName: string) => {
+        const concept = concepts.find(c => 
+            c.name.toLowerCase().includes(conceptName.toLowerCase())
+        );
+        
+        if (!concept) {
+            console.log(`❌ Conceito "${conceptName}" não encontrado.`);
+            return;
+        }
+        
+        const layer = concept.camada || concept.layer;
+        
+        // Contar conexões reais usando lines
+        const connectionCount = lines.filter(line => 
+            line.userData.from === concept.id || line.userData.to === concept.id
+        ).length;
+        
+        const isHub = clusterMetadata?.layer_clusters?.[layer]?.hubs?.includes(concept.id);
+        const isBridge = clusterMetadata?.bridges?.some(b => b.id === concept.id);
+        const bridgeInfo = clusterMetadata?.bridges?.find(b => b.id === concept.id);
+        
+        console.log(`
+🔬 Análise Detalhada: "${concept.name}"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📍 Camada: ${layer}
+🔗 Conexões: ${connectionCount}
+${isHub ? '⭐ Status: HUB (conceito central da camada)' : ''}
+${isBridge ? `🌉 Status: PONTE (conecta ${bridgeInfo?.layers_connected} camadas)` : ''}
+
+💡 Descrição: ${concept.description || 'Não disponível'}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        `);
+    },
+    
+    layers: () => {
+        const uniqueLayers = [...new Set(concepts.map(c => c.camada || c.layer))];
+        console.log(`
+🎨 Camadas do Rizoma:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${uniqueLayers.map(layer => {
+    const count = concepts.filter(c => (c.camada || c.layer) === layer).length;
+    const color = clusterMetadata?.layer_clusters?.[layer]?.color || '#ffffff';
+    const density = clusterMetadata?.layer_clusters?.[layer]?.density || 0;
+    const hubs = clusterMetadata?.layer_clusters?.[layer]?.hubs?.length || 0;
+    return `  ${color} ${layer.toUpperCase()}\n    ${count} conceitos | ${hubs} hubs | densidade: ${(density * 100).toFixed(1)}%`;
+}).join('\n\n')}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        `);
+    },
+    
+    bridges: () => {
+        if (!clusterMetadata?.bridges || clusterMetadata.bridges.length === 0) {
+            console.log(`🤷 Nenhuma ponte identificada.`);
+            return;
+        }
+        
+        console.log(`
+🌉 Pontes Inter-Camadas (${clusterMetadata.bridges.length} total):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${clusterMetadata.bridges.slice(0, 10).map(bridge => {
+    const concept = concepts.find(c => c.id === bridge.id);
+    return `  🌉 ${concept?.name || bridge.id}\n     Conecta ${bridge.layers_connected} camadas | ${bridge.connections} conexões`;
+}).join('\n\n')}
+${clusterMetadata.bridges.length > 10 ? `\n... e mais ${clusterMetadata.bridges.length - 10} pontes` : ''}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        `);
+    },
+    
+    hubs: () => {
+        const allHubs: Array<{layer: string, conceptId: string, name: string}> = [];
+        const uniqueLayers = [...new Set(concepts.map(c => c.camada || c.layer))];
+        
+        uniqueLayers.forEach(layer => {
+            const hubIds = clusterMetadata?.layer_clusters?.[layer]?.hubs || [];
+            hubIds.forEach(id => {
+                const concept = concepts.find(c => c.id === id);
+                if (concept) {
+                    allHubs.push({layer, conceptId: id, name: concept.name});
+                }
+            });
+        });
+        
+        if (allHubs.length === 0) {
+            console.log(`🤷 Nenhum hub identificado.`);
+            return;
+        }
+        
+        console.log(`
+⭐ Hubs (Conceitos Centrais) - ${allHubs.length} total:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${allHubs.map(hub => `  ⭐ ${hub.name}\n     Camada: ${hub.layer}`).join('\n\n')}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        `);
+    },
+    
+    // Easter eggs
+    matrix: () => {
+        console.log(`
+        ⠀⠀⠀⢀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⠀⠀⠀
+        ⠀⠀⠀⣿⡏⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⢹⣿⠀⠀⠀
+        ⠀⠀⠀⣿⡇⠀⠀VOCÊ⠀ESTÁ⠀NO⠀RIZOMA⠀⠀⢸⣿⠀⠀⠀
+        ⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀
+        ⠀⠀⠀⠙⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠋⠀⠀⠀
+        
+        🟢 Sistema: ONLINE
+        🟢 Dimensões: 3D
+        🟢 Conexões: ${relations.length} ativas
+        🟢 Estado: Rizomático
+        
+        "Siga o conceito branco..." 🐰
+        `);
+        
+        // Efeito matrix nos nós
+        let iteration = 0;
+        const matrixInterval = setInterval(() => {
+            nodes.forEach(node => {
+                const material = node.material as THREE.MeshStandardMaterial;
+                material.color.setHex(Math.random() > 0.5 ? 0x00ff00 : 0x003300);
+            });
+            iteration++;
+            if (iteration > 20) {
+                clearInterval(matrixInterval);
+                resetView();
+                console.log(`🔄 Matriz resetada. Bem-vindo de volta à realidade!`);
+            }
+        }, 100);
+    },
+    
+    disco: () => {
+        console.log(`🪩 DISCO MODE ACTIVATED! Let's dance! 💃🕺`);
+        
+        let iteration = 0;
+        const discoInterval = setInterval(() => {
+            nodes.forEach(node => {
+                const material = node.material as THREE.MeshStandardMaterial;
+                material.color.setHSL(Math.random(), 1, 0.5);
+                material.emissive.setHSL(Math.random(), 1, 0.3);
+            });
+            iteration++;
+            if (iteration > 30) {
+                clearInterval(discoInterval);
+                resetView();
+                console.log(`🎉 Festa encerrada! Foi divertido! 🎊`);
+            }
+        }, 150);
+    },
+    
+    breathe: () => {
+        console.log(`🫁 Iniciando respiração cósmica... Inspire... Expire... 🌬️`);
+        
+        let growing = true;
+        let iteration = 0;
+        const breatheInterval = setInterval(() => {
+            const factor = growing ? 1.02 : 0.98;
+            nodes.forEach(node => {
+                node.scale.multiplyScalar(factor);
+            });
+            
+            iteration++;
+            if (iteration % 20 === 0) growing = !growing;
+            
+            if (iteration > 100) {
+                clearInterval(breatheInterval);
+                resetView();
+                console.log(`😌 Namastê. Você está em paz com o rizoma.`);
+            }
+        }, 50);
+    },
+    
+    constellation: () => {
+        console.log(`✨ Transformando em constelação... 🌌`);
+        
+        nodes.forEach(node => {
+            const material = node.material as THREE.MeshStandardMaterial;
+            material.color.setHex(0xffffff);
+            material.emissive.setHex(0xffffaa);
+            material.emissiveIntensity = 0.8;
+            node.scale.setScalar(0.3);
+        });
+        
+        console.log(`
+        ⭐ Constelação Rizomática ativada!
+        
+        "Somos feitos de poeira de estrelas... e relações!" ✨
+        
+        Use rizoma.reset() para voltar ao normal.
+        `);
+    }
+};
+
+// Expor API globalmente
+(window as any).rizoma = rizoma;
+
+// Mensagem de boas-vindas
+console.log(`
+%c🌐 RIZOMA TOOLKIT CARREGADO! 🌐%c
+
+Digite %crizoma.info()%c para começar
+ou %crizoma.help()%c para ver todos os comandos
+
+✨ Explore, descubra, conecte! ✨
+`, 
+'font-size: 16px; font-weight: bold; color: #00ff88;',
+'font-size: 12px;',
+'font-weight: bold; color: #ffaa00;',
+'font-size: 12px;',
+'font-weight: bold; color: #ffaa00;',
+'font-size: 12px;'
+);
 
 // ============================================================================
 // INICIAR
