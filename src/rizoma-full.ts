@@ -2482,16 +2482,28 @@ function updateInfoPanel(data) {
     
     const connectionsList = document.getElementById('concept-connections');
     
-    if (data.connections && data.connections.length > 0) {
+    // Buscar conexões reais das lines (não do JSON que pode estar incompleto)
+    const connectedLines = lines.filter(line => 
+        line.userData.from === data.id || line.userData.to === data.id
+    );
+    
+    if (connectedLines.length > 0) {
+        // Extrair IDs dos conceitos conectados
+        const connectedIds = connectedLines.map(line => 
+            line.userData.from === data.id ? line.userData.to : line.userData.from
+        );
+        
         // Criar lista clicável de conexões
-        const connectionsHTML = data.connections
+        const connectionsHTML = connectedIds
             .map(connId => {
                 const connectedConcept = concepts.find(c => c.id === connId);
                 if (!connectedConcept) return null;
                 
                 const relation = relations.find(r => 
                     (r.source === data.id && r.target === connId) ||
-                    (r.source === connId && r.target === data.id)
+                    (r.source === connId && r.target === data.id) ||
+                    (r.from === data.id && r.to === connId) ||
+                    (r.from === connId && r.to === data.id)
                 );
                 
                 const relationName = relation?.name || '';
@@ -2521,7 +2533,7 @@ function updateInfoPanel(data) {
         
         connectionsList.innerHTML = `
             <strong style="display: block; margin-bottom: 8px; color: var(--text-primary);">
-                🔗 Conexões (${data.connections.length}):
+                🔗 Conexões (${connectedIds.length}):
             </strong>
             <div style="max-height: 300px; overflow-y: auto; padding-right: 8px;">
                 ${connectionsHTML}
