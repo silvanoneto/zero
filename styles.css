@@ -1774,6 +1774,19 @@ body:not(.light-theme) .theme-icon {
     border-bottom: 1px solid var(--glow);
     color: var(--emergence);
     text-align: center;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.nav-index.visible h3 {
+    animation: fadeInDown 0.4s ease forwards;
+}
+
+@keyframes fadeInDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .nav-index h4 {
@@ -1781,15 +1794,33 @@ body:not(.light-theme) .theme-icon {
     margin: 1.5rem 0 0.75rem 0;
     color: var(--emergence);
     text-align: center;
-    opacity: 0.7;
+    opacity: 0;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    transform: translateY(-10px);
+}
+
+.nav-index.visible h4 {
+    animation: fadeInDown 0.4s ease forwards 0.45s;
 }
 
 .nav-divider {
     border: none;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin: 1.5rem 0;
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.nav-index.visible .nav-divider {
+    animation: expandWidth 0.5s ease forwards 0.4s;
+}
+
+@keyframes expandWidth {
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
 }
 
 body.light-theme .nav-divider {
@@ -1819,6 +1850,25 @@ body.light-theme .nav-divider {
     transition: all 0.3s ease;
     font-family: inherit;
     font-size: 0.85rem;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.4s ease forwards;
+}
+
+.nav-action-btn:nth-child(1) { animation-delay: 0.05s; }
+.nav-action-btn:nth-child(2) { animation-delay: 0.1s; }
+.nav-action-btn:nth-child(3) { animation-delay: 0.15s; }
+.nav-action-btn:nth-child(4) { animation-delay: 0.2s; }
+.nav-action-btn:nth-child(5) { animation-delay: 0.25s; }
+.nav-action-btn:nth-child(6) { animation-delay: 0.3s; }
+.nav-action-btn:nth-child(7) { animation-delay: 0.35s; }
+.nav-action-btn:nth-child(8) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .nav-action-btn:hover {
@@ -1877,6 +1927,32 @@ body.light-theme .nav-action-btn:hover {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.nav-index.visible li {
+    opacity: 0;
+    transform: translateX(-10px);
+    animation: slideInLeft 0.4s ease forwards;
+}
+
+.nav-index.visible li:nth-child(1) { animation-delay: 0.5s; }
+.nav-index.visible li:nth-child(2) { animation-delay: 0.55s; }
+.nav-index.visible li:nth-child(3) { animation-delay: 0.6s; }
+.nav-index.visible li:nth-child(4) { animation-delay: 0.65s; }
+.nav-index.visible li:nth-child(5) { animation-delay: 0.7s; }
+.nav-index.visible li:nth-child(6) { animation-delay: 0.75s; }
+.nav-index.visible li:nth-child(7) { animation-delay: 0.8s; }
+.nav-index.visible li:nth-child(8) { animation-delay: 0.85s; }
+.nav-index.visible li:nth-child(9) { animation-delay: 0.9s; }
+.nav-index.visible li:nth-child(10) { animation-delay: 0.95s; }
+.nav-index.visible li:nth-child(11) { animation-delay: 1s; }
+.nav-index.visible li:nth-child(12) { animation-delay: 1.05s; }
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .nav-index li {
