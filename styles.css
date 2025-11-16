@@ -1495,6 +1495,29 @@ body.light-theme .void-message {
     opacity: 0.7;
 }
 
+.github-button {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.github-button::after {
+    content: 'GITHUB';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.65rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    letter-spacing: 0.1em;
+}
+
+.github-button:hover::after {
+    opacity: 0.7;
+}
+
 .reader-button::after {
     content: 'READER';
     position: absolute;
@@ -3442,5 +3465,59 @@ pre code {
     .font-size-feedback {
         font-size: 1.2rem;
         padding: 1.2rem 2rem;
+    }
+}
+
+/* --------------------------------------------
+   16. GITHUB FAB BUTTON
+   -------------------------------------------- */
+
+.github-fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    background: var(--emergence);
+    color: var(--void);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 999;
+    cursor: pointer;
+}
+
+.github-fab:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.github-fab:active {
+    transform: scale(0.95);
+}
+
+body.light-theme .github-fab {
+    background: var(--emergence);
+    color: var(--void);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+body.light-theme .github-fab:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+    .github-fab {
+        width: 48px;
+        height: 48px;
+        font-size: 1.3rem;
+        bottom: 16px;
+        right: 16px;
     }
 }
