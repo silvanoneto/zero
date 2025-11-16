@@ -516,6 +516,7 @@ function createConceptLink(text: string, concept: Concept): HTMLElement {
 function initializeNavigation(): void {
     const content = document.getElementById('content');
     const navList = document.getElementById('nav-list');
+    const progressMarkers = document.querySelector('.progress-markers');
     
     if (!content || !navList) return;
     
@@ -523,14 +524,38 @@ function initializeNavigation(): void {
     const chapters = content.querySelectorAll('h1');
     navList.innerHTML = '';
     
+    if (progressMarkers) {
+        progressMarkers.innerHTML = '';
+    }
+    
     chapters.forEach((chapter, index) => {
         const id = `chapter-${index}`;
         chapter.id = id;
         
+        // Criar item de navegação
         const li = document.createElement('li');
+        li.setAttribute('data-chapter-index', index.toString());
+        
         const a = document.createElement('a');
         a.href = `#${id}`;
-        a.textContent = chapter.textContent || `Capítulo ${index + 1}`;
+        a.setAttribute('data-chapter-id', id);
+        
+        // Estrutura do link: número + título + progresso
+        const navNumber = document.createElement('span');
+        navNumber.className = 'nav-number';
+        navNumber.textContent = `${index + 1}`;
+        
+        const navTitle = document.createElement('span');
+        navTitle.className = 'nav-title';
+        navTitle.textContent = chapter.textContent || `Capítulo ${index + 1}`;
+        
+        const navProgress = document.createElement('div');
+        navProgress.className = 'nav-progress';
+        
+        a.appendChild(navNumber);
+        a.appendChild(navTitle);
+        a.appendChild(navProgress);
+        
         a.addEventListener('click', (e) => {
             e.preventDefault();
             chapter.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -543,6 +568,115 @@ function initializeNavigation(): void {
         
         li.appendChild(a);
         navList.appendChild(li);
+        
+        // Adicionar marcador de progresso lateral
+        if (progressMarkers) {
+            const marker = document.createElement('div');
+            marker.className = 'progress-marker';
+            marker.setAttribute('data-chapter-index', index.toString());
+            marker.title = chapter.textContent || `Capítulo ${index + 1}`;
+            marker.setAttribute('role', 'button');
+            marker.setAttribute('tabindex', '0');
+            marker.setAttribute('aria-label', chapter.textContent || `Capítulo ${index + 1}`);
+            
+            // Adicionar evento de clique no marcador
+            marker.addEventListener('click', () => {
+                chapter.scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            // Adicionar evento de teclado (Enter/Space)
+            marker.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    chapter.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+            
+            progressMarkers.appendChild(marker);
+        }
+    });
+    
+    // Adicionar observador de scroll para atualizar marcadores ativos
+    updateActiveMarkers();
+    window.addEventListener('scroll', updateActiveMarkers);
+}
+
+/**
+ * Atualiza os marcadores ativos baseado no scroll
+ */
+function updateActiveMarkers(): void {
+    const content = document.getElementById('content');
+    const markers = document.querySelectorAll('.progress-marker');
+    const navLinks = document.querySelectorAll('#nav-list a');
+    
+    if (!content || markers.length === 0) return;
+    
+    const chapters = content.querySelectorAll('h1');
+    if (chapters.length === 0) return;
+    
+    let activeIndex = -1;
+    let maxProgress = 0;
+    
+    chapters.forEach((chapter, index) => {
+        const rect = chapter.getBoundingClientRect();
+        const nextChapter = chapters[index + 1];
+        
+        // Determinar se este capítulo está visível
+        if (rect.top <= window.innerHeight / 3) {
+            activeIndex = index;
+            
+            // Calcular progresso dentro desta seção
+            if (nextChapter) {
+                const nextRect = nextChapter.getBoundingClientRect();
+                const sectionHeight = nextRect.top - rect.top;
+                const scrolledInSection = Math.max(0, -rect.top);
+                const progress = Math.min(100, (scrolledInSection / sectionHeight) * 100);
+                maxProgress = progress;
+            } else {
+                // Última seção - usar altura do documento
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrolled = window.scrollY;
+                const chapterTop = (chapter as HTMLElement).offsetTop;
+                const sectionHeight = docHeight - chapterTop;
+                const scrolledInSection = scrolled - chapterTop;
+                maxProgress = Math.min(100, (scrolledInSection / sectionHeight) * 100);
+            }
+        }
+    });
+    
+    // Atualizar marcadores laterais
+    markers.forEach((marker, index) => {
+        const markerEl = marker as HTMLElement;
+        if (index === activeIndex) {
+            markerEl.classList.add('active');
+            markerEl.classList.remove('completed');
+            markerEl.style.setProperty('--progress', `${maxProgress}%`);
+        } else if (index < activeIndex) {
+            markerEl.classList.remove('active');
+            markerEl.classList.add('completed');
+            markerEl.style.setProperty('--progress', '100%');
+        } else {
+            markerEl.classList.remove('active', 'completed');
+            markerEl.style.setProperty('--progress', '0%');
+        }
+    });
+    
+    // Atualizar links de navegação
+    navLinks.forEach((link, index) => {
+        const linkEl = link as HTMLElement;
+        const li = linkEl.parentElement;
+        if (index === activeIndex) {
+            linkEl.classList.add('active');
+            li?.classList.add('active');
+        } else if (index < activeIndex) {
+            linkEl.classList.remove('active');
+            linkEl.classList.add('completed');
+            li?.classList.remove('active');
+            li?.classList.add('completed');
+        } else {
+            linkEl.classList.remove('active', 'completed');
+            li?.classList.remove('active', 'completed');
+        }
     });
 }
 
