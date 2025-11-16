@@ -1268,6 +1268,7 @@ body.light-theme .void-message {
 .livro-button,
 .font-size-button,
 .export-button,
+.github-button,
 .reader-button,
 .auto-scroll-button {
     background: transparent;
@@ -1362,6 +1363,10 @@ body.light-theme .void-message {
 }
 
 .export-button {
+    font-size: 1rem;
+}
+
+.github-button {
     font-size: 1rem;
 }
 
@@ -1495,11 +1500,6 @@ body.light-theme .void-message {
     opacity: 0.7;
 }
 
-.github-button {
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-
 .github-button::after {
     content: 'GITHUB';
     position: absolute;
@@ -1540,8 +1540,10 @@ body.light-theme .void-message {
 .riz∅ma-button:hover,
 .referencias-button:hover,
 .void-button:hover,
+.livro-button:hover,
 .font-size-button:hover,
 .export-button:hover,
+.github-button:hover,
 .reader-button:hover,
 .auto-scroll-button:hover {
     background: rgba(255, 255, 255, 0.1);
@@ -1562,8 +1564,10 @@ body.light-theme .void-message {
 .riz∅ma-button:focus-visible,
 .referencias-button:focus-visible,
 .void-button:focus-visible,
+.livro-button:focus-visible,
 .font-size-button:focus-visible,
 .export-button:focus-visible,
+.github-button:focus-visible,
 .reader-button:focus-visible,
 .auto-scroll-button:focus-visible {
     outline: 2px solid var(--emergence);
@@ -1574,8 +1578,10 @@ body.light-theme .void-message {
 .riz∅ma-button:active,
 .referencias-button:active,
 .void-button:active,
+.livro-button:active,
 .font-size-button:active,
 .export-button:active,
+.github-button:active,
 .reader-button:active,
 .auto-scroll-button:active {
     transform: scale(0.95);
