@@ -873,11 +873,21 @@ Conhecimento fechado **nega** a ontologia relacional que CRIO performa. Por isso
 - [x] Sistema de multi-layer selection
 - [x] CI/CD com GitHub Actions
 - [x] Makefile para desenvolvimento
+- [x] Responsividade mobile para headers do livro
 - [ ] Remover `@ts-nocheck` (strict typing)
 - [ ] Testes automatizados (Jest + Playwright)
 - [ ] Code splitting e lazy loading
 - [ ] Service Worker (PWA offline-first)
 - [ ] Tradução para inglês/espanhol
+
+### Changelog Recente
+
+#### Novembro 16, 2025
+
+- ✨ Melhorada responsividade dos headers no modo livro para dispositivos móveis
+  - Ajuste de padding e margins em telas ≤768px e ≤480px
+  - Redução do tamanho dos decoradores de seção em mobile
+  - Otimização dos títulos de PARTE para telas pequenas
 
 ---
 
