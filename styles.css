@@ -1832,6 +1832,26 @@ body.light-theme .nav-divider {
     transform: translateY(0);
 }
 
+/* Active state for auto-scroll button */
+.nav-action-btn.active {
+    background: var(--emergence);
+    color: var(--void);
+    border-color: var(--emergence);
+}
+
+.nav-action-btn.active .nav-action-icon {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
 .nav-action-icon {
     font-size: 1.4rem;
     line-height: 1;

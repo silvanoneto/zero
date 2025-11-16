@@ -1408,18 +1408,16 @@ function initAutoScroll(): void {
     }
     
     const autoScrollBtn = document.createElement('button');
-    autoScrollBtn.className = 'auto-scroll-button';
+    autoScrollBtn.className = 'nav-action-btn';
     autoScrollBtn.id = 'auto-scroll-btn';
     autoScrollBtn.setAttribute('aria-label', 'Ativar autoscroll meditativo');
-    autoScrollBtn.innerHTML = '<span aria-hidden="true">⬇</span>';
+    autoScrollBtn.innerHTML = '<span class="nav-action-icon" aria-hidden="true">⬇</span><span class="nav-action-text">Autoscroll</span>';
     autoScrollBtn.title = 'Autoscroll meditativo';
     
-    // Inserir após o botão de fonte
-    const fontBtn = document.getElementById('font-size-btn');
-    if (fontBtn && fontBtn.nextSibling) {
-        audioUI.insertBefore(autoScrollBtn, fontBtn.nextSibling);
-    } else {
-        audioUI.appendChild(autoScrollBtn);
+    // Inserir no menu de ações (nav-actions)
+    const navActions = document.querySelector('.nav-actions');
+    if (navActions) {
+        navActions.appendChild(autoScrollBtn);
     }
     
     autoScrollBtn.addEventListener('click', toggleAutoScroll);
