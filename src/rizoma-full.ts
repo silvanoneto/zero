@@ -878,22 +878,32 @@ function createNodes() {
         createLabel(concept.name, sphere);
     });
     
-    // Aplicar relaxamento para melhorar distribuição
-    applyForceDirectedRelaxation(3); // 3 iterações de relaxamento
+    // Aplicar relaxamento cibernético: auto-organização através de feedback iterativo
+    // Mais iterações = maior elasticidade, força decresce = homeostase emergente
+    applyForceDirectedRelaxation(8); // 8 iterações para elasticidade cibernética
 }
 
 /**
  * Aplica relaxamento baseado em forças para melhorar distribuição espacial
- * Evita sobreposições mantendo a estrutura de clusters
+ * PRINCÍPIO CIBERNÉTICO: Auto-organização através de feedback iterativo
+ * - Força decresce exponencialmente (damping natural)
+ * - Sistema converge para equilíbrio dinâmico sem oscilar
+ * - Emergência de ordem sem controle central
  */
-function applyForceDirectedRelaxation(iterations: number = 3) {
+function applyForceDirectedRelaxation(iterations: number = 12) {
     const radius = 300;
-    const minDistance = 35; // Distância mínima entre nós (ajustável)
-    const repulsionStrength = 0.3; // Força de repulsão
+    const minDistance = 35; // Distância mínima entre nós
+    const baseRepulsion = 0.8; // Força base para máxima elasticidade
     const epsilon = 0.001; // Evitar divisão por zero
     
     for (let iter = 0; iter < iterations; iter++) {
         const forces = new Map(); // Armazena forças acumuladas para cada nó
+        
+        // DAMPING EXPONENCIAL SUAVE: e^(-t) com decay lento
+        // Mantém força residual até o fim (nunca chega a zero)
+        const t = iter / (iterations - 1); // 0 → 1
+        const dampingFactor = Math.exp(-1.5 * t); // 1.0 → 0.22 (muito suave)
+        const repulsionStrength = baseRepulsion * dampingFactor;
         
         // Inicializar forças
         nodes.forEach(node => {
@@ -901,6 +911,7 @@ function applyForceDirectedRelaxation(iterations: number = 3) {
         });
         
         // Calcular forças de repulsão entre nós próximos
+        // FEEDBACK: Cada par influencia mutuamente (ação-reação)
         for (let i = 0; i < nodes.length; i++) {
             for (let j = i + 1; j < nodes.length; j++) {
                 const nodeA = nodes[i];
@@ -912,14 +923,19 @@ function applyForceDirectedRelaxation(iterations: number = 3) {
                 
                 // Aplicar repulsão se muito próximos (evitar divisão por zero)
                 if (distance < minDistance && distance > epsilon) {
-                    const repulsion = repulsionStrength * (minDistance - distance) / distance;
+                    // Lei de potência: força inversamente proporcional à distância
+                    // Elasticidade aumenta com proximidade (não-linear)
+                    const normalizedDist = distance / minDistance; // 0 → 1
+                    const elasticity = 1.0 - normalizedDist; // 1 → 0 (mais elástico quando próximo)
+                    const repulsion = repulsionStrength * elasticity * elasticity; // Quadrático para suavidade
+                    
                     const forceDir = delta.normalize();
                     
                     // Verificar se normalize() não gerou NaN
                     if (isFinite(forceDir.x) && isFinite(forceDir.y) && isFinite(forceDir.z)) {
                         forceDir.multiplyScalar(repulsion);
                         
-                        // Aplicar força
+                        // Aplicar força (ação-reação: feedback bidirecional)
                         const forceA = forces.get(nodeA.userData.id);
                         const forceB = forces.get(nodeB.userData.id);
                         
@@ -930,20 +946,23 @@ function applyForceDirectedRelaxation(iterations: number = 3) {
             }
         }
         
-        // Aplicar forças e reprojetar na esfera
+        // HOMEOSTASE: Aplicar forças e reprojetar na esfera (manter coesão)
+        // Sistema busca equilíbrio entre repulsão (separação) e atração (esfera)
         nodes.forEach(node => {
             const force = forces.get(node.userData.id);
             
             if (force && force.length() > epsilon) {
-                // Adicionar força à posição
+                // Movimento proporcional à força acumulada
+                // Damping implícito: forças diminuem a cada iteração
                 node.position.add(force);
                 
-                // Reprojetar na superfície da esfera
+                // ATRATOR ESFÉRICO: Reprojetar na superfície (coesão do sistema)
+                // Princípio cibernético: restrição global emerge ordem local
                 const length = node.position.length();
                 if (length > epsilon) {
                     node.position.normalize().multiplyScalar(radius);
                     
-                    // Atualizar posição original também
+                    // Atualizar posição original (memória do sistema)
                     node.userData.originalPosition.copy(node.position);
                 }
             }
