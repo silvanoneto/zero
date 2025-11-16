@@ -327,7 +327,69 @@ zero/
 
 ### Visualização Rizoma (riz∅ma.html)
 
-**Sistema de Camadas (9 camadas):**
+**API Interativa do Console (Rizoma Toolkit):**
+
+Abra o console do navegador (F12) e explore o rizoma programaticamente:
+
+```javascript
+// Informação e Estatísticas
+rizoma.info()          // Visão geral do rizoma (567 conceitos, 8 camadas)
+rizoma.stats()         // Estatísticas detalhadas (conexões, hubs, pontes)
+rizoma.stats(true)     // Modo live: atualiza estatísticas a cada segundo
+rizoma.help()          // Lista todos os comandos disponíveis
+
+// Navegação
+rizoma.goto("caos")    // Navega para conceito e destaca conexões
+rizoma.random()        // Escolhe conceito aleatório
+rizoma.findHub()       // Localiza hub principal (conceito mais conectado)
+rizoma.findBridge()    // Localiza ponte entre camadas
+
+// Análise
+rizoma.analyze("emergência")  // Análise detalhada: camada, conexões, status
+rizoma.layers()        // Lista todas as camadas ontológicas
+rizoma.bridges()       // Lista conceitos-ponte entre camadas
+rizoma.hubs()          // Lista hubs (conceitos centrais)
+
+// Visualização
+rizoma.toggleMode()    // Alterna entre "Dentro do Caos" / "Fora do Caos"
+rizoma.reset()         // Reseta visualização ao estado inicial
+rizoma.explode(2)      // Expande rizoma 2x (padrão: 3x)
+rizoma.collapse()      // Colapsa ao estado normal
+
+// Easter Eggs (Efeitos visuais secretos)
+rizoma.matrix()        // Modo Matrix (verde, rotação automática)
+rizoma.disco()         // Modo Disco (cores piscantes, party mode!)
+rizoma.breathe()       // Respiração cósmica (pulsação suave)
+rizoma.constellation() // Modo constelação (estrelas cintilantes)
+```
+
+**Exemplos de uso:**
+
+```javascript
+// Análise completa de um conceito
+rizoma.analyze("caos")
+// 🔬 Análise Detalhada: "Caos"
+// 📍 Camada: ontologica
+// 🔗 Conexões: 8
+// ⭐ Status: HUB (conceito central da camada)
+
+// Navegação com destaque automático
+rizoma.goto("emergência")
+// ✅ Navegando para "Emergência" (ontologica)
+//    🔗 12 conexões
+
+// Estatísticas em tempo real
+rizoma.stats(true)
+// Atualiza console a cada segundo com métricas live
+// Use rizoma.stats(false) para parar
+
+// Exploração aleatória
+rizoma.random()
+// 🎲 Escolhendo aleatoriamente...
+// ✅ Navegando para "Multiplicidade" (fundacional)
+```
+
+**Sistema de Camadas (8 camadas ontológicas):**
 
 - Fundacional, Ontológica, Epistemológica, Política
 - Pedagógica, Indígena-Comunitária, Ecológica-Material

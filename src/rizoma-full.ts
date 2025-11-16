@@ -4067,7 +4067,12 @@ ${layerStats}
     
     help: () => {
         console.log(`
-🌟 Comandos disponíveis no Rizoma Toolkit:
+╔═══════════════════════════════════════════════════════════════╗
+║           🌟 RIZOMA TOOLKIT - Console Interativo              ║
+╠═══════════════════════════════════════════════════════════════╣
+║  💡 Abra o console com F12 (ou Cmd+Option+I no Mac)          ║
+║     e explore o rizoma programaticamente!                     ║
+╚═══════════════════════════════════════════════════════════════╝
 
 📖 INFORMAÇÃO:
    rizoma.info()          - Informações sobre o Rizoma
@@ -4100,7 +4105,6 @@ ${layerStats}
    rizoma.constellation()
 
 💡 Dica: Use TAB para autocompletar comandos!
-🔄 Dica: Use rizoma.stats(true) para atualização em tempo real!
         `);
     },
     
