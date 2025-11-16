@@ -847,7 +847,8 @@ function initProgressBar(): void {
 
                 progressBar.style.transform = `scaleX(${clampedProgress / 100})`;
                 progressBar.parentElement?.setAttribute('aria-valuenow', String(Math.round(clampedProgress)));
-                progressText.textContent = `${Math.round(clampedProgress)}%`;
+                const percent = Math.round(clampedProgress);
+                progressText.textContent = percent > 0 ? `CRIO ${percent}%` : 'CRIO';
 
                 ticking = false;
             });

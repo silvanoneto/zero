@@ -158,11 +158,6 @@
         <!-- Will be populated dynamically -->
     </div>
 
-    <!-- Reading Info -->
-    <div class="reading-info" role="status" aria-live="polite">
-        <span id="reading-progress" aria-label="Porcentagem de leitura">0%</span>
-    </div>
-
     <!-- Audio Controls -->
     <div class="audio-ui" role="group" aria-label="Controles de navegação">
         <button class="nav-toggle" id="nav-toggle" aria-label="Alternar menu de navegação" aria-expanded="false" aria-controls="nav-index">
@@ -172,6 +167,7 @@
                 <span class="hamburger-line"></span>
             </span>
         </button>
+        <span class="page-title" id="reading-progress" aria-label="Título da página">LIVRO</span>
         <span id="audio-status" class="audio-status" aria-live="polite"></span>
     </div>
 
@@ -184,6 +180,10 @@
             <button class="nav-action-btn" onclick="window.location.href='riz∅ma.html'" aria-label="Abrir riz∅ma de conceitos">
                 <span class="nav-action-icon">◈</span>
                 <span class="nav-action-text">Rizoma</span>
+            </button>
+            <button class="nav-action-btn" onclick="window.location.href='referencias.html'" aria-label="Ver PAÊBIRÚ - Rede viva de referências">
+                <span class="nav-action-icon">⋯</span>
+                <span class="nav-action-text">Referências</span>
             </button>
             <button class="nav-action-btn" onclick="window.location.href='∅.html'" aria-label="Ir para CRIO: Ontologia Relacional">
                 <span class="nav-action-icon">∅</span>

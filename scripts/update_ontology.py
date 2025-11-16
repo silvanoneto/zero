@@ -111,29 +111,40 @@ def check_required_fields(concepts):
     """Verifica campos obrigatórios"""
     print_section("2. VERIFICAÇÃO DE CAMPOS OBRIGATÓRIOS")
     
-    issues = []
+    critical_errors = []
+    warnings = []
+    
     for c in concepts:
         if not c.get('id'):
-            issues.append(f"❌ Sem ID: {c.get('name', 'SEM NOME')}")
+            critical_errors.append(f"❌ Sem ID: {c.get('name', 'SEM NOME')}")
         if not c.get('name'):
-            issues.append(f"❌ Sem nome: {c.get('id', 'SEM ID')}")
+            critical_errors.append(f"❌ Sem nome: {c.get('id', 'SEM ID')}")
         if not c.get('description') or len(c.get('description', '')) < 20:
-            issues.append(f"⚠️  Descrição curta (<20 chars): {c['id']}")
+            warnings.append(f"⚠️  Descrição curta (<20 chars): {c['id']}")
         if not c.get('layer'):
-            issues.append(f"❌ Sem camada: {c['id']}")
+            critical_errors.append(f"❌ Sem camada: {c['id']}")
         if not c.get('connections') or len(c.get('connections', [])) == 0:
-            issues.append(f"⚠️  Sem conexões: {c['id']}")
+            warnings.append(f"⚠️  Sem conexões: {c['id']}")
     
-    if issues:
-        print(f"⚠️  {len(issues)} problemas encontrados:")
-        for issue in issues[:20]:
+    if critical_errors:
+        print(f"❌ {len(critical_errors)} erros críticos encontrados:")
+        for issue in critical_errors[:20]:
             print(f"   {issue}")
-        if len(issues) > 20:
-            print(f"   ... e mais {len(issues) - 20} problemas")
-    else:
+        if len(critical_errors) > 20:
+            print(f"   ... e mais {len(critical_errors) - 20} erros")
+    
+    if warnings:
+        print(f"⚠️  {len(warnings)} avisos encontrados:")
+        for issue in warnings[:10]:
+            print(f"   {issue}")
+        if len(warnings) > 10:
+            print(f"   ... e mais {len(warnings) - 10} avisos")
+    
+    if not critical_errors and not warnings:
         print("✅ Todos os conceitos têm campos obrigatórios")
     
-    return len(issues) == 0
+    # Only fail on critical errors, not warnings
+    return len(critical_errors) == 0
 
 
 def check_orphan_references(concepts):

@@ -8888,1030 +8888,736 @@
   {
     "id": "cross-perspective-links",
     "name": "cross-perspective links",
-    "layer": "epistemica",
-    "description": "Conceito relacional: cross-perspective links. [Descrição a ser expandida]",
-    "connections": []
+    "category": "epistemica"
   },
   {
     "id": "moeda-comunitaria",
     "name": "moeda comunitária",
-    "layer": "pratica",
-    "description": "Conceito relacional: moeda comunitária. [Descrição a ser expandida]",
-    "connections": []
+    "category": "pratica"
   },
   {
     "id": "intra-acao",
     "name": "intra-ação",
-    "layer": "ontologica",
-    "description": "Conceito relacional: intra-ação. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "cortes-agenciais",
     "name": "cortes agenciais",
-    "layer": "ontologica",
-    "description": "Conceito relacional: cortes agenciais. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "fenomenos",
     "name": "fenômenos",
-    "layer": "ontologica",
-    "description": "Conceito relacional: fenômenos. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "memoria",
     "name": "memória",
-    "layer": "epistemica",
-    "description": "Conceito relacional: memória. [Descrição a ser expandida]",
-    "connections": []
+    "category": "epistemica"
   },
   {
     "id": "madhyamika",
     "name": "madhyamika",
-    "layer": "fundacional",
-    "description": "Conceito relacional: madhyamika. [Descrição a ser expandida]",
-    "connections": []
+    "category": "fundacional"
   },
   {
     "id": "poder-relacional",
     "name": "poder relacional",
-    "layer": "politica",
-    "description": "Conceito relacional: poder relacional. [Descrição a ser expandida]",
-    "connections": []
+    "category": "politica"
   },
   {
     "id": "rizoma",
     "name": "rizoma",
-    "layer": "ontologica",
-    "description": "Conceito relacional: rizoma. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "assemblage",
     "name": "assemblage",
-    "layer": "ontologica",
-    "description": "Conceito relacional: assemblage. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "plano-de-imanencia",
     "name": "plano de imanência",
-    "layer": "fundacional",
-    "description": "Conceito relacional: plano de imanência. [Descrição a ser expandida]",
-    "connections": []
+    "category": "fundacional"
   },
   {
     "id": "heterogeneidade",
     "name": "heterogeneidade",
-    "layer": "ontologica",
-    "description": "Conceito relacional: heterogeneidade. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "ruptura-assignificante",
     "name": "ruptura assignificante",
-    "layer": "ontologica",
-    "description": "Conceito relacional: ruptura assignificante. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "relacionalismo",
     "name": "relacionalismo",
-    "layer": "fundacional",
-    "description": "Conceito relacional: relacionalismo. [Descrição a ser expandida]",
-    "connections": []
+    "category": "fundacional"
   },
   {
     "id": "hibridez",
     "name": "hibridez",
-    "layer": "ontologica",
-    "description": "Conceito relacional: hibridez. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "staying-with-trouble",
     "name": "staying with trouble",
-    "layer": "etica",
-    "description": "Conceito relacional: staying with trouble. [Descrição a ser expandida]",
-    "connections": []
+    "category": "etica"
   },
   {
     "id": "making-kin",
     "name": "making kin",
-    "layer": "ontologica",
-    "description": "Conceito relacional: making kin. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "naturecultures",
     "name": "naturecultures",
-    "layer": "ecologica",
-    "description": "Conceito relacional: naturecultures. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ecologica"
   },
   {
     "id": "svabhava",
     "name": "svabhava",
-    "layer": "fundacional",
-    "description": "Conceito relacional: svabhava. [Descrição a ser expandida]",
-    "connections": []
+    "category": "fundacional"
   },
   {
     "id": "vacuidade",
     "name": "vacuidade",
-    "layer": "fundacional",
-    "description": "Conceito relacional: vacuidade. [Descrição a ser expandida]",
-    "connections": []
+    "category": "fundacional"
   },
   {
     "id": "grounded-normativity",
     "name": "grounded normativity",
-    "layer": "fundacional",
-    "description": "Conceito relacional: grounded normativity. [Descrição a ser expandida]",
-    "connections": []
+    "category": "fundacional"
   },
   {
     "id": "recusa-gerativa",
     "name": "recusa gerativa",
-    "layer": "politica",
-    "description": "Conceito relacional: recusa gerativa. [Descrição a ser expandida]",
-    "connections": []
+    "category": "politica"
   },
   {
     "id": "terra-como-pedagogia",
     "name": "terra como pedagogia",
-    "layer": "epistemica",
-    "description": "Conceito relacional: terra como pedagogia. [Descrição a ser expandida]",
-    "connections": []
+    "category": "epistemica"
   },
   {
     "id": "place-thought",
     "name": "place-thought",
-    "layer": "epistemica",
-    "description": "Conceito relacional: place-thought. [Descrição a ser expandida]",
-    "connections": []
+    "category": "epistemica"
   },
   {
     "id": "sky-woman",
     "name": "Sky Woman",
-    "layer": "ontologica",
-    "description": "Conceito relacional: Sky Woman. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "terra-como-pensante",
     "name": "terra como pensante",
-    "layer": "ontologica",
-    "description": "Conceito relacional: terra como pensante. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "ontologia-indigena",
     "name": "ontologia indígena",
-    "layer": "ontologica",
-    "description": "Conceito relacional: ontologia indígena. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "memoria-coletiva",
     "name": "memória coletiva",
-    "layer": "temporal",
-    "description": "Conceito relacional: memória coletiva. [Descrição a ser expandida]",
-    "connections": []
+    "category": "temporal"
   },
   {
     "id": "ocasioes-de-experiencia",
     "name": "ocasiões de experiência",
-    "layer": "fundacional",
-    "description": "Conceito relacional: ocasiões de experiência. [Descrição a ser expandida]",
-    "connections": []
+    "category": "fundacional"
   },
   {
     "id": "preensao",
     "name": "preensão",
-    "layer": "fundacional",
-    "description": "Conceito relacional: preensão. [Descrição a ser expandida]",
-    "connections": []
+    "category": "fundacional"
   },
   {
     "id": "principio-de-relatividade",
     "name": "princípio de relatividade",
-    "layer": "ontologica",
-    "description": "Conceito relacional: princípio de relatividade. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "sociedades",
     "name": "sociedades",
-    "layer": "ontologica",
-    "description": "Conceito relacional: sociedades. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "kinship-time",
     "name": "kinship time",
-    "layer": "ontologica",
-    "description": "Conceito relacional: kinship time. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "continuidade-coletiva",
     "name": "continuidade coletiva",
-    "layer": "ontologica",
-    "description": "Conceito relacional: continuidade coletiva. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "temporalidades-nao-lineares",
     "name": "temporalidades não-lineares",
-    "layer": "ontologica",
-    "description": "Conceito relacional: temporalidades não-lineares. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "outro",
     "name": "Outro",
-    "layer": "ontologica",
-    "description": "Conceito relacional: Outro. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "desconstrucao",
     "name": "desconstrução",
-    "layer": "ontologica",
-    "description": "Conceito relacional: desconstrução. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "espectralidade",
     "name": "espectralidade",
-    "layer": "ontologica",
-    "description": "Conceito relacional: espectralidade. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "ritual",
     "name": "ritual",
-    "layer": "ontologica",
-    "description": "Conceito relacional: ritual. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "estrutura-social",
     "name": "estrutura social",
-    "layer": "ontologica",
-    "description": "Conceito relacional: estrutura social. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "global",
     "name": "global",
-    "layer": "ontologica",
-    "description": "Conceito relacional: global. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "nepantla",
     "name": "nepantla",
-    "layer": "ontologica",
-    "description": "Conceito relacional: nepantla. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "diplomacia-ontologica",
     "name": "diplomacia ontológica",
-    "layer": "ontologica",
-    "description": "Conceito relacional: diplomacia ontológica. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "mundos-multiplos",
     "name": "mundos múltiplos",
-    "layer": "ontologica",
-    "description": "Conceito relacional: mundos múltiplos. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "multinaturalismo",
     "name": "multinaturalismo",
-    "layer": "ontologica",
-    "description": "Conceito relacional: multinaturalismo. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "espaco",
     "name": "espaço",
-    "layer": "ontologica",
-    "description": "Conceito relacional: espaço. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "resistencia",
     "name": "resistencia",
-    "layer": "ontologica",
-    "description": "Conceito relacional: resistencia. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "utopia",
     "name": "utopia",
-    "layer": "ontologica",
-    "description": "Conceito relacional: utopia. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "estruturas-dissipativas",
     "name": "estruturas dissipativas",
-    "layer": "ontologica",
-    "description": "Conceito relacional: estruturas dissipativas. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "tempo-irreversivel",
     "name": "tempo irreversível",
-    "layer": "ontologica",
-    "description": "Conceito relacional: tempo irreversível. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "tempo-messianico",
     "name": "tempo messiânico",
-    "layer": "ontologica",
-    "description": "Conceito relacional: tempo messiânico. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "chronos",
     "name": "chronos",
-    "layer": "ontologica",
-    "description": "Conceito relacional: chronos. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "revolucao",
     "name": "revolução",
-    "layer": "ontologica",
-    "description": "Conceito relacional: revolução. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "messianismo",
     "name": "messianismo",
-    "layer": "ontologica",
-    "description": "Conceito relacional: messianismo. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "regimes-de-historicidade",
     "name": "regimes de historicidade",
-    "layer": "ontologica",
-    "description": "Conceito relacional: regimes de historicidade. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "poder-temporal",
     "name": "poder temporal",
-    "layer": "ontologica",
-    "description": "Conceito relacional: poder temporal. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "colonialidade",
     "name": "colonialidade",
-    "layer": "ontologica",
-    "description": "Conceito relacional: colonialidade. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "modernidade",
     "name": "modernidade",
-    "layer": "ontologica",
-    "description": "Conceito relacional: modernidade. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "cultura",
     "name": "cultura",
-    "layer": "ontologica",
-    "description": "Conceito relacional: cultura. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "america-latina",
     "name": "América Latina",
-    "layer": "ontologica",
-    "description": "Conceito relacional: América Latina. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "mesticagem",
     "name": "mestiçagem",
-    "layer": "ontologica",
-    "description": "Conceito relacional: mestiçagem. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "limiar-critico",
     "name": "limiar crítico",
-    "layer": "ontologica",
-    "description": "Conceito relacional: limiar crítico. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "informacao",
     "name": "informacao",
-    "layer": "ontologica",
-    "description": "Conceito relacional: informacao. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "feedback",
     "name": "feedback",
-    "layer": "ontologica",
-    "description": "Conceito relacional: feedback. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "episteme",
     "name": "episteme",
-    "layer": "ontologica",
-    "description": "Conceito relacional: episteme. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "arqueologia-do-saber",
     "name": "arqueologia do saber",
-    "layer": "ontologica",
-    "description": "Conceito relacional: arqueologia do saber. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "metaestabilidade",
     "name": "metaestabilidade",
-    "layer": "ontologica",
-    "description": "Conceito relacional: metaestabilidade. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "pre-individual",
     "name": "pré-individual",
-    "layer": "ontologica",
-    "description": "Conceito relacional: pré-individual. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "nao-dualidade",
     "name": "não-dualidade",
-    "layer": "ontologica",
-    "description": "Conceito relacional: não-dualidade. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "anticolonial",
     "name": "anticolonial",
-    "layer": "ontologica",
-    "description": "Conceito relacional: anticolonial. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "africana",
     "name": "africana",
-    "layer": "ontologica",
-    "description": "Conceito relacional: africana. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "distribuido",
     "name": "distribuído",
-    "layer": "ontologica",
-    "description": "Conceito relacional: distribuído. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "relacionalismo-epistemico",
     "name": "relacionalismo-epistemico",
-    "layer": "ontologica",
-    "description": "Conceito relacional: relacionalismo-epistemico. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "ecologia-politica",
     "name": "ecologia-politica",
-    "layer": "ontologica",
-    "description": "Conceito relacional: ecologia-politica. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "aceleracao",
     "name": "aceleracao",
-    "layer": "ontologica",
-    "description": "Conceito relacional: aceleracao. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "capitalismo-de-vigilancia",
     "name": "capitalismo de vigilância",
-    "layer": "ontologica",
-    "description": "Conceito relacional: capitalismo de vigilância. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "tecnologia-digital",
     "name": "tecnologia digital",
-    "layer": "ontologica",
-    "description": "Conceito relacional: tecnologia digital. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "misticismo-islamico",
     "name": "misticismo islâmico",
-    "layer": "ontologica",
-    "description": "Conceito relacional: misticismo islâmico. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "misticismo-cristao",
     "name": "misticismo cristão",
-    "layer": "ontologica",
-    "description": "Conceito relacional: misticismo cristão. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "deserto-divino",
     "name": "deserto divino",
-    "layer": "ontologica",
-    "description": "Conceito relacional: deserto divino. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "heresia",
     "name": "heresia",
-    "layer": "ontologica",
-    "description": "Conceito relacional: heresia. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "wood-wide-web",
     "name": "wood wide web",
-    "layer": "ontologica",
-    "description": "Conceito relacional: wood wide web. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "redes-miceliais",
     "name": "redes miceliais",
-    "layer": "ontologica",
-    "description": "Conceito relacional: redes miceliais. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "arvores-mae",
     "name": "árvores-mãe",
-    "layer": "ontologica",
-    "description": "Conceito relacional: árvores-mãe. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "cooperacao-florestal",
     "name": "cooperação florestal",
-    "layer": "ontologica",
-    "description": "Conceito relacional: cooperação florestal. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "ecologia-relacional",
     "name": "ecologia relacional",
-    "layer": "ontologica",
-    "description": "Conceito relacional: ecologia relacional. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "microbioma",
     "name": "microbioma",
-    "layer": "ontologica",
-    "description": "Conceito relacional: microbioma. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "antropoceno",
     "name": "Antropoceno",
-    "layer": "ontologica",
-    "description": "Conceito relacional: Antropoceno. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "convivialidade",
     "name": "convivialidade",
-    "layer": "ontologica",
-    "description": "Conceito relacional: convivialidade. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "contraproducencia",
     "name": "contraproducência",
-    "layer": "ontologica",
-    "description": "Conceito relacional: contraproducência. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "iatrogenese",
     "name": "iatrogênese",
-    "layer": "ontologica",
-    "description": "Conceito relacional: iatrogênese. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "limites",
     "name": "limites",
-    "layer": "ontologica",
-    "description": "Conceito relacional: limites. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "teoria-de-categorias",
     "name": "teoria de categorias",
-    "layer": "ontologica",
-    "description": "Conceito relacional: teoria de categorias. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "organizacoes",
     "name": "organizações",
-    "layer": "ontologica",
-    "description": "Conceito relacional: organizações. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "trabalho-social",
     "name": "trabalho social",
-    "layer": "ontologica",
-    "description": "Conceito relacional: trabalho social. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "deslocamento",
     "name": "deslocamento",
-    "layer": "ontologica",
-    "description": "Conceito relacional: deslocamento. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "refugiados",
     "name": "refugiados",
-    "layer": "ontologica",
-    "description": "Conceito relacional: refugiados. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "gestao-de-risco",
     "name": "gestão de risco",
-    "layer": "ontologica",
-    "description": "Conceito relacional: gestão de risco. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "criancas",
     "name": "crianças",
-    "layer": "ontologica",
-    "description": "Conceito relacional: crianças. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "africa",
     "name": "África",
-    "layer": "ontologica",
-    "description": "Conceito relacional: África. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "plataforma-digital",
     "name": "plataforma digital",
-    "layer": "ontologica",
-    "description": "Conceito relacional: plataforma digital. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "decisao-coletiva",
     "name": "decisão coletiva",
-    "layer": "ontologica",
-    "description": "Conceito relacional: decisão coletiva. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "assincrono",
     "name": "assíncrono",
-    "layer": "ontologica",
-    "description": "Conceito relacional: assíncrono. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "orcamento-participativo",
     "name": "orçamento participativo",
-    "layer": "ontologica",
-    "description": "Conceito relacional: orçamento participativo. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "democracia-participativa",
     "name": "democracia participativa",
-    "layer": "ontologica",
-    "description": "Conceito relacional: democracia participativa. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "mapeamento-de-opiniao",
     "name": "mapeamento de opinião",
-    "layer": "ontologica",
-    "description": "Conceito relacional: mapeamento de opinião. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "visualizacao",
     "name": "visualização",
-    "layer": "ontologica",
-    "description": "Conceito relacional: visualização. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "razao-instrumental",
     "name": "razao-instrumental",
-    "layer": "ontologica",
-    "description": "Conceito relacional: razao-instrumental. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "dominacao-estrutural",
     "name": "dominacao-estrutural",
-    "layer": "ontologica",
-    "description": "Conceito relacional: dominacao-estrutural. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "reificacao",
     "name": "reificacao",
-    "layer": "ontologica",
-    "description": "Conceito relacional: reificacao. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "fechamento-totalitario",
     "name": "fechamento-totalitario",
-    "layer": "ontologica",
-    "description": "Conceito relacional: fechamento-totalitario. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "integracao-sistemica",
     "name": "integracao-sistemica",
-    "layer": "ontologica",
-    "description": "Conceito relacional: integracao-sistemica. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "praxis",
     "name": "praxis",
-    "layer": "ontologica",
-    "description": "Conceito relacional: praxis. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "feminismo-interseccional",
     "name": "feminismo-interseccional",
-    "layer": "ontologica",
-    "description": "Conceito relacional: feminismo-interseccional. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "mobilizacao-coletiva",
     "name": "mobilizacao-coletiva",
-    "layer": "ontologica",
-    "description": "Conceito relacional: mobilizacao-coletiva. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "pluralismo-agonistico",
     "name": "pluralismo-agonistico",
-    "layer": "ontologica",
-    "description": "Conceito relacional: pluralismo-agonistico. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "contingencia-radical",
     "name": "contingencia-radical",
-    "layer": "ontologica",
-    "description": "Conceito relacional: contingencia-radical. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "dissenso",
     "name": "dissenso",
-    "layer": "ontologica",
-    "description": "Conceito relacional: dissenso. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "ruptura-politica",
     "name": "ruptura-politica",
-    "layer": "ontologica",
-    "description": "Conceito relacional: ruptura-politica. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "flexibilizacao",
     "name": "flexibilizacao",
-    "layer": "ontologica",
-    "description": "Conceito relacional: flexibilizacao. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "novo-espirito-capitalista",
     "name": "novo-espirito-capitalista",
-    "layer": "ontologica",
-    "description": "Conceito relacional: novo-espirito-capitalista. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "epistemologia-situada",
     "name": "epistemologia-situada",
-    "layer": "ontologica",
-    "description": "Conceito relacional: epistemologia-situada. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "pluralismo-epistemico",
     "name": "pluralismo-epistemico",
-    "layer": "ontologica",
-    "description": "Conceito relacional: pluralismo-epistemico. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "decolonialidade",
     "name": "decolonialidade",
-    "layer": "ontologica",
-    "description": "Conceito relacional: decolonialidade. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "epistemologia-fronteirica",
     "name": "epistemologia-fronteiriça",
-    "layer": "ontologica",
-    "description": "Conceito relacional: epistemologia-fronteiriça. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "anti-normatividade",
     "name": "anti-normatividade",
-    "layer": "ontologica",
-    "description": "Conceito relacional: anti-normatividade. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "diversidade-constitutiva",
     "name": "diversidade-constitutiva",
-    "layer": "ontologica",
-    "description": "Conceito relacional: diversidade-constitutiva. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "diferenca-ontologica",
     "name": "diferenca-ontologica",
-    "layer": "ontologica",
-    "description": "Conceito relacional: diferenca-ontologica. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "singularizacao",
     "name": "singularizacao",
-    "layer": "ontologica",
-    "description": "Conceito relacional: singularizacao. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "auto-referencia",
     "name": "auto-referencia",
-    "layer": "ontologica",
-    "description": "Conceito relacional: auto-referencia. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "circularidade-produtiva",
     "name": "circularidade-produtiva",
-    "layer": "ontologica",
-    "description": "Conceito relacional: circularidade-produtiva. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "fechamento-operacional",
     "name": "fechamento-operacional",
-    "layer": "ontologica",
-    "description": "Conceito relacional: fechamento-operacional. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "emergencia-sistemica",
     "name": "emergencia-sistemica",
-    "layer": "ontologica",
-    "description": "Conceito relacional: emergencia-sistemica. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "resistencia-cotidiana",
     "name": "resistencia-cotidiana",
-    "layer": "ontologica",
-    "description": "Conceito relacional: resistencia-cotidiana. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "infrapolitica",
     "name": "infrapolitica",
-    "layer": "ontologica",
-    "description": "Conceito relacional: infrapolitica. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "agencia-subordinada",
     "name": "agencia-subordinada",
-    "layer": "ontologica",
-    "description": "Conceito relacional: agencia-subordinada. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "interseccionalidade",
     "name": "interseccionalidade",
-    "layer": "ontologica",
-    "description": "Conceito relacional: interseccionalidade. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "feminismo-negro",
     "name": "feminismo-negro",
-    "layer": "ontologica",
-    "description": "Conceito relacional: feminismo-negro. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "opressoes-entrelacadas",
     "name": "opressoes-entrelaçadas",
-    "layer": "ontologica",
-    "description": "Conceito relacional: opressoes-entrelaçadas. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "justica-social",
     "name": "justica-social",
-    "layer": "ontologica",
-    "description": "Conceito relacional: justica-social. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "identidades-entrelacadas",
     "name": "identidades-entrelaçadas",
-    "layer": "ontologica",
-    "description": "Conceito relacional: identidades-entrelaçadas. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "coalicao-politica",
     "name": "coalicao-politica",
-    "layer": "ontologica",
-    "description": "Conceito relacional: coalicao-politica. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "mudanca-paradigmatica",
     "name": "mudanca-paradigmatica",
-    "layer": "ontologica",
-    "description": "Conceito relacional: mudanca-paradigmatica. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "pontos-alavancagem",
     "name": "pontos-alavancagem",
-    "layer": "ontologica",
-    "description": "Conceito relacional: pontos-alavancagem. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "pensamento-sistemico",
     "name": "pensamento-sistemico",
-    "layer": "ontologica",
-    "description": "Conceito relacional: pensamento-sistemico. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "experimentacao",
     "name": "experimentacao",
-    "layer": "ontologica",
-    "description": "Conceito relacional: experimentacao. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   },
   {
     "id": "utopias-reais",
     "name": "utopias-reais",
-    "layer": "ontologica",
-    "description": "Conceito relacional: utopias-reais. [Descrição a ser expandida]",
-    "connections": []
+    "category": "ontologica"
   }
 ]

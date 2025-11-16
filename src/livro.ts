@@ -1075,7 +1075,8 @@ function init(): void {
                 }
 
                 if (readingProgress) {
-                    readingProgress.textContent = `${Math.round(scrolled)}%`;
+                    const percent = Math.round(scrolled);
+                    readingProgress.textContent = percent > 0 ? `LIVRO ${percent}%` : 'LIVRO';
                 }
 
                 ticking = false;

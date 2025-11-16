@@ -1291,6 +1291,22 @@ body.light-theme .void-message {
     }
 }
 
+/* Page title next to hamburger */
+.page-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--emergence);
+    opacity: 0.9;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+    .page-title {
+        display: none;
+    }
+}
+
 /* Nav toggle button (now inside audio-ui) */
 .nav-toggle,
 .riz∅ma-button,
@@ -1950,6 +1966,155 @@ body.light-theme .nav-divider {
 .nav-action-icon {
     font-size: 1.4rem;
     line-height: 1;
+}
+
+/* CRIO Navigation Header */
+.crio-nav-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--glow);
+}
+
+.crio-symbol {
+    font-size: 2.5rem;
+    color: var(--connection);
+    line-height: 1;
+    opacity: 0;
+    animation: fadeInScale 0.5s ease forwards;
+}
+
+.crio-title {
+    flex: 1;
+    opacity: 0;
+    animation: fadeInRight 0.5s ease forwards 0.1s;
+}
+
+.crio-title h3 {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 1.4rem;
+    text-align: left;
+    color: var(--emergence);
+    transform: none;
+}
+
+.crio-subtitle {
+    margin: 0.2rem 0 0 0;
+    font-size: 0.75rem;
+    color: var(--emergence);
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Navigation Grid */
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.nav-grid-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.2rem 0.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--emergence);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-size: 0.85rem;
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.nav-grid-btn:nth-child(1) { animation: fadeInScale 0.4s ease forwards 0.2s; }
+.nav-grid-btn:nth-child(2) { animation: fadeInScale 0.4s ease forwards 0.3s; }
+.nav-grid-btn:nth-child(3) { animation: fadeInScale 0.4s ease forwards 0.4s; }
+.nav-grid-btn:nth-child(4) { animation: fadeInScale 0.4s ease forwards 0.5s; }
+
+.nav-grid-btn:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-grid-btn.ontologica:hover {
+    background: rgba(102, 204, 255, 0.1);
+    border-color: rgba(102, 204, 255, 0.5);
+}
+
+.nav-grid-btn.epistemica:hover {
+    background: rgba(255, 153, 102, 0.1);
+    border-color: rgba(255, 153, 102, 0.5);
+}
+
+.nav-grid-btn.fundacional:hover {
+    background: rgba(153, 102, 255, 0.1);
+    border-color: rgba(153, 102, 255, 0.5);
+}
+
+.nav-grid-btn.pratica:hover {
+    background: rgba(153, 204, 255, 0.1);
+    border-color: rgba(153, 204, 255, 0.5);
+}
+
+.nav-grid-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.nav-grid-label {
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.nav-description {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards 0.6s;
+}
+
+.nav-description p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--emergence);
+    opacity: 0.7;
+    font-style: italic;
 }
 
 .nav-action-text {

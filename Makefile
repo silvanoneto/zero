@@ -8,7 +8,21 @@ SRC_DIR := src
 help: ## Mostra esta mensagem de ajuda
 	@echo "📦 Rizoma - Comandos disponíveis:"
 	@echo ""
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2}'
+	@echo "🔧 DESENVOLVIMENTO:"
+	@grep -E '^(install|build|watch|dev|clean|clean-all|rebuild|server|stop):.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-20s\033[0m %s\n", $$1, $$2}'
+	@echo ""
+	@echo "🔗 ONTOLOGIA:"
+	@grep -E '^(validate|fix-relations|ontology|balance-verbs|normalize-connectivity|normalize-dry-run):.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-20s\033[0m %s\n", $$1, $$2}'
+	@echo ""
+	@echo "🧬 RELAÇÕES:"
+	@grep -E '^(propose-relations|apply-relations|diversify-relations):.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-20s\033[0m %s\n", $$1, $$2}'
+	@echo ""
+	@echo "📊 ANÁLISE:"
+	@grep -E '^(stats|stats-quick|stats-full|balance-check|analyze-clusters|check-unmapped|check-duplicates|coverage):.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-20s\033[0m %s\n", $$1, $$2}'
+	@echo ""
+	@echo "🔍 UTILITÁRIOS:"
+	@grep -E '^(server-status|logs|status|push|full-update):.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-20s\033[0m %s\n", $$1, $$2}'
+	@echo ""
 
 install: ## Instala dependências do projeto
 	@echo "📦 Instalando dependências..."
@@ -75,6 +89,86 @@ normalize-dry-run: ## Simula normalização sem salvar mudanças
 analyze-clusters: ## Analisa e demarca clusters para visualização no rizoma
 	@echo "🎨 Analisando clusters..."
 	@python3 scripts/analyze_clusters.py
+
+propose-relations: ## Propõe novas relações para conceitos sub-conectados
+	@echo "🔗 Propondo relações..."
+	@python3 scripts/propose_relations.py
+
+apply-relations: ## Aplica relações propostas (requer confirmação)
+	@echo "📥 Aplicando relações propostas..."
+	@python3 scripts/apply_new_relations.py
+
+diversify-relations: ## Diversifica relações existentes
+	@echo "🌈 Diversificando relações..."
+	@python3 scripts/diversify_relations.py
+
+check-unmapped: ## Verifica conceitos das referências não mapeados no rizoma
+	@echo "🔍 Verificando conceitos não mapeados..."
+	@node -e "const fs = require('fs'); \
+		const refs = JSON.parse(fs.readFileSync('assets/referencias.json', 'utf8')); \
+		const concepts = JSON.parse(fs.readFileSync('assets/concepts.json', 'utf8')); \
+		const normalize = (s) => { \
+			let n = s.toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); \
+			n = n.replace(/[-_]/g, ' ').replace(/\s+/g, ' ').trim(); \
+			let t = n.replace(/(?:ano|ana|anos|anas)$$/, ''); if (t.length >= 4) n = t; \
+			t = n.replace(/(?:ica|ico|icas|icos)$$/, ''); if (t.length >= 4) n = t; \
+			t = n.replace(/(?:ista|istas)$$/, ''); if (t.length >= 3) n = t; \
+			t = n.replace(/(?:ismo|ismos)$$/, ''); if (t.length >= 3) n = t; \
+			t = n.replace(/(?:al|ais)$$/, ''); if (t.length >= 4) n = t; \
+			t = n.replace(/(?:ia|ias)$$/, ''); if (t.length >= 4) n = t; \
+			t = n.replace(/(?:es|s)$$/, ''); if (t.length >= 3) n = t; \
+			return n; \
+		}; \
+		const allRefs = []; refs.forEach(r => { if (r.conceitos) allRefs.push(...r.conceitos); }); \
+		const map = new Map(); allRefs.forEach(c => { const n = normalize(c); if (!map.has(n)) map.set(n, c); }); \
+		const ids = new Set(concepts.map(c => normalize(c.id))); \
+		const unmapped = Array.from(map.values()).filter(c => !ids.has(normalize(c))); \
+		console.log('Total conceitos únicos nas referências:', map.size); \
+		console.log('Mapeados no rizoma:', map.size - unmapped.length, '(' + ((map.size - unmapped.length) / map.size * 100).toFixed(1) + '%)'); \
+		console.log('Não mapeados:', unmapped.length, '(' + (unmapped.length / map.size * 100).toFixed(1) + '%)'); \
+		if (unmapped.length > 0) { \
+			console.log('\nPrimeiros 20 não mapeados:'); \
+			unmapped.slice(0, 20).forEach((c, i) => console.log(' ', (i+1) + '.', c)); \
+		}"
+
+check-duplicates: ## Verifica conceitos duplicados nas referências
+	@echo "🔍 Verificando duplicatas..."
+	@node -e "const fs = require('fs'); \
+		const refs = JSON.parse(fs.readFileSync('assets/referencias.json', 'utf8')); \
+		const normalize = (s) => { \
+			let n = s.toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); \
+			n = n.replace(/[-_]/g, ' ').replace(/\s+/g, ' ').trim(); \
+			let t = n.replace(/(?:ano|ana|anos|anas)$$/, ''); if (t.length >= 4) n = t; \
+			t = n.replace(/(?:ica|ico|icas|icos)$$/, ''); if (t.length >= 4) n = t; \
+			t = n.replace(/(?:ista|istas)$$/, ''); if (t.length >= 3) n = t; \
+			t = n.replace(/(?:ismo|ismos)$$/, ''); if (t.length >= 3) n = t; \
+			t = n.replace(/(?:al|ais)$$/, ''); if (t.length >= 4) n = t; \
+			t = n.replace(/(?:ia|ias)$$/, ''); if (t.length >= 4) n = t; \
+			t = n.replace(/(?:es|s)$$/, ''); if (t.length >= 3) n = t; \
+			return n; \
+		}; \
+		const allRefs = []; refs.forEach(r => { if (r.conceitos) allRefs.push(...r.conceitos); }); \
+		const groups = new Map(); \
+		allRefs.forEach(c => { const n = normalize(c); if (!groups.has(n)) groups.set(n, []); groups.get(n).push(c); }); \
+		const dups = Array.from(groups.entries()) \
+			.filter(([_, items]) => items.length > 1) \
+			.map(([n, items]) => [n, [...new Set(items)]]) \
+			.filter(([_, items]) => items.length > 1) \
+			.sort((a, b) => b[1].length - a[1].length); \
+		console.log('Total conceitos:', allRefs.length); \
+		console.log('Grupos de duplicatas:', dups.length); \
+		if (dups.length > 0) { \
+			console.log('\nDuplicatas encontradas:'); \
+			dups.forEach(([n, items]) => console.log(' ', '[' + items.join(', ') + '] ->', n)); \
+		}"
+
+coverage: ## Mostra cobertura da integração PAÊBIRÚ ↔ Rizoma
+	@echo "📊 COBERTURA PAÊBIRÚ ↔ RIZOMA"
+	@echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+	@make check-unmapped
+	@echo ""
+	@make check-duplicates
+	@echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
 stats: ## Mostra estatísticas detalhadas da ontologia
 	@echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
@@ -181,6 +275,21 @@ push: ## Commit e push das mudanças
 	git add .
 	git commit -m "Update: ontologia validada e corrigida" || true
 	git push
+
+full-update: ## Fluxo completo: build + balance + validate + stats
+	@echo "🚀 ATUALIZAÇÃO COMPLETA DO RIZOMA"
+	@echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+	@make build
+	@echo ""
+	@make balance-verbs
+	@echo ""
+	@make validate
+	@echo ""
+	@make coverage
+	@echo ""
+	@make stats-quick
+	@echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+	@echo "✅ Atualização completa concluída!"
 
 status: ## Status do git e estatísticas da ontologia
 	@echo "📊 Status Git:"

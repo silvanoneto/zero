@@ -76,7 +76,7 @@
   },
   {
     "id": "badiou-1988",
-    "categoria": "sujeito-político",
+    "categoria": "política",
     "autor": "Badiou, Alain",
     "ano": "1988/2005",
     "titulo": "Being and Event",
@@ -124,7 +124,7 @@
   },
   {
     "id": "barcelona-2024",
-    "categoria": "governança",
+    "categoria": "política",
     "autor": "Taylor & Francis",
     "ano": 2024,
     "titulo": "Smart Barcelona: the gap between inspiring rhetoric and lackluster implementation",
@@ -196,7 +196,7 @@
   },
   {
     "id": "bourdieu-campo",
-    "categoria": "poder",
+    "categoria": "política",
     "autor": "Bourdieu, Pierre",
     "ano": 1984,
     "titulo": "Distinction: A Social Critique of the Judgement of Taste",
@@ -225,7 +225,7 @@
   },
   {
     "id": "butler-2004",
-    "categoria": "sujeito-político",
+    "categoria": "política",
     "autor": "Butler, Judith",
     "ano": 2004,
     "titulo": "Precarious Life: The Powers of Mourning and Violence",
@@ -239,7 +239,7 @@
   },
   {
     "id": "butler-2015",
-    "categoria": "sujeito-político",
+    "categoria": "política",
     "autor": "Butler, Judith",
     "ano": 2015,
     "titulo": "Notes Toward a Performative Theory of Assembly",
@@ -294,7 +294,7 @@
   },
   {
     "id": "castells-2011",
-    "categoria": "poder",
+    "categoria": "política",
     "autor": "Castells, Manuel",
     "ano": 2011,
     "titulo": "Network Theory: A Network Theory of Power",
@@ -310,7 +310,7 @@
   },
   {
     "id": "castoriadis-1975",
-    "categoria": "sujeito-político",
+    "categoria": "política",
     "autor": "Castoriadis, Cornelius",
     "ano": "1975/1987",
     "titulo": "The Imaginary Institution of Society",
@@ -352,7 +352,7 @@
   },
   {
     "id": "colombia-jep-2023",
-    "categoria": "direitos-da-natureza",
+    "categoria": "ética",
     "autor": "Colombia Special Jurisdiction for Peace",
     "ano": 2023,
     "titulo": "War Crimes Against Nature Ruling",
@@ -457,7 +457,7 @@
   },
   {
     "id": "ecuador-pachamama-2008",
-    "categoria": "direitos-da-natureza",
+    "categoria": "ética",
     "autor": "Ecuador Constitutional Assembly",
     "ano": 2008,
     "titulo": "Constitution of Ecuador - Rights of Nature",
@@ -560,7 +560,7 @@
   },
   {
     "id": "godel-1931",
-    "categoria": "recursão",
+    "categoria": "fundamentos",
     "autor": "Gödel, Kurt",
     "ano": 1931,
     "titulo": "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme",
@@ -588,7 +588,7 @@
   },
   {
     "id": "guzzini-2024",
-    "categoria": "poder",
+    "categoria": "política",
     "autor": "Guzzini, Stefano",
     "ano": 2024,
     "titulo": "Relationalism(s) Unpacked: Engaging Yaqing Qin's Theory of World Politics",
@@ -618,7 +618,7 @@
   },
   {
     "id": "haraway-1988",
-    "categoria": "epistemologia",
+    "categoria": "epistemológica",
     "autor": "Haraway, Donna",
     "ano": 1988,
     "titulo": "Situated Knowledges: The Science Question in Feminism",
@@ -694,7 +694,7 @@
   },
   {
     "id": "heidegger-1927",
-    "categoria": "tempo",
+    "categoria": "temporal",
     "autor": "Heidegger, Martin",
     "ano": 1927,
     "titulo": "Being and Time (Sein und Zeit)",
@@ -709,7 +709,7 @@
   },
   {
     "id": "heterarchy-archaeology-2025",
-    "categoria": "governança",
+    "categoria": "política",
     "autor": "Archaeological Studies",
     "ano": 2025,
     "titulo": "Heterarchy in 4th Millennium Eastern Europe",
@@ -723,7 +723,7 @@
   },
   {
     "id": "heterarquia-2025",
-    "categoria": "governança",
+    "categoria": "política",
     "autor": "Archaeological Research",
     "ano": 2025,
     "titulo": "Heterarchy in 4th Millennium BCE Eastern Europe",
@@ -737,7 +737,7 @@
   },
   {
     "id": "hofstadter-1979",
-    "categoria": "recursão",
+    "categoria": "fundamentos",
     "autor": "Hofstadter, Douglas",
     "ano": 1979,
     "titulo": "Gödel, Escher, Bach: An Eternal Golden Braid",
@@ -911,7 +911,7 @@
   },
   {
     "id": "luhmann-1984",
-    "categoria": "recursão",
+    "categoria": "fundamentos",
     "autor": "Luhmann, Niklas",
     "ano": "1984/1995",
     "titulo": "Social Systems",
@@ -1160,7 +1160,7 @@
   },
   {
     "id": "putnam-2004",
-    "categoria": "epistemologia",
+    "categoria": "epistemológica",
     "autor": "Putnam, Hilary",
     "ano": 2004,
     "titulo": "Ethics Without Ontology",
@@ -1189,7 +1189,7 @@
   },
   {
     "id": "ranciere-1995",
-    "categoria": "sujeito-político",
+    "categoria": "política",
     "autor": "Rancière, Jacques",
     "ano": "1995/1999",
     "titulo": "Disagreement: Politics and Philosophy",
@@ -1218,7 +1218,7 @@
   },
   {
     "id": "richter-2019",
-    "categoria": "decrescimento",
+    "categoria": "economia",
     "autor": "Richter, Kristina",
     "ano": 2019,
     "titulo": "Degrowth and Anthropocentrism",
@@ -1442,7 +1442,7 @@
   },
   {
     "id": "stout-2021",
-    "categoria": "governança",
+    "categoria": "política",
     "autor": "Stout, Margaret",
     "ano": 2021,
     "titulo": "Relational leadership in collaborative governance ecosystems",
@@ -1472,7 +1472,7 @@
   },
   {
     "id": "te-awa-tupua-2017",
-    "categoria": "direitos-da-natureza",
+    "categoria": "ética",
     "autor": "Parliament of New Zealand",
     "ano": 2017,
     "titulo": "Te Awa Tupua (Whanganui River Claims Settlement) Act",
@@ -1486,7 +1486,7 @@
   },
   {
     "id": "te-urewera-2014",
-    "categoria": "direitos-da-natureza",
+    "categoria": "ética",
     "autor": "Parliament of New Zealand",
     "ano": 2014,
     "titulo": "Te Urewera Act",
@@ -1500,7 +1500,7 @@
   },
   {
     "id": "thompson-1963",
-    "categoria": "sujeito-político",
+    "categoria": "política",
     "autor": "Thompson, E.P.",
     "ano": 1963,
     "titulo": "The Making of the English Working Class",
@@ -1544,7 +1544,7 @@
   },
   {
     "id": "vandeventer-lloveras-2021",
-    "categoria": "decrescimento",
+    "categoria": "economia",
     "autor": "Vandeventer, J.S. & Lloveras, F.J.",
     "ano": 2021,
     "titulo": "Degrowth as Boundary Object",
@@ -1606,7 +1606,7 @@
   },
   {
     "id": "wheeler-1983",
-    "categoria": "tempo",
+    "categoria": "temporal",
     "autor": "Wheeler, John A.",
     "ano": 1983,
     "titulo": "Law without Law (em Quantum Theory and Measurement)",
@@ -1620,7 +1620,7 @@
   },
   {
     "id": "white-1973",
-    "categoria": "tempo",
+    "categoria": "temporal",
     "autor": "White, Hayden",
     "ano": 1973,
     "titulo": "Metahistory: The Historical Imagination in Nineteenth-Century Europe",
@@ -2003,7 +2003,7 @@
   },
   {
     "id": "foucault-1966",
-    "categoria": "epistemica",
+    "categoria": "epistemológica",
     "autor": "Foucault, Michel",
     "ano": 1966,
     "titulo": "Les Mots et les Choses",
@@ -2150,7 +2150,7 @@
   },
   {
     "id": "barad-2007",
-    "categoria": "onto-epistemológica",
+    "categoria": "epistemológica",
     "autor": "Barad, Karen",
     "ano": 2007,
     "titulo": "Meeting the Universe Halfway: Quantum Physics and the Entanglement of Matter and Meaning",
@@ -2182,7 +2182,7 @@
   },
   {
     "id": "sharma-2014",
-    "categoria": "temporal-política",
+    "categoria": "temporal",
     "autor": "Sharma, Sarah",
     "ano": 2014,
     "titulo": "In the Meantime: Temporality and Cultural Politics",
@@ -2214,7 +2214,7 @@
   },
   {
     "id": "marx-1867",
-    "categoria": "metabolismo",
+    "categoria": "ecológica",
     "autor": "Marx, Karl",
     "ano": 1867,
     "titulo": "O Capital, Volume I",
@@ -2229,7 +2229,7 @@
   },
   {
     "id": "via-campesina-1996",
-    "categoria": "soberania-alimentar",
+    "categoria": "praxis",
     "autor": "Via Campesina",
     "ano": 1996,
     "titulo": "Food Sovereignty: A Future Without Hunger",
@@ -2245,7 +2245,7 @@
   },
   {
     "id": "robinson-2018",
-    "categoria": "justiça-climática",
+    "categoria": "ética",
     "autor": "Robinson, Mary",
     "ano": 2018,
     "titulo": "Climate Justice: Hope, Resilience, and the Fight for a Sustainable Future",
@@ -2260,7 +2260,7 @@
   },
   {
     "id": "klein-2014",
-    "categoria": "justiça-climática",
+    "categoria": "ética",
     "autor": "Klein, Naomi",
     "ano": 2014,
     "titulo": "This Changes Everything: Capitalism vs. The Climate",
@@ -2276,7 +2276,7 @@
   },
   {
     "id": "singer-2002",
-    "categoria": "economia-solidária",
+    "categoria": "economia",
     "autor": "Singer, Paul",
     "ano": 2002,
     "titulo": "Introdução à Economia Solidária",
@@ -2292,7 +2292,7 @@
   },
   {
     "id": "gibson-graham-2006",
-    "categoria": "economia-diversa",
+    "categoria": "economia",
     "autor": "Gibson-Graham, J.K.",
     "ano": 2006,
     "titulo": "A Postcapitalist Politics",
@@ -2307,7 +2307,7 @@
   },
   {
     "id": "ostrom-1990",
-    "categoria": "commons",
+    "categoria": "economia",
     "autor": "Ostrom, Elinor",
     "ano": 1990,
     "titulo": "Governing the Commons: The Evolution of Institutions for Collective Action",
@@ -2322,7 +2322,7 @@
   },
   {
     "id": "easterling-2014",
-    "categoria": "infraestrutura",
+    "categoria": "tecnologia",
     "autor": "Easterling, Keller",
     "ano": 2014,
     "titulo": "Extrastatecraft: The Power of Infrastructure Space",
@@ -2336,7 +2336,7 @@
   },
   {
     "id": "benyus-1997",
-    "categoria": "biomimética",
+    "categoria": "ecológica",
     "autor": "Benyus, Janine M.",
     "ano": 1997,
     "titulo": "Biomimicry: Innovation Inspired by Nature",
@@ -2351,7 +2351,7 @@
   },
   {
     "id": "altieri-1995",
-    "categoria": "agroecologia",
+    "categoria": "ecológica",
     "autor": "Altieri, Miguel A.",
     "ano": 1995,
     "titulo": "Agroecology: The Science of Sustainable Agriculture",
@@ -2367,7 +2367,7 @@
   },
   {
     "id": "shiva-1991",
-    "categoria": "agroecologia",
+    "categoria": "ecológica",
     "autor": "Shiva, Vandana",
     "ano": 1991,
     "titulo": "The Violence of the Green Revolution",
@@ -2383,7 +2383,7 @@
   },
   {
     "id": "mollison-1988",
-    "categoria": "permacultura",
+    "categoria": "ecológica",
     "autor": "Mollison, Bill",
     "ano": 1988,
     "titulo": "Permaculture: A Designers' Manual",
@@ -2399,7 +2399,7 @@
   },
   {
     "id": "holmgren-2002",
-    "categoria": "permacultura",
+    "categoria": "ecológica",
     "autor": "Holmgren, David",
     "ano": 2002,
     "titulo": "Permaculture: Principles and Pathways Beyond Sustainability",
@@ -2414,7 +2414,7 @@
   },
   {
     "id": "maathai-2006",
-    "categoria": "regeneração",
+    "categoria": "ecológica",
     "autor": "Maathai, Wangari",
     "ano": 2006,
     "titulo": "Unbowed: A Memoir",
@@ -2429,7 +2429,7 @@
   },
   {
     "id": "margulis-1998",
-    "categoria": "ciclos-biogeoquímicos",
+    "categoria": "ecológica",
     "autor": "Margulis, Lynn; Sagan, Dorion",
     "ano": 1998,
     "titulo": "What Is Life?",
@@ -2444,7 +2444,7 @@
   },
   {
     "id": "tsing-2015",
-    "categoria": "sucessão-ecológica",
+    "categoria": "ecológica",
     "autor": "Tsing, Anna Lowenhaupt",
     "ano": 2015,
     "titulo": "The Mushroom at the End of the World",
@@ -2459,7 +2459,7 @@
   },
   {
     "id": "kropotkin-1902",
-    "categoria": "mutualismo",
+    "categoria": "ecológica",
     "autor": "Kropotkin, Piotr",
     "ano": 1902,
     "titulo": "Mutual Aid: A Factor of Evolution",
@@ -2474,7 +2474,7 @@
   },
   {
     "id": "zuboff-2019",
-    "categoria": "tecnologia-digital",
+    "categoria": "tecnologia",
     "autor": "Zuboff, Shoshana",
     "ano": 2019,
     "titulo": "The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power",
@@ -2490,7 +2490,7 @@
   },
   {
     "id": "ibn-arabi-1165",
-    "categoria": "misticismo-islâmico",
+    "categoria": "vazio",
     "autor": "Ibn Arabi, Muhyiddin",
     "ano": 1165,
     "titulo": "Al-Futuhat al-Makkiyya (The Meccan Revelations)",
@@ -2505,7 +2505,7 @@
   },
   {
     "id": "eckhart-1260",
-    "categoria": "misticismo-cristão",
+    "categoria": "vazio",
     "autor": "Eckhart, Meister",
     "ano": 1260,
     "titulo": "Sermões e Tratados",
@@ -2520,7 +2520,7 @@
   },
   {
     "id": "simard-finding-mother-tree",
-    "categoria": "ecologia",
+    "categoria": "ecológica",
     "autor": "Simard, Suzanne",
     "ano": 2021,
     "titulo": "Finding the Mother Tree: Discovering the Wisdom of the Forest",
@@ -2536,7 +2536,7 @@
   },
   {
     "id": "gilbert-holobiont",
-    "categoria": "biologia",
+    "categoria": "fundamentos",
     "autor": "Gilbert, Scott F., Sapp, Jan & Tauber, Alfred I.",
     "ano": 2012,
     "titulo": "A Symbiotic View of Life: We Have Never Been Individuals",
@@ -2552,7 +2552,7 @@
   },
   {
     "id": "rockstrom-planetary-boundaries",
-    "categoria": "ecologia",
+    "categoria": "ecológica",
     "autor": "Rockström, Johan et al.",
     "ano": 2009,
     "titulo": "Planetary Boundaries: Exploring the Safe Operating Space for Humanity",
@@ -2568,7 +2568,7 @@
   },
   {
     "id": "illich-1973",
-    "categoria": "filosofia-tecnologia",
+    "categoria": "tecnologia",
     "autor": "Illich, Ivan",
     "ano": 1973,
     "titulo": "Tools for Conviviality",
@@ -2584,7 +2584,7 @@
   },
   {
     "id": "posina-roy-category-theory",
-    "categoria": "budismo-matemática",
+    "categoria": "vazio",
     "autor": "Posina, Vamsi & Roy, Subhadip",
     "ano": 2020,
     "titulo": "Category Theory and Buddhist Philosophy: Parallels Between Śūnyatā and Mathematical Structures",
@@ -2648,7 +2648,7 @@
   },
   {
     "id": "loomio-platform",
-    "categoria": "tecnologia-digital",
+    "categoria": "tecnologia",
     "autor": "Loomio Cooperative",
     "ano": 2012,
     "titulo": "Loomio: Decision-Making Platform",
@@ -2664,7 +2664,7 @@
   },
   {
     "id": "decidim-platform",
-    "categoria": "tecnologia-digital",
+    "categoria": "tecnologia",
     "autor": "Decidim Team",
     "ano": 2016,
     "titulo": "Decidim: Participatory Democracy Platform",
@@ -2680,7 +2680,7 @@
   },
   {
     "id": "polis-platform",
-    "categoria": "tecnologia-digital",
+    "categoria": "tecnologia",
     "autor": "Pol.is Team",
     "ano": 2012,
     "titulo": "Pol.is: Real-time Opinion Mapping",
@@ -2786,7 +2786,7 @@
   },
   {
     "id": "santos-2007",
-    "categoria": "epistemologia",
+    "categoria": "epistemológica",
     "autor": "Santos, Boaventura de Sousa",
     "ano": 2007,
     "titulo": "Beyond Abyssal Thinking: From Global Lines to Ecologies of Knowledges",
@@ -2801,7 +2801,7 @@
   },
   {
     "id": "mignolo-2011",
-    "categoria": "decolonialidade",
+    "categoria": "política",
     "autor": "Mignolo, Walter D.",
     "ano": 2011,
     "titulo": "The Darker Side of Western Modernity: Global Futures, Decolonial Options",
@@ -2816,7 +2816,7 @@
   },
   {
     "id": "singer-1998",
-    "categoria": "neurodiversidade",
+    "categoria": "ética",
     "autor": "Singer, Judy",
     "ano": 1998,
     "titulo": "Odd People In: The Birth of Community Amongst People on the Autistic Spectrum",
@@ -2831,7 +2831,7 @@
   },
   {
     "id": "chapman-2020",
-    "categoria": "neurodiversidade",
+    "categoria": "ética",
     "autor": "Chapman, Robert",
     "ano": 2020,
     "titulo": "The Reality of Autism: On the Metaphysics of Disorder and Diversity",
@@ -2846,7 +2846,7 @@
   },
   {
     "id": "hofstadter-1979",
-    "categoria": "recursão",
+    "categoria": "fundamentos",
     "autor": "Hofstadter, Douglas",
     "ano": 1979,
     "titulo": "Gödel, Escher, Bach: An Eternal Golden Braid",
@@ -2861,7 +2861,7 @@
   },
   {
     "id": "luhmann-1984",
-    "categoria": "sistemas",
+    "categoria": "fundamentos",
     "autor": "Luhmann, Niklas",
     "ano": "1984/1995",
     "titulo": "Social Systems",
@@ -2876,7 +2876,7 @@
   },
   {
     "id": "scott-1985",
-    "categoria": "resistência",
+    "categoria": "política",
     "autor": "Scott, James C.",
     "ano": 1985,
     "titulo": "Weapons of the Weak: Everyday Forms of Peasant Resistance",
@@ -2891,7 +2891,7 @@
   },
   {
     "id": "combahee-1977",
-    "categoria": "feminismo",
+    "categoria": "ética",
     "autor": "Combahee River Collective",
     "ano": 1977,
     "titulo": "A Black Feminist Statement",
@@ -2905,7 +2905,7 @@
   },
   {
     "id": "crenshaw-1989",
-    "categoria": "feminismo",
+    "categoria": "ética",
     "autor": "Crenshaw, Kimberlé",
     "ano": 1989,
     "titulo": "Demarginalizing the Intersection of Race and Sex: A Black Feminist Critique of Antidiscrimination Doctrine",
@@ -2920,7 +2920,7 @@
   },
   {
     "id": "taylor-2017",
-    "categoria": "feminismo",
+    "categoria": "ética",
     "autor": "Taylor, Keeanga-Yamahtta",
     "ano": 2017,
     "titulo": "How We Get Free: Black Feminism and the Combahee River Collective",
@@ -2935,7 +2935,7 @@
   },
   {
     "id": "meadows-1999",
-    "categoria": "sistemas",
+    "categoria": "fundamentos",
     "autor": "Meadows, Donella H.",
     "ano": 1999,
     "titulo": "Leverage Points: Places to Intervene in a System",
