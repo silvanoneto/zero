@@ -57,6 +57,9 @@ fix-relations: ## Corrige relações quebradas após mesclas
 
 ontology: validate ## Alias para validate
 
+balance-check: ## Analisa balanceamento das camadas ontológicas
+	@python3 scripts/analyze_balance.py
+
 stats: ## Mostra estatísticas detalhadas da ontologia
 	@echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 	@echo "📊 ESTATÍSTICAS COMPLETAS DA ONTOLOGIA CRIOS"
@@ -98,6 +101,7 @@ stats: ## Mostra estatísticas detalhadas da ontologia
 	@echo ""
 	@echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 	@echo "✨ Use 'make stats-full' para análise completa com gráficos"
+	@echo "✨ Use 'make balance-check' para verificar balanceamento de camadas"
 	@echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
 stats-quick: ## Estatísticas resumidas (visualização rápida)
@@ -133,6 +137,12 @@ stats-full: ## Análise completa com distribuições e correlações
 	@echo ""
 	@echo "⚖️ BALANCEAMENTO ENTRE CAMADAS"
 	@cat assets/concepts.json | jq -r '.[] | .layer' | sort | uniq -c | sort -rn | awk 'BEGIN {max=0} {if($$1>max) max=$$1} {printf "  • %-20s %3d conceitos ", $$2":", $$1; bar=int($$1*30/max); for(i=0;i<bar;i++) printf "█"; printf "\n"}'
+	@python3 -c "import json; from collections import Counter; \
+	with open('assets/concepts.json', 'r', encoding='utf-8') as f: concepts = json.load(f); \
+	counts = list(Counter(c['layer'] for c in concepts).values()); \
+	ratio = max(counts) / min(counts); \
+	status = '✅ BOM' if ratio < 3 else '⚠️  MODERADO' if ratio < 5 else '❌ CRÍTICO'; \
+	print(f'  Razão max/min: {ratio:.2f}x {status}')"
 	@echo ""
 	@echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 

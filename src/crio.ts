@@ -453,7 +453,7 @@ function updateActiveMarkers(): void {
             link.classList.remove('completed');
             li.classList.remove('completed');
             if (progressBar) {
-                progressBar.style.width = `${maxProgress}%`;
+                progressBar.style.transform = `scaleX(${maxProgress / 100})`;
             }
         } else if (index < activeIndex) {
             link.classList.remove('active');
@@ -461,13 +461,13 @@ function updateActiveMarkers(): void {
             li.classList.remove('active');
             li.classList.add('completed');
             if (progressBar) {
-                progressBar.style.width = '100%';
+                progressBar.style.transform = 'scaleX(1)';
             }
         } else {
             link.classList.remove('active', 'completed');
             li.classList.remove('active', 'completed');
             if (progressBar) {
-                progressBar.style.width = '0%';
+                progressBar.style.transform = 'scaleX(0)';
             }
         }
     });
@@ -832,17 +832,28 @@ function initProgressBar(): void {
     
     console.log('Inicializando barra de progresso');
     
-    window.addEventListener('scroll', () => {
-        const windowHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        const progress = (scrollTop / (documentHeight - windowHeight)) * 100;
-        const clampedProgress = Math.min(Math.max(progress, 0), 100);
-        
-        progressBar.style.width = `${clampedProgress}%`;
-        progressText.textContent = `${Math.round(clampedProgress)}%`;
-    });
+    // Throttle and use transform for progress updates
+    let ticking = false;
+    let lastPos = 0;
+    const onScroll = () => {
+        lastPos = window.pageYOffset || document.documentElement.scrollTop || 0;
+        if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(() => {
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.documentElement.scrollHeight;
+                const progress = (lastPos / (documentHeight - windowHeight)) * 100;
+                const clampedProgress = Math.min(Math.max(progress, 0), 100);
+
+                progressBar.style.transform = `scaleX(${clampedProgress / 100})`;
+                progressBar.parentElement?.setAttribute('aria-valuenow', String(Math.round(clampedProgress)));
+                progressText.textContent = `${Math.round(clampedProgress)}%`;
+
+                ticking = false;
+            });
+        }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
 }
 
 // Alternar tema

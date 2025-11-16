@@ -331,22 +331,43 @@ function activateConceptLinks(element: HTMLElement): void {
 
     console.log(`${nodesToProcess.length} nós de texto encontrados`);
     
+    // Processar em blocos para evitar travar a UI em documentos muito grandes
+    const CHUNK_SIZE = 200;
     let linksCreated = 0;
-    for (const textNode of nodesToProcess) {
-        const fragments = linkifyText(textNode.textContent || '', conceptMap);
-        if (fragments.length > 1 || (fragments.length === 1 && fragments[0] instanceof HTMLElement)) {
-            const parent = textNode.parentNode;
-            if (parent) {
-                fragments.forEach(fragment => {
-                    parent.insertBefore(fragment, textNode);
-                    if (fragment instanceof HTMLElement) linksCreated++;
-                });
-                parent.removeChild(textNode);
+    let index = 0;
+
+    const processChunk = () => {
+        const end = Math.min(index + CHUNK_SIZE, nodesToProcess.length);
+        for (let i = index; i < end; i++) {
+            const textNode = nodesToProcess[i];
+            const fragments = linkifyText(textNode.textContent || '', conceptMap);
+            if (fragments.length > 1 || (fragments.length === 1 && fragments[0] instanceof HTMLElement)) {
+                const parent = textNode.parentNode;
+                if (parent) {
+                    fragments.forEach(fragment => {
+                        parent.insertBefore(fragment, textNode);
+                        if (fragment instanceof HTMLElement) linksCreated++;
+                    });
+                    parent.removeChild(textNode);
+                }
             }
         }
-    }
-    
-    console.log(`✓ ${linksCreated} links criados`);
+
+        index = end;
+
+        if (index < nodesToProcess.length) {
+            // Use requestIdleCallback if disponível para processar sem bloquear
+            if (typeof (window as any).requestIdleCallback === 'function') {
+                (window as any).requestIdleCallback(processChunk, { timeout: 50 });
+            } else {
+                setTimeout(processChunk, 15);
+            }
+        } else {
+            console.log(`✓ ${linksCreated} links criados`);
+        }
+    };
+
+    processChunk();
 }
 
 /**
@@ -884,26 +905,51 @@ function init(): void {
             exportAsEpub();
         });
     }
+
+    // Debounced resize to recalculate nav and avoid layout thrash
+    const resizeTimeouts: { id?: number } = {};
+    const onResize = () => {
+        if (resizeTimeouts.id) window.clearTimeout(resizeTimeouts.id);
+        resizeTimeouts.id = window.setTimeout(() => {
+            console.log('Window resized — reinitializing navigation');
+            initializeNavigation();
+        }, 150) as unknown as number;
+    };
+    window.addEventListener('resize', onResize, { passive: true });
     
     // Inicializar autoscroll
     initAutoScroll();
     
-    // Progress bar
-    window.addEventListener('scroll', () => {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        
-        const progressFill = document.querySelector('.progress-bar-fill') as HTMLElement;
-        if (progressFill) {
-            progressFill.style.width = scrolled + '%';
+    // Progress bar updates - throttled with requestAnimationFrame for smoother updates
+    const progressFill = document.querySelector('.progress-bar-fill') as HTMLElement | null;
+    const readingProgress = document.getElementById('reading-progress');
+    let ticking = false;
+    let lastScrollY = 0;
+
+    const onScroll = () => {
+        lastScrollY = window.scrollY || document.body.scrollTop || document.documentElement.scrollTop;
+        if (!ticking) {
+            ticking = true;
+            window.requestAnimationFrame(() => {
+                const height = Math.max(1, document.documentElement.scrollHeight - document.documentElement.clientHeight);
+                const scrolled = Math.max(0, Math.min(100, (lastScrollY / height) * 100));
+
+                if (progressFill) {
+                    progressFill.style.transform = `scaleX(${scrolled / 100})`;
+                    const progressParent = progressFill.parentElement;
+                    if (progressParent) progressParent.setAttribute('aria-valuenow', String(Math.round(scrolled)));
+                }
+
+                if (readingProgress) {
+                    readingProgress.textContent = `${Math.round(scrolled)}%`;
+                }
+
+                ticking = false;
+            });
         }
-        
-        const readingProgress = document.getElementById('reading-progress');
-        if (readingProgress) {
-            readingProgress.textContent = Math.round(scrolled) + '%';
-        }
-    });
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
     
     // Fechar navegação ao clicar fora em mobile
     document.addEventListener('click', (e) => {
@@ -924,6 +970,7 @@ function init(): void {
 
 let autoScrollActive = false;
 let autoScrollInterval: number | null = null;
+let autoScrollRaf: number | null = null;
 const AUTO_SCROLL_SPEED = 0.3; // pixels por frame (ajustável)
 const AUTO_SCROLL_FPS = 60;
 
@@ -970,6 +1017,14 @@ function initAutoScroll(): void {
             }, 2000);
         }
     }, { passive: true });
+
+    // Também observar toques (mobile) para pausar autoscroll
+    window.addEventListener('touchstart', () => {
+        if (autoScrollActive) {
+            console.log('Toque detectado - pausando autoscroll');
+            pauseAutoScroll();
+        }
+    }, { passive: true });
 }
 
 function toggleAutoScroll(): void {
@@ -994,30 +1049,42 @@ function toggleAutoScroll(): void {
 }
 
 function startAutoScroll(): void {
-    if (autoScrollInterval) return;
-    
-    autoScrollInterval = window.setInterval(() => {
+    if (autoScrollRaf) return; // already running
+
+    // Convert speed to pixels per second (approx)
+    const speedPerSecond = AUTO_SCROLL_SPEED * AUTO_SCROLL_FPS;
+    let lastTime = performance.now();
+
+    function step(now: number) {
+        if (!autoScrollActive) {
+            autoScrollRaf = null;
+            return;
+        }
+
+        const delta = (now - lastTime) / 1000; // seconds
+        lastTime = now;
+        const distance = speedPerSecond * delta;
+
         const currentScroll = window.scrollY;
         const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-        
+
         if (currentScroll >= maxScroll) {
-            // Chegou no final - desativar
             console.log('Fim da página alcançado - desativando autoscroll');
             toggleAutoScroll();
             return;
         }
-        
-        window.scrollBy({
-            top: AUTO_SCROLL_SPEED,
-            behavior: 'auto'
-        });
-    }, 1000 / AUTO_SCROLL_FPS);
+
+        window.scrollBy({ top: distance, behavior: 'auto' });
+        autoScrollRaf = window.requestAnimationFrame(step);
+    }
+
+    autoScrollRaf = window.requestAnimationFrame(step);
 }
 
 function stopAutoScroll(): void {
-    if (autoScrollInterval) {
-        clearInterval(autoScrollInterval);
-        autoScrollInterval = null;
+    if (autoScrollRaf) {
+        cancelAnimationFrame(autoScrollRaf);
+        autoScrollRaf = null;
     }
 }
 

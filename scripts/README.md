@@ -54,17 +54,48 @@ make fix-relations
 
 ---
 
+### `analyze_balance.py`
+**Script de análise de balanceamento de camadas**
+
+Analisa a distribuição de conceitos entre as camadas ontológicas:
+
+- 📊 Distribuição percentual por camada
+- 📈 Métricas estatísticas (média, mediana, desvio padrão)
+- ⚖️  Razão max/min (índice de balanceamento)
+- 🎯 Identificação de camadas sobre/sub-representadas
+- ✅ Status de balanceamento (BOM/MODERADO/CRÍTICO)
+
+**Uso:**
+```bash
+python3 scripts/analyze_balance.py
+# ou via Make
+make balance-check
+```
+
+**Thresholds:**
+- Razão < 3.0x: ✅ Balanceamento BOM
+- Razão 3.0-5.0x: ⚠️  Balanceamento MODERADO
+- Razão > 5.0x: ❌ Desbalanceamento CRÍTICO
+
+---
+
 ## 🎯 Comandos Make
 
 ```bash
 # Validação completa
 make validate
 
+# Análise de balanceamento
+make balance-check
+
 # Correção de relações
 make fix-relations
 
 # Estatísticas rápidas
 make stats
+
+# Estatísticas completas
+make stats-full
 ```
 
 ---
@@ -79,14 +110,16 @@ make stats
 
 ### Camadas Ontológicas
 
-1. **fundacional** (37) - Base filosófica e conceitual
-2. **ontologica** (59) - Natureza do ser relacional
-3. **epistemica** (23) - Conhecimento e cognição
-4. **politica** (55) - Organização e poder
-5. **etica** (9) - Valores e responsabilidade
-6. **temporal** (9) - Tempo e história
-7. **ecologica** (17) - Relações multiespécies
-8. **pratica** (37) - Implementações e práticas
+1. **fundacional** (49) - Base filosófica e conceitual
+2. **ontologica** (74) - Natureza do ser relacional
+3. **epistemica** (46) - Conhecimento e cognição
+4. **politica** (70) - Organização e poder
+5. **etica** (22) - Valores e responsabilidade
+6. **temporal** (37) - Tempo e história
+7. **ecologica** (29) - Relações multiespécies
+8. **pratica** (61) - Implementações e práticas
+
+**Balanceamento:** Razão max/min 3.36x (MODERADO/BOM)
 
 ---
 
@@ -229,4 +262,4 @@ make validate
 ---
 
 **Última atualização:** Novembro 2025  
-**Conceitos:** 246 | **Relações:** 1231 | **Camadas:** 8
+**Conceitos:** 388 | **Relações:** 1782 | **Camadas:** 8 | **Balanceamento:** 3.36x

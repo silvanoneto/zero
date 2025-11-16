@@ -93,16 +93,27 @@ const DIMMED_OPACITY = 0.08;       // Nós distantes - drasticamente reduzido pa
 // SISTEMA DE MOVIMENTO SOBRE A REDE (CAOS)
 // ============================================================================
 const nodeMovement = new Map(); // Map<nodeId, {targetNode, progress, speed}>
-const WALK_SPEED = 0.002; // Velocidade base de caminhada (reduzida de 0.005)
-const MAX_VELOCITY = 3.0; // Velocidade máxima absoluta por frame (unidades de distância)
-const PATH_CHANGE_INTERVAL = 3000; // Trocar de direção a cada 3 segundos
-const REPULSION_FORCE = 15; // Força de repulsão entre nós (antigravidade) - reduzido
-const REPULSION_DISTANCE = 80; // Distância mínima antes de aplicar repulsão - aumentado para mais espaço (era 50)
+const WALK_SPEED = 0.006; // Velocidade aumentada - mais dinâmico
+const MAX_VELOCITY = 5.0; // Velocidade máxima permitida
+const PATH_CHANGE_INTERVAL = 2500; // Trocar de direção mais frequentemente
 
-// LIMITES DE ARESTA (MOLAS ELÁSTICAS)
-const MIN_EDGE_LENGTH = 50; // Distância mínima - aumentada para mais espaço (era 40)
-const MAX_EDGE_LENGTH = 400; // Distância máxima - dobrada para permitir arestas mais longas que percorrem o globo
-const SPRING_STRENGTH = 0.08; // Força da "mola" reduzida para maior elasticidade
+// FORÇAS RELACIONAIS - Sistema de gravitação conceitual
+const REPULSION_FORCE = 5; // Repulsão muito suave - permite clusters densos
+const REPULSION_DISTANCE = 50; // Distância mínima reduzida
+const ATTRACTION_FORCE = 0.28; // Atração forte - puxa conectados para perto
+const ATTRACTION_DISTANCE = 130; // Distância ótima compacta
+
+// MOLAS RELACIONAIS - Vínculos elásticos entre conceitos (TENSIONALIDADE DOS FIOS)
+const MIN_EDGE_LENGTH = 25; // Tensão mínima - permite maior compressão
+const MAX_EDGE_LENGTH = 170; // Tensão máxima - limite mais rígido
+const SPRING_STRENGTH = 0.20; // Elasticidade aumentada - molas mais responsivas
+const SPRING_DAMPING = 0.88; // Amortecimento reduzido - movimento mais vivo
+const DAMPING = 0.85; // Amortecimento geral reduzido - mais movimento orgânico
+
+// COESÃO DE CAMADA - Atração adicional entre conceitos da mesma camada ontológica
+const LAYER_COHESION = 0.12; // Força de coesão aumentada - camadas mais coesas
+const LAYER_COHESION_DISTANCE = 170; // Distância reduzida - coesão mais próxima
+
 let lastPathChange = 0;
 let repulsionCounter = 0; // Contador para aplicar repulsão com menos frequência
 
@@ -533,7 +544,7 @@ function createNodes() {
     // Geometria compartilhada com menos segmentos para melhor performance
     const sharedGeometry = new THREE.SphereGeometry(20, 16, 16); // Reduz de 32 para 16 segmentos
 
-    // Agrupar conceitos por camada para criar clusters iniciais
+    // Agrupar conceitos por camada
     const conceptsByLayer = new Map();
     concepts.forEach(concept => {
         const layer = concept.layer || 'undefined';
@@ -543,36 +554,53 @@ function createNodes() {
         conceptsByLayer.get(layer).push(concept);
     });
 
-    // Definir posições centrais para cada camada (distribuídas ao redor da esfera)
-    const layerCenters = new Map();
     const layers = Array.from(conceptsByLayer.keys());
+    console.log(`🎨 Distribuindo ${concepts.length} conceitos em ${layers.length} camadas:`, 
+                Array.from(conceptsByLayer.entries()).map(([l, c]) => `${l}:${c.length}`).join(', '));
+
+    // DISTRIBUIÇÃO HÍBRIDA: Clusters por camada com raio proporcional ao número de conceitos
+    // Calcular raio do cluster baseado na proporção de conceitos
+    const calculateClusterRadius = (layerSize: number, totalSize: number): number => {
+        // Raio proporcional à raiz cúbica do número de conceitos (volume esférico)
+        // Volume de esfera = 4/3 * π * r³
+        // Para distribuir área uniformemente: r ∝ ³√(n)
+        const proportion = Math.cbrt(layerSize / totalSize);
+        return proportion * 0.85; // 85% do raio máximo para evitar sobreposição
+    };
+
+    // Posicionar centros dos clusters uniformemente na esfera usando Fibonacci
+    const layerCenters = new Map();
     layers.forEach((layer, idx) => {
         const phi = Math.acos(1 - 2 * (idx + 0.5) / layers.length);
         const theta = Math.PI * (1 + Math.sqrt(5)) * idx;
         
+        const layerSize = conceptsByLayer.get(layer).length;
+        const clusterRadius = calculateClusterRadius(layerSize, concepts.length);
+        
         layerCenters.set(layer, {
             x: Math.sin(phi) * Math.cos(theta),
             y: Math.sin(phi) * Math.sin(theta),
-            z: Math.cos(phi)
+            z: Math.cos(phi),
+            radius: clusterRadius
         });
+        
+        console.log(`  📍 ${layer}: ${layerSize} conceitos, raio do cluster: ${(clusterRadius * 100).toFixed(1)}%`);
     });
-
-    console.log(`🎨 Criando ${layers.length} clusters por camada:`, layers);
 
     concepts.forEach((concept, i) => {
         const layer = concept.layer || 'undefined';
         const layerConcepts = conceptsByLayer.get(layer);
         const layerIndex = layerConcepts.indexOf(concept);
         
-        // Centro do cluster da camada
+        // Centro e raio do cluster da camada
         const center = layerCenters.get(layer);
+        const clusterRadius = center.radius;
         
-        // Distribuição Fibonacci dentro do cluster (esfera menor ao redor do centro)
-        const clusterRadius = 0.4; // 40% do raio total para cada cluster
+        // Distribuição Fibonacci DENTRO do cluster com raio proporcional
         const phi = Math.acos(1 - 2 * (layerIndex + 0.5) / layerConcepts.length);
         const theta = Math.PI * (1 + Math.sqrt(5)) * layerIndex;
         
-        // Posição local dentro do cluster
+        // Posição local dentro do cluster (esfera menor)
         const localX = clusterRadius * Math.sin(phi) * Math.cos(theta);
         const localY = clusterRadius * Math.sin(phi) * Math.sin(theta);
         const localZ = clusterRadius * Math.cos(phi);
@@ -617,8 +645,8 @@ function createNodes() {
             ...concept,
             originalColor: concept.color,
             originalEmissive: 0.3,
-            originalPosition: new THREE.Vector3(finalX, finalY, finalZ), // Salvar posição inicial do cluster
-            layerCenter: center // Salvar centro do cluster para referência
+            originalPosition: new THREE.Vector3(finalX, finalY, finalZ), // Posição inicial na esfera
+            layerCenter: center // Centro do cluster para referência visual
         };
 
         scene.add(sphere);
@@ -995,6 +1023,7 @@ function updateLineColors() {
 /**
  * Aplica forças de mola nas arestas para manter distâncias min/max
  * PONDERADO: Considera o peso dos nós (número de conexões) para inércia
+ * TENSIONALIDADE: Os fios do rizoma têm elasticidade própria e resistem a deformações
  */
 function applyEdgeSpringForces(SPHERE_RADIUS) {
     const springForces = new Map(); // Map<nodeId, Vector3>
@@ -1015,16 +1044,28 @@ function applyEdgeSpringForces(SPHERE_RADIUS) {
             
             let force = 0;
             
-            // Se muito perto: empurrar para longe (repulsão)
+            // TENSÃO DE COMPRESSÃO: fio resiste quando comprimido (muito perto)
             if (currentDistance < MIN_EDGE_LENGTH && currentDistance > 0) {
-                force = -(MIN_EDGE_LENGTH - currentDistance) * SPRING_STRENGTH;
+                const compressionRatio = (MIN_EDGE_LENGTH - currentDistance) / MIN_EDGE_LENGTH;
+                // Força não-linear: compressão severa gera força exponencialmente maior
+                force = -(compressionRatio * compressionRatio * SPRING_STRENGTH * 2.5);
             }
-            // Se muito longe: puxar para perto (atração)
+            // TENSÃO DE ESTIRAMENTO: fio resiste quando esticado (muito longe)
             else if (currentDistance > MAX_EDGE_LENGTH) {
-                force = (currentDistance - MAX_EDGE_LENGTH) * SPRING_STRENGTH;
+                const stretchRatio = (currentDistance - MAX_EDGE_LENGTH) / MAX_EDGE_LENGTH;
+                // Força não-linear: estiramento severo gera força exponencialmente maior
+                force = (stretchRatio * stretchRatio * SPRING_STRENGTH * 2.0);
+            }
+            // ZONA DE EQUILÍBRIO: pequena força de restauração para comprimento ideal
+            else {
+                // Comprimento ideal é a média entre min e max
+                const idealLength = (MIN_EDGE_LENGTH + MAX_EDGE_LENGTH) / 2;
+                const deviation = currentDistance - idealLength;
+                // Força suave para buscar equilíbrio natural
+                force = deviation * SPRING_STRENGTH * 0.3;
             }
             
-            if (force !== 0) {
+            if (Math.abs(force) > 0.001) {
                 direction.normalize().multiplyScalar(force);
                 
                 // Pesos dos nós (número de conexões)
@@ -1047,10 +1088,140 @@ function applyEdgeSpringForces(SPHERE_RADIUS) {
         }
     });
     
-    // Aplicar forças acumuladas aos nós
+    // Aplicar forças acumuladas aos nós com amortecimento específico para molas
     nodes.forEach(node => {
         const force = springForces.get(node.userData.id);
         if (force && force.lengthSq() > 0.01) {
+            // Aplicar amortecimento específico para estabilizar oscilações
+            force.multiplyScalar(SPRING_DAMPING);
+            node.position.add(force);
+            
+            // Re-projetar na superfície esférica
+            node.position.normalize().multiplyScalar(SPHERE_RADIUS);
+        }
+    });
+}
+
+/**
+ * NOVA FUNÇÃO: Aplica força de ATRAÇÃO entre nós conectados
+ * Conceitos relacionados se aproximam suavemente
+ */
+function applyAttractionForces(SPHERE_RADIUS) {
+    const attractionForces = new Map();
+    
+    // Inicializar forças
+    nodes.forEach(node => {
+        attractionForces.set(node.userData.id, new THREE.Vector3(0, 0, 0));
+    });
+    
+    // Para cada aresta (relação), aplicar atração mútua
+    lines.forEach(line => {
+        const sourceNode = line.userData.source;
+        const targetNode = line.userData.target;
+        
+        if (sourceNode && targetNode) {
+            const currentDistance = sourceNode.position.distanceTo(targetNode.position);
+            
+            // Atração apenas se estiverem além da distância ótima
+            if (currentDistance > ATTRACTION_DISTANCE) {
+                const direction = new THREE.Vector3().subVectors(targetNode.position, sourceNode.position);
+                const distanceRatio = (currentDistance - ATTRACTION_DISTANCE) / SPHERE_RADIUS;
+                
+                // Força aumenta com a distância (até um limite)
+                const strength = ATTRACTION_FORCE * Math.min(distanceRatio, 1.0);
+                direction.normalize().multiplyScalar(strength);
+                
+                // Aplicar atração mútua (ação e reação)
+                const sourceForce = attractionForces.get(sourceNode.userData.id);
+                const targetForce = attractionForces.get(targetNode.userData.id);
+                
+                if (sourceForce) sourceForce.add(direction);
+                if (targetForce) targetForce.sub(direction);
+            }
+        }
+    });
+    
+    // Aplicar forças de atração
+    nodes.forEach(node => {
+        const force = attractionForces.get(node.userData.id);
+        if (force && force.lengthSq() > 0.001) {
+            node.position.add(force);
+            
+            // Re-projetar na superfície esférica
+            node.position.normalize().multiplyScalar(SPHERE_RADIUS);
+        }
+    });
+}
+
+/**
+ * NOVA FUNÇÃO: Aplica força de COESÃO entre conceitos da mesma camada ontológica
+ * Cria agrupamentos naturais por camada (fundacional, ontológica, etc.)
+ * REFINADA: Força progressiva baseada em distância ao centróide
+ */
+function applyLayerCohesion(SPHERE_RADIUS) {
+    const cohesionForces = new Map();
+    
+    // Inicializar forças
+    nodes.forEach(node => {
+        cohesionForces.set(node.userData.id, new THREE.Vector3(0, 0, 0));
+    });
+    
+    // Agrupar nós por camada
+    const nodesByLayer = new Map();
+    nodes.forEach(node => {
+        const layer = node.userData.layer || 'undefined';
+        if (!nodesByLayer.has(layer)) {
+            nodesByLayer.set(layer, []);
+        }
+        nodesByLayer.get(layer).push(node);
+    });
+    
+    // Para cada camada, aplicar atração suave entre seus membros
+    nodesByLayer.forEach((layerNodes, layer) => {
+        if (layerNodes.length < 2) return; // Skip camadas com 1 ou 0 nós
+        
+        // Calcular centróide da camada
+        const centroid = new THREE.Vector3(0, 0, 0);
+        layerNodes.forEach(node => {
+            centroid.add(node.position);
+        });
+        centroid.divideScalar(layerNodes.length);
+        
+        // Normalizar centróide para superfície esférica
+        centroid.normalize().multiplyScalar(SPHERE_RADIUS);
+        
+        // Aplicar força progressiva em direção ao centróide para cada nó da camada
+        layerNodes.forEach(node => {
+            const distance = node.position.distanceTo(centroid);
+            
+            // Força progressiva: quanto mais longe, mais forte a atração
+            if (distance > LAYER_COHESION_DISTANCE) {
+                const direction = new THREE.Vector3().subVectors(centroid, node.position);
+                const distanceRatio = Math.min((distance - LAYER_COHESION_DISTANCE) / SPHERE_RADIUS, 1.0);
+                
+                // Força quadrática para aumentar efeito em distâncias maiores
+                const strength = LAYER_COHESION * distanceRatio * distanceRatio * 1.5;
+                direction.normalize().multiplyScalar(strength);
+                
+                const force = cohesionForces.get(node.userData.id);
+                if (force) force.add(direction);
+            } else if (distance < LAYER_COHESION_DISTANCE * 0.5) {
+                // Repulsão suave se muito próximo ao centróide (evita colapso no centro)
+                const direction = new THREE.Vector3().subVectors(node.position, centroid);
+                const proximityRatio = 1.0 - (distance / (LAYER_COHESION_DISTANCE * 0.5));
+                const strength = LAYER_COHESION * 0.3 * proximityRatio;
+                direction.normalize().multiplyScalar(strength);
+                
+                const force = cohesionForces.get(node.userData.id);
+                if (force) force.add(direction);
+            }
+        });
+    });
+    
+    // Aplicar forças de coesão
+    nodes.forEach(node => {
+        const force = cohesionForces.get(node.userData.id);
+        if (force && force.lengthSq() > 0.0001) {
             node.position.add(force);
             
             // Re-projetar na superfície esférica
@@ -1247,6 +1418,29 @@ function updateNodeMovement(deltaTime) {
             node.userData.label.position.y += 28;
         }
     });
+    
+    // APLICAR FORÇAS FÍSICAS RELACIONAIS (a cada frame)
+    const SPHERE_RADIUS = 300;
+    
+    // 1. Força de ATRAÇÃO entre conceitos conectados (aproxima relacionados)
+    applyAttractionForces(SPHERE_RADIUS);
+    
+    // 2. Força de MOLA nas arestas (mantém distâncias min/max)
+    applyEdgeSpringForces(SPHERE_RADIUS);
+    
+    // 3. Força de COESÃO entre conceitos da mesma camada ontológica (agrupa por camada)
+    // Aplicar apenas a cada 2 frames para performance
+    if (frameCount % 2 === 0) {
+        applyLayerCohesion(SPHERE_RADIUS);
+    }
+    
+    // 4. Força de REPULSÃO entre não-conectados (evita sobreposição)
+    // Aplicar apenas a cada 3 frames para performance
+    if (frameCount % 3 === 0) {
+        nodes.forEach(node => {
+            applyRepulsionForces(node, nodes, SPHERE_RADIUS);
+        });
+    }
     
     // ATUALIZAR LINHAS - os nós arrastam as arestas
     updateConnectionLines();
