@@ -54520,5 +54520,557 @@
     "to": "limites-planetarios",
     "name": "relaciona-se com",
     "description": "Relação importada de Escassez.connections"
+  },
+  {
+    "from": "observador",
+    "to": "conhecimento",
+    "name": "fundamenta",
+    "description": "Observador fundamenta teoria relacional do conhecimento"
+  },
+  {
+    "from": "observador",
+    "to": "iteracao-irrestrita",
+    "name": "produz",
+    "description": "Observação de observação gera recursão infinita"
+  },
+  {
+    "from": "observador",
+    "to": "perspectivismo",
+    "name": "implica",
+    "description": "Todo conhecimento é perspectivo de um observador"
+  },
+  {
+    "from": "construtivismo-radical",
+    "to": "observador",
+    "name": "baseado-em",
+    "description": "Construtivismo parte do observador constitutivo"
+  },
+  {
+    "from": "fechamento-operacional",
+    "to": "autopoiesis",
+    "name": "caracteriza",
+    "description": "Sistemas autopoiéticos são operacionalmente fechados"
+  },
+  {
+    "from": "fechamento-operacional",
+    "to": "auto-organizacao",
+    "name": "produz",
+    "description": "Circularidade operacional gera auto-organização"
+  },
+  {
+    "from": "auto-organizacao",
+    "to": "emergencia",
+    "name": "produz",
+    "description": "Auto-organização faz padrões emergirem de interações locais"
+  },
+  {
+    "from": "auto-organizacao",
+    "to": "complexidade",
+    "name": "gera",
+    "description": "Sistemas auto-organizados exibem complexidade"
+  },
+  {
+    "from": "auto-organizacao",
+    "to": "ordem-caos",
+    "name": "navega",
+    "description": "Auto-organização opera na borda entre ordem e caos"
+  },
+  {
+    "from": "cooperativismo-plataforma",
+    "to": "commons",
+    "name": "implementa",
+    "description": "Plataformas cooperativas realizam commons digitais"
+  },
+  {
+    "from": "cooperativismo-plataforma",
+    "to": "propriedade-comum",
+    "name": "pratica",
+    "description": "Propriedade coletiva da infraestrutura digital"
+  },
+  {
+    "from": "cooperativismo-plataforma",
+    "to": "monopolio-digital",
+    "name": "resiste",
+    "description": "Alternativa aos monopólios de plataforma"
+  },
+  {
+    "from": "cooperativismo-plataforma",
+    "to": "economia-solidaria",
+    "name": "exemplifica",
+    "description": "Cooperativas digitais como economia solidária"
+  },
+  {
+    "from": "fediverso",
+    "to": "activitypub",
+    "name": "usa",
+    "description": "Fediverso implementa protocolo ActivityPub"
+  },
+  {
+    "from": "fediverso",
+    "to": "interoperabilidade",
+    "name": "implementa",
+    "description": "Servidores federados são interoperáveis"
+  },
+  {
+    "from": "fediverso",
+    "to": "descentralizacao",
+    "name": "exemplifica",
+    "description": "Rede social descentralizada e federada"
+  },
+  {
+    "from": "fediverso",
+    "to": "monopolio-digital",
+    "name": "alternativa-a",
+    "description": "Fediverso como resistência aos monopólios sociais"
+  },
+  {
+    "from": "interoperabilidade",
+    "to": "protocolos-abertos",
+    "name": "requer",
+    "description": "Interoperabilidade depende de padrões abertos"
+  },
+  {
+    "from": "interoperabilidade",
+    "to": "soberania-digital",
+    "name": "viabiliza",
+    "description": "Liberdade de migrar entre plataformas"
+  },
+  {
+    "from": "efeitos-rede",
+    "to": "monopolio-digital",
+    "name": "produz",
+    "description": "Efeitos de rede criam tendência ao monopólio"
+  },
+  {
+    "from": "monopolio-digital",
+    "to": "extrativismo-dados",
+    "name": "pratica",
+    "description": "Monopólios extraem valor através de dados"
+  },
+  {
+    "from": "monopolio-digital",
+    "to": "capitalismo-vigilancia",
+    "name": "exemplifica",
+    "description": "Plataformas monopolistas vigiam usuários"
+  },
+  {
+    "from": "embodied-cognition",
+    "to": "corporificacao",
+    "name": "afirma",
+    "description": "Cognição é processo incorporado no corpo"
+  },
+  {
+    "from": "embodied-cognition",
+    "to": "enacao",
+    "name": "fundamenta",
+    "description": "Mente emerge de ação incorporada"
+  },
+  {
+    "from": "embodied-cognition",
+    "to": "cognicao-4e",
+    "name": "componente-de",
+    "description": "Embodied é um dos 4Es da cognição"
+  },
+  {
+    "from": "deriva-estrutural",
+    "to": "acoplamento-estrutural",
+    "name": "ocorre-via",
+    "description": "Deriva acontece através de acoplamento com meio"
+  },
+  {
+    "from": "deriva-estrutural",
+    "to": "coevolucao",
+    "name": "processo-de",
+    "description": "Co-deriva organismo-ambiente"
+  },
+  {
+    "from": "deriva-estrutural",
+    "to": "tempo",
+    "name": "constitui",
+    "description": "Temporalidade como história de interações"
+  },
+  {
+    "from": "construtivismo-radical",
+    "to": "viabilidade",
+    "name": "criterio",
+    "description": "Conhecimento viável, não verdadeiro"
+  },
+  {
+    "from": "haudenosaunee",
+    "to": "indigena",
+    "name": "exemplifica",
+    "description": "Tradição política indígena norte-americana"
+  },
+  {
+    "from": "haudenosaunee",
+    "to": "sete-geracoes",
+    "name": "pratica",
+    "description": "Princípio das sete gerações"
+  },
+  {
+    "from": "haudenosaunee",
+    "to": "consenso",
+    "name": "usa",
+    "description": "Decisões por consenso, não maioria"
+  },
+  {
+    "from": "plasticidade",
+    "to": "adaptacao",
+    "name": "permite",
+    "description": "Mudança estrutural adaptativa"
+  },
+  {
+    "from": "plasticidade",
+    "to": "devir",
+    "name": "manifesta",
+    "description": "Capacidade de devir-outro"
+  },
+  {
+    "from": "plasticidade",
+    "to": "resilencia",
+    "name": "contribui-para",
+    "description": "Plasticidade aumenta resiliência"
+  },
+  {
+    "from": "fluxos-materiais",
+    "to": "metabolismo-social",
+    "name": "componente-de",
+    "description": "Metabolismo como transformação de fluxos materiais"
+  },
+  {
+    "from": "fluxos-materiais",
+    "to": "economia-circular",
+    "name": "analisa",
+    "description": "Circularidade de materiais na economia"
+  },
+  {
+    "from": "fluxos-materiais",
+    "to": "ecologia",
+    "name": "perspectiva-de",
+    "description": "Visão ecológica da economia"
+  },
+  {
+    "from": "construcao-realidade",
+    "to": "observador",
+    "name": "produzida-por",
+    "description": "Realidade é construída pelas operações do observador"
+  },
+  {
+    "from": "construcao-realidade",
+    "to": "construtivismo-radical",
+    "name": "base-de",
+    "description": "Fundamento do construtivismo radical"
+  },
+  {
+    "from": "construcao-realidade",
+    "to": "viabilidade",
+    "name": "criterio",
+    "description": "Conhecimento viável substitui verdade correspondente"
+  },
+  {
+    "from": "intergeracional",
+    "to": "sete-geracoes",
+    "name": "exemplifica",
+    "description": "Princípio das sete gerações como justiça intergeracional"
+  },
+  {
+    "from": "intergeracional",
+    "to": "tempo",
+    "name": "atravessa",
+    "description": "Responsabilidade que atravessa temporalidades"
+  },
+  {
+    "from": "intergeracional",
+    "to": "etica",
+    "name": "dimensao-de",
+    "description": "Ética expandida no tempo"
+  },
+  {
+    "from": "casa-charlatanismo",
+    "to": "igreja-autentica",
+    "name": "oposto-de",
+    "description": "Rigidez vs plasticidade organizacional"
+  },
+  {
+    "from": "casa-charlatanismo",
+    "to": "paradigma",
+    "name": "aprisionada-em",
+    "description": "Rigidez paradigmática impede adaptação"
+  },
+  {
+    "from": "igreja-autentica",
+    "to": "plasticidade",
+    "name": "exemplifica",
+    "description": "Organização plástica que se reinventa"
+  },
+  {
+    "from": "igreja-autentica",
+    "to": "devir",
+    "name": "pratica",
+    "description": "Capacidade de devir-outro"
+  },
+  {
+    "from": "fluxos-energeticos",
+    "to": "fluxos-materiais",
+    "name": "complementa",
+    "description": "Energia e matéria no metabolismo social"
+  },
+  {
+    "from": "fluxos-energeticos",
+    "to": "metabolismo-social",
+    "name": "componente-de",
+    "description": "Fluxo energético como parte do metabolismo"
+  },
+  {
+    "from": "analise-fluxo-materiais",
+    "to": "fluxos-materiais",
+    "name": "analisa",
+    "description": "MFA quantifica fluxos materiais"
+  },
+  {
+    "from": "analise-fluxo-materiais",
+    "to": "economia-circular",
+    "name": "ferramenta-para",
+    "description": "MFA como ferramenta de circularidade"
+  },
+  {
+    "from": "mais-valia",
+    "to": "capitalismo",
+    "name": "mecanismo-de",
+    "description": "Acumulação via apropriação de trabalho não-pago"
+  },
+  {
+    "from": "mais-valia",
+    "to": "extracao",
+    "name": "forma-de",
+    "description": "Extração de valor do trabalho"
+  },
+  {
+    "from": "mais-valia",
+    "to": "alienacao",
+    "name": "produz",
+    "description": "Alienação do trabalhador do produto"
+  },
+  {
+    "from": "estrutura-antiestrutura",
+    "to": "ritual",
+    "name": "manifestada-em",
+    "description": "Rituais criam espaços de anti-estrutura"
+  },
+  {
+    "from": "estrutura-antiestrutura",
+    "to": "liminalidade",
+    "name": "zona-de",
+    "description": "Liminalidade é estado de anti-estrutura"
+  },
+  {
+    "from": "estrutura-antiestrutura",
+    "to": "communitas",
+    "name": "produz",
+    "description": "Anti-estrutura gera communitas"
+  },
+  {
+    "from": "monopolio-radical",
+    "to": "limite",
+    "name": "excede",
+    "description": "Ferramenta ultrapassa limites libertadores"
+  },
+  {
+    "from": "monopolio-radical",
+    "to": "monopolio-digital",
+    "name": "manifesta-em",
+    "description": "Plataformas digitais como monopólios radicais"
+  },
+  {
+    "from": "monopolio-radical",
+    "to": "alternativas",
+    "name": "elimina",
+    "description": "Monopólio radical inviabiliza alternativas"
+  },
+  {
+    "from": "ritmos-coloniais",
+    "to": "tempo",
+    "name": "impoe",
+    "description": "Colonialismo impõe temporalidades específicas"
+  },
+  {
+    "from": "ritmos-coloniais",
+    "to": "indigena",
+    "name": "destroi",
+    "description": "Destruição de temporalidades indígenas"
+  },
+  {
+    "from": "ritmos-coloniais",
+    "to": "colonialidade",
+    "name": "mecanismo-de",
+    "description": "Tempo como tecnologia colonial"
+  },
+  {
+    "from": "microorganismos",
+    "to": "simbiose",
+    "name": "praticam",
+    "description": "Base da vida simbiótica"
+  },
+  {
+    "from": "microorganismos",
+    "to": "holobionte",
+    "name": "constituem",
+    "description": "Somos ecossistemas de micróbios"
+  },
+  {
+    "from": "microorganismos",
+    "to": "ecologia",
+    "name": "fundamento-de",
+    "description": "Fundamento microscópico da biosfera"
+  },
+  {
+    "from": "selecao-multinivel",
+    "to": "holobionte",
+    "name": "atua-sobre",
+    "description": "Seleção opera em assembleias simbióticas"
+  },
+  {
+    "from": "selecao-multinivel",
+    "to": "emergencia",
+    "name": "produz",
+    "description": "Níveis emergem de seleção multinível"
+  },
+  {
+    "from": "selecao-multinivel",
+    "to": "coevolucao",
+    "name": "mecanismo-de",
+    "description": "Coevolução em múltiplos níveis"
+  },
+  {
+    "from": "terra-como-recurso",
+    "to": "terra-como-sujeito",
+    "name": "oposto-de",
+    "description": "Visões opostas da terra"
+  },
+  {
+    "from": "terra-como-recurso",
+    "to": "extrativismo",
+    "name": "justifica",
+    "description": "Visão que legitima extração"
+  },
+  {
+    "from": "terra-como-recurso",
+    "to": "colonialidade",
+    "name": "expressao-de",
+    "description": "Terra-objeto é colonial"
+  },
+  {
+    "from": "extrativismo-dados",
+    "to": "capitalismo-vigilancia",
+    "name": "mecanismo-de",
+    "description": "Extrativismo de dados como motor do capitalismo de vigilância"
+  },
+  {
+    "from": "extrativismo-dados",
+    "to": "dados",
+    "name": "apropria",
+    "description": "Apropriação massiva de dados comportamentais"
+  },
+  {
+    "from": "extrativismo-dados",
+    "to": "monopolio-digital",
+    "name": "praticado-por",
+    "description": "Monopólios digitais praticam extrativismo de dados"
+  },
+  {
+    "from": "extrativismo-dados",
+    "to": "extrativismo",
+    "name": "forma-de",
+    "description": "Extrativismo aplicado à esfera digital"
+  },
+  {
+    "from": "inovacao",
+    "to": "devir",
+    "name": "manifesta",
+    "description": "Inovação como processo de devir"
+  },
+  {
+    "from": "inovacao",
+    "to": "plasticidade",
+    "name": "requer",
+    "description": "Inovação requer plasticidade organizacional"
+  },
+  {
+    "from": "casa-charlatanismo",
+    "to": "inovacao",
+    "name": "rejeita",
+    "description": "Rigidez organizacional rejeita inovação disruptiva"
+  },
+  {
+    "from": "igreja-autentica",
+    "to": "inovacao",
+    "name": "abraca",
+    "description": "Plasticidade organizacional abraça inovação"
+  },
+  {
+    "from": "propriedade-comum",
+    "to": "commons",
+    "name": "implementa",
+    "description": "Propriedade comum realiza commons"
+  },
+  {
+    "from": "propriedade-comum",
+    "to": "propriedade",
+    "name": "alternativa-a",
+    "description": "Alternativa à propriedade privada e estatal"
+  },
+  {
+    "from": "propriedade-comum",
+    "to": "governanca",
+    "name": "requer",
+    "description": "Gestão coletiva via governança compartilhada"
+  },
+  {
+    "from": "separacao-cidade-campo",
+    "to": "capitalismo",
+    "name": "produzida-por",
+    "description": "Capitalismo industrial produz divisão cidade-campo"
+  },
+  {
+    "from": "separacao-cidade-campo",
+    "to": "alienacao",
+    "name": "gera",
+    "description": "Separação espacial gera alienação"
+  },
+  {
+    "from": "separacao-cidade-campo",
+    "to": "ecologia",
+    "name": "rompe",
+    "description": "Ruptura metabólica entre sociedade e natureza"
+  },
+  {
+    "from": "soberania-digital",
+    "to": "soberania",
+    "name": "forma-de",
+    "description": "Soberania aplicada ao domínio digital"
+  },
+  {
+    "from": "soberania-digital",
+    "to": "autonomia",
+    "name": "viabiliza",
+    "description": "Controle sobre dados e infraestrutura gera autonomia"
+  },
+  {
+    "from": "soberania-digital",
+    "to": "monopolio-digital",
+    "name": "resiste",
+    "description": "Soberania digital resiste a monopólios"
+  },
+  {
+    "from": "soberania-digital",
+    "to": "interoperabilidade",
+    "name": "requer",
+    "description": "Soberania depende de interoperabilidade"
+  },
+  {
+    "from": "cooperativismo-plataforma",
+    "to": "soberania-digital",
+    "name": "pratica",
+    "description": "Cooperativas digitais praticam soberania"
   }
 ]

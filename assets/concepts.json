@@ -4414,5 +4414,203 @@
     "name": "Escassez",
     "description": "Pode ser construída socialmente (cercamentos, propriedade privada) ou materialmente real (limites planetários). Não naturalizar escassez artificialmente produzida, mas também não negar finitude material. Escassez severa exige protocolos relacionais adaptados, não abandono de relacionalidade.",
     "layer": "politica-0"
+  },
+  {
+    "id": "observador",
+    "name": "Observador",
+    "description": "Heinz von Foerster: observador não é externo à realidade observada, mas parte constitutiva dela. Cibernética de segunda ordem - observação da observação. Não há descrição objetiva sem observador que a produz. Conhecimento é sempre conhecimento de um observador em relação.",
+    "layer": "epistemica-0"
+  },
+  {
+    "id": "fechamento-operacional",
+    "name": "Fechamento Operacional",
+    "description": "Maturana/Varela: sistemas vivos são operacionalmente fechados - suas operações produzem recursivamente suas próprias operações. Fechamento não é isolamento: há acoplamento estrutural com ambiente. Autonomia emerge de circularidade operacional.",
+    "layer": "fundacional-3"
+  },
+  {
+    "id": "auto-organizacao",
+    "name": "Auto-Organização",
+    "description": "Emergência espontânea de ordem a partir de interações locais sem controle central. Padrões globais surgem de regras simples aplicadas localmente. Fundamental em sistemas complexos adaptativos.",
+    "layer": "fundacional-2"
+  },
+  {
+    "id": "cooperativismo-plataforma",
+    "name": "Cooperativismo de Plataforma",
+    "description": "Alternativa às plataformas capitalistas: propriedade coletiva da infraestrutura digital. Trabalhadores, usuários e comunidades controlam democraticamente as plataformas. Uber → cooperativa de motoristas. Airbnb → cooperativa habitacional.",
+    "layer": "pratica-1"
+  },
+  {
+    "id": "fediverso",
+    "name": "Fediverso",
+    "description": "Rede federada de plataformas sociais interoperáveis (Mastodon, Pixelfed, PeerTube). Protocolo ActivityPub permite comunicação entre servidores independentes. Alternativa descentralizada às redes corporativas.",
+    "layer": "pratica-0"
+  },
+  {
+    "id": "activitypub",
+    "name": "ActivityPub",
+    "description": "Protocolo W3C para redes sociais descentralizadas. Permite que diferentes plataformas se comuniquem sem intermediário central. Base técnica do fediverso.",
+    "layer": "pratica-0"
+  },
+  {
+    "id": "interoperabilidade",
+    "name": "Interoperabilidade",
+    "description": "Capacidade de sistemas distintos se comunicarem e compartilharem dados. No contexto político: alternativa aos monopólios digitais através de padrões abertos. Liberdade de migrar entre plataformas preservando relações.",
+    "layer": "pratica-1"
+  },
+  {
+    "id": "efeitos-rede",
+    "name": "Efeitos de Rede",
+    "description": "Valor de uma plataforma aumenta com número de usuários (Facebook, Twitter). Cria tendência ao monopólio: primeira plataforma a atingir massa crítica domina mercado. Desafio central para alternativas descentralizadas.",
+    "layer": "politica-0"
+  },
+  {
+    "id": "monopolio-digital",
+    "name": "Monopólio Digital",
+    "description": "Concentração de poder em poucas plataformas (Google, Meta, Amazon). Efeitos de rede + capital de risco criam barreiras intransponíveis. Controle sobre dados, atenção e infraestrutura social.",
+    "layer": "politica-0"
+  },
+  {
+    "id": "embodied-cognition",
+    "name": "Embodied Cognition (Cognição Incorporada)",
+    "description": "Pensamento não acontece apenas no cérebro mas em todo corpo em interação com ambiente. Varela/Thompson/Rosch: cognição é ação incorporada. Mente emerge de processos sensório-motores distribuídos.",
+    "layer": "epistemica-1"
+  },
+  {
+    "id": "deriva-estrutural",
+    "name": "Deriva Estrutural",
+    "description": "Maturana/Varela: mudanças estruturais contínuas de organismo em acoplamento com meio. Não é adaptação teleológica mas co-deriva mútua. História de interações molda estrutura que molda interações futuras.",
+    "layer": "temporal-2"
+  },
+  {
+    "id": "construtivismo-radical",
+    "name": "Construtivismo Radical",
+    "description": "Von Foerster/Glasersfeld: conhecimento não representa realidade externa mas constrói mundo viável. Realidade é construção do observador, não descoberta. Não nega existência externa mas impossibilidade de conhecê-la diretamente.",
+    "layer": "epistemica-2"
+  },
+  {
+    "id": "haudenosaunee",
+    "name": "Haudenosaunee (Iroquois)",
+    "description": "Confederação de Seis Nações (Mohawk, Oneida, Onondaga, Cayuga, Seneca, Tuscarora). Grande Lei da Paz: democracia participativa, tomada de decisão por consenso, princípio das sete gerações. Influenciou democracia moderna americana.",
+    "layer": "politica-2"
+  },
+  {
+    "id": "plasticidade",
+    "name": "Plasticidade",
+    "description": "Capacidade de mudança estrutural preservando identidade. Cérebro é plástico - conexões neurais se reorganizam com experiência. Organizações plásticas adaptam estrutura sem perder coerência operacional.",
+    "layer": "temporal-1"
+  },
+  {
+    "id": "fluxos-materiais",
+    "name": "Fluxos Materiais",
+    "description": "Movimento de matéria através de sistemas socioeconômicos e ecológicos. Metabolismo social: economia como transformação de materiais (extração → produção → consumo → descarte). Ecologia industrial estuda circularidade.",
+    "layer": "ecologica-1"
+  },
+  {
+    "id": "construcao-realidade",
+    "name": "Construção da Realidade",
+    "description": "Von Foerster: realidade não é descoberta mas construída pelo observador através de suas operações cognitivas. Não há acesso direto ao 'real' - apenas versões construídas. Base do construtivismo radical.",
+    "layer": "epistemica-2"
+  },
+  {
+    "id": "intergeracional",
+    "name": "Justiça Intergeracional",
+    "description": "Obrigações éticas que atravessam gerações. Haudenosaunee: decisões devem considerar sete gerações passadas e futuras. Presente como nó temporal entre ancestrais e descendentes. Crítica à tirania do presente.",
+    "layer": "etica-2"
+  },
+  {
+    "id": "casa-charlatanismo",
+    "name": "Casa de Charlatanismo (Sasson/Kodak)",
+    "description": "Organização que rejeita inovações disruptivas por rigidez paradigmática. Kodak inventou câmera digital mas não a comercializou, protegendo filme analógico. Apego a modelo de negócio leva à obsolescência.",
+    "layer": "temporal-0"
+  },
+  {
+    "id": "igreja-autentica",
+    "name": "Igreja Autêntica (Netflix)",
+    "description": "Organização que abraça plasticidade estrutural para sobreviver. Netflix migrou de DVD postal para streaming, depois produção própria. Capacidade de canibilizar próprio negócio antes que outros o façam.",
+    "layer": "temporal-0"
+  },
+  {
+    "id": "fluxos-energeticos",
+    "name": "Fluxos Energéticos",
+    "description": "Movimento de energia através de sistemas socioeconômicos e ecológicos. Metabolismo social como transformação energia → trabalho → desperdício. Termodinâmica social: economia como dissipação de energia.",
+    "layer": "ecologica-1"
+  },
+  {
+    "id": "analise-fluxo-materiais",
+    "name": "Análise de Fluxo de Materiais (MFA)",
+    "description": "Metodologia para rastrear movimentos de materiais na economia. Quantifica entradas (extração), processos (manufatura), e saídas (resíduos). Ferramenta para economia circular e industrial.",
+    "layer": "pratica-0"
+  },
+  {
+    "id": "mais-valia",
+    "name": "Mais-Valia",
+    "description": "Marx: diferença entre valor produzido por trabalhador e salário pago. Apropriação de trabalho não-pago pelo capital. Mecanismo central de acumulação capitalista. Relação de exploração estrutural.",
+    "layer": "politica-0"
+  },
+  {
+    "id": "estrutura-antiestrutura",
+    "name": "Estrutura e Anti-Estrutura",
+    "description": "Turner: sociedade oscila entre estrutura (hierarquia, regras, papéis) e communitas (igualdade, espontaneidade, liminalidade). Rituais criam espaços temporários de anti-estrutura onde transformação é possível.",
+    "layer": "ontologica-1"
+  },
+  {
+    "id": "monopolio-radical",
+    "name": "Monopólio Radical",
+    "description": "Illich: quando ferramenta atinge escala que elimina alternativas, torna-se monopólio radical. Carro não compete só com bicicleta mas impõe infraestrutura que inviabiliza caminhada. Limites libertadores previnem isto.",
+    "layer": "politica-0"
+  },
+  {
+    "id": "ritmos-coloniais",
+    "name": "Ritmos Coloniais",
+    "description": "Sharma: colonialismo impõe temporalidades específicas - relógio mecânico, calendário gregoriano, jornada de trabalho. Destruição de temporalidades indígenas cíclicas. Tempo como tecnologia de controle.",
+    "layer": "temporal-0"
+  },
+  {
+    "id": "microorganismos",
+    "name": "Microorganismos",
+    "description": "Vida microscópica (bactérias, archaea, fungos, protistas). Margulis: fundamento da biosfera - inventaram fotossíntese, fixação de nitrogênio, simbiose. Somos holobiôntos: ecossistemas ambulantes de micróbios.",
+    "layer": "ecologica-0"
+  },
+  {
+    "id": "selecao-multinivel",
+    "name": "Seleção Multinível",
+    "description": "Evolução opera simultaneamente em múltiplos níveis: genes, células, organismos, grupos, ecossistemas. Holobionte: seleção atua sobre assembleias simbióticas inteiras, não indivíduos isolados.",
+    "layer": "ecologica-2"
+  },
+  {
+    "id": "terra-como-recurso",
+    "name": "Terra como Recurso",
+    "description": "Visão colonial/capitalista: terra é objeto inerte para exploração. Deepwater Horizon: oceano como depósito de petróleo. Oposto de terra-como-sujeito. Raiz da crise ecológica.",
+    "layer": "politica-0"
+  },
+  {
+    "id": "extrativismo-dados",
+    "name": "Extrativismo de Dados",
+    "description": "Zuboff: apropriação massiva de dados comportamentais como matéria-prima para previsão e modificação de comportamento. Capitalismo de vigilância extrai experiência humana para transformar em produto comercializável. Dados como petróleo do século XXI.",
+    "layer": "politica-0"
+  },
+  {
+    "id": "inovacao",
+    "name": "Inovação",
+    "description": "Introdução de novidade que transforma práticas existentes. Pode ser disruptiva (cria novos mercados) ou incremental (melhora existentes). Schumpeter: destruição criativa. Mas: inovação não é neutra - incorpora valores e relações de poder.",
+    "layer": "temporal-1"
+  },
+  {
+    "id": "propriedade-comum",
+    "name": "Propriedade Comum",
+    "description": "Ostrom: nem privada nem estatal - recursos geridos coletivamente por comunidade. Commons físicos (florestas, água) e digitais (software livre, wikis). Governança compartilhada baseada em regras criadas pelos próprios usuários.",
+    "layer": "politica-1"
+  },
+  {
+    "id": "separacao-cidade-campo",
+    "name": "Separação Cidade-Campo",
+    "description": "Marx: divisão espacial entre produção industrial urbana e produção agrícola rural. Urbanização concentra capital e poder político, subordinando campo a relações mercantis. Metabolic rift: ruptura no metabolismo entre sociedade e natureza.",
+    "layer": "politica-0"
+  },
+  {
+    "id": "soberania-digital",
+    "name": "Soberania Digital",
+    "description": "Controle sobre próprios dados, infraestrutura e práticas digitais. Alternativa à dependência de plataformas corporativas. Inclui: posse de dados, escolha de plataformas, interoperabilidade, código aberto. Soberania tecnológica como autodeterminação.",
+    "layer": "politica-1"
   }
 ]

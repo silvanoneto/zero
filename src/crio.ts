@@ -238,7 +238,6 @@ document.addEventListener('keydown', (e: KeyboardEvent) => {
 
 async function loadConcepts(): Promise<void> {
     try {
-        console.log('Carregando conceitos do rizoma...');
         const response = await fetch(CONCEPTS_URL);
         
         if (!response.ok) {
@@ -252,8 +251,6 @@ async function loadConcepts(): Promise<void> {
             ...concept,
             color: getColorForLayer(concept.layer)
         }));
-        
-        console.log(`${concepts.length} conceitos carregados com sucesso`);
     } catch (error) {
         console.error('Erro ao carregar conceitos:', error);
         concepts = [];
@@ -273,7 +270,6 @@ async function loadCRIOSContent(): Promise<void> {
     const cached = getCachedData();
     
     if (cached) {
-        console.log('Carregando conteúdo do cache');
         renderContent(cached.content);
         
         // Inicia verificação periódica de atualizações em background
@@ -283,7 +279,6 @@ async function loadCRIOSContent(): Promise<void> {
     }
     
     try {
-        console.log('Carregando CRIOS.md do servidor...');
         const response = await fetch(CRIOS_URL, { cache: 'no-cache' });
         
         if (!response.ok) {
@@ -365,8 +360,6 @@ function renderContent(markdown: string): void {
         contentDiv.style.display = 'block';
         contentDiv.setAttribute('aria-busy', 'false');
         
-        console.log('Conteúdo renderizado com sucesso');
-        
         // Inicializar navegação
         initNavigation();
         
@@ -439,8 +432,6 @@ function initNavigation(): void {
         console.warn('Nenhum header H2 encontrado no conteúdo');
         return;
     }
-    
-    console.log(`Inicializando navegação dinâmica com ${headers.length} CRIOS`);
     
     navList.innerHTML = '';
     progressMarkers.innerHTML = '';
@@ -527,8 +518,6 @@ function initNavigation(): void {
     // Adicionar observador de scroll para atualizar marcadores ativos e progresso
     updateActiveMarkers();
     window.addEventListener('scroll', updateActiveMarkers);
-    
-    console.log('Menu de navegação dinâmico inicializado');
 }
 
 function updateActiveMarkers(): void {
@@ -622,7 +611,6 @@ function updateActiveMarkers(): void {
 }
 
 function initInteractiveFeatures(): void {
-    console.log('Inicializando funcionalidades interativas...');
     initAudio();
     initProgressBar();
     initThemeToggle();
@@ -652,14 +640,11 @@ function linkConceptsInContent(): void {
         // Tentar carregar conceitos novamente se ainda não foram carregados
         loadConcepts().then(() => {
             if (concepts.length > 0) {
-                console.log('Conceitos carregados, relinkando...');
                 linkConceptsInContent();
             }
         });
         return;
     }
-
-    console.log(`Linkando ${concepts.length} conceitos no conteúdo...`);
 
     // Criar mapa de conceitos para busca mais eficiente
     const conceptMap = new Map<string, Concept>();
@@ -673,13 +658,9 @@ function linkConceptsInContent(): void {
         const variations = generateConceptVariations(concept.name);
         variations.forEach(v => conceptMap.set(v.toLowerCase(), concept));
     });
-    
-    console.log(`Mapa de conceitos criado com ${conceptMap.size} entradas`);
 
     // Processar todos os parágrafos e listas
     const textElements = contentDiv.querySelectorAll('p, li, blockquote');
-    
-    console.log(`Processando ${textElements.length} elementos de texto...`);
     
     let linksCreated = 0;
     
@@ -692,18 +673,10 @@ function linkConceptsInContent(): void {
         const finalLinks = element.querySelectorAll('.riz∅ma-link').length;
         const newLinks = finalLinks - initialLinks;
         linksCreated += newLinks;
-        
-        // Log para elementos com links criados
-        if (newLinks > 0 && index < 10) {
-            console.log(`Elemento ${index}: ${newLinks} link(s) criado(s) - "${element.textContent?.substring(0, 50)}..."`);
-        }
     });
 
-    console.log(`✅ ${linksCreated} links de conceitos criados com sucesso!`);
-    
     // Log de verificação final
     const allLinks = contentDiv.querySelectorAll('.riz∅ma-link');
-    console.log(`Total de links riz∅ma encontrados no DOM: ${allLinks.length}`);
 }
 
 function generateConceptVariations(name: string): string[] {
@@ -888,7 +861,6 @@ function createConceptLink(text: string, concept: Concept): HTMLElement {
     link.style.setProperty('--concept-color', colorHex);
     link.style.color = colorHex; // Aplicar cor diretamente também
     link.style.textDecorationColor = colorHex;
-    console.log(`Link criado para "${concept.name}": cor=${colorHex} (original: ${concept.color})`);
     
     // Ao clicar, abrir o rizoma com foco nesse conceito
     const handleActivation = (e: Event) => {
@@ -929,7 +901,6 @@ function initAudio(): void {
         return;
     }
     
-    console.log('Inicializando controles de áudio');
     currentAudio = audio;
     
     playBtn.addEventListener('click', () => {
@@ -978,8 +949,6 @@ function initProgressBar(): void {
         console.warn('Elementos de progresso não encontrados:', { progressBar, progressText });
         return;
     }
-    
-    console.log('Inicializando barra de progresso');
     
     // Throttle and use transform for progress updates
     let ticking = false;
@@ -1302,8 +1271,6 @@ function initFontSize(): void {
         return;
     }
     
-    console.log('Inicializando controle de tamanho de fonte');
-    
     fontSizeBtn.addEventListener('click', () => {
         currentFontSize = (currentFontSize + 1) % fontSizes.length;
         const size = fontSizes[currentFontSize];
@@ -1330,8 +1297,6 @@ function initExport(): void {
         return;
     }
     
-    console.log('Inicializando botão de exportação');
-    
     exportBtn.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
@@ -1348,8 +1313,6 @@ function initNavToggle(): void {
         console.warn('Elementos de toggle de navegação não encontrados:', { navToggle, navIndex });
         return;
     }
-    
-    console.log('Inicializando toggle de navegação');
     
     navToggle.addEventListener('click', () => {
         const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
@@ -1371,8 +1334,6 @@ function initVoidSymbol(): void {
         console.warn('Símbolo do vazio não encontrado');
         return;
     }
-    
-    console.log('Inicializando símbolo do vazio (sempre visível e tremulando)');
     
     // Observador de scroll para trigger em seções específicas e pulsar
     window.addEventListener('scroll', checkVoidTrigger);
@@ -1451,8 +1412,6 @@ function activateVoidSymbol(withZoom: boolean = false): void {
     const voidSymbol = document.querySelector('.void-symbol');
     if (!voidSymbol) return;
     
-    console.log(`Ativando símbolo do vazio ${withZoom ? 'com zoom' : ''}`);
-    
     voidSymbol.classList.add('active');
     
     if (withZoom) {
@@ -1509,8 +1468,6 @@ function updateVoidPulse(): void {
 
 // Partículas de fundo (luzes/escuridão)
 function initBackgroundParticles(): void {
-    console.log('Inicializando partículas de fundo');
-    
     const particleCount = 30; // Número reduzido para performance
     const body = document.body;
     
@@ -1579,16 +1536,11 @@ const TREMOR_START = 0.2; // Começa a tremular após 20% da página
 const TREMOR_PEAK = 0.8; // Atinge máximo em 80% da página
 
 function initTextTremor(): void {
-    console.log('Inicializando tremulação progressiva do texto');
-    
     // Atualizar tremor durante scroll
     window.addEventListener('scroll', updateTextTremor);
     
     // Atualizar inicialmente
     updateTextTremor();
-    
-    // Log do estado inicial
-    console.log('Tremor inicial:', tremorIntensity);
 }
 
 function updateTextTremor(): void {
@@ -1654,13 +1606,10 @@ function intensifyTremor(multiplier: number = 2, duration: number = 3000): void 
     const currentIntensity = tremorIntensity;
     const intensifiedValue = currentIntensity * multiplier;
     
-    console.log(`Intensificando tremor: ${currentIntensity} → ${intensifiedValue}`);
-    
     main.style.setProperty('--tremor-intensity', intensifiedValue.toString());
     
     setTimeout(() => {
         main.style.setProperty('--tremor-intensity', currentIntensity.toString());
-        console.log(`Tremor retornado: ${intensifiedValue} → ${currentIntensity}`);
     }, duration);
 }
 
@@ -1825,8 +1774,6 @@ const AUTO_SCROLL_SPEED = 0.5; // pixels por frame (ajustável)
 const AUTO_SCROLL_FPS = 60;
 
 function initAutoScroll(): void {
-    console.log('Inicializando autoscroll meditativo');
-    
     // Criar botão de autoscroll
     const audioUI = document.querySelector('.audio-ui');
     if (!audioUI) {
@@ -1932,8 +1879,6 @@ function resumeAutoScroll(): void {
 // ============================================================================
 
 document.addEventListener('DOMContentLoaded', async () => {
-    console.log('DOM carregado - inicializando CRIO...');
-    
     // Carregar conceitos primeiro
     await loadConcepts();
     

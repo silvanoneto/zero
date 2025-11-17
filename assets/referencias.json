@@ -2302,7 +2302,7 @@
       "economia-solidaria",
       "alternativas",
       "commons",
-      "praticas"
+      "praxis"
     ]
   },
   {
@@ -2317,7 +2317,7 @@
       "infraestrutura-comum",
       "commons",
       "autonomia",
-      "praticas"
+      "praxis"
     ]
   },
   {
@@ -2424,7 +2424,7 @@
       "regeneracao",
       "terra",
       "resistencia",
-      "praticas"
+      "praxis"
     ]
   },
   {
@@ -2674,7 +2674,7 @@
       "plataforma digital",
       "orçamento participativo",
       "democracia participativa",
-      "municipal",
+      "municipalismo",
       "governança"
     ]
   },
@@ -2975,7 +2975,7 @@
       "autopoiese",
       "recursao-ontologica",
       "auto-organizacao",
-      "sistemas vivos",
+      "autopoiese",
       "fechamento operacional"
     ]
   },
@@ -2990,7 +2990,7 @@
     "conceitos": [
       "enacao",
       "acoplamento estrutural",
-      "cognição",
+      "embodied-cognition",
       "autopoiese",
       "observador"
     ]
@@ -3004,11 +3004,10 @@
     "publicacao": "Em Communication and Control in Society. Gordon and Breach",
     "relevancia": "Cibernética de segunda ordem: observação dos sistemas que observam. A questão não é 'o que é o sistema?' mas 'como este observador constrói a realidade que observa?'. Inclui o observador na equação. Recursão fundamental: não há visão objetiva de fora do sistema.",
     "conceitos": [
-      "cibernética de segunda ordem",
       "observador",
       "recursao-ontologica",
       "auto-referencia",
-      "construção da realidade"
+      "construcao-realidade"
     ]
   },
   {
@@ -3020,10 +3019,10 @@
     "publicacao": "Em The Invented Reality. W.W. Norton",
     "relevancia": "Construtivismo radical: realidade é construída, não descoberta. 'Objetividade é a ilusão de que observações podem ser feitas sem observador.' Auto-observação produz paradoxos produtivos.",
     "conceitos": [
-      "construtivismo",
+      "construtivismo-radical",
       "epistemologia",
       "observador",
-      "realidade construída",
+      "construcao-realidade",
       "paradoxo"
     ]
   },
@@ -3036,8 +3035,8 @@
     "relevancia": "Grande Lei da Paz da Confederação Iroquesa. Princípio da Sétima Geração: 'Em cada decisão, devemos considerar o impacto em nossos descendentes até a sétima geração.' Responsabilidade temporal como fundamento de governança. Uma das constituições democráticas mais antigas do mundo.",
     "conceitos": [
       "sétima geração",
-      "responsabilidade temporal",
-      "governança indígena",
+      "tempo",
+      "governanca",
       "Haudenosaunee",
       "tempo entrelaçado"
     ]
@@ -3052,7 +3051,7 @@
     "relevancia": "Articulação contemporânea do princípio da Sétima Geração por líder Onondaga. 'Não herdamos a terra de nossos ancestrais, tomamos emprestado de nossos filhos.' Responsabilidade intergeracional como ontologia política.",
     "conceitos": [
       "sétima geração",
-      "responsabilidade temporal",
+      "tempo",
       "Haudenosaunee",
       "intergeracional",
       "indígena"
@@ -3068,10 +3067,10 @@
     "relevancia": "Cooperativismo de plataforma: alternativa ao capitalismo de vigilância. Plataformas digitais possuídas e governadas por usuários e trabalhadores. Democracia digital + propriedade coletiva + soberania de dados. Exemplos: Stocksy (fotografia), Resonate (música), Fairbnb (hospedagem).",
     "conceitos": [
       "cooperativismo de plataforma",
-      "economia digital",
-      "soberania de dados",
-      "propriedade coletiva",
-      "alternativas digitais"
+      "economia-solidaria",
+      "soberania-digital",
+      "propriedade-comum",
+      "cooperativismo-plataforma"
     ]
   },
   {
@@ -3084,8 +3083,8 @@
     "relevancia": "Coletânea sobre cooperativismo de plataforma. Modelos de propriedade coletiva para economia digital. Contraponto ao extrativismo de dados das Big Tech. Governança democrática de infraestrutura digital.",
     "conceitos": [
       "cooperativismo de plataforma",
-      "governança digital",
-      "propriedade coletiva",
+      "governanca",
+      "propriedade-comum",
       "infraestrutura comum",
       "tecnologia"
     ]
@@ -3103,7 +3102,7 @@
       "descentralização",
       "interoperabilidade",
       "ActivityPub",
-      "alternativas digitais"
+      "cooperativismo-plataforma"
     ]
   },
   {
@@ -3115,10 +3114,10 @@
     "relevancia": "Engenheiro da Kodak inventa primeira câmera digital. Liderança vê como ameaça ao modelo de negócios baseado em filme/químicos e engaveta a invenção. Empresa entra em conformidade com próprio paradigma, recusando questionar fundamentos. Resultado: falência em 2012 quando paradigma digital superou analógico. Exemplo paradigmático de recursão fechada e morte paradigmática.",
     "conceitos": [
       "recursao-ontologica",
-      "rigidez paradigmática",
+      "paradigma",
       "inovação",
       "transformação",
-      "casa de charlatanismo"
+      "casa-charlatanismo"
     ]
   },
   {
@@ -3133,7 +3132,7 @@
       "plasticidade",
       "inovação",
       "transformação",
-      "igreja autêntica"
+      "igreja-autentica"
     ]
   },
   {
@@ -3145,8 +3144,8 @@
     "relevancia": "Explosão de plataforma Deepwater Horizon despeja 5 milhões de barris no Golfo do México. Análise custo-benefício: atribuir valor monetário a pelicanos, pântanos, comunidades de pesca. Oceano, vida marinha, água tratados como recursos passivos em planilha contábil. Exemplo paradigmático de Terra como objeto a ser danificado e compensado financeiramente versus Terra como sujeito relacional.",
     "conceitos": [
       "direitos da natureza",
-      "instrumentalização",
-      "Terra como recurso",
+      "instrumentalizacao-universal",
+      "terra-como-recurso",
       "extrativismo",
       "ecologia"
     ]
@@ -3160,8 +3159,8 @@
     "editora": "Polity Press",
     "relevancia": "Análise do capitalismo de plataforma. Plataformas digitais (Google, Facebook, Amazon, Uber) controlam infraestrutura e extraem dados como matéria-prima. Efeitos de rede criam monopólios naturais. Modelo extrativista aplicado a relações sociais.",
     "conceitos": [
-      "capitalismo de plataforma",
-      "dados como matéria-prima",
+      "capitalismo-vigilancia",
+      "extrativismo-dados",
       "efeitos de rede",
       "monopólio digital",
       "extrativismo"
@@ -3179,7 +3178,7 @@
       "autopoiese",
       "acoplamento estrutural",
       "fechamento operacional",
-      "organização viva",
+      "autopoiese",
       "autonomia"
     ]
   },
@@ -3194,8 +3193,8 @@
     "conceitos": [
       "enação",
       "acoplamento estrutural",
-      "embodied cognition",
-      "co-determinação",
+      "embodied-cognition",
+      "acoplamento-estrutural",
       "deriva estrutural"
     ]
   },
@@ -3212,7 +3211,7 @@
       "pré-individual",
       "individuação",
       "metaestabilidade",
-      "campo pré-individual"
+      "pre-individual"
     ]
   },
   {
@@ -3226,9 +3225,9 @@
     "conceitos": [
       "metabolismo social",
       "fluxos materiais",
-      "fluxos energéticos",
-      "interface sociedade-natureza",
-      "análise de fluxo de materiais"
+      "fluxos-energeticos",
+      "ecologia",
+      "analise-fluxo-materiais"
     ]
   },
   {
@@ -3259,8 +3258,7 @@
       "kairós",
       "tempo messiânico",
       "chronos",
-      "tempo revolucionário",
-      "urgência"
+      "tempo"
     ]
   },
   {
@@ -3274,8 +3272,8 @@
     "conceitos": [
       "liminaridade",
       "communitas",
-      "ritual de passagem",
-      "estrutura e anti-estrutura",
+      "ritual",
+      "estrutura-antiestrutura",
       "threshold"
     ]
   },
@@ -3291,8 +3289,8 @@
       "wood wide web",
       "árvores-mãe",
       "micorriza",
-      "inteligência florestal",
-      "cooperação vegetal"
+      "floresta",
+      "mutualismo"
     ]
   },
   {
@@ -3307,8 +3305,8 @@
       "contraproducência",
       "convivialidade",
       "iatrogenia",
-      "monopólio radical",
-      "limites libertadores"
+      "monopolio-radical",
+      "limite"
     ]
   },
   {
@@ -3324,7 +3322,7 @@
       "regimes de historicidade",
       "presentismo",
       "poder temporal",
-      "temporalidades políticas"
+      "tempo"
     ]
   },
   {
@@ -3337,10 +3335,9 @@
     "relevancia": "Distribuição desigual de aceleração/desaceleração. Temporalidades racializadas e generificadas - mulheres, negros, sul global subordinados a ritmos coloniais. Lentidão não é privilégio mas resistência. Política temporal questiona quem tem direito a que velocidades.",
     "conceitos": [
       "cronocracia",
-      "temporalidades racializadas",
-      "política temporal",
-      "aceleração desigual",
-      "ritmos coloniais"
+      "tempo",
+      "aceleracao",
+      "ritmos-coloniais"
     ]
   },
   {
@@ -3355,7 +3352,7 @@
       "ciclos biogeoquímicos",
       "Gaia",
       "simbiose",
-      "metabolismo planetário",
+      "metabolismo-social",
       "microorganismos"
     ]
   },
@@ -3370,9 +3367,7 @@
     "conceitos": [
       "limites planetários",
       "Antropoceno",
-      "espaço operacional seguro",
-      "limiares planetários",
-      "estabilidade do sistema Terra"
+      "limites-planetarios"
     ]
   },
   {
@@ -3386,8 +3381,7 @@
     "conceitos": [
       "holobionte",
       "simbiose",
-      "seleção multinível",
-      "identidade multiespécie",
+      "selecao-multinivel",
       "microbioma"
     ]
   }

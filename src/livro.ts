@@ -3,7 +3,9 @@
  * Carregador de conteúdo com renderização Markdown
  */
 
-import type { Concept } from './types';
+import type { Concept } from './types.js';
+import { initTooltips, activateTooltipForLink } from './livro-tooltips.js';
+import { initProtocols } from './livro-protocols.js';
 
 // Declaração global do marked.js
 declare const marked: {
@@ -15,15 +17,79 @@ declare const JSZip: any;
 
 // CORES POR CAMADA (sincronizado com CRIO e rizoma)
 const LAYER_COLORS: Record<string, number> = {
-    'ontologica': 0x66ccff,    // Azul claro
-    'politica': 0xff6666,      // Vermelho
-    'pratica': 0x99ccff,       // Azul mais claro
-    'fundacional': 0x9966ff,   // Roxo
-    'epistemica': 0xff9966,    // Laranja
-    'ecologica': 0x66ff99,     // Verde
-    'temporal': 0xcccccc,      // Cinza
-    'etica': 0xffff66          // Amarelo
+    // Camadas base (mantidas para compatibilidade)
+    'ontologica': 0x66ccff,
+    'politica': 0xff6666,
+    'pratica': 0x99ccff,
+    'fundacional': 0x9966ff,
+    'epistemica': 0xff9966,
+    'ecologica': 0x66ff99,
+    'temporal': 0xcccccc,
+    'etica': 0xffff66,
+    
+    // Subcamadas ontologica (azul claro: escuro → claro)
+    'ontologica-0': 0x3399ff,
+    'ontologica-1': 0x4db8ff,
+    'ontologica-2': 0x66ccff,
+    'ontologica-3': 0x99ddff,
+    
+    // Subcamadas politica (vermelho: escuro → claro)
+    'politica-0': 0xcc3333,
+    'politica-1': 0xff4d4d,
+    'politica-2': 0xff6666,
+    'politica-3': 0xff9999,
+    
+    // Subcamadas pratica (azul muito claro: escuro → claro)
+    'pratica-0': 0x6699ff,
+    'pratica-1': 0x80bdff,
+    'pratica-2': 0x99ccff,
+    'pratica-3': 0xcce6ff,
+    
+    // Subcamadas fundacional (roxo: escuro → claro)
+    'fundacional-0': 0x6633cc,
+    'fundacional-1': 0x8052ff,
+    'fundacional-2': 0x9966ff,
+    'fundacional-3': 0xc299ff,
+    
+    // Subcamadas epistemica (laranja: escuro → claro)
+    'epistemica-0': 0xcc6633,
+    'epistemica-1': 0xff8552,
+    'epistemica-2': 0xff9966,
+    'epistemica-3': 0xffc299,
+    
+    // Subcamadas ecologica (verde: escuro → claro)
+    'ecologica-0': 0x33cc66,
+    'ecologica-1': 0x52ff85,
+    'ecologica-2': 0x66ff99,
+    'ecologica-3': 0x99ffc2,
+    
+    // Subcamadas temporal (cinza: escuro → claro)
+    'temporal-0': 0x999999,
+    'temporal-1': 0xb8b8b8,
+    'temporal-2': 0xcccccc,
+    'temporal-3': 0xe0e0e0,
+    
+    // Subcamadas etica (amarelo: escuro → claro)
+    'etica-0': 0xcccc33,
+    'etica-1': 0xffff4d,
+    'etica-2': 0xffff66,
+    'etica-3': 0xffff99
 };
+
+/**
+ * Obtém a cor de um conceito baseado na sua camada
+ * Suporta subcamadas com variações cromáticas
+ */
+function getColorForLayer(layer: string): number {
+    // Tenta match exato primeiro
+    if (LAYER_COLORS[layer]) {
+        return LAYER_COLORS[layer];
+    }
+    
+    // Se é uma subcamada não mapeada, usa a cor base
+    const baseLayer = layer.split('-')[0];
+    return LAYER_COLORS[baseLayer] || 0x66ccff; // Azul como fallback
+}
 
 // Estado global
 const state = {
@@ -90,6 +156,9 @@ async function loadLivroContent(): Promise<void> {
         // Inicializar navegação
         initializeNavigation();
         
+        // Inicializar protocolos interativos
+        initProtocols();
+        
     } catch (error) {
         console.error('Error loading livro content:', error);
         contentDiv.classList.remove('loading');
@@ -117,21 +186,16 @@ async function loadLivroContent(): Promise<void> {
  */
 async function loadConceptsAndActivateLinks(): Promise<void> {
     try {
-        console.log('Carregando conceitos...');
         const response = await fetch('assets/concepts.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         concepts = await response.json();
-        console.log(`✓ ${concepts.length} conceitos carregados`);
-        console.log('Exemplos:', concepts.slice(0, 3).map(c => c.name));
         
         // Ativar links no conteúdo
         const contentDiv = document.getElementById('content');
         if (contentDiv) {
-            console.log('Ativando links de conceitos...');
             activateConceptLinks(contentDiv);
-            console.log('✓ Links ativados');
             
             // Identificar conceitos não mapeados (desabilitado)
             // identifyUnmappedConcepts(contentDiv);
@@ -292,8 +356,6 @@ function isConceptualTerm(word: string): boolean {
  * Ativa links de conceitos no conteúdo
  */
 function activateConceptLinks(element: HTMLElement): void {
-    console.log('Processando links no elemento:', element.id);
-    
     // Criar mapa de conceitos (nome -> conceito)
     const conceptMap = new Map<string, Concept>();
     concepts.forEach(concept => {
@@ -329,8 +391,6 @@ function activateConceptLinks(element: HTMLElement): void {
         nodesToProcess.push(node as Text);
     }
 
-    console.log(`${nodesToProcess.length} nós de texto encontrados`);
-    
     // Processar em blocos para evitar travar a UI em documentos muito grandes
     const CHUNK_SIZE = 200;
     let linksCreated = 0;
@@ -362,8 +422,6 @@ function activateConceptLinks(element: HTMLElement): void {
             } else {
                 setTimeout(processChunk, 15);
             }
-        } else {
-            console.log(`✓ ${linksCreated} links criados`);
         }
     };
 
@@ -462,12 +520,13 @@ function escapeRegex(str: string): string {
  * Cria um link para um conceito
  */
 function createConceptLink(text: string, concept: Concept): HTMLElement {
-    const link = document.createElement('span');
+    const link = document.createElement('a');
     link.className = 'riz∅ma-link';
     link.textContent = text;
+    link.href = `riz∅ma.html?concept=${concept.id}`;
     link.setAttribute('data-concept-id', concept.id);
     link.setAttribute('data-concept-desc', concept.description);
-    link.setAttribute('role', 'button');
+    link.setAttribute('role', 'link');
     link.setAttribute('tabindex', '0');
     
     // Converter cor (usar layer se color não estiver definido)
@@ -481,8 +540,8 @@ function createConceptLink(text: string, concept: Concept): HTMLElement {
             colorHex = '#' + concept.color.toString(16).padStart(6, '0');
         }
     } else if (concept.layer) {
-        // Usar cor da layer
-        const layerColor = LAYER_COLORS[concept.layer] || 0x66ccff;
+        // Usar cor da layer (com suporte a subcamadas)
+        const layerColor = getColorForLayer(concept.layer);
         colorHex = '#' + layerColor.toString(16).padStart(6, '0');
     } else {
         // Fallback padrão
@@ -493,18 +552,14 @@ function createConceptLink(text: string, concept: Concept): HTMLElement {
     link.style.setProperty('color', colorHex, 'important');
     link.style.setProperty('text-decoration-color', colorHex, 'important');
     
-    // Ao clirar, abrir o rizoma com foco nesse conceito
-    const handleActivation = (e: Event) => {
+    // Ativar tooltip para este link
+    activateTooltipForLink(link, concept, concepts);
+    
+    // Prevenir navegação padrão e usar navegação customizada
+    link.addEventListener('click', (e: Event) => {
         e.preventDefault();
-        console.log(`Navegando para riz∅ma.html#${concept.id}`);
-        window.location.href = `riz∅ma.html#${concept.id}`;
-    };
-
-    link.addEventListener('click', handleActivation);
-    link.addEventListener('keydown', (e: KeyboardEvent) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-            handleActivation(e);
-        }
+        console.log(`Navegando para riz∅ma.html?concept=${concept.id}`);
+        window.location.href = `riz∅ma.html?concept=${concept.id}`;
     });
 
     return link;
@@ -1007,10 +1062,11 @@ function loadPreferences(): void {
  * Inicialização principal
  */
 function init(): void {
-    console.log('Inicializando Entre Igrejas e Casas de Charlatanismo...');
-    
     // Carregar preferências
     loadPreferences();
+    
+    // Inicializar sistema de tooltips
+    initTooltips();
     
     // Carregar conteúdo
     loadLivroContent();
@@ -1050,9 +1106,6 @@ function init(): void {
         }, 150) as unknown as number;
     };
     window.addEventListener('resize', onResize, { passive: true });
-    
-    // Inicializar autoscroll
-    initAutoScroll();
     
     // Progress bar updates - throttled with requestAnimationFrame for smoother updates
     const progressFill = document.querySelector('.progress-bar-fill') as HTMLElement | null;
@@ -1100,139 +1153,8 @@ function init(): void {
 }
 
 // ============================================================================
-// AUTOSCROLL MEDITATIVO
+// INICIALIZAÇÃO
 // ============================================================================
-
-let autoScrollActive = false;
-let autoScrollInterval: number | null = null;
-let autoScrollRaf: number | null = null;
-const AUTO_SCROLL_SPEED = 0.3; // pixels por frame (ajustável)
-const AUTO_SCROLL_FPS = 60;
-
-function initAutoScroll(): void {
-    console.log('Inicializando autoscroll meditativo no livro');
-    
-    // Criar botão de autoscroll
-    const audioUI = document.querySelector('.audio-ui');
-    if (!audioUI) {
-        console.warn('Audio UI não encontrado para adicionar botão de autoscroll');
-        return;
-    }
-    
-    const autoScrollBtn = document.createElement('button');
-    autoScrollBtn.className = 'auto-scroll-button';
-    autoScrollBtn.id = 'auto-scroll-btn';
-    autoScrollBtn.setAttribute('aria-label', 'Ativar autoscroll meditativo');
-    autoScrollBtn.innerHTML = '<span aria-hidden="true">⬇</span>';
-    autoScrollBtn.title = 'Autoscroll meditativo';
-    
-    // Inserir após o botão de fonte
-    const fontBtn = document.getElementById('font-size-btn');
-    if (fontBtn && fontBtn.nextSibling) {
-        audioUI.insertBefore(autoScrollBtn, fontBtn.nextSibling);
-    } else {
-        audioUI.appendChild(autoScrollBtn);
-    }
-    
-    autoScrollBtn.addEventListener('click', toggleAutoScroll);
-    
-    // Desativar autoscroll se usuário scrollar manualmente
-    let userScrollTimeout: number | null = null;
-    window.addEventListener('wheel', () => {
-        if (autoScrollActive) {
-            console.log('Scroll manual detectado - pausando autoscroll');
-            pauseAutoScroll();
-            
-            // Reativar após 2 segundos de inatividade
-            if (userScrollTimeout) clearTimeout(userScrollTimeout);
-            userScrollTimeout = window.setTimeout(() => {
-                if (autoScrollActive) {
-                    resumeAutoScroll();
-                }
-            }, 2000);
-        }
-    }, { passive: true });
-
-    // Também observar toques (mobile) para pausar autoscroll
-    window.addEventListener('touchstart', () => {
-        if (autoScrollActive) {
-            console.log('Toque detectado - pausando autoscroll');
-            pauseAutoScroll();
-        }
-    }, { passive: true });
-}
-
-function toggleAutoScroll(): void {
-    const btn = document.getElementById('auto-scroll-btn');
-    if (!btn) return;
-    
-    autoScrollActive = !autoScrollActive;
-    
-    if (autoScrollActive) {
-        console.log('Autoscroll ativado');
-        btn.classList.add('active');
-        btn.innerHTML = '<span aria-hidden="true">⏸</span>';
-        btn.setAttribute('aria-label', 'Pausar autoscroll');
-        startAutoScroll();
-    } else {
-        console.log('Autoscroll desativado');
-        btn.classList.remove('active');
-        btn.innerHTML = '<span aria-hidden="true">⬇</span>';
-        btn.setAttribute('aria-label', 'Ativar autoscroll meditativo');
-        stopAutoScroll();
-    }
-}
-
-function startAutoScroll(): void {
-    if (autoScrollRaf) return; // already running
-
-    // Convert speed to pixels per second (approx)
-    const speedPerSecond = AUTO_SCROLL_SPEED * AUTO_SCROLL_FPS;
-    let lastTime = performance.now();
-
-    function step(now: number) {
-        if (!autoScrollActive) {
-            autoScrollRaf = null;
-            return;
-        }
-
-        const delta = (now - lastTime) / 1000; // seconds
-        lastTime = now;
-        const distance = speedPerSecond * delta;
-
-        const currentScroll = window.scrollY;
-        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-
-        if (currentScroll >= maxScroll) {
-            console.log('Fim da página alcançado - desativando autoscroll');
-            toggleAutoScroll();
-            return;
-        }
-
-        window.scrollBy({ top: distance, behavior: 'auto' });
-        autoScrollRaf = window.requestAnimationFrame(step);
-    }
-
-    autoScrollRaf = window.requestAnimationFrame(step);
-}
-
-function stopAutoScroll(): void {
-    if (autoScrollRaf) {
-        cancelAnimationFrame(autoScrollRaf);
-        autoScrollRaf = null;
-    }
-}
-
-function pauseAutoScroll(): void {
-    stopAutoScroll();
-}
-
-function resumeAutoScroll(): void {
-    if (autoScrollActive && !autoScrollInterval) {
-        console.log('Retomando autoscroll');
-        startAutoScroll();
-    }
-}
 
 // Inicializar quando o DOM estiver pronto
 if (document.readyState === 'loading') {
