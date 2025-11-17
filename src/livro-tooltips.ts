@@ -283,7 +283,7 @@ function createTooltipElement(concept: Concept, concepts: Concept[]): HTMLElemen
                 </svg>
                 ${connections} ${connections === 1 ? 'conexão' : 'conexões'}
             </span>
-            <a href="riz∅ma.html?concept=${concept.id}" class="tooltip-link" onclick="event.stopPropagation()">
+            <a href="riz∅ma.html?focus=${concept.id}" class="tooltip-link" onclick="event.stopPropagation()">
                 Ver no Rizoma →
             </a>
         </div>

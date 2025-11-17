@@ -523,7 +523,7 @@ function createConceptLink(text: string, concept: Concept): HTMLElement {
     const link = document.createElement('a');
     link.className = 'riz∅ma-link';
     link.textContent = text;
-    link.href = `riz∅ma.html?concept=${concept.id}`;
+    link.href = `riz∅ma.html?focus=${concept.id}`;
     link.setAttribute('data-concept-id', concept.id);
     link.setAttribute('data-concept-desc', concept.description);
     link.setAttribute('role', 'link');
@@ -558,8 +558,8 @@ function createConceptLink(text: string, concept: Concept): HTMLElement {
     // Prevenir navegação padrão e usar navegação customizada
     link.addEventListener('click', (e: Event) => {
         e.preventDefault();
-        console.log(`Navegando para riz∅ma.html?concept=${concept.id}`);
-        window.location.href = `riz∅ma.html?concept=${concept.id}`;
+        console.log(`Navegando para riz∅ma.html?focus=${concept.id}`);
+        window.location.href = `riz∅ma.html?focus=${concept.id}`;
     });
 
     return link;
