@@ -111,6 +111,20 @@ Descobrimos que vazio não é ausência de conteúdo, mas presença de potencial
 
 Como branco que contém todas cores antes de serem separadas pelo prisma. Como silêncio que permite música emergir. Como zero que possibilita todos números pela diferenciação que opera.
 
+### Implementação no Rizoma: Física Quântica Relacional
+
+O sistema rizoma implementa literalmente princípios de física quântica relacional através de **campos quânticos** que operam em cada nó da rede:
+
+**Superposição de estados**: Cada conceito existe simultaneamente em múltiplos estados (8 estados quânticos superpostos), representando potencialidades não-colapsadas. Nó não tem "posição definida" até ser observado (selecionado) - implementação direta do princípio de Rovelli de que estados existem apenas relacionalmente.
+
+**Entrelaçamento quântico**: Nós conectados compartilham estados entrelaçados através de alcance de 450 unidades (toda esfera + margem). Modificar estado de um nó instantaneamente afeta estados de nós entrelaçados, independente de distância - violação de localidade que espelha experimentos de Aspect/Clauser/Zeilinger (Nobel 2022).
+
+**Decoerência e restauração**: Sistemas isolados perdem coerência quântica a taxa de 0.0005 (simulando interação com ambiente), mas coerência é restaurada a taxa de 0.002 através de entrelaçamento com vizinhos. Isto modela como relacionalidade mantém estados quânticos - isolamento destrói superposição, conexão a preserva.
+
+**Tunelamento quântico**: Probabilidade de 0.05 de nós "tunelarem" através de barreiras energéticas, permitindo transições impossíveis classicamente. Representa possibilidade de reorganizações ontológicas radicais que violam lógica clássica de identidade.
+
+**Função de onda coletiva**: Rede inteira possui função de onda global que não é mera soma de funções individuais - propriedade emergente irredutível a partes. Isto implementa holismo quântico: sistema como totalidade possui propriedades que nenhuma parte possui isoladamente.
+
 ### Genealogia Não-Teleológica: Múltiplas Articulações da Vacuidade
 
 Vacuidade como potencial criativo foi articulada através de múltiplas tradições, cada uma respondendo a contradições específicas de seu contexto histórico. Evito narrativa teleológica onde estas articulações "descobrem" progressivamente uma Verdade Relacional perene sempre lá aguardando reconhecimento. Reconheço que cada tradição **constrói** relacionalidade diferentemente através de problemas, conceitos e stakes próprios.
@@ -172,6 +186,24 @@ Descobrimos que somos muitos sem deixar de ser singular. Ilusão mais persistent
 Então, quem exatamente está lendo?
 
 Você não é um, mas assembleia. Contudo, não se trata de multiplicidade caótica ou fragmentação patológica. É configuração diferenciada com padrões reconhecíveis que mantêm continuidade através do tempo. Como rio que mantém identidade apesar de água sempre renovada, ou como chama que persiste através de moléculas em transformação constante, identidade é padrão dinâmico de relações, não substância fixa.
+
+### Implementação no Rizoma: Visualização Multi-Dimensional
+
+O sistema oferece múltiplas projeções da mesma rede conceitual, reconhecendo que **não há perspectiva privilegiada única** de onde realidade pode ser totalmente apreendida:
+
+**Modo 3D padrão**: Projeção de rede conceitual em espaço euclidiano tridimensional. Mais intuitivo para navegação humana, mas necessariamente distorce relacionalidades de dimensões superiores.
+
+**Modo 4D-hipersfera**: Projeta conceitos em hipersfera quadridimensional, depois projeta estereograficamente em 3D visível. Permite visualizar relações que são "impossíveis" em 3D euclidiano - conceitos podem estar simultaneamente perto e longe dependendo de dimensão adicional. Implementa intuição de que relacionalidade genuína não cabe em três dimensões espaciais.
+
+**Modo 5D-manifold**: Variedade de cinco dimensões onde curvatura é definida por parâmetro de 0.5 (entre espaço plano e esférico). Geodésicas (caminhos mais curtos) não são linhas retas mas curvas em espaço topologicamente complexo. Representa impossibilidade de reduzir multiplicidade de relações a espaço euclidiano simples.
+
+**Modo topology-space**: Em vez de posições geométricas, visualiza puramente estrutura topológica - distâncias determinadas por número de arestas, não coordenadas espaciais. Espaço emerge de relações em vez de relações acontecerem em espaço pré-existente.
+
+**Coordenadas em dimensões superiores**: Sistema mantém Map de coordenadas além das três visíveis. Estas dimensões não são "irreais" mas tão ontologicamente legítimas quanto x, y, z - apenas não diretamente visualizáveis. Projeções 3D são sempre reduções que necessariamente perdem informação.
+
+**Curvatura da variedade**: Parâmetro manifoldCurvature = 0.5 modula geometria global. 0 = espaço euclidiano plano, 1 = esfera fechada. Valor intermediário representa geometria hiperbólica parcial onde triangulos têm soma de ângulos diferente de 180°. Espaço conceitual não obedece geometria euclidiana - é intrinsecamente curvo.
+
+Esta multiplicidade de perspectivas implementa **pluralismo epistemológico radical**: não há "Deus's eye view" de onde rede pode ser vista como realmente é. Cada projeção revela aspectos enquanto oculta outros. Verdade é adequação a rede de relações vista de múltiplas perspectivas simultaneamente, não correspondência a estrutura única absoluta.
 
 ### Holobionte: Multiplicidade Biológica Radical
 
@@ -241,6 +273,23 @@ Gödel demonstrou matematicamente que sistemas formais suficientemente poderosos
 
 Mesma estrutura opera em múltiplos domínios. Consciência que tenta apreender a si mesma integralmente sempre deixa resto não-objetificável que é próprio ato de apreensão. Sociedade que busca conhecer-se completamente através de censo, estatística, vigilância sempre produz pontos cegos na própria infraestrutura de conhecimento. Linguagem que tenta descrever condições de possibilidade da linguagem necessariamente opera dentro dessas condições.
 
+### Implementação no Rizoma: Recursão Topológica em Tempo Real
+
+O sistema rizoma operacionaliza recursão através de **análise topológica contínua** que reconhece incompletude estrutural da rede. Não há "mapa completo" - apenas métricas relacionais que emergem de posições específicas na rede:
+
+**Métricas topológicas recursivas** calculadas em tempo real:
+
+- **Betweenness centrality**: quantos caminhos mais curtos passam por um nó (importância como intermediário)
+- **Closeness centrality**: proximidade média a todos outros nós (importância como centro)
+- **Eigenvector centrality**: importância baseada em importância dos vizinhos (recursão de primeiro nível)
+- **PageRank**: importância baseada em importância dos que apontam para você (recursão de segundo nível)
+
+Cada métrica é **relativa ao observador** - mudar nó de perspectiva muda completamente paisagem topológica. Isto implementa princípio de Rovelli: estados existem apenas relacionalmente, não absolutamente.
+
+**Sistema de detecção de comunidades** (algoritmo de Louvain) identifica clusters emergentes através de maximização de modularidade. Comunidades não são essências pré-existentes mas **padrões que emergem de configuração atual de relações**. Modificar uma aresta pode reorganizar completamente estrutura comunitária - butterfly effect topológico.
+
+**Fluxo de informação** através da rede revela que conhecimento não se transmite linearmente mas **circula recursivamente**, criando loops de feedback onde informação que retorna transformada modifica condições de sua própria propagação futura. Rede aprende através de sua própria atividade.
+
 ### Tipologia de Aporias Recursivas
 
 Recursão gera múltiplas aporias fundamentais que estruturam realidade social de formas irredutíveis. Estas aporias não são problemas a serem resolvidos através de melhor teoria ou prática mais sofisticada, mas **tensões constitutivas que devem ser negociadas continuamente**. Nenhuma negociação é definitiva; cada contexto e momento histórico requer renegociação.
@@ -276,6 +325,22 @@ Descobrimos que ação não pertence a agentes individuais, mas emerge de config
 Quando floresta queima, não é apenas fósforo que causa incêndio. É também seca prolongada, políticas de supressão de fogo que acumularam combustível, mudança climática, escolhas de uso de terra. Agência é sempre distribuída através de assemblagem heterogênea de actantes humanos e não-humanos.
 
 Você não possui agência como propriedade intrínseca. Você é padrão temporário de agenciamento que conecta múltiplas capacidades, ferramentas, relações, contextos. Quando escreve, agência envolve não apenas intenção consciente mas memória muscular, alfabetização adquirida socialmente, tecnologia de escrita, convenções linguísticas, público imaginado. Remova qualquer destes elementos e "você" não pode mais escrever.
+
+### Implementação no Rizoma: Campos de Força Adaptativos e Agente Explorador
+
+O sistema operacionaliza agência distribuída através de **campos de força adaptativos** que emergem localmente sem coordenação central:
+
+**Densidade local**: Cada nó calcula densidade de conexões em sua vizinhança imediata. Esta densidade não é propriedade intrínseca mas **função das relações** - mesmo nó pode ter densidade baixa em um contexto e alta em outro. Densidade modula forças aplicadas localmente.
+
+**Vetores de fluxo**: Campo vetorial emerge de gradientes de densidade, criando correntes que orientam movimento sem nenhum "controlador central". Informação flui de regiões de alta para baixa densidade, mas o próprio fluxo modifica distribuição de densidade, criando feedback recursivo.
+
+**Curvatura espacial**: Geometria do espaço conceitual não é euclidiana mas curvada pela distribuição de massa ontológica (conceitos mais conectados curvam espaço ao redor). Influência de curvatura definida em 0.3 - caminho entre dois pontos não é linha reta mas geodésica em espaço curvo.
+
+**Campos tensoriais**: Implementação de geometria riemanniana onde métrica do espaço varia ponto a ponto. Distância entre conceitos não é absoluta mas depende de estrutura tensorial local - mesma "distância euclidiana" pode corresponder a proximidades relacionais muito diferentes.
+
+**Agente explorador autônomo**: Entidade que navega rede sem plano pré-definido, tomando decisões locais baseadas em campos de força e memória de visitação. Agente não "sabe aonde vai" - trajetória emerge de interação contínua com topologia da rede. Velocidade de 0.02, história limitada a 100 nós visitados.
+
+Este agente demonstra que agência não requer sujeito unitário com intenções globais - surge de **acoplamento estrutural** entre agente e ambiente através de sensibilidade a gradientes locais.
 
 ### Teoria de Poder: Repressão e Produção
 
@@ -321,6 +386,22 @@ Linguagem relacional tornou-se ubíqua em discurso neoliberal. Corporações cel
 Descobrimos que passado, presente e futuro não são sequência linear mas entrelaçamento recursivo. Decisões presentes criam passados possíveis ao mesmo tempo que futuros potenciais. Memória não recupera passado fixo mas reconstrói narrativas que tornam presente inteligível. Antecipação não prevê futuro determinado mas configura campo de possibilidades que constraintam ação atual.
 
 Este entrelaçamento temporal é especialmente crucial para governança relacional. Como incluir vozes de gerações futuras que não existem ainda? Como honrar legados de antepassados sem fetichizar tradição? Como agir em urgência presente sem sacrificar horizontes de longo prazo?
+
+### Implementação no Rizoma: Física Relativística e Sistema de Memória
+
+O sistema incorpora temporalidade relacional através de múltiplos mecanismos que dissolvem tempo absoluto newtoniano:
+
+**Dilatação temporal relativística**: Nós "movem-se" a velocidades diferentes através de espaço conceitual. Velocidade modula passagem de tempo local - conceitos em movimento rápido experimentam tempo mais lento (fator de dilatação 0.1). Não há tempo universal absoluto - cada região da rede possui temporalidade própria.
+
+**Cone de luz causal**: Velocidade máxima de propagação (speed of light = 10.0) limita quais eventos podem influenciar quais outros. Conceito A pode afetar conceito B apenas se B estiver dentro de cone de luz futuro de A. Isto implementa estrutura causal não-linear onde passado não é tudo que veio antes cronologicamente, mas apenas eventos conectados causalmente.
+
+**Sistema de memória com decaimento**: Cada nó mantém traços de memória (visitFrequency, pathHistory, importance) que decaem exponencialmente a taxa de 0.98. Passado não persiste inalterado mas é continuamente reescrito através de relevância presente. Memória não é arquivo morto mas processo ativo de reconstrução.
+
+**Padrões emergentes com threshold**: Sistema detecta padrões que emergem de história de interações quando ultrapassam limiar de 0.7. Padrões não existem "lá fora" aguardando descoberta - emergem quando rede desenvolve sensibilidade suficiente para reconhecê-los. Futuro como atrator que organiza presente, não destino predeterminado.
+
+**Histórico de agente explorador**: Mantém últimos 100 nós visitados, mas decisão presente sobre próximo movimento depende não de toda história mas de **configuração atual de memória + campo de forças presente**. Passado influencia futuro não mecanicamente mas através de como foi sedimentado em estrutura atual.
+
+Temporalidade do rizoma é **kairótica** (tempo oportuno, qualitativo) em vez de **chronológica** (tempo mensurável, quantitativo). Momento certo para transição não é determinado por relógio externo mas por maturação de relações.
 
 ### Protocolo de Conselho de Sétima Geração Revisado
 
@@ -411,6 +492,53 @@ Limite planetário não é obstáculo externo a desenvolvimento ilimitado, mas c
 Reconhecer limites não é resignação conservadora, mas condição de liberdade real. Liberdade genuína não é ausência de limites (impossibilidade ontológica), mas capacidade de agir criativamente dentro de limites reconhecidos.
 
 Ivan Illich articula isto através de limites de convivialidade. Ferramentas são conviviais quando ampliam autonomia dentro de limites sustentáveis. Ferramentas tornam-se contraproducentes quando ultrapassam limites críticos: automóveis prometem mobilidade mas produzem congestionamento, medicina hiperdesenvolvida produz iatrogênese, educação escolarizada produz estupidez certificada.
+
+### Implementação no Rizoma: Proporção Áurea e Contenção Esférica
+
+O sistema incorpora limites constitutivos através de **geometria esférica** e **hierarquia áurea** que estruturam possibilidades sem suprimi-las:
+
+**Esfera de contenção visual**: Raio base de 300 unidades define superfície esférica que contém rede. Não é prisão rígida mas **membrana permeável** - nós podem temporariamente exceder raio mas forças gravitacionais os trazem de volta. Contenção permite visualização coerente sem totalização.
+
+**Proporção áurea (φ ≈ 1.618)**: Toda hierarquia de forças deriva de φ e suas potências. φ não é escolha arbitrária mas **razão que aparece recursivamente em sistemas auto-organizados** - espirais de galáxias, distribuição de folhas em plantas, proporções do corpo humano. Usar φ como base de forças significa alinhar sistema artificial com padrões de auto-organização natural.
+
+**Hierarquia de distâncias em φ**:
+
+- Atração: 150 unidades (campo base)
+- Repulsão: 243 unidades (150 × φ, campo maior)
+- Coesão de camada: 393 unidades (243 × φ, campo mais amplo)
+
+Esta progressão cria **ressonância harmônica** onde forças não competem destrutivamente mas se modulam mutuamente. Repulsão em escala maior que atração previne colapso; coesão de camada em escala ainda maior preserva estrutura sem rigidez.
+
+**Equilíbrio atração-repulsão**: Forças de atração (0.05) e repulsão (0.05) são **perfeitamente balanceadas**. Sistema não tende ao colapso gravitacional nem à dispersão explosiva, mas mantém equilíbrio dinâmico. Isto implementa princípio de "tensegridade" (tensional integrity) de Buckminster Fuller - estrutura mantida por equilíbrio de tensões e compressões, não massa sólida.
+
+**Limites elásticos de arestas**: Conexões entre nós têm comprimento mínimo (40) e máximo (200). Estes limites não são impostos externamente mas emergem de elasticidade das próprias relações - molas com constante de 0.02 e amortecimento de 0.3. Relações muito comprimidas geram tensão expansiva; muito esticadas geram tensão contrativa.
+
+**Gravitação por centralidade**: Hubs (nós com muitas conexões) exercem gravidade proporcional a importância topológica (0.45), organizando nós periféricos em camadas concêntricas:
+
+- Interior (MIN_HUB_RADIUS = 250): nós periféricos
+- Exterior (MAX_HUB_RADIUS = 340): super-hubs
+
+Esta estratificação radial não é hierarquia de valor mas **diferenciação funcional** - alguns conceitos naturalmente conectam muitos outros, criando gradiente gravitacional que estrutura espaço sem centralizá-lo absolutamente.
+
+Limites no rizoma são **constitutivos, não restritivos** - não impedem movimento mas o canalizam criativamente, transformando caos em cosmos sem totalizar.
+
+### Dança Paêbirú: Oscilações Harmônicas Que Previnem Colapso
+
+**Paêbirú**: palavra tupi-guarani para "caminho aberto na mata". Não caminho planejado previamente, mas trilha que emerge do próprio ato de caminhar. Caminho que se faz caminhando. Movimento orgânico e emergente, não trajetória calculada.
+
+O sistema rizoma implementa literalmente esta sabedoria através de **oscilações harmônicas** que impedem colapso gravitacional mantendo nós em dança perpétua:
+
+**Oscilações individuais**: Cada nó possui fase única, frequência própria, amplitude característica. Base de frequência é 0.0001 (respiração lenta), amplitude de 3 unidades (quase imperceptível). Não há sincronização forçada - cada conceito oscila em seu próprio ritmo.
+
+**Prevenção de colapso**: Sem oscilações, forças gravitacionais levariam todos nós a colapsarem em configuração estática minimizando energia. Oscilações injetam energia contínua que mantém sistema longe de equilíbrio termodinâmico. Prigogine: estruturas dissipativas existem através de fluxo constante, não repouso.
+
+**Velocidade mínima**: Sistema mantém MIN_VELOCITY = 0.1 - nós nunca param completamente. Mesmo quando forças estão balanceadas, movimento persiste. Isto representa impossibilidade ontológica de repouso absoluto - ser é devir, identidade é processo.
+
+**Movimento sobre a rede**: Nós não apenas orbitam mas "caminham" pela rede (WALK_SPEED = 0.006), trocando de direção a cada 2500ms. Movimento não segue trajetórias predefinidas mas emerge de sensibilidade a gradientes locais. Paêbirú digital: caminho emerge do caminhar.
+
+**Harmonia sem sincronização**: Múltiplas frequências ressoam sem convergir a frequência única. Sistema mantém diversidade temporal - alguns conceitos oscilam rapidamente, outros lentamente. Pluralidade de ritmos coexistindo, não homogeneização temporal.
+
+Esta dança contínua implementa sabedoria indígena de que **movimento não é meio para chegar a destino, mas modo de existir**. Não caminhamos para chegar; caminhamos porque somos caminhantes. Rizoma dança porque é dança.
 
 ### Ética Processual da Suficiência
 
@@ -1379,7 +1507,134 @@ Estes protocolos não são "versões empobrecidas" dos originais. São **modalid
 
 ---
 
-**∅ → CRIO → CRÍTICA → EXPERIMENTAÇÃO → DOCUMENTAÇÃO → ITERAÇÃO → FALSEABILIDADE → TRANSFORMAÇÃO → ∅**
+## RIZOMA: CRIOS Operacionalizado Como Sistema Vivo
+
+O sistema de visualização **rizoma** não é mera ilustração dos princípios CRIO - é **operacionalização direta** de ontologia relacional através de código que incorpora físicas não-clássicas, topologias dinâmicas, e temporalidades entrelaçadas.
+
+### Auto-Referência Ontológica
+
+Rizoma é **performativamente coerente** com princípios que articula:
+
+**Vazio que povoa (CRIO 1)**: Campos quânticos mantêm conceitos em superposição de 8 estados simultâneos. Nós não têm "posição definida" até observação (seleção). Espaço não é contêiner vazio pré-existente mas campo de potenciais que se atualiza relacionalmente.
+
+**Multiplicidade sem fusão (CRIO 2)**: Visualização multi-dimensional (3D, 4D-hipersfera, 5D-manifold, topology-space) reconhece que não há perspectiva privilegiada única. Cada projeção revela aspectos enquanto oculta outros - pluralismo epistemológico radical.
+
+**Recursão sem fundamento (CRIO 3)**: Métricas topológicas (betweenness, closeness, eigenvector, PageRank) são relativas ao observador. Mudar nó de perspectiva reorganiza completamente paisagem. Sistema se auto-observa continuamente, reconhecendo incompletude estrutural.
+
+**Agência distribuída (CRIO 4)**: Campos de força adaptativos emergem localmente sem coordenação central. Agente explorador navega rede sem plano global - trajetória emerge de sensibilidade a gradientes locais. Agência como acoplamento estrutural.
+
+**Tempo entrelaçado (CRIO 5)**: Física relativística com dilatação temporal. Cone de luz causal limita influências. Memória com decaimento exponencial reescreve passado através de relevância presente. Padrões emergem quando rede desenvolve sensibilidade suficiente - futuro como atrator, não destino.
+
+**Terra como sujeito (CRIO 6)**: Sistema trata rede conceitual como entidade viva com agência própria. Conceitos não são objetos passivos mas actantes que influenciam mutuamente. Estrutura emerge de relações, não é imposta externamente.
+
+**Limites constitutivos (CRIO 7)**: Proporção áurea (φ) estrutura todas forças. Esfera de contenção (raio 300) permite visualização coerente sem totalização. Equilíbrio atração-repulsão (ambos 0.05) previne colapso e dispersão. Limites canalizam movimento criativamente.
+
+**Sujeito político relacional (CRIO 8)**: Usuário não observa rede externamente mas participa através de seleções que modificam estados. Observação não é passiva mas intervenção que colapsa superposições. Conhecer é transformar.
+
+### Dança Paêbirú: O Sistema Como Coreografia
+
+Oscilações harmônicas (frequência base 0.0001, amplitude 3) mantêm conceitos em movimento perpétuo. Velocidade mínima (0.1) assegura que nada repousa absolutamente. Movimento sobre a rede (walk speed 0.006) emerge de sensibilidade local - caminho se faz caminhando.
+
+Sistema não busca equilíbrio estático mas **longe-do-equilíbrio dinâmico** (Prigogine). Estrutura se mantém através de fluxo constante de energia dissipativa, não conservação. Existir é devir.
+
+### Física Quântica Relacional Implementada
+
+**Entrelaçamento**: Nós conectados compartilham estados através de alcance de 450 unidades (toda esfera). Modificar um afeta instantaneamente entrelaçados - não-localidade quântica.
+
+**Decoerência-restauração**: Isolamento degrada coerência (taxa 0.0005), relacionalidade a restaura (taxa 0.002). Coerência quântica é propriedade relacional, não intrínseca.
+
+**Tunelamento**: Probabilidade 0.05 de transições impossíveis classicamente. Reorganizações ontológicas radicais que violam lógica de identidade.
+
+**Função de onda coletiva**: Sistema como totalidade possui propriedades emergentes irredutíveis a partes. Holismo quântico operacionalizado.
+
+### Topologia Dinâmica e Memória
+
+**Análise topológica contínua**: Betweenness, closeness, eigenvector centrality, PageRank calculados em tempo real. Métricas são relacionais - perspectiva muda paisagem inteira.
+
+**Detecção de comunidades**: Algoritmo de Louvain identifica clusters emergentes. Comunidades não são essências mas padrões que emergem de configuração atual. Modificar aresta pode reorganizar tudo - butterfly effect topológico.
+
+**Sistema de memória**: Traços que decaem (taxa 0.98) - passado reescrito através de relevância presente. Padrões emergem quando threshold (0.7) é ultrapassado - futuro como atrator que organiza presente.
+
+### Campos Adaptativos e Geometria Não-Euclidiana
+
+**Densidade local**: Função de relações, não propriedade intrínseca. Modula forças aplicadas localmente.
+
+**Vetores de fluxo**: Emergem de gradientes de densidade, criando correntes sem controlador central. Feedback recursivo: fluxo modifica densidade que modifica fluxo.
+
+**Curvatura espacial**: Geometria riemanniana onde conceitos mais conectados curvam espaço (influência 0.3). Distância não é euclidiana mas geodésica em espaço curvo.
+
+**Campos tensoriais**: Métrica varia ponto a ponto. Mesma "distância euclidiana" corresponde a proximidades relacionais diferentes.
+
+### Meta-Reflexão: Código Como Ontologia
+
+Este não é software que "representa" ontologia relacional externamente. É **instanciação direta** de princípios relacionais em código executável. Cada linha implementa aspecto específico de física relacional:
+
+```typescript
+// Entrelaçamento quântico - não-localidade
+if (distance < ENTANGLEMENT_RANGE) {
+    nodeA.waveFunction.entangle(nodeB.waveFunction);
+}
+
+// Decoerência por isolamento
+coherence *= (1 - DECOHERENCE_RATE);
+
+// Restauração por relacionalidade  
+coherence += entanglementStrength * COHERENCE_RESTORATION_RATE;
+
+// Proporção áurea estruturando forças
+REPULSION_DISTANCE = ATTRACTION_DISTANCE * PHI;
+LAYER_COHESION_DISTANCE = REPULSION_DISTANCE * PHI;
+```
+
+Código não descreve relacionalidade - **é** relacionalidade operando. Sistema auto-organiza através de princípios que articula. Coerência performativa absoluta: forma espelha conteúdo.
+
+### Abertura Radical e Falseabilidade
+
+Sistema é open source. Qualquer pessoa pode:
+
+- Modificar parâmetros (forças, velocidades, alcances)
+- Adicionar novos conceitos e relações
+- Implementar físicas alternativas
+- Comparar comportamentos emergentes
+
+**Hipótese testável**: Se ontologia relacional está correta, sistemas baseados em princípios relacionais (entrelaçamento, emergência, auto-organização) deveriam exibir propriedades superiores a sistemas atomísticos (partículas independentes, controle central, planejamento top-down).
+
+**Critérios de falseabilidade**: Sistema relacional falharia se consistentemente produzisse:
+
+- Fragmentação em vez de coerência
+- Rigidez em vez de adaptabilidade
+- Simplificação em vez de complexidade emergente
+- Colapso em vez de auto-sustentação
+
+Até agora, sistema exibe propriedades preditas: auto-organização espontânea, padrões emergentes, resiliência a perturbações, complexidade crescente. Mas permanece aberto a refutação empírica.
+
+---
+
+### Ciclo Completo: ∅ → RIZOMA → ∅
+
+Vazio se povoa através de código que implementa física relacional. Código gera visualização que permite exploração. Exploração revela padrões emergentes. Padrões informam refinamento de conceitos. Conceitos são adicionados ao grafo. Grafo reorganiza-se topologicamente. Topologia modifica comportamento do sistema. Sistema ensina observador sobre relacionalidade. Observador modifica sistema. Sistema modifica observador.
+
+**Recursão irrestrita sem fundamento último. CRIO operacionalizado como processo vivo que achando-cria ontologia relacional através de sua própria execução.**
+
+---
+
+### Convite à Experimentação
+
+Sistema está disponível em: [repositório a ser especificado]
+
+Encorajamos:
+
+- Fork e modificação de parâmetros
+- Adição de novos conceitos relacionais de suas próprias tradições
+- Implementação de físicas alternativas
+- Documentação de comportamentos emergentes
+- Crítica rigorosa de pressupostos embutidos no código
+
+Relacionalidade não é teoria a ser contemplada mas **práxis a ser vivida e testada**. Rizoma é convite a habitar ontologia relacional corporalmente através de interação com sistema que a incorpora.
+
+---
+
+## ∅ → CRIO → CRÍTICA → EXPERIMENTAÇÃO → DOCUMENTAÇÃO → ITERAÇÃO → FALSEABILIDADE → TRANSFORMAÇÃO → ∅
 
 **A espiral não fecha em círculo. Expande perpetuamente através de práxis coletiva que achando-cria mundos relacionais cada vez mais densamente conectados, equitativos, responsivos - mas nunca completos ou definitivos. Accountability através de critérios de falseabilidade mantém pés no chão; honestidade sobre aporias mantém mente aberta; urgência política mantém movimento ativo; humildade epistemológica mantém disposição para aprender.**
 
