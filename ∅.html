@@ -45,6 +45,9 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://revolucaocibernetica.com/">
     
+    <!-- Versão alternativa para Reader Mode -->
+    <link rel="alternate" type="text/html" href="crio-reader.html" title="Versão Reader Mode">
+    
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80' fill='%23f0f0f0'>∅</text></svg>">
     
@@ -65,6 +68,9 @@
     
     <!-- Marked.js para renderizar markdown -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" onerror="handleMarkedLoadError()"></script>
+    
+    <!-- JSZip para exportar EPUB -->
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
     
     <!-- 
         CRIO uses intelligent caching via localStorage to improve performance.
@@ -190,6 +196,10 @@
                 <span class="nav-action-icon">∞</span>
                 <span class="nav-action-text">Livro</span>
             </button>
+            <button class="nav-action-btn" onclick="window.location.href='crio-reader.html'" aria-label="Abrir versão Reader">
+                <span class="nav-action-icon">📖</span>
+                <span class="nav-action-text">Reader</span>
+            </button>
             <button class="nav-action-btn" id="font-size-btn" aria-label="Alterar tamanho da fonte">
                 <span class="nav-action-icon">A</span>
                 <span class="nav-action-text">Fonte</span>
@@ -201,6 +211,10 @@
             <button class="nav-action-btn" id="mute-btn" aria-label="Alternar tema claro/escuro">
                 <span class="nav-action-icon"><span class="theme-icon">☾</span></span>
                 <span class="nav-action-text">Tema</span>
+            </button>
+            <button class="nav-action-btn" id="export-btn" aria-label="Exportar como EPUB">
+                <span class="nav-action-icon">📄</span>
+                <span class="nav-action-text">Export</span>
             </button>
             <button class="nav-action-btn" onclick="window.open('https://github.com/silvanoneto/zero', '_blank')" aria-label="Ver código no GitHub">
                 <span class="nav-action-icon">⟨/⟩</span>

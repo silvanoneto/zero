@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>∅ → CRIO | Ontologia Relacional</title>
+    <meta name="description" content="Uma experiência filosófica explorando ontologia relacional através de oito CRIOS: do vazio que povoa ao sujeito político relacional.">
+    <meta name="author" content="Revolução Cibernética">
+    
+    <!-- Reader Mode Support -->
+    <meta property="article:published_time" content="2025-11-09T00:00:00Z">
+    <meta property="article:modified_time" content="2025-11-16T00:00:00Z">
+    <meta property="article:author" content="Revolução Cibernética">
+    <meta property="article:section" content="Filosofia">
+    <meta property="article:tag" content="Ontologia Relacional">
+    <meta property="article:tag" content="CRIO">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <style>
+        body {
+            max-width: min(900px, 95%);
+            margin: 0 auto;
+            padding: clamp(1rem, 2vw, 2rem);
+            font-family: Georgia, serif;
+            line-height: 1.6;
+        }
+        
+        #content {
+            opacity: 1 !important;
+        }
+        
+        /* Símbolo do vazio fixo */
+        .void-symbol {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            font-size: clamp(2rem, 4vw, 3rem);
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 1;
+            color: var(--text-color);
+        }
+        
+        /* GitHub Button */
+        .github-fab {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            width: 48px;
+            height: 48px;
+            background: var(--bg-color);
+            border: 1px solid var(--text-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            opacity: 0.7;
+        }
+        
+        .github-fab:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        
+        /* Loading state */
+        .loading-text {
+            text-align: center;
+            opacity: 0.5;
+            font-style: italic;
+        }
+        
+        /* Error state */
+        .error-text {
+            color: #d32f2f;
+            text-align: center;
+            padding: 2rem;
+            border: 1px solid #d32f2f;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <article id="content" itemscope itemtype="http://schema.org/Article">
+        <p class="loading-text">∅ → carregando CRIO...</p>
+    </article>
+    
+    <!-- Símbolo do vazio -->
+    <div class="void-symbol" aria-hidden="true">∅</div>
+    
+    <!-- GitHub Button -->
+    <a href="https://github.com/silvanoneto/zero" target="_blank" rel="noopener noreferrer" class="github-fab" aria-label="Ver código no GitHub" title="Ver código no GitHub">
+        <span>⟨/⟩</span>
+    </a>
+    
+    <script>
+        // Versionamento: adiciona timestamp para sempre buscar última versão
+        const CRIOS_URL = 'docs/CRIOS.md';
+        const contentEl = document.getElementById('content');
+        
+        // Função para carregar com cache-busting automático
+        async function loadCRIO() {
+            try {
+                // Adiciona timestamp para forçar atualização (invisível na URL)
+                const timestamp = Date.now();
+                const response = await fetch(`${CRIOS_URL}?_=${timestamp}`, {
+                    cache: 'no-cache'
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
+                const markdown = await response.text();
+                
+                if (!markdown || markdown.trim().length === 0) {
+                    throw new Error('Conteúdo vazio');
+                }
+                
+                // Renderizar
+                if (typeof marked !== 'undefined') {
+                    contentEl.innerHTML = marked.parse(markdown);
+                } else {
+                    contentEl.innerHTML = '<pre>' + markdown + '</pre>';
+                }
+                
+                console.log('✓ CRIO carregado com sucesso');
+                
+            } catch (error) {
+                console.error('Erro ao carregar CRIOS.md:', error);
+                contentEl.innerHTML = `
+                    <div class="error-text">
+                        <h2>Erro ao carregar CRIO</h2>
+                        <p>${error.message}</p>
+                        <button onclick="location.reload()" style="margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer;">
+                            Tentar novamente
+                        </button>
+                    </div>
+                `;
+            }
+        }
+        
+        // Carregar imediatamente
+        loadCRIO();
+        
+        // Recarregar periodicamente para pegar atualizações (a cada 5 minutos)
+        setInterval(loadCRIO, 5 * 60 * 1000);
+    </script>
+</body>
+</html>

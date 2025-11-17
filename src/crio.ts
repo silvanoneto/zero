@@ -6,19 +6,28 @@
 import type { Concept } from './types';
 
 // ============================================================================
+// DECLARAÇÕES GLOBAIS
+// ============================================================================
+
+declare const JSZip: any;
+
+// ============================================================================
 // TIPOS
 // ============================================================================
 
 interface CacheData {
     timestamp: number;
     content: string;
+    etag?: string;
+    lastModified?: string;
 }
 
 // ============================================================================
 // CONSTANTES E CONFIGURAÇÃO
 // ============================================================================
 
-const CACHE_DURATION = 7 * 24 * 60 * 60 * 1000; // 7 dias
+const CACHE_DURATION = 5 * 60 * 1000; // 5 minutos - verifica atualizações com frequência
+const CHECK_UPDATE_INTERVAL = 30 * 1000; // Verifica a cada 30 segundos se há nova versão
 const CRIOS_URL = 'docs/CRIOS.md';
 const AUDIO_URL = 'assets/CRIO.mp3';
 const CONCEPTS_URL = 'assets/concepts.json';
@@ -103,10 +112,10 @@ function getColorForLayer(layer: string): number {
 let concepts: Concept[] = [];
 
 // ============================================================================
-// GERENCIAMENTO DE CACHE
+// GERENCIAMENTO DE CACHE COM VERSIONAMENTO
 // ============================================================================
 
-function getCachedContent(): string | null {
+function getCachedData(): CacheData | null {
     try {
         const cached = localStorage.getItem('crio-content');
         if (!cached) return null;
@@ -114,27 +123,98 @@ function getCachedContent(): string | null {
         const data: CacheData = JSON.parse(cached);
         const now = Date.now();
         
+        // Cache expirou? Remove
         if ((now - data.timestamp) > CACHE_DURATION) {
             localStorage.removeItem('crio-content');
             return null;
         }
         
-        return data.content;
+        return data;
     } catch (e) {
         console.error('Erro ao ler cache:', e);
         return null;
     }
 }
 
-function setCachedContent(content: string): void {
+function setCachedContent(content: string, etag?: string, lastModified?: string): void {
     try {
         const data: CacheData = {
             timestamp: Date.now(),
-            content: content
+            content: content,
+            etag,
+            lastModified
         };
         localStorage.setItem('crio-content', JSON.stringify(data));
     } catch (e) {
         console.error('Erro ao salvar cache:', e);
+    }
+}
+
+/**
+ * Verifica se há uma nova versão do documento sem recarregar
+ * Usa HEAD request para economizar banda
+ */
+async function checkForUpdates(): Promise<boolean> {
+    try {
+        const cached = getCachedData();
+        if (!cached) return false;
+        
+        // HEAD request para verificar headers sem baixar o conteúdo
+        const response = await fetch(CRIOS_URL, { 
+            method: 'HEAD',
+            cache: 'no-cache' // Força verificação no servidor
+        });
+        
+        if (!response.ok) return false;
+        
+        const serverEtag = response.headers.get('etag');
+        const serverLastModified = response.headers.get('last-modified');
+        
+        // Verifica se mudou
+        if (serverEtag && cached.etag && serverEtag !== cached.etag) {
+            console.log('Nova versão detectada via ETag');
+            return true;
+        }
+        
+        if (serverLastModified && cached.lastModified && serverLastModified !== cached.lastModified) {
+            console.log('Nova versão detectada via Last-Modified');
+            return true;
+        }
+        
+        return false;
+    } catch (e) {
+        console.error('Erro ao verificar atualizações:', e);
+        return false;
+    }
+}
+
+/**
+ * Recarrega o conteúdo silenciosamente se houver nova versão
+ */
+async function silentReloadIfNeeded(): Promise<void> {
+    const hasUpdate = await checkForUpdates();
+    
+    if (hasUpdate) {
+        console.log('Atualizando conteúdo automaticamente...');
+        
+        try {
+            const response = await fetch(CRIOS_URL, { cache: 'no-cache' });
+            if (!response.ok) return;
+            
+            const markdown = await response.text();
+            const etag = response.headers.get('etag') || undefined;
+            const lastModified = response.headers.get('last-modified') || undefined;
+            
+            // Atualiza cache
+            setCachedContent(markdown, etag, lastModified);
+            
+            // Re-renderiza
+            renderContent(markdown);
+            
+            console.log('✓ Conteúdo atualizado para última versão');
+        } catch (e) {
+            console.error('Erro ao atualizar:', e);
+        }
     }
 }
 
@@ -190,17 +270,21 @@ async function loadCRIOSContent(): Promise<void> {
     }
     
     // Verificar cache primeiro
-    const cachedContent = getCachedContent();
+    const cached = getCachedData();
     
-    if (cachedContent) {
+    if (cached) {
         console.log('Carregando conteúdo do cache');
-        renderContent(cachedContent);
+        renderContent(cached.content);
+        
+        // Inicia verificação periódica de atualizações em background
+        setInterval(silentReloadIfNeeded, CHECK_UPDATE_INTERVAL);
+        
         return;
     }
     
     try {
         console.log('Carregando CRIOS.md do servidor...');
-        const response = await fetch(CRIOS_URL);
+        const response = await fetch(CRIOS_URL, { cache: 'no-cache' });
         
         if (!response.ok) {
             throw new Error(`HTTP ${response.status}: ${response.statusText}`);
@@ -214,11 +298,18 @@ async function loadCRIOSContent(): Promise<void> {
         
         console.log('Conteúdo carregado com sucesso');
         
-        // Salvar no cache
-        setCachedContent(markdown);
+        // Captura headers de versionamento
+        const etag = response.headers.get('etag') || undefined;
+        const lastModified = response.headers.get('last-modified') || undefined;
+        
+        // Salvar no cache com metadados de versão
+        setCachedContent(markdown, etag, lastModified);
         
         // Renderizar
         renderContent(markdown);
+        
+        // Inicia verificação periódica de atualizações em background
+        setInterval(silentReloadIfNeeded, CHECK_UPDATE_INTERVAL);
         
     } catch (error) {
         console.error('Erro ao carregar CRIOS.md:', error);
@@ -541,6 +632,7 @@ function initInteractiveFeatures(): void {
     initBackgroundParticles();
     initTextTremor();
     initAutoScroll();
+    initExport();
     linkConceptsInContent();
 }
 
@@ -914,6 +1006,265 @@ function initProgressBar(): void {
     window.addEventListener('scroll', onScroll, { passive: true });
 }
 
+// ============================================================================
+// EXPORTAÇÃO EPUB
+// ============================================================================
+
+// Flag para prevenir exportação dupla
+let isExporting = false;
+
+/**
+ * Limpa HTML para ser compatível com XHTML
+ */
+function cleanHTMLForXHTML(html: string): string {
+    // Substituir entidades HTML por caracteres Unicode ou equivalentes XHTML
+    let cleaned = html;
+    
+    // Entidades comuns que precisam ser substituídas
+    const entities: Record<string, string> = {
+        '&nbsp;': '&#160;',
+        '&ndash;': '&#8211;',
+        '&mdash;': '&#8212;',
+        '&hellip;': '&#8230;',
+        '&ldquo;': '&#8220;',
+        '&rdquo;': '&#8221;',
+        '&lsquo;': '&#8216;',
+        '&rsquo;': '&#8217;',
+        '&bull;': '&#8226;',
+        '&middot;': '&#183;',
+        '&trade;': '&#8482;',
+        '&copy;': '&#169;',
+        '&reg;': '&#174;',
+        '&deg;': '&#176;',
+        '&plusmn;': '&#177;',
+        '&para;': '&#182;',
+        '&sect;': '&#167;',
+        '&dagger;': '&#8224;',
+        '&Dagger;': '&#8225;',
+        '&permil;': '&#8240;',
+        '&laquo;': '&#171;',
+        '&raquo;': '&#187;',
+        '&times;': '&#215;',
+        '&divide;': '&#247;'
+    };
+    
+    // Substituir todas as entidades
+    for (const [entity, replacement] of Object.entries(entities)) {
+        cleaned = cleaned.split(entity).join(replacement);
+    }
+    
+    // Fechar tags auto-fecháveis para XHTML
+    cleaned = cleaned.replace(/<br>/gi, '<br/>');
+    cleaned = cleaned.replace(/<hr>/gi, '<hr/>');
+    cleaned = cleaned.replace(/<img([^>]+)(?<!\/)>/gi, '<img$1/>');
+    
+    // Remover atributos problemáticos
+    cleaned = cleaned.replace(/\s+aria-\w+="[^"]*"/g, '');
+    cleaned = cleaned.replace(/\s+data-\w+="[^"]*"/g, '');
+    
+    return cleaned;
+}
+
+/**
+ * Gera um UUID v4 simples
+ */
+function generateUUID(): string {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        const r = Math.random() * 16 | 0;
+        const v = c === 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+}
+
+/**
+ * Exporta o conteúdo como arquivo .epub
+ */
+async function exportAsEpub(): Promise<void> {
+    // Prevenir execução dupla
+    if (isExporting) {
+        console.log('Exportação já em andamento...');
+        return;
+    }
+    
+    const contentDiv = document.getElementById('content');
+    if (!contentDiv) {
+        console.error('Content div not found');
+        return;
+    }
+    
+    if (typeof JSZip === 'undefined') {
+        alert('Biblioteca JSZip não carregada. Não é possível exportar EPUB.');
+        return;
+    }
+    
+    isExporting = true;
+    
+    const zip = new JSZip();
+    
+    // Metadados
+    const title = '∅ → CRIO';
+    const author = 'Revolução Cibernética';
+    const uuid = `urn:uuid:${generateUUID()}`;
+    const date = new Date().toISOString().split('T')[0];
+    
+    // 1. mimetype (deve ser o primeiro arquivo, sem compressão)
+    zip.file('mimetype', 'application/epub+zip', { compression: 'STORE' });
+    
+    // 2. META-INF/container.xml
+    const containerXml = `<?xml version="1.0" encoding="UTF-8"?>
+<container version="1.0" xmlns="urn:oasis:names:tc:opendocument:xmlns:container">
+    <rootfiles>
+        <rootfile full-path="OEBPS/content.opf" media-type="application/oebps-package+xml"/>
+    </rootfiles>
+</container>`;
+    zip.folder('META-INF')!.file('container.xml', containerXml);
+    
+    // 3. OEBPS/content.opf (Package Document)
+    const contentOpf = `<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <dc:identifier id="uid">${uuid}</dc:identifier>
+        <dc:title>${title}</dc:title>
+        <dc:creator>${author}</dc:creator>
+        <dc:language>pt-BR</dc:language>
+        <dc:date>${date}</dc:date>
+        <meta property="dcterms:modified">${new Date().toISOString()}</meta>
+    </metadata>
+    <manifest>
+        <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+        <item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+        <item id="content" href="content.xhtml" media-type="application/xhtml+xml"/>
+        <item id="css" href="style.css" media-type="text/css"/>
+    </manifest>
+    <spine toc="ncx">
+        <itemref idref="nav"/>
+        <itemref idref="content"/>
+    </spine>
+</package>`;
+    zip.folder('OEBPS')!.file('content.opf', contentOpf);
+    
+    // 4. OEBPS/toc.ncx (NCX para compatibilidade EPUB 2)
+    const tocNcx = `<?xml version="1.0" encoding="UTF-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+    <head>
+        <meta name="dtb:uid" content="${uuid}"/>
+        <meta name="dtb:depth" content="1"/>
+        <meta name="dtb:totalPageCount" content="0"/>
+        <meta name="dtb:maxPageNumber" content="0"/>
+    </head>
+    <docTitle>
+        <text>${title}</text>
+    </docTitle>
+    <navMap>
+        <navPoint id="navpoint-1" playOrder="1">
+            <navLabel>
+                <text>${title}</text>
+            </navLabel>
+            <content src="content.xhtml"/>
+        </navPoint>
+    </navMap>
+</ncx>`;
+    zip.folder('OEBPS')!.file('toc.ncx', tocNcx);
+    
+    // 5. OEBPS/nav.xhtml (Navigation Document para EPUB 3)
+    const navXhtml = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+    <title>Navegação</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <nav epub:type="toc">
+        <h1>Sumário</h1>
+        <ol>
+            <li><a href="content.xhtml">${title}</a></li>
+        </ol>
+    </nav>
+</body>
+</html>`;
+    zip.folder('OEBPS')!.file('nav.xhtml', navXhtml);
+    
+    // Limpar conteúdo HTML para XHTML
+    const cleanedContent = cleanHTMLForXHTML(contentDiv.innerHTML);
+    
+    // 6. OEBPS/content.xhtml (Conteúdo principal)
+    const contentXhtml = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>${title}</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+    <h1>${title}</h1>
+    <p><em>por ${author}</em></p>
+    <hr/>
+    ${cleanedContent}
+</body>
+</html>`;
+    zip.folder('OEBPS')!.file('content.xhtml', contentXhtml);
+    
+    // 7. OEBPS/style.css
+    const styleCss = `
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.6;
+    margin: 1em;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+p {
+    margin: 1em 0;
+    text-align: justify;
+}
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+blockquote {
+    border-left: 3px solid #ccc;
+    margin: 1.5em 0;
+    padding-left: 1em;
+    font-style: italic;
+}
+`;
+    zip.folder('OEBPS')!.file('style.css', styleCss);
+    
+    // Gerar arquivo EPUB
+    try {
+        const blob = await zip.generateAsync({ type: 'blob', mimeType: 'application/epub+zip' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'crio.epub';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        
+        console.log('Arquivo EPUB exportado com sucesso');
+        isExporting = false;
+    } catch (error) {
+        console.error('Erro ao gerar EPUB:', error);
+        alert('Erro ao exportar EPUB. Veja o console para detalhes.');
+        isExporting = false;
+    }
+}
+
+// ============================================================================
+// CONTROLES DE INTERFACE
+// ============================================================================
+
 // Alternar tema
 function initThemeToggle(): void {
     const savedTheme = localStorage.getItem('crio-theme');
@@ -968,6 +1319,24 @@ function initFontSize(): void {
         document.documentElement.style.fontSize = `${fontSizes[currentFontSize]}rem`;
         console.log(`Tamanho de fonte restaurado: ${fontSizes[currentFontSize]}rem`);
     }
+}
+
+// Botão de exportação
+function initExport(): void {
+    const exportBtn = document.getElementById('export-btn');
+    
+    if (!exportBtn) {
+        console.warn('Botão de exportação não encontrado');
+        return;
+    }
+    
+    console.log('Inicializando botão de exportação');
+    
+    exportBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        exportAsEpub();
+    });
 }
 
 // Toggle de navegação
