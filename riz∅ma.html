@@ -393,6 +393,7 @@
         #info-panel.visible {
             opacity: 1;
             transform: translateY(0);
+            pointer-events: auto; /* PERMITIR interação quando visível */
         }
 
         #info-panel h2 {
@@ -479,7 +480,7 @@
         .legend-item {
             display: flex;
             align-items: center;
-            margin: 8px 0;
+            margin: 4px 0;
             gap: 10px;
             transition: all 0.2s;
             cursor: pointer;
@@ -529,31 +530,76 @@
             margin-left: auto;
         }
 
+        /* Grupo de camadas colapsável */
+        .layer-group {
+            margin: 6px 0;
+        }
+
+        .layer-group-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 8px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.2s;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .layer-group-header:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .layer-group.group-active .layer-group-header {
+            background: rgba(255, 255, 255, 0.15);
+            border-left: 3px solid rgba(255, 255, 255, 0.5);
+            padding-left: 5px;
+        }
+
+        .layer-group-toggle {
+            font-size: 0.7rem;
+            transition: transform 0.2s;
+        }
+
+        .layer-group.collapsed .layer-group-toggle {
+            transform: rotate(-90deg);
+        }
+
+        .layer-group-sublayers {
+            max-height: 500px;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding-left: 12px;
+        }
+
+        .layer-group.collapsed .layer-group-sublayers {
+            max-height: 0;
+        }
+
+        .legend-item.sublayer {
+            font-size: 0.75rem;
+            padding: 3px 6px;
+            margin: 2px 0;
+        }
+
+        .legend-item.sublayer .legend-color {
+            width: 16px;
+            height: 16px;
+        }
+
+        .legend-item.sublayer .legend-label {
+            font-size: 0.7rem;
+        }
         #legend.hidden {
             opacity: 0;
             transform: translateY(20px);
             pointer-events: none;
         }
 
-        /* Controls */
+        /* Controls - OCULTAR */
         #controls {
-            position: fixed;
-            left: 1rem;
-            bottom: 1rem;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--glow);
-            color: var(--emergence);
-            padding: 0.5rem 0.6rem;
-            display: inline-flex;
-            gap: 0.5rem;
-            align-items: center;
-            border-radius: 6px;
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
-            z-index: 1000;
-            opacity: 1;
-            transition: opacity 0.3s ease;
-            width: auto;
+            display: none;
         }
         
         body.light-theme #controls {
@@ -910,9 +956,308 @@
                 font-size: 1.2rem;
             }
         }
+
+        /* ===== MENU DE NAVEGAÇÃO (IGUAL AO INDEX.HTML) ===== */
+        .audio-ui {
+            position: fixed;
+            left: 1rem;
+            bottom: 1rem;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--glow);
+            color: var(--emergence);
+            padding: 0.5rem;
+            display: inline-flex;
+            gap: 0.5rem;
+            align-items: center;
+            justify-content: flex-start;
+            border-radius: 6px;
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+            width: auto;
+        }
+
+        body.light-theme .audio-ui {
+            background: rgba(255, 255, 255, 0.85);
+            border-color: rgba(10, 10, 10, 0.1);
+        }
+
+        .nav-toggle {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--emergence);
+            padding: 0.3rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1rem;
+            line-height: 1;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 36px;
+            min-height: 36px;
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        body.light-theme .nav-toggle {
+            border-color: rgba(10, 10, 10, 0.1);
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3px;
+            width: 18px;
+            height: 14px;
+            position: relative;
+        }
+
+        .hamburger-line {
+            width: 100%;
+            height: 2px;
+            background: var(--emergence);
+            border-radius: 2px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav-toggle[aria-expanded="true"] .hamburger {
+            gap: 0;
+            justify-content: center;
+        }
+
+        .nav-toggle[aria-expanded="true"] .hamburger-line:nth-child(1) {
+            transform: rotate(45deg) translateY(0px);
+            position: absolute;
+        }
+
+        .nav-toggle[aria-expanded="true"] .hamburger-line:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+
+        .nav-toggle[aria-expanded="true"] .hamburger-line:nth-child(3) {
+            transform: rotate(-45deg) translateY(0px);
+            position: absolute;
+        }
+
+        .nav-toggle:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--emergence);
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+        }
+
+        body.light-theme .nav-toggle:hover {
+            background: rgba(10, 10, 10, 0.05);
+            border-color: #1a1a1a;
+        }
+
+        .nav-index {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.95);
+            max-width: 480px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            background: rgba(10, 10, 10, 0.95);
+            border: 1px solid var(--glow);
+            border-radius: 12px;
+            padding: 2rem;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        body.light-theme .nav-index {
+            background: rgba(245, 245, 245, 0.95);
+        }
+
+        .nav-index[aria-hidden="false"] {
+            opacity: 1;
+            pointer-events: all;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .nav-index h3 {
+            margin: 0 0 1.5rem 0;
+            color: var(--emergence);
+            font-size: 1.5rem;
+            text-align: left;
+        }
+
+        .nav-index h4 {
+            margin: 1.5rem 0 0.75rem 0;
+            color: var(--emergence);
+            font-size: 1rem;
+            opacity: 0.8;
+            text-align: left;
+        }
+
+        .nav-divider {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 1.5rem 0;
+        }
+
+        body.light-theme .nav-divider {
+            border-top-color: rgba(10, 10, 10, 0.1);
+        }
+
+        .nav-actions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .nav-action-btn {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--emergence);
+            padding: 0.75rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Georgia', serif;
+        }
+
+        body.light-theme .nav-action-btn {
+            background: rgba(10, 10, 10, 0.03);
+            border-color: rgba(10, 10, 10, 0.1);
+        }
+
+        .nav-action-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--emergence);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        body.light-theme .nav-action-btn:hover {
+            background: rgba(10, 10, 10, 0.08);
+        }
+
+        .nav-action-icon {
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .nav-action-text {
+            font-size: 0.75rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 640px) {
+            .audio-ui > *:not(.nav-toggle) {
+                display: none;
+            }
+
+            .nav-index {
+                width: 95%;
+                max-height: 90vh;
+                padding: 1.5rem;
+            }
+
+            .nav-actions {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Menu de Navegação -->
+    <div class="audio-ui" role="group" aria-label="Controles de navegação">
+        <button class="nav-toggle" id="nav-toggle" aria-label="Alternar menu de navegação" aria-expanded="false" aria-controls="nav-index">
+            <span class="hamburger" aria-hidden="true">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </span>
+        </button>
+        <span class="page-title" id="reading-progress" aria-label="Título da página">RIZ∅MA</span>
+    </div>
+
+    <!-- Navigation Index -->
+    <nav class="nav-index" id="nav-index" role="navigation" aria-label="Menu de navegação" aria-hidden="true">
+        <h3>Menu</h3>
+        
+        <!-- Action Buttons -->
+        <div class="nav-actions">
+            <button class="nav-action-btn" onclick="window.location.href='index.html'" aria-label="Ir para o livro">
+                <span class="nav-action-icon">∞</span>
+                <span class="nav-action-text">Livro</span>
+            </button>
+            <button class="nav-action-btn" onclick="window.location.href='referencias.html'" aria-label="Ver PAÊBIRÚ - Rede viva de referências">
+                <span class="nav-action-icon">⋯</span>
+                <span class="nav-action-text">Referências</span>
+            </button>
+            <button class="nav-action-btn" onclick="window.location.href='∅.html'" aria-label="Ir para CRIO: Ontologia Relacional">
+                <span class="nav-action-icon">∅</span>
+                <span class="nav-action-text">CRIO</span>
+            </button>
+            <button class="nav-action-btn" onclick="window.location.href='livro-reader.html'" aria-label="Versão simplificada para modo leitura">
+                <span class="nav-action-icon">📖</span>
+                <span class="nav-action-text">Reader</span>
+            </button>
+            <button class="nav-action-btn" id="theme-toggle-menu" aria-label="Alternar tema claro/escuro">
+                <span class="nav-action-icon"><span class="theme-icon">☾</span></span>
+                <span class="nav-action-text">Tema</span>
+            </button>
+            <button class="nav-action-btn" onclick="window.open('https://github.com/silvanoneto/zero', '_blank')" aria-label="Ver código no GitHub">
+                <span class="nav-action-icon">⟨/⟩</span>
+                <span class="nav-action-text">GitHub</span>
+            </button>
+        </div>
+        
+        <hr class="nav-divider">
+        
+        <h4>Visualizações</h4>
+        <div class="nav-actions">
+            <button class="nav-action-btn" onclick="toggleLegend(); closeNav();" aria-label="Mostrar/ocultar legenda de camadas">
+                <span class="nav-action-icon">◫</span>
+                <span class="nav-action-text">Camadas</span>
+            </button>
+            <button class="nav-action-btn" id="nav-cards-btn" onclick="document.getElementById('btn-cards').click(); closeNav();" aria-label="Alternar vista de cards">
+                <span class="nav-action-icon">⊞</span>
+                <span class="nav-action-text">Cards</span>
+            </button>
+            <button class="nav-action-btn" onclick="toggleCameraMode(); closeNav();" aria-label="Alternar modo de câmera">
+                <span class="nav-action-icon">◉</span>
+                <span class="nav-action-text">Visão</span>
+            </button>
+            <button class="nav-action-btn" onclick="toggleSphere(); closeNav();" aria-label="Mostrar/ocultar esfera guia">
+                <span class="nav-action-icon">○</span>
+                <span class="nav-action-text">Esfera</span>
+            </button>
+            <button class="nav-action-btn" onclick="resetView(); closeNav();" aria-label="Resetar visualização">
+                <span class="nav-action-icon">↻</span>
+                <span class="nav-action-text">Resetar</span>
+            </button>
+            <button class="nav-action-btn" onclick="toggleHelp(); closeNav();" aria-label="Mostrar/ocultar ajuda">
+                <span class="nav-action-icon">?</span>
+                <span class="nav-action-text">Ajuda</span>
+            </button>
+        </div>
+    </nav>
+
     <div id="container"></div>
     
     <!-- Cards View -->
@@ -947,50 +1292,268 @@
     
     <!-- Legend -->
     <div id="legend" class="hidden">
-        <h4>Camadas</h4>
-        <div class="legend-item" data-layer="fundacional">
-            <div class="legend-color" style="background: #9966ff;"></div>
-            <span class="legend-label">Fundacional</span>
-            <span class="legend-count">37</span>
+        <h4>Camadas <span style="font-size:0.7rem;opacity:0.6;">(32 variações)</span></h4>
+        
+        <!-- Grupo Ontológica -->
+        <div class="layer-group">
+            <div class="layer-group-header" onclick="toggleLayerGroup('ontologica')">
+                <span class="layer-group-toggle">▼</span>
+                <div class="legend-color" style="background: #66ccff;"></div>
+                <span style="flex:1;">Ontológica</span>
+                <span class="legend-count" id="ontologica-total">0</span>
+            </div>
+            <div class="layer-group-sublayers">
+                <div class="legend-item sublayer" data-layer="ontologica-0">
+                    <div class="legend-color" style="background: #3399ff;"></div>
+                    <span class="legend-label">Geral</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="ontologica-1">
+                    <div class="legend-color" style="background: #4db8ff;"></div>
+                    <span class="legend-label">Relacional</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="ontologica-2">
+                    <div class="legend-color" style="background: #66ccff;"></div>
+                    <span class="legend-label">Prática</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="ontologica-3">
+                    <div class="legend-color" style="background: #99ddff;"></div>
+                    <span class="legend-label">Mista</span>
+                    <span class="legend-count">0</span>
+                </div>
+            </div>
         </div>
-        <div class="legend-item" data-layer="ontologica">
-            <div class="legend-color" style="background: #66ccff;"></div>
-            <span class="legend-label">Ontológica</span>
-            <span class="legend-count">59</span>
+        
+        <!-- Grupo Política -->
+        <div class="layer-group">
+            <div class="layer-group-header" onclick="toggleLayerGroup('politica')">
+                <span class="layer-group-toggle">▼</span>
+                <div class="legend-color" style="background: #ff6666;"></div>
+                <span style="flex:1;">Política</span>
+                <span class="legend-count" id="politica-total">0</span>
+            </div>
+            <div class="layer-group-sublayers">
+                <div class="legend-item sublayer" data-layer="politica-0">
+                    <div class="legend-color" style="background: #cc3333;"></div>
+                    <span class="legend-label">Geral</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="politica-1">
+                    <div class="legend-color" style="background: #ff4d4d;"></div>
+                    <span class="legend-label">Relacional</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="politica-2">
+                    <div class="legend-color" style="background: #ff6666;"></div>
+                    <span class="legend-label">Prática</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="politica-3">
+                    <div class="legend-color" style="background: #ff9999;"></div>
+                    <span class="legend-label">Mista</span>
+                    <span class="legend-count">0</span>
+                </div>
+            </div>
         </div>
-        <div class="legend-item" data-layer="epistemica">
-            <div class="legend-color" style="background: #ff9966;"></div>
-            <span class="legend-label">Epistêmica</span>
-            <span class="legend-count">23</span>
+        
+        <!-- Grupo Prática -->
+        <div class="layer-group">
+            <div class="layer-group-header" onclick="toggleLayerGroup('pratica')">
+                <span class="layer-group-toggle">▼</span>
+                <div class="legend-color" style="background: #99ccff;"></div>
+                <span style="flex:1;">Prática</span>
+                <span class="legend-count" id="pratica-total">0</span>
+            </div>
+            <div class="layer-group-sublayers">
+                <div class="legend-item sublayer" data-layer="pratica-0">
+                    <div class="legend-color" style="background: #6699ff;"></div>
+                    <span class="legend-label">Geral</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="pratica-1">
+                    <div class="legend-color" style="background: #80bdff;"></div>
+                    <span class="legend-label">Relacional</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="pratica-2">
+                    <div class="legend-color" style="background: #99ccff;"></div>
+                    <span class="legend-label">Prática</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="pratica-3">
+                    <div class="legend-color" style="background: #cce6ff;"></div>
+                    <span class="legend-label">Mista</span>
+                    <span class="legend-count">0</span>
+                </div>
+            </div>
         </div>
-        <div class="legend-item" data-layer="politica">
-            <div class="legend-color" style="background: #ff6666;"></div>
-            <span class="legend-label">Política</span>
-            <span class="legend-count">55</span>
+        
+        <!-- Grupo Fundacional -->
+        <div class="layer-group">
+            <div class="layer-group-header" onclick="toggleLayerGroup('fundacional')">
+                <span class="layer-group-toggle">▼</span>
+                <div class="legend-color" style="background: #9966ff;"></div>
+                <span style="flex:1;">Fundacional</span>
+                <span class="legend-count" id="fundacional-total">0</span>
+            </div>
+            <div class="layer-group-sublayers">
+                <div class="legend-item sublayer" data-layer="fundacional-0">
+                    <div class="legend-color" style="background: #6633cc;"></div>
+                    <span class="legend-label">Geral</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="fundacional-1">
+                    <div class="legend-color" style="background: #8052ff;"></div>
+                    <span class="legend-label">Relacional</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="fundacional-2">
+                    <div class="legend-color" style="background: #9966ff;"></div>
+                    <span class="legend-label">Prática</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="fundacional-3">
+                    <div class="legend-color" style="background: #c299ff;"></div>
+                    <span class="legend-label">Mista</span>
+                    <span class="legend-count">0</span>
+                </div>
+            </div>
         </div>
-        <div class="legend-item" data-layer="pratica">
-            <div class="legend-color" style="background: #99ccff;"></div>
-            <span class="legend-label">Prática</span>
-            <span class="legend-count">37</span>
+        
+        <!-- Grupo Epistêmica -->
+        <div class="layer-group">
+            <div class="layer-group-header" onclick="toggleLayerGroup('epistemica')">
+                <span class="layer-group-toggle">▼</span>
+                <div class="legend-color" style="background: #ff9966;"></div>
+                <span style="flex:1;">Epistêmica</span>
+                <span class="legend-count" id="epistemica-total">0</span>
+            </div>
+            <div class="layer-group-sublayers">
+                <div class="legend-item sublayer" data-layer="epistemica-0">
+                    <div class="legend-color" style="background: #cc6633;"></div>
+                    <span class="legend-label">Geral</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="epistemica-1">
+                    <div class="legend-color" style="background: #ff8552;"></div>
+                    <span class="legend-label">Relacional</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="epistemica-2">
+                    <div class="legend-color" style="background: #ff9966;"></div>
+                    <span class="legend-label">Prática</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="epistemica-3">
+                    <div class="legend-color" style="background: #ffc299;"></div>
+                    <span class="legend-label">Mista</span>
+                    <span class="legend-count">0</span>
+                </div>
+            </div>
         </div>
-        <div class="legend-item" data-layer="ecologica">
-            <div class="legend-color" style="background: #66ff99;"></div>
-            <span class="legend-label">Ecológica</span>
-            <span class="legend-count">17</span>
+        
+        <!-- Grupo Ecológica -->
+        <div class="layer-group">
+            <div class="layer-group-header" onclick="toggleLayerGroup('ecologica')">
+                <span class="layer-group-toggle">▼</span>
+                <div class="legend-color" style="background: #66ff99;"></div>
+                <span style="flex:1;">Ecológica</span>
+                <span class="legend-count" id="ecologica-total">0</span>
+            </div>
+            <div class="layer-group-sublayers">
+                <div class="legend-item sublayer" data-layer="ecologica-0">
+                    <div class="legend-color" style="background: #33cc66;"></div>
+                    <span class="legend-label">Geral</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="ecologica-1">
+                    <div class="legend-color" style="background: #52ff85;"></div>
+                    <span class="legend-label">Relacional</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="ecologica-2">
+                    <div class="legend-color" style="background: #66ff99;"></div>
+                    <span class="legend-label">Prática</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="ecologica-3">
+                    <div class="legend-color" style="background: #99ffc2;"></div>
+                    <span class="legend-label">Mista</span>
+                    <span class="legend-count">0</span>
+                </div>
+            </div>
         </div>
-        <div class="legend-item" data-layer="temporal">
-            <div class="legend-color" style="background: #cccccc;"></div>
-            <span class="legend-label">Temporal</span>
-            <span class="legend-count">9</span>
+        
+        <!-- Grupo Temporal -->
+        <div class="layer-group">
+            <div class="layer-group-header" onclick="toggleLayerGroup('temporal')">
+                <span class="layer-group-toggle">▼</span>
+                <div class="legend-color" style="background: #cccccc;"></div>
+                <span style="flex:1;">Temporal</span>
+                <span class="legend-count" id="temporal-total">0</span>
+            </div>
+            <div class="layer-group-sublayers">
+                <div class="legend-item sublayer" data-layer="temporal-0">
+                    <div class="legend-color" style="background: #999999;"></div>
+                    <span class="legend-label">Geral</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="temporal-1">
+                    <div class="legend-color" style="background: #b8b8b8;"></div>
+                    <span class="legend-label">Relacional</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="temporal-2">
+                    <div class="legend-color" style="background: #cccccc;"></div>
+                    <span class="legend-label">Prática</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="temporal-3">
+                    <div class="legend-color" style="background: #e0e0e0;"></div>
+                    <span class="legend-label">Mista</span>
+                    <span class="legend-count">0</span>
+                </div>
+            </div>
         </div>
-        <div class="legend-item" data-layer="etica">
-            <div class="legend-color" style="background: #ffff66;"></div>
-            <span class="legend-label">Ética</span>
-            <span class="legend-count">9</span>
+        
+        <!-- Grupo Ética -->
+        <div class="layer-group">
+            <div class="layer-group-header" onclick="toggleLayerGroup('etica')">
+                <span class="layer-group-toggle">▼</span>
+                <div class="legend-color" style="background: #ffff66;"></div>
+                <span style="flex:1;">Ética</span>
+                <span class="legend-count" id="etica-total">0</span>
+            </div>
+            <div class="layer-group-sublayers">
+                <div class="legend-item sublayer" data-layer="etica-0">
+                    <div class="legend-color" style="background: #cccc33;"></div>
+                    <span class="legend-label">Geral</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="etica-1">
+                    <div class="legend-color" style="background: #ffff4d;"></div>
+                    <span class="legend-label">Relacional</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="etica-2">
+                    <div class="legend-color" style="background: #ffff66;"></div>
+                    <span class="legend-label">Prática</span>
+                    <span class="legend-count">0</span>
+                </div>
+                <div class="legend-item sublayer" data-layer="etica-3">
+                    <div class="legend-color" style="background: #ffff99;"></div>
+                    <span class="legend-label">Mista</span>
+                    <span class="legend-count">0</span>
+                </div>
+            </div>
         </div>
     </div>
     
     <div id="controls">
+        <span class="page-title">RIZ∅MA</span>
+        
         <button class="control-btn" id="legend-toggle" onclick="toggleLegend()">
             <span class="btn-icon">◫</span>
             <span class="btn-text">Camadas</span>
@@ -999,6 +1562,11 @@
         <button class="control-btn" id="btn-cards">
             <span class="btn-icon">⊞</span>
             <span class="btn-text">Cards</span>
+        </button>
+        
+        <button class="control-btn" onclick="window.location.href='referencias.html'" title="Ver PAÊBIRÚ - Rede viva de referências">
+            <span class="btn-icon">⋯</span>
+            <span class="btn-text">Referências</span>
         </button>
         
         <button class="control-btn" onclick="toggleCameraMode()">
@@ -1029,6 +1597,11 @@
         <button class="control-btn" onclick="window.location.href='∅.html'">
             <span class="btn-icon">∅</span>
             <span class="btn-text">CRIO</span>
+        </button>
+        
+        <button class="control-btn" onclick="window.open('https://github.com/silvanoneto/zero', '_blank')" title="Ver código no GitHub">
+            <span class="btn-icon">⟨/⟩</span>
+            <span class="btn-text">Código</span>
         </button>
     </div>
 
@@ -1121,6 +1694,52 @@
             </div>
 
             <div class="help-section">
+                <h3>🌌 Sistemas Avançados</h3>
+                <div class="help-item">
+                    <div class="help-icon">⚛️</div>
+                    <div class="help-text">
+                        <strong>Física Quântica</strong>
+                        <p>Nós possuem funções de onda, superposição de estados, entrelaçamento quântico e tunelamento probabilístico</p>
+                    </div>
+                </div>
+                <div class="help-item">
+                    <div class="help-icon">🕸️</div>
+                    <div class="help-text">
+                        <strong>Análise Topológica</strong>
+                        <p>PageRank, betweenness centrality, detecção de comunidades Louvain e fluxo de informação em tempo real</p>
+                    </div>
+                </div>
+                <div class="help-item">
+                    <div class="help-icon">📐</div>
+                    <div class="help-text">
+                        <strong>Geometria Não-Euclidiana</strong>
+                        <p>Campos adaptativos de densidade, curvatura espacial dinâmica e campos tensoriais</p>
+                    </div>
+                </div>
+                <div class="help-item">
+                    <div class="help-icon">🧠</div>
+                    <div class="help-text">
+                        <strong>Memória e Aprendizado</strong>
+                        <p>Sistema detecta padrões emergentes, traça históricos de visitação e reconhece motifs na rede</p>
+                    </div>
+                </div>
+                <div class="help-item">
+                    <div class="help-icon">🎭</div>
+                    <div class="help-text">
+                        <strong>Dimensões Superiores</strong>
+                        <p>Projeções em 4D (hipersfera) e 5D (variedade toroidal) com visualização em espaço topológico</p>
+                    </div>
+                </div>
+                <div class="help-item">
+                    <div class="help-icon">⚡</div>
+                    <div class="help-text">
+                        <strong>Física Relativística</strong>
+                        <p>Dilatação temporal, fator de Lorentz, cone de luz causal e limite de velocidade da informação</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="help-section">
                 <h3>🎛️ Painéis e Controles</h3>
                 <div class="help-item">
                     <div class="help-icon">⬚</div>
@@ -1148,6 +1767,13 @@
             <div class="help-section">
                 <h3>💡 Dicas</h3>
                 <div class="help-item">
+                    <div class="help-icon">⌨️</div>
+                    <div class="help-text">
+                        <strong>Console Interativo</strong>
+                        <p>Aperte <strong>F12</strong> (ou Cmd+Option+I no Mac) para abrir o console e explore o rizoma programaticamente com <code>rizoma.help()</code></p>
+                    </div>
+                </div>
+                <div class="help-item">
                     <div class="help-icon">🌐</div>
                     <div class="help-text">
                         <strong>Conexões Rizomáticas</strong>
@@ -1161,12 +1787,41 @@
                         <p>Cada cor representa uma camada conceitual diferente - use a legenda para identificá-las</p>
                     </div>
                 </div>
+                <div class="help-item">
+                    <div class="help-icon">🌌</div>
+                    <div class="help-text">
+                        <strong>Universo Informacional</strong>
+                        <p>O riz∅ma é um cosmos vivo com física quântica, topologia dinâmica, geometria curva, memória emergente e efeitos relativísticos</p>
+                    </div>
+                </div>
+                <div class="help-item">
+                    <div class="help-icon">🔬</div>
+                    <div class="help-text">
+                        <strong>Observação Científica</strong>
+                        <p>O sistema opera no estado "Big Crunch Contemplativo" (forças 0.1) para permitir observação detalhada dos padrões emergentes</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Help Modal Script -->
     <script>
+        // Função para expandir/colapsar grupos de camadas
+        window.toggleLayerGroup = function(layerName) {
+            const groups = document.querySelectorAll('.layer-group');
+            groups.forEach(group => {
+                const header = group.querySelector('.layer-group-header');
+                if (header && header.onclick && header.onclick.toString().includes(layerName)) {
+                    group.classList.toggle('collapsed');
+                    const toggle = header.querySelector('.layer-group-toggle');
+                    if (toggle) {
+                        toggle.textContent = group.classList.contains('collapsed') ? '▶' : '▼';
+                    }
+                }
+            });
+        };
+
         // Funções de controle do modal de ajuda (expostas globalmente)
         window.openHelp = function(isFirstVisit = false) {
             const modal = document.getElementById('help-modal');
@@ -1217,6 +1872,16 @@
 
         // Event listeners
         document.addEventListener('DOMContentLoaded', () => {
+            // Inicializar todos os grupos de camadas como colapsados
+            const groups = document.querySelectorAll('.layer-group');
+            groups.forEach(group => {
+                group.classList.add('collapsed');
+                const toggle = group.querySelector('.layer-group-toggle');
+                if (toggle) {
+                    toggle.textContent = '▶';
+                }
+            });
+
             // Verificar primeira visita
             checkFirstVisit();
 
@@ -1233,6 +1898,61 @@
             // REMOVIDO: Event listener de teclado duplicado
             // A lógica de teclado (incluindo H e ESC) está implementada em rizoma-full.ts
             // e não deve ser duplicada aqui para evitar conflitos
+
+            // ===== MENU DE NAVEGAÇÃO =====
+            const navToggle = document.getElementById('nav-toggle');
+            const navIndex = document.getElementById('nav-index');
+            const themeToggleMenu = document.getElementById('theme-toggle-menu');
+
+            if (navToggle && navIndex) {
+                navToggle.addEventListener('click', () => {
+                    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+                    navToggle.setAttribute('aria-expanded', !isExpanded);
+                    navIndex.setAttribute('aria-hidden', isExpanded);
+                });
+
+                // Fechar ao clicar fora
+                navIndex.addEventListener('click', (e) => {
+                    if (e.target === navIndex) {
+                        closeNav();
+                    }
+                });
+
+                // Fechar com ESC
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && navIndex.getAttribute('aria-hidden') === 'false') {
+                        closeNav();
+                    }
+                });
+            }
+
+            // Alternar tema do menu
+            if (themeToggleMenu) {
+                themeToggleMenu.addEventListener('click', () => {
+                    document.body.classList.toggle('light-theme');
+                    const themeIcon = themeToggleMenu.querySelector('.theme-icon');
+                    if (themeIcon) {
+                        themeIcon.textContent = document.body.classList.contains('light-theme') ? '☀' : '☾';
+                    }
+                    localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+                });
+
+                // Aplicar tema salvo
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'light') {
+                    document.body.classList.add('light-theme');
+                    const themeIcon = themeToggleMenu.querySelector('.theme-icon');
+                    if (themeIcon) themeIcon.textContent = '☀';
+                }
+            }
+
+            // Função global para fechar menu
+            window.closeNav = function() {
+                if (navToggle && navIndex) {
+                    navToggle.setAttribute('aria-expanded', 'false');
+                    navIndex.setAttribute('aria-hidden', 'true');
+                }
+            };
         });
     </script>
 

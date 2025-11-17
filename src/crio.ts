@@ -6,50 +6,116 @@
 import type { Concept } from './types';
 
 // ============================================================================
+// DECLARAÇÕES GLOBAIS
+// ============================================================================
+
+declare const JSZip: any;
+
+// ============================================================================
 // TIPOS
 // ============================================================================
 
 interface CacheData {
     timestamp: number;
     content: string;
+    etag?: string;
+    lastModified?: string;
 }
 
 // ============================================================================
 // CONSTANTES E CONFIGURAÇÃO
 // ============================================================================
 
-const CACHE_DURATION = 7 * 24 * 60 * 60 * 1000; // 7 dias
+const CACHE_DURATION = 5 * 60 * 1000; // 5 minutos - verifica atualizações com frequência
+const CHECK_UPDATE_INTERVAL = 30 * 1000; // Verifica a cada 30 segundos se há nova versão
 const CRIOS_URL = 'docs/CRIOS.md';
 const AUDIO_URL = 'assets/CRIO.mp3';
 const CONCEPTS_URL = 'assets/concepts.json';
 
 // CORES POR CAMADA (sincronizado com rizoma-full.ts)
 const LAYER_COLORS: Record<string, number> = {
-    'ontologica': 0x66ccff,    // Azul claro
-    'politica': 0xff6666,      // Vermelho
-    'pratica': 0x99ccff,       // Azul mais claro
-    'fundacional': 0x9966ff,   // Roxo
-    'epistemica': 0xff9966,    // Laranja
-    'ecologica': 0x66ff99,     // Verde
-    'temporal': 0xcccccc,      // Cinza
-    'etica': 0xffff66          // Amarelo
+    // Camadas base (mantidas para compatibilidade)
+    'ontologica': 0x66ccff,
+    'politica': 0xff6666,
+    'pratica': 0x99ccff,
+    'fundacional': 0x9966ff,
+    'epistemica': 0xff9966,
+    'ecologica': 0x66ff99,
+    'temporal': 0xcccccc,
+    'etica': 0xffff66,
+    
+    // Subcamadas ontologica (azul claro: escuro → claro)
+    'ontologica-0': 0x3399ff,  // Geral - azul escuro
+    'ontologica-1': 0x4db8ff,  // Relacional - azul médio-escuro
+    'ontologica-2': 0x66ccff,  // Prática - azul médio-claro
+    'ontologica-3': 0x99ddff,  // Mista - azul claro
+    
+    // Subcamadas politica (vermelho: escuro → claro)
+    'politica-0': 0xcc3333,    // Geral - vermelho escuro
+    'politica-1': 0xff4d4d,    // Relacional - vermelho médio-escuro
+    'politica-2': 0xff6666,    // Prática - vermelho médio-claro
+    'politica-3': 0xff9999,    // Mista - vermelho claro
+    
+    // Subcamadas pratica (azul muito claro: escuro → claro)
+    'pratica-0': 0x6699ff,     // Geral - azul escuro
+    'pratica-1': 0x80bdff,     // Relacional - azul médio-escuro
+    'pratica-2': 0x99ccff,     // Prática - azul médio-claro
+    'pratica-3': 0xcce6ff,     // Mista - azul claro
+    
+    // Subcamadas fundacional (roxo: escuro → claro)
+    'fundacional-0': 0x6633cc,  // Geral - roxo escuro
+    'fundacional-1': 0x8052ff,  // Relacional - roxo médio-escuro
+    'fundacional-2': 0x9966ff,  // Prática - roxo médio-claro
+    'fundacional-3': 0xc299ff,  // Mista - roxo claro
+    
+    // Subcamadas epistemica (laranja: escuro → claro)
+    'epistemica-0': 0xcc6633,   // Geral - laranja escuro
+    'epistemica-1': 0xff8552,   // Relacional - laranja médio-escuro
+    'epistemica-2': 0xff9966,   // Prática - laranja médio-claro
+    'epistemica-3': 0xffc299,   // Mista - laranja claro
+    
+    // Subcamadas ecologica (verde: escuro → claro)
+    'ecologica-0': 0x33cc66,    // Geral - verde escuro
+    'ecologica-1': 0x52ff85,    // Relacional - verde médio-escuro
+    'ecologica-2': 0x66ff99,    // Prática - verde médio-claro
+    'ecologica-3': 0x99ffc2,    // Mista - verde claro
+    
+    // Subcamadas temporal (cinza: escuro → claro)
+    'temporal-0': 0x999999,     // Geral - cinza escuro
+    'temporal-1': 0xb8b8b8,     // Relacional - cinza médio-escuro
+    'temporal-2': 0xcccccc,     // Prática - cinza médio-claro
+    'temporal-3': 0xe0e0e0,     // Mista - cinza claro
+    
+    // Subcamadas etica (amarelo: escuro → claro)
+    'etica-0': 0xcccc33,        // Geral - amarelo escuro
+    'etica-1': 0xffff4d,        // Relacional - amarelo médio-escuro
+    'etica-2': 0xffff66,        // Prática - amarelo médio-claro
+    'etica-3': 0xffff99         // Mista - amarelo claro
 };
 
 /**
  * Obtém a cor de um conceito baseado na sua camada
+ * Suporta subcamadas com variações cromáticas
  */
 function getColorForLayer(layer: string): number {
-    return LAYER_COLORS[layer] || 0xffffff; // Branco como fallback
+    // Tenta match exato primeiro
+    if (LAYER_COLORS[layer]) {
+        return LAYER_COLORS[layer];
+    }
+    
+    // Se é uma subcamada não mapeada, usa a cor base
+    const baseLayer = layer.split('-')[0];
+    return LAYER_COLORS[baseLayer] || 0xffffff; // Branco como fallback
 }
 
 // Estado global
 let concepts: Concept[] = [];
 
 // ============================================================================
-// GERENCIAMENTO DE CACHE
+// GERENCIAMENTO DE CACHE COM VERSIONAMENTO
 // ============================================================================
 
-function getCachedContent(): string | null {
+function getCachedData(): CacheData | null {
     try {
         const cached = localStorage.getItem('crio-content');
         if (!cached) return null;
@@ -57,27 +123,98 @@ function getCachedContent(): string | null {
         const data: CacheData = JSON.parse(cached);
         const now = Date.now();
         
+        // Cache expirou? Remove
         if ((now - data.timestamp) > CACHE_DURATION) {
             localStorage.removeItem('crio-content');
             return null;
         }
         
-        return data.content;
+        return data;
     } catch (e) {
         console.error('Erro ao ler cache:', e);
         return null;
     }
 }
 
-function setCachedContent(content: string): void {
+function setCachedContent(content: string, etag?: string, lastModified?: string): void {
     try {
         const data: CacheData = {
             timestamp: Date.now(),
-            content: content
+            content: content,
+            etag,
+            lastModified
         };
         localStorage.setItem('crio-content', JSON.stringify(data));
     } catch (e) {
         console.error('Erro ao salvar cache:', e);
+    }
+}
+
+/**
+ * Verifica se há uma nova versão do documento sem recarregar
+ * Usa HEAD request para economizar banda
+ */
+async function checkForUpdates(): Promise<boolean> {
+    try {
+        const cached = getCachedData();
+        if (!cached) return false;
+        
+        // HEAD request para verificar headers sem baixar o conteúdo
+        const response = await fetch(CRIOS_URL, { 
+            method: 'HEAD',
+            cache: 'no-cache' // Força verificação no servidor
+        });
+        
+        if (!response.ok) return false;
+        
+        const serverEtag = response.headers.get('etag');
+        const serverLastModified = response.headers.get('last-modified');
+        
+        // Verifica se mudou
+        if (serverEtag && cached.etag && serverEtag !== cached.etag) {
+            console.log('Nova versão detectada via ETag');
+            return true;
+        }
+        
+        if (serverLastModified && cached.lastModified && serverLastModified !== cached.lastModified) {
+            console.log('Nova versão detectada via Last-Modified');
+            return true;
+        }
+        
+        return false;
+    } catch (e) {
+        console.error('Erro ao verificar atualizações:', e);
+        return false;
+    }
+}
+
+/**
+ * Recarrega o conteúdo silenciosamente se houver nova versão
+ */
+async function silentReloadIfNeeded(): Promise<void> {
+    const hasUpdate = await checkForUpdates();
+    
+    if (hasUpdate) {
+        console.log('Atualizando conteúdo automaticamente...');
+        
+        try {
+            const response = await fetch(CRIOS_URL, { cache: 'no-cache' });
+            if (!response.ok) return;
+            
+            const markdown = await response.text();
+            const etag = response.headers.get('etag') || undefined;
+            const lastModified = response.headers.get('last-modified') || undefined;
+            
+            // Atualiza cache
+            setCachedContent(markdown, etag, lastModified);
+            
+            // Re-renderiza
+            renderContent(markdown);
+            
+            console.log('✓ Conteúdo atualizado para última versão');
+        } catch (e) {
+            console.error('Erro ao atualizar:', e);
+        }
     }
 }
 
@@ -101,7 +238,6 @@ document.addEventListener('keydown', (e: KeyboardEvent) => {
 
 async function loadConcepts(): Promise<void> {
     try {
-        console.log('Carregando conceitos do rizoma...');
         const response = await fetch(CONCEPTS_URL);
         
         if (!response.ok) {
@@ -115,8 +251,6 @@ async function loadConcepts(): Promise<void> {
             ...concept,
             color: getColorForLayer(concept.layer)
         }));
-        
-        console.log(`${concepts.length} conceitos carregados com sucesso`);
     } catch (error) {
         console.error('Erro ao carregar conceitos:', error);
         concepts = [];
@@ -133,17 +267,19 @@ async function loadCRIOSContent(): Promise<void> {
     }
     
     // Verificar cache primeiro
-    const cachedContent = getCachedContent();
+    const cached = getCachedData();
     
-    if (cachedContent) {
-        console.log('Carregando conteúdo do cache');
-        renderContent(cachedContent);
+    if (cached) {
+        renderContent(cached.content);
+        
+        // Inicia verificação periódica de atualizações em background
+        setInterval(silentReloadIfNeeded, CHECK_UPDATE_INTERVAL);
+        
         return;
     }
     
     try {
-        console.log('Carregando CRIOS.md do servidor...');
-        const response = await fetch(CRIOS_URL);
+        const response = await fetch(CRIOS_URL, { cache: 'no-cache' });
         
         if (!response.ok) {
             throw new Error(`HTTP ${response.status}: ${response.statusText}`);
@@ -157,11 +293,18 @@ async function loadCRIOSContent(): Promise<void> {
         
         console.log('Conteúdo carregado com sucesso');
         
-        // Salvar no cache
-        setCachedContent(markdown);
+        // Captura headers de versionamento
+        const etag = response.headers.get('etag') || undefined;
+        const lastModified = response.headers.get('last-modified') || undefined;
+        
+        // Salvar no cache com metadados de versão
+        setCachedContent(markdown, etag, lastModified);
         
         // Renderizar
         renderContent(markdown);
+        
+        // Inicia verificação periódica de atualizações em background
+        setInterval(silentReloadIfNeeded, CHECK_UPDATE_INTERVAL);
         
     } catch (error) {
         console.error('Erro ao carregar CRIOS.md:', error);
@@ -216,8 +359,6 @@ function renderContent(markdown: string): void {
         contentDiv.classList.remove('loading');
         contentDiv.style.display = 'block';
         contentDiv.setAttribute('aria-busy', 'false');
-        
-        console.log('Conteúdo renderizado com sucesso');
         
         // Inicializar navegação
         initNavigation();
@@ -291,8 +432,6 @@ function initNavigation(): void {
         console.warn('Nenhum header H2 encontrado no conteúdo');
         return;
     }
-    
-    console.log(`Inicializando navegação dinâmica com ${headers.length} CRIOS`);
     
     navList.innerHTML = '';
     progressMarkers.innerHTML = '';
@@ -379,8 +518,6 @@ function initNavigation(): void {
     // Adicionar observador de scroll para atualizar marcadores ativos e progresso
     updateActiveMarkers();
     window.addEventListener('scroll', updateActiveMarkers);
-    
-    console.log('Menu de navegação dinâmico inicializado');
 }
 
 function updateActiveMarkers(): void {
@@ -453,7 +590,7 @@ function updateActiveMarkers(): void {
             link.classList.remove('completed');
             li.classList.remove('completed');
             if (progressBar) {
-                progressBar.style.width = `${maxProgress}%`;
+                progressBar.style.transform = `scaleX(${maxProgress / 100})`;
             }
         } else if (index < activeIndex) {
             link.classList.remove('active');
@@ -461,20 +598,19 @@ function updateActiveMarkers(): void {
             li.classList.remove('active');
             li.classList.add('completed');
             if (progressBar) {
-                progressBar.style.width = '100%';
+                progressBar.style.transform = 'scaleX(1)';
             }
         } else {
             link.classList.remove('active', 'completed');
             li.classList.remove('active', 'completed');
             if (progressBar) {
-                progressBar.style.width = '0%';
+                progressBar.style.transform = 'scaleX(0)';
             }
         }
     });
 }
 
 function initInteractiveFeatures(): void {
-    console.log('Inicializando funcionalidades interativas...');
     initAudio();
     initProgressBar();
     initThemeToggle();
@@ -484,6 +620,7 @@ function initInteractiveFeatures(): void {
     initBackgroundParticles();
     initTextTremor();
     initAutoScroll();
+    initExport();
     linkConceptsInContent();
 }
 
@@ -503,14 +640,11 @@ function linkConceptsInContent(): void {
         // Tentar carregar conceitos novamente se ainda não foram carregados
         loadConcepts().then(() => {
             if (concepts.length > 0) {
-                console.log('Conceitos carregados, relinkando...');
                 linkConceptsInContent();
             }
         });
         return;
     }
-
-    console.log(`Linkando ${concepts.length} conceitos no conteúdo...`);
 
     // Criar mapa de conceitos para busca mais eficiente
     const conceptMap = new Map<string, Concept>();
@@ -524,13 +658,9 @@ function linkConceptsInContent(): void {
         const variations = generateConceptVariations(concept.name);
         variations.forEach(v => conceptMap.set(v.toLowerCase(), concept));
     });
-    
-    console.log(`Mapa de conceitos criado com ${conceptMap.size} entradas`);
 
     // Processar todos os parágrafos e listas
     const textElements = contentDiv.querySelectorAll('p, li, blockquote');
-    
-    console.log(`Processando ${textElements.length} elementos de texto...`);
     
     let linksCreated = 0;
     
@@ -543,18 +673,10 @@ function linkConceptsInContent(): void {
         const finalLinks = element.querySelectorAll('.riz∅ma-link').length;
         const newLinks = finalLinks - initialLinks;
         linksCreated += newLinks;
-        
-        // Log para elementos com links criados
-        if (newLinks > 0 && index < 10) {
-            console.log(`Elemento ${index}: ${newLinks} link(s) criado(s) - "${element.textContent?.substring(0, 50)}..."`);
-        }
     });
 
-    console.log(`✅ ${linksCreated} links de conceitos criados com sucesso!`);
-    
     // Log de verificação final
     const allLinks = contentDiv.querySelectorAll('.riz∅ma-link');
-    console.log(`Total de links riz∅ma encontrados no DOM: ${allLinks.length}`);
 }
 
 function generateConceptVariations(name: string): string[] {
@@ -739,7 +861,6 @@ function createConceptLink(text: string, concept: Concept): HTMLElement {
     link.style.setProperty('--concept-color', colorHex);
     link.style.color = colorHex; // Aplicar cor diretamente também
     link.style.textDecorationColor = colorHex;
-    console.log(`Link criado para "${concept.name}": cor=${colorHex} (original: ${concept.color})`);
     
     // Ao clicar, abrir o rizoma com foco nesse conceito
     const handleActivation = (e: Event) => {
@@ -780,7 +901,6 @@ function initAudio(): void {
         return;
     }
     
-    console.log('Inicializando controles de áudio');
     currentAudio = audio;
     
     playBtn.addEventListener('click', () => {
@@ -830,20 +950,289 @@ function initProgressBar(): void {
         return;
     }
     
-    console.log('Inicializando barra de progresso');
+    // Throttle and use transform for progress updates
+    let ticking = false;
+    let lastPos = 0;
+    const onScroll = () => {
+        lastPos = window.pageYOffset || document.documentElement.scrollTop || 0;
+        if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(() => {
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.documentElement.scrollHeight;
+                const progress = (lastPos / (documentHeight - windowHeight)) * 100;
+                const clampedProgress = Math.min(Math.max(progress, 0), 100);
+
+                progressBar.style.transform = `scaleX(${clampedProgress / 100})`;
+                progressBar.parentElement?.setAttribute('aria-valuenow', String(Math.round(clampedProgress)));
+                const percent = Math.round(clampedProgress);
+                progressText.textContent = percent > 0 ? `CRIO ${percent}%` : 'CRIO';
+
+                ticking = false;
+            });
+        }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+}
+
+// ============================================================================
+// EXPORTAÇÃO EPUB
+// ============================================================================
+
+// Flag para prevenir exportação dupla
+let isExporting = false;
+
+/**
+ * Limpa HTML para ser compatível com XHTML
+ */
+function cleanHTMLForXHTML(html: string): string {
+    // Substituir entidades HTML por caracteres Unicode ou equivalentes XHTML
+    let cleaned = html;
     
-    window.addEventListener('scroll', () => {
-        const windowHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        const progress = (scrollTop / (documentHeight - windowHeight)) * 100;
-        const clampedProgress = Math.min(Math.max(progress, 0), 100);
-        
-        progressBar.style.width = `${clampedProgress}%`;
-        progressText.textContent = `${Math.round(clampedProgress)}%`;
+    // Entidades comuns que precisam ser substituídas
+    const entities: Record<string, string> = {
+        '&nbsp;': '&#160;',
+        '&ndash;': '&#8211;',
+        '&mdash;': '&#8212;',
+        '&hellip;': '&#8230;',
+        '&ldquo;': '&#8220;',
+        '&rdquo;': '&#8221;',
+        '&lsquo;': '&#8216;',
+        '&rsquo;': '&#8217;',
+        '&bull;': '&#8226;',
+        '&middot;': '&#183;',
+        '&trade;': '&#8482;',
+        '&copy;': '&#169;',
+        '&reg;': '&#174;',
+        '&deg;': '&#176;',
+        '&plusmn;': '&#177;',
+        '&para;': '&#182;',
+        '&sect;': '&#167;',
+        '&dagger;': '&#8224;',
+        '&Dagger;': '&#8225;',
+        '&permil;': '&#8240;',
+        '&laquo;': '&#171;',
+        '&raquo;': '&#187;',
+        '&times;': '&#215;',
+        '&divide;': '&#247;'
+    };
+    
+    // Substituir todas as entidades
+    for (const [entity, replacement] of Object.entries(entities)) {
+        cleaned = cleaned.split(entity).join(replacement);
+    }
+    
+    // Fechar tags auto-fecháveis para XHTML
+    cleaned = cleaned.replace(/<br>/gi, '<br/>');
+    cleaned = cleaned.replace(/<hr>/gi, '<hr/>');
+    cleaned = cleaned.replace(/<img([^>]+)(?<!\/)>/gi, '<img$1/>');
+    
+    // Remover atributos problemáticos
+    cleaned = cleaned.replace(/\s+aria-\w+="[^"]*"/g, '');
+    cleaned = cleaned.replace(/\s+data-\w+="[^"]*"/g, '');
+    
+    return cleaned;
+}
+
+/**
+ * Gera um UUID v4 simples
+ */
+function generateUUID(): string {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        const r = Math.random() * 16 | 0;
+        const v = c === 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
     });
 }
+
+/**
+ * Exporta o conteúdo como arquivo .epub
+ */
+async function exportAsEpub(): Promise<void> {
+    // Prevenir execução dupla
+    if (isExporting) {
+        console.log('Exportação já em andamento...');
+        return;
+    }
+    
+    const contentDiv = document.getElementById('content');
+    if (!contentDiv) {
+        console.error('Content div not found');
+        return;
+    }
+    
+    if (typeof JSZip === 'undefined') {
+        alert('Biblioteca JSZip não carregada. Não é possível exportar EPUB.');
+        return;
+    }
+    
+    isExporting = true;
+    
+    const zip = new JSZip();
+    
+    // Metadados
+    const title = '∅ → CRIO';
+    const author = 'Revolução Cibernética';
+    const uuid = `urn:uuid:${generateUUID()}`;
+    const date = new Date().toISOString().split('T')[0];
+    
+    // 1. mimetype (deve ser o primeiro arquivo, sem compressão)
+    zip.file('mimetype', 'application/epub+zip', { compression: 'STORE' });
+    
+    // 2. META-INF/container.xml
+    const containerXml = `<?xml version="1.0" encoding="UTF-8"?>
+<container version="1.0" xmlns="urn:oasis:names:tc:opendocument:xmlns:container">
+    <rootfiles>
+        <rootfile full-path="OEBPS/content.opf" media-type="application/oebps-package+xml"/>
+    </rootfiles>
+</container>`;
+    zip.folder('META-INF')!.file('container.xml', containerXml);
+    
+    // 3. OEBPS/content.opf (Package Document)
+    const contentOpf = `<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <dc:identifier id="uid">${uuid}</dc:identifier>
+        <dc:title>${title}</dc:title>
+        <dc:creator>${author}</dc:creator>
+        <dc:language>pt-BR</dc:language>
+        <dc:date>${date}</dc:date>
+        <meta property="dcterms:modified">${new Date().toISOString()}</meta>
+    </metadata>
+    <manifest>
+        <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+        <item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+        <item id="content" href="content.xhtml" media-type="application/xhtml+xml"/>
+        <item id="css" href="style.css" media-type="text/css"/>
+    </manifest>
+    <spine toc="ncx">
+        <itemref idref="nav"/>
+        <itemref idref="content"/>
+    </spine>
+</package>`;
+    zip.folder('OEBPS')!.file('content.opf', contentOpf);
+    
+    // 4. OEBPS/toc.ncx (NCX para compatibilidade EPUB 2)
+    const tocNcx = `<?xml version="1.0" encoding="UTF-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+    <head>
+        <meta name="dtb:uid" content="${uuid}"/>
+        <meta name="dtb:depth" content="1"/>
+        <meta name="dtb:totalPageCount" content="0"/>
+        <meta name="dtb:maxPageNumber" content="0"/>
+    </head>
+    <docTitle>
+        <text>${title}</text>
+    </docTitle>
+    <navMap>
+        <navPoint id="navpoint-1" playOrder="1">
+            <navLabel>
+                <text>${title}</text>
+            </navLabel>
+            <content src="content.xhtml"/>
+        </navPoint>
+    </navMap>
+</ncx>`;
+    zip.folder('OEBPS')!.file('toc.ncx', tocNcx);
+    
+    // 5. OEBPS/nav.xhtml (Navigation Document para EPUB 3)
+    const navXhtml = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+    <title>Navegação</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <nav epub:type="toc">
+        <h1>Sumário</h1>
+        <ol>
+            <li><a href="content.xhtml">${title}</a></li>
+        </ol>
+    </nav>
+</body>
+</html>`;
+    zip.folder('OEBPS')!.file('nav.xhtml', navXhtml);
+    
+    // Limpar conteúdo HTML para XHTML
+    const cleanedContent = cleanHTMLForXHTML(contentDiv.innerHTML);
+    
+    // 6. OEBPS/content.xhtml (Conteúdo principal)
+    const contentXhtml = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>${title}</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+    <h1>${title}</h1>
+    <p><em>por ${author}</em></p>
+    <hr/>
+    ${cleanedContent}
+</body>
+</html>`;
+    zip.folder('OEBPS')!.file('content.xhtml', contentXhtml);
+    
+    // 7. OEBPS/style.css
+    const styleCss = `
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.6;
+    margin: 1em;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+p {
+    margin: 1em 0;
+    text-align: justify;
+}
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+blockquote {
+    border-left: 3px solid #ccc;
+    margin: 1.5em 0;
+    padding-left: 1em;
+    font-style: italic;
+}
+`;
+    zip.folder('OEBPS')!.file('style.css', styleCss);
+    
+    // Gerar arquivo EPUB
+    try {
+        const blob = await zip.generateAsync({ type: 'blob', mimeType: 'application/epub+zip' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'crio.epub';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        
+        console.log('Arquivo EPUB exportado com sucesso');
+        isExporting = false;
+    } catch (error) {
+        console.error('Erro ao gerar EPUB:', error);
+        alert('Erro ao exportar EPUB. Veja o console para detalhes.');
+        isExporting = false;
+    }
+}
+
+// ============================================================================
+// CONTROLES DE INTERFACE
+// ============================================================================
 
 // Alternar tema
 function initThemeToggle(): void {
@@ -882,8 +1271,6 @@ function initFontSize(): void {
         return;
     }
     
-    console.log('Inicializando controle de tamanho de fonte');
-    
     fontSizeBtn.addEventListener('click', () => {
         currentFontSize = (currentFontSize + 1) % fontSizes.length;
         const size = fontSizes[currentFontSize];
@@ -901,6 +1288,22 @@ function initFontSize(): void {
     }
 }
 
+// Botão de exportação
+function initExport(): void {
+    const exportBtn = document.getElementById('export-btn');
+    
+    if (!exportBtn) {
+        console.warn('Botão de exportação não encontrado');
+        return;
+    }
+    
+    exportBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        exportAsEpub();
+    });
+}
+
 // Toggle de navegação
 function initNavToggle(): void {
     const navToggle = document.getElementById('nav-toggle');
@@ -910,8 +1313,6 @@ function initNavToggle(): void {
         console.warn('Elementos de toggle de navegação não encontrados:', { navToggle, navIndex });
         return;
     }
-    
-    console.log('Inicializando toggle de navegação');
     
     navToggle.addEventListener('click', () => {
         const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
@@ -933,8 +1334,6 @@ function initVoidSymbol(): void {
         console.warn('Símbolo do vazio não encontrado');
         return;
     }
-    
-    console.log('Inicializando símbolo do vazio (sempre visível e tremulando)');
     
     // Observador de scroll para trigger em seções específicas e pulsar
     window.addEventListener('scroll', checkVoidTrigger);
@@ -1013,8 +1412,6 @@ function activateVoidSymbol(withZoom: boolean = false): void {
     const voidSymbol = document.querySelector('.void-symbol');
     if (!voidSymbol) return;
     
-    console.log(`Ativando símbolo do vazio ${withZoom ? 'com zoom' : ''}`);
-    
     voidSymbol.classList.add('active');
     
     if (withZoom) {
@@ -1071,8 +1468,6 @@ function updateVoidPulse(): void {
 
 // Partículas de fundo (luzes/escuridão)
 function initBackgroundParticles(): void {
-    console.log('Inicializando partículas de fundo');
-    
     const particleCount = 30; // Número reduzido para performance
     const body = document.body;
     
@@ -1141,16 +1536,11 @@ const TREMOR_START = 0.2; // Começa a tremular após 20% da página
 const TREMOR_PEAK = 0.8; // Atinge máximo em 80% da página
 
 function initTextTremor(): void {
-    console.log('Inicializando tremulação progressiva do texto');
-    
     // Atualizar tremor durante scroll
     window.addEventListener('scroll', updateTextTremor);
     
     // Atualizar inicialmente
     updateTextTremor();
-    
-    // Log do estado inicial
-    console.log('Tremor inicial:', tremorIntensity);
 }
 
 function updateTextTremor(): void {
@@ -1216,13 +1606,10 @@ function intensifyTremor(multiplier: number = 2, duration: number = 3000): void 
     const currentIntensity = tremorIntensity;
     const intensifiedValue = currentIntensity * multiplier;
     
-    console.log(`Intensificando tremor: ${currentIntensity} → ${intensifiedValue}`);
-    
     main.style.setProperty('--tremor-intensity', intensifiedValue.toString());
     
     setTimeout(() => {
         main.style.setProperty('--tremor-intensity', currentIntensity.toString());
-        console.log(`Tremor retornado: ${intensifiedValue} → ${currentIntensity}`);
     }, duration);
 }
 
@@ -1387,8 +1774,6 @@ const AUTO_SCROLL_SPEED = 0.5; // pixels por frame (ajustável)
 const AUTO_SCROLL_FPS = 60;
 
 function initAutoScroll(): void {
-    console.log('Inicializando autoscroll meditativo');
-    
     // Criar botão de autoscroll
     const audioUI = document.querySelector('.audio-ui');
     if (!audioUI) {
@@ -1397,18 +1782,16 @@ function initAutoScroll(): void {
     }
     
     const autoScrollBtn = document.createElement('button');
-    autoScrollBtn.className = 'auto-scroll-button';
+    autoScrollBtn.className = 'nav-action-btn';
     autoScrollBtn.id = 'auto-scroll-btn';
     autoScrollBtn.setAttribute('aria-label', 'Ativar autoscroll meditativo');
-    autoScrollBtn.innerHTML = '<span aria-hidden="true">⬇</span>';
+    autoScrollBtn.innerHTML = '<span class="nav-action-icon" aria-hidden="true">⬇</span><span class="nav-action-text">Autoscroll</span>';
     autoScrollBtn.title = 'Autoscroll meditativo';
     
-    // Inserir após o botão de fonte
-    const fontBtn = document.getElementById('font-size-btn');
-    if (fontBtn && fontBtn.nextSibling) {
-        audioUI.insertBefore(autoScrollBtn, fontBtn.nextSibling);
-    } else {
-        audioUI.appendChild(autoScrollBtn);
+    // Inserir no menu de ações (nav-actions)
+    const navActions = document.querySelector('.nav-actions');
+    if (navActions) {
+        navActions.appendChild(autoScrollBtn);
     }
     
     autoScrollBtn.addEventListener('click', toggleAutoScroll);
@@ -1496,8 +1879,6 @@ function resumeAutoScroll(): void {
 // ============================================================================
 
 document.addEventListener('DOMContentLoaded', async () => {
-    console.log('DOM carregado - inicializando CRIO...');
-    
     // Carregar conceitos primeiro
     await loadConcepts();
     

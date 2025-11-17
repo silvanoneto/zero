@@ -44,6 +44,9 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://revolucaocibernetica.com/">
     
+    <!-- Versão alternativa para Reader Mode -->
+    <link rel="alternate" type="text/html" href="livro-reader.html" title="Versão Reader Mode">
+    
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80' fill='%23f0f0f0'>∞</text></svg>">
     
@@ -155,43 +158,62 @@
         <!-- Will be populated dynamically -->
     </div>
 
-    <!-- Reading Info -->
-    <div class="reading-info" role="status" aria-live="polite">
-        <span id="reading-progress" aria-label="Porcentagem de leitura">0%</span>
-    </div>
-
     <!-- Audio Controls -->
-    <div class="audio-ui" role="group" aria-label="Controles de áudio e navegação">
-        <button class="riz∅ma-button" onclick="window.location.href='riz∅ma.html'" aria-label="Abrir riz∅ma de conceitos">
-            <span aria-hidden="true">◈</span>
-        </button>
-        <button class="void-button" onclick="window.location.href='∅.html'" aria-label="Ir para CRIO: Ontologia Relacional">
-            <span aria-hidden="true">∅</span>
-        </button>
-        <button class="font-size-button" id="font-size-btn" aria-label="Alterar tamanho da fonte">
-            <span aria-hidden="true">A</span>
-        </button>
-        <button class="mute-button" id="mute-btn" aria-label="Alternar tema claro/escuro">
-            <span id="mute-label" aria-hidden="true">
-                <span class="theme-icon">☾</span>
-            </span>
-        </button>
-        <button class="export-button" id="export-btn" aria-label="Exportar como EPUB">
-            <span aria-hidden="true">📄</span>
-        </button>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Alternar índice de navegação" aria-expanded="false" aria-controls="nav-index">
+    <div class="audio-ui" role="group" aria-label="Controles de navegação">
+        <button class="nav-toggle" id="nav-toggle" aria-label="Alternar menu de navegação" aria-expanded="false" aria-controls="nav-index">
             <span class="hamburger" aria-hidden="true">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </span>
         </button>
+        <span class="page-title" id="reading-progress" aria-label="Título da página">LIVRO</span>
         <span id="audio-status" class="audio-status" aria-live="polite"></span>
     </div>
 
     <!-- Navigation Index -->
-    <nav class="nav-index" id="nav-index" role="navigation" aria-label="Índice de capítulos" aria-hidden="false">
-        <h3>Navegação</h3>
+    <nav class="nav-index" id="nav-index" role="navigation" aria-label="Menu de navegação" aria-hidden="false">
+        <h3>Menu</h3>
+        
+        <!-- Action Buttons -->
+        <div class="nav-actions">
+            <button class="nav-action-btn" onclick="window.location.href='riz∅ma.html'" aria-label="Abrir riz∅ma de conceitos">
+                <span class="nav-action-icon">◈</span>
+                <span class="nav-action-text">Rizoma</span>
+            </button>
+            <button class="nav-action-btn" onclick="window.location.href='referencias.html'" aria-label="Ver PAÊBIRÚ - Rede viva de referências">
+                <span class="nav-action-icon">⋯</span>
+                <span class="nav-action-text">Referências</span>
+            </button>
+            <button class="nav-action-btn" onclick="window.location.href='∅.html'" aria-label="Ir para CRIO: Ontologia Relacional">
+                <span class="nav-action-icon">∅</span>
+                <span class="nav-action-text">CRIO</span>
+            </button>
+            <button class="nav-action-btn" onclick="window.location.href='livro-reader.html'" aria-label="Versão simplificada para modo leitura">
+                <span class="nav-action-icon">📖</span>
+                <span class="nav-action-text">Reader</span>
+            </button>
+            <button class="nav-action-btn" id="font-size-btn" aria-label="Alterar tamanho da fonte">
+                <span class="nav-action-icon">A</span>
+                <span class="nav-action-text">Fonte</span>
+            </button>
+            <button class="nav-action-btn" id="mute-btn" aria-label="Alternar tema claro/escuro">
+                <span class="nav-action-icon"><span class="theme-icon">☾</span></span>
+                <span class="nav-action-text">Tema</span>
+            </button>
+            <button class="nav-action-btn" id="export-btn" aria-label="Exportar como EPUB">
+                <span class="nav-action-icon">📄</span>
+                <span class="nav-action-text">Export</span>
+            </button>
+            <button class="nav-action-btn" onclick="window.open('https://github.com/silvanoneto/zero', '_blank')" aria-label="Ver código no GitHub">
+                <span class="nav-action-icon">⟨/⟩</span>
+                <span class="nav-action-text">GitHub</span>
+            </button>
+        </div>
+        
+        <hr class="nav-divider">
+        
+        <h4>Capítulos</h4>
         <ul id="nav-list" role="list">
             <!-- Will be populated dynamically -->
         </ul>
@@ -234,7 +256,7 @@
         </div>
 
         <!-- Actual Content (populated dynamically) -->
-        <div id="content" class="loading" itemprop="articleBody" aria-live="polite" aria-busy="true" style="display: none;">
+        <div id="content" class="loading" itemprop="articleBody" aria-live="polite" aria-busy="true">
             ∞ → carregando livro...
         </div>
         </article>

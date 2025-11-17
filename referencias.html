@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>📚 Referências | Ontologia Relacional dos CRIOS</title>
-    <meta name="title" content="Referências Bibliográficas | Ontologia Relacional dos CRIOS">
-    <meta name="description" content="Referências acadêmicas fundamentais para a ontologia relacional dos CRIOS: filosofia continental, teoria de sistemas, ontologia política, epistemologia relacional e filosofia da ciência. Mais de 60 obras organizadas por tradições filosóficas.">
+    <title>📚 PAÊBIRÚ | Rede Viva de Referências</title>
+    <meta name="title" content="PAÊBIRÚ: Rede Viva de Referências | Ontologia Relacional">
+    <meta name="description" content="O caminho coberto de grama amassada. Trilhas que conectam oceanos, povos, cosmologias - da Era Axial ao Antropoceno. Obras organizadas por tradições filosóficas que sustentam a travessia do vazio ao sujeito político relacional. Cada referência é nó vivo; cada conceito é trilha entre nós; cada leitura refaz o caminho.">
     <meta name="author" content="Revolução Cibernética">
     
     <!-- Reader Mode Support -->
@@ -57,6 +57,33 @@
             max-width: 800px;
             margin: 0 auto;
             line-height: 1.6;
+        }
+
+        .help-box {
+            margin-top: 1.5rem;
+            padding: 1rem 1.25rem;
+            background: rgba(100, 200, 255, 0.05);
+            border: 1px solid rgba(100, 200, 255, 0.2);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .help-box strong {
+            color: rgb(100, 200, 255);
+        }
+
+        .help-box a {
+            color: rgb(100, 200, 255);
+            text-decoration: underline;
+            transition: opacity 0.2s ease;
+        }
+
+        .help-box a:hover {
+            opacity: 0.8;
         }
 
         .search-filter-section {
@@ -275,6 +302,90 @@
             border-color: rgba(102, 102, 255, 0.3);
         }
 
+        /* Category Select Box */
+        .category-select {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            padding-right: 3rem;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 12px;
+            color: var(--emergence);
+            font-size: 1rem;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%2300ff88' d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 16px;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-select:hover {
+            border-color: var(--connection);
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 255, 136, 0.15);
+        }
+
+        .category-select:focus {
+            outline: none;
+            border-color: var(--connection);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 4px rgba(0, 255, 136, 0.1), 0 4px 16px rgba(0, 255, 136, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .category-select option {
+            background: #1a1a1a;
+            color: var(--emergence);
+            padding: 1rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .category-select option:hover,
+        .category-select option:checked {
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(153, 102, 255, 0.15));
+            color: var(--connection);
+        }
+
+        body.light-theme .category-select {
+            background: rgba(255, 255, 255, 0.8);
+            border-color: rgba(0, 204, 108, 0.3);
+            color: #1a1a1a;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%2300cc6c' d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+        }
+
+        body.light-theme .category-select:hover {
+            background: rgba(255, 255, 255, 0.95);
+            border-color: rgba(0, 204, 108, 0.5);
+            box-shadow: 0 4px 12px rgba(0, 204, 108, 0.15);
+        }
+
+        body.light-theme .category-select:focus {
+            box-shadow: 0 0 0 4px rgba(0, 204, 108, 0.1), 0 4px 16px rgba(0, 204, 108, 0.2);
+        }
+
+        body.light-theme .category-select option {
+            background: #ffffff;
+            color: #1a1a1a;
+        }
+
+        body.light-theme .category-select option:hover,
+        body.light-theme .category-select option:checked {
+            background: linear-gradient(135deg, rgba(0, 204, 108, 0.12), rgba(102, 102, 255, 0.12));
+            color: #0a0a0a;
+        }
+
         .filter-buttons {
             display: flex;
             gap: 0.6rem;
@@ -347,6 +458,33 @@
             border-radius: 6px;
             padding: 1rem;
             text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card.highlight,
+        .stat-card.warning,
+        .stat-card.success {
+            cursor: help;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-card.highlight {
+            border-color: rgba(100, 200, 255, 0.3);
+            background: rgba(100, 200, 255, 0.05);
+        }
+
+        .stat-card.warning {
+            border-color: rgba(255, 180, 100, 0.3);
+            background: rgba(255, 180, 100, 0.05);
+        }
+
+        .stat-card.success {
+            border-color: rgba(100, 255, 150, 0.3);
+            background: rgba(100, 255, 150, 0.05);
         }
 
         .stat-card .number {
@@ -356,11 +494,107 @@
             margin-bottom: 0.5rem;
         }
 
+        .stat-card.highlight .number {
+            color: rgb(100, 200, 255);
+        }
+
+        .stat-card.warning .number {
+            color: rgb(255, 180, 100);
+        }
+
+        .stat-card.success .number {
+            color: rgb(100, 255, 150);
+        }
+
         .stat-card .label {
             font-size: 0.9rem;
             color: var(--connection);
             text-transform: uppercase;
             letter-spacing: 0.05em;
+        }
+
+        /* CRIO Metrics Integration */
+        .crio-metrics {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glow);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .crio-metrics-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .crio-symbol-small {
+            font-size: 1.5rem;
+            color: var(--connection);
+            line-height: 1;
+        }
+
+        .crio-metrics-header h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: var(--emergence);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
+
+        .metrics-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .metric-group {
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 3px solid;
+            border-radius: 6px;
+            padding: 1rem;
+        }
+
+        .metric-group.fundacional {
+            border-left-color: #9966ff;
+        }
+
+        .metric-group.ontologica {
+            border-left-color: #66ccff;
+        }
+
+        .metric-group.temporal {
+            border-left-color: #cccccc;
+        }
+
+        .metric-layer-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.7;
+            margin-bottom: 0.75rem;
+            color: var(--emergence);
+        }
+
+        .metric-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .stat-card.compact {
+            padding: 0.75rem 0.5rem;
+        }
+
+        .stat-card.compact .number {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-card.compact .label {
+            font-size: 0.75rem;
         }
 
         .referencias-grid {
@@ -500,6 +734,36 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         }
 
+        .tag.conceito-mapped {
+            background: rgba(100, 200, 255, 0.1);
+            border-color: rgba(100, 200, 255, 0.3);
+            cursor: pointer;
+        }
+
+        .tag.conceito-mapped::before {
+            content: '🔗';
+            margin-right: 0.3rem;
+            opacity: 0.8;
+        }
+
+        .tag.conceito-mapped:hover {
+            background: rgba(100, 200, 255, 0.2);
+            border-color: rgba(100, 200, 255, 0.5);
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 4px 12px rgba(100, 200, 255, 0.3);
+        }
+
+        .tag.conceito-unmapped {
+            background: rgba(255, 180, 100, 0.1);
+            border-color: rgba(255, 180, 100, 0.2);
+            opacity: 0.7;
+        }
+
+        .tag.conceito-unmapped::before {
+            content: '⚠️';
+            margin-right: 0.3rem;
+        }
+
         .tag.categoria {
             background: linear-gradient(135deg, rgba(153, 102, 255, 0.2), rgba(102, 204, 255, 0.2));
             border: 1px solid rgba(153, 102, 255, 0.4);
@@ -511,7 +775,74 @@
 
         .tag.categoria::before {
             content: '📂';
-            margin-right: 0.4rem;
+            margin-right: 0.3rem;
+        }
+
+        /* Unmapped Concepts Section */
+        .unmapped-section {
+            background: rgba(255, 180, 100, 0.05);
+            border: 1px solid rgba(255, 180, 100, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+
+        .unmapped-header h2 {
+            color: rgb(255, 180, 100);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .unmapped-header p {
+            color: var(--connection);
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .unmapped-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .all-mapped-message {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 2rem;
+            font-style: italic;
+            opacity: 0.7;
+            color: var(--emergence);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .unmapped-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 180, 100, 0.15);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .unmapped-item:hover {
+            background: rgba(255, 180, 100, 0.08);
+            border-color: rgba(255, 180, 100, 0.3);
+            transform: translateX(4px);
+        }
+
+        .unmapped-conceito {
+            font-weight: 500;
+            color: var(--emergence);
+        }
+
+        .unmapped-count {
+            font-size: 0.85rem;
+            color: var(--connection);
+            opacity: 0.6;
         }
 
         .tag.categoria:hover {
@@ -604,6 +935,41 @@
             border-color: rgba(0, 0, 0, 0.12);
         }
 
+        .light-theme .tag.conceito-mapped {
+            background: rgba(100, 200, 255, 0.15);
+            border-color: rgba(100, 200, 255, 0.4);
+        }
+
+        .light-theme .tag.conceito-mapped:hover {
+            background: rgba(100, 200, 255, 0.25);
+            border-color: rgba(100, 200, 255, 0.6);
+        }
+
+        .light-theme .tag.conceito-unmapped {
+            background: rgba(255, 180, 100, 0.15);
+            border-color: rgba(255, 180, 100, 0.3);
+        }
+
+        .light-theme .unmapped-section {
+            background: rgba(255, 180, 100, 0.08);
+            border-color: rgba(255, 180, 100, 0.25);
+        }
+
+        .light-theme .unmapped-item {
+            background: rgba(0, 0, 0, 0.02);
+            border-color: rgba(255, 180, 100, 0.2);
+        }
+
+        .light-theme .unmapped-item:hover {
+            background: rgba(255, 180, 100, 0.12);
+            border-color: rgba(255, 180, 100, 0.35);
+        }
+
+        .light-theme .help-box {
+            background: rgba(100, 200, 255, 0.08);
+            border-color: rgba(100, 200, 255, 0.25);
+        }
+
         .light-theme .period-range {
             background: rgba(0, 0, 0, 0.1);
         }
@@ -613,7 +979,93 @@
             border-color: rgba(153, 102, 255, 0.2);
         }
 
+        /* Tablet/Medium screens */
+        @media (max-width: 1024px) {
+            .metric-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
+            .crio-metrics {
+                position: relative;
+            }
+
+            .crio-metrics::before {
+                content: '∅';
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 8rem;
+                color: var(--emergence);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.5s ease;
+                line-height: 1;
+                z-index: 0;
+            }
+
+            .crio-metrics.collapsed::before {
+                opacity: 0.08;
+            }
+
+            .crio-metrics-header {
+                cursor: pointer;
+                user-select: none;
+                transition: all 0.3s ease;
+                padding: 1rem;
+                border-radius: 12px;
+                background: rgba(255, 255, 255, 0.03);
+                border: 1px solid rgba(0, 255, 136, 0.2);
+                position: relative;
+                z-index: 1;
+            }
+
+            .crio-metrics-header .crio-symbol-small {
+                display: none;
+            }
+
+            .crio-metrics:not(.collapsed) .crio-metrics-header .crio-symbol-small {
+                display: block;
+            }
+
+            .crio-metrics-header:hover {
+                background: rgba(255, 255, 255, 0.06);
+                border-color: var(--connection);
+                transform: translateY(-1px);
+            }
+
+            .crio-metrics-header h3::after {
+                content: ' ▼';
+                font-size: 0.7em;
+                margin-left: 0.5rem;
+                transition: transform 0.3s ease;
+                display: inline-block;
+                color: var(--connection);
+            }
+
+            .crio-metrics:not(.collapsed) .crio-metrics-header h3::after {
+                transform: rotate(180deg);
+            }
+
+            .crio-metrics.collapsed .metrics-grid {
+                display: none;
+            }
+
+            body.light-theme .crio-metrics::before {
+                color: #666;
+            }
+
+            body.light-theme .crio-metrics-header {
+                background: rgba(255, 255, 255, 0.8);
+                border-color: rgba(0, 204, 108, 0.3);
+            }
+
+            body.light-theme .crio-metrics-header:hover {
+                background: rgba(255, 255, 255, 0.95);
+                border-color: rgba(0, 204, 108, 0.5);
+            }
+
             .referencias-header h1 {
                 font-size: 2rem;
             }
@@ -664,6 +1116,87 @@
             .filter-btn {
                 padding: 0.6rem 1.1rem;
                 font-size: 0.85rem;
+            }
+
+            .unmapped-section {
+                padding: 1.5rem;
+            }
+
+            .unmapped-header h2 {
+                font-size: 1.2rem;
+            }
+
+            .unmapped-list {
+                grid-template-columns: 1fr;
+            }
+
+            .all-mapped-message {
+                padding: 1.5rem;
+                font-size: 1rem;
+            }
+
+            .stats-section {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-section:not(.crio-metrics) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .metric-row {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+
+            .metric-group {
+                padding: 0.75rem;
+            }
+
+            .crio-metrics {
+                padding: 1rem;
+            }
+
+            .crio-metrics-header {
+                margin-bottom: 1rem;
+                padding-bottom: 0.75rem;
+            }
+
+            .crio-metrics-header h3 {
+                font-size: 0.95rem;
+            }
+
+            .crio-symbol-small {
+                font-size: 1.2rem;
+            }
+
+            .metrics-grid {
+                gap: 1rem;
+            }
+
+            .metric-layer-label {
+                font-size: 0.7rem;
+            }
+
+            .stat-card.compact .number {
+                font-size: 1.3rem;
+            }
+
+            .stat-card.compact .label {
+                font-size: 0.7rem;
+            }
+
+            .help-box {
+                font-size: 0.85rem;
+                padding: 0.875rem 1rem;
+                margin-top: 1rem;
+            }
+
+            .referencias-header h1 {
+                font-size: 2rem;
+            }
+
+            .referencias-header p {
+                font-size: 1rem;
             }
 
             .stats-section {
@@ -735,30 +1268,123 @@
     </style>
 </head>
 <body>
+    <!-- Audio Controls -->
+    <div class="audio-ui" role="group" aria-label="Controles de navegação">
+        <button class="nav-toggle" id="nav-toggle" aria-label="Alternar menu de navegação" aria-expanded="false" aria-controls="nav-index">
+            <span class="hamburger" aria-hidden="true">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </span>
+        </button>
+        <span class="page-title" id="reading-progress" aria-label="Título da página">PAÊBIRÚ</span>
+        <span id="audio-status" class="audio-status" aria-live="polite"></span>
+    </div>
+
+    <!-- Menu de navegação -->
+    <nav class="nav-index" id="nav-index" role="navigation" aria-label="Menu de navegação" aria-hidden="false">
+        <div class="crio-nav-header">
+            <div class="crio-symbol">∅</div>
+            <div class="crio-title">
+                <h3>CRIO</h3>
+                <p class="crio-subtitle">Ontologia Relacional</p>
+            </div>
+        </div>
+        
+        <!-- Navigation Grid -->
+        <div class="nav-grid">
+            <button class="nav-grid-btn ontologica" onclick="window.location.href='∅.html'" aria-label="CRIO: Ontologia Relacional">
+                <span class="nav-grid-icon">∅</span>
+                <span class="nav-grid-label">Ontologia</span>
+            </button>
+            <button class="nav-grid-btn epistemica" onclick="window.location.href='index.html'" aria-label="Livro: Travessia epistêmica">
+                <span class="nav-grid-icon">∞</span>
+                <span class="nav-grid-label">Livro</span>
+            </button>
+            <button class="nav-grid-btn fundacional" onclick="window.location.href='riz∅ma.html'" aria-label="Rizoma: Visualização da rede">
+                <span class="nav-grid-icon">◈</span>
+                <span class="nav-grid-label">Rizoma</span>
+            </button>
+            <button class="nav-grid-btn pratica" onclick="window.open('https://github.com/silvanoneto/zero', '_blank')" aria-label="GitHub: Código fonte">
+                <span class="nav-grid-icon">⟨/⟩</span>
+                <span class="nav-grid-label">Código</span>
+            </button>
+        </div>
+        
+        <div class="nav-description">
+            <p>Navegue entre as camadas relacionais do projeto</p>
+        </div>
+    </nav>
+
     <article class="referencias-container">
         <!-- Header -->
         <div class="referencias-header">
-            <h1>📚 Referências Bibliográficas dos CRIOS</h1>
-            <p>Fundamentos teóricos da ontologia relacional: filosofia continental, teoria de sistemas, ontologia política, epistemologia relacional e filosofia da ciência. Mais de 60 obras organizadas por tradições filosóficas que sustentam a travessia do vazio ao sujeito político relacional.</p>
+            <h1>📚 PAÊBIRÚ: Rede Viva de Referências</h1>
+            <p>O caminho coberto de grama amassada. Trilhas que conectam oceanos, povos, cosmologias - da Era Axial ao Antropoceno. <span id="total-referencias-text">Obras</span> organizadas por tradições filosóficas que sustentam a travessia do vazio ao sujeito político relacional. Cada referência é nó vivo; cada conceito é trilha entre nós; cada leitura refaz o caminho.</p>
+            <div class="help-box">
+                <strong>💡 Conexão com o Rizoma:</strong> 
+                Tags com <span style="color: rgb(100, 200, 255);">🔗</span> indicam conceitos já mapeados no <a href="riz∅ma.html">rizoma</a>. 
+                Clique nelas para navegar diretamente à visualização 3D! 
+                Tags com <span style="color: rgb(255, 180, 100);">⚠️</span> são conceitos citados mas ainda não adicionados à rede.
+            </div>
         </div>
 
-        <!-- Stats -->
-        <div class="stats-section">
-            <div class="stat-card">
-                <div class="number" id="total-refs">0</div>
-                <div class="label">Referências</div>
+        <!-- Stats - CRIO Integrated -->
+        <div class="stats-section crio-metrics collapsed">
+            <div class="crio-metrics-header">
+                <div class="crio-symbol-small">∅</div>
+                <h3>Métricas Relacionais</h3>
             </div>
-            <div class="stat-card">
-                <div class="number" id="total-categorias">0</div>
-                <div class="label">Categorias</div>
-            </div>
-            <div class="stat-card">
-                <div class="number" id="total-conceitos">0</div>
-                <div class="label">Conceitos</div>
-            </div>
-            <div class="stat-card">
-                <div class="number" id="filtered-count">0</div>
-                <div class="label">Exibindo</div>
+            
+            <div class="metrics-grid">
+                <!-- Camada Fundacional -->
+                <div class="metric-group fundacional">
+                    <div class="metric-layer-label">Fundacional</div>
+                    <div class="metric-row">
+                        <div class="stat-card compact">
+                            <div class="number" id="total-refs">0</div>
+                            <div class="label">Obras</div>
+                        </div>
+                        <div class="stat-card compact">
+                            <div class="number" id="total-categorias">0</div>
+                            <div class="label">Tradições</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Camada Ontológica -->
+                <div class="metric-group ontologica">
+                    <div class="metric-layer-label">Ontológica</div>
+                    <div class="metric-row">
+                        <div class="stat-card compact">
+                            <div class="number" id="total-conceitos">0</div>
+                            <div class="label">Conceitos</div>
+                        </div>
+                        <div class="stat-card compact">
+                            <div class="number" id="filtered-count">0</div>
+                            <div class="label">Exibindo</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Camada Relacional -->
+                <div class="metric-group temporal">
+                    <div class="metric-layer-label">Conexão Rizoma</div>
+                    <div class="metric-row">
+                        <div class="stat-card compact highlight">
+                            <div class="number" id="mapped-concepts">0</div>
+                            <div class="label">Mapeados 🔗</div>
+                        </div>
+                        <div class="stat-card compact warning">
+                            <div class="number" id="unmapped-concepts">0</div>
+                            <div class="label">Pendentes ⚠️</div>
+                        </div>
+                        <div class="stat-card compact success">
+                            <div class="number" id="mapping-percentage">0%</div>
+                            <div class="label">Cobertura</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -786,39 +1412,41 @@
                         type="range" 
                         id="year-min" 
                         class="period-range" 
-                        min="1600" 
-                        max="2025" 
-                        value="1600"
-                        step="5"
+                        min="-600" 
+                        max="2030" 
+                        value="-600"
+                        step="10"
                         aria-label="Ano inicial do período"
                     >
                     <input 
                         type="range" 
                         id="year-max" 
                         class="period-range" 
-                        min="1600" 
-                        max="2025" 
-                        value="2025"
-                        step="5"
+                        min="-600" 
+                        max="2030" 
+                        value="2030"
+                        step="10"
                         aria-label="Ano final do período"
                     >
                     <div class="period-display">
-                        <span id="year-min-display">1600</span>
+                        <span id="year-min-display">-600</span>
                         <span>→</span>
-                        <span id="year-max-display">2025</span>
+                        <span id="year-max-display">2030</span>
                     </div>
                 </div>
             </div>
             <div class="period-group">
                 <div class="filter-label">📖 Períodos Filosóficos</div>
                 <div class="period-presets">
-                    <button class="period-preset-btn active" onclick="setPeriod(1600, 2025)" title="Todas as referências">Todos</button>
-                    <button class="period-preset-btn" onclick="setPeriod(1600, 1800)" title="Racionalismo e Empirismo">Modernos</button>
+                    <button class="period-preset-btn active" onclick="setPeriod(-600, 2030)" title="Todas as referências">Todos</button>
+                    <button class="period-preset-btn" onclick="setPeriod(-600, 400)" title="Buda, Lao Tzu, Sócrates, Nāgārjuna">Era Axial</button>
+                    <button class="period-preset-btn" onclick="setPeriod(400, 1400)" title="Ibn Arabi, Eckhart, Zhuangzi">Medieval</button>
+                    <button class="period-preset-btn" onclick="setPeriod(1600, 1800)" title="Spinoza, Leibniz, Hume">Modernos</button>
                     <button class="period-preset-btn" onclick="setPeriod(1780, 1900)" title="Kant, Hegel, Nietzsche">Idealismo</button>
-                    <button class="period-preset-btn" onclick="setPeriod(1900, 1950)" title="Fenomenologia, Existencialismo">Séc. XX Early</button>
-                    <button class="period-preset-btn" onclick="setPeriod(1950, 1990)" title="Estruturalismo, Pós-estruturalismo">Pós-Guerra</button>
-                    <button class="period-preset-btn" onclick="setPeriod(1990, 2010)" title="Ontologia relacional emerge">Virada Relacional</button>
-                    <button class="period-preset-btn" onclick="setPeriod(2010, 2025)" title="Desenvolvimentos mais recentes">Últimas Décadas</button>
+                    <button class="period-preset-btn" onclick="setPeriod(1900, 1950)" title="Husserl, Heidegger, Whitehead">Fenomenologia</button>
+                    <button class="period-preset-btn" onclick="setPeriod(1950, 1990)" title="Deleuze, Foucault, Maturana">Pós-Guerra</button>
+                    <button class="period-preset-btn" onclick="setPeriod(1990, 2010)" title="Barad, Latour, Rovelli">Virada Relacional</button>
+                    <button class="period-preset-btn" onclick="setPeriod(2010, 2030)" title="Haraway, Tsing, Krenak">Antropoceno</button>
                 </div>
             </div>
         </div>
@@ -828,8 +1456,20 @@
                 <span>🏷️</span>
                 <span>Filtrar por Categoria</span>
             </div>
-            <div class="filter-buttons" id="filter-buttons">
-                <!-- Filtros gerados dinamicamente -->
+            <select class="category-select" id="category-select" aria-label="Filtrar por categoria">
+                <option value="">Todas as Categorias</option>
+                <!-- Opções geradas dinamicamente -->
+            </select>
+        </div>
+
+        <!-- Unmapped Concepts Section -->
+        <div class="unmapped-section">
+            <div class="unmapped-header">
+                <h2>🔍 Conceitos Citados, Ainda Não Mapeados</h2>
+                <p>Conceitos mencionados nas referências que ainda não foram adicionados ao <a href="riz∅ma.html" style="color: rgb(100, 200, 255); text-decoration: underline;">rizoma</a>. Estes são candidatos para expansão futura da rede de conhecimento. Conceitos já mapeados aparecem com 🔗 e são clicáveis, levando você diretamente ao rizoma com o conceito selecionado.</p>
+            </div>
+            <div class="unmapped-list" id="unmapped-list">
+                <!-- Lista gerada dinamicamente -->
             </div>
         </div>
 
@@ -842,348 +1482,9 @@
         <div class="no-results hidden" id="no-results">
             <p>Nenhuma referência encontrada com os filtros atuais.</p>
         </div>
-    </div>
-
-    <!-- Back Button -->
-    <a href="∅.html" class="back-button">
-        <span>←</span>
-        <span>Voltar aos CRIOS</span>
-    </a>
-
-    <script type="module">
-        // Carregar tema salvo
-        const savedTheme = localStorage.getItem('crio-theme');
-        if (savedTheme === 'light') {
-            document.body.classList.add('light-theme');
-        }
-
-        let referencias = [];
-        let currentFilter = 'todos';
-        let searchTerm = '';
-        let yearMin = 1600;
-        let yearMax = 2025;
-
-        // Extrair ano numérico de uma string
-        function extractYear(ano) {
-            if (typeof ano === 'number') return ano;
-            if (typeof ano === 'string') {
-                // Tenta extrair o primeiro número de 4 dígitos
-                const match = ano.match(/\d{4}/);
-                if (match) return parseInt(match[0]);
-                // Se for algo como "c. 200 EC", tenta extrair o número
-                const numMatch = ano.match(/\d+/);
-                if (numMatch) return parseInt(numMatch[0]);
-            }
-            return 0;
-        }
-
-        // Configurar sliders de período
-        function setupPeriodSliders() {
-            const yearMinSlider = document.getElementById('year-min');
-            const yearMaxSlider = document.getElementById('year-max');
-            const yearMinDisplay = document.getElementById('year-min-display');
-            const yearMaxDisplay = document.getElementById('year-max-display');
-
-            yearMinSlider.addEventListener('input', (e) => {
-                yearMin = parseInt(e.target.value);
-                if (yearMin > yearMax) {
-                    yearMin = yearMax;
-                    yearMinSlider.value = yearMin;
-                }
-                yearMinDisplay.textContent = yearMin;
-                renderReferencias();
-            });
-
-            yearMaxSlider.addEventListener('input', (e) => {
-                yearMax = parseInt(e.target.value);
-                if (yearMax < yearMin) {
-                    yearMax = yearMin;
-                    yearMaxSlider.value = yearMax;
-                }
-                yearMaxDisplay.textContent = yearMax;
-                renderReferencias();
-            });
-        }
-
-        // Definir período predefinido
-        window.setPeriod = function(min, max) {
-            yearMin = min;
-            yearMax = max;
-            document.getElementById('year-min').value = min;
-            document.getElementById('year-max').value = max;
-            document.getElementById('year-min-display').textContent = min;
-            document.getElementById('year-max-display').textContent = max;
-            
-            // Atualizar botões ativos
-            document.querySelectorAll('.period-preset-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            
-            // Marcar o botão clicado como ativo
-            if (event && event.target) {
-                event.target.classList.add('active');
-            }
-            
-            renderReferencias();
-        }
-
-        // Carregar referências
-        async function loadReferencias() {
-            try {
-                const response = await fetch('assets/referencias.json');
-                referencias = await response.json();
-                
-                setupPeriodSliders();
-                updateStats();
-                renderFilterButtons();
-                renderReferencias();
-            } catch (error) {
-                console.error('Erro ao carregar referências:', error);
-            }
-        }
-
-        // Atualizar estatísticas
-        function updateStats() {
-            const categorias = new Set(referencias.map(r => r.categoria));
-            const conceitos = new Set();
-            referencias.forEach(r => {
-                if (r.conceitos) {
-                    r.conceitos.forEach(c => conceitos.add(c));
-                }
-            });
-
-            document.getElementById('total-refs').textContent = referencias.length;
-            document.getElementById('total-categorias').textContent = categorias.size;
-            document.getElementById('total-conceitos').textContent = conceitos.size;
-        }
-
-        // Renderizar botões de filtro
-        function renderFilterButtons() {
-            const categorias = [...new Set(referencias.map(r => r.categoria))].sort();
-            const container = document.getElementById('filter-buttons');
-            
-            // Contar referências por categoria
-            const counts = {};
-            referencias.forEach(r => {
-                counts[r.categoria] = (counts[r.categoria] || 0) + 1;
-            });
-
-            // Botão "Todos"
-            const todosBtn = document.createElement('button');
-            todosBtn.className = 'filter-btn active';
-            todosBtn.innerHTML = `Todos <span style="opacity: 0.6; margin-left: 0.3rem;">(${referencias.length})</span>`;
-            todosBtn.onclick = () => setFilter('todos');
-            container.appendChild(todosBtn);
-
-            // Botões de categoria
-            categorias.forEach(cat => {
-                const btn = document.createElement('button');
-                btn.className = 'filter-btn';
-                btn.innerHTML = `${capitalize(cat)} <span style="opacity: 0.6; margin-left: 0.3rem;">(${counts[cat]})</span>`;
-                btn.dataset.category = cat;
-                btn.onclick = () => setFilter(cat);
-                container.appendChild(btn);
-            });
-            
-            // Atualizar contadores de períodos
-            updatePeriodCounts();
-        }
-
-        // Atualizar contadores de referências por período
-        function updatePeriodCounts() {
-            const periods = [
-                { min: 1600, max: 2025, selector: 0 },
-                { min: 1600, max: 1800, selector: 1 },
-                { min: 1780, max: 1900, selector: 2 },
-                { min: 1900, max: 1950, selector: 3 },
-                { min: 1950, max: 1990, selector: 4 },
-                { min: 1990, max: 2010, selector: 5 },
-                { min: 2010, max: 2025, selector: 6 }
-            ];
-
-            const buttons = document.querySelectorAll('.period-preset-btn');
-            
-            periods.forEach(({ min, max, selector }) => {
-                const count = referencias.filter(r => {
-                    const year = extractYear(r.ano);
-                    return year >= min && year <= max;
-                }).length;
-                
-                const btn = buttons[selector];
-                if (btn) {
-                    // Encontrar ou criar span de contagem
-                    let countSpan = btn.querySelector('.count');
-                    if (!countSpan) {
-                        countSpan = document.createElement('span');
-                        countSpan.className = 'count';
-                        btn.appendChild(countSpan);
-                    }
-                    countSpan.textContent = `(${count})`;
-                }
-            });
-        }
-
-        // Definir filtro
-        function setFilter(filter) {
-            currentFilter = filter;
-            
-            // Atualizar botões
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if ((filter === 'todos' && btn.innerHTML.startsWith('Todos')) ||
-                    (btn.dataset.category === filter)) {
-                    btn.classList.add('active');
-                }
-            });
-
-            renderReferencias();
-        }
-
-        // Renderizar referências
-        function renderReferencias() {
-            const container = document.getElementById('referencias-grid');
-            const noResults = document.getElementById('no-results');
-            container.innerHTML = '';
-
-            let filtered = referencias;
-
-            // Aplicar filtro de categoria
-            if (currentFilter !== 'todos') {
-                filtered = filtered.filter(r => r.categoria === currentFilter);
-            }
-
-            // Aplicar filtro de período
-            filtered = filtered.filter(r => {
-                const year = extractYear(r.ano);
-                return year >= yearMin && year <= yearMax;
-            });
-
-            // Aplicar busca
-            if (searchTerm) {
-                const term = searchTerm.toLowerCase();
-                filtered = filtered.filter(r => {
-                    return r.autor.toLowerCase().includes(term) ||
-                           r.titulo.toLowerCase().includes(term) ||
-                           r.relevancia.toLowerCase().includes(term) ||
-                           (r.conceitos && r.conceitos.some(c => c.toLowerCase().includes(term)));
-                });
-            }
-
-            // Ordenar por: 1) ano (mais recente), 2) número de conceitos (mais conceitos), 3) nome do autor
-            filtered.sort((a, b) => {
-                // Primeiro critério: ano (decrescente)
-                const yearA = extractYear(a.ano);
-                const yearB = extractYear(b.ano);
-                if (yearA !== yearB) {
-                    return yearB - yearA;
-                }
-                
-                // Segundo critério: número de conceitos (decrescente)
-                const conceitosA = (a.conceitos || []).length;
-                const conceitosB = (b.conceitos || []).length;
-                if (conceitosA !== conceitosB) {
-                    return conceitosB - conceitosA;
-                }
-                
-                // Terceiro critério: nome do autor (alfabética)
-                return a.autor.localeCompare(b.autor, 'pt-BR');
-            });
-
-            // Atualizar contador
-            document.getElementById('filtered-count').textContent = filtered.length;
-
-            // Mostrar/ocultar mensagem de "sem resultados"
-            if (filtered.length === 0) {
-                noResults.classList.remove('hidden');
-            } else {
-                noResults.classList.add('hidden');
-            }
-
-            // Renderizar cards
-            filtered.forEach((ref, index) => {
-                const card = createReferenciaCard(ref, index);
-                container.appendChild(card);
-            });
-        }
-
-        // Criar card de referência
-        function createReferenciaCard(ref, index) {
-            const card = document.createElement('div');
-            card.className = 'referencia-card';
-            card.style.animationDelay = `${index * 0.05}s`;
-
-            const header = document.createElement('div');
-            header.className = 'referencia-header';
-
-            const autor = document.createElement('div');
-            autor.className = 'referencia-autor';
-            autor.textContent = ref.autor;
-
-            const ano = document.createElement('div');
-            ano.className = 'referencia-ano';
-            ano.textContent = ref.ano;
-
-            header.appendChild(autor);
-            header.appendChild(ano);
-
-            const titulo = document.createElement('div');
-            titulo.className = 'referencia-titulo';
-            titulo.textContent = ref.titulo;
-
-            const editora = document.createElement('div');
-            editora.className = 'referencia-editora';
-            editora.textContent = ref.editora || ref.publicacao || '';
-
-            const relevancia = document.createElement('div');
-            relevancia.className = 'referencia-relevancia';
-            relevancia.textContent = ref.relevancia;
-
-            const tags = document.createElement('div');
-            tags.className = 'referencia-tags';
-
-            // Tag de categoria
-            const catTag = document.createElement('span');
-            catTag.className = 'tag categoria';
-            catTag.textContent = capitalize(ref.categoria);
-            tags.appendChild(catTag);
-
-            // Tags de conceitos
-            if (ref.conceitos) {
-                ref.conceitos.forEach(conceito => {
-                    const tag = document.createElement('span');
-                    tag.className = 'tag';
-                    tag.textContent = conceito;
-                    tags.appendChild(tag);
-                });
-            }
-
-            card.appendChild(header);
-            card.appendChild(titulo);
-            if (editora.textContent) {
-                card.appendChild(editora);
-            }
-            card.appendChild(relevancia);
-            card.appendChild(tags);
-
-            return card;
-        }
-
-        // Capitalizar texto
-        function capitalize(text) {
-            return text.split('-').map(word => 
-                word.charAt(0).toUpperCase() + word.slice(1)
-            ).join(' ');
-        }
-
-        // Search input
-        document.getElementById('search-input').addEventListener('input', (e) => {
-            searchTerm = e.target.value;
-            renderReferencias();
-        });
-
-        // Inicializar
-        loadReferencias();
-    </script>
     </article>
+
+    <!-- TypeScript compilado -->
+    <script type="module" src="dist/referencias.js"></script>
 </body>
 </html>

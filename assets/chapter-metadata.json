@@ -1,0 +1,2424 @@
+{
+  "chapters": [
+    {
+      "id": "capitulo-entre-igrejas-e-casas-de-charlatanismo",
+      "title": "ENTRE IGREJAS E CASAS DE CHARLATANISMO",
+      "number": 1,
+      "part": "II",
+      "concepts": [
+        {
+          "id": "escala",
+          "mentions": 6
+        },
+        {
+          "id": "tecnologia",
+          "mentions": 4
+        },
+        {
+          "id": "limites",
+          "mentions": 4
+        },
+        {
+          "id": "política",
+          "mentions": 2
+        },
+        {
+          "id": "ecologia",
+          "mentions": 2
+        },
+        {
+          "id": "poder",
+          "mentions": 2
+        },
+        {
+          "id": "relacionalidade",
+          "mentions": 2
+        },
+        {
+          "id": "cooptação",
+          "mentions": 2
+        },
+        {
+          "id": "neurodiversidade",
+          "mentions": 2
+        },
+        {
+          "id": "vazio",
+          "mentions": 1
+        },
+        {
+          "id": "multiplicidade",
+          "mentions": 1
+        },
+        {
+          "id": "recursao",
+          "mentions": 1
+        },
+        {
+          "id": "tempo",
+          "mentions": 1
+        },
+        {
+          "id": "agencia",
+          "mentions": 1
+        },
+        {
+          "id": "terra",
+          "mentions": 1
+        },
+        {
+          "id": "ecologia-praticas",
+          "mentions": 1
+        },
+        {
+          "id": "escala-sistemica",
+          "mentions": 1
+        },
+        {
+          "id": "instrumentalizacao-universal",
+          "mentions": 1
+        },
+        {
+          "id": "cooptacao-neoliberal",
+          "mentions": 1
+        },
+        {
+          "id": "poder-relacional",
+          "mentions": 1
+        },
+        {
+          "id": "tecnologia-digital",
+          "mentions": 1
+        }
+      ],
+      "authors": [],
+      "protocols": [],
+      "layerDistribution": {
+        "fundacional": 6,
+        "ontologica": 4,
+        "temporal": 1,
+        "ecologica": 13,
+        "politica": 9,
+        "pratica": 5
+      },
+      "wordCount": 221
+    },
+    {
+      "id": "capitulo-introducao-o-problema-da-instrumentalizacao-universal",
+      "title": "INTRODUÇÃO: O PROBLEMA DA INSTRUMENTALIZAÇÃO UNIVERSAL",
+      "number": 2,
+      "part": "II",
+      "concepts": [
+        {
+          "id": "relações",
+          "mentions": 6
+        },
+        {
+          "id": "poder",
+          "mentions": 5
+        },
+        {
+          "id": "comunidade",
+          "mentions": 4
+        },
+        {
+          "id": "identidade",
+          "mentions": 3
+        },
+        {
+          "id": "relacionalidade",
+          "mentions": 2
+        },
+        {
+          "id": "redes",
+          "mentions": 2
+        },
+        {
+          "id": "colaboração",
+          "mentions": 2
+        },
+        {
+          "id": "linguagem",
+          "mentions": 2
+        },
+        {
+          "id": "lógica",
+          "mentions": 2
+        },
+        {
+          "id": "sistemas",
+          "mentions": 2
+        },
+        {
+          "id": "vida",
+          "mentions": 2
+        },
+        {
+          "id": "poder-relacional",
+          "mentions": 2
+        },
+        {
+          "id": "reciprocidade",
+          "mentions": 1
+        },
+        {
+          "id": "tecnologia",
+          "mentions": 1
+        },
+        {
+          "id": "desigualdade",
+          "mentions": 1
+        },
+        {
+          "id": "escala",
+          "mentions": 1
+        },
+        {
+          "id": "ação",
+          "mentions": 1
+        },
+        {
+          "id": "arqueologia",
+          "mentions": 1
+        },
+        {
+          "id": "campo",
+          "mentions": 1
+        },
+        {
+          "id": "cooptação",
+          "mentions": 1
+        },
+        {
+          "id": "evolução",
+          "mentions": 1
+        },
+        {
+          "id": "fundamentos",
+          "mentions": 1
+        },
+        {
+          "id": "reconhecimento",
+          "mentions": 1
+        },
+        {
+          "id": "sociedade",
+          "mentions": 1
+        },
+        {
+          "id": "escala-sistemica",
+          "mentions": 1
+        },
+        {
+          "id": "cooptacao-neoliberal",
+          "mentions": 1
+        },
+        {
+          "id": "vacuidade",
+          "mentions": 1
+        },
+        {
+          "id": "outro",
+          "mentions": 1
+        },
+        {
+          "id": "espaco",
+          "mentions": 1
+        },
+        {
+          "id": "escassez",
+          "mentions": 1
+        },
+        {
+          "id": "inovacao",
+          "mentions": 1
+        }
+      ],
+      "authors": [],
+      "protocols": [],
+      "layerDistribution": {
+        "fundacional": 11,
+        "pratica": 7,
+        "politica": 11,
+        "temporal": 7,
+        "ecologica": 3,
+        "epistemica": 6,
+        "ontologica": 6,
+        "etica": 2
+      },
+      "wordCount": 976
+    },
+    {
+      "id": "capitulo-parte-i-ontologia-da-relacionalidade",
+      "title": "PARTE I: ONTOLOGIA DA RELACIONALIDADE",
+      "number": 3,
+      "part": "II",
+      "concepts": [],
+      "authors": [],
+      "protocols": [],
+      "layerDistribution": {},
+      "wordCount": 1
+    },
+    {
+      "id": "capitulo-capitulo-1-o-vazio-que-povoa",
+      "title": "CAPÍTULO 1: O VAZIO QUE POVOA",
+      "number": 4,
+      "part": "II",
+      "concepts": [
+        {
+          "id": "espaco",
+          "mentions": 9
+        },
+        {
+          "id": "poder",
+          "mentions": 5
+        },
+        {
+          "id": "campo",
+          "mentions": 5
+        },
+        {
+          "id": "vacuidade",
+          "mentions": 3
+        },
+        {
+          "id": "relações",
+          "mentions": 2
+        },
+        {
+          "id": "ação",
+          "mentions": 2
+        },
+        {
+          "id": "aporia",
+          "mentions": 2
+        },
+        {
+          "id": "vazio",
+          "mentions": 1
+        },
+        {
+          "id": "pratityasamutpada",
+          "mentions": 1
+        },
+        {
+          "id": "física quântica",
+          "mentions": 1
+        },
+        {
+          "id": "política",
+          "mentions": 1
+        },
+        {
+          "id": "budismo",
+          "mentions": 1
+        },
+        {
+          "id": "nagarjuna",
+          "mentions": 1
+        },
+        {
+          "id": "emergência",
+          "mentions": 1
+        },
+        {
+          "id": "origem dependente",
+          "mentions": 1
+        },
+        {
+          "id": "colaboração",
+          "mentions": 1
+        },
+        {
+          "id": "comunidade",
+          "mentions": 1
+        },
+        {
+          "id": "criação",
+          "mentions": 1
+        },
+        {
+          "id": "física",
+          "mentions": 1
+        },
+        {
+          "id": "verdade",
+          "mentions": 1
+        },
+        {
+          "id": "vida",
+          "mentions": 1
+        },
+        {
+          "id": "intra-acao",
+          "mentions": 1
+        },
+        {
+          "id": "fenomenos",
+          "mentions": 1
+        },
+        {
+          "id": "madhyamika",
+          "mentions": 1
+        },
+        {
+          "id": "outro",
+          "mentions": 1
+        }
+      ],
+      "authors": [
+        "Carlo Rovelli",
+        "Karen Barad",
+        "Nāgārjuna",
+        "Jay Garfield"
+      ],
+      "protocols": [
+        "auditoria-expectativas-implicitas"
+      ],
+      "layerDistribution": {
+        "fundacional": 12,
+        "politica": 6,
+        "ecologica": 7,
+        "pratica": 4,
+        "ontologica": 2,
+        "temporal": 12,
+        "epistemica": 3
+      },
+      "wordCount": 1389
+    },
+    {
+      "id": "capitulo-capitulo-2-multiplicidade-sem-fusao",
+      "title": "CAPÍTULO 2: MULTIPLICIDADE SEM FUSÃO",
+      "number": 5,
+      "part": "II",
+      "concepts": [
+        {
+          "id": "identidade",
+          "mentions": 30
+        },
+        {
+          "id": "poder",
+          "mentions": 7
+        },
+        {
+          "id": "relações",
+          "mentions": 6
+        },
+        {
+          "id": "outro",
+          "mentions": 6
+        },
+        {
+          "id": "reciprocidade",
+          "mentions": 5
+        },
+        {
+          "id": "lugar",
+          "mentions": 4
+        },
+        {
+          "id": "reconhecimento",
+          "mentions": 3
+        },
+        {
+          "id": "aporia",
+          "mentions": 3
+        },
+        {
+          "id": "ubuntu",
+          "mentions": 2
+        },
+        {
+          "id": "responsabilidade",
+          "mentions": 2
+        },
+        {
+          "id": "filosofia",
+          "mentions": 2
+        },
+        {
+          "id": "multiplicidade",
+          "mentions": 1
+        },
+        {
+          "id": "propriedade",
+          "mentions": 1
+        },
+        {
+          "id": "escala",
+          "mentions": 1
+        },
+        {
+          "id": "filosofia africana",
+          "mentions": 1
+        },
+        {
+          "id": "gênero",
+          "mentions": 1
+        },
+        {
+          "id": "emergência",
+          "mentions": 1
+        },
+        {
+          "id": "ação",
+          "mentions": 1
+        },
+        {
+          "id": "comunidade",
+          "mentions": 1
+        },
+        {
+          "id": "dados",
+          "mentions": 1
+        },
+        {
+          "id": "natureza",
+          "mentions": 1
+        },
+        {
+          "id": "africana",
+          "mentions": 1
+        }
+      ],
+      "authors": [
+        "Judith Butler"
+      ],
+      "protocols": [
+        "teste-reciprocidade-identitaria"
+      ],
+      "layerDistribution": {
+        "ontologica": 8,
+        "etica": 4,
+        "fundacional": 11,
+        "politica": 7,
+        "temporal": 31,
+        "pratica": 2,
+        "ecologica": 8,
+        "epistemica": 10
+      },
+      "wordCount": 1645
+    },
+    {
+      "id": "capitulo-capitulo-3-recursao-sem-fundamento",
+      "title": "CAPÍTULO 3: RECURSÃO SEM FUNDAMENTO",
+      "number": 6,
+      "part": "II",
+      "concepts": [
+        {
+          "id": "sistemas",
+          "mentions": 6
+        },
+        {
+          "id": "liderança",
+          "mentions": 5
+        },
+        {
+          "id": "história",
+          "mentions": 3
+        },
+        {
+          "id": "reversibilidade",
+          "mentions": 3
+        },
+        {
+          "id": "plasticidade",
+          "mentions": 3
+        },
+        {
+          "id": "aporia-fundamentacao",
+          "mentions": 2
+        },
+        {
+          "id": "poder",
+          "mentions": 2
+        },
+        {
+          "id": "identidade",
+          "mentions": 2
+        },
+        {
+          "id": "comunidade",
+          "mentions": 2
+        },
+        {
+          "id": "evolução",
+          "mentions": 2
+        },
+        {
+          "id": "ordem",
+          "mentions": 2
+        },
+        {
+          "id": "aporia",
+          "mentions": 2
+        },
+        {
+          "id": "recursao",
+          "mentions": 1
+        },
+        {
+          "id": "tecnologia",
+          "mentions": 1
+        },
+        {
+          "id": "relacionalidade",
+          "mentions": 1
+        },
+        {
+          "id": "autopoiese",
+          "mentions": 1
+        },
+        {
+          "id": "caos",
+          "mentions": 1
+        },
+        {
+          "id": "dados",
+          "mentions": 1
+        },
+        {
+          "id": "linguagem",
+          "mentions": 1
+        },
+        {
+          "id": "narrativa",
+          "mentions": 1
+        },
+        {
+          "id": "natureza",
+          "mentions": 1
+        },
+        {
+          "id": "transformação",
+          "mentions": 1
+        },
+        {
+          "id": "valores",
+          "mentions": 1
+        },
+        {
+          "id": "verdade",
+          "mentions": 1
+        },
+        {
+          "id": "vida",
+          "mentions": 1
+        },
+        {
+          "id": "indice-reversibilidade",
+          "mentions": 1
+        },
+        {
+          "id": "humildade-epistemologica",
+          "mentions": 1
+        },
+        {
+          "id": "outro",
+          "mentions": 1
+        },
+        {
+          "id": "heresia",
+          "mentions": 1
+        },
+        {
+          "id": "organizacoes",
+          "mentions": 1
+        },
+        {
+          "id": "observador",
+          "mentions": 1
+        },
+        {
+          "id": "inovacao",
+          "mentions": 1
+        }
+      ],
+      "authors": [],
+      "protocols": [
+        "indice-reversibilidade-paradigmatica"
+      ],
+      "layerDistribution": {
+        "fundacional": 4,
+        "pratica": 2,
+        "politica": 2,
+        "temporal": 16,
+        "ontologica": 7,
+        "epistemica": 8,
+        "ecologica": 8,
+        "etica": 7
+      },
+      "wordCount": 1601
+    },
+    {
+      "id": "capitulo-parte-ii-anatomia-do-poder-relacional",
+      "title": "PARTE II: ANATOMIA DO PODER RELACIONAL",
+      "number": 7,
+      "part": "II",
+      "concepts": [],
+      "authors": [],
+      "protocols": [],
+      "layerDistribution": {},
+      "wordCount": 1
+    },
+    {
+      "id": "capitulo-capitulo-4-agencia-distribuida-e-dominacao-estrutural",
+      "title": "CAPÍTULO 4: AGÊNCIA DISTRIBUÍDA E DOMINAÇÃO ESTRUTURAL",
+      "number": 8,
+      "part": "II",
+      "concepts": [
+        {
+          "id": "poder",
+          "mentions": 24
+        },
+        {
+          "id": "responsabilidade",
+          "mentions": 5
+        },
+        {
+          "id": "decisão",
+          "mentions": 5
+        },
+        {
+          "id": "agencia",
+          "mentions": 3
+        },
+        {
+          "id": "identidade",
+          "mentions": 2
+        },
+        {
+          "id": "ação",
+          "mentions": 2
+        },
+        {
+          "id": "colaboração",
+          "mentions": 2
+        },
+        {
+          "id": "vida",
+          "mentions": 2
+        },
+        {
+          "id": "aporia",
+          "mentions": 2
+        },
+        {
+          "id": "precariedade",
+          "mentions": 1
+        },
+        {
+          "id": "política",
+          "mentions": 1
+        },
+        {
+          "id": "violência simbólica",
+          "mentions": 1
+        },
+        {
+          "id": "relações",
+          "mentions": 1
+        },
+        {
+          "id": "propriedade",
+          "mentions": 1
+        },
+        {
+          "id": "não-humanos",
+          "mentions": 1
+        },
+        {
+          "id": "redes",
+          "mentions": 1
+        },
+        {
+          "id": "comunidade",
+          "mentions": 1
+        },
+        {
+          "id": "implementação",
+          "mentions": 1
+        },
+        {
+          "id": "liderança",
+          "mentions": 1
+        },
+        {
+          "id": "natureza",
+          "mentions": 1
+        },
+        {
+          "id": "ordem",
+          "mentions": 1
+        },
+        {
+          "id": "reconhecimento",
+          "mentions": 1
+        },
+        {
+          "id": "verdade",
+          "mentions": 1
+        },
+        {
+          "id": "matriz-distribuicao-poder",
+          "mentions": 1
+        },
+        {
+          "id": "intra-acao",
+          "mentions": 1
+        },
+        {
+          "id": "poder-relacional",
+          "mentions": 1
+        },
+        {
+          "id": "cultura",
+          "mentions": 1
+        },
+        {
+          "id": "distribuido",
+          "mentions": 1
+        }
+      ],
+      "authors": [
+        "Michel Foucault",
+        "Judith Butler"
+      ],
+      "protocols": [],
+      "layerDistribution": {
+        "ecologica": 7,
+        "etica": 6,
+        "politica": 27,
+        "temporal": 5,
+        "fundacional": 1,
+        "pratica": 9,
+        "ontologica": 7,
+        "epistemica": 4
+      },
+      "wordCount": 1562
+    },
+    {
+      "id": "capitulo-capitulo-5-tempo-entrelacado-e-urgencia-politica",
+      "title": "CAPÍTULO 5: TEMPO ENTRELAÇADO E URGÊNCIA POLÍTICA",
+      "number": 9,
+      "part": "II",
+      "concepts": [
+        {
+          "id": "decisão",
+          "mentions": 10
+        },
+        {
+          "id": "responsabilidade",
+          "mentions": 6
+        },
+        {
+          "id": "poder",
+          "mentions": 5
+        },
+        {
+          "id": "aporia",
+          "mentions": 4
+        },
+        {
+          "id": "setimagera",
+          "mentions": 2
+        },
+        {
+          "id": "ação",
+          "mentions": 2
+        },
+        {
+          "id": "comunidade",
+          "mentions": 2
+        },
+        {
+          "id": "floresta",
+          "mentions": 2
+        },
+        {
+          "id": "aporia-temporal",
+          "mentions": 2
+        },
+        {
+          "id": "tempo",
+          "mentions": 1
+        },
+        {
+          "id": "política",
+          "mentions": 1
+        },
+        {
+          "id": "ética",
+          "mentions": 1
+        },
+        {
+          "id": "sustentabilidade",
+          "mentions": 1
+        },
+        {
+          "id": "emergência",
+          "mentions": 1
+        },
+        {
+          "id": "campo",
+          "mentions": 1
+        },
+        {
+          "id": "constituição",
+          "mentions": 1
+        },
+        {
+          "id": "criação",
+          "mentions": 1
+        },
+        {
+          "id": "vida",
+          "mentions": 1
+        },
+        {
+          "id": "conselho-setima-geracao",
+          "mentions": 1
+        },
+        {
+          "id": "analise-temporal",
+          "mentions": 1
+        },
+        {
+          "id": "irreversibilidade",
+          "mentions": 1
+        },
+        {
+          "id": "dependencias-trajetoria",
+          "mentions": 1
+        },
+        {
+          "id": "memoria",
+          "mentions": 1
+        },
+        {
+          "id": "outro",
+          "mentions": 1
+        },
+        {
+          "id": "organizacoes",
+          "mentions": 1
+        },
+        {
+          "id": "reversibilidade",
+          "mentions": 1
+        }
+      ],
+      "authors": [],
+      "protocols": [],
+      "layerDistribution": {
+        "temporal": 12,
+        "politica": 7,
+        "etica": 7,
+        "ecologica": 4,
+        "pratica": 4,
+        "ontologica": 13,
+        "epistemica": 5
+      },
+      "wordCount": 1333
+    },
+    {
+      "id": "capitulo-capitulo-6-limites-constitutivos-e-cooptacao-neoliberal",
+      "title": "CAPÍTULO 6: LIMITES CONSTITUTIVOS E COOPTAÇÃO NEOLIBERAL",
+      "number": 10,
+      "part": "II",
+      "concepts": [
+        {
+          "id": "limites",
+          "mentions": 19
+        },
+        {
+          "id": "poder",
+          "mentions": 8
+        },
+        {
+          "id": "limite",
+          "mentions": 6
+        },
+        {
+          "id": "comunidade",
+          "mentions": 6
+        },
+        {
+          "id": "linguagem",
+          "mentions": 5
+        },
+        {
+          "id": "vida",
+          "mentions": 4
+        },
+        {
+          "id": "propriedade",
+          "mentions": 3
+        },
+        {
+          "id": "colaboração",
+          "mentions": 3
+        },
+        {
+          "id": "cooptação",
+          "mentions": 3
+        },
+        {
+          "id": "relações",
+          "mentions": 2
+        },
+        {
+          "id": "relacionalidade",
+          "mentions": 2
+        },
+        {
+          "id": "dados",
+          "mentions": 2
+        },
+        {
+          "id": "aporia",
+          "mentions": 2
+        },
+        {
+          "id": "distribuido",
+          "mentions": 2
+        },
+        {
+          "id": "criterios-imunologicos",
+          "mentions": 2
+        },
+        {
+          "id": "vulnerabilidade",
+          "mentions": 1
+        },
+        {
+          "id": "cooperativa",
+          "mentions": 1
+        },
+        {
+          "id": "economia",
+          "mentions": 1
+        },
+        {
+          "id": "escala",
+          "mentions": 1
+        },
+        {
+          "id": "liberdade",
+          "mentions": 1
+        },
+        {
+          "id": "redes",
+          "mentions": 1
+        },
+        {
+          "id": "apropriação",
+          "mentions": 1
+        },
+        {
+          "id": "criação",
+          "mentions": 1
+        },
+        {
+          "id": "individualismo",
+          "mentions": 1
+        },
+        {
+          "id": "lógica",
+          "mentions": 1
+        },
+        {
+          "id": "sistemas",
+          "mentions": 1
+        },
+        {
+          "id": "decisão",
+          "mentions": 1
+        },
+        {
+          "id": "cooptacao-neoliberal",
+          "mentions": 1
+        },
+        {
+          "id": "horizontalidade",
+          "mentions": 1
+        },
+        {
+          "id": "reversibilidade",
+          "mentions": 1
+        },
+        {
+          "id": "inovacao",
+          "mentions": 1
+        }
+      ],
+      "authors": [],
+      "protocols": [],
+      "layerDistribution": {
+        "epistemica": 16,
+        "etica": 3,
+        "pratica": 8,
+        "politica": 15,
+        "fundacional": 6,
+        "ecologica": 23,
+        "ontologica": 7,
+        "temporal": 7
+      },
+      "wordCount": 1286
+    },
+    {
+      "id": "capitulo-parte-iii-sujeitos-terra-e-tecnologia",
+      "title": "PARTE III: SUJEITOS, TERRA E TECNOLOGIA",
+      "number": 11,
+      "part": "II",
+      "concepts": [],
+      "authors": [],
+      "protocols": [],
+      "layerDistribution": {},
+      "wordCount": 1
+    },
+    {
+      "id": "capitulo-capitulo-7-terra-como-sujeito-nao-recurso",
+      "title": "CAPÍTULO 7: TERRA COMO SUJEITO, NÃO RECURSO",
+      "number": 12,
+      "part": "II",
+      "concepts": [
+        {
+          "id": "rio",
+          "mentions": 8
+        },
+        {
+          "id": "cosmopolitica",
+          "mentions": 5
+        },
+        {
+          "id": "natureza",
+          "mentions": 5
+        },
+        {
+          "id": "relações",
+          "mentions": 4
+        },
+        {
+          "id": "comunidade",
+          "mentions": 4
+        },
+        {
+          "id": "aporia",
+          "mentions": 4
+        },
+        {
+          "id": "política",
+          "mentions": 3
+        },
+        {
+          "id": "não-humanos",
+          "mentions": 3
+        },
+        {
+          "id": "sistemas",
+          "mentions": 3
+        },
+        {
+          "id": "vida",
+          "mentions": 3
+        },
+        {
+          "id": "Māori",
+          "mentions": 2
+        },
+        {
+          "id": "multiespécies",
+          "mentions": 2
+        },
+        {
+          "id": "floresta",
+          "mentions": 2
+        },
+        {
+          "id": "libertação",
+          "mentions": 2
+        },
+        {
+          "id": "lógica",
+          "mentions": 2
+        },
+        {
+          "id": "sujeito",
+          "mentions": 1
+        },
+        {
+          "id": "terra",
+          "mentions": 1
+        },
+        {
+          "id": "assembleia",
+          "mentions": 1
+        },
+        {
+          "id": "personalidade jurídica",
+          "mentions": 1
+        },
+        {
+          "id": "propriedade",
+          "mentions": 1
+        },
+        {
+          "id": "escala",
+          "mentions": 1
+        },
+        {
+          "id": "dados",
+          "mentions": 1
+        },
+        {
+          "id": "linguagem",
+          "mentions": 1
+        },
+        {
+          "id": "ordem",
+          "mentions": 1
+        },
+        {
+          "id": "resiliência",
+          "mentions": 1
+        },
+        {
+          "id": "decisão",
+          "mentions": 1
+        },
+        {
+          "id": "keystone",
+          "mentions": 1
+        },
+        {
+          "id": "outro",
+          "mentions": 1
+        },
+        {
+          "id": "distribuido",
+          "mentions": 1
+        }
+      ],
+      "authors": [
+        "Isabelle Stengers"
+      ],
+      "protocols": [],
+      "layerDistribution": {
+        "temporal": 4,
+        "ecologica": 22,
+        "pratica": 10,
+        "politica": 6,
+        "ontologica": 9,
+        "fundacional": 4,
+        "epistemica": 8,
+        "etica": 3
+      },
+      "wordCount": 1353
+    },
+    {
+      "id": "capitulo-capitulo-8-subjetividade-e-sofrimento-psiquico-limites-separacao-e-neurodiversidade",
+      "title": "CAPÍTULO 8: SUBJETIVIDADE E SOFRIMENTO PSÍQUICO: LIMITES, SEPARAÇÃO E NEURODIVERSIDADE",
+      "number": 13,
+      "part": "II",
+      "concepts": [
+        {
+          "id": "limites",
+          "mentions": 13
+        },
+        {
+          "id": "crítica",
+          "mentions": 2
+        },
+        {
+          "id": "ecologia",
+          "mentions": 2
+        },
+        {
+          "id": "constituição",
+          "mentions": 2
+        },
+        {
+          "id": "decisão",
+          "mentions": 2
+        },
+        {
+          "id": "neurodiversidade",
+          "mentions": 2
+        },
+        {
+          "id": "outro",
+          "mentions": 2
+        },
+        {
+          "id": "limite",
+          "mentions": 1
+        },
+        {
+          "id": "relações",
+          "mentions": 1
+        },
+        {
+          "id": "relacionalidade",
+          "mentions": 1
+        },
+        {
+          "id": "comunidade",
+          "mentions": 1
+        },
+        {
+          "id": "criação",
+          "mentions": 1
+        },
+        {
+          "id": "libertação",
+          "mentions": 1
+        },
+        {
+          "id": "natureza",
+          "mentions": 1
+        },
+        {
+          "id": "reconhecimento",
+          "mentions": 1
+        },
+        {
+          "id": "vida",
+          "mentions": 1
+        },
+        {
+          "id": "protocolo-inclusao-neurodiversa",
+          "mentions": 1
+        },
+        {
+          "id": "espaco",
+          "mentions": 1
+        },
+        {
+          "id": "cultura",
+          "mentions": 1
+        }
+      ],
+      "authors": [],
+      "protocols": [],
+      "layerDistribution": {
+        "epistemica": 4,
+        "fundacional": 4,
+        "ontologica": 7,
+        "politica": 3,
+        "temporal": 5,
+        "ecologica": 14
+      },
+      "wordCount": 863
+    },
+    {
+      "id": "capitulo-capitulo-9-tecnologia-digital-e-mediacao-algoritmica-a-casa-de-charlatanismo-em-escala",
+      "title": "CAPÍTULO 9: TECNOLOGIA DIGITAL E MEDIAÇÃO ALGORÍTMICA: A CASA DE CHARLATANISMO EM ESCALA",
+      "number": 14,
+      "part": "II",
+      "concepts": [
+        {
+          "id": "poder",
+          "mentions": 4
+        },
+        {
+          "id": "tecnologia",
+          "mentions": 3
+        },
+        {
+          "id": "capitalismo",
+          "mentions": 3
+        },
+        {
+          "id": "dados",
+          "mentions": 3
+        },
+        {
+          "id": "capitalismo-de-vigilancia",
+          "mentions": 3
+        },
+        {
+          "id": "reciprocidade",
+          "mentions": 2
+        },
+        {
+          "id": "cooperativa",
+          "mentions": 2
+        },
+        {
+          "id": "relações",
+          "mentions": 2
+        },
+        {
+          "id": "escala",
+          "mentions": 2
+        },
+        {
+          "id": "alternativas",
+          "mentions": 2
+        },
+        {
+          "id": "apropriação",
+          "mentions": 2
+        },
+        {
+          "id": "fediverso",
+          "mentions": 2
+        },
+        {
+          "id": "crítica",
+          "mentions": 1
+        },
+        {
+          "id": "classe",
+          "mentions": 1
+        },
+        {
+          "id": "comunidade",
+          "mentions": 1
+        },
+        {
+          "id": "lógica",
+          "mentions": 1
+        },
+        {
+          "id": "reconhecimento",
+          "mentions": 1
+        },
+        {
+          "id": "soberania",
+          "mentions": 1
+        },
+        {
+          "id": "algoritmo",
+          "mentions": 1
+        },
+        {
+          "id": "outro",
+          "mentions": 1
+        },
+        {
+          "id": "global",
+          "mentions": 1
+        },
+        {
+          "id": "distribuido",
+          "mentions": 1
+        },
+        {
+          "id": "criterios-imunologicos",
+          "mentions": 1
+        },
+        {
+          "id": "reversibilidade",
+          "mentions": 1
+        },
+        {
+          "id": "efeitos-rede",
+          "mentions": 1
+        }
+      ],
+      "authors": [],
+      "protocols": [],
+      "layerDistribution": {
+        "fundacional": 5,
+        "pratica": 8,
+        "epistemica": 6,
+        "politica": 14,
+        "ecologica": 3,
+        "ontologica": 6,
+        "temporal": 1
+      },
+      "wordCount": 706
+    },
+    {
+      "id": "capitulo-parte-iv-praxis-privilegio-e-escala",
+      "title": "PARTE IV: PRÁXIS, PRIVILÉGIO E ESCALA",
+      "number": 15,
+      "part": "II",
+      "concepts": [],
+      "authors": [],
+      "protocols": [],
+      "layerDistribution": {},
+      "wordCount": 1
+    },
+    {
+      "id": "capitulo-capitulo-10-o-sujeito-politico-relacional-da-analise-a-praxis-normativa",
+      "title": "CAPÍTULO 10: O SUJEITO POLÍTICO RELACIONAL: DA ANÁLISE À PRÁXIS NORMATIVA",
+      "number": 16,
+      "part": "II",
+      "concepts": [
+        {
+          "id": "poder",
+          "mentions": 7
+        },
+        {
+          "id": "outro",
+          "mentions": 5
+        },
+        {
+          "id": "identidade",
+          "mentions": 4
+        },
+        {
+          "id": "reconhecimento",
+          "mentions": 3
+        },
+        {
+          "id": "decisão",
+          "mentions": 3
+        },
+        {
+          "id": "política",
+          "mentions": 2
+        },
+        {
+          "id": "tecnologia",
+          "mentions": 2
+        },
+        {
+          "id": "aporia",
+          "mentions": 2
+        },
+        {
+          "id": "consenso",
+          "mentions": 2
+        },
+        {
+          "id": "precariedade",
+          "mentions": 1
+        },
+        {
+          "id": "responsabilidade",
+          "mentions": 1
+        },
+        {
+          "id": "relações",
+          "mentions": 1
+        },
+        {
+          "id": "propriedade",
+          "mentions": 1
+        },
+        {
+          "id": "escala",
+          "mentions": 1
+        },
+        {
+          "id": "criação",
+          "mentions": 1
+        },
+        {
+          "id": "história",
+          "mentions": 1
+        },
+        {
+          "id": "libertação",
+          "mentions": 1
+        },
+        {
+          "id": "linguagem",
+          "mentions": 1
+        },
+        {
+          "id": "sistemas",
+          "mentions": 1
+        },
+        {
+          "id": "transformação",
+          "mentions": 1
+        },
+        {
+          "id": "teste-coerencia-performativa",
+          "mentions": 1
+        },
+        {
+          "id": "horizontalidade",
+          "mentions": 1
+        },
+        {
+          "id": "espaco",
+          "mentions": 1
+        },
+        {
+          "id": "cultura",
+          "mentions": 1
+        },
+        {
+          "id": "limites",
+          "mentions": 1
+        }
+      ],
+      "authors": [],
+      "protocols": [
+        "protocolo-divergencia-construtiva"
+      ],
+      "layerDistribution": {
+        "etica": 3,
+        "politica": 13,
+        "pratica": 4,
+        "temporal": 9,
+        "fundacional": 1,
+        "ecologica": 2,
+        "epistemica": 6,
+        "ontologica": 8
+      },
+      "wordCount": 1345
+    },
+    {
+      "id": "capitulo-capitulo-11-universalizacao-e-privilegio-material-uma-ecologia-de-praticas-relacionais",
+      "title": "CAPÍTULO 11: UNIVERSALIZAÇÃO E PRIVILÉGIO MATERIAL: UMA ECOLOGIA DE PRÁTICAS RELACIONAIS",
+      "number": 17,
+      "part": "II",
+      "concepts": [
+        {
+          "id": "relacionalidade",
+          "mentions": 8
+        },
+        {
+          "id": "política",
+          "mentions": 4
+        },
+        {
+          "id": "relacionalidade-institucional",
+          "mentions": 4
+        },
+        {
+          "id": "ecologia",
+          "mentions": 3
+        },
+        {
+          "id": "comunidade",
+          "mentions": 3
+        },
+        {
+          "id": "verdade",
+          "mentions": 3
+        },
+        {
+          "id": "tecnologia",
+          "mentions": 2
+        },
+        {
+          "id": "classe",
+          "mentions": 2
+        },
+        {
+          "id": "apropriação",
+          "mentions": 2
+        },
+        {
+          "id": "rastreamento-apropriacao",
+          "mentions": 2
+        },
+        {
+          "id": "cooperativa",
+          "mentions": 1
+        },
+        {
+          "id": "assembleia",
+          "mentions": 1
+        },
+        {
+          "id": "setimagera",
+          "mentions": 1
+        },
+        {
+          "id": "governança",
+          "mentions": 1
+        },
+        {
+          "id": "justiça",
+          "mentions": 1
+        },
+        {
+          "id": "violência simbólica",
+          "mentions": 1
+        },
+        {
+          "id": "responsabilidade",
+          "mentions": 1
+        },
+        {
+          "id": "redes",
+          "mentions": 1
+        },
+        {
+          "id": "compartilhamento",
+          "mentions": 1
+        },
+        {
+          "id": "lógica",
+          "mentions": 1
+        },
+        {
+          "id": "reconhecimento",
+          "mentions": 1
+        },
+        {
+          "id": "aporia",
+          "mentions": 1
+        },
+        {
+          "id": "conselho-setima-geracao",
+          "mentions": 1
+        },
+        {
+          "id": "ecologia-praticas",
+          "mentions": 1
+        },
+        {
+          "id": "relacionalidade-sobrevivencia",
+          "mentions": 1
+        },
+        {
+          "id": "relacionalidade-resistencia",
+          "mentions": 1
+        },
+        {
+          "id": "advocacy-politica",
+          "mentions": 1
+        },
+        {
+          "id": "espaco",
+          "mentions": 1
+        },
+        {
+          "id": "distribuido",
+          "mentions": 1
+        },
+        {
+          "id": "ecologia-relacional",
+          "mentions": 1
+        },
+        {
+          "id": "escassez",
+          "mentions": 1
+        }
+      ],
+      "authors": [],
+      "protocols": [],
+      "layerDistribution": {
+        "pratica": 10,
+        "temporal": 5,
+        "politica": 11,
+        "fundacional": 11,
+        "etica": 4,
+        "epistemica": 7,
+        "ontologica": 3,
+        "ecologica": 3
+      },
+      "wordCount": 834
+    },
+    {
+      "id": "capitulo-capitulo-12-escala-sistemica-e-o-problema-do-inimigo-relacional",
+      "title": "CAPÍTULO 12: ESCALA SISTÊMICA E O PROBLEMA DO INIMIGO RELACIONAL",
+      "number": 18,
+      "part": "II",
+      "concepts": [
+        {
+          "id": "escala",
+          "mentions": 13
+        },
+        {
+          "id": "política",
+          "mentions": 7
+        },
+        {
+          "id": "ação",
+          "mentions": 7
+        },
+        {
+          "id": "capitalismo",
+          "mentions": 6
+        },
+        {
+          "id": "global",
+          "mentions": 6
+        },
+        {
+          "id": "comunidade",
+          "mentions": 5
+        },
+        {
+          "id": "poder",
+          "mentions": 4
+        },
+        {
+          "id": "lógica",
+          "mentions": 4
+        },
+        {
+          "id": "valores",
+          "mentions": 4
+        },
+        {
+          "id": "ética",
+          "mentions": 3
+        },
+        {
+          "id": "relações",
+          "mentions": 3
+        },
+        {
+          "id": "relacionalidade",
+          "mentions": 3
+        },
+        {
+          "id": "criação",
+          "mentions": 3
+        },
+        {
+          "id": "reciprocidade",
+          "mentions": 2
+        },
+        {
+          "id": "economia",
+          "mentions": 2
+        },
+        {
+          "id": "vida",
+          "mentions": 2
+        },
+        {
+          "id": "aporia",
+          "mentions": 2
+        },
+        {
+          "id": "escala-sistemica",
+          "mentions": 2
+        },
+        {
+          "id": "antagonismo-relacional",
+          "mentions": 2
+        },
+        {
+          "id": "outro",
+          "mentions": 2
+        },
+        {
+          "id": "aporia-escala",
+          "mentions": 1
+        },
+        {
+          "id": "cooperativa",
+          "mentions": 1
+        },
+        {
+          "id": "ecologia",
+          "mentions": 1
+        },
+        {
+          "id": "propriedade",
+          "mentions": 1
+        },
+        {
+          "id": "liberdade",
+          "mentions": 1
+        },
+        {
+          "id": "redes",
+          "mentions": 1
+        },
+        {
+          "id": "alternativas",
+          "mentions": 1
+        },
+        {
+          "id": "apropriação",
+          "mentions": 1
+        },
+        {
+          "id": "cooptação",
+          "mentions": 1
+        },
+        {
+          "id": "resiliência",
+          "mentions": 1
+        },
+        {
+          "id": "sistemas",
+          "mentions": 1
+        },
+        {
+          "id": "sociedade",
+          "mentions": 1
+        },
+        {
+          "id": "transformação",
+          "mentions": 1
+        },
+        {
+          "id": "escala-intersticial",
+          "mentions": 1
+        },
+        {
+          "id": "estrategia-escala-dupla",
+          "mentions": 1
+        },
+        {
+          "id": "espaco",
+          "mentions": 1
+        },
+        {
+          "id": "cultura",
+          "mentions": 1
+        },
+        {
+          "id": "criterios-imunologicos",
+          "mentions": 1
+        }
+      ],
+      "authors": [
+        "Slavoj Žižek"
+      ],
+      "protocols": [],
+      "layerDistribution": {
+        "etica": 10,
+        "fundacional": 10,
+        "pratica": 13,
+        "politica": 24,
+        "ecologica": 15,
+        "ontologica": 14,
+        "temporal": 8,
+        "epistemica": 6
+      },
+      "wordCount": 1467
+    },
+    {
+      "id": "capitulo-conclusao-habitar-as-aporias-produtivamente",
+      "title": "CONCLUSÃO: HABITAR AS APORIAS PRODUTIVAMENTE",
+      "number": 19,
+      "part": "II",
+      "concepts": [
+        {
+          "id": "escala",
+          "mentions": 4
+        },
+        {
+          "id": "poder",
+          "mentions": 3
+        },
+        {
+          "id": "responsabilidade",
+          "mentions": 3
+        },
+        {
+          "id": "reciprocidade",
+          "mentions": 2
+        },
+        {
+          "id": "capitalismo",
+          "mentions": 2
+        },
+        {
+          "id": "ação",
+          "mentions": 2
+        },
+        {
+          "id": "outro",
+          "mentions": 2
+        },
+        {
+          "id": "global",
+          "mentions": 2
+        },
+        {
+          "id": "limites",
+          "mentions": 2
+        },
+        {
+          "id": "agencia",
+          "mentions": 1
+        },
+        {
+          "id": "tecnologia",
+          "mentions": 1
+        },
+        {
+          "id": "justiça",
+          "mentions": 1
+        },
+        {
+          "id": "identidade",
+          "mentions": 1
+        },
+        {
+          "id": "relacionalidade",
+          "mentions": 1
+        },
+        {
+          "id": "liberdade",
+          "mentions": 1
+        },
+        {
+          "id": "emergência",
+          "mentions": 1
+        },
+        {
+          "id": "dados",
+          "mentions": 1
+        },
+        {
+          "id": "linguagem",
+          "mentions": 1
+        },
+        {
+          "id": "reconhecimento",
+          "mentions": 1
+        },
+        {
+          "id": "sistemas",
+          "mentions": 1
+        },
+        {
+          "id": "soberania",
+          "mentions": 1
+        },
+        {
+          "id": "antagonismo-relacional",
+          "mentions": 1
+        },
+        {
+          "id": "humildade-epistemologica",
+          "mentions": 1
+        },
+        {
+          "id": "criterios-imunologicos",
+          "mentions": 1
+        }
+      ],
+      "authors": [],
+      "protocols": [],
+      "layerDistribution": {
+        "ecologica": 8,
+        "fundacional": 4,
+        "pratica": 3,
+        "politica": 7,
+        "etica": 6,
+        "temporal": 1,
+        "epistemica": 4,
+        "ontologica": 4
+      },
+      "wordCount": 985
+    },
+    {
+      "id": "capitulo-apendice-a-toolkit-de-diagnostico-relacional",
+      "title": "APÊNDICE A: TOOLKIT DE DIAGNÓSTICO RELACIONAL",
+      "number": 20,
+      "part": "II",
+      "concepts": [
+        {
+          "id": "poder",
+          "mentions": 18
+        },
+        {
+          "id": "decisão",
+          "mentions": 5
+        },
+        {
+          "id": "distribuido",
+          "mentions": 4
+        },
+        {
+          "id": "relações",
+          "mentions": 3
+        },
+        {
+          "id": "dados",
+          "mentions": 3
+        },
+        {
+          "id": "outro",
+          "mentions": 3
+        },
+        {
+          "id": "reciprocidade",
+          "mentions": 2
+        },
+        {
+          "id": "política",
+          "mentions": 2
+        },
+        {
+          "id": "escala",
+          "mentions": 2
+        },
+        {
+          "id": "apropriação",
+          "mentions": 2
+        },
+        {
+          "id": "comunidade",
+          "mentions": 2
+        },
+        {
+          "id": "criação",
+          "mentions": 2
+        },
+        {
+          "id": "liderança",
+          "mentions": 2
+        },
+        {
+          "id": "reversibilidade",
+          "mentions": 2
+        },
+        {
+          "id": "vazio",
+          "mentions": 1
+        },
+        {
+          "id": "multiplicidade",
+          "mentions": 1
+        },
+        {
+          "id": "recursao",
+          "mentions": 1
+        },
+        {
+          "id": "tempo",
+          "mentions": 1
+        },
+        {
+          "id": "agencia",
+          "mentions": 1
+        },
+        {
+          "id": "terra",
+          "mentions": 1
+        },
+        {
+          "id": "setimagera",
+          "mentions": 1
+        },
+        {
+          "id": "tecnologia",
+          "mentions": 1
+        },
+        {
+          "id": "responsabilidade",
+          "mentions": 1
+        },
+        {
+          "id": "relacionalidade",
+          "mentions": 1
+        },
+        {
+          "id": "multiespécies",
+          "mentions": 1
+        },
+        {
+          "id": "ação",
+          "mentions": 1
+        },
+        {
+          "id": "compartilhamento",
+          "mentions": 1
+        },
+        {
+          "id": "cooptação",
+          "mentions": 1
+        },
+        {
+          "id": "evolução",
+          "mentions": 1
+        },
+        {
+          "id": "história",
+          "mentions": 1
+        },
+        {
+          "id": "implementação",
+          "mentions": 1
+        },
+        {
+          "id": "lógica",
+          "mentions": 1
+        },
+        {
+          "id": "narrativa",
+          "mentions": 1
+        },
+        {
+          "id": "vida",
+          "mentions": 1
+        },
+        {
+          "id": "conselho-setima-geracao",
+          "mentions": 1
+        },
+        {
+          "id": "analise-temporal",
+          "mentions": 1
+        },
+        {
+          "id": "supermajoria-temporal",
+          "mentions": 1
+        },
+        {
+          "id": "irreversibilidade",
+          "mentions": 1
+        },
+        {
+          "id": "dependencias-trajetoria",
+          "mentions": 1
+        },
+        {
+          "id": "escala-sistemica",
+          "mentions": 1
+        },
+        {
+          "id": "matriz-distribuicao-poder",
+          "mentions": 1
+        },
+        {
+          "id": "auditoria-transparencia",
+          "mentions": 1
+        },
+        {
+          "id": "indice-reversibilidade",
+          "mentions": 1
+        },
+        {
+          "id": "rastreamento-apropriacao",
+          "mentions": 1
+        },
+        {
+          "id": "protocolo-inclusao-neurodiversa",
+          "mentions": 1
+        },
+        {
+          "id": "advocacy-politica",
+          "mentions": 1
+        },
+        {
+          "id": "antagonismo-relacional",
+          "mentions": 1
+        },
+        {
+          "id": "cooptacao-neoliberal",
+          "mentions": 1
+        },
+        {
+          "id": "consenso",
+          "mentions": 1
+        },
+        {
+          "id": "algoritmo",
+          "mentions": 1
+        },
+        {
+          "id": "tecnologia-digital",
+          "mentions": 1
+        },
+        {
+          "id": "limites",
+          "mentions": 1
+        },
+        {
+          "id": "criterios-imunologicos",
+          "mentions": 1
+        }
+      ],
+      "authors": [],
+      "protocols": [
+        "auditoria-expectativas-implicitas",
+        "teste-reciprocidade-identitaria",
+        "indice-reversibilidade-paradigmatica",
+        "auditoria-transparencia-assimetrica",
+        "protocolo-divergencia-construtiva"
+      ],
+      "layerDistribution": {
+        "fundacional": 9,
+        "ontologica": 12,
+        "temporal": 13,
+        "ecologica": 13,
+        "politica": 26,
+        "pratica": 10,
+        "etica": 2,
+        "epistemica": 6
+      },
+      "wordCount": 1426
+    },
+    {
+      "id": "capitulo-apendice-b-glossario-de-conceitos-chave",
+      "title": "APÊNDICE B: GLOSSÁRIO DE CONCEITOS-CHAVE",
+      "number": 21,
+      "part": "II",
+      "concepts": [
+        {
+          "id": "política",
+          "mentions": 5
+        },
+        {
+          "id": "dados",
+          "mentions": 4
+        },
+        {
+          "id": "reconhecimento",
+          "mentions": 4
+        },
+        {
+          "id": "aporia",
+          "mentions": 4
+        },
+        {
+          "id": "reciprocidade",
+          "mentions": 3
+        },
+        {
+          "id": "identidade",
+          "mentions": 3
+        },
+        {
+          "id": "relações",
+          "mentions": 3
+        },
+        {
+          "id": "poder",
+          "mentions": 2
+        },
+        {
+          "id": "relacionalidade",
+          "mentions": 2
+        },
+        {
+          "id": "ação",
+          "mentions": 2
+        },
+        {
+          "id": "aporia-fundamentacao",
+          "mentions": 1
+        },
+        {
+          "id": "aporia-escala",
+          "mentions": 1
+        },
+        {
+          "id": "agencia",
+          "mentions": 1
+        },
+        {
+          "id": "precariedade",
+          "mentions": 1
+        },
+        {
+          "id": "cosmopolitica",
+          "mentions": 1
+        },
+        {
+          "id": "setimagera",
+          "mentions": 1
+        },
+        {
+          "id": "ecologia",
+          "mentions": 1
+        },
+        {
+          "id": "violência simbólica",
+          "mentions": 1
+        },
+        {
+          "id": "responsabilidade",
+          "mentions": 1
+        },
+        {
+          "id": "propriedade",
+          "mentions": 1
+        },
+        {
+          "id": "nagarjuna",
+          "mentions": 1
+        },
+        {
+          "id": "escala",
+          "mentions": 1
+        },
+        {
+          "id": "capitalismo",
+          "mentions": 1
+        },
+        {
+          "id": "não-humanos",
+          "mentions": 1
+        },
+        {
+          "id": "comunidade",
+          "mentions": 1
+        },
+        {
+          "id": "natureza",
+          "mentions": 1
+        },
+        {
+          "id": "ordem",
+          "mentions": 1
+        },
+        {
+          "id": "sistemas",
+          "mentions": 1
+        },
+        {
+          "id": "soberania",
+          "mentions": 1
+        },
+        {
+          "id": "capitalismo-de-vigilancia",
+          "mentions": 1
+        },
+        {
+          "id": "ecologia-praticas",
+          "mentions": 1
+        },
+        {
+          "id": "antagonismo-relacional",
+          "mentions": 1
+        },
+        {
+          "id": "intra-acao",
+          "mentions": 1
+        },
+        {
+          "id": "fenomenos",
+          "mentions": 1
+        },
+        {
+          "id": "vacuidade",
+          "mentions": 1
+        },
+        {
+          "id": "outro",
+          "mentions": 1
+        },
+        {
+          "id": "plasticidade",
+          "mentions": 1
+        },
+        {
+          "id": "inovacao",
+          "mentions": 1
+        }
+      ],
+      "authors": [
+        "Karen Barad",
+        "Gayatri Spivak",
+        "Isabelle Stengers",
+        "Nāgārjuna",
+        "Judith Butler"
+      ],
+      "protocols": [],
+      "layerDistribution": {
+        "fundacional": 12,
+        "etica": 4,
+        "ecologica": 7,
+        "temporal": 6,
+        "politica": 11,
+        "pratica": 4,
+        "ontologica": 4,
+        "epistemica": 12
+      },
+      "wordCount": 676
+    }
+  ]
+}

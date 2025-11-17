@@ -3,7 +3,9 @@
  * Carregador de conteúdo com renderização Markdown
  */
 
-import type { Concept } from './types';
+import type { Concept } from './types.js';
+import { initTooltips, activateTooltipForLink } from './livro-tooltips.js';
+import { initProtocols } from './livro-protocols.js';
 
 // Declaração global do marked.js
 declare const marked: {
@@ -15,15 +17,79 @@ declare const JSZip: any;
 
 // CORES POR CAMADA (sincronizado com CRIO e rizoma)
 const LAYER_COLORS: Record<string, number> = {
-    'ontologica': 0x66ccff,    // Azul claro
-    'politica': 0xff6666,      // Vermelho
-    'pratica': 0x99ccff,       // Azul mais claro
-    'fundacional': 0x9966ff,   // Roxo
-    'epistemica': 0xff9966,    // Laranja
-    'ecologica': 0x66ff99,     // Verde
-    'temporal': 0xcccccc,      // Cinza
-    'etica': 0xffff66          // Amarelo
+    // Camadas base (mantidas para compatibilidade)
+    'ontologica': 0x66ccff,
+    'politica': 0xff6666,
+    'pratica': 0x99ccff,
+    'fundacional': 0x9966ff,
+    'epistemica': 0xff9966,
+    'ecologica': 0x66ff99,
+    'temporal': 0xcccccc,
+    'etica': 0xffff66,
+    
+    // Subcamadas ontologica (azul claro: escuro → claro)
+    'ontologica-0': 0x3399ff,
+    'ontologica-1': 0x4db8ff,
+    'ontologica-2': 0x66ccff,
+    'ontologica-3': 0x99ddff,
+    
+    // Subcamadas politica (vermelho: escuro → claro)
+    'politica-0': 0xcc3333,
+    'politica-1': 0xff4d4d,
+    'politica-2': 0xff6666,
+    'politica-3': 0xff9999,
+    
+    // Subcamadas pratica (azul muito claro: escuro → claro)
+    'pratica-0': 0x6699ff,
+    'pratica-1': 0x80bdff,
+    'pratica-2': 0x99ccff,
+    'pratica-3': 0xcce6ff,
+    
+    // Subcamadas fundacional (roxo: escuro → claro)
+    'fundacional-0': 0x6633cc,
+    'fundacional-1': 0x8052ff,
+    'fundacional-2': 0x9966ff,
+    'fundacional-3': 0xc299ff,
+    
+    // Subcamadas epistemica (laranja: escuro → claro)
+    'epistemica-0': 0xcc6633,
+    'epistemica-1': 0xff8552,
+    'epistemica-2': 0xff9966,
+    'epistemica-3': 0xffc299,
+    
+    // Subcamadas ecologica (verde: escuro → claro)
+    'ecologica-0': 0x33cc66,
+    'ecologica-1': 0x52ff85,
+    'ecologica-2': 0x66ff99,
+    'ecologica-3': 0x99ffc2,
+    
+    // Subcamadas temporal (cinza: escuro → claro)
+    'temporal-0': 0x999999,
+    'temporal-1': 0xb8b8b8,
+    'temporal-2': 0xcccccc,
+    'temporal-3': 0xe0e0e0,
+    
+    // Subcamadas etica (amarelo: escuro → claro)
+    'etica-0': 0xcccc33,
+    'etica-1': 0xffff4d,
+    'etica-2': 0xffff66,
+    'etica-3': 0xffff99
 };
+
+/**
+ * Obtém a cor de um conceito baseado na sua camada
+ * Suporta subcamadas com variações cromáticas
+ */
+function getColorForLayer(layer: string): number {
+    // Tenta match exato primeiro
+    if (LAYER_COLORS[layer]) {
+        return LAYER_COLORS[layer];
+    }
+    
+    // Se é uma subcamada não mapeada, usa a cor base
+    const baseLayer = layer.split('-')[0];
+    return LAYER_COLORS[baseLayer] || 0x66ccff; // Azul como fallback
+}
 
 // Estado global
 const state = {
@@ -44,6 +110,14 @@ async function loadLivroContent(): Promise<void> {
     
     if (!contentDiv) {
         console.error('Content div not found');
+        return;
+    }
+
+    // Se o conteúdo já existe (para reader mode), não recarregar
+    if (contentDiv.children.length > 0 && !contentDiv.classList.contains('loading')) {
+        console.log('Content already loaded, skipping fetch');
+        await loadConceptsAndActivateLinks();
+        initializeNavigation();
         return;
     }
 
@@ -70,9 +144,10 @@ async function loadLivroContent(): Promise<void> {
         // Ocultar skeleton loader e mostrar conteúdo
         if (skeletonLoader) {
             skeletonLoader.style.display = 'none';
+            skeletonLoader.setAttribute('aria-hidden', 'true');
         }
-        contentDiv.style.display = 'block';
         contentDiv.classList.remove('loading');
+        contentDiv.classList.add('loaded');
         contentDiv.setAttribute('aria-busy', 'false');
         
         // Carregar conceitos e inicializar links
@@ -80,6 +155,9 @@ async function loadLivroContent(): Promise<void> {
         
         // Inicializar navegação
         initializeNavigation();
+        
+        // Inicializar protocolos interativos
+        initProtocols();
         
     } catch (error) {
         console.error('Error loading livro content:', error);
@@ -108,21 +186,16 @@ async function loadLivroContent(): Promise<void> {
  */
 async function loadConceptsAndActivateLinks(): Promise<void> {
     try {
-        console.log('Carregando conceitos...');
         const response = await fetch('assets/concepts.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         concepts = await response.json();
-        console.log(`✓ ${concepts.length} conceitos carregados`);
-        console.log('Exemplos:', concepts.slice(0, 3).map(c => c.name));
         
         // Ativar links no conteúdo
         const contentDiv = document.getElementById('content');
         if (contentDiv) {
-            console.log('Ativando links de conceitos...');
             activateConceptLinks(contentDiv);
-            console.log('✓ Links ativados');
             
             // Identificar conceitos não mapeados (desabilitado)
             // identifyUnmappedConcepts(contentDiv);
@@ -283,8 +356,6 @@ function isConceptualTerm(word: string): boolean {
  * Ativa links de conceitos no conteúdo
  */
 function activateConceptLinks(element: HTMLElement): void {
-    console.log('Processando links no elemento:', element.id);
-    
     // Criar mapa de conceitos (nome -> conceito)
     const conceptMap = new Map<string, Concept>();
     concepts.forEach(concept => {
@@ -320,24 +391,41 @@ function activateConceptLinks(element: HTMLElement): void {
         nodesToProcess.push(node as Text);
     }
 
-    console.log(`${nodesToProcess.length} nós de texto encontrados`);
-    
+    // Processar em blocos para evitar travar a UI em documentos muito grandes
+    const CHUNK_SIZE = 200;
     let linksCreated = 0;
-    for (const textNode of nodesToProcess) {
-        const fragments = linkifyText(textNode.textContent || '', conceptMap);
-        if (fragments.length > 1 || (fragments.length === 1 && fragments[0] instanceof HTMLElement)) {
-            const parent = textNode.parentNode;
-            if (parent) {
-                fragments.forEach(fragment => {
-                    parent.insertBefore(fragment, textNode);
-                    if (fragment instanceof HTMLElement) linksCreated++;
-                });
-                parent.removeChild(textNode);
+    let index = 0;
+
+    const processChunk = () => {
+        const end = Math.min(index + CHUNK_SIZE, nodesToProcess.length);
+        for (let i = index; i < end; i++) {
+            const textNode = nodesToProcess[i];
+            const fragments = linkifyText(textNode.textContent || '', conceptMap);
+            if (fragments.length > 1 || (fragments.length === 1 && fragments[0] instanceof HTMLElement)) {
+                const parent = textNode.parentNode;
+                if (parent) {
+                    fragments.forEach(fragment => {
+                        parent.insertBefore(fragment, textNode);
+                        if (fragment instanceof HTMLElement) linksCreated++;
+                    });
+                    parent.removeChild(textNode);
+                }
             }
         }
-    }
-    
-    console.log(`✓ ${linksCreated} links criados`);
+
+        index = end;
+
+        if (index < nodesToProcess.length) {
+            // Use requestIdleCallback if disponível para processar sem bloquear
+            if (typeof (window as any).requestIdleCallback === 'function') {
+                (window as any).requestIdleCallback(processChunk, { timeout: 50 });
+            } else {
+                setTimeout(processChunk, 15);
+            }
+        }
+    };
+
+    processChunk();
 }
 
 /**
@@ -432,12 +520,13 @@ function escapeRegex(str: string): string {
  * Cria um link para um conceito
  */
 function createConceptLink(text: string, concept: Concept): HTMLElement {
-    const link = document.createElement('span');
+    const link = document.createElement('a');
     link.className = 'riz∅ma-link';
     link.textContent = text;
+    link.href = `riz∅ma.html?concept=${concept.id}`;
     link.setAttribute('data-concept-id', concept.id);
     link.setAttribute('data-concept-desc', concept.description);
-    link.setAttribute('role', 'button');
+    link.setAttribute('role', 'link');
     link.setAttribute('tabindex', '0');
     
     // Converter cor (usar layer se color não estiver definido)
@@ -451,8 +540,8 @@ function createConceptLink(text: string, concept: Concept): HTMLElement {
             colorHex = '#' + concept.color.toString(16).padStart(6, '0');
         }
     } else if (concept.layer) {
-        // Usar cor da layer
-        const layerColor = LAYER_COLORS[concept.layer] || 0x66ccff;
+        // Usar cor da layer (com suporte a subcamadas)
+        const layerColor = getColorForLayer(concept.layer);
         colorHex = '#' + layerColor.toString(16).padStart(6, '0');
     } else {
         // Fallback padrão
@@ -463,18 +552,14 @@ function createConceptLink(text: string, concept: Concept): HTMLElement {
     link.style.setProperty('color', colorHex, 'important');
     link.style.setProperty('text-decoration-color', colorHex, 'important');
     
-    // Ao clirar, abrir o rizoma com foco nesse conceito
-    const handleActivation = (e: Event) => {
+    // Ativar tooltip para este link
+    activateTooltipForLink(link, concept, concepts);
+    
+    // Prevenir navegação padrão e usar navegação customizada
+    link.addEventListener('click', (e: Event) => {
         e.preventDefault();
-        console.log(`Navegando para riz∅ma.html#${concept.id}`);
-        window.location.href = `riz∅ma.html#${concept.id}`;
-    };
-
-    link.addEventListener('click', handleActivation);
-    link.addEventListener('keydown', (e: KeyboardEvent) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-            handleActivation(e);
-        }
+        console.log(`Navegando para riz∅ma.html?concept=${concept.id}`);
+        window.location.href = `riz∅ma.html?concept=${concept.id}`;
     });
 
     return link;
@@ -486,6 +571,7 @@ function createConceptLink(text: string, concept: Concept): HTMLElement {
 function initializeNavigation(): void {
     const content = document.getElementById('content');
     const navList = document.getElementById('nav-list');
+    const progressMarkers = document.querySelector('.progress-markers');
     
     if (!content || !navList) return;
     
@@ -493,14 +579,38 @@ function initializeNavigation(): void {
     const chapters = content.querySelectorAll('h1');
     navList.innerHTML = '';
     
+    if (progressMarkers) {
+        progressMarkers.innerHTML = '';
+    }
+    
     chapters.forEach((chapter, index) => {
         const id = `chapter-${index}`;
         chapter.id = id;
         
+        // Criar item de navegação
         const li = document.createElement('li');
+        li.setAttribute('data-chapter-index', index.toString());
+        
         const a = document.createElement('a');
         a.href = `#${id}`;
-        a.textContent = chapter.textContent || `Capítulo ${index + 1}`;
+        a.setAttribute('data-chapter-id', id);
+        
+        // Estrutura do link: número + título + progresso
+        const navNumber = document.createElement('span');
+        navNumber.className = 'nav-number';
+        navNumber.textContent = `${index + 1}`;
+        
+        const navTitle = document.createElement('span');
+        navTitle.className = 'nav-title';
+        navTitle.textContent = chapter.textContent || `Capítulo ${index + 1}`;
+        
+        const navProgress = document.createElement('div');
+        navProgress.className = 'nav-progress';
+        
+        a.appendChild(navNumber);
+        a.appendChild(navTitle);
+        a.appendChild(navProgress);
+        
         a.addEventListener('click', (e) => {
             e.preventDefault();
             chapter.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -513,6 +623,115 @@ function initializeNavigation(): void {
         
         li.appendChild(a);
         navList.appendChild(li);
+        
+        // Adicionar marcador de progresso lateral
+        if (progressMarkers) {
+            const marker = document.createElement('div');
+            marker.className = 'progress-marker';
+            marker.setAttribute('data-chapter-index', index.toString());
+            marker.title = chapter.textContent || `Capítulo ${index + 1}`;
+            marker.setAttribute('role', 'button');
+            marker.setAttribute('tabindex', '0');
+            marker.setAttribute('aria-label', chapter.textContent || `Capítulo ${index + 1}`);
+            
+            // Adicionar evento de clique no marcador
+            marker.addEventListener('click', () => {
+                chapter.scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            // Adicionar evento de teclado (Enter/Space)
+            marker.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    chapter.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+            
+            progressMarkers.appendChild(marker);
+        }
+    });
+    
+    // Adicionar observador de scroll para atualizar marcadores ativos
+    updateActiveMarkers();
+    window.addEventListener('scroll', updateActiveMarkers);
+}
+
+/**
+ * Atualiza os marcadores ativos baseado no scroll
+ */
+function updateActiveMarkers(): void {
+    const content = document.getElementById('content');
+    const markers = document.querySelectorAll('.progress-marker');
+    const navLinks = document.querySelectorAll('#nav-list a');
+    
+    if (!content || markers.length === 0) return;
+    
+    const chapters = content.querySelectorAll('h1');
+    if (chapters.length === 0) return;
+    
+    let activeIndex = -1;
+    let maxProgress = 0;
+    
+    chapters.forEach((chapter, index) => {
+        const rect = chapter.getBoundingClientRect();
+        const nextChapter = chapters[index + 1];
+        
+        // Determinar se este capítulo está visível
+        if (rect.top <= window.innerHeight / 3) {
+            activeIndex = index;
+            
+            // Calcular progresso dentro desta seção
+            if (nextChapter) {
+                const nextRect = nextChapter.getBoundingClientRect();
+                const sectionHeight = nextRect.top - rect.top;
+                const scrolledInSection = Math.max(0, -rect.top);
+                const progress = Math.min(100, (scrolledInSection / sectionHeight) * 100);
+                maxProgress = progress;
+            } else {
+                // Última seção - usar altura do documento
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrolled = window.scrollY;
+                const chapterTop = (chapter as HTMLElement).offsetTop;
+                const sectionHeight = docHeight - chapterTop;
+                const scrolledInSection = scrolled - chapterTop;
+                maxProgress = Math.min(100, (scrolledInSection / sectionHeight) * 100);
+            }
+        }
+    });
+    
+    // Atualizar marcadores laterais
+    markers.forEach((marker, index) => {
+        const markerEl = marker as HTMLElement;
+        if (index === activeIndex) {
+            markerEl.classList.add('active');
+            markerEl.classList.remove('completed');
+            markerEl.style.setProperty('--progress', `${maxProgress}%`);
+        } else if (index < activeIndex) {
+            markerEl.classList.remove('active');
+            markerEl.classList.add('completed');
+            markerEl.style.setProperty('--progress', '100%');
+        } else {
+            markerEl.classList.remove('active', 'completed');
+            markerEl.style.setProperty('--progress', '0%');
+        }
+    });
+    
+    // Atualizar links de navegação
+    navLinks.forEach((link, index) => {
+        const linkEl = link as HTMLElement;
+        const li = linkEl.parentElement;
+        if (index === activeIndex) {
+            linkEl.classList.add('active');
+            li?.classList.add('active');
+        } else if (index < activeIndex) {
+            linkEl.classList.remove('active');
+            linkEl.classList.add('completed');
+            li?.classList.remove('active');
+            li?.classList.add('completed');
+        } else {
+            linkEl.classList.remove('active', 'completed');
+            li?.classList.remove('active', 'completed');
+        }
     });
 }
 
@@ -843,10 +1062,11 @@ function loadPreferences(): void {
  * Inicialização principal
  */
 function init(): void {
-    console.log('Inicializando Entre Igrejas e Casas de Charlatanismo...');
-    
     // Carregar preferências
     loadPreferences();
+    
+    // Inicializar sistema de tooltips
+    initTooltips();
     
     // Carregar conteúdo
     loadLivroContent();
@@ -875,26 +1095,49 @@ function init(): void {
             exportAsEpub();
         });
     }
+
+    // Debounced resize to recalculate nav and avoid layout thrash
+    const resizeTimeouts: { id?: number } = {};
+    const onResize = () => {
+        if (resizeTimeouts.id) window.clearTimeout(resizeTimeouts.id);
+        resizeTimeouts.id = window.setTimeout(() => {
+            console.log('Window resized — reinitializing navigation');
+            initializeNavigation();
+        }, 150) as unknown as number;
+    };
+    window.addEventListener('resize', onResize, { passive: true });
     
-    // Inicializar autoscroll
-    initAutoScroll();
-    
-    // Progress bar
-    window.addEventListener('scroll', () => {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        
-        const progressFill = document.querySelector('.progress-bar-fill') as HTMLElement;
-        if (progressFill) {
-            progressFill.style.width = scrolled + '%';
+    // Progress bar updates - throttled with requestAnimationFrame for smoother updates
+    const progressFill = document.querySelector('.progress-bar-fill') as HTMLElement | null;
+    const readingProgress = document.getElementById('reading-progress');
+    let ticking = false;
+    let lastScrollY = 0;
+
+    const onScroll = () => {
+        lastScrollY = window.scrollY || document.body.scrollTop || document.documentElement.scrollTop;
+        if (!ticking) {
+            ticking = true;
+            window.requestAnimationFrame(() => {
+                const height = Math.max(1, document.documentElement.scrollHeight - document.documentElement.clientHeight);
+                const scrolled = Math.max(0, Math.min(100, (lastScrollY / height) * 100));
+
+                if (progressFill) {
+                    progressFill.style.transform = `scaleX(${scrolled / 100})`;
+                    const progressParent = progressFill.parentElement;
+                    if (progressParent) progressParent.setAttribute('aria-valuenow', String(Math.round(scrolled)));
+                }
+
+                if (readingProgress) {
+                    const percent = Math.round(scrolled);
+                    readingProgress.textContent = percent > 0 ? `LIVRO ${percent}%` : 'LIVRO';
+                }
+
+                ticking = false;
+            });
         }
-        
-        const readingProgress = document.getElementById('reading-progress');
-        if (readingProgress) {
-            readingProgress.textContent = Math.round(scrolled) + '%';
-        }
-    });
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
     
     // Fechar navegação ao clicar fora em mobile
     document.addEventListener('click', (e) => {
@@ -910,118 +1153,8 @@ function init(): void {
 }
 
 // ============================================================================
-// AUTOSCROLL MEDITATIVO
+// INICIALIZAÇÃO
 // ============================================================================
-
-let autoScrollActive = false;
-let autoScrollInterval: number | null = null;
-const AUTO_SCROLL_SPEED = 0.3; // pixels por frame (ajustável)
-const AUTO_SCROLL_FPS = 60;
-
-function initAutoScroll(): void {
-    console.log('Inicializando autoscroll meditativo no livro');
-    
-    // Criar botão de autoscroll
-    const audioUI = document.querySelector('.audio-ui');
-    if (!audioUI) {
-        console.warn('Audio UI não encontrado para adicionar botão de autoscroll');
-        return;
-    }
-    
-    const autoScrollBtn = document.createElement('button');
-    autoScrollBtn.className = 'auto-scroll-button';
-    autoScrollBtn.id = 'auto-scroll-btn';
-    autoScrollBtn.setAttribute('aria-label', 'Ativar autoscroll meditativo');
-    autoScrollBtn.innerHTML = '<span aria-hidden="true">⬇</span>';
-    autoScrollBtn.title = 'Autoscroll meditativo';
-    
-    // Inserir após o botão de fonte
-    const fontBtn = document.getElementById('font-size-btn');
-    if (fontBtn && fontBtn.nextSibling) {
-        audioUI.insertBefore(autoScrollBtn, fontBtn.nextSibling);
-    } else {
-        audioUI.appendChild(autoScrollBtn);
-    }
-    
-    autoScrollBtn.addEventListener('click', toggleAutoScroll);
-    
-    // Desativar autoscroll se usuário scrollar manualmente
-    let userScrollTimeout: number | null = null;
-    window.addEventListener('wheel', () => {
-        if (autoScrollActive) {
-            console.log('Scroll manual detectado - pausando autoscroll');
-            pauseAutoScroll();
-            
-            // Reativar após 2 segundos de inatividade
-            if (userScrollTimeout) clearTimeout(userScrollTimeout);
-            userScrollTimeout = window.setTimeout(() => {
-                if (autoScrollActive) {
-                    resumeAutoScroll();
-                }
-            }, 2000);
-        }
-    }, { passive: true });
-}
-
-function toggleAutoScroll(): void {
-    const btn = document.getElementById('auto-scroll-btn');
-    if (!btn) return;
-    
-    autoScrollActive = !autoScrollActive;
-    
-    if (autoScrollActive) {
-        console.log('Autoscroll ativado');
-        btn.classList.add('active');
-        btn.innerHTML = '<span aria-hidden="true">⏸</span>';
-        btn.setAttribute('aria-label', 'Pausar autoscroll');
-        startAutoScroll();
-    } else {
-        console.log('Autoscroll desativado');
-        btn.classList.remove('active');
-        btn.innerHTML = '<span aria-hidden="true">⬇</span>';
-        btn.setAttribute('aria-label', 'Ativar autoscroll meditativo');
-        stopAutoScroll();
-    }
-}
-
-function startAutoScroll(): void {
-    if (autoScrollInterval) return;
-    
-    autoScrollInterval = window.setInterval(() => {
-        const currentScroll = window.scrollY;
-        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-        
-        if (currentScroll >= maxScroll) {
-            // Chegou no final - desativar
-            console.log('Fim da página alcançado - desativando autoscroll');
-            toggleAutoScroll();
-            return;
-        }
-        
-        window.scrollBy({
-            top: AUTO_SCROLL_SPEED,
-            behavior: 'auto'
-        });
-    }, 1000 / AUTO_SCROLL_FPS);
-}
-
-function stopAutoScroll(): void {
-    if (autoScrollInterval) {
-        clearInterval(autoScrollInterval);
-        autoScrollInterval = null;
-    }
-}
-
-function pauseAutoScroll(): void {
-    stopAutoScroll();
-}
-
-function resumeAutoScroll(): void {
-    if (autoScrollActive && !autoScrollInterval) {
-        console.log('Retomando autoscroll');
-        startAutoScroll();
-    }
-}
 
 // Inicializar quando o DOM estiver pronto
 if (document.readyState === 'loading') {

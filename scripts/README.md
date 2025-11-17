@@ -54,17 +54,94 @@ make fix-relations
 
 ---
 
+### `analyze_balance.py`
+**Script de análise de balanceamento de camadas**
+
+Analisa a distribuição de conceitos entre as camadas ontológicas:
+
+- 📊 Distribuição percentual por camada
+- 📈 Métricas estatísticas (média, mediana, desvio padrão)
+- ⚖️  Razão max/min (índice de balanceamento)
+- 🎯 Identificação de camadas sobre/sub-representadas
+- ✅ Status de balanceamento (BOM/MODERADO/CRÍTICO)
+
+**Uso:**
+```bash
+python3 scripts/analyze_balance.py
+# ou via Make
+make balance-check
+```
+
+**Thresholds:**
+- Razão < 3.0x: ✅ Balanceamento BOM
+- Razão 3.0-5.0x: ⚠️  Balanceamento MODERADO
+- Razão > 5.0x: ❌ Desbalanceamento CRÍTICO
+
+---
+
+### `balance_verbs.py`
+**Script de balanceamento de verbos semânticos**
+
+Equilibra a distribuição de verbos nas relações, diversificando verbos sobre-utilizados:
+
+- 📊 Análise de distribuição de verbos (antes/depois)
+- 🔄 Diversificação contextual baseada em camadas ontológicas
+- ⚖️  Eliminação de verbos genéricos super-concentrados
+- ✨ Aumento de riqueza semântica do rizoma
+- 🎯 Adaptação de verbos ao contexto das relações
+
+**Uso:**
+```bash
+python3 scripts/balance_verbs.py
+# ou via Make
+make balance-verbs
+# ou como parte de
+make ontology
+```
+
+**O que faz:**
+- Identifica verbos sobre-utilizados (>5% do total)
+- Diversifica "relaciona-se com" em variantes contextuais:
+  - Fundacionais: fundamenta-se em, emerge de, condiciona
+  - Ontológicas: constitui, articula-se com, entrelaça-se com
+  - Epistêmicas: conhece através de, questiona, dialoga com
+  - Políticas: mobiliza, resiste a, emancipa-se via
+  - Éticas: cuida de, responsabiliza-se por, acolhe
+  - Temporais: desdobra-se em, evolui para, atualiza
+  - Ecológicas: simbiosa com, co-habita, flui em
+  - Práticas: implementa, pratica, performa
+
+**Critérios de avaliação:**
+- < 5%: ✅ EXCELENTE - Bem distribuído
+- 5-10%: ✅ BOM - Uso moderado
+- 10-15%: ⚠️  ACEITÁVEL - Ainda dominante
+- > 15%: ❌ REQUER ATENÇÃO - Muito concentrado
+
+**Quando usar:**
+- Após adicionar muitas relações genéricas
+- Para melhorar especificidade semântica
+- Antes de publicar/compartilhar a ontologia
+- Periodicamente para manter qualidade
+
+---
+
 ## 🎯 Comandos Make
 
 ```bash
 # Validação completa
 make validate
 
+# Análise de balanceamento
+make balance-check
+
 # Correção de relações
 make fix-relations
 
 # Estatísticas rápidas
 make stats
+
+# Estatísticas completas
+make stats-full
 ```
 
 ---
@@ -79,14 +156,16 @@ make stats
 
 ### Camadas Ontológicas
 
-1. **fundacional** (37) - Base filosófica e conceitual
-2. **ontologica** (59) - Natureza do ser relacional
-3. **epistemica** (23) - Conhecimento e cognição
-4. **politica** (55) - Organização e poder
-5. **etica** (9) - Valores e responsabilidade
-6. **temporal** (9) - Tempo e história
-7. **ecologica** (17) - Relações multiespécies
-8. **pratica** (37) - Implementações e práticas
+1. **fundacional** (49) - Base filosófica e conceitual
+2. **ontologica** (74) - Natureza do ser relacional
+3. **epistemica** (46) - Conhecimento e cognição
+4. **politica** (70) - Organização e poder
+5. **etica** (22) - Valores e responsabilidade
+6. **temporal** (37) - Tempo e história
+7. **ecologica** (29) - Relações multiespécies
+8. **pratica** (61) - Implementações e práticas
+
+**Balanceamento:** Razão max/min 3.36x (MODERADO/BOM)
 
 ---
 
@@ -229,4 +308,4 @@ make validate
 ---
 
 **Última atualização:** Novembro 2025  
-**Conceitos:** 246 | **Relações:** 1231 | **Camadas:** 8
+**Conceitos:** 388 | **Relações:** 1782 | **Camadas:** 8 | **Balanceamento:** 3.36x

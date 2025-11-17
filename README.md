@@ -12,6 +12,26 @@
 
 **CRIO** é uma experiência filosófica interativa que performa ontologia relacional através de sete movimentos conceituais. Não é um site sobre filosofia—é filosofia SE FAZENDO através de código, design e interação.
 
+## 🆕 Atualizações Recentes (Nov 2025)
+
+### Subdivisão Semântica em 32 Subcamadas
+
+- **727 conceitos** organizados em 8 camadas → **32 subcamadas** semânticas
+- **7.064 relações** (boosted +212 conexões semânticas)
+- **Interface hierárquica colapsável** com grupos e subcamadas
+- **Filtragem por família completa** ou subcamadas individuais
+- **Sistema de cores graduado** (escuro → claro) por variação conceitual
+
+**4 variações por camada:**
+
+- 🔹 **Geral**: Conceitos abstratos, teóricos, fundamentos
+- 🔸 **Relacional**: Conexões, vínculos, redes, interdependências
+- 🔹 **Prática**: Aplicação, ação, institucional, métodos
+- 🔸 **Mista**: Conceitos híbridos, transversais, integrados
+
+Ver [SUBDIVISAO_SEMANTICA_CAMADAS.md](docs/SUBDIVISAO_SEMANTICA_CAMADAS.md) para detalhes completos.
+
+
 ## 📖 Índice
 
 - [O Que É CRIO](#-o-que-é-crio)
@@ -29,10 +49,12 @@
   - [Arquivos Core](#arquivos-core)
 - [Recursos e Funcionalidades](#-recursos-e-funcionalidades)
   - [Experiência de Leitura CRIO](#experiência-de-leitura-crio-indexhtml)
+    - [Responsividade e fluidez do leitor](#responsividade-e-fluidez)
   - [Links Coloridos para Conceitos](#links-coloridos-para-conceitos-do-rizoma)
   - [Referências Bibliográficas](#referências-bibliográficas-referenciashtml)
   - [Visualização 3D Rizomática](#visualização-3d-rizomática-rizmahtml)
 - [Arquitetura Técnica](#-arquitetura-técnica)
+ - [Responsividade e fluidez](#responsividade-e-fluidez)
   - [Stack Tecnológico](#stack-tecnológico)
   - [Sistema de Dados](#sistema-de-dados)
   - [Padrões de Código](#padrões-de-código)
@@ -325,7 +347,83 @@ zero/
 
 ### Visualização Rizoma (riz∅ma.html)
 
-**Sistema de Camadas (9 camadas):**
+**Interface de Filtragem Hierárquica:**
+
+- **32 subcamadas semânticas**: 8 famílias × 4 variações (Geral/Relacional/Prática/Mista)
+- **Grupos colapsáveis**: Clique na seta (▸) para expandir/colapsar famílias
+- **Filtros em dois níveis**:
+  - **Cabeçalho de grupo**: Clique ativa/desativa todas as 4 subcamadas da família
+  - **Subcamadas individuais**: Clique ativa/desativa variação específica
+- **Contadores dinâmicos**: Total de conceitos por subcamada e grupo
+- **Sistema de cores graduado**: Escuro → claro (Geral → Relacional → Prática → Mista)
+- **Visibilidade de relações**:
+  - **Opacidade total**: Conexões entre conceitos ativos
+  - **Opacidade baixa**: Conexões entre ativo e inativo (contexto)
+  - **Oculto**: Conexões apenas entre inativos
+
+**API Interativa do Console (Rizoma Toolkit):**
+
+Abra o console do navegador (F12) e explore o rizoma programaticamente:
+
+```javascript
+// Informação e Estatísticas
+rizoma.info()          // Visão geral do rizoma (727 conceitos, 32 subcamadas)
+rizoma.stats()         // Estatísticas detalhadas (conexões, hubs, pontes)
+rizoma.stats(true)     // Modo live: atualiza estatísticas a cada segundo
+rizoma.help()          // Lista todos os comandos disponíveis
+
+// Navegação
+rizoma.goto("caos")    // Navega para conceito e destaca conexões
+rizoma.random()        // Escolhe conceito aleatório
+rizoma.findHub()       // Localiza hub principal (conceito mais conectado)
+rizoma.findBridge()    // Localiza ponte entre camadas
+
+// Análise
+rizoma.analyze("emergência")  // Análise detalhada: camada, conexões, status
+rizoma.layers()        // Lista todas as camadas ontológicas
+rizoma.bridges()       // Lista conceitos-ponte entre camadas
+rizoma.hubs()          // Lista hubs (conceitos centrais)
+
+// Visualização
+rizoma.toggleMode()    // Alterna entre "Dentro do Caos" / "Fora do Caos"
+rizoma.reset()         // Reseta visualização ao estado inicial
+rizoma.explode(2)      // Expande rizoma 2x (padrão: 3x)
+rizoma.collapse()      // Colapsa ao estado normal
+
+// Easter Eggs (Efeitos visuais secretos)
+rizoma.matrix()        // Modo Matrix (verde, rotação automática)
+rizoma.disco()         // Modo Disco (cores piscantes, party mode!)
+rizoma.breathe()       // Respiração cósmica (pulsação suave)
+rizoma.constellation() // Modo constelação (estrelas cintilantes)
+```
+
+**Exemplos de uso:**
+
+```javascript
+// Análise completa de um conceito
+rizoma.analyze("caos")
+// 🔬 Análise Detalhada: "Caos"
+// 📍 Camada: ontologica
+// 🔗 Conexões: 8
+// ⭐ Status: HUB (conceito central da camada)
+
+// Navegação com destaque automático
+rizoma.goto("emergência")
+// ✅ Navegando para "Emergência" (ontologica)
+//    🔗 12 conexões
+
+// Estatísticas em tempo real
+rizoma.stats(true)
+// Atualiza console a cada segundo com métricas live
+// Use rizoma.stats(false) para parar
+
+// Exploração aleatória
+rizoma.random()
+// 🎲 Escolhendo aleatoriamente...
+// ✅ Navegando para "Multiplicidade" (fundacional)
+```
+
+**Sistema de Camadas (8 camadas ontológicas):**
 
 - Fundacional, Ontológica, Epistemológica, Política
 - Pedagógica, Indígena-Comunitária, Ecológica-Material

@@ -100,13 +100,37 @@ export const MATERIAL_REFLECTIVITY = 0.5;
 // ============================================================================
 
 export const LAYER_NAMES: Record<string, string> = {
+  // Camadas base
   'fundacional': 'Fundacional',
   'ontologica': 'Ontológica',
-  'epistemologica': 'Epistemológica',
+  'epistemica': 'Epistêmica',
   'politica': 'Política',
-  'pedagogica': 'Pedagógica',
-  'indigena-comunitaria': 'Indígena-Comunitária',
-  'ecologica-material': 'Ecológica-Material',
+  'pratica': 'Prática',
+  'ecologica': 'Ecológica',
   'temporal': 'Temporal',
-  'pratica-institucional': 'Prática-Institucional'
+  'etica': 'Ética',
+  
+  // Subcamadas ontologica (variações cromáticas)
+  'ontologica-0': 'Ontológica · Mista',
+  'ontologica-1': 'Ontológica · Prática',
+  'ontologica-2': 'Ontológica · Relacional',
+  'ontologica-3': 'Ontológica · Geral',
+  
+  // Subcamadas politica
+  'politica-0': 'Política · Mista',
+  'politica-1': 'Política · Prática',
+  'politica-2': 'Política · Teórica',
+  'politica-3': 'Política · Processual',
+  
+  // Subcamadas pratica
+  'pratica-0': 'Prática · Mista',
+  'pratica-1': 'Prática · Aplicada',
+  'pratica-2': 'Prática · Geral',
+  'pratica-3': 'Prática · Relacional',
+  
+  // Subcamadas fundacional
+  'fundacional-0': 'Fundacional · Mista',
+  'fundacional-1': 'Fundacional · Relacional',
+  'fundacional-2': 'Fundacional · Prática',
+  'fundacional-3': 'Fundacional · Geral'
 };
