@@ -296,7 +296,7 @@ async function updateSidebarContent(): Promise<void> {
                         
                         const size = Math.min(1.2, 0.8 + (mentions / 10));
                         return `
-                            <a href="riz∅ma.html?focus=${id}" 
+                            <a href="riz∅ma.html#${encodeURIComponent(id)}" 
                                class="concept-tag"
                                style="font-size: ${size}em"
                                title="${escapeHtml(concept.description)}">
