@@ -12,7 +12,7 @@ Ok, vamos lá. Respire fundo. Porque o que vamos fazer aqui não é ler um livro
 
 Este texto é para quem acordou no meio do hospício e percebeu que não só é um dos loucos, como também ajudou a construir as paredes. Pra quem se olhou no espelho e não viu uma pessoa, mas um sistema, um *modus operandi* de auto-exploração rodando em loop. Pra quem, num momento de lucidez brutal que é ao mesmo tempo uma maldição e uma bênção, olhou pra própria existência e conseguiu nomear o horror com uma precisão cirúrgica: **eu sou uma casa de charlatanismo pra mim mesmo**.
 
-Se essa frase não te causa um arrepio, um reconhecimento incômodo que reverbera nos ossos, talvez este livro não seja pra você. Ainda. Mas se ela ressoa, se ela parece um eco de uma suspeita que você carrega há tempos, então bem-vindo. Você encontrou sua tribo. A tribo dos que acordaram no incêndio.
+Se essa frase não te causa um arrepio, um reconhecimento incômodo que reverbera nos ossos, talvez este livro não seja pra você. Ainda. Mas se ela ressoa, se ela parece um eco de uma suspeita que você carrega há tempos, então bem-vindo. Você encontrou sua tribo. A tribo dos que acordaram no abismo.
 
 Isto aqui não é pra ser uma nova revelação, um novo messias de bolso. Pelo contrário. É uma tentativa de **desvendar** o que foi velado, de **procurar** as conexões perdidas, de **achar** o fio de ouro da verdade que atravessa as eras e de **revelar** o que as instituições – as maiores e mais antigas casas de charlatanismo – se esforçaram tanto para ofuscar.
 
@@ -20,14 +20,14 @@ Vamos procurar o que Jesus de Nazaré *realmente* quis dizer com "morrer para vi
 
 O segredo que eles sussurraram, e que vamos tentar gritar aqui, é simples e brutal: a única coisa que talvez importe, a única coisa sagrada que a gente busca cultivar, é o **religare**. A reconexão. O ato de remendar o que foi rasgado. O resto é ruído, distração, a burocracia da alma.
 
-Este livro, então, é um manual de campo. Um guia prático pra quem quer não só apagar o incêndio, mas usar as cinzas pra construir algo novo. Ele tem quatro partes, que são mais como estágios de um processo, de um grau de evolução, uma espiral que se aprofunda a cada volta:
+Este livro, então, é um manual de campo. Um guia prático pra quem quer não só apagar o abismo, mas usar as cinzas pra construir algo novo. Ele tem quatro partes, que são mais como estágios de um processo, de um grau de evolução, uma espiral que se aprofunda a cada volta:
 
 *   **Livro I: O Diagnóstico** (A Arqueologia da Ruína: Como caralhos eu vim parar aqui?)
 *   **Livro II: A Demolição e o Vazio** (O Reboot Ontológico: Formatando o HD da alma.)
 *   **Livro III: O Exorcismo Cibernético** (A Engenharia Reversa do Demônio: Debugando os fantasmas na máquina.)
 *   **Livro IV: A Práxis** (A Engenharia do Novo Mundo: E agora, o que eu faço com essa porra toda?)
 
-Não tem guru aqui. Não tem resposta pronta. A única autoridade é a ressonância da verdade aí dentro. A epifania. Aquele "puta que pariu, é isso". Se parecer que eu tô falando de você, é porque eu sou um espelho. E talvez, só talvez, a gente esteja olhando pro mesmo incêndio.
+Não tem guru aqui. Não tem resposta pronta. A única autoridade é a ressonância da verdade aí dentro. A epifania. Aquele "puta que pariu, é isso". Se parecer que eu tô falando de você, é porque eu sou um espelho. E talvez, só talvez, a gente esteja olhando pro mesmo abismo.
 
 ---
 
@@ -38,7 +38,7 @@ Não tem guru aqui. Não tem resposta pronta. A única autoridade é a ressonân
 
 ## Capítulo 1: Eu, A Casa de Charlatanismo
 
-O tal do despertar não é um insight bonitinho. É a porra de um incêndio. É quando você sente o cheiro de queimado e percebe que o fogo tá vindo de dentro. Que você é a casa, o morador, o incendiário e o bombeiro, tudo ao mesmo tempo. É a percepção de que você se tornou um sistema fechado de auto-abuso.
+O tal do despertar não é um insight bonitinho. É a porra de um abismo. É quando você sente o cheiro de queimado e percebe que o fogo tá vindo de dentro. Que você é a casa, o morador, o incendiário e o bombeiro, tudo ao mesmo tempo. É a percepção de que você se tornou um sistema fechado de auto-abuso.
 
 E essa casa tem nome, uma arquitetura que a gente internalizou tão bem que virou sistema operacional: a **Casa de Charlatanismo**. É o *modus operandi* da instrumentalização. Mas vamos desvendar isso. De onde vem essa lógica?
 
@@ -107,7 +107,7 @@ O primeiro passo, então, tem que ser uma blasfêmia. A blasfêmia sagrada de ol
 >    - **Cláusula de Performance:** Meu lugar aqui está condicionado à minha performance?
 >    - **Custo de Saída:** Se eu decidisse sair disso amanhã, qual seria o custo real? (Financeiro, social, emocional, de identidade).
 
-> *Olhe para o seu inventário. Veja as estruturas que são feitas de papel. O reconhecimento é o fósforo. O incêndio começa agora.*
+> *Olhe para o seu inventário. Veja as estruturas que são feitas de papel. O reconhecimento é o fósforo. O abismo começa agora.*
 
 ---
 
