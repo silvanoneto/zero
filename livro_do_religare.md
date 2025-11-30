@@ -169,11 +169,19 @@ O vazio não foi só uma fase. Ele vira disciplina. O **Sabbath Ontológico**. U
 **3. A Encarnação Radical (A Divindade da Matéria):**
 Você para de tratar seu corpo como um carro. Você aterra. Você habita. Você descobre que a espiritualidade não é levitar, mas mergulhar tão fundo no corpo que você encontra o universo ali. O sagrado não tá lá em cima; tá aqui, na poeira, no cansaço, na dor nas costas.
 
+**[Aprofundamento: A Neurociência da Encarnação]**
+
+Isso não é poesia. É neurociência. A "terra" que precisamos habitar é, literalmente, nosso sistema nervoso. Autores como Stephen Porges (com a Teoria Polivagal) e Bessel van der Kolk nos mostram que o trauma, a ansiedade, a desconexão não são "coisas da cabeça". Elas são estados fisiológicos. O trauma fica armazenado no corpo, nos tecidos, na postura, no padrão de respiração. A "Casa de Charlatanismo" tem uma arquitetura neurológica. Ela opera a partir de um sistema nervoso simpático cronicamente ativado (luta ou fuga) ou de um colapso dorsal vagal (congelamento, dissociação). A Encarnação Radical, então, é a prática de re-habitar e regular esse sistema. O "check-in somático" não é um exercício de mindfulness; é um ato de hackear o sistema nervoso, de ativar o circuito ventral vagal, o sistema de segurança e conexão social. É dizer ao seu corpo, na linguagem dele (respiração, sensação, movimento), que o perigo passou, que é seguro estar aqui, agora.
+
 **4. Agape (Ou: amor incondicional, até mesmo por você):**
 Isso não é "auto-estima". Isso é **Agape**. É o amor que não precisa de motivo. É a decisão de estar do seu próprio lado, não importa o quê. É estender compaixão radical até pras partes mais escrotas de si mesmo.
 
 **5. A Teia Relacional (A Internet das Almas):**
 Você saca que o "eu" separado é uma ilusão de ótica. Você não é um nó isolado; você é um padrão de fluxo em uma rede. "Eu sou porque nós somos" (Ubuntu). Suas relações não são algo que você *tem*; elas são algo que você *é*.
+
+**[Aprofundamento: O Lado Sombrio da Rede e a Anti-Teia]**
+
+É crucial contrastar a Teia Relacional com sua imitação demoníaca: as redes sociais digitais. Se a Teia Relacional é a "Internet das Almas", as redes sociais são a anti-teia. Elas são Igrejas de Papel em escala global. Elas prometem conexão, mas entregam comparação. Elas prometem comunidade, mas entregam tribalismo. Elas prometem visibilidade, mas entregam a tirania da imagem imposta. Elas operam na lógica da economia da atenção, instrumentalizando nossa necessidade mais sagrada de religare para nos manter engajados, ansiosos e consumindo. A verdadeira Teia Relacional é construída em presença, vulnerabilidade e reciprocidade. A anti-teia é construída em performance, sinalização e extração de dados. Despertar para a Teia Relacional muitas vezes exige um êxodo consciente da anti-teia.
 
 ### *Práxis 3: A Engenharia do Novo Ser*
 
@@ -270,6 +278,10 @@ Ela se manifesta em cinco domínios:
 
 **4. A Práxis da Generatividade (A Ecologia da Criação):**
 É o florescimento. Não é produção, é criação. Você pratica o **Sabbath Criativo**, o fazer inútil. E aprende a honrar o ciclo completo dos projetos: da germinação silenciosa à morte honrosa, entendendo que a compostagem de um projeto antigo é o que fertiliza o solo para o novo.
+
+**[Aprofundamento: A Economia do Presente e a Engenharia do Novo Mundo]**
+
+Essa práxis da generatividade não é apenas uma metáfora pessoal. Ela tem implicações econômicas e políticas. É a semente de uma nova forma de organizar nossa vida material. Em vez de uma economia baseada no crescimento infinito (a lógica do câncer), podemos imaginar uma economia do presente, baseada em suficiência e regeneração. Movimentos como o "Donut Economics" de Kate Raworth apontam nessa direção: um modelo que busca satisfazer as necessidades de todos (a base social) sem ultrapassar os limites do planeta (o teto ecológico). Praticar a generatividade em nossos projetos pessoais é um ato de pré-figuração. É construir, em pequena escala, o tipo de mundo em que gostaríamos de viver em grande escala. É a engenharia do novo mundo começando no seu próprio quintal.
 
 **5. A Práxis do Antagonismo Relacional (A Luta Elegante):**
 É o reconhecimento de que viver relacionalmente é um ato político. Você aprende a lutar contra os sistemas de controle sem se tornar um deles. Você ataca o sistema, não as pessoas. Você se recusa a desumanizar seus adversários.
