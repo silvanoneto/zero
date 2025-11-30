@@ -1,5 +1,5 @@
 /**
- * LIVRO: Entre Igrejas e Casas de Charlatanismo
+ * LIVRO: O Livro do Religare
  * Carregador de conteúdo com renderização Markdown
  */
 
@@ -863,8 +863,8 @@ async function exportAsEpub(): Promise<void> {
     const zip = new JSZip();
     
     // Metadados
-    const title = 'Entre Igrejas e Casas de Charlatanismo';
-    const author = 'Revolução Cibernética';
+    const title = 'O Livro do Religare';
+    const author = 'Silvano Neto';
     const uuid = `urn:uuid:${generateUUID()}`;
     const date = new Date().toISOString().split('T')[0];
     
