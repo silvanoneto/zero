@@ -331,69 +331,150 @@ As redes sociais são uma imitação demoníaca da Teia Relacional. Elas promete
 
 # LIVRO III: O EXORCISMO (A Engenharia Reversa do Demônio)
 
-## Capítulo 5: O Demônio do Controle (Ou: O Gerente Paranoico)
+## Capítulo 11: A Anatomia dos Demônios Internos (Ou: Conheça Seu Inimigo)
 
-Ok, você demoliu o prédio antigo, limpou o terreno. Mas então você percebe que o antigo gerente de obras não foi embora. Ele está ali, no canto, com uma prancheta, anotando tudo, criticando, tentando assumir o controle da nova construção. Esse é o seu demônio. O **Demônio do Controle**.
+Ok, você demoliu o prédio antigo, limpou o terreno. Mas então você percebe que o antigo gerente de obras não foi embora. Ele está ali, no canto, com uma prancheta, anotando tudo, criticando, tentando assumir o controle da nova construção. Esses são os seus demônios.
 
-Ele é a parte de você que se acostumou tanto com a lógica da instrumentalização que não sabe viver de outro jeito. Ele é o gerente paranoico que vive na sua cabeça. Sua função é nobre: ele quer te proteger da dor. Do fracasso, da rejeição, da humilhação. O problema é que, para fazer isso, ele tenta controlar tudo. Você, os outros, o futuro. E isso é impossível. E a tentativa de fazer o impossível gera um sofrimento imenso.
+Eles não são entidades malignas. São partes de você. Programas que foram escritos há muito tempo para te proteger, mas que agora te aprisionam. E eles não são todos iguais. Cada um tem sua própria lógica, sua própria voz, seu próprio medo.
 
-**[Explicação: O Demônio como Algoritmo]**
+Vamos fazer uma taxonomia dos demônios mais comuns:
 
-Pense no seu demônio não como uma entidade maligna, mas como um **algoritmo de computador**. Um programa que foi escrito há muito tempo, talvez na sua infância, para te proteger. O código-fonte dele é algo como: "SE (eu for perfeito, produtivo e amado por todos) ENTÃO (não sentirei dor)". O problema é que esse algoritmo tem um bug. Ele sofre de **overfitting**.
+### 1. O Demônio do Controle (O Gerente Paranoico)
 
-**Overfitting** é um termo de machine learning. Acontece quando um algoritmo é treinado com um conjunto de dados tão específico que ele se torna ótimo para *aqueles* dados, but péssimo para qualquer situação nova. Seu demônio é assim. Ele aprendeu com as dores do seu passado e criou regras super rígidas para evitar que elas se repitam. Mas a vida é sempre nova. E as regras rígidas do demônio te impedem de viver com flexibilidade e espontaneidade. Ele te protege tanto da dor que te impede de viver a alegria.
+*   **Voz:** "E se...?", "Você precisa estar preparado para o pior", "Não confie em ninguém".
+*   **Medo Fundamental:** O caos, a incerteza, a perda de controle.
+*   **Estratégia:** Tenta prever e controlar o futuro, rodando simulações de desastres na sua cabeça. Te transforma em um microgerente da sua própria vida.
+*   **Custo:** Ansiedade crônica, exaustão, incapacidade de relaxar e confiar.
 
-### As 3 Leis da Robótica Demoníaca
+### 2. O Demônio da Perfeição (O Crítico Implacável)
 
-1.  **A Lei da Previsão:** O demônio acredita que pode prever e controlar o futuro. Ele passa o dia rodando simulações de desastres na sua cabeça ("e se eu for demitido?", "e se ela me largar?") para que você esteja "preparado". O resultado é que você vive a dor de mil desastres que nunca acontecem.
+*   **Voz:** "Não está bom o suficiente", "Você poderia ter feito melhor", "Olha o erro que você cometeu".
+*   **Medo Fundamental:** A falha, a crítica, o julgamento.
+*   **Estratégia:** Aponta cada pequeno erro como uma falha catastrófica. Compara você implacavelmente com os outros. Estabelece padrões impossíveis de serem alcançados.
+*   **Custo:** Procrastinação (medo de não ser perfeito), autossabotagem, síndrome do impostor, incapacidade de celebrar as próprias vitórias.
 
-2.  **A Lei da Perfeição:** O demônio acredita que a única forma de estar seguro é ser perfeito. Qualquer erro é uma falha catastrófica. Ele é o crítico interno que te diz "você não é bom o suficiente" depois de qualquer pequena falha.
+### 3. O Demônio da Escassez (O Contador de Migalhas)
 
-3.  **A Lei da Ocultação:** O demônio acredita que sua vulnerabilidade é perigosa. Ele te manda esconder suas fraquezas, seus medos, seu verdadeiro eu. Ele é o mestre da performance, o criador da sua máscara social.
+*   **Voz:** "Não há o suficiente", "Você vai ficar sem", "Guarde, não compartilhe".
+*   **Medo Fundamental:** A falta, a pobreza, a privação.
+*   **Estratégia:** Te faz ver o mundo como um lugar de recursos limitados onde todos competem. Te impede de ser generoso, de descansar, de investir em si mesmo. Tudo é custo.
+*   **Custo:** Avareza (não só de dinheiro, mas de tempo, de afeto), incapacidade de desfrutar o presente, uma vida de constante preocupação financeira, mesmo quando não há motivo real.
 
-## Capítulo 6: A Redenção do Demônio (Ou: De Gerente a Conselheiro)
+### 4. O Demônio do Abandono (A Criança Assustada)
 
-Você não pode matar esse demônio. Tentar lutar contra ele só o torna mais forte. Lembre-se, ele é uma parte de você que só quer te proteger. O caminho não é a destruição, mas a **redenção**. É transformar o gerente paranoico em um conselheiro de segurança.
+*   **Voz:** "Eles vão te deixar", "Não incomode", "Faça o que eles querem para que eles fiquem".
+*   **Medo Fundamental:** A solidão, a rejeição, o abandono.
+*   **Estratégia:** Te transforma em um "people-pleaser". Você diz "sim" quando quer dizer "não". Você esconde suas necessidades para não ser um fardo. Você se molda ao que acha que os outros querem.
+*   **Custo:** Perda da própria identidade, relacionamentos baseados em performance e não em autenticidade, um ressentimento profundo que se acumula por baixo da superfície.
 
-O processo é um **exorcismo cibernético**. Você não grita "saia deste corpo!". Você se senta com o programador e diz: "vamos depurar esse código".
+### *Práxis 8: A Identificação do Demônio Dominante*
 
-### O Debug em 3 Fases
+> *Leia a descrição dos quatro demônios. Qual deles grita mais alto na sua cabeça? Qual deles dita a maioria das suas decisões? Dê um nome a ele. Pode ser um nome engraçado (Ex: "Seu Crítico de Cinema Interno") ou um nome sério. O ato de nomear já começa a separá-lo de você. Você não é o demônio. Você é quem o observa.*
 
-1.  **Fase 1: O Reconhecimento (O Breakpoint)**
+## Capítulo 12: A Origem dos Demônios (Ou: Arqueologia Pessoal)
 
-    Um **breakpoint** é um ponto no código onde você manda o programa parar para poder inspecioná-lo. O primeiro passo é aprender a colocar um breakpoint no algoritmo do demônio. É o momento em que você percebe: "ah, lá está ele de novo". A voz da ansiedade, da autocrítica, do controle. Você não briga com ela. Você apenas a nomeia. "Olá, Demônio do Controle. Eu te vejo."
+Esses demônios não nasceram com você. Eles foram criados. Eles são as cicatrizes psíquicas das suas batalhas passadas. São as estratégias de sobrevivência que sua versão mais jovem e vulnerável criou para navegar um mundo que parecia perigoso e assustador.
 
-    **[A Pausa Sagrada]**
+*   O **Demônio do Controle** pode ter nascido em um ambiente caótico, onde você sentia que precisava controlar tudo para se sentir seguro.
+*   O **Demônio da Perfeição** pode ter nascido de pais muito críticos, que só te elogiavam quando você tirava 10.
+*   O **Demônio da Escassez** pode ter nascido em uma família com dificuldades financeiras reais, onde a preocupação com o dinheiro era constante.
+*   O **Demônio do Abandono** pode ter nascido de uma experiência de perda ou rejeição na infância que te deixou com um terror da solidão.
 
-    Esse ato de nomear cria um espaço. Uma pausa de um segundo entre o gatilho (o erro, a incerteza) e a reação automática (a espiral de ansiedade). Essa pausa é tudo. É nela que a liberdade nasce.
+### A Função Original do Demônio
 
-2.  **Fase 2: O Diálogo (O Code Review)**
+É crucial entender isso: **seu demônio, na sua origem, foi um ato de amor-próprio**. Foi a sua psique infantil, com os recursos limitados que tinha, tentando te proteger da dor. O Demônio do Controle queria te dar segurança. O da Perfeição queria te dar amor. O da Escassez queria te dar sobrevivência. O do Abandono queria te dar pertencimento.
 
-    Agora que você pausou o programa, você pode revisar o código. Você dialoga com o demônio. Com compaixão. Lembre-se, ele é uma parte assustada de você.
+O problema não é a intenção original. O problema é que a estratégia ficou obsoleta. O programa que te protegeu aos 5 anos de idade te aprisiona aos 35. Você não precisa mais daquela proteção rígida. Você tem novos recursos, nova sabedoria, nova força.
 
-    *   **Você:** "Eu vejo que você está com medo de que eu seja rejeitado."
-    *   **Demônio:** "Sim! Se você disser isso, eles vão te odiar!"
-    *   **Você:** "Obrigado por tentar me proteger. Eu aprecio seu cuidado. Mas eu sou um adulto agora. Eu consigo lidar com a rejeição. E a possibilidade de conexão real vale o risco."
+### Compaixão Radical pela Criança Interior
 
-    Você não está invalidando o medo dele. Você está agradecendo pela intenção protetora, mas afirmando que você, o "eu" mais sábio e adulto, está no comando agora.
+O caminho para lidar com o demônio não é o ódio, mas a compaixão. Não a compaixão pelo demônio em si, mas pela **criança assustada que o criou**. Quando você ouve a voz do seu demônio, em vez de brigar com ela, tente imaginar a versão mais jovem de você. O que ela estava sentindo quando criou essa estratégia? Medo? Solidão? Desamparo? Abrace essa criança. Diga a ela que você está aqui agora. Que você é o adulto. E que vocês vão encontrar uma nova maneira de ficar seguros.
 
-3.  **Fase 3: A Reintegração (O Refactoring)**
+### *Práxis 9: O Diálogo com a Criança Interior*
 
-    **Refactoring** é quando você reescreve o código para que ele faça a mesma coisa, mas de forma mais limpa e eficiente. Você vai dar ao seu demônio um novo emprego. A função dele não é mais ser o CEO da sua vida. A nova função dele é ser o **Conselheiro de Segurança**.
+> *Encontre uma foto sua de quando era criança. Olhe para ela. Agora, imagine que o seu demônio dominante é a voz dessa criança. O que ela está tentando te dizer? Qual é o medo dela? Escreva um diálogo.*
+>
+> * **Criança (Demônio):** "Você precisa ser perfeito, senão ninguém vai te amar!"
+> * **Eu Adulto:** "Eu sei que você está com medo de que a gente não seja amado. Eu também sinto esse medo às vezes. Mas eu quero que você saiba que eu te amo, exatamente como você é. E que nós não precisamos mais da aprovação de todo mundo para nos sentirmos valiosos. Eu estou aqui com você. Nós estamos seguros."
 
-    *   **Você:** "Sua habilidade de prever riscos é útil. Mas em vez de me bombardear com desastres, que tal você me apresentar os 3 riscos mais prováveis, e então confiar que eu sei lidar com eles?"
+## Capítulo 13: O Exorcismo Cibernético (Ou: Debugando o Código)
 
-    Você está pegando a habilidade central do demônio (análise de risco) e a colocando a serviço do seu eu mais sábio, em vez de deixá-la no controle. O demônio não é expulso. Ele é promovido de um tirano a um especialista valioso na sua equipe interna.
+Agora que você conhece seu demônio e sua origem, podemos começar o processo de "exorcismo". Mas não é um exorcismo de gritos e água benta. É um **exorcismo cibernético**. Você não vai expulsar o demônio. Você vai **depurar o código** dele.
 
-### *Práxis 6: O Diálogo com o Demônio*
+O processo tem 3 fases:
+
+### Fase 1: O Reconhecimento (O Breakpoint)
+
+Um **breakpoint** é um ponto no código onde você manda o programa parar para poder inspecioná-lo. O primeiro passo é aprender a colocar um breakpoint no algoritmo do demônio. É o momento em que você percebe: "ah, lá está ele de novo". A voz da ansiedade, da autocrítica, do controle. Você não briga com ela. Você apenas a nomeia. "Olá, Demônio do Controle. Eu te vejo."
+
+**[A Pausa Sagrada]**
+
+Esse ato de nomear cria um espaço. Uma pausa de um segundo entre o gatilho (o erro, a incerteza) e a reação automática (a espiral de ansiedade). Essa pausa é tudo. É nela que a liberdade nasce.
+
+### Fase 2: O Diálogo (O Code Review)
+
+Agora que você pausou o programa, você pode revisar o código. Você dialoga com o demônio. Com compaixão. Lembre-se, ele é uma parte assustada de você.
+
+*   **Você:** "Eu vejo que você está com medo de que eu seja rejeitado."
+*   **Demônio:** "Sim! Se você disser isso, eles vão te odiar!"
+*   **Você:** "Obrigado por tentar me proteger. Eu aprecio seu cuidado. Mas eu sou um adulto agora. Eu consigo lidar com a rejeição. E a possibilidade de conexão real vale o risco."
+
+Você não está invalidando o medo dele. Você está agradecendo pela intenção protetora, mas afirmando que você, o "eu" mais sábio e adulto, está no comando agora.
+
+### Fase 3: A Reintegração (O Refactoring)
+
+**Refactoring** é quando você reescreve o código para que ele faça a mesma coisa, mas de forma mais limpa e eficiente. Você vai dar ao seu demônio um novo emprego. A função dele não é mais ser o CEO da sua vida. A nova função dele é ser o **Conselheiro de Segurança**.
+
+*   **Você:** "Sua habilidade de prever riscos é útil. Mas em vez de me bombardear com desastres, que tal você me apresentar os 3 riscos mais prováveis, e então confiar que eu sei lidar com eles?"
+
+Você está pegando a habilidade central do demônio (análise de risco) e a colocando a serviço do seu eu mais sábio, em vez de deixá-la no controle.
+
+### *Práxis 10: O Diálogo com o Demônio*
 
 > *Da próxima vez que você sentir a ansiedade ou a autocrítica surgindo, pare. Respire. E escreva um diálogo.
 > **Demônio:** (Escreva o que a voz está dizendo. Ex: "Você vai estragar tudo nessa apresentação!")
 > **Eu Sábio:** (Responda com compaixão e firmeza. Ex: "Obrigado pela preocupação. Eu sei que você quer que eu me saia bem. Eu me preparei o suficiente. E se eu errar, não será o fim do mundo. Eu sobrevivo.")
 > Fazer isso no papel tira o poder da voz. Você para de ser a voz e se torna o observador dela.*
 
----
+## Capítulo 14: A Redenção (Ou: De Tirano a Conselheiro)
 
+O objetivo final não é o silêncio do demônio, mas a sua **redenção**. É a transformação de um tirano interno em um conselheiro valioso. O demônio não é expulso. Ele é promovido.
+
+Isso significa que a voz não vai desaparecer. Mas ela vai mudar de tom. Em vez de um grito de pânico, ela se torna um sussurro de cautela. Em vez de uma crítica implacável, ela se torna um feedback construtivo.
+
+*   O **Demônio do Controle** se torna o **Conselheiro de Estratégia**. Ele te ajuda a planejar, mas não te paralisa com ansiedade.
+*   O **Demônio da Perfeição** se torna o **Conselheiro de Qualidade**. Ele te ajuda a fazer um bom trabalho, mas não te exige a perfeição.
+*   O **Demônio da Escassez** se torna o **Conselheiro Financeiro**. Ele te ajuda a ser responsável com os recursos, mas não te impede de ser generoso.
+*   O **Demônio do Abandono** se torna o **Conselheiro de Relacionamentos**. Ele te ajuda a escolher bem suas conexões, mas não te força a se anular para ser amado.
+
+### O Conselho Interno
+
+Imagine que você tem um **Conselho Interno**, uma mesa redonda na sua psique. Você, o Eu Sábio, é o presidente do conselho. E os seus antigos demônios agora são conselheiros. Eles têm direito a voz, mas não a voto. Eles podem apresentar suas preocupações, mas a decisão final é sua.
+
+Isso é a Comunhão Interna na prática. É a passagem da tirania para a democracia. É a integração de todas as suas partes em um todo funcional e colaborativo.
+
+### *Práxis 11: A Reunião do Conselho Interno*
+
+> *Uma vez por semana, agende uma "reunião" de 15 minutos com seu Conselho Interno. Pegue um caderno.*
+>
+> *1. **Agradecimento:** Comece agradecendo aos conselheiros pelo trabalho deles. "Obrigado, Conselheiro de Qualidade, por me ajudar a entregar um bom projeto esta semana."
+> *2. **Preocupações:** Dê espaço para cada um apresentar suas preocupações. "Conselheiro de Segurança, o que está te preocupando?" Anote o que vier.
+> *3. **Decisão:** Você, o Eu Sábio, ouve tudo e toma a decisão. "Obrigado pelas preocupações. Eu ouvi. E decidi que vamos correr este risco, porque o potencial de crescimento é maior."
+> *4. **Encerramento:** Agradeça a todos e encerre a reunião.*
+
+> *Isso pode parecer loucura, mas é uma forma poderosa de organizar sua psique e transformar o conflito interno em colaboração.*
+
+## Capítulo 15: A Vida Pós-Exorcismo (Ou: E Agora?)
+
+Você fez o trabalho. Você identificou seus demônios, entendeu suas origens, dialogou com eles e lhes deu um novo emprego. E agora? A vida vira um mar de rosas?
+
+Não. Os demônios são como funcionários antigos. Eles têm hábitos. De vez em quando, eles vão tentar voltar para o antigo cargo de tirano. A voz do controle vai gritar de novo. A voz da perfeição vai te criticar. A diferença é que agora você sabe o que fazer. Você tem as ferramentas. Você tem a prática.
+
+A vida pós-exorcismo não é uma vida sem demônios. É uma vida onde **você não é mais governado por eles**. Você é o presidente do conselho da sua própria alma. Você ouve todas as vozes, mas a decisão final é sua.
+
+É uma vida de vigilância compassiva. De constante negociação. De falhas e recomeços. Mas é uma vida livre. Porque a liberdade não é a ausência de correntes. É saber que você tem a chave.
+
+---
 
 # LIVRO IV: A PRÁXIS (A Engenharia do Novo Mundo)
 
