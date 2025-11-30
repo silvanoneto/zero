@@ -428,7 +428,7 @@ Nossa civilização nos ensinou que o mundo é feito de "recursos". A floresta �
 
 O Religare é uma ponte temporal. Nós não somos indivíduos isolados no presente. Somos o resultado de incontáveis gerações que vieram antes de nós, e somos os ancestrais das gerações que virão.
 
-*   **Religare com o Passado:** Conectar-se não apenas com seus traumas pessoais, mas com os traumas e sabedorias armazenados no campo da sua linhagem. A psicologia familiar sistêmica e práticas como as constelações familiares tocam nisso. Você pode carregar medos ou padrões que não são seus, mas de um bisavô que passou pela guerra. Curar a si mesmo é, muitas vezes, curar seus ancestrais.
+*   **Religare com o Passado:** Conectar-se não apenas com seus traumas pessoais, mas com os traumas e sabedorias armazenados no campo da sua linhagem. Você pode carregar medos ou padrões que não são seus, mas de um bisavô que passou pela guerra, de uma bisavó que sobreviveu à fome. Curar a si mesmo é, muitas vezes, curar seus ancestrais. É reconhecer que você é um nó em uma rede temporal que se estende para trás e para frente.
 *   **Religare com o Futuro:** Como tomar decisões hoje que honrem os que ainda estão por vir? A "Sétima Geração" é um princípio dos povos Iroqueses que diz que toda decisão importante deve ser tomada considerando seu impacto sobre as próximas sete gerações. Isso transforma cada escolha, da mais trivial à mais monumental, em um ato de responsabilidade ancestral.
 
 ### 3. A Física do Religare
