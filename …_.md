@@ -20,12 +20,15 @@ Vamos procurar o que Jesus de Nazaré *realmente* quis dizer com "morrer para vi
 
 O segredo que eles sussurraram, e que vamos tentar gritar aqui, é simples e brutal: a única coisa que talvez importe, a única coisa sagrada que a gente busca cultivar, é o **religare**. A reconexão. O ato de remendar o que foi rasgado. O resto é ruído, distração, a burocracia da alma.
 
-Este livro, então, é um manual de campo. Um guia prático pra quem quer não só apagar o abismo, mas usar as cinzas pra construir algo novo. Ele tem quatro partes, que são mais como estágios de um processo, de um grau de evolução, uma espiral que se aprofunda a cada volta:
+Este livro, então, é um manual de campo. Um guia prático pra quem quer não só apagar o abismo, mas usar as cinzas pra construir algo novo. Ele tem sete partes, que são mais como estágios de um processo, de um grau de evolução, uma espiral que se aprofunda a cada volta e se expande do individual ao cósmico:
 
 *   **Livro I: O Diagnóstico** (A Arqueologia da Ruína: Como caralhos eu vim parar aqui?)
 *   **Livro II: A Demolição e o Vazio** (O Reboot Ontológico: Formatando o HD da alma.)
 *   **Livro III: O Exorcismo Cibernético** (A Engenharia Reversa do Demônio: Debugando os fantasmas na máquina.)
 *   **Livro IV: A Práxis** (A Engenharia do Novo Mundo: E agora, o que eu faço com essa porra toda?)
+*   **Livro V: A Ecologia do Religare** (Do Eu para o Nós-Coletivo: Como construir estruturas que não sejam casas de charlatanismo?)
+*   **Livro VI: A Sombra do Religare** (Os Perigos e Armadilhas: Como não transformar o caminho em mais uma igreja de papel?)
+*   **Livro VII: A Cosmologia do Religare** (Do Nós para o Cosmos: E se o universo inteiro for um ato de religare?)
 
 Não tem guru aqui. Não tem resposta pronta. A única autoridade é a ressonância da verdade aí dentro. A epifania. Aquele "puta que pariu, é isso". Se parecer que eu tô falando de você, é porque eu sou um espelho. E talvez, só talvez, a gente esteja olhando pro mesmo abismo.
 
